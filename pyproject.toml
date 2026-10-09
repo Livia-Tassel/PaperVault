@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "papervault"
+version = "0.1.0"
+description = "Local-first research paper and knowledge asset library"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.34,<1",
+  "python-multipart>=0.0.20,<1",
+  "pydantic>=2.10,<3",
+  "sqlalchemy>=2.0,<3",
+  "alembic>=1.14,<2",
+  "pypdfium2>=4.30,<6",
+  "pypdf>=5,<7",
+  "pillow>=11,<13",
+  "httpx>=0.28,<1",
+  "filelock>=3.16,<4",
+  "psutil>=6,<8",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "pytest-cov>=6,<8", "ruff>=0.9,<1", "reportlab>=4.2,<5", "pyinstaller>=6.12,<7"]
+parser = ["docling-slim[convert-core,format-pdf,models-local,cli]==2.135.0"]
+
+[project.scripts]
+papervault-backend = "papervault.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["backend"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["backend"]
+markers = ["real_parser: requires installed Docling and downloaded models"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
