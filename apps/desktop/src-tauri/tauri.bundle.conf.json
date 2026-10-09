@@ -5,6 +5,7 @@
       "binaries/_internal/": "_internal/",
       "../../../docs/API.md": "docs/API.md",
       "../../../docs/DATA_FORMAT.md": "docs/DATA_FORMAT.md",
+      "../../../docs/READING_API.md": "docs/READING_API.md",
       "../../../docs/KNOWN_ISSUES.md": "docs/KNOWN_ISSUES.md",
       "../../../docs/USER_GUIDE.md": "docs/USER_GUIDE.md",
       "../../../docs/WINDOWS.md": "docs/WINDOWS.md",
