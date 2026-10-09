@@ -29,7 +29,11 @@ def main() -> None:
     parser.add_argument('--expect-tables', type=int)
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
-    test_root = Path(__file__).resolve().parent.parent / '.test-data' / 'packaging'
+    (args.output / 'report.json').write_text(json.dumps({'passed': False, 'status': 'running', 'app': str(args.app.resolve())}), encoding='utf-8')
+    project_root = Path(__file__).resolve().parent.parent
+    test_root = (project_root / '.test-data' / 'packaging').resolve()
+    if not test_root.is_relative_to(project_root):
+        raise ValueError('Test cleanup directory must remain inside the project')
     test_root.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='PaperVault desktop test ', dir=test_root) as temporary:
         with socket.socket() as reserve:
@@ -116,6 +120,8 @@ const done = arguments[arguments.length - 1];
                 element = request('POST', prefix + '/element', {'using': 'css selector', 'value': 'input[type=file]'})['value'][element_key]
                 request('POST', prefix + f'/element/{element}/value', {'text': str(args.pdf.resolve())})
                 deadline = time.monotonic() + 600
+                opened_while_parsing = False
+                notes_element = None
                 while time.monotonic() < deadline:
                     data = request('POST', prefix + '/execute/async', {'script': '''
 const done=arguments[arguments.length-1];
@@ -127,6 +133,14 @@ return await r.json();})().then(done,e=>done({error:String(e)}));
                     if items:
                         paper = items[0]
                         status = paper.get('parse_status', paper.get('status'))
+                        if not opened_while_parsing and status in ('queued', 'running', 'parsing'):
+                            element = request('POST', prefix + '/element', {'using': 'xpath', 'value': "//aside//button[.//span[normalize-space()='论文库']]"})['value'][element_key]
+                            request('POST', prefix + f'/element/{element}/click', {})
+                            element = request('POST', prefix + '/element', {'using': 'css selector', 'value': '.paper-primary'})['value'][element_key]
+                            request('POST', prefix + f'/element/{element}/click', {})
+                            notes_element = request('POST', prefix + '/element', {'using': 'xpath', 'value': "//label[span[normalize-space()='个人备注']]/textarea"})['value'][element_key]
+                            request('POST', prefix + f'/element/{notes_element}/value', {'text': 'Native unsaved draft'})
+                            opened_while_parsing = True
                         if status in ('completed', 'complete', 'ready', 'success', 'parsed'):
                             parsed = {'paper_id': paper['id'], 'status': status, 'figure_count': paper.get('figure_count'), 'table_count': paper.get('table_count')}
                             break
@@ -134,6 +148,17 @@ return await r.json();})().then(done,e=>done({error:String(e)}));
                             raise AssertionError(('Real desktop parse failed', paper))
                     time.sleep(1)
                 assert parsed, 'Real desktop import/parse did not finish before timeout'
+                assert opened_while_parsing, 'The live metadata refresh scenario was not exercised'
+                title_element = request('POST', prefix + '/element', {'using': 'xpath', 'value': "//label[span[normalize-space()='标题']]/textarea"})['value'][element_key]
+                for _ in range(70):
+                    title_value = request('GET', prefix + f'/element/{title_element}/property/value')['value']
+                    if title_value == (paper.get('title') or ''):
+                        break
+                    time.sleep(0.2)
+                assert title_value == (paper.get('title') or ''), ('Automatic metadata did not refresh', title_value, paper.get('title'))
+                assert request('GET', prefix + f'/element/{notes_element}/property/value')['value'] == 'Native unsaved draft'
+                parsed['pristine_metadata_refreshed'] = True
+                parsed['unsaved_notes_preserved'] = True
                 if args.expect_figures is not None:
                     assert parsed['figure_count'] == args.expect_figures, parsed
                 if args.expect_tables is not None:
@@ -152,6 +177,38 @@ return await r.json();})().then(done,e=>done({error:String(e)}));
                         time.sleep(0.2)
                     assert located, 'Figure did not render and highlight in the original PDF'
                     parsed['pdf_region_highlight'] = True
+                    element = request('POST', prefix + '/element', {'using': 'xpath', 'value': "//button[normalize-space()='目录']"})['value'][element_key]
+                    request('POST', prefix + f'/element/{element}/click', {})
+                    element = request('POST', prefix + '/element', {'using': 'xpath', 'value': "//button[normalize-space()='编辑目录与参考文献']"})['value'][element_key]
+                    request('POST', prefix + f'/element/{element}/click', {})
+                    for label, tag, value in (('章节 1 标题', 'input', 'Native desktop verified section'), ('参考文献（每行一条）', 'textarea', 'Native desktop reference persisted.')):
+                        element = request('POST', prefix + '/element', {'using': 'xpath', 'value': f"//label[span[normalize-space()='{label}']]/{tag}"})['value'][element_key]
+                        request('POST', prefix + f'/element/{element}/clear', {})
+                        request('POST', prefix + f'/element/{element}/value', {'text': value})
+                    element = request('POST', prefix + '/element', {'using': 'xpath', 'value': "//button[normalize-space()='保存目录与参考文献']"})['value'][element_key]
+                    request('POST', prefix + f'/element/{element}/click', {})
+                    for _ in range(50):
+                        persisted = request('POST', prefix + '/execute/sync', {'script': "return [...document.querySelectorAll('.reference')].some(e=>e.textContent.includes('Native desktop reference persisted.'))", 'args': []})['value']
+                        if persisted:
+                            break
+                        time.sleep(0.1)
+                    assert persisted, 'Edited reference did not persist after the server refresh'
+                    element = request('POST', prefix + '/element', {'using': 'xpath', 'value': "//button[normalize-space()='编辑目录与参考文献']"})['value'][element_key]
+                    request('POST', prefix + f'/element/{element}/click', {})
+                    element = request('POST', prefix + '/element', {'using': 'xpath', 'value': "//label[span[normalize-space()='章节 1 标题']]/input"})['value'][element_key]
+                    assert request('GET', prefix + f'/element/{element}/property/value')['value'] == 'Native desktop verified section'
+                    parsed['outline_and_references_edit'] = True
+                    element = request('POST', prefix + '/element', {'using': 'xpath', 'value': "//button[normalize-space()='取消编辑']"})['value'][element_key]
+                    request('POST', prefix + f'/element/{element}/click', {})
+                    element = request('POST', prefix + '/element', {'using': 'xpath', 'value': "//button[normalize-space()='论文信息']"})['value'][element_key]
+                    request('POST', prefix + f'/element/{element}/click', {})
+                for _ in range(70):
+                    counts = request('POST', prefix + '/execute/sync', {'script': "return ['图片库','表格库'].map(label=>{const b=[...document.querySelectorAll('aside button')].find(e=>e.querySelector('span')?.textContent===label);return Number(b?.querySelector('small')?.textContent||0)});", 'args': []})['value']
+                    if counts == [parsed.get('figure_count', 0), parsed.get('table_count', 0)]:
+                        break
+                    time.sleep(0.2)
+                assert counts == [parsed.get('figure_count', 0), parsed.get('table_count', 0)], ('Sidebar counts did not refresh', counts, parsed)
+            body = request('POST', prefix + '/execute/sync', {'script': 'return document.body.innerText', 'args': []})['value']
             screenshot = request('GET', prefix + '/screenshot')['value']
             (args.output / 'desktop.png').write_bytes(base64.b64decode(screenshot))
             (args.output / 'visible-text.txt').write_text(body, encoding='utf-8')
@@ -159,6 +216,15 @@ return await r.json();})().then(done,e=>done({error:String(e)}));
                       'scope': 'Actual Tauri WebView2, packaged sidecar startup, IPC, CSP/CORS authenticated API, access denial, rendered UI. Installer cleanliness and full parsing quality require separate checks.'}
             (args.output / 'report.json').write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding='utf-8')
             print('PASS: actual Tauri desktop, native IPC, authenticated API, denied anonymous access, screenshot')
+        except Exception as error:
+            (args.output / 'report.json').write_text(json.dumps({'passed': False, 'app': str(args.app.resolve()), 'error': str(error)}, indent=2, ensure_ascii=False), encoding='utf-8')
+            if session:
+                try:
+                    screenshot = request('GET', f'/session/{session}/screenshot')['value']
+                    (args.output / 'failure.png').write_bytes(base64.b64decode(screenshot))
+                except Exception:
+                    pass
+            raise
         finally:
             if session:
                 try:

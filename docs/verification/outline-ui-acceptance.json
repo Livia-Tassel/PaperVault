@@ -1,0 +1,16 @@
+{
+  "measured_at": "2026-10-09T06:09:19.820Z",
+  "status": "passed",
+  "fixture": "tests/fixtures/academic.pdf",
+  "changed_fields_only": [
+    "sections",
+    "references"
+  ],
+  "first_section_location_preserved": true,
+  "added_section_page": 2,
+  "add_and_remove_draft_section": true,
+  "saved_and_reloaded": true,
+  "references": 2,
+  "page_navigation_verified": true,
+  "javascript_errors": []
+}

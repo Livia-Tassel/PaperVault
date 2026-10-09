@@ -5,6 +5,8 @@ import importlib.metadata
 import json
 import re
 import shutil
+import sys
+import platform
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -14,6 +16,15 @@ def main():
     output = ROOT / "docs/third-party-licenses"
     output.mkdir(parents=True, exist_ok=True)
     records = []
+    python_license = Path(sys.base_prefix) / "LICENSE.txt"
+    if python_license.is_file():
+        runtime_dir = output / "CPython-runtime"
+        runtime_dir.mkdir(exist_ok=True)
+        target = runtime_dir / "LICENSE.txt"
+        shutil.copyfile(python_license, target)
+        records.append({"name": "CPython runtime", "version": platform.python_version(),
+                        "license": "Python Software Foundation License and bundled notices",
+                        "license_files": [target.relative_to(ROOT / "docs").as_posix()]})
     for distribution in sorted(importlib.metadata.distributions(), key=lambda d: d.metadata.get("Name", "").casefold()):
         name = distribution.metadata.get("Name", "unknown")
         if name.casefold() == "papervault":

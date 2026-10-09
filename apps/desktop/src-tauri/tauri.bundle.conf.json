@@ -1,11 +1,25 @@
 {
   "bundle": {
     "externalBin": ["binaries/papervault-backend"],
-    "resources": {"binaries/_internal/": "_internal/"},
+    "resources": {
+      "binaries/_internal/": "_internal/",
+      "../../../docs/API.md": "docs/API.md",
+      "../../../docs/DATA_FORMAT.md": "docs/DATA_FORMAT.md",
+      "../../../docs/KNOWN_ISSUES.md": "docs/KNOWN_ISSUES.md",
+      "../../../docs/USER_GUIDE.md": "docs/USER_GUIDE.md",
+      "../../../docs/WINDOWS.md": "docs/WINDOWS.md",
+      "../../../docs/third-party-licenses/": "licenses/third-party-licenses/",
+      "../../../docs/third-party-sources/": "licenses/third-party-sources/",
+      "../../../docs/MPL-SOURCE-NOTICE.md": "licenses/MPL-SOURCE-NOTICE.md",
+      "../../../docs/license-supplements.json": "licenses/license-supplements.json",
+      "../../../docs/web-rust-dependencies.json": "licenses/web-rust-dependencies.json",
+      "../../../docs/python-dependencies.json": "licenses/python-dependencies.json",
+      "../../../docs/THIRD_PARTY_NOTICES.md": "licenses/THIRD_PARTY_NOTICES.md"
+    },
     "windows": {
       "webviewInstallMode": {"type": "offlineInstaller"},
-      "nsis": {"installMode": "currentUser", "languages": ["SimpChinese", "English"], "displayLanguageSelector": true}
+      "minimumWebview2Version": "154.0.4258.62",
+      "nsis": {"installMode": "currentUser", "languages": ["SimpChinese", "English"], "displayLanguageSelector": true, "compression": "zlib"}
     }
   }
 }
-

@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "measured_at": "2026-10-09T06:38:00.262Z",
+  "method": "Real API PATCH changes effective server metadata, then the existing five-second polling updates the same React form; no parser completion is claimed by this test.",
+  "title_and_authors_refreshed": true,
+  "unsaved_note_preserved": true,
+  "favorite_revision_does_not_discard_draft": true,
+  "saved_patch_fields": [
+    "notes"
+  ]
+}

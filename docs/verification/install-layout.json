@@ -1,0 +1,10 @@
+{
+  "install_root": "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault",
+  "application_sha256": "A4CA1EC9ABA4F4D061D7875AA2F222456BEBC068387499F1A37FD2924D61F776",
+  "backend_sha256": "CA77E6E5B1E67ABD93AF67E8EA11A106CE2A6B9054B0A8CD5AAF2E01D6A322F3",
+  "installer_path": "D:\\project\\PaperVault\\apps\\desktop\\src-tauri\\target\\x86_64-pc-windows-msvc\\release\\bundle\\nsis\\PaperVault_0.1.0_x64-setup.exe",
+  "installer_sha256": "B2466D9F245F4DE016EE3FC578FB736F107BE7B53808053FE30382573626C6F3",
+  "license_files_verified": 846,
+  "source_archives_verified": 7,
+  "verified_at": "2026-10-09T06:59:36.2194157Z"
+}

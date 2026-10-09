@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "real_files": [
+    "academic.pdf",
+    "corrupt.pdf",
+    "mixed-assets.pdf"
+  ],
+  "work_directory": "D:\\project\\PaperVault\\.test-data\\queue-acceptance-465e052d-5993-4d41-a119-68a121eb7497",
+  "frozen_backend": false,
+  "three_file_import_seconds": 0.10566579999976966,
+  "jobs": [
+    {
+      "id": "02f147bc-846a-4d4d-8fda-649173b02f56",
+      "paper_id": "8b371a21-fb6a-46fb-9df9-fbdffc4e541d",
+      "status": "completed",
+      "phase": "解析完成",
+      "error": null,
+      "created_at": "2026-10-09T05:55:13.562778+00:00",
+      "updated_at": "2026-10-09T05:56:15.707069+00:00",
+      "paper_title": "Local Research Asset Extraction",
+      "pages_done": 2,
+      "pages_total": 2,
+      "resources_count": 2
+    },
+    {
+      "id": "895953d3-8cbf-4f3f-b726-f8ea950a0af6",
+      "paper_id": "790e79c9-f977-4d2e-93f7-688ef79d568a",
+      "status": "completed",
+      "phase": "解析完成",
+      "error": null,
+      "created_at": "2026-10-09T05:55:12.226486+00:00",
+      "updated_at": "2026-10-09T05:55:59.957991+00:00",
+      "paper_title": "Embedded Images and Merged Headers",
+      "pages_done": 1,
+      "pages_total": 1,
+      "resources_count": 2
+    },
+    {
+      "id": "ec171408-3cb1-428f-9e92-ced62179cf57",
+      "paper_id": "bc1cef1d-21f7-40fa-bb19-08006477cfcf",
+      "status": "failed",
+      "phase": "解析失败，可重试",
+      "error": "PdfStreamError: Stream has ended unexpectedly",
+      "created_at": "2026-10-09T05:55:12.181265+00:00",
+      "updated_at": "2026-10-09T05:55:15.851811+00:00",
+      "paper_title": "corrupt.pdf",
+      "pages_done": null,
+      "pages_total": null,
+      "resources_count": 0
+    },
+    {
+      "id": "539a3e30-e947-4bec-b31f-8e845e0b3db8",
+      "paper_id": "8b371a21-fb6a-46fb-9df9-fbdffc4e541d",
+      "status": "cancelled",
+      "phase": "已取消",
+      "error": null,
+      "created_at": "2026-10-09T05:55:12.155189+00:00",
+      "updated_at": "2026-10-09T05:55:13.488216+00:00",
+      "paper_title": "Local Research Asset Extraction",
+      "pages_done": null,
+      "pages_total": null,
+      "resources_count": 0
+    }
+  ],
+  "queue_seconds": 64.06784609999886
+}

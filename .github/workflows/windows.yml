@@ -47,17 +47,21 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           ./.venv/Scripts/python.exe scripts/acceptance.py --backend build/backend-dist/papervault-backend/papervault-backend.exe --models .cache/models
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-      - name: Test the actual desktop WebView2 application
-        shell: pwsh
-        run: |
-          ./scripts/bootstrap-webdriver.ps1
-          ./.venv/Scripts/python.exe scripts/package-desktop-smoke.py --app apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/papervault.exe --driver .tools/edgedriver/msedgedriver.exe --models .cache/models --pdf tests/fixtures/academic.pdf --expect-figures 1 --expect-tables 1
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Install NSIS and verify the installed application
         shell: pwsh
         run: |
           $Installer = Get-ChildItem apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis/*.exe | Select-Object -First 1
           ./scripts/package-install-smoke.ps1 -Installer $Installer.FullName
+      - name: Test the actual desktop WebView2 application
+        shell: pwsh
+        run: |
+          ./.venv/Scripts/python.exe scripts/package-desktop-smoke.py --app apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/papervault.exe --driver .tools/edgedriver/msedgedriver.exe --models .cache/models --pdf tests/fixtures/academic.pdf --expect-figures 1 --expect-tables 1
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Verify uninstall retention and reinstall
+        shell: pwsh
+        run: |
+          $Installer = Get-ChildItem apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis/*.exe | Select-Object -First 1
+          ./scripts/package-uninstall-smoke.ps1 -Installer $Installer.FullName
       - uses: actions/upload-artifact@v4
         with:
           name: PaperVault-Windows-x64
@@ -71,3 +75,4 @@ jobs:
             artifacts/desktop-smoke/
             artifacts/installed-desktop/
             artifacts/acceptance-frozen.json
+            artifacts/uninstall-retention.json

@@ -11,6 +11,7 @@ PaperVault新增源码保留所有权利；这不改变第三方组件的许可�
 | pypdfium2 | Apache-2.0 / BSD-3-Clause |
 | PDFium及其依赖 | BSD风格及各第三方许可；必须携带PDFium附带的完整许可目录 |
 | SQLite | Public domain |
+| 内置CPython 3.12运行时 | PSF许可证及Python发行包附带声明，原文保存在CPython-runtime目录 |
 | SQLAlchemy / Alembic | MIT |
 | PyInstaller | GPL许可附打包应用分发例外；保留其声明 |
 | Heron布局模型 | Apache-2.0，实际revision记录在模型manifest |
@@ -20,4 +21,6 @@ PaperVault新增源码保留所有权利；这不改变第三方组件的许可�
 
 权威来源：[Docling](https://github.com/docling-project/docling)、[PDFium许可证](https://github.com/pypdfium2-team/pypdfium2#licensing)、[PyInstaller许可证](https://pyinstaller.org/en/stable/license.html)、[Heron模型卡](https://huggingface.co/docling-project/docling-layout-heron)、[TableFormer模型卡](https://huggingface.co/docling-project/docling-models)。
 
-构建时运行 `scripts/collect_licenses.py` 保存已安装Python版本清单与包内许可证文本；npm和Rust锁文件记录实际前端和桌面依赖。最终分发以实际包含的组件为准，缺失许可文本必须在发行前补齐。
+构建时运行 `scripts/collect_licenses.py` 与 `scripts/collect_web_rust_licenses.py` 保存已安装Python、npm、Cargo版本清单与包内许可证文本。清单中的其他平台optional依赖可能未安装，也不随本次Windows二进制分发；来源可用性逐项记录。遗漏于包内的声明按官方仓库补全，出处随补充记录保留。
+
+MPL组件的精确版本源码、未修改说明，以及历史发布元信息与当前官方许可证的差异，见 [MPL源码与补充声明](MPL-SOURCE-NOTICE.md)。本机128个已安装npm包和287个可用Cargo包均已记录许可证文本来源；补充文件哈希见 `license-supplements.json`。

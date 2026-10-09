@@ -1,5 +1,13 @@
 [
   {
+    "name": "CPython runtime",
+    "version": "3.12.8",
+    "license": "Python Software Foundation License and bundled notices",
+    "license_files": [
+      "third-party-licenses/CPython-runtime/LICENSE.txt"
+    ]
+  },
+  {
     "name": "accelerate",
     "version": "1.15.0",
     "license": "Apache",

@@ -1,0 +1,26 @@
+{
+  "dataset": "Explicit synthetic metadata, not a parser accuracy result",
+  "papers": 1000,
+  "resources": 5000,
+  "text_blocks": 1000,
+  "machine": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "cpu": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "logical_cpus": 16,
+    "ram_bytes": 16890716160
+  },
+  "index_build_seconds": 5.272,
+  "queries": 50,
+  "grouped_search": {
+    "p50_ms": 82.845,
+    "p95_ms": 106.55,
+    "max_ms": 127.109
+  },
+  "gallery_page_30": {
+    "p50_ms": 17.329,
+    "p95_ms": 22.694,
+    "max_ms": 23.557
+  },
+  "process_rss_bytes": 64208896,
+  "database_bytes": 11079680
+}

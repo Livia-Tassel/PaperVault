@@ -1,0 +1,27 @@
+{
+  "pdf": "tests\\fixtures\\academic.pdf",
+  "sha256": "a77a692de65dfc76c9c0252dfde57e5c742e470db0d9639d495e5f7893e75386",
+  "work_directory": "D:\\project\\PaperVault\\.test-data\\acceptance-d7c3bd1b-4ac4-4a4a-a4c5-4796e016db88",
+  "machine": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "cpu": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "logical_cpus": 16,
+    "memory_bytes": 16890716160
+  },
+  "frozen_backend": true,
+  "steps": [
+    "Created a real library with verified local models",
+    "PDF imported and parsed by the real isolated Docling CPU worker",
+    "Figure PNG and Table PNG/CSV/HTML contain real extracted assets",
+    "Caption search returns the figure and its source PDF coordinates",
+    "Manual caption, table, crop and paper edits are persisted",
+    "Portable archive exported and full backup restored to a new library",
+    "Restart retained the restored library, manual edits, PDF and search index"
+  ],
+  "passed": true,
+  "backend_startup_seconds": 1.5739589000004344,
+  "import_parse_publish_seconds": 14.391670799999702,
+  "peak_backend_worker_rss_bytes": 1255157760,
+  "figure_count": 1,
+  "table_count": 1
+}

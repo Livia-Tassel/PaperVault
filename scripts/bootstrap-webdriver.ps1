@@ -11,10 +11,17 @@ $Runtime = $ApplicationRoots | Where-Object { Test-Path -LiteralPath $_ } | ForE
 } | Sort-Object { [version]$_.Name } -Descending | Select-Object -First 1
 if (-not $Runtime) { throw 'WebView2 Runtime was not found. Install the application with its WebView2 installer first.' }
 New-Item -ItemType Directory -Path $DriverRoot -Force | Out-Null
+$DriverPath = Join-Path $DriverRoot 'msedgedriver.exe'
+if (Test-Path -LiteralPath $DriverPath) {
+    $CachedSignature = Get-AuthenticodeSignature -LiteralPath $DriverPath
+    if ($CachedSignature.Status -eq 'Valid' -and $CachedSignature.SignerCertificate.Subject -match 'Microsoft') {
+        $DriverVersion = & $DriverPath --version
+        if ($DriverVersion -match ([regex]::Escape($Runtime.Name))) { Write-Output "Using matching WebDriver $($Runtime.Name)"; return }
+    }
+}
 $Archive = Join-Path $ProjectRoot '.tools\edgedriver_win64.zip'
 Invoke-WebRequest -Uri "https://msedgedriver.microsoft.com/$($Runtime.Name)/edgedriver_win64.zip" -OutFile $Archive
 Expand-Archive -LiteralPath $Archive -DestinationPath $DriverRoot -Force
 $Signature = Get-AuthenticodeSignature -LiteralPath (Join-Path $DriverRoot 'msedgedriver.exe')
 if ($Signature.Status -ne 'Valid' -or $Signature.SignerCertificate.Subject -notmatch 'Microsoft') { throw 'Microsoft WebDriver signature validation failed.' }
 Write-Output "WebDriver installed for WebView2 $($Runtime.Name)"
-

@@ -1,0 +1,401 @@
+[
+  {
+    "ecosystem": "npm",
+    "name": "@redocly/openapi-core",
+    "version": "1.34.20",
+    "repository": "https://github.com/Redocly/redocly-cli",
+    "source_revision": "b563864727f1c7524021196d27bad4524f32e667",
+    "license_files": [
+      "third-party-licenses/npm-_redocly_openapi-core/LICENSE.md"
+    ],
+    "license_sources": [
+      {
+        "file": "third-party-licenses/npm-_redocly_openapi-core/LICENSE.md",
+        "url": "https://raw.githubusercontent.com/Redocly/redocly-cli/b563864727f1c7524021196d27bad4524f32e667/LICENSE.md",
+        "sha256": "f6bf9ce4d84b47c1cdda9d8988ac977efc314f00ad65e498fc514ddf118440b5"
+      }
+    ]
+  },
+  {
+    "ecosystem": "cargo",
+    "name": "clipboard-win",
+    "version": "5.4.1",
+    "repository": "https://github.com/DoumanAsh/clipboard-win",
+    "source_revision": "3b27cf2bfd1adcfa6e0264eb51c1025ddaf0f342",
+    "license_files": [
+      "third-party-licenses/rust-clipboard-win-5.4.1/LICENSE"
+    ],
+    "license_sources": [
+      {
+        "file": "third-party-licenses/rust-clipboard-win-5.4.1/LICENSE",
+        "url": "https://raw.githubusercontent.com/DoumanAsh/clipboard-win/3b27cf2bfd1adcfa6e0264eb51c1025ddaf0f342/LICENSE",
+        "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+      }
+    ]
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@napi-rs/canvas-win32-x64-msvc",
+    "version": "1.0.10",
+    "repository": "https://github.com/Brooooooklyn/canvas",
+    "source_revision": "7d19abed029287e7c26b14eaa6e67d560a37d853",
+    "license_files": [
+      "third-party-licenses/npm-_napi-rs_canvas-win32-x64-msvc/LICENSE"
+    ],
+    "license_sources": [
+      {
+        "file": "third-party-licenses/npm-_napi-rs_canvas-win32-x64-msvc/LICENSE",
+        "url": "https://raw.githubusercontent.com/Brooooooklyn/canvas/7d19abed029287e7c26b14eaa6e67d560a37d853/LICENSE",
+        "sha256": "8802fecf9da4367bc23bcf20b21cc143785fc6c92b152f3fa7fbe6ce08d344d6"
+      }
+    ]
+  },
+  {
+    "ecosystem": "npm",
+    "name": "change-case",
+    "version": "5.4.4",
+    "repository": "https://github.com/blakeembrey/change-case",
+    "source_revision": "8aaff31471c918d3eac2b40939c601bee37375dd",
+    "license_files": [
+      "third-party-licenses/npm-change-case/LICENSE"
+    ],
+    "license_sources": [
+      {
+        "file": "third-party-licenses/npm-change-case/LICENSE",
+        "url": "https://raw.githubusercontent.com/blakeembrey/change-case/8aaff31471c918d3eac2b40939c601bee37375dd/LICENSE",
+        "sha256": "4eeb3271453a891df609e5a9f4ee79a68307f730c13417a3bfeffa604ac8cf25"
+      }
+    ]
+  },
+  {
+    "ecosystem": "cargo",
+    "name": "alloc-stdlib",
+    "version": "0.3.0",
+    "repository": "https://github.com/dropbox/rust-alloc-no-stdlib",
+    "source_revision": "0a81fd6928ea3b33c8cd484aa4575d50ffb98012",
+    "license_files": [
+      "third-party-licenses/rust-alloc-stdlib-0.3.0/LICENSE"
+    ],
+    "license_sources": [
+      {
+        "file": "third-party-licenses/rust-alloc-stdlib-0.3.0/LICENSE",
+        "url": "https://raw.githubusercontent.com/dropbox/rust-alloc-no-stdlib/0a81fd6928ea3b33c8cd484aa4575d50ffb98012/LICENSE",
+        "sha256": "c0c56f26d9c051cac4d200c34c84e7ae9aaa853e01a982a1df08b09931e518ae"
+      }
+    ]
+  },
+  {
+    "ecosystem": "cargo",
+    "name": "webview2-com-macros",
+    "version": "0.8.1",
+    "repository": "https://github.com/wravery/webview2-rs",
+    "source_revision": "dffa41a8a46d3f5565eefbff2de57d38d399f158",
+    "license_files": [
+      "third-party-licenses/rust-webview2-com-macros-0.8.1/LICENSE"
+    ],
+    "license_sources": [
+      {
+        "file": "third-party-licenses/rust-webview2-com-macros-0.8.1/LICENSE",
+        "url": "https://raw.githubusercontent.com/wravery/webview2-rs/dffa41a8a46d3f5565eefbff2de57d38d399f158/LICENSE",
+        "sha256": "0dcf41516e608bbcb6cdc5229feb7b86fe4a643b85e7df251133c93408fdac73"
+      }
+    ]
+  },
+  {
+    "ecosystem": "cargo",
+    "name": "webview2-com-sys",
+    "version": "0.39.1",
+    "repository": "https://github.com/wravery/webview2-rs",
+    "source_revision": "edc2caf886175ccaebe86078c9cfe1ae2a187328",
+    "license_files": [
+      "third-party-licenses/rust-webview2-com-sys-0.39.1/LICENSE"
+    ],
+    "license_sources": [
+      {
+        "file": "third-party-licenses/rust-webview2-com-sys-0.39.1/LICENSE",
+        "url": "https://raw.githubusercontent.com/wravery/webview2-rs/edc2caf886175ccaebe86078c9cfe1ae2a187328/LICENSE",
+        "sha256": "0dcf41516e608bbcb6cdc5229feb7b86fe4a643b85e7df251133c93408fdac73"
+      }
+    ]
+  },
+  {
+    "ecosystem": "cargo",
+    "name": "defmt-parser",
+    "version": "1.0.0",
+    "repository": "https://github.com/knurling-rs/defmt",
+    "source_revision": "4a8cdb44891ed57b8ff5a023b6bec7137c48708f",
+    "license_files": [
+      "third-party-licenses/rust-defmt-parser-1.0.0/LICENSE-MIT",
+      "third-party-licenses/rust-defmt-parser-1.0.0/LICENSE-APACHE"
+    ],
+    "license_sources": [
+      {
+        "file": "third-party-licenses/rust-defmt-parser-1.0.0/LICENSE-MIT",
+        "url": "https://raw.githubusercontent.com/knurling-rs/defmt/4a8cdb44891ed57b8ff5a023b6bec7137c48708f/LICENSE-MIT",
+        "sha256": "2710a622a896bba67356913d4d0492cab5465f61b2ecce6d880aeb483834fb50"
+      },
+      {
+        "file": "third-party-licenses/rust-defmt-parser-1.0.0/LICENSE-APACHE",
+        "url": "https://raw.githubusercontent.com/knurling-rs/defmt/4a8cdb44891ed57b8ff5a023b6bec7137c48708f/LICENSE-APACHE",
+        "sha256": "8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90"
+      }
+    ]
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@rolldown/binding-win32-x64-msvc",
+    "version": "1.2.13",
+    "repository": "https://github.com/rolldown/rolldown",
+    "source_revision": "v1.2.13",
+    "license_files": [
+      "third-party-licenses/npm-_rolldown_binding-win32-x64-msvc/LICENSE"
+    ],
+    "license_sources": [
+      {
+        "file": "third-party-licenses/npm-_rolldown_binding-win32-x64-msvc/LICENSE",
+        "url": "https://raw.githubusercontent.com/rolldown/rolldown/v1.2.13/LICENSE",
+        "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734"
+      }
+    ]
+  },
+  {
+    "ecosystem": "cargo",
+    "name": "selectors",
+    "version": "0.38.0",
+    "repository": "https://github.com/servo/stylo",
+    "source_revision": "572ecba2d1600e7c3d490586692a209faf703baa",
+    "license_files": [
+      "third-party-licenses/rust-selectors-0.38.0/LICENSE.txt"
+    ],
+    "license_sources": [
+      {
+        "file": "third-party-licenses/rust-selectors-0.38.0/LICENSE.txt",
+        "url": "https://www.mozilla.org/media/MPL/2.0/index.txt",
+        "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04"
+      }
+    ],
+    "source_url": "https://static.crates.io/crates/selectors/selectors-0.38.0.crate",
+    "source_archive": "third-party-sources/selectors-0.38.0.crate",
+    "source_archive_sha256": "8adfa1c298912827b8a28b223b3b874357397ae706e6190acd9bf28cee99114d",
+    "modified": false,
+    "source_notice": "Upstream component used without PaperVault source modifications; original version source archive included."
+  },
+  {
+    "ecosystem": "npm",
+    "name": "lightningcss",
+    "version": "1.32.0",
+    "repository": "https://github.com/parcel-bundler/lightningcss",
+    "source_revision": "7f8a861bdee476fe90c89a8badeb3fd33a99c51a",
+    "source_url": "https://codeload.github.com/parcel-bundler/lightningcss/tar.gz/7f8a861bdee476fe90c89a8badeb3fd33a99c51a",
+    "source_archive": "third-party-sources/lightningcss-1.32.0.tar.gz",
+    "source_archive_sha256": "b9451f8a7bb1a9cf0cd905af3a23db2e963a6c3171a9272633e5fd03f2842198",
+    "modified": false,
+    "source_notice": "Upstream component used without PaperVault source modifications; original version source archive included."
+  },
+  {
+    "ecosystem": "npm",
+    "name": "lightningcss-win32-x64-msvc",
+    "version": "1.32.0",
+    "repository": "https://github.com/parcel-bundler/lightningcss",
+    "source_revision": "7f8a861bdee476fe90c89a8badeb3fd33a99c51a",
+    "source_url": "https://codeload.github.com/parcel-bundler/lightningcss/tar.gz/7f8a861bdee476fe90c89a8badeb3fd33a99c51a",
+    "source_archive": "third-party-sources/lightningcss-1.32.0.tar.gz",
+    "source_archive_sha256": "b9451f8a7bb1a9cf0cd905af3a23db2e963a6c3171a9272633e5fd03f2842198",
+    "modified": false,
+    "source_notice": "Upstream component used without PaperVault source modifications; original version source archive included."
+  },
+  {
+    "ecosystem": "npm",
+    "name": "lightningcss",
+    "version": "1.33.0",
+    "repository": "https://github.com/parcel-bundler/lightningcss",
+    "source_revision": "1d680fa14e9a089c92dc0929f869d6757ae91c30",
+    "source_url": "https://codeload.github.com/parcel-bundler/lightningcss/tar.gz/1d680fa14e9a089c92dc0929f869d6757ae91c30",
+    "source_archive": "third-party-sources/lightningcss-1.33.0.tar.gz",
+    "source_archive_sha256": "ab377f42f5aa2f7f85058408ab45dbd03caa65fe6c00f4fdc32b9611c4e51bb4",
+    "modified": false,
+    "source_notice": "Upstream component used without PaperVault source modifications; original version source archive included."
+  },
+  {
+    "ecosystem": "npm",
+    "name": "lightningcss-win32-x64-msvc",
+    "version": "1.33.0",
+    "repository": "https://github.com/parcel-bundler/lightningcss",
+    "source_revision": "1d680fa14e9a089c92dc0929f869d6757ae91c30",
+    "source_url": "https://codeload.github.com/parcel-bundler/lightningcss/tar.gz/1d680fa14e9a089c92dc0929f869d6757ae91c30",
+    "source_archive": "third-party-sources/lightningcss-1.33.0.tar.gz",
+    "source_archive_sha256": "ab377f42f5aa2f7f85058408ab45dbd03caa65fe6c00f4fdc32b9611c4e51bb4",
+    "modified": false,
+    "source_notice": "Upstream component used without PaperVault source modifications; original version source archive included."
+  },
+  {
+    "ecosystem": "cargo",
+    "name": "cssparser",
+    "version": "0.37.0",
+    "repository": "https://github.com/servo/rust-cssparser",
+    "source_revision": "4c49486494fb24dc01390e3baca9698ef1744c71",
+    "source_url": "https://static.crates.io/crates/cssparser/cssparser-0.37.0.crate",
+    "source_archive": "third-party-sources/cssparser-0.37.0.crate",
+    "source_archive_sha256": "8c9cdaae01d5ed7882b04d795e7f752f46ff52d2fa3b50a20d28c464510bba98",
+    "modified": false,
+    "source_notice": "Upstream component used without PaperVault source modifications; original version source archive included."
+  },
+  {
+    "ecosystem": "cargo",
+    "name": "cssparser-macros",
+    "version": "0.7.1",
+    "repository": "https://github.com/servo/rust-cssparser",
+    "source_revision": "d128a90e1203fc4afb959420d6dc5e24f77a3191",
+    "source_url": "https://static.crates.io/crates/cssparser-macros/cssparser-macros-0.7.1.crate",
+    "source_archive": "third-party-sources/cssparser-macros-0.7.1.crate",
+    "source_archive_sha256": "d045de693cb712d0b22c6a64be5b953f67b3ce00ab5ad3dd5d8b441886ab8e1a",
+    "modified": false,
+    "source_notice": "Upstream component used without PaperVault source modifications; original version source archive included."
+  },
+  {
+    "ecosystem": "cargo",
+    "name": "dtoa-short",
+    "version": "0.3.5",
+    "repository": "https://github.com/upsuper/dtoa-short",
+    "source_revision": "2d905cdb8b2e08163dc0d015f529877fe657b4ef",
+    "source_url": "https://static.crates.io/crates/dtoa-short/dtoa-short-0.3.5.crate",
+    "source_archive": "third-party-sources/dtoa-short-0.3.5.crate",
+    "source_archive_sha256": "cd1511a7b6a56299bd043a9c167a6d2bfb37bf84a6dfceaba651168adfb43c87",
+    "modified": false,
+    "source_notice": "Upstream component used without PaperVault source modifications; original version source archive included."
+  },
+  {
+    "ecosystem": "cargo",
+    "name": "option-ext",
+    "version": "0.2.0",
+    "repository": "https://github.com/soc/option-ext",
+    "source_revision": "272f22fc9ea1ac6b08f01704af52c4ac338df4e2",
+    "source_url": "https://static.crates.io/crates/option-ext/option-ext-0.2.0.crate",
+    "source_archive": "third-party-sources/option-ext-0.2.0.crate",
+    "source_archive_sha256": "04744f49eae99ab78e0d5c0b603ab218f515ea8cfe5a456d7629ad883a3b6e7d",
+    "modified": false,
+    "source_notice": "Upstream component used without PaperVault source modifications; original version source archive included."
+  },
+  {
+    "ecosystem": "cargo",
+    "name": "webview2-com",
+    "version": "0.39.1",
+    "repository": "https://github.com/wravery/webview2-rs",
+    "source_revision": "edc2caf886175ccaebe86078c9cfe1ae2a187328",
+    "license_files": [
+      "third-party-licenses/rust-webview2-com-0.39.1/LICENSE"
+    ],
+    "license_sources": [
+      {
+        "file": "third-party-licenses/rust-webview2-com-0.39.1/LICENSE",
+        "url": "https://raw.githubusercontent.com/wravery/webview2-rs/edc2caf886175ccaebe86078c9cfe1ae2a187328/LICENSE",
+        "sha256": "0dcf41516e608bbcb6cdc5229feb7b86fe4a643b85e7df251133c93408fdac73"
+      }
+    ]
+  },
+  {
+    "ecosystem": "cargo",
+    "name": "tauri-plugin",
+    "version": "2.7.1",
+    "repository": "https://github.com/tauri-apps/tauri",
+    "source_revision": "30da1fd6e17de6107ecc850c95dfb16b5729f2dd",
+    "license_files": [
+      "third-party-licenses/rust-tauri-plugin-2.7.1/LICENSE-MIT",
+      "third-party-licenses/rust-tauri-plugin-2.7.1/LICENSE-APACHE-2.0"
+    ],
+    "license_sources": [
+      {
+        "file": "third-party-licenses/rust-tauri-plugin-2.7.1/LICENSE-MIT",
+        "url": "https://raw.githubusercontent.com/tauri-apps/tauri/30da1fd6e17de6107ecc850c95dfb16b5729f2dd/LICENSE-MIT",
+        "sha256": "9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d"
+      },
+      {
+        "file": "third-party-licenses/rust-tauri-plugin-2.7.1/LICENSE-APACHE-2.0",
+        "url": "https://raw.githubusercontent.com/tauri-apps/tauri/30da1fd6e17de6107ecc850c95dfb16b5729f2dd/LICENSE-APACHE-2.0",
+        "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+      }
+    ]
+  },
+  {
+    "ecosystem": "npm",
+    "name": "@tauri-apps/cli-win32-x64-msvc",
+    "version": "2.12.1",
+    "repository": "https://github.com/tauri-apps/tauri",
+    "source_revision": "30da1fd6e17de6107ecc850c95dfb16b5729f2dd",
+    "license_files": [
+      "third-party-licenses/npm-_tauri-apps_cli-win32-x64-msvc/LICENSE-MIT",
+      "third-party-licenses/npm-_tauri-apps_cli-win32-x64-msvc/LICENSE-APACHE-2.0"
+    ],
+    "license_sources": [
+      {
+        "file": "third-party-licenses/npm-_tauri-apps_cli-win32-x64-msvc/LICENSE-MIT",
+        "url": "https://raw.githubusercontent.com/tauri-apps/tauri/30da1fd6e17de6107ecc850c95dfb16b5729f2dd/LICENSE-MIT",
+        "sha256": "9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d"
+      },
+      {
+        "file": "third-party-licenses/npm-_tauri-apps_cli-win32-x64-msvc/LICENSE-APACHE-2.0",
+        "url": "https://raw.githubusercontent.com/tauri-apps/tauri/30da1fd6e17de6107ecc850c95dfb16b5729f2dd/LICENSE-APACHE-2.0",
+        "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+      }
+    ]
+  },
+  {
+    "ecosystem": "npm",
+    "name": "react-remove-scroll-bar",
+    "version": "2.3.8",
+    "repository": "https://github.com/theKashey/react-remove-scroll-bar",
+    "source_revision": "b3b1287aad81def2e2ae707274b74531b61ddbaf",
+    "license_files": [
+      "third-party-licenses/npm-react-remove-scroll-bar/LICENSE",
+      "third-party-licenses/npm-react-remove-scroll-bar/PACKAGE-LICENSE-DECLARATION.json"
+    ],
+    "license_sources": [
+      {
+        "file": "third-party-licenses/npm-react-remove-scroll-bar/LICENSE",
+        "url": "https://raw.githubusercontent.com/theKashey/react-remove-scroll-bar/master/LICENSE",
+        "sha256": "a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84",
+        "note": "Published npm gitHead did not expose LICENSE; official upstream master LICENSE preserved verbatim."
+      },
+      {
+        "file": "third-party-licenses/npm-react-remove-scroll-bar/PACKAGE-LICENSE-DECLARATION.json",
+        "url": "https://registry.npmjs.org/react-remove-scroll-bar/2.3.8",
+        "sha256": "e372f857ce05f266137c65293436b5380fec42ac311e6acb9378ed78b98d75d0",
+        "note": "Installed official package.json copied verbatim; publication metadata at registry URL."
+      }
+    ],
+    "published_license": "MIT",
+    "declared_author": "Anton Korzunov <thekashey@gmail.com>",
+    "license_source_revision": "official default branch; exact text identified by recorded SHA-256",
+    "license_provenance_note": "Version 2.3.8 declares MIT and names Anton Korzunov. The published gitHead exposes no LICENSE; the author's official current MIT LICENSE, copyright 2025, is preserved verbatim with URL and digest."
+  },
+  {
+    "ecosystem": "npm",
+    "name": "uri-js-replace",
+    "version": "1.0.1",
+    "repository": "https://github.com/andreinwald/uri-js-replace",
+    "source_revision": "38927505b51a74b53444dc723be10e0d2e53823c",
+    "license_files": [
+      "third-party-licenses/npm-uri-js-replace/LICENSE",
+      "third-party-licenses/npm-uri-js-replace/PACKAGE-LICENSE-DECLARATION.json"
+    ],
+    "license_sources": [
+      {
+        "file": "third-party-licenses/npm-uri-js-replace/LICENSE",
+        "url": "https://raw.githubusercontent.com/andreinwald/uri-js-replace/master/LICENSE",
+        "sha256": "5caace045044f8e3dd302d2a6789b9824c1dec992a3e94cc8f75f5c81bad699e",
+        "note": "Published npm gitHead did not expose LICENSE; official upstream master LICENSE preserved verbatim."
+      },
+      {
+        "file": "third-party-licenses/npm-uri-js-replace/PACKAGE-LICENSE-DECLARATION.json",
+        "url": "https://registry.npmjs.org/uri-js-replace/1.0.1",
+        "sha256": "04ffc581c5b1fc6314bfc1b255b53d937406b2a9420183330fdc072616594d20",
+        "note": "Installed official package.json copied verbatim; publication metadata at registry URL."
+      }
+    ],
+    "published_license": "MIT",
+    "declared_author": "https://github.com/andreinwald",
+    "license_source_revision": "official default branch; exact text identified by recorded SHA-256",
+    "upstream_current_license_text": "MIT-0",
+    "license_provenance_note": "Version 1.0.1 package.json declares MIT. Its published gitHead has no LICENSE file. The official current LICENSE is titled MIT No Attribution (MIT-0), copyright 2025 andreinwald. Both declarations are preserved; the published license field has not been changed or conflated with MIT-0."
+  }
+]

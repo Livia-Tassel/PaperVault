@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "prepared": true,
+  "library": "D:\\project\\PaperVault\\.test-data\\uninstall-retention\\c965b4b3-4593-4504-8053-c5a9e3c1830b\\研究资料库",
+  "paper_id": "156440d7-6a49-4b5d-b6ca-475ac3d5e175",
+  "database": "D:\\project\\PaperVault\\.test-data\\uninstall-retention\\c965b4b3-4593-4504-8053-c5a9e3c1830b\\研究资料库\\database\\papervault.db",
+  "expected_metadata": {
+    "title": "卸载后保留的真实论文",
+    "notes": "retain-metadata-after-uninstall",
+    "tags": [
+      "保留测试"
+    ]
+  },
+  "sha256_before": {
+    "D:\\project\\PaperVault\\.test-data\\uninstall-retention\\c965b4b3-4593-4504-8053-c5a9e3c1830b\\原始文档.pdf": "a77a692de65dfc76c9c0252dfde57e5c742e470db0d9639d495e5f7893e75386",
+    "D:\\project\\PaperVault\\.test-data\\uninstall-retention\\c965b4b3-4593-4504-8053-c5a9e3c1830b\\研究资料库\\papers\\156440d7-6a49-4b5d-b6ca-475ac3d5e175\\original.pdf": "a77a692de65dfc76c9c0252dfde57e5c742e470db0d9639d495e5f7893e75386",
+    "D:\\project\\PaperVault\\.test-data\\uninstall-retention\\c965b4b3-4593-4504-8053-c5a9e3c1830b\\研究资料库\\papers\\156440d7-6a49-4b5d-b6ca-475ac3d5e175\\metadata.json": "5e43cb6478ed783375e0ee50a9f68a5e0779cec2f145fee7b659a97938e1cc69",
+    "D:\\project\\PaperVault\\.test-data\\uninstall-retention\\c965b4b3-4593-4504-8053-c5a9e3c1830b\\研究资料库\\database\\papervault.db": "1d495039ec67173b4e7a0f27ff731ff6d9eaed7dc718012507eb7db27df2f650"
+  },
+  "verified_phases": [
+    "after_uninstall",
+    "after_reinstall"
+  ]
+}

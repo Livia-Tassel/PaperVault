@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "excel_version": "16.0",
+  "rows": 4,
+  "columns": 4,
+  "first_header": "Method",
+  "last_numeric_value": -0.0012,
+  "read_only": true,
+  "source_sha256": "7124EF4CE2D4AC348F5D8702540023AF1AC735FC9F1C2DE12CD66F17CEEFBEC9"
+}

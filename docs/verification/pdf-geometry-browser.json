@@ -1,0 +1,816 @@
+{
+  "measured_at": "2026-10-09T05:55:16.182Z",
+  "fixture": "tests/fixtures/geometry.pdf",
+  "fixture_sha256": "725f73d03fc6a265201bebc05e37535e9c8417012c153c8a24df1824c8f02d9f",
+  "browser": "154.0.4258.62",
+  "platform": "win32",
+  "cpu": "13th Gen Intel(R) Core(TM) i7-1360P",
+  "method": "Real authenticated API import and four manual resources; actual PDF.js canvas pixels scanned for red rectangle and compared to DOM highlight plus independent CropBox/UserUnit/rotation formula",
+  "dpi_scope": "Browser deviceScaleFactor=2 emulation, canvas DPR=2 verified. Actual Windows system DPI and display scaling were not changed.",
+  "ui_scales": [
+    0.55,
+    1,
+    2.05
+  ],
+  "ui_scale_note": "Existing visible controls use 15% steps; tested 55/100/205%, without changing production controls.",
+  "supplemental_matrix_scales": [
+    0.5,
+    1,
+    2
+  ],
+  "css_pixel_error_tolerance": 2,
+  "ui_cases": [
+    {
+      "page": 1,
+      "native_rotation": 0,
+      "viewer_extra_rotation": 0,
+      "scale": 0.55,
+      "device_pixel_ratio": 2,
+      "expected_highlight": [
+        56.1,
+        287.1,
+        141.9,
+        350.90000000000003
+      ],
+      "actual_highlight": [
+        56.09375,
+        287.09375,
+        141.890625,
+        350.890625
+      ],
+      "highlight_error_css_px": 0.009375000000034106,
+      "expected_red_pixels_in_css": [
+        55.00000000000001,
+        286,
+        143,
+        352
+      ],
+      "actual_red_pixels_in_css": [
+        55,
+        286,
+        143,
+        352
+      ],
+      "raster_error_css_px": 7.105427357601002e-15,
+      "canvas_width_pixels": 660,
+      "canvas_height_pixels": 836
+    },
+    {
+      "page": 1,
+      "native_rotation": 0,
+      "viewer_extra_rotation": 0,
+      "scale": 1,
+      "device_pixel_ratio": 2,
+      "expected_highlight": [
+        102,
+        522,
+        258,
+        638
+      ],
+      "actual_highlight": [
+        102,
+        522,
+        258,
+        638
+      ],
+      "highlight_error_css_px": 0,
+      "expected_red_pixels_in_css": [
+        100,
+        520,
+        260,
+        640
+      ],
+      "actual_red_pixels_in_css": [
+        100,
+        520,
+        260,
+        640
+      ],
+      "raster_error_css_px": 0,
+      "canvas_width_pixels": 1200,
+      "canvas_height_pixels": 1520
+    },
+    {
+      "page": 1,
+      "native_rotation": 0,
+      "viewer_extra_rotation": 0,
+      "scale": 2.05,
+      "device_pixel_ratio": 2,
+      "expected_highlight": [
+        209.1,
+        1070.1,
+        528.9,
+        1307.8999999999999
+      ],
+      "actual_highlight": [
+        209.09375,
+        1070.09375,
+        528.890625,
+        1307.890625
+      ],
+      "highlight_error_css_px": 0.009374999999977263,
+      "expected_red_pixels_in_css": [
+        204.99999999999997,
+        1066,
+        533,
+        1312
+      ],
+      "actual_red_pixels_in_css": [
+        205,
+        1066,
+        533,
+        1312
+      ],
+      "raster_error_css_px": 2.842170943040401e-14,
+      "canvas_width_pixels": 2460,
+      "canvas_height_pixels": 3116
+    },
+    {
+      "page": 1,
+      "native_rotation": 0,
+      "viewer_extra_rotation": 90,
+      "scale": 1,
+      "device_pixel_ratio": 2,
+      "expected_highlight": [
+        122,
+        102,
+        238,
+        258
+      ],
+      "actual_highlight": [
+        122,
+        102,
+        238,
+        258
+      ],
+      "highlight_error_css_px": 0,
+      "expected_red_pixels_in_css": [
+        120,
+        100,
+        240,
+        260
+      ],
+      "actual_red_pixels_in_css": [
+        120,
+        100,
+        240,
+        260
+      ],
+      "raster_error_css_px": 0,
+      "canvas_width_pixels": 1520,
+      "canvas_height_pixels": 1200
+    },
+    {
+      "page": 2,
+      "native_rotation": 90,
+      "viewer_extra_rotation": 0,
+      "scale": 0.55,
+      "device_pixel_ratio": 2,
+      "expected_highlight": [
+        67.10000000000001,
+        56.1,
+        130.9,
+        141.9
+      ],
+      "actual_highlight": [
+        67.09375,
+        56.09375,
+        130.890625,
+        141.890625
+      ],
+      "highlight_error_css_px": 0.009375000000005684,
+      "expected_red_pixels_in_css": [
+        66,
+        55.00000000000001,
+        132,
+        143
+      ],
+      "actual_red_pixels_in_css": [
+        66,
+        55,
+        132,
+        143
+      ],
+      "raster_error_css_px": 7.105427357601002e-15,
+      "canvas_width_pixels": 836,
+      "canvas_height_pixels": 660
+    },
+    {
+      "page": 2,
+      "native_rotation": 90,
+      "viewer_extra_rotation": 0,
+      "scale": 1,
+      "device_pixel_ratio": 2,
+      "expected_highlight": [
+        122,
+        102,
+        238,
+        258
+      ],
+      "actual_highlight": [
+        122,
+        102,
+        238,
+        258
+      ],
+      "highlight_error_css_px": 0,
+      "expected_red_pixels_in_css": [
+        120,
+        100,
+        240,
+        260
+      ],
+      "actual_red_pixels_in_css": [
+        120,
+        100,
+        240,
+        260
+      ],
+      "raster_error_css_px": 0,
+      "canvas_width_pixels": 1520,
+      "canvas_height_pixels": 1200
+    },
+    {
+      "page": 2,
+      "native_rotation": 90,
+      "viewer_extra_rotation": 0,
+      "scale": 2.05,
+      "device_pixel_ratio": 2,
+      "expected_highlight": [
+        250.09999999999997,
+        209.1,
+        487.9,
+        528.9
+      ],
+      "actual_highlight": [
+        250.09375,
+        209.09375,
+        487.890625,
+        528.890625
+      ],
+      "highlight_error_css_px": 0.009374999999977263,
+      "expected_red_pixels_in_css": [
+        245.99999999999997,
+        204.99999999999997,
+        491.99999999999994,
+        533
+      ],
+      "actual_red_pixels_in_css": [
+        246,
+        205,
+        492,
+        533
+      ],
+      "raster_error_css_px": 5.684341886080802e-14,
+      "canvas_width_pixels": 3116,
+      "canvas_height_pixels": 2460
+    },
+    {
+      "page": 2,
+      "native_rotation": 90,
+      "viewer_extra_rotation": 90,
+      "scale": 1,
+      "device_pixel_ratio": 2,
+      "expected_highlight": [
+        342,
+        122,
+        498,
+        238
+      ],
+      "actual_highlight": [
+        342,
+        122,
+        498,
+        238
+      ],
+      "highlight_error_css_px": 0,
+      "expected_red_pixels_in_css": [
+        340,
+        120,
+        500,
+        240
+      ],
+      "actual_red_pixels_in_css": [
+        340,
+        120,
+        500,
+        240
+      ],
+      "raster_error_css_px": 0,
+      "canvas_width_pixels": 1200,
+      "canvas_height_pixels": 1520
+    },
+    {
+      "page": 3,
+      "native_rotation": 180,
+      "viewer_extra_rotation": 0,
+      "scale": 0.55,
+      "device_pixel_ratio": 2,
+      "expected_highlight": [
+        188.10000000000002,
+        67.10000000000001,
+        273.90000000000003,
+        130.9
+      ],
+      "actual_highlight": [
+        188.09375,
+        67.09375,
+        273.890625,
+        130.890625
+      ],
+      "highlight_error_css_px": 0.009375000000034106,
+      "expected_red_pixels_in_css": [
+        187.00000000000003,
+        66,
+        275,
+        132
+      ],
+      "actual_red_pixels_in_css": [
+        187,
+        66,
+        275,
+        132
+      ],
+      "raster_error_css_px": 2.842170943040401e-14,
+      "canvas_width_pixels": 660,
+      "canvas_height_pixels": 836
+    },
+    {
+      "page": 3,
+      "native_rotation": 180,
+      "viewer_extra_rotation": 0,
+      "scale": 1,
+      "device_pixel_ratio": 2,
+      "expected_highlight": [
+        342,
+        122,
+        498,
+        238
+      ],
+      "actual_highlight": [
+        342,
+        122,
+        498,
+        238
+      ],
+      "highlight_error_css_px": 0,
+      "expected_red_pixels_in_css": [
+        340,
+        120,
+        500,
+        240
+      ],
+      "actual_red_pixels_in_css": [
+        340,
+        120,
+        500,
+        240
+      ],
+      "raster_error_css_px": 0,
+      "canvas_width_pixels": 1200,
+      "canvas_height_pixels": 1520
+    },
+    {
+      "page": 3,
+      "native_rotation": 180,
+      "viewer_extra_rotation": 0,
+      "scale": 2.05,
+      "device_pixel_ratio": 2,
+      "expected_highlight": [
+        701.0999999999999,
+        250.09999999999997,
+        1020.8999999999999,
+        487.9
+      ],
+      "actual_highlight": [
+        701.09375,
+        250.09375,
+        1020.890625,
+        487.890625
+      ],
+      "highlight_error_css_px": 0.009374999999977263,
+      "expected_red_pixels_in_css": [
+        696.9999999999999,
+        245.99999999999997,
+        1025,
+        491.99999999999994
+      ],
+      "actual_red_pixels_in_css": [
+        697,
+        246,
+        1025,
+        492
+      ],
+      "raster_error_css_px": 1.1368683772161603e-13,
+      "canvas_width_pixels": 2460,
+      "canvas_height_pixels": 3116
+    },
+    {
+      "page": 3,
+      "native_rotation": 180,
+      "viewer_extra_rotation": 90,
+      "scale": 1,
+      "device_pixel_ratio": 2,
+      "expected_highlight": [
+        522,
+        342,
+        638,
+        498
+      ],
+      "actual_highlight": [
+        522,
+        342,
+        638,
+        498
+      ],
+      "highlight_error_css_px": 0,
+      "expected_red_pixels_in_css": [
+        520,
+        340,
+        640,
+        500
+      ],
+      "actual_red_pixels_in_css": [
+        520,
+        340,
+        640,
+        500
+      ],
+      "raster_error_css_px": 0,
+      "canvas_width_pixels": 1520,
+      "canvas_height_pixels": 1200
+    },
+    {
+      "page": 4,
+      "native_rotation": 270,
+      "viewer_extra_rotation": 0,
+      "scale": 0.55,
+      "device_pixel_ratio": 2,
+      "expected_highlight": [
+        287.1,
+        188.10000000000002,
+        350.90000000000003,
+        273.90000000000003
+      ],
+      "actual_highlight": [
+        287.09375,
+        188.09375,
+        350.890625,
+        273.890625
+      ],
+      "highlight_error_css_px": 0.009375000000034106,
+      "expected_red_pixels_in_css": [
+        286,
+        187.00000000000003,
+        352,
+        275
+      ],
+      "actual_red_pixels_in_css": [
+        286,
+        187,
+        352,
+        275
+      ],
+      "raster_error_css_px": 2.842170943040401e-14,
+      "canvas_width_pixels": 836,
+      "canvas_height_pixels": 660
+    },
+    {
+      "page": 4,
+      "native_rotation": 270,
+      "viewer_extra_rotation": 0,
+      "scale": 1,
+      "device_pixel_ratio": 2,
+      "expected_highlight": [
+        522,
+        342,
+        638,
+        498
+      ],
+      "actual_highlight": [
+        522,
+        342,
+        638,
+        498
+      ],
+      "highlight_error_css_px": 0,
+      "expected_red_pixels_in_css": [
+        520,
+        340,
+        640,
+        500
+      ],
+      "actual_red_pixels_in_css": [
+        520,
+        340,
+        640,
+        500
+      ],
+      "raster_error_css_px": 0,
+      "canvas_width_pixels": 1520,
+      "canvas_height_pixels": 1200
+    },
+    {
+      "page": 4,
+      "native_rotation": 270,
+      "viewer_extra_rotation": 0,
+      "scale": 2.05,
+      "device_pixel_ratio": 2,
+      "expected_highlight": [
+        1070.1,
+        701.0999999999999,
+        1307.8999999999999,
+        1020.8999999999999
+      ],
+      "actual_highlight": [
+        1070.09375,
+        701.09375,
+        1307.890625,
+        1020.890625
+      ],
+      "highlight_error_css_px": 0.009374999999863576,
+      "expected_red_pixels_in_css": [
+        1066,
+        696.9999999999999,
+        1312,
+        1025
+      ],
+      "actual_red_pixels_in_css": [
+        1066,
+        697,
+        1312,
+        1025
+      ],
+      "raster_error_css_px": 1.1368683772161603e-13,
+      "canvas_width_pixels": 3116,
+      "canvas_height_pixels": 2460
+    },
+    {
+      "page": 4,
+      "native_rotation": 270,
+      "viewer_extra_rotation": 90,
+      "scale": 1,
+      "device_pixel_ratio": 2,
+      "expected_highlight": [
+        102,
+        522,
+        258,
+        638
+      ],
+      "actual_highlight": [
+        102,
+        522,
+        258,
+        638
+      ],
+      "highlight_error_css_px": 0,
+      "expected_red_pixels_in_css": [
+        100,
+        520,
+        260,
+        640
+      ],
+      "actual_red_pixels_in_css": [
+        100,
+        520,
+        260,
+        640
+      ],
+      "raster_error_css_px": 0,
+      "canvas_width_pixels": 1200,
+      "canvas_height_pixels": 1520
+    }
+  ],
+  "matrix_checks": [
+    {
+      "page": 1,
+      "scale": 0.5,
+      "rotation": 0,
+      "user_unit": 2,
+      "crop_box": [
+        50,
+        70,
+        350,
+        450
+      ],
+      "max_roundtrip_error_pdf_points": 0,
+      "rectangle": [
+        51,
+        261,
+        129,
+        319
+      ]
+    },
+    {
+      "page": 1,
+      "scale": 1,
+      "rotation": 0,
+      "user_unit": 2,
+      "crop_box": [
+        50,
+        70,
+        350,
+        450
+      ],
+      "max_roundtrip_error_pdf_points": 0,
+      "rectangle": [
+        102,
+        522,
+        258,
+        638
+      ]
+    },
+    {
+      "page": 1,
+      "scale": 2,
+      "rotation": 0,
+      "user_unit": 2,
+      "crop_box": [
+        50,
+        70,
+        350,
+        450
+      ],
+      "max_roundtrip_error_pdf_points": 0,
+      "rectangle": [
+        204,
+        1044,
+        516,
+        1276
+      ]
+    },
+    {
+      "page": 2,
+      "scale": 0.5,
+      "rotation": 90,
+      "user_unit": 2,
+      "crop_box": [
+        50,
+        70,
+        350,
+        450
+      ],
+      "max_roundtrip_error_pdf_points": 0,
+      "rectangle": [
+        61,
+        51,
+        119,
+        129
+      ]
+    },
+    {
+      "page": 2,
+      "scale": 1,
+      "rotation": 90,
+      "user_unit": 2,
+      "crop_box": [
+        50,
+        70,
+        350,
+        450
+      ],
+      "max_roundtrip_error_pdf_points": 0,
+      "rectangle": [
+        122,
+        102,
+        238,
+        258
+      ]
+    },
+    {
+      "page": 2,
+      "scale": 2,
+      "rotation": 90,
+      "user_unit": 2,
+      "crop_box": [
+        50,
+        70,
+        350,
+        450
+      ],
+      "max_roundtrip_error_pdf_points": 0,
+      "rectangle": [
+        244,
+        204,
+        476,
+        516
+      ]
+    },
+    {
+      "page": 3,
+      "scale": 0.5,
+      "rotation": 180,
+      "user_unit": 2,
+      "crop_box": [
+        50,
+        70,
+        350,
+        450
+      ],
+      "max_roundtrip_error_pdf_points": 0,
+      "rectangle": [
+        171,
+        61,
+        249,
+        119
+      ]
+    },
+    {
+      "page": 3,
+      "scale": 1,
+      "rotation": 180,
+      "user_unit": 2,
+      "crop_box": [
+        50,
+        70,
+        350,
+        450
+      ],
+      "max_roundtrip_error_pdf_points": 0,
+      "rectangle": [
+        342,
+        122,
+        498,
+        238
+      ]
+    },
+    {
+      "page": 3,
+      "scale": 2,
+      "rotation": 180,
+      "user_unit": 2,
+      "crop_box": [
+        50,
+        70,
+        350,
+        450
+      ],
+      "max_roundtrip_error_pdf_points": 0,
+      "rectangle": [
+        684,
+        244,
+        996,
+        476
+      ]
+    },
+    {
+      "page": 4,
+      "scale": 0.5,
+      "rotation": 270,
+      "user_unit": 2,
+      "crop_box": [
+        50,
+        70,
+        350,
+        450
+      ],
+      "max_roundtrip_error_pdf_points": 0,
+      "rectangle": [
+        261,
+        171,
+        319,
+        249
+      ]
+    },
+    {
+      "page": 4,
+      "scale": 1,
+      "rotation": 270,
+      "user_unit": 2,
+      "crop_box": [
+        50,
+        70,
+        350,
+        450
+      ],
+      "max_roundtrip_error_pdf_points": 0,
+      "rectangle": [
+        522,
+        342,
+        638,
+        498
+      ]
+    },
+    {
+      "page": 4,
+      "scale": 2,
+      "rotation": 270,
+      "user_unit": 2,
+      "crop_box": [
+        50,
+        70,
+        350,
+        450
+      ],
+      "max_roundtrip_error_pdf_points": 0,
+      "rectangle": [
+        1044,
+        684,
+        1276,
+        996
+      ]
+    }
+  ],
+  "javascript_errors": [],
+  "status": "passed"
+}

@@ -4,7 +4,11 @@
 
 ## 当前交付状态
 
-真实PDF解析、图表导出、搜索、人工修正、备份恢复和重启持久化已通过源码与冻结后台验收。Windows安装及原生窗口最终状态见 [TEST_REPORT.md](TEST_REPORT.md)，开发记录见 [PROGRESS.md](PROGRESS.md)。
+PaperVault 0.1.0 已生成并验证 Windows x64 安装包。真实PDF解析、图表导出、搜索、人工修正、备份恢复、重启持久化、安装后原生窗口和卸载/重装数据保留均已通过本机验收。
+
+本机产物：[Windows安装包](apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis/PaperVault_0.1.0_x64-setup.exe)（511.48 MiB）。首次使用可在设置中导入本项目已有的 `.cache/models` 模型目录，或选择下载模型。开发工具只供构建使用，安装版内置Python后端。
+
+安装器未签名；干净Windows VM尚未验证。复杂PDF识别限制及一次未复现的原生诊断均如实记录在 [TEST_REPORT.md](TEST_REPORT.md)，开发记录见 [PROGRESS.md](PROGRESS.md)。
 
 ## 开发运行（Windows）
 

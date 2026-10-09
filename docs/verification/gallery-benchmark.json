@@ -1,0 +1,135 @@
+{
+  "measured_at": "2026-10-09T05:44:33.010Z",
+  "dataset": {
+    "synthetic_metadata": true,
+    "description": "1000 metadata rows share one real PDFium crop and thumbnail; not parser accuracy evidence",
+    "library": "D:\\project\\PaperVault\\.test-data\\gallery-benchmark-library",
+    "papers": 1,
+    "figures": 1000,
+    "source_pdf": "tests\\fixtures\\academic.pdf",
+    "source_pdf_sha256": "a77a692de65dfc76c9c0252dfde57e5c742e470db0d9639d495e5f7893e75386",
+    "source_location": {
+      "page_index": 0,
+      "bbox": [
+        72,
+        350,
+        540,
+        470
+      ]
+    },
+    "png_sha256": "18d99f76a6da96bb9005acc4a8daa1bf9606386754ccbb61d26e053e678dcbee",
+    "thumbnail_sha256": "7db373cb6575813a8267a16b008d4e0bb3456c21a2dc00c96bbd86c2a1244c00",
+    "png_bytes": 23693,
+    "thumbnail_bytes": 8361,
+    "generation_seconds": 0.543,
+    "machine": {
+      "platform": "Windows-11-10.0.26300-SP0",
+      "cpu": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+      "logical_cpus": 16,
+      "ram_bytes": 16890716160
+    }
+  },
+  "machine": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "cpu": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "logical_cpus": 16,
+    "ram_bytes": 16890716160,
+    "node": "v24.15.0",
+    "cpu_model": "13th Gen Intel(R) Core(TM) i7-1360P",
+    "browser": "154.0.4258.62",
+    "browser_channel": "msedge",
+    "headless": true,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "device_scale_factor": 1
+  },
+  "method": {
+    "frontend": "http://127.0.0.1:1420",
+    "runtime": "Vite development server, actual React application",
+    "backend": "http://127.0.0.1:8766/api/v1",
+    "api_routing": "Browser test redirects default API port 8765 to isolated 8766; all responses and images come from the real backend, no mocks",
+    "first_screen": "New browser context; navigation click to 24 cards and all currently visible images loaded and decoded",
+    "image_decode_verification": "HTMLImageElement.decode() must resolve for first-screen images and all 24 page images after each pass; per-frame readiness uses complete and naturalWidth",
+    "scroll": "Three six-second requestAnimationFrame passes down and back up the real gallery scroll container; rAF intervals measured in page context",
+    "limitation": "1000 library records, 24 resources per real pagination page; this does not measure 1000 simultaneous images, physical input latency, desktop install startup, parser accuracy or uncached diverse-image decoding"
+  },
+  "application_ready_ms": 2091.829,
+  "first_screen": {
+    "ready_ms": 310.2,
+    "visible_images": 8,
+    "visible_images_decoded": 8,
+    "page_dom_images": 12,
+    "page_dom_cards": 24
+  },
+  "scroll_frame_intervals": {
+    "count": 1080,
+    "p50_ms": 16.7,
+    "p95_ms": 16.8,
+    "max_ms": 16.9,
+    "frames_over_33_4_ms": 0
+  },
+  "scroll_passes": [
+    {
+      "pass": 1,
+      "duration_ms": 6005.8,
+      "max_scroll_px": 1775,
+      "max_dom_images": 24,
+      "unique_visible_images_loaded": 24,
+      "page_image_decode_checks": 24,
+      "page_image_decode_successes": 24,
+      "visible_image_checks": 3672,
+      "visible_image_ready_checks": 3672,
+      "visible_image_not_ready_checks": 0,
+      "frame_intervals": {
+        "count": 360,
+        "p50_ms": 16.7,
+        "p95_ms": 16.8,
+        "max_ms": 16.8,
+        "frames_over_33_4_ms": 0
+      }
+    },
+    {
+      "pass": 2,
+      "duration_ms": 6008.2,
+      "max_scroll_px": 1775,
+      "max_dom_images": 24,
+      "unique_visible_images_loaded": 24,
+      "page_image_decode_checks": 24,
+      "page_image_decode_successes": 24,
+      "visible_image_checks": 3660,
+      "visible_image_ready_checks": 3660,
+      "visible_image_not_ready_checks": 0,
+      "frame_intervals": {
+        "count": 360,
+        "p50_ms": 16.7,
+        "p95_ms": 16.8,
+        "max_ms": 16.8,
+        "frames_over_33_4_ms": 0
+      }
+    },
+    {
+      "pass": 3,
+      "duration_ms": 6010.5,
+      "max_scroll_px": 1775,
+      "max_dom_images": 24,
+      "unique_visible_images_loaded": 24,
+      "page_image_decode_checks": 24,
+      "page_image_decode_successes": 24,
+      "visible_image_checks": 3660,
+      "visible_image_ready_checks": 3660,
+      "visible_image_not_ready_checks": 0,
+      "frame_intervals": {
+        "count": 360,
+        "p50_ms": 16.7,
+        "p95_ms": 16.8,
+        "max_ms": 16.9,
+        "frames_over_33_4_ms": 0
+      }
+    }
+  ],
+  "javascript_errors": [],
+  "failed_http_responses": [],
+  "next_page_visible_loaded_ms": 216.2
+}

@@ -20,7 +20,10 @@ def main() -> None:
     parser.add_argument('--backend', type=Path, required=True)
     parser.add_argument('--source', action='store_true', help='Treat --backend as Python and run the source module instead of a frozen exe')
     args = parser.parse_args()
-    test_root = Path(__file__).resolve().parent.parent / '.test-data' / 'packaging'
+    project_root = Path(__file__).resolve().parent.parent
+    test_root = (project_root / '.test-data' / 'packaging').resolve()
+    if not test_root.is_relative_to(project_root):
+        raise ValueError('Test cleanup directory must remain inside the project')
     test_root.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='PaperVault 打包验收 ', dir=test_root) as work:
         token = secrets.token_hex(32)

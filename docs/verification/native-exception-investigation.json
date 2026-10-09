@@ -1,0 +1,46 @@
+{
+  "historical_observation": {
+    "tests": 70,
+    "result": "passed",
+    "exit_code": 0,
+    "windows_access_violation_messages": 2,
+    "source": "parent agent original tool output; complete native exception stack not preserved"
+  },
+  "reproductions": [
+    {
+      "mode": "integration+parser; -vv -s -X faulthandler",
+      "tests": 35,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 59.755,
+      "access_violation_messages": 0,
+      "xml": "artifacts/native-exception-repro.xml",
+      "log": ".test-data/native-exception-repro3.log"
+    },
+    {
+      "mode": "all tests; -vv -s -X faulthandler",
+      "tests": 70,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 45.6,
+      "access_violation_messages": 0,
+      "xml": "artifacts/native-exception-full.xml",
+      "log": ".test-data/native-exception-full.log"
+    },
+    {
+      "mode": "all tests; original default -q capture; pytest faulthandler enabled",
+      "tests": 70,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 32.008,
+      "access_violation_messages": 0,
+      "xml": "artifacts/native-exception-capture.xml",
+      "log": ".test-data/native-exception-capture.log"
+    }
+  ],
+  "production_code_changed": false,
+  "faulthandler_disabled": false,
+  "conclusion": "Not reproduced. No evidence establishing CPU probing or a specific native lifecycle defect. Do not classify the original event as harmless solely from exit 0.",
+  "cpython_reference": "https://github.com/python/cpython/blob/v3.12.8/Modules/faulthandler.c#L323-L365",
+  "mechanism": "The Windows vectored handler logs access violations then returns EXCEPTION_CONTINUE_SEARCH; another native handler may recover. The Python stack alone does not identify the faulting DLL or instruction."
+}
