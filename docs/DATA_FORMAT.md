@@ -1,9 +1,10 @@
-# 论文库格式 v1
+# 论文库格式 v1 / 数据库 schema 0002
 
 论文库由SQLite元数据与文件资源组成，应整体备份，不要在程序运行时仅复制一个.db文件。
 
 ```
 database/papervault.db       # Alembic版本、元数据、任务、FTS5
+database/migration-backups/  # 数据库升级前的SQLite Backup API快照
 papers/<uuid>/original.pdf  # 托管原件；导入来源不修改
 papers/<uuid>/metadata.json # 便于独立查看的快照；DB为事实来源
 papers/<uuid>/revisions/<run_id>/
@@ -29,3 +30,15 @@ Table保留rows、cells及header_rows；cells记录行列、row_span/col_span、
 论文导出ZIP含原件、有效metadata、结构JSON、Markdown和资源。资源metadata中记录来源论文、位置、Caption、引擎与提取时间；导出文件可以独立于应用读取。
 
 完整备份ZIP含数据库快照、论文目录和哈希清单。恢复验证路径、清单、外键、数据库完整性及资源引用后才切换。恶意路径、损坏清单和非空恢复目录将被拒绝。
+
+## 0.2 阅读与笔记
+
+`library_meta` 保存持久化库UUID，恢复副本保留该UUID。前端会话与写入上下文还包含实际路径，因此同UUID的两个目录互相隔离。
+
+`reading_states` 以paper_id为键，保存零基页码、未旋转PDF坐标锚点、scale、额外rotation、fit_mode（custom/width/page）、status（unread/reading/read）、last_opened及version。阅读状态不修改原件、自动解析结果或metadata.json。
+
+`annotations` 记录kind（bookmark/highlight/note）、title、quote、body、color、tags、locations、version和deleted。文本高亮的每行/每页保存单独bbox，区域笔记保存实际框选范围；无位置的note为整篇论文笔记。记录依靠CAS版本防止无声覆盖；软删除可恢复。详情API见[阅读接口](READING_API.md)。
+
+笔记JSON包含论文/笔记ID、原PDF SHA-256、类型、颜色、内容、位置与时间。独立Markdown导出明确不包含PDF，不伪造可用外部链接。整篇ZIP增加 `annotations.json`、`notes.md` 与阅读状态，其中Markdown相对链接指向同包 `original.pdf#page=N`。
+
+旧0001库在显式事务中升级，并先保留数据库快照。0.1.x程序不能直接打开0002库；需要回退时使用升级前完整备份并保留新库。不要把运行中的数据库文件直接覆盖到另一版库，也不要把迁移快照当作含全部资源文件的完整备份。
