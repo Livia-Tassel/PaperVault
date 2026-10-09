@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "production_source_commit": "4565b6566be5b4b3a9e85ed3515291c5c61cdacd",
+  "observed_at_utc": "2026-10-09T10:56:00Z",
+  "vitest": {
+    "passed": 47,
+    "failed": 0,
+    "files": 8,
+    "duration_seconds": 0.683,
+    "command": "npm run test -- --run",
+    "exec_session": 37792
+  },
+  "final_hook_regression": {
+    "passed": 5,
+    "failed": 0,
+    "duration_seconds": 18.1,
+    "command": "npx playwright test e2e/reading-conflict.spec.ts e2e/export-guards.spec.ts e2e/notebook.spec.ts --output ../../artifacts/final-hook-regression --reporter=list",
+    "exec_session": 37792,
+    "output": "artifacts/final-hook-regression",
+    "scope": "Real local API and reader UI: unsaved edits, export guard, conflict choices, bookmark deletion/undo and notebook."
+  },
+  "reader_after_optimization": {
+    "passed": 6,
+    "failed": 0,
+    "duration_seconds": 38.8,
+    "output": "artifacts/reader-memo-regression",
+    "command": "npx playwright test e2e/reader-upgrade.spec.ts e2e/reader-performance.spec.ts --output ../../artifacts/reader-memo-regression --reporter=list",
+    "scope": "Real PDF.js fixture component browser tests plus real library read/write scenario. Distinct from installed native acceptance."
+  },
+  "other_suite_evidence": {
+    "workspace_navigation_5_cases": "artifacts/workspace-navigation-ui.json",
+    "legacy_7_cases": "artifacts/legacy-regression-v02/report.json",
+    "repeated_outline_location_1_case": "artifacts/repeated-location-fixed/.last-run.json"
+  },
+  "build": {
+    "typescript": "passed",
+    "vite_production": "passed",
+    "entry": "/assets/index-Bi9K65xx.js",
+    "sha256": "96c3541eea34dabb90e1655d5dd08da9ef76fa336df3ae433e92c48ee0c77f0b"
+  },
+  "notes": "Counts reflect distinct suites, not an invented combined test run. Raw Playwright artifacts stay local; compact reports are archived under docs/verification/0.2.0."
+}

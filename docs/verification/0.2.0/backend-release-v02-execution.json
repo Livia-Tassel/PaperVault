@@ -1,0 +1,26 @@
+{
+  "command": [
+    "D:\\project\\PaperVault\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "tests",
+    "-v",
+    "--basetemp=.test-data/backend-release-v02-11",
+    "--junitxml=artifacts/backend-release-v02-junit.xml",
+    "--tb=short",
+    "-o",
+    "faulthandler_timeout=120"
+  ],
+  "started_at": "2026-10-09T09:26:48.652817+00:00",
+  "finished_at": "2026-10-09T09:27:46.605391+00:00",
+  "duration_seconds": 57.953,
+  "exit_code": 0,
+  "environment": {
+    "PAPERVAULT_TEST_MODELS": "D:\\project\\PaperVault\\.cache\\models",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "PYTHONUTF8": "1"
+  },
+  "log": "artifacts/backend-release-v02.log",
+  "junit": "artifacts/backend-release-v02-junit.xml"
+}

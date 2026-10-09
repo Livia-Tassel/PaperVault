@@ -1,0 +1,333 @@
+{
+  "passed": true,
+  "started_at": "2026-10-09T10:14:56.343314+00:00",
+  "command": "D:\\project\\PaperVault\\.venv\\Scripts\\python.exe scripts/reading-acceptance.py --backend apps/desktop/src-tauri/binaries/papervault-backend-x86_64-pc-windows-msvc.exe --models .cache/models --pdf tests/fixtures/academic.pdf --report artifacts/reading-reparse-frozen-v02.json",
+  "work_directory": "D:\\project\\PaperVault\\.test-data\\reading-frozen-ac37efa4715c4b8a8d8c4978d742bb2a",
+  "frozen_backend": "D:\\project\\PaperVault\\apps\\desktop\\src-tauri\\binaries\\papervault-backend-x86_64-pc-windows-msvc.exe",
+  "frozen_backend_sha256": "40f03cbfe81ad7ab701680627cf9e777dc5903f7d0c377537985babbf0ac8b8a",
+  "model_path": "D:\\project\\PaperVault\\.cache\\models",
+  "model_manifest_sha256": "0667a164e1d7633187c24ba81302ca86bb50dff449f49c420e0217a6fd03fd45",
+  "offline_environment": {
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1"
+  },
+  "source_pdf": "D:\\project\\PaperVault\\tests\\fixtures\\academic.pdf",
+  "source_sha256_before": "a77a692de65dfc76c9c0252dfde57e5c742e470db0d9639d495e5f7893e75386",
+  "machine": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.12.8"
+  },
+  "stages": [
+    {
+      "name": "initial_real_docling_parse",
+      "job": {
+        "id": "8f3060f1-4feb-4805-9b48-d75265f607b8",
+        "paper_id": "49609c67-7d1a-4b2e-b755-3a825da19d35",
+        "status": "completed",
+        "phase": "解析完成",
+        "error": null,
+        "created_at": "2026-10-09T10:14:58.555008+00:00",
+        "updated_at": "2026-10-09T10:15:18.487910+00:00",
+        "paper_title": "Local Research Asset Extraction",
+        "pages_done": 2,
+        "pages_total": 2,
+        "resources_count": 2
+      },
+      "seconds": 19.996
+    },
+    {
+      "name": "baseline_user_data",
+      "annotations": 5,
+      "notes_search_hits": 5,
+      "reading_version": 2,
+      "all_annotation_fields_exactly_equal": true,
+      "reading_all_fields_exactly_equal": true,
+      "source_pdf_sha256": "a77a692de65dfc76c9c0252dfde57e5c742e470db0d9639d495e5f7893e75386"
+    },
+    {
+      "name": "real_docling_reparse",
+      "job": {
+        "id": "2702d3fe-9ebb-4606-b1a1-b240528589e2",
+        "paper_id": "49609c67-7d1a-4b2e-b755-3a825da19d35",
+        "status": "completed",
+        "phase": "解析完成",
+        "error": null,
+        "created_at": "2026-10-09T10:15:18.909541+00:00",
+        "updated_at": "2026-10-09T10:15:33.047669+00:00",
+        "paper_title": "Local Research Asset Extraction",
+        "pages_done": 2,
+        "pages_total": 2,
+        "resources_count": 2
+      },
+      "seconds": 14.391
+    },
+    {
+      "name": "reparse_user_data_preserved",
+      "annotations": 5,
+      "notes_search_hits": 5,
+      "reading_version": 2,
+      "all_annotation_fields_exactly_equal": true,
+      "reading_all_fields_exactly_equal": true,
+      "source_pdf_sha256": "a77a692de65dfc76c9c0252dfde57e5c742e470db0d9639d495e5f7893e75386"
+    },
+    {
+      "name": "backup_restore_user_data_preserved",
+      "annotations": 5,
+      "notes_search_hits": 5,
+      "reading_version": 2,
+      "all_annotation_fields_exactly_equal": true,
+      "reading_all_fields_exactly_equal": true,
+      "source_pdf_sha256": "a77a692de65dfc76c9c0252dfde57e5c742e470db0d9639d495e5f7893e75386"
+    }
+  ],
+  "exports": {
+    "before_reparse": {
+      "json": {
+        "path": "D:\\project\\PaperVault\\.test-data\\reading-frozen-ac37efa4715c4b8a8d8c4978d742bb2a\\before-reparse-notes.json",
+        "bytes": 5075,
+        "sha256": "2bb190a5595f0cc170c1036a04b7685a882599523d0affa4cc34ed34d6647a60"
+      },
+      "markdown": {
+        "path": "D:\\project\\PaperVault\\.test-data\\reading-frozen-ac37efa4715c4b8a8d8c4978d742bb2a\\before-reparse-notes.md",
+        "bytes": 3202,
+        "sha256": "58980bc222d2cca8f1444dfc06216e63746b4abf1babc51f8e11a1dbf81a66c7"
+      }
+    },
+    "after_reparse": {
+      "json": {
+        "path": "D:\\project\\PaperVault\\.test-data\\reading-frozen-ac37efa4715c4b8a8d8c4978d742bb2a\\after-reparse-notes.json",
+        "bytes": 5075,
+        "sha256": "def349cda8456a06601081ef629d4e7f6b3137d53effcccd8bf876fc3f5b84b9"
+      },
+      "markdown": {
+        "path": "D:\\project\\PaperVault\\.test-data\\reading-frozen-ac37efa4715c4b8a8d8c4978d742bb2a\\after-reparse-notes.md",
+        "bytes": 3202,
+        "sha256": "58980bc222d2cca8f1444dfc06216e63746b4abf1babc51f8e11a1dbf81a66c7"
+      }
+    },
+    "after_restore": {
+      "json": {
+        "path": "D:\\project\\PaperVault\\.test-data\\reading-frozen-ac37efa4715c4b8a8d8c4978d742bb2a\\after-restore-notes.json",
+        "bytes": 5075,
+        "sha256": "422bd64b2fef59c74db6fb0c64771019b4723518a1c32b68b9713ac8f1ba8d29"
+      },
+      "markdown": {
+        "path": "D:\\project\\PaperVault\\.test-data\\reading-frozen-ac37efa4715c4b8a8d8c4978d742bb2a\\after-restore-notes.md",
+        "bytes": 3202,
+        "sha256": "58980bc222d2cca8f1444dfc06216e63746b4abf1babc51f8e11a1dbf81a66c7"
+      }
+    }
+  },
+  "synthetic_parser_or_database_writes": false,
+  "health": {
+    "status": "ok",
+    "version": "0.2.0",
+    "protocol": 1
+  },
+  "backend_port": 26001,
+  "library": {
+    "id": "91a23dce-76bc-4080-8d35-70f28da6fc1a",
+    "path": "D:\\project\\PaperVault\\.test-data\\reading-frozen-ac37efa4715c4b8a8d8c4978d742bb2a\\原始论文库",
+    "paper_count": 0,
+    "figure_count": 0,
+    "table_count": 0
+  },
+  "paper_id": "49609c67-7d1a-4b2e-b755-3a825da19d35",
+  "parser_engine": {
+    "name": "docling",
+    "version": "2.135.0",
+    "device": "cpu",
+    "ocr": false,
+    "elapsed_seconds": 17.563,
+    "model_manifest_sha256": "bd391d3f352a83665faeb58e2852d465a8eda9ac949fed9017b4022f93a6c2ad",
+    "coordinate_space": "pdf_user_space"
+  },
+  "baseline": {
+    "annotations": {
+      "4eb35cd2-acab-4b4d-a79a-9d5ee6f2f2ce": {
+        "title": "论文级笔记",
+        "quote": "",
+        "body": "追溯验收67e59bdb 用户记录 5\n人工二次修改，重新解析必须保留。",
+        "color": "purple",
+        "tags": [
+          "真实解析",
+          "样本5"
+        ],
+        "locations": [],
+        "id": "4eb35cd2-acab-4b4d-a79a-9d5ee6f2f2ce",
+        "paper_id": "49609c67-7d1a-4b2e-b755-3a825da19d35",
+        "paper_title": "Local Research Asset Extraction",
+        "kind": "note",
+        "version": 2,
+        "deleted": false,
+        "created_at": "2026-10-09T10:15:18.775409+00:00",
+        "updated_at": "2026-10-09T10:15:18.781184+00:00",
+        "paper_filename": "academic.pdf",
+        "pdf_sha256": "a77a692de65dfc76c9c0252dfde57e5c742e470db0d9639d495e5f7893e75386"
+      },
+      "684c96ea-8625-45c9-83bb-ce75825f7082": {
+        "title": "架构图区域笔记",
+        "quote": "Figure 1: A fully local pipeline for extracting reusable research assets.",
+        "body": "追溯验收67e59bdb 用户记录 4\n人工二次修改，重新解析必须保留。",
+        "color": "pink",
+        "tags": [
+          "真实解析",
+          "样本4"
+        ],
+        "locations": [
+          {
+            "page_index": 0,
+            "bbox": [
+              83.53482818603516,
+              364.0395812988281,
+              530.7511596679688,
+              452.2639465332031
+            ]
+          }
+        ],
+        "id": "684c96ea-8625-45c9-83bb-ce75825f7082",
+        "paper_id": "49609c67-7d1a-4b2e-b755-3a825da19d35",
+        "paper_title": "Local Research Asset Extraction",
+        "kind": "note",
+        "version": 2,
+        "deleted": false,
+        "created_at": "2026-10-09T10:15:18.758528+00:00",
+        "updated_at": "2026-10-09T10:15:18.767992+00:00",
+        "paper_filename": "academic.pdf",
+        "pdf_sha256": "a77a692de65dfc76c9c0252dfde57e5c742e470db0d9639d495e5f7893e75386"
+      },
+      "d6ed6c4f-4516-493f-8357-dd85dc1d17b8": {
+        "title": "第二页书签",
+        "quote": "",
+        "body": "追溯验收67e59bdb 用户记录 3\n人工二次修改，重新解析必须保留。",
+        "color": "blue",
+        "tags": [
+          "真实解析",
+          "样本3"
+        ],
+        "locations": [
+          {
+            "page_index": 1,
+            "bbox": null
+          }
+        ],
+        "id": "d6ed6c4f-4516-493f-8357-dd85dc1d17b8",
+        "paper_id": "49609c67-7d1a-4b2e-b755-3a825da19d35",
+        "paper_title": "Local Research Asset Extraction",
+        "kind": "bookmark",
+        "version": 2,
+        "deleted": false,
+        "created_at": "2026-10-09T10:15:18.738105+00:00",
+        "updated_at": "2026-10-09T10:15:18.747922+00:00",
+        "paper_filename": "academic.pdf",
+        "pdf_sha256": "a77a692de65dfc76c9c0252dfde57e5c742e470db0d9639d495e5f7893e75386"
+      },
+      "a54d3bea-9c21-4fd2-95f7-a9e8b17806ea": {
+        "title": "跨页原文高亮",
+        "quote": "Local Research Asset Extraction\nEvery extracted asset remains connected to its source page.",
+        "body": "追溯验收67e59bdb 用户记录 2\n人工二次修改，重新解析必须保留。",
+        "color": "green",
+        "tags": [
+          "真实解析",
+          "样本2"
+        ],
+        "locations": [
+          {
+            "page_index": 0,
+            "bbox": [
+              167.24000549316406,
+              744.739990234375,
+              444.55999755859375,
+              758.5599975585938
+            ]
+          },
+          {
+            "page_index": 1,
+            "bbox": [
+              54.209999084472656,
+              707.8499755859375,
+              290.1700134277344,
+              716.9400024414062
+            ]
+          }
+        ],
+        "id": "a54d3bea-9c21-4fd2-95f7-a9e8b17806ea",
+        "paper_id": "49609c67-7d1a-4b2e-b755-3a825da19d35",
+        "paper_title": "Local Research Asset Extraction",
+        "kind": "highlight",
+        "version": 2,
+        "deleted": false,
+        "created_at": "2026-10-09T10:15:18.710876+00:00",
+        "updated_at": "2026-10-09T10:15:18.727552+00:00",
+        "paper_filename": "academic.pdf",
+        "pdf_sha256": "a77a692de65dfc76c9c0252dfde57e5c742e470db0d9639d495e5f7893e75386"
+      },
+      "d758d07a-ffca-4341-9478-dafd93bb2da6": {
+        "title": "真实标题高亮",
+        "quote": "Local Research Asset Extraction",
+        "body": "追溯验收67e59bdb 用户记录 1\n人工二次修改，重新解析必须保留。",
+        "color": "amber",
+        "tags": [
+          "真实解析",
+          "样本1"
+        ],
+        "locations": [
+          {
+            "page_index": 0,
+            "bbox": [
+              167.24000549316406,
+              744.739990234375,
+              444.55999755859375,
+              758.5599975585938
+            ]
+          }
+        ],
+        "id": "d758d07a-ffca-4341-9478-dafd93bb2da6",
+        "paper_id": "49609c67-7d1a-4b2e-b755-3a825da19d35",
+        "paper_title": "Local Research Asset Extraction",
+        "kind": "highlight",
+        "version": 2,
+        "deleted": false,
+        "created_at": "2026-10-09T10:15:18.696274+00:00",
+        "updated_at": "2026-10-09T10:15:18.706609+00:00",
+        "paper_filename": "academic.pdf",
+        "pdf_sha256": "a77a692de65dfc76c9c0252dfde57e5c742e470db0d9639d495e5f7893e75386"
+      }
+    },
+    "reading_state": {
+      "paper_id": "49609c67-7d1a-4b2e-b755-3a825da19d35",
+      "version": 2,
+      "page_index": 1,
+      "anchor": [
+        108.0,
+        650.0
+      ],
+      "scale": 1.35,
+      "rotation": 90,
+      "fit_mode": "width",
+      "status": "read",
+      "last_opened": "2026-10-09T10:15:18.802404+00:00",
+      "updated_at": "2026-10-09T10:15:18.802404+00:00"
+    },
+    "search_query": "追溯验收67e59bdb"
+  },
+  "parser_revisions": [
+    "d10482b2-8d01-4db8-8f66-e8c3187cbcce",
+    "2733a4ec-036e-4c30-983b-d3703c89e83b"
+  ],
+  "backup": {
+    "path": "D:\\project\\PaperVault\\.test-data\\reading-frozen-ac37efa4715c4b8a8d8c4978d742bb2a\\reading-backup.zip",
+    "sha256": "1447c810151a531747d48d758229b3a16d302f7b76575fa513613fc58785504c"
+  },
+  "restored_library": {
+    "id": "91a23dce-76bc-4080-8d35-70f28da6fc1a",
+    "path": "D:\\project\\PaperVault\\.test-data\\reading-frozen-ac37efa4715c4b8a8d8c4978d742bb2a\\恢复论文库",
+    "paper_count": 1,
+    "figure_count": 1,
+    "table_count": 1
+  },
+  "peak_backend_worker_rss_bytes": 1260523520,
+  "source_sha256_after": "a77a692de65dfc76c9c0252dfde57e5c742e470db0d9639d495e5f7893e75386",
+  "finished_at": "2026-10-09T10:15:34.526202+00:00",
+  "duration_seconds": 38.176
+}

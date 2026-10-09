@@ -15,7 +15,10 @@ import subprocess
 import tempfile
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
+
+import psutil
 
 
 def main() -> None:
@@ -37,7 +40,9 @@ def main() -> None:
     if not test_root.is_relative_to(project_root):
         raise ValueError('Test cleanup directory must remain inside the project')
     test_root.mkdir(parents=True, exist_ok=True)
-    with tempfile.TemporaryDirectory(prefix='PaperVault desktop test ', dir=test_root) as temporary:
+    # Keep the synthetic library and isolated profile as inspectable evidence.
+    # WebView2 may still flush its cache after WebDriver deletes the session.
+    with tempfile.TemporaryDirectory(prefix='PaperVault desktop test ', dir=test_root, delete=False) as temporary:
         with socket.socket() as reserve:
             reserve.bind(('127.0.0.1', 0))
             port = reserve.getsockname()[1]
@@ -92,11 +97,22 @@ def main() -> None:
                         raise
                     time.sleep(0.1)
             created = request('POST', '/session', {'capabilities': {'alwaysMatch': {
-                'browserName': 'webview2', 'ms:edgeOptions': {'binary': str(args.app.resolve())},
+                'browserName': 'webview2', 'ms:edgeOptions': {'binary': str(args.app.resolve()),
+                    'webviewOptions': {'userDataFolder': str(Path(temporary) / 'webview')}},
             }}})
             session = created['value']['sessionId']
+            owned = [process for process in psutil.Process(driver.pid).children(recursive=True)
+                     if process.name().lower() == 'papervault.exe' and Path(process.exe()).resolve() == args.app.resolve()]
+            assert len(owned) == 1, 'Native process ownership is ambiguous'
+            native_app = owned[0]
             prefix = f'/session/{session}'
             request('POST', prefix + '/timeouts', {'script': 100000, 'pageLoad': 100000, 'implicit': 10000})
+            for _ in range(150):
+                ipc_ready = request('POST', prefix + '/execute/sync', {'script': 'return Boolean(window.__TAURI_INTERNALS__?.invoke)', 'args': []})['value']
+                if ipc_ready:
+                    break
+                time.sleep(0.1)
+            assert ipc_ready, 'Native WebView2 IPC did not initialize'
             checks = request('POST', prefix + '/execute/async', {'script': '''
 const done = arguments[arguments.length - 1];
 (async () => {
@@ -104,7 +120,7 @@ const done = arguments[arguments.length - 1];
   const response = await fetch(connection.baseUrl + '/health', {headers: {Authorization: 'Bearer ' + connection.token}});
   const health = await response.json();
   const denied = await fetch(connection.baseUrl + '/papers');
-  return {native: Boolean(window.__TAURI_INTERNALS__), appVersion: await window.__TAURI_INTERNALS__.invoke('plugin:app|version'), healthStatus: response.status,
+  return {native: Boolean(window.__TAURI_INTERNALS__), appVersion: await window.__TAURI_INTERNALS__.invoke('plugin:app|version'), baseUrl: connection.baseUrl, healthStatus: response.status,
           unauthorizedStatus: denied.status, health};
 })().then(result => done({ok:true, result}), error => done({ok:false, error:String(error)}));
 ''', 'args': []})['value']
@@ -119,6 +135,15 @@ const done = arguments[arguments.length - 1];
                     break
                 time.sleep(0.2)
             assert 'PaperVault' in body, body
+            # The brand mounts before /library resolves. Wait for this specific
+            # test library and its workspace before testing navigation; initial
+            # library-scoped session restoration can otherwise replace a click.
+            for _ in range(150):
+                library_ready = request('POST', prefix + '/execute/sync', {'script': "return Boolean(document.querySelector('.workspace-bar')) && document.querySelector('[aria-label=\"切换论文库\"]')?.title === arguments[0]", 'args': [str(Path(temporary) / '论文库')]})['value']
+                if library_ready:
+                    break
+                time.sleep(0.1)
+            assert library_ready, 'The isolated native library did not finish opening'
             navigation = []
             element_key = 'element-6066-11e4-a52e-4f735466cecf'
             for label in ('图片库', '表格库', '解析任务', '设置', '论文库'):
@@ -192,6 +217,9 @@ return await r.json();})().then(done,e=>done({error:String(e)}));
                 if parsed.get('figure_count', 0):
                     element = request('POST', prefix + '/element', {'using': 'xpath', 'value': "//aside//button[.//span[normalize-space()='图片库']]"})['value'][element_key]
                     request('POST', prefix + f'/element/{element}/click', {})
+                    element = request('POST', prefix + '/element', {'using': 'xpath', 'value': "//*[@role='dialog']//button[normalize-space()='放弃修改']"})['value'][element_key]
+                    request('POST', prefix + f'/element/{element}/click', {})
+                    parsed['unsaved_navigation_guard'] = True
                     element = request('POST', prefix + '/element', {'using': 'css selector', 'value': '.resource-card-image'})['value'][element_key]
                     request('POST', prefix + f'/element/{element}/click', {})
                     element = request('POST', prefix + '/element', {'using': 'xpath', 'value': "//*[@role='dialog']//button[contains(.,'查看原文')]"})['value'][element_key]
@@ -213,8 +241,8 @@ return await r.json();})().then(done,e=>done({error:String(e)}));
                     request('POST', prefix + f'/element/{element}/click', {})
                     for label, tag, value in (('章节 1 标题', 'input', 'Native desktop verified section'), ('参考文献（每行一条）', 'textarea', 'Native desktop reference persisted.')):
                         element = request('POST', prefix + '/element', {'using': 'xpath', 'value': f"//label[span[normalize-space()='{label}']]/{tag}"})['value'][element_key]
-                        request('POST', prefix + f'/element/{element}/clear', {})
-                        request('POST', prefix + f'/element/{element}/value', {'text': value})
+                        request('POST', prefix + f'/element/{element}/click', {})
+                        request('POST', prefix + f'/element/{element}/value', {'text': '\ue009a\ue000\ue003' + value})
                     element = request('POST', prefix + '/element', {'using': 'xpath', 'value': "//button[normalize-space()='保存目录与参考文献']"})['value'][element_key]
                     request('POST', prefix + f'/element/{element}/click', {})
                     for _ in range(50):
@@ -242,7 +270,22 @@ return await r.json();})().then(done,e=>done({error:String(e)}));
                     element = request('POST', prefix + '/element', {'using': 'xpath', 'value': f"//aside//button[.//span[normalize-space()='{label}']]"})['value'][element_key]
                     request('POST', prefix + f'/element/{element}/click', {})
                     capture(name)
-            report = {'passed': True, 'app': str(args.app.resolve()), 'checks': checks['result'], 'navigation': navigation, 'parsed': parsed, 'captured_pages': captured_pages,
+            request('DELETE', prefix)
+            session = None
+            backend_port = urllib.parse.urlsplit(checks['result']['baseUrl']).port
+            assert backend_port, 'The verified backend URL has no port'
+            for _ in range(100):
+                try:
+                    with socket.create_connection(('127.0.0.1', backend_port), timeout=0.2):
+                        backend_closed = False
+                except OSError:
+                    backend_closed = True
+                if backend_closed and not native_app.is_running():
+                    break
+                time.sleep(0.1)
+            assert backend_closed and not native_app.is_running(), 'The owned native app or backend did not exit after session closure'
+            report = {'passed': True, 'app': str(args.app.resolve()), 'fixture': temporary, 'checks': checks['result'], 'navigation': navigation, 'parsed': parsed, 'captured_pages': captured_pages,
+                      'shutdown': {'owned_app_pid': native_app.pid, 'application_exited': True, 'backend_port_closed': True},
                       'scope': 'Actual Tauri WebView2, packaged sidecar startup, IPC, CSP/CORS authenticated API, access denial, rendered UI. Installer cleanliness and full parsing quality require separate checks.'}
             (args.output / 'report.json').write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding='utf-8')
             print('PASS: actual Tauri desktop, native IPC, authenticated API, denied anonymous access, screenshot')

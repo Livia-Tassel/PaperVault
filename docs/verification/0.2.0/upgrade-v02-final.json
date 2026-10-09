@@ -1,0 +1,91 @@
+{
+  "status": "accepted-local-windows",
+  "version": "0.2.0",
+  "requirements": "docs/UPGRADE_0_2.md",
+  "requirement_audit": "docs/verification/0.2.0/upgrade-audit.json",
+  "production_source_commit": "131c0a0ae69fc27a930bfb8f82b05ffd1b255941",
+  "performance_source_commit": "4565b6566be5b4b3a9e85ed3515291c5c61cdacd",
+  "installer": {
+    "path": "apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis/PaperVault_0.2.0_x64-setup.exe",
+    "bytes": 536385237,
+    "sha256": "8b701f4e91dbdf25e551098feab219fb6989cd65d4c9ee60d4c3e741c9fbf761",
+    "signed": false
+  },
+  "frontend_bundle": "index-Bi9K65xx.js",
+  "backend_sha256": "40F03CBFE81AD7AB701680627CF9E777DC5903F7D0C377537985BABBF0AC8B8A",
+  "application_sha256": "4C703DF07BFEF6AD11C170F2BCF4A6593F430F97D8F12AE18344D385DEAEB661",
+  "verification": {
+    "backend_tests_passed": 117,
+    "backend_tests_skipped": 0,
+    "real_offline_docling_tests": 5,
+    "frontend_unit_tests_passed": 47,
+    "reader_browser_tests_passed": 6,
+    "workspace_browser_tests_passed": 5,
+    "note_conflict_export_browser_tests_passed": 5,
+    "legacy_browser_tests_passed": 7,
+    "repeat_location_browser_tests_passed": 1,
+    "browser_counts_are_separate_scoped_suites": true,
+    "frozen_real_reparse_and_restore": true,
+    "actual_installed_pdf_workflow": true,
+    "actual_installed_reading_phases": [
+      "real_0001_library_migrated_with_pdf_and_manual_metadata_unchanged",
+      "same_outline_item_relocates_after_manual_scroll_twice",
+      "native_reader_page_change_bookmark_and_navigation_flush",
+      "same_id_different_path_library_switch_clears_editor_and_undo_on_same_notes_route",
+      "delayed_old_scope_patch_rejected_without_changing_restored_library",
+      "native_note_create_edit_search_delete_undo_and_real_json_markdown_exports",
+      "actual_windows_save_dialog_cancel_has_no_success_toast_file_or_annotation_loss",
+      "window_and_sidecar_exit_cleanly"
+    ],
+    "native_save_cancel": {
+      "window_class": "#32770",
+      "title": "另存为",
+      "owner_pid": 29300,
+      "destination": "D:\\project\\PaperVault\\.test-data\\reading-migration\\reading-fg501x42\\cancelled-exports\\must-not-exist.md",
+      "operation": "WM_CLOSE on the actual native Save dialog",
+      "success_toasts": 0,
+      "destination_files": 0,
+      "annotation_unchanged": true
+    },
+    "installed_shutdown": {
+      "owned_app_pid": 29092,
+      "application_exited": true,
+      "backend_port_closed": true
+    },
+    "bundled_documents_verified": 11,
+    "license_files_verified": 846,
+    "source_archives_verified": 7
+  },
+  "performance": {
+    "synthetic_annotations": 1000,
+    "rectangles": 3000,
+    "main_thread_wall_fraction": {
+      "before": 0.7084451431408241,
+      "after": 0.13421894911046756
+    },
+    "frame_p95_ms": {
+      "before": 16.799999999999272,
+      "after": 16.799999999999272
+    },
+    "raw_before_after_retained": true
+  },
+  "minimum_duration": {
+    "goal_objective": "再全面升级一个功能，交互和UI，运行时间不少于5h",
+    "createdAt": 1791524296,
+    "timeUsedSeconds": 21218,
+    "observed_at_utc": "2026-10-09 11:31:54 UTC",
+    "required_seconds": 18000,
+    "achieved": true
+  },
+  "boundaries": {
+    "unsigned_installer": true,
+    "clean_windows_vm_verified": false,
+    "host_system_dpi_changed": false,
+    "hosted_ci_executed": false,
+    "uninstall_retention_rerun_for_0_2": false,
+    "prior_uninstall_evidence_version": "0.1.0",
+    "historical_native_diagnostic_not_declared_resolved": true,
+    "synthetic_benchmark_is_not_parser_accuracy": true
+  },
+  "publication": "Local source and installer only; no remote push or public release performed. Final documentation/evidence commit follows these verified binary artifacts."
+}

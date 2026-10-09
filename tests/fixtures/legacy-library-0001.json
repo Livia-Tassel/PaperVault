@@ -1,0 +1,17 @@
+{
+  "archive": "legacy-library-0001.zip",
+  "archive_sha256": "21b1663f0284e22a4685c8db08e670c793979a2bda327d632b363321900cb360",
+  "legacy": {
+    "paper_id": "d9172db6-c970-41a5-8f2b-61bf354415a6",
+    "backend_version": "0.1.0",
+    "schema_before": "0001",
+    "retained_sha256": {
+      "papers\\d9172db6-c970-41a5-8f2b-61bf354415a6\\original.pdf": "a77a692de65dfc76c9c0252dfde57e5c742e470db0d9639d495e5f7893e75386",
+      "papers\\d9172db6-c970-41a5-8f2b-61bf354415a6\\metadata.json": "d1bf7a1327049198fd4c75a23ac8e6489bf7bb317d43713ac842a30a1cac8df9"
+    }
+  },
+  "provenance": "Created through the previously verified frozen PaperVault 0.1.0 backend; contains only the original academic.pdf test fixture, its manual test metadata and an Alembic 0001 database.",
+  "legacy_backend_sha256": "ca77e6e5b1e67abd93af67e8ea11a106ce2a6b9054b0a8cd5aaf2e01d6a322f3",
+  "copyright": "Archive metadata and database: Copyright (c) 2026 PaperVault contributors. The included academic.pdf is an original synthetic software-testing document released under CC0-1.0, not a third-party publication.",
+  "license": "Archive metadata/database follow the repository LICENSE (all rights reserved). The unchanged included original.pdf retains academic.pdf's CC0-1.0 dedication under tests/fixtures/LICENSE; ZIP packaging does not change that license."
+}

@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "finished_at": "2026-10-09T09:51:52.663035+00:00",
+  "tests_passed": 7,
+  "tests_skipped": 0,
+  "runner_summary": "7 passed (1.1m)",
+  "command": "PAPERVAULT_E2E_REQUIRE_PARSE=1 PAPERVAULT_GALLERY_API=http://127.0.0.1:8766/api/v1 npx playwright test e2e/library.spec.ts e2e/outline.spec.ts e2e/metadata-refresh.spec.ts e2e/pdf-geometry.spec.ts --workers=1 --reporter=list --output=../../artifacts/legacy-regression-v02",
+  "cases": [
+    {
+      "name": "real local library import, PDF selection, caption search, export and reload",
+      "seconds": 7.5
+    },
+    {
+      "name": "real Docling figures and table editing survive export",
+      "seconds": 1.8
+    },
+    {
+      "name": "folders, notes, tags, theme and complete backup restore use the real API",
+      "seconds": 24.1
+    },
+    {
+      "name": "polling metadata retains unsaved note",
+      "seconds": 6.8
+    },
+    {
+      "name": "chapter/reference corrections save and reload",
+      "seconds": 3.6
+    },
+    {
+      "name": "real PDF crop synthetic gallery reaches resource 201",
+      "seconds": 3.0
+    },
+    {
+      "name": "DPR2 CropBox UserUnit four-rotation raster alignment",
+      "seconds": 14.7
+    }
+  ],
+  "final_library": {
+    "id": "e9752fd3-9a8e-4e31-bdfb-3975a23f470f",
+    "path": "D:\\project\\PaperVault\\.test-data\\ui-library-restore-1791539386696"
+  },
+  "gallery_backend": {
+    "port": 8766,
+    "stopped": true,
+    "dataset": "existing .test-data/gallery-benchmark-library",
+    "synthetic_metadata": true,
+    "notes": "1000 metadata records reuse one real PDF crop; this case verifies resource pagination, not parser accuracy."
+  },
+  "adaptations": [
+    "Verify workspace session restoration after reload, then navigate explicitly.",
+    "Use role=tab for reader panels.",
+    "Searchable PaperPicker replaces selectOption.",
+    "Reset persisted rotation through real controls for each geometry scene.",
+    "Use unique table cell text per run so a repeated test performs an actual edit."
+  ],
+  "shutdown_observation": "Stopping the isolated Windows Python dev backend printed asyncio Proactor WinError 10054 client-disconnect messages; process exited and port 8766 has no listener."
+}

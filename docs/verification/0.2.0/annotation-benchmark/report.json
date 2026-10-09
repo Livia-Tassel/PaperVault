@@ -1,0 +1,132 @@
+{
+  "status": "passed",
+  "measured_at": "2026-10-09T10:54:55.735495+00:00",
+  "synthetic_data": true,
+  "scope": "One actual academic.pdf copy per isolated run, 1000 synthetic annotations across two pages: 800 highlights, 200 notes, three small rectangles per annotation and 631-character mean body. Not parser accuracy or real-paper count evidence.",
+  "same_workload_verified": true,
+  "thresholds_unchanged": {
+    "ui_action_warning_ms": 1000,
+    "reader_open_warning_ms": 3000,
+    "scrolling_frame_p95_warning_ms": 33.4,
+    "sustained_long_task_warning_ms": 200
+  },
+  "raw_reports": {
+    "before": "before/report.json",
+    "after": "after/report.json"
+  },
+  "raw_report_sha256": {
+    "before": "29ef4bf2a296bd93d4b4e1e850229294327987870ed70ea620d36229a71506b7",
+    "after": "cfb77bf0b254445b80ad8393d5d05cca5478a9b608751854b9f2a44e8e1284fd"
+  },
+  "production_bundles": {
+    "before": {
+      "entry": "/assets/index-baoFL8Tl.js",
+      "sha256": "52895fc6288359652cae61828c83256dd29badbe1b705bf3d049abc4d09ae364",
+      "bytes": 840127,
+      "modified_at": "2026-10-09T10:23:28.915Z"
+    },
+    "after": {
+      "entry": "/assets/index-Bi9K65xx.js",
+      "sha256": "96c3541eea34dabb90e1655d5dd08da9ef76fa336df3ae433e92c48ee0c77f0b",
+      "bytes": 841310,
+      "modified_at": "2026-10-09T10:50:01.235Z"
+    }
+  },
+  "scroll_comparison": {
+    "duration_ms": {
+      "before": 6043,
+      "after": 6042.5
+    },
+    "main_thread_seconds": {
+      "before": 4.281134,
+      "after": 0.8110180000000002,
+      "reduction_fraction": 0.8105600058302309
+    },
+    "script_seconds": {
+      "before": 3.3258660000000004,
+      "after": 0.05910399999999999,
+      "reduction_fraction": 0.9822289893820136
+    },
+    "main_thread_wall_fraction": {
+      "before": 0.7084451431408241,
+      "after": 0.13421894911046756
+    },
+    "frame_p95_ms": {
+      "before": 16.799999999999272,
+      "after": 16.799999999999272
+    },
+    "max_long_task_ms": {
+      "before": 0,
+      "after": 0
+    }
+  },
+  "memory_after_scroll_zoom_selection": {
+    "javascript_heap_bytes": {
+      "before": 73974560,
+      "after": 17591636,
+      "reduction_fraction": 0.7621934351485159
+    },
+    "browser_process_tree_working_set_bytes": {
+      "before": 1187958784,
+      "after": 1054609408,
+      "reduction_fraction": 0.11225084388112916
+    },
+    "scope": "Sampled entire isolated Edge process tree, including browser/GPU/utility processes. Not a hard application memory limit."
+  },
+  "other_latency_ms": {
+    "notebook-open-1000": {
+      "before": 120.69999999925494,
+      "after": 108.39999999850988
+    },
+    "notebook-search-cohort07": {
+      "before": 346.29999999701977,
+      "after": 348.3999999985099
+    },
+    "notebook-search-benchmarktoken0721": {
+      "before": 345.69999999925494,
+      "after": 359.80000000074506
+    },
+    "reader-open-1000-annotations": {
+      "before": 620,
+      "after": 699.5
+    },
+    "reader-zoom-1000-annotations": {
+      "before": 311.6000000014901,
+      "after": 328.19999999925494
+    }
+  },
+  "changes": [
+    "Memoized annotation page index, PdfPage, per-page annotation layer and individual overlays.",
+    "Stable page callbacks and viewport inputs; offscreen annotation overlays removed while visited PDF.js text layers remain.",
+    "Reading-state notifications trigger parent UI updates only for meaningful UI status changes, preserving queue-backed navigation saves."
+  ],
+  "validation": {
+    "typecheck": "passed",
+    "reader_unit_tests": 12,
+    "reader_real_browser_tests": 6,
+    "e2e_artifacts": "../reader-memo-regression",
+    "data_checks": "Full API annotation locations persist; visible overlays recreate accurately after navigating away and back; eight-page Selection survives raster and overlay eviction.",
+    "production_build": "passed",
+    "after_benchmark": "passed"
+  },
+  "limits": "One comparative browser run per build on the recorded Windows machine, DPR 2. API latency samples are five per query. Open and zoom latency did not improve in this run; zoom still recorded a 109 ms one-off long task. No threshold was relaxed.",
+  "machine": {
+    "platform": "win32",
+    "release": "10.0.26300",
+    "cpu": "13th Gen Intel(R) Core(TM) i7-1360P",
+    "logical_cpus": 16,
+    "ram_bytes": 16890716160
+  },
+  "browser": "154.0.4258.62",
+  "backend_shutdown": {
+    "before": {
+      "code": 0,
+      "signal": null
+    },
+    "after": {
+      "code": 0,
+      "signal": null
+    }
+  },
+  "shared_backend_8765_touched_by_benchmarks": false
+}

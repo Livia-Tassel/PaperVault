@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "app": "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault.exe",
+  "fixture": "D:\\project\\PaperVault\\.test-data\\reading-migration\\reading-fg501x42",
+  "phases": [
+    "real_0001_library_migrated_with_pdf_and_manual_metadata_unchanged",
+    "same_outline_item_relocates_after_manual_scroll_twice",
+    "native_reader_page_change_bookmark_and_navigation_flush",
+    "same_id_different_path_library_switch_clears_editor_and_undo_on_same_notes_route",
+    "delayed_old_scope_patch_rejected_without_changing_restored_library",
+    "native_note_create_edit_search_delete_undo_and_real_json_markdown_exports",
+    "actual_windows_save_dialog_cancel_has_no_success_toast_file_or_annotation_loss",
+    "window_and_sidecar_exit_cleanly"
+  ],
+  "legacy": {
+    "paper_id": "d9172db6-c970-41a5-8f2b-61bf354415a6",
+    "backend_version": "0.1.0",
+    "schema_before": "0001",
+    "retained_sha256": {
+      "papers\\d9172db6-c970-41a5-8f2b-61bf354415a6\\original.pdf": "a77a692de65dfc76c9c0252dfde57e5c742e470db0d9639d495e5f7893e75386",
+      "papers\\d9172db6-c970-41a5-8f2b-61bf354415a6\\metadata.json": "d1bf7a1327049198fd4c75a23ac8e6489bf7bb317d43713ac842a30a1cac8df9"
+    }
+  },
+  "desktop_version": "0.2.0",
+  "document_scripts": [
+    "http://tauri.localhost/assets/index-Bi9K65xx.js"
+  ],
+  "frontend_bundle": "index-Bi9K65xx.js",
+  "repeated_outline_scroll_top": [
+    0,
+    0
+  ],
+  "outline_click_attempt": 2,
+  "native_save_cancel": {
+    "window_class": "#32770",
+    "title": "另存为",
+    "owner_pid": 29300,
+    "destination": "D:\\project\\PaperVault\\.test-data\\reading-migration\\reading-fg501x42\\cancelled-exports\\must-not-exist.md",
+    "operation": "WM_CLOSE on the actual native Save dialog",
+    "success_toasts": 0,
+    "destination_files": 0,
+    "annotation_unchanged": true
+  }
+}

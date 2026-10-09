@@ -1,0 +1,452 @@
+{
+  "schema": "papervault-upgrade-audit-v1",
+  "audited_at_utc": "2026-10-09T11:33:41.503535+00:00",
+  "requirements": "docs/UPGRADE_0_2.md#完成门槛",
+  "source_head": "131c0a0ae69fc27a930bfb8f82b05ffd1b255941",
+  "source_worktree_dirty": true,
+  "overall_status": "pending",
+  "method": "Independent read-only production/harness review plus direct reads of final installed reports. This final pass recomputed the installer/application/backend hashes, 11 installed-document hashes, all 846 license-file and 7 source-archive hashes, and the optimized dist hash; it did not rerun product tests or mutate the installed app.",
+  "status_definitions": {
+    "proven": "Implementation and relevant observed behavior support the capability, within the explicitly named execution layer and environment.",
+    "pending": "Implementation may exist, but a required final verification or deliverable is still outstanding. This does not assert a product defect.",
+    "contradicted": "Current implementation or actual execution contradicts the requirement. Historical fixed failures are listed separately and do not count as current failures."
+  },
+  "release_boundary": {
+    "verified_installer_sha256": "8b701f4e91dbdf25e551098feab219fb6989cd65d4c9ee60d4c3e741c9fbf761",
+    "installer_bytes": 536385237,
+    "application_sha256": "4c703df07bfef6ad11c170f2bcf4a6593f430f97d8f12ae18344d385deaeb661",
+    "frozen_backend_sha256": "40f03cbfe81ad7ab701680627cf9e777dc5903f7d0c377537985babbf0ac8b8a",
+    "optimized_frontend_entry": "index-Bi9K65xx.js",
+    "optimized_browser_bundle_sha256": "96c3541eea34dabb90e1655d5dd08da9ef76fa336df3ae433e92c48ee0c77f0b",
+    "optimized_bundle_installed_acceptance": "proven",
+    "source_commit": "131c0a0ae69fc27a930bfb8f82b05ffd1b255941",
+    "superseded_candidate_archive": "artifacts/candidate-v02-a789e649",
+    "note": "The final installed app actually loads index-Bi9K65xx.js. The earlier A789 and 942F candidates are not used as proof of this final installer."
+  },
+  "items": [
+    {
+      "id": 1,
+      "name": "连续阅读",
+      "status": "proven",
+      "capabilities": [
+        {
+          "name": "Persist page, PDF anchor, scale, rotation and fit mode; restore on reopen",
+          "status": "proven",
+          "evidence": "Real library browser test saves page 3/125%/90 degrees, reloads, checks anchor drift below 1 PDF unit; native WM_CLOSE save/restart also checks persisted state."
+        },
+        {
+          "name": "Explicit source navigation takes priority, including a repeated identical target",
+          "status": "proven",
+          "evidence": "Real PDF.js navigation assertions, repeated-location browser regression and twice-clicked outline installed regression."
+        },
+        {
+          "name": "Unread/reading/read and recent-opened semantics",
+          "status": "proven",
+          "evidence": "Reading state API integration and opened-history filter tests; real UI recent-reading screenshots and installed navigation flush."
+        },
+        {
+          "name": "Library-scoped sessions and delayed write isolation",
+          "status": "proven",
+          "evidence": "Same-id/different-path restored-library API race and installed UI stale-undo clearing/409 rejection."
+        }
+      ],
+      "implementation": [
+        "backend/papervault/reading.py",
+        "backend/papervault/api.py",
+        "apps/desktop/src/useReadingState.ts",
+        "apps/desktop/src/reader-state.ts",
+        "apps/desktop/src/PdfViewer.tsx",
+        "apps/desktop/src/workspace-state.ts",
+        "apps/desktop/src/App.tsx"
+      ],
+      "evidence": [
+        "apps/desktop/e2e/reader-upgrade.spec.ts",
+        "apps/desktop/e2e/reading-conflict.spec.ts",
+        "apps/desktop/e2e/repeated-location.spec.ts",
+        "artifacts/reader-upgrade/real-library-reading-restored.png",
+        "artifacts/native-close-guard/report.json",
+        "artifacts/installed-reading/report.json",
+        "artifacts/reading-backend-tests.json"
+      ],
+      "qualification": "Final optimized installed reader acceptance is now separately proven under item 8."
+    },
+    {
+      "id": 2,
+      "name": "可追溯笔记",
+      "status": "proven",
+      "capabilities": [
+        {
+          "name": "Page bookmark, text highlight, region note and paper-level note",
+          "status": "proven",
+          "evidence": "Real browser/API creates cross-page highlight and region note; installed UI creates bookmark and paper note; frozen API creates all kinds."
+        },
+        {
+          "name": "Quote, page, raw PDF coordinates, multiple rectangles and colors/tags remain editable",
+          "status": "proven",
+          "evidence": "Actual PDF text layer selections at DPR 1/2, native rotation/CropBox/UserUnit and real note save/reload assertions; notebook color/tag/body editing and CAS conflict flow."
+        },
+        {
+          "name": "Delete/undo preserves saved user edits",
+          "status": "proven",
+          "evidence": "Notebook delete/recovery and edited-bookmark guard before removal followed by undo."
+        },
+        {
+          "name": "Real Docling reparse leaves annotation data unchanged",
+          "status": "proven",
+          "evidence": "Frozen 0.2.0 worker completed a new revision after 5 manually edited version-2 annotations; every returned field, location, version and timestamp remained equal."
+        }
+      ],
+      "implementation": [
+        "apps/desktop/src/reader-selection.ts",
+        "apps/desktop/src/PdfViewer.tsx",
+        "apps/desktop/src/AnnotationEditor.tsx",
+        "apps/desktop/src/PaperDetail.tsx",
+        "backend/papervault/reading.py"
+      ],
+      "evidence": [
+        "apps/desktop/e2e/reader-upgrade.spec.ts",
+        "apps/desktop/e2e/notebook.spec.ts",
+        "apps/desktop/e2e/export-guards.spec.ts",
+        "artifacts/reader-upgrade/glyph-measurements-dpr1.json",
+        "artifacts/reader-upgrade/glyph-measurements-dpr2.json",
+        "artifacts/reader-performance/report.json",
+        "artifacts/reading-reparse-frozen-v02.json"
+      ],
+      "qualification": "The 81-page component stress test preserves an eight-page selection with 80 locations; it is a generated PDF interaction test, not Docling accuracy evidence."
+    },
+    {
+      "id": 3,
+      "name": "笔记组织",
+      "status": "proven",
+      "capabilities": [
+        {
+          "name": "Paper note panel, global note list, search, source/type/tag filters and pagination",
+          "status": "proven",
+          "evidence": "UI wiring reviewed; real API filter/pagination tests and real notebook create/search flow. Production-bundle synthetic 1000-note browser workload exercises list paging and unique/cohort queries. Not every filter combination has a separate native UI test."
+        },
+        {
+          "name": "Search result and original-source navigation",
+          "status": "proven",
+          "evidence": "Notebook global Ctrl+K search opens the selected note's reader; installed source navigation and repeated outline jumps are exercised."
+        },
+        {
+          "name": "JSON/Markdown contain provenance, locations and user content",
+          "status": "proven",
+          "evidence": "Real browser JSON download plus frozen/installed API JSON and Markdown exports; reparse/restore exports preserve all 5 records and identical Markdown hashes."
+        },
+        {
+          "name": "Cancel the native Save dialog without a false success message or output file",
+          "status": "proven",
+          "evidence": "Final installed 0.2.0/Bi9K65xx app opened the actual owned Windows #32770 Save dialog. The harness set an explicit test filename then sent WM_CLOSE to that dialog; real DOM mutation observation found zero success toasts, the destination directory remained empty, and the complete annotation response was unchanged. Export completion was awaited before assertions."
+        }
+      ],
+      "implementation": [
+        "apps/desktop/src/NotebookPage.tsx",
+        "apps/desktop/src/PaperNotes.tsx",
+        "apps/desktop/src/PaperPicker.tsx",
+        "apps/desktop/src/api.ts",
+        "apps/desktop/src/App.tsx",
+        "backend/papervault/annotation_export.py"
+      ],
+      "evidence": [
+        "apps/desktop/e2e/notebook.spec.ts",
+        "artifacts/notebook-verified/notebook-notebook-creation-c4691--export-and-delete-recovery/notebook-export.json",
+        "artifacts/annotation-benchmark/after/report.json",
+        "artifacts/reading-reparse-frozen-v02.json",
+        "scripts/package-reading-smoke.py",
+        "artifacts/installed-reading/report.json",
+        "scripts/native_client.py"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "阅读交互",
+      "status": "proven",
+      "capabilities": [
+        {
+          "name": "Deduplicated paper tabs, history, session and collection state restoration",
+          "status": "proven",
+          "evidence": "Five real API/UI workspace cases exercise tabs, Ctrl+Tab/Alt history, cached filters, gallery page two, scroll and focus restoration; native restart covers saved workspace."
+        },
+        {
+          "name": "Resizable/collapsible reader panel, fit-width/fit-page and PDF find",
+          "status": "proven",
+          "evidence": "Actual PDF.js component browser assertions and real API visual snapshots; keyboard follow-up verifies reader search and tab navigation."
+        },
+        {
+          "name": "Search/gallery jumps and retained Ctrl+K",
+          "status": "proven",
+          "evidence": "Notebook global search-to-reader test plus real legacy crop/search/gallery workflow and DPR2 geometry regression."
+        }
+      ],
+      "implementation": [
+        "apps/desktop/src/App.tsx",
+        "apps/desktop/src/Workspace.tsx",
+        "apps/desktop/src/workspace-state.ts",
+        "apps/desktop/src/PaperDetail.tsx",
+        "apps/desktop/src/PdfViewer.tsx",
+        "apps/desktop/src/tabs.ts"
+      ],
+      "evidence": [
+        "artifacts/workspace-navigation-ui.json",
+        "apps/desktop/e2e/reader-upgrade.spec.ts",
+        "artifacts/ui-review-v02-keyboard/review.json",
+        "artifacts/legacy-regression-v02/report.json",
+        "artifacts/installed-reading/report.json"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "修改保护",
+      "status": "proven",
+      "capabilities": [
+        {
+          "name": "Paper metadata, outline, resource/table and annotation cancel/discard/save guards",
+          "status": "proven",
+          "evidence": "Real API/UI workspace and notebook tests; deliberately injected 503 failures retain drafts and block navigation; prefilled region selection also requires a decision."
+        },
+        {
+          "name": "Concurrent edits and reading conflicts never silently overwrite",
+          "status": "proven",
+          "evidence": "Real API CAS tests and real browser conflict choices; local full view is retried, and adopting saved state actually moves the viewer."
+        },
+        {
+          "name": "Library switch and native window close await or preserve drafts",
+          "status": "proven",
+          "evidence": "Actual Tauri WM_CLOSE cancel/save/restart/discard with port shutdown; installed same-id clone switch clears stale UI operations and rejects old-scope requests."
+        }
+      ],
+      "implementation": [
+        "apps/desktop/src/EditGuard.tsx",
+        "apps/desktop/src/AnnotationEditor.tsx",
+        "apps/desktop/src/reader-state.ts",
+        "apps/desktop/src/App.tsx",
+        "backend/papervault/api.py"
+      ],
+      "evidence": [
+        "artifacts/workspace-navigation-ui.json",
+        "apps/desktop/e2e/notebook.spec.ts",
+        "apps/desktop/e2e/reading-conflict.spec.ts",
+        "apps/desktop/e2e/export-guards.spec.ts",
+        "artifacts/native-close-guard/report.json",
+        "artifacts/installed-reading/report.json"
+      ],
+      "qualification": "Dedicated draft WM_CLOSE cancel/save/restart/discard evidence remains a debug Tauri test. The final installed candidate separately proves both its clean window/sidecar exit and native Save cancellation. Explicit fault injection never fabricated successful saves. Forced termination/power loss can still lose unsent drafts, as documented."
+    },
+    {
+      "id": 6,
+      "name": "数据与升级",
+      "status": "proven",
+      "capabilities": [
+        {
+          "name": "0001 migration has a pre-upgrade backup and transactional failure recovery",
+          "status": "proven",
+          "evidence": "Real SQLite migration/failure injection tests plus actual installed 0.2 app migration of a library made by the old frozen backend; source PDF and metadata hashes retained."
+        },
+        {
+          "name": "Validation, optimistic transactions, removed-paper isolation and restart",
+          "status": "proven",
+          "evidence": "117-test complete backend run includes finite/page/CropBox/length limits, simultaneous-version writers, rollback after index failure, removed-paper search exclusion and state restart."
+        },
+        {
+          "name": "Backup, real worker reparse and restore retain user data and original PDFs",
+          "status": "proven",
+          "evidence": "Independent frozen backend acceptance compares complete 5-annotation and reading-state snapshots before/after actual Docling reparse and after real ZIP backup restoration, with FTS 5/5 and source SHA unchanged."
+        }
+      ],
+      "implementation": [
+        "backend/papervault/migrations/versions/0002_reading.py",
+        "backend/papervault/database.py",
+        "backend/papervault/reading.py",
+        "backend/papervault/library.py",
+        "backend/papervault/backup.py",
+        "backend/papervault/schemas.py"
+      ],
+      "evidence": [
+        "artifacts/reading-backend-tests.json",
+        "artifacts/backend-release-v02-junit.xml",
+        "artifacts/reading-reparse-frozen-v02.json",
+        "artifacts/installed-reading/report.json"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "UI",
+      "status": "proven",
+      "capabilities": [
+        {
+          "name": "Neutral light/dark desktop layout without slogans or decorative summary cards",
+          "status": "proven",
+          "evidence": "44 real-data screenshots across 1440x1000 and 1280x800; this auditor additionally inspected the compact dark reader and light notebook images."
+        },
+        {
+          "name": "Visible status, empty/error/retry states, safe text preview and keyboard focus",
+          "status": "proven",
+          "evidence": "Failure-preservation UI flows, actual reading conflict toolbar, literal script-like note text, and two-screenshot keyboard follow-up with arrow/Home/End/manual tab activation."
+        },
+        {
+          "name": "High-DPI PDF geometry",
+          "status": "proven",
+          "evidence": "Browser DPR1/DPR2 glyph checks and real DPR2 geometry regression covering rotation/CropBox/UserUnit; this proves browser deviceScaleFactor behavior, not changed Windows system DPI."
+        },
+        {
+          "name": "1000-annotation rendering after optimization",
+          "status": "proven",
+          "evidence": "Real production dist and separate API with explicitly synthetic 1000-record/3000-rectangle workload: scroll frame p95 16.8ms, main-thread duty fraction 0.1342 versus archived 0.7084. The final installed report now proves that the same Bi9K65xx bundle is embedded and exercised."
+        }
+      ],
+      "implementation": [
+        "apps/desktop/src/styles.css",
+        "apps/desktop/src/workspace.css",
+        "apps/desktop/src/notes.css",
+        "apps/desktop/src/PdfViewer.tsx",
+        "apps/desktop/src/reader-annotations.ts",
+        "apps/desktop/src/useReadingState.ts"
+      ],
+      "evidence": [
+        "artifacts/ui-review-v02/review.json",
+        "artifacts/ui-review-v02-keyboard/review.json",
+        "artifacts/reader-upgrade/glyph-measurements-dpr1.json",
+        "artifacts/reader-upgrade/glyph-measurements-dpr2.json",
+        "artifacts/annotation-benchmark/before/report.json",
+        "artifacts/annotation-benchmark/after/report.json"
+      ],
+      "qualification": "The main-thread fraction is CDP TaskDuration divided by the measured phase duration, not total machine CPU percentage. It is not a low-end hardware guarantee."
+    },
+    {
+      "id": 8,
+      "name": "交付",
+      "status": "pending",
+      "capabilities": [
+        {
+          "name": "Full backend regression and frozen worker flow",
+          "status": "proven",
+          "evidence": "117 passed/0 skipped including all 5 real offline Docling cases; ruff passed. Frozen 0.2.0 source-preserving reading/reparse/export/restore acceptance passed."
+        },
+        {
+          "name": "Reader/frontend/legacy interaction regression",
+          "status": "proven",
+          "evidence": "Initial 45 frontend unit passes became 47 after two annotation-index tests; parser agent supplied the post-memo 12-test subset/typecheck/build and 6-browser-case success. Reader suite combines 4 actual-PDF.js component cases, 1 real library/API case and 1 extreme-PDF case, not 6 installed workflows. Workspace5, notebook2, conflict1, export-guards2, legacy7 and repeated-location1 separately exercise their named scopes."
+        },
+        {
+          "name": "Final optimized 0.2 installer installed acceptance and matching manifest",
+          "status": "proven",
+          "evidence": "Final installer SHA-256 8b701f4e91dbdf25e551098feab219fb6989cd65d4c9ee60d4c3e741c9fbf761 passed both actual installed workflows. Reading report has 8 completed phases, exact Bi9K65xx entry, genuine 0001 migration, repeat location, scope isolation, note CRUD/API exports, native Save cancellation and clean exit. General desktop report confirms real Docling 1 Figure/1 Table, metadata/draft protection, source highlight, outline edits, application exit and closed sidecar port. Installer/application/backend hashes were independently recomputed and matched."
+        },
+        {
+          "name": "Current user/data/architecture/license documentation",
+          "status": "proven",
+          "evidence": "USER_GUIDE, DATA_FORMAT, root ARCHITECTURE, READING_API and KNOWN_ISSUES cover the workflow and limits. Final installed report records 11 bundled documents, 846 license files and 7 source archives; this auditor independently rehashed every installed file against the expected hash/source counterpart."
+        },
+        {
+          "name": "Final report/progress/upgrade synchronization, evidence archival and source commit",
+          "status": "pending",
+          "evidence": "Production source is committed at 131c0a0ae69fc27a930bfb8f82b05ffd1b255941, including the performance change and installed reading API guide. Root is currently updating final release summaries and archiving evidence; working-tree changes are documentation/verification harness/CI, not production frontend/backend.",
+          "next": "Root verifies and commits final documentation, archived reports, harness/CI and this audit, then records its actual closing commit. This audit does not pre-claim that future commit."
+        }
+      ],
+      "evidence": [
+        "artifacts/reading-backend-tests.json",
+        "artifacts/reading-reparse-frozen-v02.json",
+        "artifacts/workspace-navigation-ui.json",
+        "artifacts/legacy-regression-v02/report.json",
+        "artifacts/release-manifest.json",
+        "docs/USER_GUIDE.md",
+        "docs/DATA_FORMAT.md",
+        "ARCHITECTURE.md",
+        "docs/THIRD_PARTY_NOTICES.md",
+        "docs/KNOWN_ISSUES.md",
+        "artifacts/installed-desktop/report.json",
+        "artifacts/install-layout.json",
+        "artifacts/goal-checkpoint-v02.json"
+      ],
+      "qualification": "No clean Windows VM, no separately changed host system DPI, and no executed hosted CI is claimed. Unsigned installer and the historical unlocated native diagnostic remain documented.",
+      "product_acceptance_status": "proven",
+      "pending_scope": "publication/archive commit only"
+    },
+    {
+      "id": 9,
+      "name": "时长",
+      "status": "proven",
+      "measurement": {
+        "observer": "root agent retained get_goal and clock checkpoint",
+        "observed_at_utc": "2026-10-09T11:04:21Z",
+        "createdAt": 1791524296,
+        "created_at_utc": "2026-10-09T05:38:16+00:00",
+        "timeUsedSeconds": 19549,
+        "minimum_seconds": 18000
+      },
+      "evidence": "artifacts/goal-checkpoint-v02.json",
+      "qualification": "The retained parent-tool checkpoint exceeds the required duration. This subagent does not alter goal status; final archival/commit remains the root owner’s last closure step."
+    }
+  ],
+  "current_contradicted_capabilities": [],
+  "pending_release_actions": [
+    "Root completes and verifies the final documentation/evidence/harness archival commit. All product acceptance gates, including the final installer and native Save cancellation, are proven within the documented host boundaries."
+  ],
+  "retained_boundaries": [
+    "The generated fixture PDF/component browser tests are distinguished from real API workflows and installed app workflows.",
+    "The 1000-annotation and gallery loads contain synthetic metadata and do not prove parsing accuracy.",
+    "Browser DPR2 is not an actual Windows system display-scaling change.",
+    "This host contains development tools; clean VM and hosted CI remain unverified.",
+    "The prior native access violation diagnostic was not reproduced and is not declared harmless or solved.",
+    "The 81-page extreme test measured browser process-tree RSS; the 16M-pixel canvas cap is not a process memory cap."
+  ],
+  "technical_acceptance_status": "proven",
+  "previous_audit": "docs/verification/upgrade-v02-audit-draft.json",
+  "publication": {
+    "status": "pending",
+    "owner": "root",
+    "production_source_commit": "131c0a0ae69fc27a930bfb8f82b05ffd1b255941",
+    "production_source_committed": true,
+    "remaining": "Archive the final reports and this audit, synchronize the final release summaries, commit evidence/harness/documentation, then verify the closing commit and worktree. Those actions were in progress and are not claimed complete by this timestamp.",
+    "completion_rule": "Root may close the publication gate after verifying its actual final archival commit. No additional product repair or repeated regression was identified by this audit."
+  },
+  "final_report_bindings": {
+    "artifacts/release-manifest.json": "c43119c2f3648537cd9d20806d28e1fa5d3ee9a9b2d121af73e57d4dc5b27cec",
+    "artifacts/install-layout.json": "41db0003a7bb4542608f68a223f2f08d2f5236d62c9a43b8919660304324d474",
+    "artifacts/installed-reading/report.json": "02dc4c7c8fb0b470c4ddb6dc31bff7030e4a9714eb6cb3de40f53fb6d90adacd",
+    "artifacts/installed-desktop/report.json": "d5da20846879b36bf83bee265b6a1d53cc7ddf353f22a8de14ad7204c617d457",
+    "artifacts/goal-checkpoint-v02.json": "458bd778492bfcfcc012f72f1837c0a3d83fc8e6d75546f8db5b00392b86f376"
+  },
+  "independent_final_file_checks": {
+    "passed": true,
+    "installer_hash_matches_manifest_and_layout": true,
+    "installed_application_and_backend_hashes_match": true,
+    "installed_frontend_entry_matches_optimized_dist": true,
+    "bundled_documents": 11,
+    "license_files": 846,
+    "source_archives": 7,
+    "native_save_cancel": {
+      "window_class": "#32770",
+      "title": "另存为",
+      "owner_pid": 29300,
+      "destination": "D:\\project\\PaperVault\\.test-data\\reading-migration\\reading-fg501x42\\cancelled-exports\\must-not-exist.md",
+      "operation": "WM_CLOSE on the actual native Save dialog",
+      "success_toasts": 0,
+      "destination_files": 0,
+      "annotation_unchanged": true
+    },
+    "native_shutdown": {
+      "owned_app_pid": 29092,
+      "application_exited": true,
+      "backend_port_closed": true
+    },
+    "installed_reading_phases": [
+      "real_0001_library_migrated_with_pdf_and_manual_metadata_unchanged",
+      "same_outline_item_relocates_after_manual_scroll_twice",
+      "native_reader_page_change_bookmark_and_navigation_flush",
+      "same_id_different_path_library_switch_clears_editor_and_undo_on_same_notes_route",
+      "delayed_old_scope_patch_rejected_without_changing_restored_library",
+      "native_note_create_edit_search_delete_undo_and_real_json_markdown_exports",
+      "actual_windows_save_dialog_cancel_has_no_success_toast_file_or_annotation_loss",
+      "window_and_sidecar_exit_cleanly"
+    ]
+  },
+  "harness_scope_audit": {
+    "legacy_fixture": "ZIP hash independently verified; immutable read of its actual SQLite snapshot confirms Alembic 0001, no reading/annotation tables and retained PDF/manual metadata hashes. Source restore helper only prepares/validates the fixture; migration occurs in installed app startup.",
+    "scope": "UI switches the real app and clears stale operation state; the explicit stale-scope HTTP replay tests backend rejection. This is not mislabeled as a delayed browser network scheduler test. The middleware TOCTOU race is separately covered by backend integration.",
+    "save_cancel": "Actual owned native window, not a DOM imitation or mocked plugin return. Observer and file/content assertions inspect real product outcomes.",
+    "ci": "CI is configured with non-real-parser unit/integration checks plus separate actual frozen Docling and native workflows. Hosted execution remains unverified; configured checks are not recorded as successful CI runs."
+  }
+}

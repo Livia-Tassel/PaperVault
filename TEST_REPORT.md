@@ -1,6 +1,85 @@
 # PaperVault 测试报告
 
-## 当前结果（2026-10-09）
+## 0.2 当前结果（2026-10-09，最终安装包验收通过）
+
+0.2 新增连续阅读工作台、书签/高亮/区域笔记和修改保护。下表区分源码、真实浏览器、冻结后端与实际安装验证。包含最新标注渲染优化和完整随包文档的最终安装器已在本机通过两套原生流程；先前候选单独保留。
+
+| 范围 | 已核实结果 | 证据与边界 |
+|---|---|---|
+| 全部后端 | **117 passed，0 skipped**，55.62s；ruff通过 | 含5项真实离线CPU Docling；`artifacts/reading-backend-tests.json`、`backend-release-v02-junit.xml` |
+| 前端源码 | 完整47项单元通过；TypeScript/生产构建通过 | 最初45项之后新增2项标注索引测试；不把单元通过视作实际安装验收 |
+| PDF阅读器 | 优化后6项浏览器用例通过，38.8s | 4项挂载真实PDF.js组件、1项完整真实库/API读写、1项81页极端PDF；详见下文 |
+| 工作台/笔记/修改保护 | 工作台5、笔记2、阅读冲突1、导出/书签保护2项通过 | 真实UI和API；延迟与503为显式失败注入，没有伪造成功保存 |
+| 原有业务 | 7项通过、0跳过；同目标重复定位另1项通过 | `PAPERVAULT_E2E_REQUIRE_PARSE=1`；图库201项测试采用明确合成记录 |
+| 视觉与键盘 | 44张真实数据截图，另2张键盘复验 | 浅/深色、1440×1000与1280×800；0个JS错误和坏图；DPR2另有PDF几何测试 |
+| 标注渲染负载 | 优化后1000条/3000矩形滚动p95 16.8ms | CDP主线程工作占比由70.84%降至13.42%；合成负载、同机测量，非解析准确率或低端机保证 |
+| 冻结后端新工作流 | 真实重新解析与备份恢复通过 | 5条人工二次修改记录及阅读状态全部字段不变，FTS始终5/5，源PDF哈希不变 |
+| 已安装0.2候选 | A789候选的旧库升级、阅读/笔记/定位及API导出已通过 | 已归档为历史候选；**不含后续渲染性能优化，不能当作最终包证明** |
+| 最终优化安装包 | **真实安装与两套原生验收通过** | SHA8b701f4e…fbf761；实际界面入口Bi9K65xx、应用与后台0.2.0，11文档/846许可/7归档哈希一致 |
+| 原生另存为取消 | **实际Windows对话框取消通过** | owned PID 29300、窗口类#32770、标题“另存为”；0成功提示、0文件、笔记全部字段不变 |
+| 至少5小时 | 已达门槛：21,218秒 | 父goal工具于11:31:54 UTC读取；同时完成功能、最终安装验收与文档 |
+| 环境限制 | 干净Windows VM、宿主系统DPI变更、托管CI未验证 | 维持原边界，不宣称通过 |
+
+最终逐项审计见 `docs/verification/0.2.0/upgrade-audit.json`；验收快照与发布清单位于同目录。早期尚有pending的原稿 `docs/verification/upgrade-v02-audit-draft.json` 保留为过程记录，不代表最终状态。
+
+### 0.2 后端、迁移与真实重解析
+
+完整命令：`PAPERVAULT_TEST_MODELS=D:\project\PaperVault\.cache\models HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 .venv/Scripts/python.exe -m pytest tests -v --basetemp=.test-data/backend-release-v02-11 --junitxml=artifacts/backend-release-v02-junit.xml --tb=short -o faulthandler_timeout=120`。在允许本机回环的Windows执行环境运行，117通过、0失败/错误/跳过；pytest为55.62s，进程总时长57.953s。5项真实解析依次使用academic、two-column、mixed-assets、scanned和embedded-jpeg样本，耗时38.688/3.157/2.476/1.557/1.611s。只使用既有本地模型，没有联网下载。`ruff check backend tests scripts`通过。
+
+0002迁移新增独立阅读状态、可恢复删除的笔记及库UUID，先以SQLite Backup API保存升级前快照。完整测试覆盖旧0001库/旧备份恢复升级、DDL失败回滚和重试、同版本并发写仅一方提交、索引异常不留下半次编辑、位置/长度/有限数校验、论文移除后的笔记搜索隔离，以及同UUID不同路径恢复副本拒绝迟到旧库写入。阅读滚动保存不重建论文索引或覆盖人工元数据。原受限沙箱临时目录错误与TestClient停滞、后续真实宿主执行结果均保留在报告，没有把环境失败当通过。
+
+新增 `scripts/reading-acceptance.py` 单独启动冻结0.2.0后端与真实Docling子进程，使用独立测试库和端口26001，不借用共享8765。执行命令为 `.venv/Scripts/python.exe scripts/reading-acceptance.py --backend apps/desktop/src-tauri/binaries/papervault-backend-x86_64-pc-windows-msvc.exe --models .cache/models --pdf tests/fixtures/academic.pdf --report artifacts/reading-reparse-frozen-v02.json`。冻结后端SHA-256为 `40f03cbfe81ad7ab701680627cf9e777dc5903f7d0c377537985babbf0ac8b8a`。
+
+该验收首次真实解析19.996s、重新解析14.391s、总计38.176s，确认产生不同job和自动revision。通过API创建单段高亮、跨页高亮、页书签、区域笔记与论文笔记，再分别人工修改到version 2。文本矩形来自真实PDF文本索引，区域笔记引用实际提取图框。重新解析前后以及真实ZIP备份恢复后，5条记录的**全部字段、版本、位置和时间戳**严格相等，阅读状态全部字段也相等，笔记FTS每阶段命中5/5。JSON导出逐记录核查，Markdown三次内容哈希相同；原PDF与各阶段API读取副本SHA-256均为 `a77a692de65dfc76c9c0252dfde57e5c742e470db0d9639d495e5f7893e75386`。数据、导出路径、引擎、job、revision和备份哈希详见该报告。没有SyntheticParsedDocument或直接构造数据库行替代实际解析。
+
+本轮完整后端日志保留11条上游弃用警告；未输出access violation/fatal诊断。此前原生偶发记录仍保留，不能据本次成功推断原因已经解决。
+
+### 0.2 浏览器与原生证据分别覆盖什么
+
+`reader-upgrade.spec.ts`的5项中，4项在测试页面挂载真实生产PdfViewer并提供真实fixture PDF字节，测试字形/选择/查找、坐标、适配和快捷键；这4项不声称运行了完整库或解析任务。第5项使用完整界面和真实本地API，创建跨页高亮与区域笔记，保存页码/锚点/125%缩放/90度旋转，刷新后回读并比较位置。另1项 `reader-performance.spec.ts` 使用81页真实生成PDF，测试极端渲染和跨页选择。memo优化后两文件合跑命令：`npx playwright test e2e/reader-performance.spec.ts e2e/reader-upgrade.spec.ts --workers=1 --reporter=list --output=../../artifacts/reader-memo-regression`，6 passed，38.8s。优化后标注索引/选区/几何定向3文件12单元也通过，这12项是完整47项中的子集，不另加总。
+
+24组字形测量覆盖DPR1/2、4种原生旋转及50%/100%/200%缩放，保留CropBox/UserUnit。阅读恢复误差按实际PDF锚点核查。浏览器deviceScaleFactor仿真与Windows系统显示缩放是两种不同验证，本轮没有更改宿主系统DPI。
+
+工作台5项实际UI/API测试覆盖标签去重、键盘历史、会话/筛选恢复、图库第二页/滚动/焦点、迟到论文响应隔离，以及元数据/目录/资源保存守卫。笔记2项测试覆盖创建、标签/颜色、真实409冲突、搜索、浏览器JSON下载、返回原文、删除恢复和预填区域笔记关闭保护。阅读冲突专项验证“保存当前位置”保留完整本地视图、“采用已保存记录”实际移动PDF。导出/书签2项验证导出前先处理脏表格并使用已保存单元格，以及先保存书签编辑再删除、撤销后仍保留新内容。失败注入只延迟真实GET或让一次保存返回503，不注入成功响应。
+
+原有7条回归在 `PAPERVAULT_E2E_REQUIRE_PARSE=1` 下通过，覆盖真实导入、Docling资源、裁剪、表格导出、目录/参考文献、元数据草稿、完整备份恢复及DPR2几何；精确命令和用例耗时见 `artifacts/legacy-regression-v02/report.json`。图库第201项检查采用共享真实裁剪PNG的合成资源元数据，不能算解析准确性样本。
+
+专用原生关闭验收使用实际Tauri调试程序和WM_CLOSE，分别确认继续编辑不关窗口、保存后关闭并重启回读、放弃不覆盖已保存内容，以及退出后侧边服务端口关闭。证据 `artifacts/native-close-guard/report.json`。已安装A789候选另验证真实旧冻结后端生成的0001库迁移、PDF/metadata原哈希保持、页码书签、同ID恢复副本切换清空旧编辑/撤销对象、旧scope延迟请求409、笔记创建编辑搜索删除恢复和干净退出；其中JSON/Markdown通过安装版后台API导出，不冒称系统另存为对话框已测。
+
+已解决的实际失败包括：回调混入只读字段导致422、选区多余coordinate字段、仅缩放冲突误用远端页码、采用远端但未移动阅读器、textarea改变label查询、恢复副本残留旧撤销对象、同一目录目标再次点击不定位，以及未保存表格直接导出旧值。旧失败截图与被替代候选留作诊断，不将它们混作最终成功证据。
+
+### 0.2 视觉与标注性能
+
+44张真实数据截图覆盖两种主题与1440×1000/1280×800，紧凑中性灰布局未新增宣传卡片；随后对reader/workspace方向键焦点、Home/End、手动激活和tabpanel关系补2张截图复验。特殊字符笔记以文本呈现，没有脚本节点。记录位于 `artifacts/ui-review-v02/review.json` 与 `artifacts/ui-review-v02-keyboard/review.json`；这些视觉运行允许真实阅读状态自动保存，禁止修改论文、资源与笔记正文。
+
+极端PDF测试使用81页/800%/DPR2。每页限制16,777,216像素和8192最长边，实测同时存在位图总峰值33,544,800像素，RGBA估算134,179,200字节（约128MiB）。**完整浏览器进程树**抽样工作集峰值1,261,379,584字节（约1.17GiB），不能把画布预算说成浏览器内存上限。跨8页选择保留80个矩形。报告 `artifacts/reader-performance/report.json`。
+
+1000条笔记性能实验明确为合成负载：1份真实academic.pdf、800条高亮和200条区域笔记、每条3个矩形；无真实用户论文或解析准确率声明。生产dist从磁盘加载，API请求转发至独立真实后端，保持共享库不变。优化前后报告分别在 `artifacts/annotation-benchmark/before/report.json` 与 `after/report.json`。
+
+| 指标 | 优化前 | 优化后 |
+|---|---:|---:|
+| 1000条标注持续滚动主线程工作占比 | 70.84% | 13.42% |
+| 0条标注同机基线主线程工作占比 | 7.96% | 3.71% |
+| 优化后1000条滚动帧间隔p95 | — | 16.8ms |
+| 优化后持续滚动最大长任务 | — | 0ms |
+
+占比定义为CDP `TaskDuration / 该阶段墙钟时长`，**不是整机CPU利用率**。优化前虽然约60fps，主线程负载仍明显偏高，因此没有以帧率通过掩盖问题。改动为按页索引、稳定输入、PDF页/标注层memo、近视口挂载标注，以及阅读保存队列仅在错误/状态/dirty变化时通知父界面。优化后生产入口为 `index-Bi9K65xx.js`，SHA-256 `96c3541eea34dabb90e1655d5dd08da9ef76fa336df3ae433e92c48ee0c77f0b`；本机预先声明的延迟门槛通过，无JS/API错误。这些数值不保证低端机表现，性能数值来自生产构建浏览器测量；最终安装版另验证加载同一入口与新工作流，未把浏览器压力指标冒称安装版重新测量值。
+
+### 0.2 最终Windows交付
+
+最终安装器 `PaperVault_0.2.0_x64-setup.exe` 为536,385,237字节（511.54 MiB），SHA-256 `8b701f4e91dbdf25e551098feab219fb6989cd65d4c9ee60d4c3e741c9fbf761`。源版本 `131c0a0ae69fc27a930bfb8f82b05ffd1b255941` 包含性能代码与随包文档/资源映射。实际安装应用SHA为 `4c703df07bfef6ad11c170f2bcf4a6593f430f97d8f12ae18344d385deaeb661`，后台SHA保持40f03cbf…；WebView实际加载 `index-Bi9K65xx.js`。
+
+基础原生验收完成真实CPU解析1图1表、PDF区域定位、目录/参考修改、自动元数据刷新与草稿保护；关闭后应用PID29092退出且已鉴权后台39393端口关闭。阅读专项8阶段全部通过：真实0001旧库迁移、同目录项两次重新定位、页码/书签保存、同ID不同路径副本切换、迟到旧scope请求409、笔记创建编辑搜索删除恢复与实际JSON/Markdown API导出、真正的Windows保存窗口取消、窗口和后台清理。取消用例确认0成功提示、0文件、笔记全部字段不变。
+
+安装后逐个核对11项显式随包文档/声明/清单、846个许可证文件与7个源码归档。保留A789与942F两个先前候选，最终报告不是其passed字段的复制。manifest记录构建时还有脚本/证据待提交，产品源码和资源对应上述固定commit。
+
+最后原生测试曾出现两项harness问题：只认品牌就点击导航，早于实际库恢复；以及功能通过后TemporaryDirectory删除仍在刷盘的WebView缓存导致WinError32。脚本改为等待精确库路径和工作区，保留唯一fixture/profile；写成功报告前验证所属应用进程与后台退出。原失败分别归档 `artifacts/install-initialization-race`、`artifacts/install-profile-cleanup-race`，最终完整复验exit0。没有关闭产品保护或忽略仍在运行的应用来通过测试。
+
+父goal于2026-10-09 11:31:54 UTC的工具快照：`createdAt=1791524296`（05:38:16 UTC）、`timeUsedSeconds=21218`，即5小时53分38秒，超过18,000秒要求。原始工具结果保存在 `docs/verification/0.2.0/goal-final-v02.json`；实际开发、修复、性能对照与安装验收均有相应记录。
+
+干净Windows VM、实际调整宿主系统DPI、另一台机器与托管CI仍未验证；安装器未签名。0.1.x卸载保留实验属于历史证据，不自动算作0.2已经复跑。历史原生异常诊断说明继续保留在下方与 `native-exception-investigation.json`。
+
+## 0.1.0 阶段结果（历史记录，非0.2最终结论）
 
 | 项目 | 状态 | 证据 |
 |---|---|---|

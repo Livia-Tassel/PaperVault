@@ -4,9 +4,9 @@
 
 ## 当前交付状态
 
-PaperVault 0.1.1 已生成并验证 Windows x64 安装包。界面已更新为紧凑的中性灰工作区，支持收起侧栏、亮暗主题与直接操作。本次通过真实PDF解析、图表导出、搜索、人工修正、备份恢复和安装后原生窗口验收。卸载/重装数据保留沿用0.1.0的验证记录。
+PaperVault 0.2.0 增加阅读工作台：多论文标签页、阅读位置恢复、页内查找、书签、高亮和可定位笔记。全库笔记支持搜索、筛选、删除恢复及 Markdown/JSON 导出。界面使用紧凑的中性灰工作区，支持收起侧栏、可调信息栏与亮暗主题。
 
-本机产物：[Windows安装包](apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis/PaperVault_0.1.1_x64-setup.exe)（511.48 MiB）。首次使用可在设置中导入本项目已有的 `.cache/models` 模型目录，或选择下载模型。开发工具只供构建使用，安装版内置Python后端。
+本机产物：[Windows安装包](apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis/PaperVault_0.2.0_x64-setup.exe)。已在本机实际安装并通过真实PDF、阅读笔记与旧库迁移验收（511.54 MiB）；结果与哈希以 [测试报告](TEST_REPORT.md) 和 [交付清单](docs/verification/0.2.0/release-manifest.json) 为准。首次使用可在设置中导入本项目已有的 `.cache/models` 模型目录，或选择下载模型。开发工具只供构建使用，安装版内置Python后端。
 
 安装器未签名；干净Windows VM尚未验证。复杂PDF识别限制及一次未复现的原生诊断均如实记录在 [TEST_REPORT.md](TEST_REPORT.md)，开发记录见 [PROGRESS.md](PROGRESS.md)。
 
@@ -41,7 +41,9 @@ powershell -ExecutionPolicy Bypass -File scripts\dev-desktop.ps1
 
 - **图片：**图片库中查看Caption，导出150/300/600 DPI PNG；“查看原文”定位并高亮对应PDF区域。可重新框选裁剪。
 - **表格：**预览原图或结构化单元格，修改内容/行列/表头，再导出CSV、HTML或PNG。CSV不能保留合并单元格，HTML和原图用于保留结构与视觉证据。
-- **搜索：**全局搜索支持论文信息、正文、图表Caption、表格内容、标签和备注，支持中文和英文混合关键词。
+- **搜索：**全局搜索支持论文信息、正文、图表Caption、表格内容、标签、备注和可定位笔记，支持中文和英文混合关键词。
+- **阅读：**最近阅读继续上次位置，多论文标签页支持返回/前进；`Ctrl+F` 在 PDF 中查找。选中文字可高亮或记笔记，工具栏可添加页书签或框选区域笔记。
+- **笔记：**在论文旁编辑摘录、正文、颜色与标签，或在全库笔记中搜索和定位。笔记独立保存，重新解析不覆盖，也不写回原始 PDF。未保存修改在离开或关闭前提供保存、放弃和继续编辑。
 - **管理：**使用标签、收藏夹、收藏和备注组织论文；列表与图库支持多选及批量导出。
 - **备份：**设置中生成完整备份；恢复到新的空目录，原库保留。卸载程序不应删除论文库。
 
@@ -64,5 +66,6 @@ powershell -ExecutionPolicy Bypass -File scripts\package-windows.ps1
 - [用户指南](docs/USER_GUIDE.md)
 - [架构](ARCHITECTURE.md) / [技术决策](DECISIONS.md)
 - [本地API](docs/API.md) / [数据格式](docs/DATA_FORMAT.md)
+- [阅读与笔记接口](docs/READING_API.md) / [0.2 升级验收](docs/UPGRADE_0_2.md)
 - [第三方许可](docs/THIRD_PARTY_NOTICES.md)
 - [已知问题与后续开发](docs/KNOWN_ISSUES.md)

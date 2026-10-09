@@ -1,0 +1,3107 @@
+{
+  "status": "captured",
+  "started_at": "2026-10-09T09:35:36.384Z",
+  "url": "http://127.0.0.1:1420",
+  "api": "http://127.0.0.1:8765/api/v1",
+  "method": "Real API content and real authorized reading-state autosaves. Paper/resource/note content mutations and library switching are blocked. No mocked responses.",
+  "cases": [
+    {
+      "name": "library",
+      "theme": "light",
+      "screenshot": "artifacts/ui-review-v02/1440x1000-light-library.png",
+      "geometry": {
+        "html_theme": "light",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1440,
+          "client_width": 1440,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 1000,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1216,
+          "height": 1000,
+          "scroll_width": 1216,
+          "client_width": 1216,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": {
+          "x": 249,
+          "y": 229.5,
+          "width": 1166,
+          "height": 69.6875,
+          "scroll_width": 1166,
+          "client_width": 1166,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1271
+      }
+    },
+    {
+      "name": "recent-reading",
+      "theme": "light",
+      "screenshot": "artifacts/ui-review-v02/1440x1000-light-recent-reading.png",
+      "geometry": {
+        "html_theme": "light",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1440,
+          "client_width": 1440,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 1000,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1216,
+          "height": 1000,
+          "scroll_width": 1216,
+          "client_width": 1216,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": {
+          "x": 249,
+          "y": 229.5,
+          "width": 1166,
+          "height": 69.6875,
+          "scroll_width": 1166,
+          "client_width": 1166,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 951
+      }
+    },
+    {
+      "name": "reader-fit-page",
+      "theme": "light",
+      "screenshot": "artifacts/ui-review-v02/1440x1000-light-reader-fit-page.png",
+      "geometry": {
+        "html_theme": "light",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1440,
+          "client_width": 1440,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 1000,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1216,
+          "height": 1000,
+          "scroll_width": 1216,
+          "client_width": 1216,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": {
+          "x": 224,
+          "y": 98,
+          "width": 831,
+          "height": 43,
+          "scroll_width": 831,
+          "client_width": 831,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "reader": {
+          "x": 224,
+          "y": 98,
+          "width": 831,
+          "height": 902,
+          "scroll_width": 831,
+          "client_width": 831,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(232, 232, 232)"
+        },
+        "reader_panel": {
+          "x": 1060,
+          "y": 98,
+          "width": 380,
+          "height": 902,
+          "scroll_width": 380,
+          "client_width": 380,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1839
+      }
+    },
+    {
+      "name": "reader-fit-width",
+      "theme": "light",
+      "screenshot": "artifacts/ui-review-v02/1440x1000-light-reader-fit-width.png",
+      "geometry": {
+        "html_theme": "light",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1440,
+          "client_width": 1440,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 1000,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1216,
+          "height": 1000,
+          "scroll_width": 1216,
+          "client_width": 1216,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": {
+          "x": 224,
+          "y": 98,
+          "width": 831,
+          "height": 43,
+          "scroll_width": 831,
+          "client_width": 831,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "reader": {
+          "x": 224,
+          "y": 98,
+          "width": 831,
+          "height": 902,
+          "scroll_width": 831,
+          "client_width": 831,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(232, 232, 232)"
+        },
+        "reader_panel": {
+          "x": 1060,
+          "y": 98,
+          "width": 380,
+          "height": 902,
+          "scroll_width": 380,
+          "client_width": 380,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1839
+      }
+    },
+    {
+      "name": "reader-notes-panel",
+      "theme": "light",
+      "screenshot": "artifacts/ui-review-v02/1440x1000-light-reader-notes-panel.png",
+      "geometry": {
+        "html_theme": "light",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1440,
+          "client_width": 1440,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 1000,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1216,
+          "height": 1000,
+          "scroll_width": 1216,
+          "client_width": 1216,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": {
+          "x": 224,
+          "y": 98,
+          "width": 831,
+          "height": 43,
+          "scroll_width": 831,
+          "client_width": 831,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "reader": {
+          "x": 224,
+          "y": 98,
+          "width": 831,
+          "height": 902,
+          "scroll_width": 831,
+          "client_width": 831,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(232, 232, 232)"
+        },
+        "reader_panel": {
+          "x": 1060,
+          "y": 98,
+          "width": 380,
+          "height": 902,
+          "scroll_width": 380,
+          "client_width": 380,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1733
+      }
+    },
+    {
+      "name": "notebook",
+      "theme": "light",
+      "screenshot": "artifacts/ui-review-v02/1440x1000-light-notebook.png",
+      "geometry": {
+        "html_theme": "light",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1440,
+          "client_width": 1440,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 1000,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1216,
+          "height": 1000,
+          "scroll_width": 1216,
+          "client_width": 1216,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": {
+          "x": 248,
+          "y": 194,
+          "width": 1168,
+          "height": 134.796875,
+          "scroll_width": 1168,
+          "client_width": 1168,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1282
+      }
+    },
+    {
+      "name": "note-detail",
+      "theme": "light",
+      "screenshot": "artifacts/ui-review-v02/1440x1000-light-note-detail.png",
+      "geometry": {
+        "html_theme": "light",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1440,
+          "client_width": 1440,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 1000,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1216,
+          "height": 1000,
+          "scroll_width": 1216,
+          "client_width": 1216,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": {
+          "x": 248,
+          "y": 194,
+          "width": 1168,
+          "height": 134.796875,
+          "scroll_width": 1168,
+          "client_width": 1168,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1282
+      }
+    },
+    {
+      "name": "search",
+      "theme": "light",
+      "screenshot": "artifacts/ui-review-v02/1440x1000-light-search.png",
+      "geometry": {
+        "html_theme": "light",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1440,
+          "client_width": 1440,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 1000,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1216,
+          "height": 1000,
+          "scroll_width": 1216,
+          "client_width": 1216,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": null,
+        "first_result": {
+          "x": 248,
+          "y": 240.5,
+          "width": 1168,
+          "height": 108.28125,
+          "scroll_width": 1168,
+          "client_width": 1168,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 2860
+      }
+    },
+    {
+      "name": "tasks",
+      "theme": "light",
+      "screenshot": "artifacts/ui-review-v02/1440x1000-light-tasks.png",
+      "geometry": {
+        "html_theme": "light",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1440,
+          "client_width": 1440,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 1000,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1216,
+          "height": 1000,
+          "scroll_width": 1216,
+          "client_width": 1216,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1271
+      }
+    },
+    {
+      "name": "settings",
+      "theme": "light",
+      "screenshot": "artifacts/ui-review-v02/1440x1000-light-settings.png",
+      "geometry": {
+        "html_theme": "light",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1440,
+          "client_width": 1440,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 1000,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1216,
+          "height": 1000,
+          "scroll_width": 1216,
+          "client_width": 1216,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 288
+      }
+    },
+    {
+      "name": "settings-preferences",
+      "theme": "light",
+      "screenshot": "artifacts/ui-review-v02/1440x1000-light-settings-preferences.png",
+      "geometry": {
+        "html_theme": "light",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1440,
+          "client_width": 1440,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 1000,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1216,
+          "height": 1000,
+          "scroll_width": 1216,
+          "client_width": 1216,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 288
+      }
+    },
+    {
+      "name": "library",
+      "theme": "dark",
+      "screenshot": "artifacts/ui-review-v02/1440x1000-dark-library.png",
+      "geometry": {
+        "html_theme": "dark",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1440,
+          "client_width": 1440,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(32, 32, 32)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 1000,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(25, 25, 25)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1216,
+          "height": 1000,
+          "scroll_width": 1216,
+          "client_width": 1216,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": {
+          "x": 249,
+          "y": 229.5,
+          "width": 1166,
+          "height": 69.6875,
+          "scroll_width": 1166,
+          "client_width": 1166,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1303
+      }
+    },
+    {
+      "name": "recent-reading",
+      "theme": "dark",
+      "screenshot": "artifacts/ui-review-v02/1440x1000-dark-recent-reading.png",
+      "geometry": {
+        "html_theme": "dark",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1440,
+          "client_width": 1440,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(32, 32, 32)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 1000,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(25, 25, 25)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1216,
+          "height": 1000,
+          "scroll_width": 1216,
+          "client_width": 1216,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": {
+          "x": 249,
+          "y": 229.5,
+          "width": 1166,
+          "height": 96.1875,
+          "scroll_width": 1166,
+          "client_width": 1166,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 983
+      }
+    },
+    {
+      "name": "reader-fit-page",
+      "theme": "dark",
+      "screenshot": "artifacts/ui-review-v02/1440x1000-dark-reader-fit-page.png",
+      "geometry": {
+        "html_theme": "dark",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1440,
+          "client_width": 1440,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(32, 32, 32)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 1000,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(25, 25, 25)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1216,
+          "height": 1000,
+          "scroll_width": 1216,
+          "client_width": 1216,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": {
+          "x": 224,
+          "y": 98,
+          "width": 831,
+          "height": 43,
+          "scroll_width": 831,
+          "client_width": 831,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(36, 36, 36)"
+        },
+        "reader": {
+          "x": 224,
+          "y": 98,
+          "width": 831,
+          "height": 902,
+          "scroll_width": 831,
+          "client_width": 831,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(21, 21, 21)"
+        },
+        "reader_panel": {
+          "x": 1060,
+          "y": 98,
+          "width": 380,
+          "height": 902,
+          "scroll_width": 380,
+          "client_width": 380,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(36, 36, 36)"
+        },
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1839
+      }
+    },
+    {
+      "name": "reader-fit-width",
+      "theme": "dark",
+      "screenshot": "artifacts/ui-review-v02/1440x1000-dark-reader-fit-width.png",
+      "geometry": {
+        "html_theme": "dark",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1440,
+          "client_width": 1440,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(32, 32, 32)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 1000,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(25, 25, 25)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1216,
+          "height": 1000,
+          "scroll_width": 1216,
+          "client_width": 1216,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": {
+          "x": 224,
+          "y": 98,
+          "width": 831,
+          "height": 43,
+          "scroll_width": 831,
+          "client_width": 831,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(36, 36, 36)"
+        },
+        "reader": {
+          "x": 224,
+          "y": 98,
+          "width": 831,
+          "height": 902,
+          "scroll_width": 831,
+          "client_width": 831,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(21, 21, 21)"
+        },
+        "reader_panel": {
+          "x": 1060,
+          "y": 98,
+          "width": 380,
+          "height": 902,
+          "scroll_width": 380,
+          "client_width": 380,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(36, 36, 36)"
+        },
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1839
+      }
+    },
+    {
+      "name": "reader-notes-panel",
+      "theme": "dark",
+      "screenshot": "artifacts/ui-review-v02/1440x1000-dark-reader-notes-panel.png",
+      "geometry": {
+        "html_theme": "dark",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1440,
+          "client_width": 1440,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(32, 32, 32)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 1000,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(25, 25, 25)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1216,
+          "height": 1000,
+          "scroll_width": 1216,
+          "client_width": 1216,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": {
+          "x": 224,
+          "y": 98,
+          "width": 831,
+          "height": 43,
+          "scroll_width": 831,
+          "client_width": 831,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(36, 36, 36)"
+        },
+        "reader": {
+          "x": 224,
+          "y": 98,
+          "width": 831,
+          "height": 902,
+          "scroll_width": 831,
+          "client_width": 831,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(21, 21, 21)"
+        },
+        "reader_panel": {
+          "x": 1060,
+          "y": 98,
+          "width": 380,
+          "height": 902,
+          "scroll_width": 380,
+          "client_width": 380,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(36, 36, 36)"
+        },
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1733
+      }
+    },
+    {
+      "name": "notebook",
+      "theme": "dark",
+      "screenshot": "artifacts/ui-review-v02/1440x1000-dark-notebook.png",
+      "geometry": {
+        "html_theme": "dark",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1440,
+          "client_width": 1440,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(32, 32, 32)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 1000,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(25, 25, 25)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1216,
+          "height": 1000,
+          "scroll_width": 1216,
+          "client_width": 1216,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": {
+          "x": 248,
+          "y": 194,
+          "width": 1168,
+          "height": 134.796875,
+          "scroll_width": 1168,
+          "client_width": 1168,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1282
+      }
+    },
+    {
+      "name": "note-detail",
+      "theme": "dark",
+      "screenshot": "artifacts/ui-review-v02/1440x1000-dark-note-detail.png",
+      "geometry": {
+        "html_theme": "dark",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1440,
+          "client_width": 1440,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(32, 32, 32)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 1000,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(25, 25, 25)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1216,
+          "height": 1000,
+          "scroll_width": 1216,
+          "client_width": 1216,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": {
+          "x": 248,
+          "y": 194,
+          "width": 1168,
+          "height": 134.796875,
+          "scroll_width": 1168,
+          "client_width": 1168,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1282
+      }
+    },
+    {
+      "name": "search",
+      "theme": "dark",
+      "screenshot": "artifacts/ui-review-v02/1440x1000-dark-search.png",
+      "geometry": {
+        "html_theme": "dark",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1440,
+          "client_width": 1440,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(32, 32, 32)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 1000,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(25, 25, 25)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1216,
+          "height": 1000,
+          "scroll_width": 1216,
+          "client_width": 1216,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": null,
+        "first_result": {
+          "x": 248,
+          "y": 240.5,
+          "width": 1168,
+          "height": 108.28125,
+          "scroll_width": 1168,
+          "client_width": 1168,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(42, 42, 42)"
+        },
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 2860
+      }
+    },
+    {
+      "name": "tasks",
+      "theme": "dark",
+      "screenshot": "artifacts/ui-review-v02/1440x1000-dark-tasks.png",
+      "geometry": {
+        "html_theme": "dark",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1440,
+          "client_width": 1440,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(32, 32, 32)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 1000,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(25, 25, 25)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1216,
+          "height": 1000,
+          "scroll_width": 1216,
+          "client_width": 1216,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1271
+      }
+    },
+    {
+      "name": "settings",
+      "theme": "dark",
+      "screenshot": "artifacts/ui-review-v02/1440x1000-dark-settings.png",
+      "geometry": {
+        "html_theme": "dark",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1440,
+          "client_width": 1440,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(32, 32, 32)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 1000,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(25, 25, 25)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1216,
+          "height": 1000,
+          "scroll_width": 1216,
+          "client_width": 1216,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 288
+      }
+    },
+    {
+      "name": "settings-preferences",
+      "theme": "dark",
+      "screenshot": "artifacts/ui-review-v02/1440x1000-dark-settings-preferences.png",
+      "geometry": {
+        "html_theme": "dark",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1440,
+          "client_width": 1440,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(32, 32, 32)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 1000,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(25, 25, 25)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1216,
+          "height": 1000,
+          "scroll_width": 1216,
+          "client_width": 1216,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 288
+      }
+    },
+    {
+      "name": "library",
+      "theme": "light",
+      "screenshot": "artifacts/ui-review-v02/1280x800-light-library.png",
+      "geometry": {
+        "html_theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 800,
+          "scroll_width": 1280,
+          "client_width": 1280,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 800,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1056,
+          "height": 800,
+          "scroll_width": 1056,
+          "client_width": 1056,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": {
+          "x": 249,
+          "y": 229.5,
+          "width": 1006,
+          "height": 69.6875,
+          "scroll_width": 1006,
+          "client_width": 1006,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1303
+      }
+    },
+    {
+      "name": "recent-reading",
+      "theme": "light",
+      "screenshot": "artifacts/ui-review-v02/1280x800-light-recent-reading.png",
+      "geometry": {
+        "html_theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 800,
+          "scroll_width": 1280,
+          "client_width": 1280,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 800,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1056,
+          "height": 800,
+          "scroll_width": 1056,
+          "client_width": 1056,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": {
+          "x": 249,
+          "y": 229.5,
+          "width": 1006,
+          "height": 96.1875,
+          "scroll_width": 1006,
+          "client_width": 1006,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 983
+      }
+    },
+    {
+      "name": "reader-fit-page",
+      "theme": "light",
+      "screenshot": "artifacts/ui-review-v02/1280x800-light-reader-fit-page.png",
+      "geometry": {
+        "html_theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 800,
+          "scroll_width": 1280,
+          "client_width": 1280,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 800,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1056,
+          "height": 800,
+          "scroll_width": 1056,
+          "client_width": 1056,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": {
+          "x": 224,
+          "y": 98,
+          "width": 671,
+          "height": 43,
+          "scroll_width": 671,
+          "client_width": 671,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "reader": {
+          "x": 224,
+          "y": 98,
+          "width": 671,
+          "height": 702,
+          "scroll_width": 671,
+          "client_width": 671,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(232, 232, 232)"
+        },
+        "reader_panel": {
+          "x": 900,
+          "y": 98,
+          "width": 380,
+          "height": 702,
+          "scroll_width": 380,
+          "client_width": 380,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1838
+      }
+    },
+    {
+      "name": "reader-fit-width",
+      "theme": "light",
+      "screenshot": "artifacts/ui-review-v02/1280x800-light-reader-fit-width.png",
+      "geometry": {
+        "html_theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 800,
+          "scroll_width": 1280,
+          "client_width": 1280,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 800,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1056,
+          "height": 800,
+          "scroll_width": 1056,
+          "client_width": 1056,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": {
+          "x": 224,
+          "y": 98,
+          "width": 671,
+          "height": 43,
+          "scroll_width": 671,
+          "client_width": 671,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "reader": {
+          "x": 224,
+          "y": 98,
+          "width": 671,
+          "height": 702,
+          "scroll_width": 671,
+          "client_width": 671,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(232, 232, 232)"
+        },
+        "reader_panel": {
+          "x": 900,
+          "y": 98,
+          "width": 380,
+          "height": 702,
+          "scroll_width": 380,
+          "client_width": 380,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1839
+      }
+    },
+    {
+      "name": "reader-notes-panel",
+      "theme": "light",
+      "screenshot": "artifacts/ui-review-v02/1280x800-light-reader-notes-panel.png",
+      "geometry": {
+        "html_theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 800,
+          "scroll_width": 1280,
+          "client_width": 1280,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 800,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1056,
+          "height": 800,
+          "scroll_width": 1056,
+          "client_width": 1056,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": {
+          "x": 224,
+          "y": 98,
+          "width": 671,
+          "height": 43,
+          "scroll_width": 671,
+          "client_width": 671,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "reader": {
+          "x": 224,
+          "y": 98,
+          "width": 671,
+          "height": 702,
+          "scroll_width": 671,
+          "client_width": 671,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(232, 232, 232)"
+        },
+        "reader_panel": {
+          "x": 900,
+          "y": 98,
+          "width": 380,
+          "height": 702,
+          "scroll_width": 380,
+          "client_width": 380,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1733
+      }
+    },
+    {
+      "name": "notebook",
+      "theme": "light",
+      "screenshot": "artifacts/ui-review-v02/1280x800-light-notebook.png",
+      "geometry": {
+        "html_theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 800,
+          "scroll_width": 1280,
+          "client_width": 1280,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 800,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1056,
+          "height": 800,
+          "scroll_width": 1056,
+          "client_width": 1056,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": {
+          "x": 248,
+          "y": 194,
+          "width": 1008,
+          "height": 134.796875,
+          "scroll_width": 1008,
+          "client_width": 1008,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1282
+      }
+    },
+    {
+      "name": "note-detail",
+      "theme": "light",
+      "screenshot": "artifacts/ui-review-v02/1280x800-light-note-detail.png",
+      "geometry": {
+        "html_theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 800,
+          "scroll_width": 1280,
+          "client_width": 1280,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 800,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1056,
+          "height": 800,
+          "scroll_width": 1056,
+          "client_width": 1056,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": {
+          "x": 248,
+          "y": 194,
+          "width": 1008,
+          "height": 134.796875,
+          "scroll_width": 1008,
+          "client_width": 1008,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1282
+      }
+    },
+    {
+      "name": "search",
+      "theme": "light",
+      "screenshot": "artifacts/ui-review-v02/1280x800-light-search.png",
+      "geometry": {
+        "html_theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 800,
+          "scroll_width": 1280,
+          "client_width": 1280,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 800,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1056,
+          "height": 800,
+          "scroll_width": 1056,
+          "client_width": 1056,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": null,
+        "first_result": {
+          "x": 248,
+          "y": 240.5,
+          "width": 1008,
+          "height": 108.28125,
+          "scroll_width": 1008,
+          "client_width": 1008,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 2860
+      }
+    },
+    {
+      "name": "tasks",
+      "theme": "light",
+      "screenshot": "artifacts/ui-review-v02/1280x800-light-tasks.png",
+      "geometry": {
+        "html_theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 800,
+          "scroll_width": 1280,
+          "client_width": 1280,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 800,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1056,
+          "height": 800,
+          "scroll_width": 1056,
+          "client_width": 1056,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1271
+      }
+    },
+    {
+      "name": "settings",
+      "theme": "light",
+      "screenshot": "artifacts/ui-review-v02/1280x800-light-settings.png",
+      "geometry": {
+        "html_theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 800,
+          "scroll_width": 1280,
+          "client_width": 1280,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 800,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1056,
+          "height": 800,
+          "scroll_width": 1056,
+          "client_width": 1056,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 288
+      }
+    },
+    {
+      "name": "settings-preferences",
+      "theme": "light",
+      "screenshot": "artifacts/ui-review-v02/1280x800-light-settings-preferences.png",
+      "geometry": {
+        "html_theme": "light",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 800,
+          "scroll_width": 1280,
+          "client_width": 1280,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(255, 255, 255)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 800,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(245, 245, 245)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1056,
+          "height": 800,
+          "scroll_width": 1056,
+          "client_width": 1056,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 288
+      }
+    },
+    {
+      "name": "library",
+      "theme": "dark",
+      "screenshot": "artifacts/ui-review-v02/1280x800-dark-library.png",
+      "geometry": {
+        "html_theme": "dark",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 800,
+          "scroll_width": 1280,
+          "client_width": 1280,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(32, 32, 32)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 800,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(25, 25, 25)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1056,
+          "height": 800,
+          "scroll_width": 1056,
+          "client_width": 1056,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": {
+          "x": 249,
+          "y": 229.5,
+          "width": 1006,
+          "height": 69.6875,
+          "scroll_width": 1006,
+          "client_width": 1006,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1303
+      }
+    },
+    {
+      "name": "recent-reading",
+      "theme": "dark",
+      "screenshot": "artifacts/ui-review-v02/1280x800-dark-recent-reading.png",
+      "geometry": {
+        "html_theme": "dark",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 800,
+          "scroll_width": 1280,
+          "client_width": 1280,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(32, 32, 32)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 800,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(25, 25, 25)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1056,
+          "height": 800,
+          "scroll_width": 1056,
+          "client_width": 1056,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": {
+          "x": 249,
+          "y": 229.5,
+          "width": 1006,
+          "height": 96.1875,
+          "scroll_width": 1006,
+          "client_width": 1006,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 983
+      }
+    },
+    {
+      "name": "reader-fit-page",
+      "theme": "dark",
+      "screenshot": "artifacts/ui-review-v02/1280x800-dark-reader-fit-page.png",
+      "geometry": {
+        "html_theme": "dark",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 800,
+          "scroll_width": 1280,
+          "client_width": 1280,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(32, 32, 32)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 800,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(25, 25, 25)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1056,
+          "height": 800,
+          "scroll_width": 1056,
+          "client_width": 1056,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": {
+          "x": 224,
+          "y": 98,
+          "width": 671,
+          "height": 43,
+          "scroll_width": 671,
+          "client_width": 671,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(36, 36, 36)"
+        },
+        "reader": {
+          "x": 224,
+          "y": 98,
+          "width": 671,
+          "height": 702,
+          "scroll_width": 671,
+          "client_width": 671,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(21, 21, 21)"
+        },
+        "reader_panel": {
+          "x": 900,
+          "y": 98,
+          "width": 380,
+          "height": 702,
+          "scroll_width": 380,
+          "client_width": 380,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(36, 36, 36)"
+        },
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1838
+      }
+    },
+    {
+      "name": "reader-fit-width",
+      "theme": "dark",
+      "screenshot": "artifacts/ui-review-v02/1280x800-dark-reader-fit-width.png",
+      "geometry": {
+        "html_theme": "dark",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 800,
+          "scroll_width": 1280,
+          "client_width": 1280,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(32, 32, 32)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 800,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(25, 25, 25)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1056,
+          "height": 800,
+          "scroll_width": 1056,
+          "client_width": 1056,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": {
+          "x": 224,
+          "y": 98,
+          "width": 671,
+          "height": 43,
+          "scroll_width": 671,
+          "client_width": 671,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(36, 36, 36)"
+        },
+        "reader": {
+          "x": 224,
+          "y": 98,
+          "width": 671,
+          "height": 702,
+          "scroll_width": 671,
+          "client_width": 671,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(21, 21, 21)"
+        },
+        "reader_panel": {
+          "x": 900,
+          "y": 98,
+          "width": 380,
+          "height": 702,
+          "scroll_width": 380,
+          "client_width": 380,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(36, 36, 36)"
+        },
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1839
+      }
+    },
+    {
+      "name": "reader-notes-panel",
+      "theme": "dark",
+      "screenshot": "artifacts/ui-review-v02/1280x800-dark-reader-notes-panel.png",
+      "geometry": {
+        "html_theme": "dark",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 800,
+          "scroll_width": 1280,
+          "client_width": 1280,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(32, 32, 32)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 800,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(25, 25, 25)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1056,
+          "height": 800,
+          "scroll_width": 1056,
+          "client_width": 1056,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": {
+          "x": 224,
+          "y": 98,
+          "width": 671,
+          "height": 43,
+          "scroll_width": 671,
+          "client_width": 671,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(36, 36, 36)"
+        },
+        "reader": {
+          "x": 224,
+          "y": 98,
+          "width": 671,
+          "height": 702,
+          "scroll_width": 671,
+          "client_width": 671,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(21, 21, 21)"
+        },
+        "reader_panel": {
+          "x": 900,
+          "y": 98,
+          "width": 380,
+          "height": 702,
+          "scroll_width": 380,
+          "client_width": 380,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(36, 36, 36)"
+        },
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1733
+      }
+    },
+    {
+      "name": "notebook",
+      "theme": "dark",
+      "screenshot": "artifacts/ui-review-v02/1280x800-dark-notebook.png",
+      "geometry": {
+        "html_theme": "dark",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 800,
+          "scroll_width": 1280,
+          "client_width": 1280,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(32, 32, 32)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 800,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(25, 25, 25)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1056,
+          "height": 800,
+          "scroll_width": 1056,
+          "client_width": 1056,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": {
+          "x": 248,
+          "y": 194,
+          "width": 1008,
+          "height": 134.796875,
+          "scroll_width": 1008,
+          "client_width": 1008,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1282
+      }
+    },
+    {
+      "name": "note-detail",
+      "theme": "dark",
+      "screenshot": "artifacts/ui-review-v02/1280x800-dark-note-detail.png",
+      "geometry": {
+        "html_theme": "dark",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 800,
+          "scroll_width": 1280,
+          "client_width": 1280,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(32, 32, 32)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 800,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(25, 25, 25)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1056,
+          "height": 800,
+          "scroll_width": 1056,
+          "client_width": 1056,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": {
+          "x": 248,
+          "y": 194,
+          "width": 1008,
+          "height": 134.796875,
+          "scroll_width": 1008,
+          "client_width": 1008,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1282
+      }
+    },
+    {
+      "name": "search",
+      "theme": "dark",
+      "screenshot": "artifacts/ui-review-v02/1280x800-dark-search.png",
+      "geometry": {
+        "html_theme": "dark",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 800,
+          "scroll_width": 1280,
+          "client_width": 1280,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(32, 32, 32)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 800,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(25, 25, 25)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1056,
+          "height": 800,
+          "scroll_width": 1056,
+          "client_width": 1056,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": null,
+        "first_result": {
+          "x": 248,
+          "y": 240.5,
+          "width": 1008,
+          "height": 108.28125,
+          "scroll_width": 1008,
+          "client_width": 1008,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(42, 42, 42)"
+        },
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 2860
+      }
+    },
+    {
+      "name": "tasks",
+      "theme": "dark",
+      "screenshot": "artifacts/ui-review-v02/1280x800-dark-tasks.png",
+      "geometry": {
+        "html_theme": "dark",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 800,
+          "scroll_width": 1280,
+          "client_width": 1280,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(32, 32, 32)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 800,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(25, 25, 25)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1056,
+          "height": 800,
+          "scroll_width": 1056,
+          "client_width": 1056,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 1271
+      }
+    },
+    {
+      "name": "settings",
+      "theme": "dark",
+      "screenshot": "artifacts/ui-review-v02/1280x800-dark-settings.png",
+      "geometry": {
+        "html_theme": "dark",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 800,
+          "scroll_width": 1280,
+          "client_width": 1280,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(32, 32, 32)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 800,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(25, 25, 25)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1056,
+          "height": 800,
+          "scroll_width": 1056,
+          "client_width": 1056,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 288
+      }
+    },
+    {
+      "name": "settings-preferences",
+      "theme": "dark",
+      "screenshot": "artifacts/ui-review-v02/1280x800-dark-settings-preferences.png",
+      "geometry": {
+        "html_theme": "dark",
+        "viewport": {
+          "width": 1280,
+          "height": 800
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 800,
+          "scroll_width": 1280,
+          "client_width": 1280,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(32, 32, 32)"
+        },
+        "sidebar": {
+          "x": 0,
+          "y": 0,
+          "width": 224,
+          "height": 800,
+          "scroll_width": 223,
+          "client_width": 223,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgb(25, 25, 25)"
+        },
+        "main": {
+          "x": 224,
+          "y": 0,
+          "width": 1056,
+          "height": 800,
+          "scroll_width": 1056,
+          "client_width": 1056,
+          "font_size": "13px",
+          "line_height": "19.5px",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        "toolbar": null,
+        "reader": null,
+        "reader_panel": null,
+        "first_paper": null,
+        "first_note": null,
+        "first_result": null,
+        "toolbar_problems": [],
+        "broken_images": 0,
+        "visible_text_characters": 288
+      }
+    }
+  ],
+  "javascript_errors": [],
+  "failed_requests": [],
+  "blocked_mutations": [],
+  "reading_state_writes": [
+    {
+      "endpoint": "/papers/d7c89478-3314-48c3-b01e-987b768a7852/reading-state",
+      "fields": [
+        "touch"
+      ]
+    },
+    {
+      "endpoint": "/papers/d7c89478-3314-48c3-b01e-987b768a7852/reading-state",
+      "fields": [
+        "scale",
+        "fit_mode",
+        "anchor"
+      ]
+    },
+    {
+      "endpoint": "/papers/d7c89478-3314-48c3-b01e-987b768a7852/reading-state",
+      "fields": [
+        "touch"
+      ]
+    },
+    {
+      "endpoint": "/papers/d7c89478-3314-48c3-b01e-987b768a7852/reading-state",
+      "fields": [
+        "anchor",
+        "scale",
+        "fit_mode"
+      ]
+    },
+    {
+      "endpoint": "/papers/d7c89478-3314-48c3-b01e-987b768a7852/reading-state",
+      "fields": [
+        "touch"
+      ]
+    },
+    {
+      "endpoint": "/papers/d7c89478-3314-48c3-b01e-987b768a7852/reading-state",
+      "fields": [
+        "scale",
+        "fit_mode"
+      ]
+    },
+    {
+      "endpoint": "/papers/d7c89478-3314-48c3-b01e-987b768a7852/reading-state",
+      "fields": [
+        "touch"
+      ]
+    },
+    {
+      "endpoint": "/papers/d7c89478-3314-48c3-b01e-987b768a7852/reading-state",
+      "fields": [
+        "scale",
+        "fit_mode"
+      ]
+    }
+  ],
+  "accessibility": [
+    {
+      "test": "reader-panel-tab-key",
+      "focus": {
+        "role": "tab",
+        "label": "笔记 1",
+        "outline": "solid"
+      }
+    },
+    {
+      "test": "reader-panel-arrow-navigation",
+      "moved": false
+    },
+    {
+      "test": "reader-search-keyboard-open-close",
+      "passed": true
+    }
+  ],
+  "findings": [
+    {
+      "area": "reader-tabs",
+      "severity": "usability",
+      "issue": "role=tablist does not move focus with ArrowRight; Tab/Enter remains usable.",
+      "resolved": true
+    }
+  ],
+  "notes_preview_samples": [
+    {
+      "id": "9917c26f-22e1-4f3f-a0e9-1d6c86792a0c",
+      "title_literal": true,
+      "quote_literal": true,
+      "body_literal": true,
+      "injected_elements": 0,
+      "escaped_script": true
+    }
+  ],
+  "library": {
+    "id": "e9752fd3-9a8e-4e31-bdfb-3975a23f470f",
+    "path": "D:\\project\\PaperVault\\.test-data\\ui-library-restore-1791531589359",
+    "papers": 16,
+    "resource_count": 7,
+    "jobs": 17,
+    "notes": 5,
+    "paper_notes": 1,
+    "recently_opened": 12,
+    "selected_paper": {
+      "id": "d7c89478-3314-48c3-b01e-987b768a7852",
+      "filename": "academic.pdf",
+      "title": "Local Research Asset Extraction"
+    },
+    "query": "research"
+  },
+  "browser": "154.0.4258.62",
+  "content_preservation": {
+    "paper_content_unchanged": true,
+    "paper_notes_unchanged": true,
+    "library_unchanged": true,
+    "reading_state_before": {
+      "paper_id": "d7c89478-3314-48c3-b01e-987b768a7852",
+      "version": 2,
+      "page_index": 0,
+      "anchor": [
+        0,
+        792
+      ],
+      "scale": 1,
+      "rotation": 0,
+      "fit_mode": "custom",
+      "status": "reading",
+      "last_opened": "2026-10-09T09:19:20.186747+00:00",
+      "updated_at": "2026-10-09T09:19:20.881429+00:00"
+    },
+    "reading_state_after": {
+      "paper_id": "d7c89478-3314-48c3-b01e-987b768a7852",
+      "version": 10,
+      "page_index": 0,
+      "anchor": [
+        0,
+        792
+      ],
+      "scale": 1.0506535947712419,
+      "rotation": 0,
+      "fit_mode": "width",
+      "status": "reading",
+      "last_opened": "2026-10-09T09:35:51.101850+00:00",
+      "updated_at": "2026-10-09T09:35:51.896175+00:00"
+    },
+    "explanation": "This review intentionally saved real reading position/zoom/status in the existing test library. It did not alter paper, resource, or note content."
+  },
+  "notes_preview_security": {
+    "source_review": true,
+    "existing_special_character_records": [
+      "9917c26f-22e1-4f3f-a0e9-1d6c86792a0c"
+    ],
+    "explanation": "Existing list previews render React text nodes, and editors use input/textarea values. No note content or metadata is created or changed by this review."
+  },
+  "finished_at": "2026-10-09T09:35:53.699Z",
+  "follow_up": {
+    "report": "artifacts/ui-review-v02-keyboard/review.json",
+    "finished_at": "2026-10-09T09:44:10.973Z",
+    "status": "passed",
+    "description": "Directional tab navigation and deferred workspace focus restoration fixed and verified; two affected screenshots refreshed."
+  }
+}

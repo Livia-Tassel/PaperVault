@@ -1,0 +1,848 @@
+{
+  "status": "needs-review",
+  "started_at": "2026-10-09T10:37:38.064Z",
+  "synthetic_data": true,
+  "scope": "ONE real academic.pdf copy; synthetic annotation metadata/rectangles are a rendering workload, not extracted facts or parser accuracy evidence.",
+  "source_pdf": "tests\\fixtures\\academic.pdf",
+  "source_pdf_sha256": "a77a692de65dfc76c9c0252dfde57e5c742e470db0d9639d495e5f7893e75386",
+  "library": "D:\\project\\PaperVault\\.test-data\\annotation-benchmark-1791542258060\\library",
+  "annotation_count": 1000,
+  "locations_per_annotation": 3,
+  "runtime": "Existing production dist assets fulfilled from disk at the approved 1420 origin; all API responses come from a separate real sidecar. No shared 8765 requests.",
+  "production_bundle": {
+    "entry": "/assets/index-baoFL8Tl.js",
+    "sha256": "52895fc6288359652cae61828c83256dd29badbe1b705bf3d049abc4d09ae364",
+    "bytes": 840127,
+    "modified_at": "2026-10-09T10:23:28.915Z"
+  },
+  "machine": {
+    "platform": "win32",
+    "release": "10.0.26300",
+    "cpu": "13th Gen Intel(R) Core(TM) i7-1360P",
+    "logical_cpus": 16,
+    "ram_bytes": 16890716160
+  },
+  "thresholds_declared_before_run": {
+    "ui_action_warning_ms": 1000,
+    "reader_open_warning_ms": 3000,
+    "scrolling_frame_p95_warning_ms": 33.4,
+    "sustained_long_task_warning_ms": 200
+  },
+  "api_measurements": [
+    {
+      "label": "first-page",
+      "endpoint": "/annotations?limit=30",
+      "total": 1000,
+      "returned": 30,
+      "milliseconds": [
+        8.389799999997194,
+        6.111400000001595,
+        5.874899999998888,
+        6.277299999997922,
+        5.62250000000131
+      ],
+      "median_ms": 6.111400000001595
+    },
+    {
+      "label": "last-page",
+      "endpoint": "/annotations?limit=30&offset=990",
+      "total": 1000,
+      "returned": 10,
+      "milliseconds": [
+        6.03349999999773,
+        5.9200999999993655,
+        7.118700000002718,
+        7.885400000002846,
+        6.052500000001601
+      ],
+      "median_ms": 6.052500000001601
+    },
+    {
+      "label": "cohort-search",
+      "endpoint": "/annotations?q=cohort07&limit=30",
+      "total": 50,
+      "returned": 30,
+      "milliseconds": [
+        6.227599999998347,
+        7.046500000000378,
+        5.405800000000454,
+        6.056899999999587,
+        5.866500000000087
+      ],
+      "median_ms": 6.056899999999587
+    },
+    {
+      "label": "unique-search",
+      "endpoint": "/annotations?q=benchmarktoken0721&limit=30",
+      "total": 1,
+      "returned": 1,
+      "milliseconds": [
+        3.9631999999983236,
+        3.766299999999319,
+        4.37250000000131,
+        4.428200000002107,
+        3.7619999999988067
+      ],
+      "median_ms": 3.9631999999983236
+    }
+  ],
+  "browser_phases": [
+    {
+      "label": "reader-open-0-annotations",
+      "elapsed_ms": 491.6000000014901,
+      "long_tasks": [],
+      "dom_nodes": 375,
+      "annotation_wrappers": 0,
+      "annotation_rectangles": 0,
+      "annotation_markers": 0,
+      "visible_note_rows": 0,
+      "js_heap_bytes": 8074441,
+      "frame_p50_ms": 16.699999999999932,
+      "frame_p95_ms": 50,
+      "frame_max_ms": 66.70000000000005,
+      "frames_above_33ms": 2,
+      "frames_above_50ms": 1,
+      "long_task_count": 0,
+      "max_long_task_ms": 0,
+      "cdp_delta_seconds": {
+        "TaskDuration": 0.210028,
+        "ScriptDuration": 0.07606999999999998,
+        "LayoutDuration": 0.027091999999999998,
+        "RecalcStyleDuration": 0.009985
+      }
+    },
+    {
+      "label": "reader-scroll-0-annotations",
+      "elapsed_ms": 6043.099999997765,
+      "long_tasks": [],
+      "dom_nodes": 375,
+      "annotation_wrappers": 0,
+      "annotation_rectangles": 0,
+      "annotation_markers": 0,
+      "visible_note_rows": 0,
+      "js_heap_bytes": 11235896,
+      "frame_p50_ms": 16.699999999999818,
+      "frame_p95_ms": 16.800000000000182,
+      "frame_max_ms": 17,
+      "frames_above_33ms": 0,
+      "frames_above_50ms": 0,
+      "long_task_count": 0,
+      "max_long_task_ms": 0,
+      "cdp_delta_seconds": {
+        "TaskDuration": 0.480954,
+        "ScriptDuration": 0.307959,
+        "LayoutDuration": 0.0009720000000000006,
+        "RecalcStyleDuration": 0.0012289999999999975
+      },
+      "scripted_scroll_seconds": 6
+    },
+    {
+      "label": "notebook-open-1000",
+      "elapsed_ms": 120.69999999925494,
+      "long_tasks": [],
+      "dom_nodes": 947,
+      "annotation_wrappers": 0,
+      "annotation_rectangles": 0,
+      "annotation_markers": 0,
+      "visible_note_rows": 30,
+      "js_heap_bytes": 10392448,
+      "frame_p50_ms": 16.700000000000728,
+      "frame_p95_ms": 16.700000000000728,
+      "frame_max_ms": 16.700000000000728,
+      "frames_above_33ms": 0,
+      "frames_above_50ms": 0,
+      "long_task_count": 0,
+      "max_long_task_ms": 0,
+      "cdp_delta_seconds": {
+        "TaskDuration": 0.0324509999999999,
+        "ScriptDuration": 0.006479999999999986,
+        "LayoutDuration": 0.008589,
+        "RecalcStyleDuration": 0.004120000000000002
+      }
+    },
+    {
+      "label": "notebook-page-2",
+      "elapsed_ms": 98.69999999925494,
+      "long_tasks": [],
+      "dom_nodes": 947,
+      "annotation_wrappers": 0,
+      "annotation_rectangles": 0,
+      "annotation_markers": 0,
+      "visible_note_rows": 30,
+      "js_heap_bytes": 9673852,
+      "frame_p50_ms": 16.600000000002183,
+      "frame_p95_ms": 16.799999999999272,
+      "frame_max_ms": 16.799999999999272,
+      "frames_above_33ms": 0,
+      "frames_above_50ms": 0,
+      "long_task_count": 0,
+      "max_long_task_ms": 0,
+      "cdp_delta_seconds": {
+        "TaskDuration": 0.036098000000000185,
+        "ScriptDuration": 0.006406000000000023,
+        "LayoutDuration": 0.003041000000000002,
+        "RecalcStyleDuration": 0.003219000000000003
+      }
+    },
+    {
+      "label": "notebook-page-3",
+      "elapsed_ms": 96.60000000149012,
+      "long_tasks": [],
+      "dom_nodes": 947,
+      "annotation_wrappers": 0,
+      "annotation_rectangles": 0,
+      "annotation_markers": 0,
+      "visible_note_rows": 30,
+      "js_heap_bytes": 9939412,
+      "frame_p50_ms": 16.700000000000728,
+      "frame_p95_ms": 16.799999999999272,
+      "frame_max_ms": 16.799999999999272,
+      "frames_above_33ms": 0,
+      "frames_above_50ms": 0,
+      "long_task_count": 0,
+      "max_long_task_ms": 0,
+      "cdp_delta_seconds": {
+        "TaskDuration": 0.03350299999999984,
+        "ScriptDuration": 0.005139999999999978,
+        "LayoutDuration": 0.0031240000000000018,
+        "RecalcStyleDuration": 0.0031869999999999954
+      }
+    },
+    {
+      "label": "notebook-page-4",
+      "elapsed_ms": 95.69999999925494,
+      "long_tasks": [],
+      "dom_nodes": 947,
+      "annotation_wrappers": 0,
+      "annotation_rectangles": 0,
+      "annotation_markers": 0,
+      "visible_note_rows": 30,
+      "js_heap_bytes": 10233966,
+      "frame_p50_ms": 16.700000000000728,
+      "frame_p95_ms": 16.700000000000728,
+      "frame_max_ms": 16.700000000000728,
+      "frames_above_33ms": 0,
+      "frames_above_50ms": 0,
+      "long_task_count": 0,
+      "max_long_task_ms": 0,
+      "cdp_delta_seconds": {
+        "TaskDuration": 0.03171299999999988,
+        "ScriptDuration": 0.004730999999999985,
+        "LayoutDuration": 0.0030939999999999995,
+        "RecalcStyleDuration": 0.0029830000000000065
+      }
+    },
+    {
+      "label": "notebook-page-5",
+      "elapsed_ms": 96,
+      "long_tasks": [],
+      "dom_nodes": 947,
+      "annotation_wrappers": 0,
+      "annotation_rectangles": 0,
+      "annotation_markers": 0,
+      "visible_note_rows": 30,
+      "js_heap_bytes": 10492899,
+      "frame_p50_ms": 16.700000000000728,
+      "frame_p95_ms": 16.700000000000728,
+      "frame_max_ms": 16.700000000000728,
+      "frames_above_33ms": 0,
+      "frames_above_50ms": 0,
+      "long_task_count": 0,
+      "max_long_task_ms": 0,
+      "cdp_delta_seconds": {
+        "TaskDuration": 0.03325,
+        "ScriptDuration": 0.005330000000000057,
+        "LayoutDuration": 0.003054000000000001,
+        "RecalcStyleDuration": 0.0029509999999999953
+      }
+    },
+    {
+      "label": "notebook-page-6",
+      "elapsed_ms": 113,
+      "long_tasks": [],
+      "dom_nodes": 947,
+      "annotation_wrappers": 0,
+      "annotation_rectangles": 0,
+      "annotation_markers": 0,
+      "visible_note_rows": 30,
+      "js_heap_bytes": 10829534,
+      "frame_p50_ms": 16.700000000000728,
+      "frame_p95_ms": 16.700000000000728,
+      "frame_max_ms": 16.700000000000728,
+      "frames_above_33ms": 0,
+      "frames_above_50ms": 0,
+      "long_task_count": 0,
+      "max_long_task_ms": 0,
+      "cdp_delta_seconds": {
+        "TaskDuration": 0.0340720000000001,
+        "ScriptDuration": 0.006001999999999952,
+        "LayoutDuration": 0.0031069999999999987,
+        "RecalcStyleDuration": 0.0029969999999999997
+      }
+    },
+    {
+      "label": "notebook-page-7",
+      "elapsed_ms": 96.5,
+      "long_tasks": [],
+      "dom_nodes": 947,
+      "annotation_wrappers": 0,
+      "annotation_rectangles": 0,
+      "annotation_markers": 0,
+      "visible_note_rows": 30,
+      "js_heap_bytes": 11655823,
+      "frame_p50_ms": 16.700000000000728,
+      "frame_p95_ms": 16.799999999999272,
+      "frame_max_ms": 16.799999999999272,
+      "frames_above_33ms": 0,
+      "frames_above_50ms": 0,
+      "long_task_count": 0,
+      "max_long_task_ms": 0,
+      "cdp_delta_seconds": {
+        "TaskDuration": 0.037150000000000016,
+        "ScriptDuration": 0.007164999999999977,
+        "LayoutDuration": 0.003245999999999999,
+        "RecalcStyleDuration": 0.002910000000000003
+      }
+    },
+    {
+      "label": "notebook-page-8",
+      "elapsed_ms": 95.59999999776483,
+      "long_tasks": [],
+      "dom_nodes": 947,
+      "annotation_wrappers": 0,
+      "annotation_rectangles": 0,
+      "annotation_markers": 0,
+      "visible_note_rows": 30,
+      "js_heap_bytes": 11533726,
+      "frame_p50_ms": 16.700000000000728,
+      "frame_p95_ms": 16.700000000000728,
+      "frame_max_ms": 16.700000000000728,
+      "frames_above_33ms": 0,
+      "frames_above_50ms": 0,
+      "long_task_count": 0,
+      "max_long_task_ms": 0,
+      "cdp_delta_seconds": {
+        "TaskDuration": 0.03614699999999993,
+        "ScriptDuration": 0.007102000000000053,
+        "LayoutDuration": 0.003160999999999997,
+        "RecalcStyleDuration": 0.002909000000000002
+      }
+    },
+    {
+      "label": "notebook-page-9",
+      "elapsed_ms": 96.30000000074506,
+      "long_tasks": [],
+      "dom_nodes": 947,
+      "annotation_wrappers": 0,
+      "annotation_rectangles": 0,
+      "annotation_markers": 0,
+      "visible_note_rows": 30,
+      "js_heap_bytes": 14003867,
+      "frame_p50_ms": 16.700000000000728,
+      "frame_p95_ms": 16.700000000000728,
+      "frame_max_ms": 16.700000000000728,
+      "frames_above_33ms": 0,
+      "frames_above_50ms": 0,
+      "long_task_count": 0,
+      "max_long_task_ms": 0,
+      "cdp_delta_seconds": {
+        "TaskDuration": 0.033636,
+        "ScriptDuration": 0.006233999999999962,
+        "LayoutDuration": 0.003476000000000007,
+        "RecalcStyleDuration": 0.0029819999999999985
+      }
+    },
+    {
+      "label": "notebook-search-cohort07",
+      "elapsed_ms": 346.29999999701977,
+      "long_tasks": [],
+      "dom_nodes": 953,
+      "annotation_wrappers": 0,
+      "annotation_rectangles": 0,
+      "annotation_markers": 0,
+      "visible_note_rows": 30,
+      "js_heap_bytes": 7461536,
+      "frame_p50_ms": 16.700000000000728,
+      "frame_p95_ms": 16.80000000000291,
+      "frame_max_ms": 16.80000000000291,
+      "frames_above_33ms": 0,
+      "frames_above_50ms": 0,
+      "long_task_count": 0,
+      "max_long_task_ms": 0,
+      "cdp_delta_seconds": {
+        "TaskDuration": 0.07621300000000009,
+        "ScriptDuration": 0.013071999999999973,
+        "LayoutDuration": 0.00846899999999999,
+        "RecalcStyleDuration": 0.007636999999999998
+      },
+      "debounce_included": true
+    },
+    {
+      "label": "notebook-search-benchmarktoken0721",
+      "elapsed_ms": 345.69999999925494,
+      "long_tasks": [],
+      "dom_nodes": 194,
+      "annotation_wrappers": 0,
+      "annotation_rectangles": 0,
+      "annotation_markers": 0,
+      "visible_note_rows": 1,
+      "js_heap_bytes": 8744772,
+      "frame_p50_ms": 16.700000000000728,
+      "frame_p95_ms": 16.799999999999272,
+      "frame_max_ms": 16.799999999999272,
+      "frames_above_33ms": 0,
+      "frames_above_50ms": 0,
+      "long_task_count": 0,
+      "max_long_task_ms": 0,
+      "cdp_delta_seconds": {
+        "TaskDuration": 0.020958000000000032,
+        "ScriptDuration": 0.0043480000000000185,
+        "LayoutDuration": 0.0006190000000000084,
+        "RecalcStyleDuration": 0.00042600000000000277
+      },
+      "debounce_included": true
+    },
+    {
+      "label": "notebook-search-clear",
+      "elapsed_ms": 347.20000000298023,
+      "long_tasks": [],
+      "dom_nodes": 947,
+      "annotation_wrappers": 0,
+      "annotation_rectangles": 0,
+      "annotation_markers": 0,
+      "visible_note_rows": 30,
+      "js_heap_bytes": 9771548,
+      "frame_p50_ms": 16.700000000000728,
+      "frame_p95_ms": 16.80000000000291,
+      "frame_max_ms": 16.80000000000291,
+      "frames_above_33ms": 0,
+      "frames_above_50ms": 0,
+      "long_task_count": 0,
+      "max_long_task_ms": 0,
+      "cdp_delta_seconds": {
+        "TaskDuration": 0.026024999999999965,
+        "ScriptDuration": 0.00433400000000006,
+        "LayoutDuration": 0.0026469999999999966,
+        "RecalcStyleDuration": 0.0028649999999999995
+      },
+      "debounce_included": true
+    },
+    {
+      "label": "reader-open-1000-annotations",
+      "elapsed_ms": 620,
+      "long_tasks": [
+        {
+          "start": 22118.10000000149,
+          "duration": 55
+        }
+      ],
+      "dom_nodes": 8573,
+      "annotation_wrappers": 1000,
+      "annotation_rectangles": 3000,
+      "annotation_markers": 1000,
+      "visible_note_rows": 0,
+      "js_heap_bytes": 18890268,
+      "frame_p50_ms": 16.700000000000728,
+      "frame_p95_ms": 283.2999999999993,
+      "frame_max_ms": 283.2999999999993,
+      "frames_above_33ms": 2,
+      "frames_above_50ms": 2,
+      "long_task_count": 1,
+      "max_long_task_ms": 55,
+      "cdp_delta_seconds": {
+        "TaskDuration": 0.366158,
+        "ScriptDuration": 0.10507999999999995,
+        "LayoutDuration": 0.034318000000000015,
+        "RecalcStyleDuration": 0.056681999999999996
+      },
+      "annotation_requests": 6
+    },
+    {
+      "label": "reader-scroll-1000-annotations",
+      "elapsed_ms": 6043,
+      "long_tasks": [],
+      "dom_nodes": 8573,
+      "annotation_wrappers": 1000,
+      "annotation_rectangles": 3000,
+      "annotation_markers": 1000,
+      "visible_note_rows": 0,
+      "js_heap_bytes": 58716650,
+      "frame_p50_ms": 16.700000000000728,
+      "frame_p95_ms": 16.799999999999272,
+      "frame_max_ms": 16.80000000000291,
+      "frames_above_33ms": 0,
+      "frames_above_50ms": 0,
+      "long_task_count": 0,
+      "max_long_task_ms": 0,
+      "cdp_delta_seconds": {
+        "TaskDuration": 4.281134,
+        "ScriptDuration": 3.3258660000000004,
+        "LayoutDuration": 0.0008039999999999992,
+        "RecalcStyleDuration": 0.0015099999999999975
+      },
+      "scripted_scroll_seconds": 6
+    },
+    {
+      "label": "reader-zoom-1000-annotations",
+      "elapsed_ms": 311.6000000014901,
+      "long_tasks": [
+        {
+          "start": 29392.5,
+          "duration": 112
+        }
+      ],
+      "dom_nodes": 8573,
+      "annotation_wrappers": 1000,
+      "annotation_rectangles": 3000,
+      "annotation_markers": 1000,
+      "visible_note_rows": 0,
+      "js_heap_bytes": 72543077,
+      "frame_p50_ms": 16.700000000000728,
+      "frame_p95_ms": 116.5,
+      "frame_max_ms": 116.5,
+      "frames_above_33ms": 2,
+      "frames_above_50ms": 2,
+      "long_task_count": 1,
+      "max_long_task_ms": 112,
+      "cdp_delta_seconds": {
+        "TaskDuration": 0.2224389999999996,
+        "ScriptDuration": 0.06695999999999991,
+        "LayoutDuration": 0.016459999999999975,
+        "RecalcStyleDuration": 0.05164199999999999
+      }
+    },
+    {
+      "label": "reader-select-annotation",
+      "elapsed_ms": 87.10000000149012,
+      "long_tasks": [],
+      "dom_nodes": 8573,
+      "annotation_wrappers": 1000,
+      "annotation_rectangles": 3000,
+      "annotation_markers": 1000,
+      "visible_note_rows": 0,
+      "js_heap_bytes": 65731024,
+      "frame_p50_ms": 16.700000000000728,
+      "frame_p95_ms": 16.700000000000728,
+      "frame_max_ms": 16.700000000000728,
+      "frames_above_33ms": 0,
+      "frames_above_50ms": 0,
+      "long_task_count": 0,
+      "max_long_task_ms": 0,
+      "cdp_delta_seconds": {
+        "TaskDuration": 0.07573499999999989,
+        "ScriptDuration": 0.03771099999999983,
+        "LayoutDuration": 0.0015010000000000023,
+        "RecalcStyleDuration": 0.0011609999999999954
+      }
+    }
+  ],
+  "memory_samples": [
+    {
+      "label": "baseline-reader-0",
+      "process_memory": [
+        {
+          "Id": 20444,
+          "WorkingSet64": 32051200,
+          "PrivateMemorySize64": 10313728
+        },
+        {
+          "Id": 8956,
+          "WorkingSet64": 183107584,
+          "PrivateMemorySize64": 174497792
+        },
+        {
+          "Id": 17420,
+          "WorkingSet64": 25223168,
+          "PrivateMemorySize64": 8404992
+        },
+        {
+          "Id": 20548,
+          "WorkingSet64": 131231744,
+          "PrivateMemorySize64": 75177984
+        },
+        {
+          "Id": 27344,
+          "WorkingSet64": 44711936,
+          "PrivateMemorySize64": 13172736
+        },
+        {
+          "Id": 27424,
+          "WorkingSet64": 23166976,
+          "PrivateMemorySize64": 7950336
+        },
+        {
+          "Id": 27692,
+          "WorkingSet64": 208818176,
+          "PrivateMemorySize64": 93605888
+        },
+        {
+          "Id": 27936,
+          "WorkingSet64": 38187008,
+          "PrivateMemorySize64": 17383424
+        }
+      ],
+      "working_set_bytes": 686497792,
+      "private_bytes": 400506880,
+      "cdp_js_heap_bytes": 7386416,
+      "cdp_nodes": 816
+    },
+    {
+      "label": "notebook-1000",
+      "process_memory": [
+        {
+          "Id": 8956,
+          "WorkingSet64": 144887808,
+          "PrivateMemorySize64": 134582272
+        },
+        {
+          "Id": 17256,
+          "WorkingSet64": 23031808,
+          "PrivateMemorySize64": 7856128
+        },
+        {
+          "Id": 17420,
+          "WorkingSet64": 25440256,
+          "PrivateMemorySize64": 8450048
+        },
+        {
+          "Id": 20548,
+          "WorkingSet64": 141811712,
+          "PrivateMemorySize64": 82919424
+        },
+        {
+          "Id": 27344,
+          "WorkingSet64": 44392448,
+          "PrivateMemorySize64": 12664832
+        },
+        {
+          "Id": 27424,
+          "WorkingSet64": 23580672,
+          "PrivateMemorySize64": 7970816
+        },
+        {
+          "Id": 27692,
+          "WorkingSet64": 223629312,
+          "PrivateMemorySize64": 103153664
+        },
+        {
+          "Id": 27936,
+          "WorkingSet64": 37888000,
+          "PrivateMemorySize64": 17014784
+        }
+      ],
+      "working_set_bytes": 664662016,
+      "private_bytes": 374611968,
+      "cdp_js_heap_bytes": 9958172,
+      "cdp_nodes": 2139
+    },
+    {
+      "label": "reader-1000",
+      "process_memory": [
+        {
+          "Id": 8956,
+          "WorkingSet64": 371277824,
+          "PrivateMemorySize64": 366247936
+        },
+        {
+          "Id": 17256,
+          "WorkingSet64": 23101440,
+          "PrivateMemorySize64": 7860224
+        },
+        {
+          "Id": 17420,
+          "WorkingSet64": 25464832,
+          "PrivateMemorySize64": 8474624
+        },
+        {
+          "Id": 20548,
+          "WorkingSet64": 257187840,
+          "PrivateMemorySize64": 194879488
+        },
+        {
+          "Id": 27344,
+          "WorkingSet64": 46178304,
+          "PrivateMemorySize64": 14573568
+        },
+        {
+          "Id": 27424,
+          "WorkingSet64": 23580672,
+          "PrivateMemorySize64": 7970816
+        },
+        {
+          "Id": 27692,
+          "WorkingSet64": 224399360,
+          "PrivateMemorySize64": 103276544
+        },
+        {
+          "Id": 27936,
+          "WorkingSet64": 37892096,
+          "PrivateMemorySize64": 17014784
+        }
+      ],
+      "working_set_bytes": 1009082368,
+      "private_bytes": 720297984,
+      "cdp_js_heap_bytes": 24331808,
+      "cdp_nodes": 11319
+    },
+    {
+      "label": "reader-after-scroll-zoom-selection",
+      "process_memory": [
+        {
+          "Id": 8956,
+          "WorkingSet64": 430751744,
+          "PrivateMemorySize64": 444801024
+        },
+        {
+          "Id": 17256,
+          "WorkingSet64": 23101440,
+          "PrivateMemorySize64": 7860224
+        },
+        {
+          "Id": 17420,
+          "WorkingSet64": 25464832,
+          "PrivateMemorySize64": 8474624
+        },
+        {
+          "Id": 20548,
+          "WorkingSet64": 378175488,
+          "PrivateMemorySize64": 316813312
+        },
+        {
+          "Id": 27344,
+          "WorkingSet64": 46227456,
+          "PrivateMemorySize64": 14594048
+        },
+        {
+          "Id": 27424,
+          "WorkingSet64": 23547904,
+          "PrivateMemorySize64": 7905280
+        },
+        {
+          "Id": 27692,
+          "WorkingSet64": 222797824,
+          "PrivateMemorySize64": 101081088
+        },
+        {
+          "Id": 27936,
+          "WorkingSet64": 37892096,
+          "PrivateMemorySize64": 17014784
+        }
+      ],
+      "working_set_bytes": 1187958784,
+      "private_bytes": 918544384,
+      "cdp_js_heap_bytes": 73974560,
+      "cdp_nodes": 9053
+    }
+  ],
+  "browser_errors": [],
+  "api_errors": [],
+  "findings": [
+    {
+      "issue": "high-sustained-main-thread-work",
+      "baseline_main_thread_fraction": 0.0795872979100425,
+      "annotated_main_thread_fraction": 0.7084451431408241,
+      "main_thread_work_ratio": 8.901337757872893,
+      "interpretation": "Frame-rate gates passed on this machine, but sustained CPU work increased substantially. Main-thread work and memory require review before broad low-end claims.",
+      "classification": "Post-measurement scaling diagnosis, separate from predeclared latency gates."
+    }
+  ],
+  "source_review": [
+    "PdfViewer filters the full annotations array separately for each PDF page on each parent render; no prebuilt page index.",
+    "Each PdfPage currently mounts all annotation wrappers, rectangles and marker buttons for that page; annotation DOM is not gated by the canvas near-viewport observer.",
+    "usePaperAnnotations reads all annotations in 200-record API pages; global and paper note lists render 30 records at a time."
+  ],
+  "backend_port": 23834,
+  "paper_id": "14f81ab6-53f1-4b7e-a6c0-7cb496085e32",
+  "browser": "154.0.4258.62",
+  "console_errors": [],
+  "failed_requests": [
+    {
+      "url": "http://127.0.0.1:23834/api/v1/annotations?paper_id=14f81ab6-53f1-4b7e-a6c0-7cb496085e32&limit=200&offset=200",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "request_urls": [
+    "http://127.0.0.1:1420/",
+    "http://127.0.0.1:1420/assets/index-baoFL8Tl.js",
+    "http://127.0.0.1:1420/assets/index-BdWxT4dT.css",
+    "http://127.0.0.1:8765/api/v1/library",
+    "http://127.0.0.1:8765/api/v1/papers?sort=created_at&offset=0&limit=30",
+    "http://127.0.0.1:8765/api/v1/folders",
+    "http://127.0.0.1:8765/api/v1/folders",
+    "http://127.0.0.1:8765/api/v1/papers/14f81ab6-53f1-4b7e-a6c0-7cb496085e32",
+    "http://127.0.0.1:8765/api/v1/papers/14f81ab6-53f1-4b7e-a6c0-7cb496085e32/reading-state",
+    "http://127.0.0.1:8765/api/v1/annotations?paper_id=14f81ab6-53f1-4b7e-a6c0-7cb496085e32&limit=200&offset=0",
+    "http://127.0.0.1:8765/api/v1/folders",
+    "http://127.0.0.1:8765/api/v1/papers/14f81ab6-53f1-4b7e-a6c0-7cb496085e32/pdf",
+    "http://127.0.0.1:8765/api/v1/papers/14f81ab6-53f1-4b7e-a6c0-7cb496085e32/reading-state",
+    "http://127.0.0.1:1420/assets/pdf.worker.min-CjEcRF4W.mjs",
+    "http://127.0.0.1:8765/api/v1/papers/14f81ab6-53f1-4b7e-a6c0-7cb496085e32",
+    "http://127.0.0.1:8765/api/v1/annotations?paper_id=14f81ab6-53f1-4b7e-a6c0-7cb496085e32&limit=200&offset=0",
+    "http://127.0.0.1:8765/api/v1/library",
+    "http://127.0.0.1:8765/api/v1/folders",
+    "http://127.0.0.1:8765/api/v1/papers/14f81ab6-53f1-4b7e-a6c0-7cb496085e32/reading-state",
+    "http://127.0.0.1:8765/api/v1/papers/14f81ab6-53f1-4b7e-a6c0-7cb496085e32/reading-state",
+    "http://127.0.0.1:8765/api/v1/papers/14f81ab6-53f1-4b7e-a6c0-7cb496085e32/reading-state",
+    "http://127.0.0.1:8765/api/v1/papers/14f81ab6-53f1-4b7e-a6c0-7cb496085e32/reading-state",
+    "http://127.0.0.1:8765/api/v1/papers/14f81ab6-53f1-4b7e-a6c0-7cb496085e32",
+    "http://127.0.0.1:8765/api/v1/papers/14f81ab6-53f1-4b7e-a6c0-7cb496085e32/reading-state",
+    "http://127.0.0.1:8765/api/v1/papers?sort=created_at&offset=0&limit=30",
+    "http://127.0.0.1:8765/api/v1/folders",
+    "http://127.0.0.1:8765/api/v1/library",
+    "http://127.0.0.1:8765/api/v1/papers?sort=created_at&offset=0&limit=30",
+    "http://127.0.0.1:8765/api/v1/papers?sort=created_at&offset=0&limit=30",
+    "http://127.0.0.1:8765/api/v1/annotations?deleted=false&offset=0&limit=30",
+    "http://127.0.0.1:8765/api/v1/annotations?deleted=false&offset=30&limit=30",
+    "http://127.0.0.1:8765/api/v1/annotations?deleted=false&offset=60&limit=30",
+    "http://127.0.0.1:8765/api/v1/annotations?deleted=false&offset=90&limit=30",
+    "http://127.0.0.1:8765/api/v1/annotations?deleted=false&offset=120&limit=30",
+    "http://127.0.0.1:8765/api/v1/annotations?deleted=false&offset=150&limit=30",
+    "http://127.0.0.1:8765/api/v1/annotations?deleted=false&offset=180&limit=30",
+    "http://127.0.0.1:8765/api/v1/library",
+    "http://127.0.0.1:8765/api/v1/annotations?deleted=false&offset=210&limit=30",
+    "http://127.0.0.1:8765/api/v1/annotations?deleted=false&offset=240&limit=30",
+    "http://127.0.0.1:8765/api/v1/annotations?deleted=false&offset=0&limit=30",
+    "http://127.0.0.1:8765/api/v1/annotations?q=cohort07&deleted=false&offset=0&limit=30",
+    "http://127.0.0.1:8765/api/v1/annotations?q=benchmarktoken0721&deleted=false&offset=0&limit=30",
+    "http://127.0.0.1:8765/api/v1/annotations?deleted=false&offset=0&limit=30",
+    "http://127.0.0.1:8765/api/v1/papers/14f81ab6-53f1-4b7e-a6c0-7cb496085e32",
+    "http://127.0.0.1:8765/api/v1/papers/14f81ab6-53f1-4b7e-a6c0-7cb496085e32/reading-state",
+    "http://127.0.0.1:8765/api/v1/annotations?paper_id=14f81ab6-53f1-4b7e-a6c0-7cb496085e32&limit=200&offset=0",
+    "http://127.0.0.1:8765/api/v1/papers/14f81ab6-53f1-4b7e-a6c0-7cb496085e32/pdf",
+    "http://127.0.0.1:8765/api/v1/papers/14f81ab6-53f1-4b7e-a6c0-7cb496085e32/reading-state",
+    "http://127.0.0.1:8765/api/v1/annotations?paper_id=14f81ab6-53f1-4b7e-a6c0-7cb496085e32&limit=200&offset=200",
+    "http://127.0.0.1:1420/assets/pdf.worker.min-CjEcRF4W.mjs",
+    "http://127.0.0.1:8765/api/v1/papers/14f81ab6-53f1-4b7e-a6c0-7cb496085e32",
+    "http://127.0.0.1:8765/api/v1/annotations?paper_id=14f81ab6-53f1-4b7e-a6c0-7cb496085e32&limit=200&offset=0",
+    "http://127.0.0.1:8765/api/v1/library",
+    "http://127.0.0.1:8765/api/v1/folders",
+    "http://127.0.0.1:8765/api/v1/annotations?paper_id=14f81ab6-53f1-4b7e-a6c0-7cb496085e32&limit=200&offset=200",
+    "http://127.0.0.1:8765/api/v1/annotations?paper_id=14f81ab6-53f1-4b7e-a6c0-7cb496085e32&limit=200&offset=400",
+    "http://127.0.0.1:8765/api/v1/annotations?paper_id=14f81ab6-53f1-4b7e-a6c0-7cb496085e32&limit=200&offset=600",
+    "http://127.0.0.1:8765/api/v1/annotations?paper_id=14f81ab6-53f1-4b7e-a6c0-7cb496085e32&limit=200&offset=800",
+    "http://127.0.0.1:8765/api/v1/papers/14f81ab6-53f1-4b7e-a6c0-7cb496085e32/reading-state",
+    "http://127.0.0.1:8765/api/v1/papers/14f81ab6-53f1-4b7e-a6c0-7cb496085e32",
+    "http://127.0.0.1:8765/api/v1/papers/14f81ab6-53f1-4b7e-a6c0-7cb496085e32/reading-state"
+  ],
+  "creation": {
+    "milliseconds": 11719.637299999999,
+    "mean_body_characters": 631,
+    "highlights": 800,
+    "notes": 200,
+    "total_locations": 3000
+  },
+  "annotation_get_requests": 21,
+  "backend_shutdown": {
+    "code": 0,
+    "signal": null
+  },
+  "finished_at": "2026-10-09T10:38:10.866Z",
+  "predeclared_latency_gates_passed": true,
+  "scaling_analysis": {
+    "baseline_main_thread_fraction": 0.0795872979100425,
+    "annotated_main_thread_fraction": 0.7084451431408241,
+    "main_thread_work_ratio": 8.901337757872893,
+    "interpretation": "Frame-rate gates passed on this machine, but sustained CPU work increased substantially. Main-thread work and memory require review before broad low-end claims."
+  },
+  "browser_harness_permission": "local-network-access granted only to the isolated test browser context at http://127.0.0.1:1420; disk-fulfilled documents have no address-space classification."
+}

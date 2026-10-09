@@ -1,0 +1,16 @@
+{
+  "goal": {
+    "goal": {
+      "threadId": "01a11e89-f77c-78a0-8419-02f1c22b1c73",
+      "objective": "再全面升级一个功能，交互和UI，运行时间不少于5h",
+      "status": "active",
+      "tokensUsed": 2922417,
+      "timeUsedSeconds": 19549,
+      "createdAt": 1791524296,
+      "updatedAt": 1791543845
+    },
+    "remainingTokens": null,
+    "completionBudgetReport": null
+  },
+  "current_time": "2026-10-09 11:04:21 UTC"
+}

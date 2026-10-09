@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([Parameter(Mandatory=$true)][string]$Installer, [switch]$SkipParse, [switch]$CaptureUi)
+param([Parameter(Mandatory=$true)][string]$Installer, [switch]$SkipParse, [switch]$CaptureUi, [string]$LegacyFixture)
 $ErrorActionPreference = 'Stop'
 $ProjectRoot = Split-Path -Parent $PSScriptRoot
 Set-Location -LiteralPath $ProjectRoot
@@ -41,6 +41,16 @@ foreach ($License in (Get-ChildItem -LiteralPath $LicenseRoot -Recurse -File)) {
     $InstalledLicense = Join-Path $InstallRoot ('licenses\third-party-licenses\' + $Relative)
     if (-not (Test-Path -LiteralPath $InstalledLicense) -or (Get-FileHash -LiteralPath $License.FullName -Algorithm SHA256).Hash -ne (Get-FileHash -LiteralPath $InstalledLicense -Algorithm SHA256).Hash) { throw "Installed license differs or is missing: $Relative" }
 }
+$BundleResources = (Get-Content -LiteralPath (Join-Path $ProjectRoot 'apps\desktop\src-tauri\tauri.bundle.conf.json') -Raw | ConvertFrom-Json).bundle.resources
+$DocumentProof = [ordered]@{}
+foreach ($Resource in $BundleResources.PSObject.Properties) {
+    if (-not $Resource.Name.StartsWith('../../../docs/') -or $Resource.Name.EndsWith('/')) { continue }
+    $SourceDocument = Join-Path $ProjectRoot $Resource.Name.Substring('../../../'.Length)
+    $InstalledDocument = Join-Path $InstallRoot $Resource.Value
+    $SourceHash = (Get-FileHash -LiteralPath $SourceDocument -Algorithm SHA256).Hash
+    if (-not (Test-Path -LiteralPath $InstalledDocument) -or $SourceHash -ne (Get-FileHash -LiteralPath $InstalledDocument -Algorithm SHA256).Hash) { throw "Installed document differs or is missing: $($Resource.Value)" }
+    $DocumentProof[$Resource.Value] = $SourceHash
+}
 $Python = Join-Path $ProjectRoot '.venv\Scripts\python.exe'
 & (Join-Path $PSScriptRoot 'bootstrap-webdriver.ps1')
 $SmokeArguments = @('scripts\package-desktop-smoke.py', '--app', $Application, '--driver', '.tools\edgedriver\msedgedriver.exe', '--output', 'artifacts\installed-desktop')
@@ -50,6 +60,14 @@ if ($CaptureUi) { $SmokeArguments += '--capture-ui' }
 if (-not $SkipParse) { $SmokeArguments += @('--models', '.cache\models', '--pdf', 'tests\fixtures\academic.pdf', '--expect-figures', '1', '--expect-tables', '1') }
 & $Python @SmokeArguments
 if ($LASTEXITCODE -ne 0) { throw 'The installed desktop smoke test failed.' }
+if ($LegacyFixture) {
+    $Html = Get-Content -LiteralPath (Join-Path $ProjectRoot 'apps\desktop\dist\index.html') -Raw
+    $Entry = [regex]::Match($Html, '<script[^>]+src="([^"]+)"')
+    if (-not $Entry.Success) { throw 'Cannot determine the built frontend entry.' }
+    $FrontendEntry = [IO.Path]::GetFileName($Entry.Groups[1].Value)
+    & $Python scripts\package-reading-smoke.py --app $Application --prepared-fixture $LegacyFixture --expect-version $DesktopVersion --expect-frontend $FrontendEntry --output artifacts\installed-reading
+    if ($LASTEXITCODE -ne 0) { throw 'The installed reading/notes/migration smoke test failed.' }
+}
 $InstallProof = [ordered]@{
     version = $DesktopVersion
     install_root = $InstallRoot
@@ -59,6 +77,7 @@ $InstallProof = [ordered]@{
     installer_sha256 = (Get-FileHash -LiteralPath $InstallerPath -Algorithm SHA256).Hash
     license_files_verified = @(Get-ChildItem -LiteralPath $LicenseRoot -Recurse -File).Count
     source_archives_verified = @(Get-ChildItem -LiteralPath $SourceArchiveRoot -Recurse -File).Count
+    bundled_documents_verified = $DocumentProof
     verified_at = [DateTime]::UtcNow.ToString('o')
 }
 $InstallProof | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath (Join-Path $ProjectRoot 'artifacts\install-layout.json') -Encoding utf8

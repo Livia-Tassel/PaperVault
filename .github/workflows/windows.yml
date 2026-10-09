@@ -4,10 +4,15 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   windows:
     runs-on: windows-2022
     timeout-minutes: 90
+    env:
+      PYTHONUTF8: '1'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -25,16 +30,23 @@ jobs:
       - name: Backend checks
         shell: pwsh
         run: |
-          ./.venv/Scripts/python.exe -m pytest -m "not real_parser"
+          ./.venv/Scripts/python.exe -m ruff check backend tests scripts
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          ./.venv/Scripts/python.exe -m pytest -m "not real_parser" --junitxml=artifacts/backend-tests.xml
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Frontend checks
         working-directory: apps/desktop
         run: |
           npm run typecheck
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           npm test -- --run
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Build installer and smoke test frozen backend
         shell: pwsh
-        run: ./scripts/package-windows.ps1 -OnlineWebViewInstaller
+        run: |
+          ./scripts/build-backend.ps1 -SkipInstall
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          ./scripts/package-windows.ps1 -SkipBackend -OnlineWebViewInstaller
       - uses: actions/cache@v4
         with:
           path: .cache/models
@@ -47,21 +59,57 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           ./.venv/Scripts/python.exe scripts/acceptance.py --backend build/backend-dist/papervault-backend/papervault-backend.exe --models .cache/models
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-      - name: Install NSIS and verify the installed application
+      - name: Verify notes and reading state survive real frozen reparse and restore
         shell: pwsh
         run: |
-          $Installer = Get-ChildItem apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis/*.exe | Select-Object -First 1
-          ./scripts/package-install-smoke.ps1 -Installer $Installer.FullName
+          ./.venv/Scripts/python.exe scripts/reading-acceptance.py --backend build/backend-dist/papervault-backend/papervault-backend.exe --models .cache/models --report artifacts/reading-reparse-frozen.json
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Install NSIS and verify PDF, notes, migration and library isolation
+        shell: pwsh
+        run: |
+          $Version = (Get-Content apps/desktop/package.json -Raw | ConvertFrom-Json).version
+          $Installer = "apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis/PaperVault_${Version}_x64-setup.exe"
+          # The committed fixture is a genuine 0001 library created by the old
+          # frozen backend; migration does not depend on a prior CI installation.
+          ./scripts/package-install-smoke.ps1 -Installer $Installer -CaptureUi -LegacyFixture tests/fixtures/legacy-library-0001.json
       - name: Test the actual desktop WebView2 application
         shell: pwsh
         run: |
-          ./.venv/Scripts/python.exe scripts/package-desktop-smoke.py --app apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/papervault.exe --driver .tools/edgedriver/msedgedriver.exe --models .cache/models --pdf tests/fixtures/academic.pdf --expect-figures 1 --expect-tables 1
+          $Version = (Get-Content apps/desktop/package.json -Raw | ConvertFrom-Json).version
+          ./.venv/Scripts/python.exe scripts/package-desktop-smoke.py --app apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/papervault.exe --driver .tools/edgedriver/msedgedriver.exe --models .cache/models --pdf tests/fixtures/academic.pdf --expect-figures 1 --expect-tables 1 --expect-version $Version
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Record populated reading libraries before uninstall
+        shell: pwsh
+        run: |
+          $Report = Get-Content artifacts/installed-reading/report.json -Raw | ConvertFrom-Json
+          if (-not $Report.passed) { throw 'Installed reading acceptance is required before retention checks.' }
+          $Fixture = [IO.Path]::GetFullPath($Report.fixture)
+          $TestRoot = [IO.Path]::GetFullPath((Join-Path $PWD '.test-data')) + [IO.Path]::DirectorySeparatorChar
+          if (-not $Fixture.StartsWith($TestRoot, [StringComparison]::OrdinalIgnoreCase)) { throw 'Unexpected reading fixture path.' }
+          $Before = [ordered]@{}
+          foreach ($Library in @('原始论文库', '备份副本')) {
+            foreach ($File in (Get-ChildItem -LiteralPath (Join-Path $Fixture $Library) -Recurse -File)) {
+              $Before[$File.FullName] = (Get-FileHash -LiteralPath $File.FullName -Algorithm SHA256).Hash
+            }
+          }
+          if ($Before.Count -lt 6) { throw 'The populated reading libraries were not found.' }
+          $Before | ConvertTo-Json -Depth 4 | Set-Content artifacts/reading-uninstall-before.json -Encoding utf8
       - name: Verify uninstall retention and reinstall
         shell: pwsh
         run: |
-          $Installer = Get-ChildItem apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis/*.exe | Select-Object -First 1
-          ./scripts/package-uninstall-smoke.ps1 -Installer $Installer.FullName
+          $Version = (Get-Content apps/desktop/package.json -Raw | ConvertFrom-Json).version
+          $Installer = "apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis/PaperVault_${Version}_x64-setup.exe"
+          ./scripts/package-uninstall-smoke.ps1 -Installer $Installer
+          $Before = Get-Content artifacts/reading-uninstall-before.json -Raw | ConvertFrom-Json -AsHashtable
+          foreach ($File in $Before.Keys) {
+            if (-not (Test-Path -LiteralPath $File) -or (Get-FileHash -LiteralPath $File -Algorithm SHA256).Hash -ne $Before[$File]) { throw "Reading data changed during uninstall/reinstall: $File" }
+          }
+          [ordered]@{ passed = $true; version = $Version; files_verified = $Before.Count; phase = 'after_uninstall_and_reinstall'; scope = 'Byte hashes of both populated reading/note libraries, including their databases and original PDFs' } | ConvertTo-Json | Set-Content artifacts/reading-uninstall-retention.json -Encoding utf8
+          $Entry = [regex]::Match((Get-Content apps/desktop/dist/index.html -Raw), '<script[^>]+src="([^"]+)"')
+          if (-not $Entry.Success) { throw 'Cannot determine the built frontend entry.' }
+          $FrontendEntry = [IO.Path]::GetFileName($Entry.Groups[1].Value)
+          ./.venv/Scripts/python.exe scripts/package-reading-smoke.py --app .test-data/installed/PaperVault/papervault.exe --prepared-fixture tests/fixtures/legacy-library-0001.json --expect-version $Version --expect-frontend $FrontendEntry --output artifacts/installed-reading-after-reinstall
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - uses: actions/upload-artifact@v4
         with:
           name: PaperVault-Windows-x64
@@ -74,5 +122,12 @@ jobs:
           path: |
             artifacts/desktop-smoke/
             artifacts/installed-desktop/
+            artifacts/installed-reading/
+            artifacts/installed-reading-after-reinstall/
+            artifacts/install-layout.json
             artifacts/acceptance-frozen.json
+            artifacts/reading-reparse-frozen.json
+            artifacts/backend-tests.xml
             artifacts/uninstall-retention.json
+            artifacts/reading-uninstall-before.json
+            artifacts/reading-uninstall-retention.json
