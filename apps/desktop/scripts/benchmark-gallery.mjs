@@ -38,11 +38,12 @@ try {
     const visible = images.filter(image => { const r = image.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight && r.right > 224 && r.left < innerWidth; });
     return visible.length > 0 && visible.every(image => image.complete && image.naturalWidth > 0);
   });
-  const firstScreen = await page.evaluate(start => {
+  const firstScreen = await page.evaluate(async start => {
     const imgs = [...document.querySelectorAll('.resource-card-image img')];
     const visible = imgs.filter(img => { const r = img.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight && r.right > 224 && r.left < innerWidth; });
+    const decoded = await Promise.all(visible.map(img => img.decode().then(() => true, () => false)));
     return { ready_ms: performance.now() - start, visible_images: visible.length,
-      visible_images_decoded: visible.filter(img => img.complete && img.naturalWidth > 0).length,
+      visible_images_decoded: decoded.filter(Boolean).length,
       page_dom_images: imgs.length, page_dom_cards: document.querySelectorAll('.resource-card').length };
   }, galleryStart);
   const scrollPasses = [];
@@ -84,10 +85,14 @@ try {
         };
         requestAnimationFrame(tick);
       });
-      return { pass, duration_ms: performance.now() - start, max_scroll_px: maxScroll,
-        intervals, max_dom_images: maxDomImages, unique_visible_images_decoded: decodedIds.size,
+      const elapsed = performance.now() - start;
+      const finalImages = [...document.querySelectorAll('.resource-card-image img')];
+      const decodeResults = await Promise.all(finalImages.map(img => img.decode().then(() => true, () => false)));
+      return { pass, duration_ms: elapsed, max_scroll_px: maxScroll,
+        intervals, max_dom_images: maxDomImages, unique_visible_images_loaded: decodedIds.size,
+        page_image_decode_checks: decodeResults.length, page_image_decode_successes: decodeResults.filter(Boolean).length,
         visible_image_checks: frameChecks.reduce((n, f) => n + f.visible, 0),
-        visible_image_decode_successes: frameChecks.reduce((n, f) => n + f.decoded, 0),
+        visible_image_ready_checks: frameChecks.reduce((n, f) => n + f.decoded, 0),
         visible_image_not_ready_checks: visibleFailures };
     }, { duration: 6000, pass: pass + 1 });
     scrollPasses.push(result);
@@ -113,10 +118,11 @@ try {
     method: { frontend, runtime: 'Vite development server, actual React application', backend: api,
       api_routing: 'Browser test redirects default API port 8765 to isolated 8766; all responses and images come from the real backend, no mocks',
       first_screen: 'New browser context; navigation click to 24 cards and all currently visible images loaded and decoded',
+      image_decode_verification: 'HTMLImageElement.decode() must resolve for first-screen images and all 24 page images after each pass; per-frame readiness uses complete and naturalWidth',
       scroll: 'Three six-second requestAnimationFrame passes down and back up the real gallery scroll container; rAF intervals measured in page context',
       limitation: '1000 library records, 24 resources per real pagination page; this does not measure 1000 simultaneous images, physical input latency, desktop install startup, parser accuracy or uncached diverse-image decoding' },
     application_ready_ms: round(appReadyMs), first_screen: { ...firstScreen, ready_ms: round(firstScreen.ready_ms) },
-    next_page_visible_decoded_ms: round(paginationMs), scroll_frame_intervals: summarize(frameIntervals),
+    next_page_visible_loaded_ms: round(paginationMs), scroll_frame_intervals: summarize(frameIntervals),
     scroll_passes: scrollPasses.map(({ intervals, ...pass }) => ({ ...pass, duration_ms: round(pass.duration_ms), frame_intervals: summarize(intervals) })),
     javascript_errors: errors, failed_http_responses: failedResponses,
   };

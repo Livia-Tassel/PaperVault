@@ -57,7 +57,7 @@ def main():
             library._reindex(con, paper["id"])
         png = root / seed["files"]["png"]
         thumbnail = root / seed["files"]["thumbnail"]
-        report = {"synthetic_metadata": True, "description": "1000 metadata rows share one real PDFium crop and thumbnail; not parser accuracy evidence",
+        report = {"synthetic_metadata": True, "description": f"{args.count} metadata rows share one real PDFium crop and thumbnail; not parser accuracy evidence",
                   "library": str(root), "papers": 1, "figures": args.count,
                   "source_pdf": str(source.relative_to(ROOT)), "source_pdf_sha256": sha256(source),
                   "source_location": location, "png_sha256": sha256(png), "thumbnail_sha256": sha256(thumbnail),

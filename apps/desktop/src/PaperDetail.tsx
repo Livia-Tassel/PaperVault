@@ -1,20 +1,23 @@
-import { useRef, useState } from 'react';
-import { ArrowLeft, Download, FileText, RefreshCw, Save, Star } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+import { ArrowLeft, Download, FileText, Plus, RefreshCw, Save, Star, Trash2 } from 'lucide-react';
 import { exportAssets, updatePaper, post } from './api';
 import { changedFields } from './edits';
 import { useData } from './hooks';
 import { PdfViewer } from './PdfViewer';
-import { AssetImage, Empty, ErrorMessage, Field, Spinner, Status, Warnings, filename, splitTags } from './ui';
+import { AssetImage, Empty, ErrorMessage, Field, Pager, Spinner, Status, Warnings, filename, splitTags } from './ui';
 import type { Run } from './ResourceDetail';
 import type { Folder, Location, Paged, Paper, Resource } from './types';
 
 export function PaperDetail({ id, revision, location, cropMode, onCropMode, onCrop, onBack, onResource, onLocation, onRelated, run, onChanged }: { id: string; revision: number; location?: Location | null; cropMode: boolean; onCropMode: (v: boolean) => void; onCrop: (l: Location) => void; onBack: () => void; onResource: (id: string) => void; onLocation: (l: Location) => void; onRelated: (id: string) => void; run: Run; onChanged: () => void }) {
   const { data: paper, error } = useData<Paper>(`/papers/${id}`, revision, 5000);
   const [tab, setTab] = useState('info');
-  const { data: resources } = useData<Paged<Resource>>(`/resources?paper_id=${id}&limit=200`, revision, 5000);
+  const [resourceOffset, setResourceOffset] = useState(0);
+  const resourceKind = tab === 'figures' ? 'figure' : tab === 'tables' ? 'table' : null;
+  const { data: resources, loading: resourceLoading, error: resourceError } = useData<Paged<Resource>>(resourceKind ? `/resources?paper_id=${id}&kind=${resourceKind}&limit=24&offset=${resourceOffset}` : null, revision, 5000);
+  useEffect(() => { setResourceOffset(0); setTab('info'); }, [id]);
   return <div className="paper-workspace"><header className="detail-topbar"><button className="icon-button" onClick={onBack} aria-label="返回论文库"><ArrowLeft size={19} /></button><div><span className="eyebrow">论文工作区</span><h2>{paper?.title || paper?.filename || '正在打开论文…'}</h2></div><span className="toolbar-spacer" />{paper && <><Status value={paper.status} /><button className={`icon-button ${paper.favorite ? 'favorited' : ''}`} aria-label="切换收藏" onClick={() => void run(() => updatePaper(id, { favorite: !paper.favorite })).then(ok => { if (ok) onChanged(); })}><Star size={18} fill={paper.favorite ? 'currentColor' : 'none'} /></button><button className="button secondary small" onClick={() => void run(() => exportAssets({ paper_ids: [id], resource_ids: [], format: 'zip', dpi: 300 }, `${filename(paper.title || paper.filename, 'paper')}.zip`), '论文资源已导出')}><Download size={15} />导出</button></>}</header>
-    <ErrorMessage message={error} /><div className="detail-split"><PdfViewer paperId={id} location={location} cropMode={cropMode} onCropMode={onCropMode} onCrop={onCrop} /><aside className="paper-side"><div className="detail-tabs">{[['info', '论文信息'], ['figures', `图片 ${paper?.figure_count || 0}`], ['tables', `表格 ${paper?.table_count || 0}`], ['outline', '目录']].map(([key, label]) => <button key={key} className={tab === key ? 'active' : ''} onClick={() => setTab(key)}>{label}</button>)}</div><div className="paper-side-content">
-      {!paper && !error && <Spinner />}{paper && <>{tab === 'info' && <PaperInfo key={`${id}-${revision}`} paper={paper} onRelated={onRelated} run={run} onChanged={onChanged} />}{(tab === 'figures' || tab === 'tables') && <div className="detail-resources">{resources?.items.filter(r => r.kind === (tab === 'figures' ? 'figure' : 'table')).map(r => <button className="detail-resource" key={r.id} onClick={() => onResource(r.id)}><div className="detail-resource-thumb"><AssetImage id={r.id} thumbnail revision={revision} alt={r.name} /></div><strong>{r.name || r.number || (r.kind === 'figure' ? 'Figure' : 'Table')}</strong><p>{r.caption || '未识别到 Caption'}</p><span className="muted">{r.locations?.[0] ? `第 ${r.locations[0].page_index + 1} 页` : '位置未知'}</span></button>)}{!resources?.items.some(r => r.kind === (tab === 'figures' ? 'figure' : 'table')) && <Empty title="尚无资源">解析完成后显示提取结果，也可在 PDF 上手工框选图片。</Empty>}</div>}{tab === 'outline' && <div className="outline"><h3>章节结构</h3>{paper.sections?.map((section, i) => <button key={i} style={{ paddingLeft: 12 + Math.min(section.level || 0, 4) * 10 }} onClick={() => onLocation(section.location || { page_index: section.page_index || 0 })}><FileText size={14} /><span>{section.title || section.text || `章节 ${i + 1}`}</span></button>)}{!paper.sections?.length && <p className="muted">未识别到章节目录。</p>}<h3>参考文献</h3>{paper.references?.map((reference, i) => <p className="reference" key={i}><span>{i + 1}.</span>{typeof reference === 'string' ? reference : reference.text}</p>)}</div>}</>}
+    <ErrorMessage message={error} /><div className="detail-split"><PdfViewer paperId={id} location={location} cropMode={cropMode} onCropMode={onCropMode} onCrop={onCrop} /><aside className="paper-side"><div className="detail-tabs">{[['info', '论文信息'], ['figures', `图片 ${paper?.figure_count || 0}`], ['tables', `表格 ${paper?.table_count || 0}`], ['outline', '目录']].map(([key, label]) => <button key={key} className={tab === key ? 'active' : ''} onClick={() => { setTab(key); setResourceOffset(0); }}>{label}</button>)}</div><div className="paper-side-content">
+      {!paper && !error && <Spinner />}{paper && <>{tab === 'info' && <PaperInfo key={`${id}-${revision}`} paper={paper} onRelated={onRelated} run={run} onChanged={onChanged} />}{(tab === 'figures' || tab === 'tables') && <div className="detail-resources"><ErrorMessage message={resourceError} />{resourceLoading && <Spinner />}<div className="muted">共 {resources?.total ?? 0} 项资源，每页 24 项</div>{resources?.items.filter(r => r.kind === (tab === 'figures' ? 'figure' : 'table')).map(r => <button className="detail-resource" key={r.id} onClick={() => onResource(r.id)}><div className="detail-resource-thumb"><AssetImage id={r.id} thumbnail revision={revision} alt={r.name} /></div><strong>{r.name || r.number || (r.kind === 'figure' ? 'Figure' : 'Table')}</strong><p>{r.caption || '未识别到 Caption'}</p><span className="muted">{r.locations?.[0] ? `第 ${r.locations[0].page_index + 1} 页` : '位置未知'}</span></button>)}{!resourceLoading && !resourceError && !resources?.items.some(r => r.kind === (tab === 'figures' ? 'figure' : 'table')) && <Empty title="尚无资源">解析完成后显示提取结果，也可在 PDF 上手工框选图片。</Empty>}<Pager total={resources?.total || 0} offset={resourceOffset} limit={24} onChange={setResourceOffset} /></div>}{tab === 'outline' && <OutlinePanel key={`${id}-${revision}`} paper={paper} onLocation={onLocation} run={run} onChanged={onChanged} />}</>}
     </div></aside></div>
   </div>;
 }
@@ -29,3 +32,60 @@ function PaperInfo({ paper: p, onRelated, run, onChanged }: { paper: Paper; onRe
 }
 
 function SimilarPapers({ papers, onOpen }: { papers: Paper["similar_papers"]; onOpen: (id: string) => void }) { return papers?.length ? <div className="similar-papers"><strong>可能是同一论文的其他版本</strong>{papers.map(paper => <button key={paper.id} onClick={() => onOpen(paper.id)}>{paper.title || "未命名论文"}<small>{paper.reason}</small></button>)}</div> : null; }
+
+type Section = Paper['sections'][number];
+export function changeSectionPage(section: Section, pageIndex: number): Section {
+  if ((section.location?.page_index ?? section.page_index ?? 0) === pageIndex) return section;
+  // A box belongs to its original page. Moving a heading must not highlight an
+  // unrelated region on the newly selected page.
+  return { ...section, page_index: pageIndex, location: { ...section.location, page_index: pageIndex, bbox: null } };
+}
+export function outlineChanges(previousSections: Section[], nextSections: Section[], previousReferences: string[], referenceText: string) {
+  const references = referenceText === previousReferences.join('\n')
+    ? previousReferences
+    : referenceText.split(/\r?\n/).map(line => line.trim()).filter(Boolean);
+  return changedFields({ sections: previousSections, references: previousReferences }, { sections: nextSections, references });
+}
+function OutlinePanel({ paper, onLocation, run, onChanged }: { paper: Paper; onLocation: (location: Location) => void; run: Run; onChanged: () => void }) {
+  const [editing, setEditing] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [sections, setSections] = useState<Section[]>([]);
+  const [references, setReferences] = useState('');
+  const baseline = useRef<{ sections: Section[]; references: string[] }>({ sections: [], references: [] });
+  const pages = typeof paper.pages_count === 'number' ? paper.pages_count : undefined;
+  const begin = () => {
+    const currentSections = structuredClone(paper.sections || []);
+    const currentReferences = (paper.references || []).map(reference => typeof reference === 'string' ? reference : reference.text);
+    baseline.current = { sections: currentSections, references: currentReferences };
+    setSections(currentSections); setReferences(currentReferences.join('\n')); setEditing(true);
+  };
+  const modify = (index: number, update: (section: Section) => Section) => setSections(values => values.map((section, i) => i === index ? update(section) : section));
+  const save = async () => {
+    const updates = outlineChanges(baseline.current.sections, sections, baseline.current.references, references);
+    if (!Object.keys(updates).length) { setEditing(false); return; }
+    setSaving(true);
+    const ok = await run(() => updatePaper(paper.id, updates), '章节与参考文献已保存，重新解析会保留人工修正');
+    setSaving(false);
+    if (ok) { setEditing(false); onChanged(); }
+  };
+  if (editing) return <div className="paper-info">
+    <h3 style={{ fontSize: 14 }}>编辑目录与参考文献</h3>
+    <p className="help-text">修改标题或层级会保留原文定位。改变页码后，旧裁剪框将清除，改为定位到该页。</p>
+    {sections.map((section, index) => <fieldset key={index} style={{ border: '1px solid var(--line)', borderRadius: 7, padding: 12, marginBottom: 14 }}>
+      <legend style={{ fontSize: 11, color: 'var(--muted)', padding: '0 4px' }}>章节 {index + 1}</legend>
+      <Field label={`章节 ${index + 1} 标题`}><input value={section.title ?? section.text ?? ''} onChange={event => modify(index, value => ({ ...value, title: event.target.value }))} /></Field>
+      <div className="form-grid"><Field label={`章节 ${index + 1} 层级`}><input type="number" min={1} max={6} value={section.level || 1} onChange={event => modify(index, value => ({ ...value, level: Math.max(1, Math.min(6, Number(event.target.value) || 1)) }))} /></Field><Field label={`章节 ${index + 1} 页码`}><input type="number" min={1} max={pages} value={(section.location?.page_index ?? section.page_index ?? 0) + 1} onChange={event => modify(index, value => changeSectionPage(value, Math.max(1, Math.min(pages || Infinity, Number(event.target.value) || 1)) - 1))} /></Field></div>
+      <button className="button secondary small danger" aria-label={`删除章节 ${index + 1}`} onClick={() => setSections(values => values.filter((_, i) => i !== index))}><Trash2 size={13} />删除此章节</button>
+    </fieldset>)}
+    <button className="button secondary small" onClick={() => setSections(values => [...values, { title: '', level: 1, page_index: 0, location: { page_index: 0, bbox: null } }])}><Plus size={14} />添加章节</button>
+    <div className="info-divider" />
+    <Field label="参考文献（每行一条）"><textarea rows={10} value={references} onChange={event => setReferences(event.target.value)} placeholder="每行填写一条参考文献，留空可清除。" /></Field>
+    <div className="inline-form"><button className="button secondary" disabled={saving} onClick={() => setEditing(false)}>取消编辑</button><button className="button primary" disabled={saving} onClick={() => void save()}><Save size={14} />{saving ? '保存中…' : '保存目录与参考文献'}</button></div>
+  </div>;
+  return <div><button className="button secondary small" onClick={begin}>编辑目录与参考文献</button><div className="outline" style={{ marginTop: 22 }}>
+    <h3>章节结构</h3>{paper.sections?.map((section, index) => <button key={index} style={{ paddingLeft: 12 + Math.min(section.level || 0, 4) * 10 }} onClick={() => onLocation(section.location || { page_index: section.page_index || 0 })}><FileText size={14} /><span>{section.title || section.text || `章节 ${index + 1}`}</span></button>)}
+    {!paper.sections?.length && <p className="muted">未识别到章节目录，可手动添加。</p>}
+    <h3>参考文献</h3>{paper.references?.map((reference, index) => <p className="reference" key={index}><span>{index + 1}.</span>{typeof reference === 'string' ? reference : reference.text}</p>)}
+    {!paper.references?.length && <p className="muted">暂无参考文献，可在编辑中补充。</p>}
+  </div></div>;
+}

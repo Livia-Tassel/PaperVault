@@ -28,7 +28,8 @@ test('real local library import, PDF selection, caption search, export and reloa
   if (process.env.PAPERVAULT_E2E_REQUIRE_PARSE === '1' && ['failed', 'interrupted', 'cancelled'].includes(paper.status)) {
     await request.post(`${apiUrl}/papers/${paper.id}/reparse`, { headers });
   }
-  await expect(page.locator('.paper-item')).not.toHaveCount(0);
+  await page.getByLabel('搜索论文', { exact: true }).fill(paper.filename);
+  await expect(page.locator('.paper-item')).toHaveCount(1);
   await page.locator('.paper-primary').first().click();
   await expect(page.locator('.pdf-page canvas').first()).toBeVisible();
   await expect.poll(() => page.locator('.pdf-page canvas').first().evaluate((canvas: HTMLCanvasElement) => canvas.width)).toBeGreaterThan(0);
