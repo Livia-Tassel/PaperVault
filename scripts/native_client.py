@@ -31,8 +31,9 @@ def wait_until(check, message, timeout=25):
 class NativeClient:
     element_key = 'element-6066-11e4-a52e-4f735466cecf'
 
-    def __init__(self, app: Path, fixture: Path, library: Path, output: Path):
+    def __init__(self, app: Path, fixture: Path, library: Path, output: Path, models: Path | None = None):
         self.app, self.fixture, self.library, self.output = app.resolve(), fixture.resolve(), library.resolve(), output.resolve()
+        self.models = models.resolve() if models else self.fixture / 'no-models'
         assert self.fixture.is_relative_to(ROOT / '.test-data')
         self.output.mkdir(parents=True, exist_ok=True)
         self.session = None
@@ -47,7 +48,7 @@ class NativeClient:
             port = reserve.getsockname()[1]
         self.endpoint = f'http://127.0.0.1:{port}'
         environment = dict(os.environ, TAURI_WEBVIEW_AUTOMATION='true', PAPERVAULT_LIBRARY_PATH=str(self.library),
-                           PAPERVAULT_CONFIG_PATH=str(self.fixture / 'config'), PAPERVAULT_MODELS_PATH=str(self.fixture / 'no-models'))
+                           PAPERVAULT_CONFIG_PATH=str(self.fixture / 'config'), PAPERVAULT_MODELS_PATH=str(self.models))
         environment.pop('PYTHONPATH', None)
         environment.pop('VIRTUAL_ENV', None)
         self.log = (self.output / 'webdriver.log').open('a', encoding='utf-8')
@@ -63,6 +64,7 @@ class NativeClient:
             'browserName': 'webview2', 'ms:edgeOptions': {'binary': str(self.app),
                 'webviewOptions': {'userDataFolder': str(self.fixture / 'webview')}},
         }}})
+        self.capabilities = created.get('capabilities', {})
         self.session = created['sessionId']
         self.prefix = f'/session/{self.session}'
         self.request('POST', self.prefix + '/timeouts', {'script': 100000, 'implicit': 10000})

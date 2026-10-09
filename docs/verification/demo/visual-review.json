@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "reviewed_at_utc": "2026-10-09T15:56:25.209789+00:00",
+  "video_sha256": "7a1d27ad957e65f00349aeba54d87883740fb17cbb5dbaff2a651d3d6137f088",
+  "duration_seconds": 113.23333333333333,
+  "review_method": "Viewed the 12-frame contact sheet and five full-resolution final-video frames; verified actual UI changes and subtitle/action agreement.",
+  "checked_frames": [
+    {
+      "name": "parse_completed",
+      "seconds": 18.8
+    },
+    {
+      "name": "figure_G1_detail",
+      "seconds": 44.2
+    },
+    {
+      "name": "table_A1_source_page_13",
+      "seconds": 76.0
+    },
+    {
+      "name": "actual_CSV_export_success_notice",
+      "seconds": 70.3
+    },
+    {
+      "name": "Chinese_saved_note_search",
+      "seconds": 98.0
+    }
+  ],
+  "checks": {
+    "application_frames_change": true,
+    "Chinese_subtitles_readable": true,
+    "subtitles_do_not_cover_UI": true,
+    "real_PDF_visible": true,
+    "source_regions_visible": true,
+    "export_success_visible_and_file_verified": true,
+    "Chinese_search_matches_saved_note": true,
+    "real_parser_wait_cut_disclosed": true,
+    "native_save_dialog_omission_disclosed": true
+  },
+  "capture_frames": 609,
+  "capture_unique_hashes": 498,
+  "real_import_to_completion_seconds": 67.719,
+  "raw_parse_wait_removed_seconds": 61.875,
+  "source_pdf_sha256": "b6bb8b5d1356095a02aae8e5e41265fde03f8f02101972e338bad0b7715f12fc",
+  "actual_csv_export": {
+    "path": "D:\\project\\PaperVault\\.test-data\\demo\\20261009T154638Z\\导出\\SimCSE_Table_A.1.csv",
+    "bytes": 166,
+    "sha256": "9f093f28a7964d7b3d27b9080116dbe9ab4d3e0dfdb08046884e7128802651a4",
+    "actual_native_dialog": true
+  },
+  "rejected_candidate": "artifacts/demo/rejected-gdi/visual-review.json; not delivered"
+}

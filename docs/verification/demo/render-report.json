@@ -1,0 +1,372 @@
+{
+  "passed": true,
+  "created_at_utc": "2026-10-09T15:52:24.281482+00:00",
+  "title": "PaperVault 0.2.2 操作演示",
+  "timeline": "D:\\project\\PaperVault\\artifacts\\demo\\capture-20261009T154748Z\\timeline.json",
+  "timeline_sha256": "78c1c8a127c2ea418905464b9c3ba09e2072f2259f6ab5523903b69883809bcf",
+  "raw_video": "D:\\project\\PaperVault\\artifacts\\demo\\capture-20261009T154748Z\\capture.mp4",
+  "raw_sha256": "c9aad9cb5602a2a06fe0653faf029d83910b3d4229f68e11fafcf1088620bdd6",
+  "source": {
+    "width": 1920,
+    "height": 960,
+    "fps": 30.0,
+    "frames": 5253,
+    "duration": 175.1,
+    "codec_tag": "h264"
+  },
+  "output_directory": "D:\\project\\PaperVault\\artifacts\\demo\\final",
+  "ffmpeg": "D:\\project\\PaperVault\\.tools\\video-python\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+  "ffmpeg_sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+  "clips": [
+    {
+      "start": 0.0,
+      "end": 16.862,
+      "frames": 506,
+      "output_start": 0.0,
+      "output_end": 16.866666666666667
+    },
+    {
+      "start": 78.737,
+      "end": 175.1,
+      "frames": 2891,
+      "output_start": 16.866666666666667,
+      "output_end": 113.23333333333333
+    }
+  ],
+  "mapped_cues": [
+    {
+      "start": 1.018,
+      "end": 5.018,
+      "text": "PaperVault 0.2.2 · Windows 实际操作演示",
+      "source_cue": 0,
+      "source_clip": 0
+    },
+    {
+      "start": 5.018,
+      "end": 8.018,
+      "text": "从本机导入一篇真实论文",
+      "source_cue": 1,
+      "source_clip": 0
+    },
+    {
+      "start": 8.018,
+      "end": 11.018,
+      "text": "选择 SimCSE 原始 PDF",
+      "source_cue": 2,
+      "source_clip": 0
+    },
+    {
+      "start": 11.862,
+      "end": 16.862,
+      "text": "模型在本机处理 PDF，任务页显示实际阶段",
+      "source_cue": 3,
+      "source_clip": 0
+    },
+    {
+      "start": 16.866666666666674,
+      "end": 20.866666666666674,
+      "text": "本地解析完成；等待过程已剪辑",
+      "source_cue": 4,
+      "source_clip": 1
+    },
+    {
+      "start": 20.928666666666686,
+      "end": 23.928666666666686,
+      "text": "论文与提取结果保存在当前论文库",
+      "source_cue": 5,
+      "source_clip": 1
+    },
+    {
+      "start": 24.584666666666664,
+      "end": 29.584666666666664,
+      "text": "阅读原始 PDF，右侧查看论文信息",
+      "source_cue": 6,
+      "source_clip": 1
+    },
+    {
+      "start": 30.00666666666666,
+      "end": 35.00666666666666,
+      "text": "在 PDF 中查找 contrastive",
+      "source_cue": 7,
+      "source_clip": 1
+    },
+    {
+      "start": 35.00666666666666,
+      "end": 38.00666666666666,
+      "text": "跳转到下一处匹配",
+      "source_cue": 8,
+      "source_clip": 1
+    },
+    {
+      "start": 38.38166666666666,
+      "end": 41.38166666666666,
+      "text": "图片面板列出这篇论文的提取结果",
+      "source_cue": 9,
+      "source_clip": 1
+    },
+    {
+      "start": 41.69466666666668,
+      "end": 46.69466666666668,
+      "text": "Figure G.1：查看图片、图注和来源页码",
+      "source_cue": 10,
+      "source_clip": 1
+    },
+    {
+      "start": 46.69466666666668,
+      "end": 51.69466666666668,
+      "text": "查看原文：定位到第 17 页的图像区域",
+      "source_cue": 11,
+      "source_clip": 1
+    },
+    {
+      "start": 52.241666666666674,
+      "end": 57.241666666666674,
+      "text": "Table A.1：直接查看结构化表格",
+      "source_cue": 12,
+      "source_clip": 1
+    },
+    {
+      "start": 57.241666666666674,
+      "end": 61.241666666666674,
+      "text": "切换原始截图，对照表头和数值",
+      "source_cue": 13,
+      "source_clip": 1
+    },
+    {
+      "start": 61.241666666666674,
+      "end": 65.24166666666667,
+      "text": "返回表格内容，选择需要的导出格式",
+      "source_cue": 14,
+      "source_clip": 1
+    },
+    {
+      "start": 65.24166666666667,
+      "end": 70.24166666666667,
+      "text": "导出 CSV；系统保存对话框已略去",
+      "source_cue": 15,
+      "source_clip": 1
+    },
+    {
+      "start": 70.24166666666667,
+      "end": 74.24166666666667,
+      "text": "CSV 不保留合并单元格；可用原图核对",
+      "source_cue": 16,
+      "source_clip": 1
+    },
+    {
+      "start": 74.24166666666667,
+      "end": 78.24166666666667,
+      "text": "表格也能定位回第 13 页的原始区域",
+      "source_cue": 17,
+      "source_clip": 1
+    },
+    {
+      "start": 78.67866666666669,
+      "end": 81.67866666666669,
+      "text": "为当前页添加书签",
+      "source_cue": 18,
+      "source_clip": 1
+    },
+    {
+      "start": 82.75666666666669,
+      "end": 87.75666666666669,
+      "text": "添加阅读笔记，记录需要回看的内容",
+      "source_cue": 19,
+      "source_clip": 1
+    },
+    {
+      "start": 87.75666666666669,
+      "end": 90.75666666666669,
+      "text": "保存笔记",
+      "source_cue": 20,
+      "source_clip": 1
+    },
+    {
+      "start": 91.19466666666668,
+      "end": 96.19466666666668,
+      "text": "全文搜索覆盖论文、图表、正文和笔记",
+      "source_cue": 21,
+      "source_clip": 1
+    },
+    {
+      "start": 96.20966666666669,
+      "end": 100.20966666666669,
+      "text": "也可以用中文搜索刚保存的阅读记录",
+      "source_cue": 22,
+      "source_clip": 1
+    },
+    {
+      "start": 100.22566666666668,
+      "end": 104.22566666666668,
+      "text": "从搜索结果打开对应论文和笔记",
+      "source_cue": 23,
+      "source_clip": 1
+    },
+    {
+      "start": 104.22566666666668,
+      "end": 108.22566666666668,
+      "text": "本片使用真实 PDF 与实际解析结果",
+      "source_cue": 24,
+      "source_clip": 1
+    },
+    {
+      "start": 108.22566666666668,
+      "end": 113.22566666666668,
+      "text": "演示论文：Gao / Yao / Chen · SimCSE\nACL Anthology · EMNLP 2021 · CC BY 4.0",
+      "source_cue": 25,
+      "source_clip": 1
+    }
+  ],
+  "validation": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "frames": 3397,
+    "duration": 113.23333333333333,
+    "codec_tag": "h264",
+    "expected_frames": 3397,
+    "mp4_top_level_atoms": [
+      "ftyp",
+      "moov",
+      "free",
+      "mdat"
+    ],
+    "fast_start": true,
+    "samples": [
+      {
+        "frame": 0,
+        "seconds": 0.0,
+        "decoded": true,
+        "application_pixel_stddev": 22.503
+      },
+      {
+        "frame": 253,
+        "seconds": 8.433,
+        "decoded": true,
+        "application_pixel_stddev": 17.762
+      },
+      {
+        "frame": 431,
+        "seconds": 14.367,
+        "decoded": true,
+        "application_pixel_stddev": 17.372
+      },
+      {
+        "frame": 813,
+        "seconds": 27.1,
+        "decoded": true,
+        "application_pixel_stddev": 104.216
+      },
+      {
+        "frame": 1196,
+        "seconds": 39.867,
+        "decoded": true,
+        "application_pixel_stddev": 108.988
+      },
+      {
+        "frame": 1476,
+        "seconds": 49.2,
+        "decoded": true,
+        "application_pixel_stddev": 108.228
+      },
+      {
+        "frame": 1897,
+        "seconds": 63.233,
+        "decoded": true,
+        "application_pixel_stddev": 24.061
+      },
+      {
+        "frame": 2032,
+        "seconds": 67.733,
+        "decoded": true,
+        "application_pixel_stddev": 26.369
+      },
+      {
+        "frame": 2405,
+        "seconds": 80.167,
+        "decoded": true,
+        "application_pixel_stddev": 107.864
+      },
+      {
+        "frame": 2811,
+        "seconds": 93.7,
+        "decoded": true,
+        "application_pixel_stddev": 26.4
+      },
+      {
+        "frame": 3067,
+        "seconds": 102.233,
+        "decoded": true,
+        "application_pixel_stddev": 103.533
+      },
+      {
+        "frame": 3396,
+        "seconds": 113.2,
+        "decoded": true,
+        "application_pixel_stddev": 103.469
+      }
+    ],
+    "isolated_subtitle_padding": true,
+    "full_decode_passed": true,
+    "audio_tracks": 0,
+    "pixel_format": "yuv420p",
+    "codec": "h264"
+  },
+  "framing": {
+    "ui_area": [
+      0,
+      0,
+      1920,
+      960
+    ],
+    "subtitle_area": [
+      0,
+      960,
+      1920,
+      1080
+    ],
+    "font": "Microsoft YaHei",
+    "font_size": 36,
+    "max_lines": 2
+  },
+  "notes": [
+    "Clip durations quantized to the nearest 30 fps frame; boundary frames may repeat by at most one frame.",
+    "Automated decoding and sampled pixels are verified; visual review of the contact sheet is still required."
+  ],
+  "artifacts": {
+    "PaperVault-demo-zh.mp4": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo\\final\\PaperVault-demo-zh.mp4",
+      "bytes": 3641470,
+      "sha256": "7a1d27ad957e65f00349aeba54d87883740fb17cbb5dbaff2a651d3d6137f088"
+    },
+    "PaperVault-demo-zh.srt": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo\\final\\PaperVault-demo-zh.srt",
+      "bytes": 2002,
+      "sha256": "e4896d64922eacc86b8a4c8b0e5e4c351b2b77ca94e8f994881441bcf6a8f268"
+    },
+    "PaperVault-demo-zh.ass": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo\\final\\PaperVault-demo-zh.ass",
+      "bytes": 3031,
+      "sha256": "bfa56b6798e4791ffb2b169fd8d5484cdca69b2f0f9c689bd78528291759cd40"
+    },
+    "poster.jpg": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo\\final\\poster.jpg",
+      "bytes": 271035,
+      "sha256": "494b37f465462bbf33be62d14b33e5fb793ce908286165179c895ad76d0c1f83"
+    },
+    "contact-sheet.jpg": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo\\final\\contact-sheet.jpg",
+      "bytes": 526250,
+      "sha256": "5fb07ec08566e1d0da92223b908af0525694ee4882073012de4821d1d9c6dbad"
+    },
+    "render.log": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo\\final\\render.log",
+      "bytes": 12034,
+      "sha256": "41f55e7c86037cdf71a93c7c9d93d4df4cdeac15faa86fbdb398188938f4efc6"
+    }
+  },
+  "poster_selection": {
+    "seconds": 44.2,
+    "reason": "Actual Figure G.1 detail with Chinese subtitle; manually selected from the final video."
+  }
+}
