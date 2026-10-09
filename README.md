@@ -12,7 +12,7 @@ PaperVault 0.2.2 包含阅读工作台：多论文标签页、阅读位置恢复
 
 安装器未签名；干净Windows VM尚未验证。复杂PDF识别限制及再次出现且根因未定位的原生诊断均如实记录在 [TEST_REPORT.md](TEST_REPORT.md)，开发记录见 [PROGRESS.md](PROGRESS.md)。
 
-[带中文字幕的实机演示](artifacts/demo/final/PaperVault-demo-zh.mp4)（1分53秒，1080p）；[字幕、素材来源与复现说明](docs/DEMO.md)。
+[多论文库与联合搜索演示](artifacts/demo-library/final/PaperVault-library-demo-zh.mp4)（2分17秒，黑底打字机片头、1080p中文字幕）；另有[单篇导入流程](artifacts/demo/final/PaperVault-demo-zh.mp4)。[字幕、素材来源与复现说明](docs/DEMO.md)。
 
 ## 开发运行（Windows）
 

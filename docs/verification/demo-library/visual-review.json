@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "reviewed_at_utc": "2026-10-09T16:41:35.107205+00:00",
+  "video_sha256": "618465fa20b561ba0940bbce62557121774d019dc8d643d75ebef0df1a53aa84",
+  "duration_seconds": 137.43333333333334,
+  "video_bytes": 5165413,
+  "intro_seconds": 13.2,
+  "first_sentence_fully_visible_seconds": 1.8,
+  "silent": true,
+  "manual_visual_checks": [
+    "Viewed actual intro partial/full text and cursor progression on pure black.",
+    "Viewed final black-to-UI transition; actual 8-paper library visible.",
+    "Viewed multiple distinct titles in BERT search results.",
+    "Viewed actual MacBERT Table 3 original region on page 5 and BART text on page 2.",
+    "Viewed cross-paper BERT image gallery and GLUE table results from two papers.",
+    "Chinese subtitles remain below application content; no second subtitle burn after joining."
+  ],
+  "source_pdf_count": 8,
+  "source_pages": 99,
+  "library_resources": {
+    "figures": 26,
+    "tables": 76
+  },
+  "query_group_distinct_papers": {
+    "papers": 5,
+    "figures": 3,
+    "tables": 5,
+    "content": 8,
+    "notes": 0
+  },
+  "query_group_limit": 25,
+  "selected_sources": {
+    "table": {
+      "paper_id": "690cc2c4-533d-4a40-b29d-86f198c34ec8",
+      "title": "Revisiting Pre-Trained Models for Chinese Natural Language Processing",
+      "page": 5
+    },
+    "content": {
+      "paper_id": "40115632-1f36-49a3-bebd-1bff1b97b908",
+      "title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension",
+      "page": 2
+    }
+  },
+  "sources_file_sha256": "0cdac36c2597588840227716405ca64ff942c2fe05b9f2653edb82231b464ad0",
+  "preparation_sha256": "431bc0b24f3a84c7420ba9aa90e656aa2f9b5beb6646bda703b46f47a053ef88",
+  "capture_timeline_sha256": "8bdfc94bd503a4fcac1a7d500a2cde6ca0107aeafd2418496f2d490ab1ca2ae0"
+}

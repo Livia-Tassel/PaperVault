@@ -1,0 +1,354 @@
+{
+  "passed": true,
+  "created_at_utc": "2026-10-09T16:36:03.591899+00:00",
+  "title": "PaperVault 多论文资料库与联合搜索",
+  "timeline": "D:\\project\\PaperVault\\artifacts\\demo-library\\capture-20261009T163147Z\\timeline.json",
+  "timeline_sha256": "8bdfc94bd503a4fcac1a7d500a2cde6ca0107aeafd2418496f2d490ab1ca2ae0",
+  "raw_video": "D:\\project\\PaperVault\\artifacts\\demo-library\\capture-20261009T163147Z\\capture.mp4",
+  "raw_sha256": "541cdc97b2ce72b6ec078f50a2dcdf9e838ff3b03270135a1f405acba4eb2870",
+  "source": {
+    "width": 1920,
+    "height": 960,
+    "fps": 30.0,
+    "frames": 3728,
+    "duration": 124.26666666666667,
+    "codec_tag": "h264"
+  },
+  "output_directory": "D:\\project\\PaperVault\\artifacts\\demo-library\\main",
+  "ffmpeg": "D:\\project\\PaperVault\\.tools\\video-python\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+  "ffmpeg_sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+  "clips": [
+    {
+      "start": 0.0,
+      "end": 124.242,
+      "frames": 3727,
+      "output_start": 0.0,
+      "output_end": 124.23333333333333
+    }
+  ],
+  "mapped_cues": [
+    {
+      "start": 0.008,
+      "end": 5.008,
+      "text": "8 篇真实论文，组成同一个本地论文库",
+      "source_cue": 0,
+      "source_clip": 0
+    },
+    {
+      "start": 5.024,
+      "end": 9.024000000000001,
+      "text": "这些论文已提前完成真实的本地解析",
+      "source_cue": 1,
+      "source_clip": 0
+    },
+    {
+      "start": 9.024,
+      "end": 14.024,
+      "text": "切换卡片视图，浏览标题和摘要",
+      "source_cue": 2,
+      "source_clip": 0
+    },
+    {
+      "start": 14.024,
+      "end": 19.024,
+      "text": "BERT、BART、SciBERT、SimCSE 等论文集中管理",
+      "source_cue": 3,
+      "source_clip": 0
+    },
+    {
+      "start": 19.32,
+      "end": 24.32,
+      "text": "选择三篇论文，一次添加同一个标签",
+      "source_cue": 4,
+      "source_clip": 0
+    },
+    {
+      "start": 24.695,
+      "end": 28.695,
+      "text": "用标签整理一组预训练相关论文",
+      "source_cue": 5,
+      "source_clip": 0
+    },
+    {
+      "start": 29.289,
+      "end": 34.289,
+      "text": "按标签筛选，快速缩小阅读范围",
+      "source_cue": 6,
+      "source_clip": 0
+    },
+    {
+      "start": 34.961,
+      "end": 39.961,
+      "text": "输入 BERT，在整个论文库中联合检索",
+      "source_cue": 7,
+      "source_clip": 0
+    },
+    {
+      "start": 39.977,
+      "end": 44.977,
+      "text": "论文类结果同时命中多篇论文",
+      "source_cue": 8,
+      "source_clip": 0
+    },
+    {
+      "start": 44.977,
+      "end": 48.977,
+      "text": "同一关键词，无需逐篇打开查找",
+      "source_cue": 9,
+      "source_clip": 0
+    },
+    {
+      "start": 48.977,
+      "end": 53.977,
+      "text": "切到表格类结果，寻找相关实验数据",
+      "source_cue": 10,
+      "source_clip": 0
+    },
+    {
+      "start": 53.992,
+      "end": 58.992,
+      "text": "打开一条命中，确认表格内容与所属论文",
+      "source_cue": 11,
+      "source_clip": 0
+    },
+    {
+      "start": 59.008,
+      "end": 64.50800000000001,
+      "text": "查看原文，直接定位到这篇论文的表格区域",
+      "source_cue": 12,
+      "source_clip": 0
+    },
+    {
+      "start": 65.633,
+      "end": 70.633,
+      "text": "保持同一关键词，再查看正文类命中",
+      "source_cue": 13,
+      "source_clip": 0
+    },
+    {
+      "start": 70.633,
+      "end": 76.133,
+      "text": "这条正文结果来自另一篇论文",
+      "source_cue": 14,
+      "source_clip": 0
+    },
+    {
+      "start": 76.742,
+      "end": 81.742,
+      "text": "两篇论文保留在阅读标签页中，随时切换对照",
+      "source_cue": 15,
+      "source_clip": 0
+    },
+    {
+      "start": 81.742,
+      "end": 86.742,
+      "text": "切回另一篇论文，继续刚才的阅读位置",
+      "source_cue": 16,
+      "source_clip": 0
+    },
+    {
+      "start": 86.742,
+      "end": 91.742,
+      "text": "全库图片集中浏览，每张图保留论文来源",
+      "source_cue": 17,
+      "source_clip": 0
+    },
+    {
+      "start": 91.758,
+      "end": 96.758,
+      "text": "按关键词筛选多篇论文中的图片",
+      "source_cue": 18,
+      "source_clip": 0
+    },
+    {
+      "start": 96.789,
+      "end": 100.789,
+      "text": "浏览结果时，可以直接辨认每张图的出处",
+      "source_cue": 19,
+      "source_clip": 0
+    },
+    {
+      "start": 101.195,
+      "end": 106.195,
+      "text": "在全库表格中搜索 GLUE，汇集不同论文的结果",
+      "source_cue": 20,
+      "source_clip": 0
+    },
+    {
+      "start": 106.242,
+      "end": 111.242,
+      "text": "切换列表，查看图注、来源论文和页码",
+      "source_cue": 21,
+      "source_clip": 0
+    },
+    {
+      "start": 111.242,
+      "end": 115.242,
+      "text": "回到论文库，继续管理和阅读这组文献",
+      "source_cue": 22,
+      "source_clip": 0
+    },
+    {
+      "start": 115.242,
+      "end": 119.242,
+      "text": "8 篇公开论文 · 真实本地解析与跨论文关键词检索",
+      "source_cue": 23,
+      "source_clip": 0
+    },
+    {
+      "start": 119.242,
+      "end": 124.23333333333333,
+      "text": "素材来自 ACL Anthology · CC BY 4.0\n完整作者、来源与许可见随附说明",
+      "source_cue": 24,
+      "source_clip": 0
+    }
+  ],
+  "validation": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "frames": 3727,
+    "duration": 124.23333333333333,
+    "codec_tag": "h264",
+    "expected_frames": 3727,
+    "mp4_top_level_atoms": [
+      "ftyp",
+      "moov",
+      "free",
+      "mdat"
+    ],
+    "fast_start": true,
+    "samples": [
+      {
+        "frame": 0,
+        "seconds": 0.0,
+        "decoded": true,
+        "application_pixel_stddev": 30.721
+      },
+      {
+        "frame": 211,
+        "seconds": 7.033,
+        "decoded": true,
+        "application_pixel_stddev": 30.72
+      },
+      {
+        "frame": 655,
+        "seconds": 21.833,
+        "decoded": true,
+        "application_pixel_stddev": 30.124
+      },
+      {
+        "frame": 954,
+        "seconds": 31.8,
+        "decoded": true,
+        "application_pixel_stddev": 26.721
+      },
+      {
+        "frame": 1409,
+        "seconds": 46.967,
+        "decoded": true,
+        "application_pixel_stddev": 30.792
+      },
+      {
+        "frame": 1695,
+        "seconds": 56.5,
+        "decoded": true,
+        "application_pixel_stddev": 21.269
+      },
+      {
+        "frame": 2044,
+        "seconds": 68.133,
+        "decoded": true,
+        "application_pixel_stddev": 26.782
+      },
+      {
+        "frame": 2377,
+        "seconds": 79.233,
+        "decoded": true,
+        "application_pixel_stddev": 105.238
+      },
+      {
+        "frame": 2828,
+        "seconds": 94.267,
+        "decoded": true,
+        "application_pixel_stddev": 99.387
+      },
+      {
+        "frame": 3111,
+        "seconds": 103.7,
+        "decoded": true,
+        "application_pixel_stddev": 78.244
+      },
+      {
+        "frame": 3517,
+        "seconds": 117.233,
+        "decoded": true,
+        "application_pixel_stddev": 28.985
+      },
+      {
+        "frame": 3726,
+        "seconds": 124.2,
+        "decoded": true,
+        "application_pixel_stddev": 28.981
+      }
+    ],
+    "isolated_subtitle_padding": true,
+    "full_decode_passed": true,
+    "audio_tracks": 0,
+    "pixel_format": "yuv420p",
+    "codec": "h264"
+  },
+  "framing": {
+    "ui_area": [
+      0,
+      0,
+      1920,
+      960
+    ],
+    "subtitle_area": [
+      0,
+      960,
+      1920,
+      1080
+    ],
+    "font": "Microsoft YaHei",
+    "font_size": 36,
+    "max_lines": 2
+  },
+  "notes": [
+    "Clip durations quantized to the nearest 30 fps frame; boundary frames may repeat by at most one frame.",
+    "Automated decoding and sampled pixels are verified; visual review of the contact sheet is still required."
+  ],
+  "artifacts": {
+    "PaperVault-demo-zh.mp4": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-library\\main\\PaperVault-demo-zh.mp4",
+      "bytes": 4964182,
+      "sha256": "241d47f9cc3d5557fb89857af803d796ddd0151ab6b567d3153dc403f76b8fca"
+    },
+    "PaperVault-demo-zh.srt": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-library\\main\\PaperVault-demo-zh.srt",
+      "bytes": 2136,
+      "sha256": "38ba0f21b7c5b55593a221f1e911ab306e9bd7b64181ac3d63cc28201953f63b"
+    },
+    "PaperVault-demo-zh.ass": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-library\\main\\PaperVault-demo-zh.ass",
+      "bytes": 3164,
+      "sha256": "371d6f98be3d9ff734a06c16f8c060e3e1d5d8d2fb4104cf38f28645f7e09514"
+    },
+    "poster.jpg": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-library\\main\\poster.jpg",
+      "bytes": 246442,
+      "sha256": "a48773342c5748df7d6473a0c2f3dd1d4d705bdb05b63efee0bef9fe8f81a30f"
+    },
+    "contact-sheet.jpg": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-library\\main\\contact-sheet.jpg",
+      "bytes": 545946,
+      "sha256": "6de1fa40e9faa0d377bf2a75213205261534e94ee6d0bef9f586acfa0e7febe0"
+    },
+    "render.log": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-library\\main\\render.log",
+      "bytes": 12260,
+      "sha256": "bbb1a1e56dd9cc67cf03ac451f19e2efe94adf00ba253dada367c2a00edef215"
+    }
+  }
+}

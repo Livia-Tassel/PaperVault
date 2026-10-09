@@ -1,5 +1,34 @@
 # 带中文字幕的操作演示
 
+## 多论文库与联合搜索版
+
+[播放新版视频](../artifacts/demo-library/final/PaperVault-library-demo-zh.mp4) · [SRT字幕](../artifacts/demo-library/final/PaperVault-library-demo-zh.srt) · [素材署名](../artifacts/demo-library/final/SOURCES.md)
+
+新版长 **2分17.43秒**，1920×1080、30fps、H.264，无音轨。前13.2秒是黑底居中打字机文字，逐个字符出现；第一句1.8秒打完、停留至3.6秒，最后保留0.3秒纯黑后进入实机画面。字幕已经烧录，单独SRT用于编辑，不需重复加载。
+
+片头文案：
+
+1. 读过的论文，能成为你的知识资产吗？
+2. PaperVault，把论文变成可检索的本地知识库。
+3. 正文、图表，跨论文一起找。
+4. 找到线索，一键回到原文。
+
+主片使用同一新建演示库内的8篇公开论文：BERT、Sentence-BERT、BART、SciBERT、SimCSE、mT5、ChineseBERT和MacBERT，共99页。全部通过已安装0.2.2真实离线解析，8个worker退出0，产生26个图片和76个表格资源。画面明确说明已预先解析；没有伪造数据库记录或触碰用户论文库。
+
+实际演示列表/卡片、三篇批量标签与筛选、全库BERT关键词查询、论文/表格/正文分组，以及从MacBERT第5页表格和BART第2页文本命中分别回到原文。两个来源保留在阅读标签页中切换；图片库BERT筛选涉及3篇论文，表格库GLUE筛选涉及2篇论文。BERT查询的返回结果覆盖5篇论文信息、3篇图片、5篇表格和8篇正文来源；每组25条是当前返回上限，不能当作全库总命中数。这是关键词检索，不声称语义问答或跨论文自动总结。
+
+编码、全片解码、字幕平移及人工抽帧核对通过。最终文件5,165,413字节，SHA-256：`618465fa20b561ba0940bbce62557121774d019dc8d643d75ebef0df1a53aa84`。新的真实解析不改变既有准确性报告的结论，复杂图表仍需对照原文。
+
+复现：先运行 `scripts/prepare_library_demo.py`（默认拒绝覆盖已准备的输出，可用`--help`查看新目录参数），再运行 `scripts/record_library_demo.py --preparation artifacts/demo-library/preparation.json`，把打印出的时间轴传给 `scripts/render_demo.py --timeline ...`。最后执行：
+
+```powershell
+.venv/Scripts/python.exe scripts/add_demo_intro.py --demo artifacts/demo-library/main/PaperVault-demo-zh.mp4 --subtitles artifacts/demo-library/main/PaperVault-demo-zh.srt --output-directory artifacts/demo-library/final
+```
+
+各生成步骤拒绝覆盖已有成品，应选择新的目录。原始输入、实录、检索证据和帧在 `artifacts/demo-library/`，紧凑验收记录在 `docs/verification/demo-library/`。下面保留此前单篇流程版本。
+
+## 单篇导入与阅读版
+
 成片为 MP4，1920 × 1080、30 fps、H.264，无配音。中文字幕直接烧录在画面底部的独立区域，同时提供可编辑的 SRT 字幕。
 
 - [演示视频](../artifacts/demo/final/PaperVault-demo-zh.mp4)

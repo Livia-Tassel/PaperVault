@@ -1,0 +1,225 @@
+{
+  "passed": true,
+  "created_at_utc": "2026-10-09T16:37:33.823384+00:00",
+  "intro": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "frames": 396,
+    "duration": 13.2,
+    "codec_tag": "h264",
+    "full_decode_passed": true,
+    "audio_tracks": 0,
+    "fast_start": true,
+    "sha256": "a508f6da74f0bfaaada1c474653927482822025ebec014f8ebf67070c3de9e24"
+  },
+  "sentences": [
+    {
+      "text": "读过的论文，能成为你的知识资产吗？",
+      "frames": 108,
+      "typing_frames": 54,
+      "start_frame": 0,
+      "end_frame": 108,
+      "start_seconds": 0.0,
+      "end_seconds": 3.6,
+      "fully_visible_seconds": 1.8
+    },
+    {
+      "text": "PaperVault，把论文变成可检索的本地知识库。",
+      "frames": 108,
+      "typing_frames": 60,
+      "start_frame": 108,
+      "end_frame": 216,
+      "start_seconds": 3.6,
+      "end_seconds": 7.2,
+      "fully_visible_seconds": 5.6
+    },
+    {
+      "text": "正文、图表，跨论文一起找。",
+      "frames": 90,
+      "typing_frames": 45,
+      "start_frame": 216,
+      "end_frame": 306,
+      "start_seconds": 7.2,
+      "end_seconds": 10.2,
+      "fully_visible_seconds": 8.7
+    },
+    {
+      "text": "找到线索，一键回到原文。",
+      "frames": 81,
+      "typing_frames": 42,
+      "start_frame": 306,
+      "end_frame": 387,
+      "start_seconds": 10.2,
+      "end_seconds": 12.9,
+      "fully_visible_seconds": 11.6
+    }
+  ],
+  "font": "Microsoft YaHei",
+  "font_size": 68,
+  "foreground_rgb": [
+    238,
+    238,
+    238
+  ],
+  "background_rgb": [
+    0,
+    0,
+    0
+  ],
+  "trailing_black_frames": 9,
+  "typing": "Each Unicode character appears individually at evenly spaced frame boundaries; no word-level reveal.",
+  "samples": [
+    {
+      "frame": 0,
+      "seconds": 0.0,
+      "decoded": true,
+      "nonblack_pixels": 136
+    },
+    {
+      "frame": 18,
+      "seconds": 0.6,
+      "decoded": true,
+      "nonblack_pixels": 7815
+    },
+    {
+      "frame": 54,
+      "seconds": 1.8,
+      "decoded": true,
+      "nonblack_pixels": 24259
+    },
+    {
+      "frame": 90,
+      "seconds": 3.0,
+      "decoded": true,
+      "nonblack_pixels": 24073
+    },
+    {
+      "frame": 108,
+      "seconds": 3.6,
+      "decoded": true,
+      "nonblack_pixels": 136
+    },
+    {
+      "frame": 138,
+      "seconds": 4.6,
+      "decoded": true,
+      "nonblack_pixels": 9968
+    },
+    {
+      "frame": 168,
+      "seconds": 5.6,
+      "decoded": true,
+      "nonblack_pixels": 29163
+    },
+    {
+      "frame": 215,
+      "seconds": 7.166666666666667,
+      "decoded": true,
+      "nonblack_pixels": 29025
+    },
+    {
+      "frame": 246,
+      "seconds": 8.2,
+      "decoded": true,
+      "nonblack_pixels": 10225
+    },
+    {
+      "frame": 276,
+      "seconds": 9.2,
+      "decoded": true,
+      "nonblack_pixels": 15425
+    },
+    {
+      "frame": 348,
+      "seconds": 11.6,
+      "decoded": true,
+      "nonblack_pixels": 16941
+    },
+    {
+      "frame": 395,
+      "seconds": 13.166666666666666,
+      "decoded": true,
+      "nonblack_pixels": 0
+    }
+  ],
+  "ffmpeg": "D:\\project\\PaperVault\\.tools\\video-python\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+  "ffmpeg_sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+  "source": {
+    "video": "D:\\project\\PaperVault\\artifacts\\demo-library\\main\\PaperVault-demo-zh.mp4",
+    "video_sha256": "241d47f9cc3d5557fb89857af803d796ddd0151ab6b567d3153dc403f76b8fca",
+    "metadata": {
+      "width": 1920,
+      "height": 1080,
+      "fps": 30.0,
+      "frames": 3727,
+      "duration": 124.23333333333333,
+      "codec_tag": "h264"
+    },
+    "subtitles": "D:\\project\\PaperVault\\artifacts\\demo-library\\main\\PaperVault-demo-zh.srt",
+    "subtitles_sha256": "38ba0f21b7c5b55593a221f1e911ab306e9bd7b64181ac3d63cc28201953f63b",
+    "main_subtitles_shift_seconds": 13.2,
+    "main_cue_count": 25,
+    "joined_cue_count": 29,
+    "subtitles_burned_again": false
+  },
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "frames": 4123,
+    "duration": 137.43333333333334,
+    "codec_tag": "h264",
+    "full_decode_passed": true,
+    "audio_tracks": 0,
+    "fast_start": true,
+    "sha256": "618465fa20b561ba0940bbce62557121774d019dc8d643d75ebef0df1a53aa84"
+  },
+  "artifacts": {
+    "intro.mp4": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-library\\final\\intro.mp4",
+      "bytes": 97675,
+      "sha256": "a508f6da74f0bfaaada1c474653927482822025ebec014f8ebf67070c3de9e24"
+    },
+    "poster.jpg": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-library\\final\\poster.jpg",
+      "bytes": 73375,
+      "sha256": "bc01a6d4fb69314ff5016aaa308ce010e522fb6e05057b250b0dd0ace9d53c23"
+    },
+    "intro-contact-sheet.jpg": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-library\\final\\intro-contact-sheet.jpg",
+      "bytes": 114584,
+      "sha256": "b55daaaf35e2680968334540ba2c880fe68e8561c51a0414e2d8fdfd880af66c"
+    },
+    "intro-encode.log": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-library\\final\\intro-encode.log",
+      "bytes": 3677,
+      "sha256": "2cfc15449bfa855890e8dd31b63a4547a0454a6d0ed88c2f836dfce413eafec2"
+    },
+    "intro-decode.log": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-library\\final\\intro-decode.log",
+      "bytes": 1422,
+      "sha256": "f73b5b19535fa2d154df9fb6601a51e4608100d8ffeeeaa3c830ec3c91b85eed"
+    },
+    "PaperVault-library-demo-zh.mp4": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-library\\final\\PaperVault-library-demo-zh.mp4",
+      "bytes": 5165413,
+      "sha256": "618465fa20b561ba0940bbce62557121774d019dc8d643d75ebef0df1a53aa84"
+    },
+    "PaperVault-library-demo-zh.srt": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-library\\final\\PaperVault-library-demo-zh.srt",
+      "bytes": 2460,
+      "sha256": "e2941546b53bb11c0052b2692b58b4a40d4416d2c7b780d4b669274aaf5bd05f"
+    },
+    "join-encode.log": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-library\\final\\join-encode.log",
+      "bytes": 9299,
+      "sha256": "51537132a07cb20a8dbd6ad5cd60661c221cc5d23ff66bfd3efacf9792efc42d"
+    },
+    "join-decode.log": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-library\\final\\join-decode.log",
+      "bytes": 1733,
+      "sha256": "c2fc4cf33c9ec07d2be763af995318bb5c0d1bf8b4b22b76a8353010a7fad743"
+    }
+  }
+}
