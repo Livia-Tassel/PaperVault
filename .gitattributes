@@ -16,3 +16,4 @@ docs/third-party-sources/** binary
 docs/verification/0.2.0/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 docs/verification/0.2.1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 docs/verification/real-corpus/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+tests/corpus/*.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
