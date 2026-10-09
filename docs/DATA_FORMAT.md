@@ -21,6 +21,8 @@ backups/
 
 Paper、Resource、ParseRun、Job使用UUID；论文按完整文件SHA-256去重。Figure编号来自原文Caption，缺失时留空，不能作为内部ID。
 
+0.2.2的编号提取支持有明确图表标签的附录/补充编号（如Table A.1、Figure G.1、Fig. S1）、数字和罗马数字，并保留原编号字符串。Caption缺失时仍留空；编号修复不改变模型划定的区域、表格单元格或资源类型，也不将缺失图注自动补写。
+
 0.2.1起，类似 `pone.0031638 1..8` 的出版导出标识不再作为论文标题。存在摘要前突出标题时使用该原文标题并记录 `title_source=layout_heading`；缺少可信标题时保持空值，界面仍可显示文件名。普通PDF元数据标题保留原优先级；人工标题不由重新解析覆盖。
 
 SourceLocation使用0基`page_index`和未旋转PDF user-space的`bbox=[x0,y0,x1,y1]`。保留MediaBox、CropBox、UserUnit、页面旋转及原始Docling provenance。bbox为null时只允许页码定位。多段资源有多个locations。

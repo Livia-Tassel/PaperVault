@@ -2576,7 +2576,7 @@ dependencies = [
 
 [[package]]
 name = "papervault"
-version = "0.2.1"
+version = "0.2.2"
 dependencies = [
  "rand",
  "serde",

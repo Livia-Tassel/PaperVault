@@ -26,6 +26,17 @@ def _label(item) -> str:
     return str(getattr(value, "value", value))
 
 
+def _caption_number(caption: str, kind: str) -> str:
+    label = r"(?:table|表)" if kind == "table" else r"(?:fig(?:ure)?\.?|图)"
+    # Preserve printed appendix/supplement identifiers as well as ordinary
+    # numeric/Roman labels. A trailing boundary prevents 'Table XGBoost' from
+    # being silently labeled 'X'. Missing captions still produce no number.
+    identifier = r"(?:[A-Z][.\-]?\d+(?:[.\-]\d+)*|\d+(?:[.\-]\d+)*|[IVXLCDM]+)"
+    panel = r"(?:\([a-z]\))?" if kind == "figure" else ""
+    match = re.search(r"(?<![A-Za-z])" + label + r"\s*(" + identifier + panel + r")(?![A-Za-z0-9])", caption, re.I)
+    return match[1] if match else ""
+
+
 def _metadata(doc, pdf_info, blocks: list[dict], source: Path) -> dict:
     title = next((b["text"] for b in blocks if b["label"] == "title" and b["text"]), "")
     pdf_meta = pdf_info["metadata"]
@@ -205,9 +216,7 @@ def parse_pdf(source: Path, output_dir: Path, models_dir: Path,
         resource_dir = output_dir / "resources" / identifier
         resource_dir.mkdir(parents=True, exist_ok=True)
         caption = item.caption_text(document).strip()
-        pattern = r"(?:table|表)\s*([\dIVX]+(?:[.\-]\d+)?)" if kind == "table" else r"(?:fig(?:ure)?\.?|图)\s*([\dIVX]+(?:[.\-]\d+)?(?:\([a-z]\))?)"
-        number_match = re.search(pattern, caption, re.I)
-        number = number_match[1] if number_match else ""
+        number = _caption_number(caption, kind)
         if not caption:
             item_warnings.append("No caption association was detected; manual review is required")
         elif (kind == "table" and re.match(r"\s*(?:fig(?:ure)?\.?|图)\s*[\dIVX]", caption, re.I)

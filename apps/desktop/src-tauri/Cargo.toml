@@ -1,6 +1,6 @@
 [package]
 name = "papervault"
-version = "0.2.1"
+version = "0.2.2"
 description = "Local-first research paper and asset library"
 authors = ["PaperVault contributors"]
 edition = "2021"
