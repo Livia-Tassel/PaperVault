@@ -14,7 +14,14 @@ export function useReadingState(paperId: string, libraryKey: string, onChanged: 
     changes => patch<ReadingState>(`/papers/${paperId}/reading-state`, changes, { libraryScope: libraryKey })) : null, [data, paperId, libraryKey]);
   useEffect(() => {
     if (!queue) return;
-    queue.setNotify(() => refresh(value => value + 1));
+    let lastVisibleState = '';
+    queue.setNotify(() => {
+      // The viewer already owns its scroll position. Re-render the parent for
+      // save/error/status changes, not for every pixel of a pending anchor.
+      // EditGuard reads queue.dirty directly, so this does not defer flushing.
+      const visibleState = JSON.stringify([queue.error, queue.conflict?.version ?? null, queue.current.status, queue.dirty]);
+      if (visibleState !== lastVisibleState) { lastVisibleState = visibleState; refresh(value => value + 1); }
+    });
     queue.enqueue({ touch: true, ...(queue.state.status === 'unread' ? { status: 'reading' as const } : {}) });
     void queue.flush().then(ok => { if (ok) onChangedRef.current(); });
     return () => {

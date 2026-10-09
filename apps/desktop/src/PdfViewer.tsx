@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
+import { memo, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import { Bookmark, ChevronDown, ChevronLeft, ChevronRight, Crop, Highlighter, Maximize, MessageSquarePlus, Minus, Plus, RotateCw, Search, X } from 'lucide-react';
 import { getDocument, GlobalWorkerOptions, TextLayer, type PDFDocumentProxy, type PDFPageProxy } from 'pdfjs-dist';
 import workerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
@@ -10,6 +10,7 @@ import { toPdfBox, toViewportBox, normalizeBox, intersectBox, type Box } from '.
 import { buildTextIndex, captureTextSelection, findTextMatches, matchLocations, type CapturedSelection, type PageTextIndex, type TextMatch, type TextPage } from './reader-selection';
 import type { Location } from './types';
 import type { Annotation, AnnotationSelection, ReaderViewState } from './reading';
+import { indexAnnotationsByPage, type PageAnnotation } from './reader-annotations';
 
 GlobalWorkerOptions.workerSrc = workerUrl;
 type Viewport = ReturnType<PDFPageProxy['getViewport']>;
@@ -29,16 +30,35 @@ const readerState = (state?: ReaderViewState | null): ReaderViewState => state ?
 const clampScale = (scale: number) => Math.min(8, Math.max(.05, scale));
 const MAX_CANVAS_PIXELS = 16_777_216;
 const MAX_CANVAS_SIDE = 8192;
+const EMPTY_ANNOTATIONS: Annotation[] = [];
+const EMPTY_PAGE_ANNOTATIONS: readonly PageAnnotation[] = [];
+const EMPTY_HITS: readonly SearchHit[] = [];
 const styleBox = (box: Box): CSSProperties => ({ left: box[0], top: box[1], width: box[2] - box[0], height: box[3] - box[1] });
 
 interface PageProps {
   pdf: PDFDocumentProxy; index: number; scale: number; rotation: number; location?: Location | null; cropMode: boolean;
   onCrop: (location: Location) => void; register: (index: number, entry: PageEntry | null) => void;
   onRasterReduced: (index: number, reduced: boolean) => void;
-  annotations: Annotation[]; selectedAnnotationId?: string | null; onAnnotationSelect: (annotation: Annotation) => void;
-  hits: SearchHit[]; activeHitId?: number;
+  annotations: readonly PageAnnotation[]; selectedAnnotationId?: string | null; onAnnotationSelect: (annotation: Annotation) => void;
+  hits: readonly SearchHit[]; activeHitId?: number;
 }
-function PdfPage({ pdf, index, scale, rotation, location, cropMode, onCrop, register, onRasterReduced, annotations, selectedAnnotationId, onAnnotationSelect, hits, activeHitId }: PageProps) {
+const AnnotationOverlay = memo(function AnnotationOverlay({ entry, viewport, selected, onSelect }: {
+  entry: PageAnnotation; viewport: Viewport; selected: boolean; onSelect: (annotation: Annotation) => void;
+}) {
+  const { annotation, locations } = entry;
+  const rectangles = useMemo(() => locations.filter(location => location.bbox).map(location => toViewportBox(location.bbox!, viewport)), [locations, viewport]);
+  const first = locations[0], marker = first?.bbox ? toViewportBox(first.bbox, viewport) : [4, 4, 4, 4];
+  return <div className={`reader-annotation reader-color-${annotation.color} ${selected ? 'is-selected' : ''}`} data-annotation-id={annotation.id}>
+    {rectangles.map((box, part) => <div key={part} className={`reader-annotation-rect ${annotation.kind === 'note' && !annotation.quote ? 'reader-area-note' : ''}`} style={styleBox(box)} />)}
+    <button className="reader-annotation-marker" aria-label={`${annotation.kind === 'bookmark' ? '书签' : annotation.kind === 'highlight' ? '高亮' : '笔记'}：${annotation.title || annotation.quote.slice(0, 50) || `第 ${first.page_index + 1} 页`}`} title={annotation.title || annotation.quote || annotation.body || '页书签'} style={{ left: Math.max(0, Math.min(viewport.width - 22, marker[0] - 22)), top: Math.max(0, marker[1]) }} onClick={event => { event.stopPropagation(); onSelect(annotation); }}>{annotation.kind === 'bookmark' ? <Bookmark size={13} /> : annotation.kind === 'highlight' ? <Highlighter size={13} /> : <MessageSquarePlus size={13} />}</button>
+  </div>;
+});
+const AnnotationLayer = memo(function AnnotationLayer({ entries, viewport, selectedId, onSelect }: {
+  entries: readonly PageAnnotation[]; viewport: Viewport; selectedId?: string | null; onSelect: (annotation: Annotation) => void;
+}) {
+  return <>{entries.map(entry => <AnnotationOverlay key={entry.annotation.id} entry={entry} viewport={viewport} selected={selectedId === entry.annotation.id} onSelect={onSelect} />)}</>;
+});
+const PdfPage = memo(function PdfPage({ pdf, index, scale, rotation, location, cropMode, onCrop, register, onRasterReduced, annotations, selectedAnnotationId, onAnnotationSelect, hits, activeHitId }: PageProps) {
   const [page, setPage] = useState<PDFPageProxy | null>(null);
   const [near, setNear] = useState(index === 0), [visited, setVisited] = useState(index === 0);
   const [error, setError] = useState(''), [selection, setSelection] = useState<Box | null>(null), [textRevision, setTextRevision] = useState(0);
@@ -106,7 +126,7 @@ function PdfPage({ pdf, index, scale, rotation, location, cropMode, onCrop, regi
   };
   const pageStyle = { width: viewport?.width || 612 * scale, height: viewport?.height || 792 * scale,
     '--scale-factor': scale, '--user-unit': page?.userUnit || 1, '--total-scale-factor': scale * (page?.userUnit || 1), '--scale-round-x': '1px', '--scale-round-y': '1px' } as CSSProperties;
-  return <div className="pdf-page-wrap"><div data-page={index + 1} data-text-ready={readyViewport === viewport && textDivs.current.length ? 'true' : 'false'} className="pdf-page" ref={box} style={pageStyle}
+  return <div className="pdf-page-wrap"><div data-page={index + 1} data-near={near ? 'true' : 'false'} data-text-ready={readyViewport === viewport && textDivs.current.length ? 'true' : 'false'} className="pdf-page" ref={box} style={pageStyle}
     onPointerDown={event => { if (!cropMode || !viewport || event.button !== 0) return; event.preventDefault(); box.current?.setPointerCapture(event.pointerId); const p = point(event); drag.current = p; setSelection([p[0], p[1], p[0], p[1]]); }}
     onPointerMove={event => { if (drag.current) setSelection(normalizeBox([...drag.current, ...point(event)] as Box)); }}
     onPointerCancel={() => { drag.current = null; setSelection(null); }}
@@ -118,18 +138,15 @@ function PdfPage({ pdf, index, scale, rotation, location, cropMode, onCrop, regi
       if (bbox && selected[2] - selected[0] >= 5 && selected[3] - selected[1] >= 5) onCrop({ page_index: index, bbox });
     }}>
     {error ? <ErrorMessage message={error} /> : <><canvas ref={canvas} width={0} height={0} style={{ width: viewport?.width, height: viewport?.height }} /><div ref={text} className="textLayer" />
-      {viewport && annotations.map(annotation => <div key={annotation.id} className={`reader-annotation reader-color-${annotation.color} ${selectedAnnotationId === annotation.id ? 'is-selected' : ''}`} data-annotation-id={annotation.id}>
-        {annotation.locations.filter(item => item.page_index === index && item.bbox).map((item, part) => <div key={part} className={`reader-annotation-rect ${annotation.kind === 'note' && !annotation.quote ? 'reader-area-note' : ''}`} style={styleBox(toViewportBox(item.bbox!, viewport))} />)}
-        {(() => { const first = annotation.locations.find(item => item.page_index === index); const rect = first?.bbox ? toViewportBox(first.bbox, viewport) : [4, 4, 4, 4]; return <button className="reader-annotation-marker" aria-label={`${annotation.kind === 'bookmark' ? '书签' : annotation.kind === 'highlight' ? '高亮' : '笔记'}：${annotation.title || annotation.quote.slice(0, 50) || `第 ${index + 1} 页`}`} title={annotation.title || annotation.quote || annotation.body || '页书签'} style={{ left: Math.max(0, Math.min(viewport.width - 22, rect[0] - 22)), top: Math.max(0, rect[1]) }} onClick={event => { event.stopPropagation(); onAnnotationSelect(annotation); }}>{annotation.kind === 'bookmark' ? <Bookmark size={13} /> : annotation.kind === 'highlight' ? <Highlighter size={13} /> : <MessageSquarePlus size={13} />}</button>; })()}
-      </div>)}
-      {viewport && searchLocations.map(hit => <div key={hit.key} className={`reader-search-hit ${hit.active ? 'is-active' : ''}`} style={styleBox(toViewportBox(hit.location.bbox!, viewport))} />)}
+      {near && viewport && <AnnotationLayer entries={annotations} viewport={viewport} selectedId={selectedAnnotationId} onSelect={onAnnotationSelect} />}
+      {near && viewport && searchLocations.map(hit => <div key={hit.key} className={`reader-search-hit ${hit.active ? 'is-active' : ''}`} style={styleBox(toViewportBox(hit.location.bbox!, viewport))} />)}
       {rect && <div className="pdf-highlight" style={styleBox(rect)} aria-label="资源所在区域" />}{selection && <div className="pdf-selection" style={styleBox(selection)} />}
     </>}
   </div><span className="page-number">{index + 1}</span></div>;
-}
+});
 
 export function PdfViewer({ paperId, location, onCrop, cropMode, onCropMode, initialState, onViewState,
-  annotations = [], selectedAnnotationId, onAnnotationSelect, onAnnotate, onBookmark }: PdfProps) {
+  annotations = EMPTY_ANNOTATIONS, selectedAnnotationId, onAnnotationSelect, onAnnotate, onBookmark }: PdfProps) {
   const [pdf, setPdf] = useState<PDFDocumentProxy | null>(null);
   const [error, setError] = useState('');
   const [view, setView] = useState<ReaderViewState>(() => readerState(initialState));
@@ -155,6 +172,13 @@ export function PdfViewer({ paperId, location, onCrop, cropMode, onCropMode, ini
   const viewRef = useRef(view); viewRef.current = view;
   const hitsRef = useRef(hits); hitsRef.current = hits;
   const onViewRef = useRef(onViewState); onViewRef.current = onViewState;
+  const callbacks = useRef({ onCrop, onAnnotate, onAnnotationSelect, areaNote }); callbacks.current = { onCrop, onAnnotate, onAnnotationSelect, areaNote };
+  const annotationsByPage = useMemo(() => indexAnnotationsByPage(annotations), [annotations]);
+  const hitsByPage = useMemo(() => {
+    const pages = new Map<number, SearchHit[]>();
+    for (const hit of hits) { const current = pages.get(hit.pageIndex); if (current) current.push(hit); else pages.set(hit.pageIndex, [hit]); }
+    return pages;
+  }, [hits]);
   const lastReported = useRef(''), restoring = useRef(true), scrollFrame = useRef(0);
 
   const readPosition = useCallback((): ReaderViewState | null => {
@@ -342,7 +366,15 @@ export function PdfViewer({ paperId, location, onCrop, cropMode, onCropMode, ini
     globalThis.document.addEventListener('keydown', keyboard); return () => globalThis.document.removeEventListener('keydown', keyboard);
   }, [findOpen, openFind, cropMode, onCropMode]);
 
-  const leaveFullscreen = async () => { if (globalThis.document.fullscreenElement === root.current) await globalThis.document.exitFullscreen(); };
+  const leaveFullscreen = useCallback(async () => { if (globalThis.document.fullscreenElement === root.current) await globalThis.document.exitFullscreen(); }, []);
+  const handlePageCrop = useCallback((value: Location) => {
+    const { areaNote, onCrop, onAnnotate } = callbacks.current;
+    if (areaNote) { setAreaNote(false); void leaveFullscreen().then(() => onAnnotate?.({ kind: 'note', quote: '', locations: [value] })); } else onCrop(value);
+  }, [leaveFullscreen]);
+  const handleAnnotationSelect = useCallback((annotation: Annotation) => {
+    const { onAnnotationSelect } = callbacks.current;
+    void leaveFullscreen().then(() => onAnnotationSelect?.(annotation));
+  }, [leaveFullscreen]);
   const annotate = async (kind: 'highlight' | 'note') => {
     if (!selection) return;
     const draft = { kind, quote: selection.quote, locations: selection.locations };
@@ -387,9 +419,8 @@ export function PdfViewer({ paperId, location, onCrop, cropMode, onCropMode, ini
       {!pdf && !error && <Spinner label="正在打开原始 PDF…" />}
       {pdf && Array.from({ length: pdf.numPages }, (_, index) => <PdfPage key={`${paperId}-${index}`} pdf={pdf} index={index} scale={view.scale} rotation={view.rotation} register={register} onRasterReduced={rasterReduced}
         location={location?.page_index === index ? location : null} cropMode={!!cropMode || areaNote}
-        onCrop={value => { if (areaNote) { setAreaNote(false); void leaveFullscreen().then(() => onAnnotate?.({ kind: 'note', quote: '', locations: [value] })); } else onCrop(value); }}
-        annotations={annotations.filter(annotation => !annotation.deleted && annotation.locations.some(item => item.page_index === index))} selectedAnnotationId={selectedAnnotationId}
-        onAnnotationSelect={annotation => { void leaveFullscreen().then(() => onAnnotationSelect?.(annotation)); }} hits={hits.filter(hit => hit.pageIndex === index)} activeHitId={hits[activeHit]?.id} />)}
+        onCrop={handlePageCrop} annotations={annotationsByPage.get(index) || EMPTY_PAGE_ANNOTATIONS} selectedAnnotationId={selectedAnnotationId}
+        onAnnotationSelect={handleAnnotationSelect} hits={hitsByPage.get(index) || EMPTY_HITS} activeHitId={hits[activeHit]?.id} />)}
     </div>
     {!!reducedPages.size && <div className="reader-quality" role="status" title="为保持阅读流畅，当前大尺寸页面使用较低分辨率预览。文字选择和标注仍按原始 PDF 坐标定位。">大尺寸预览已降低清晰度</div>}
     {selection && <div className="reader-selection-tools" role="toolbar" aria-label="文本选区操作" style={{ left: selectionLeft, top: selectionTop }} onPointerDown={event => event.preventDefault()}><button onClick={() => void annotate('highlight')}><Highlighter size={15} />高亮</button><button onClick={() => void annotate('note')}><MessageSquarePlus size={15} />笔记</button><button aria-label="取消文本选区" onClick={() => { setSelection(null); globalThis.getSelection()?.removeAllRanges(); }}><X size={14} /></button></div>}

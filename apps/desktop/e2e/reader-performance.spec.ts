@@ -80,6 +80,18 @@ c.setPageSize((14000,144));c.setFont('Helvetica',24);c.drawString(30,90,'Very wi
   await expect(page.getByRole('textbox', { name: 'PDF 页码', exact: true })).toHaveValue('8');
   expect(new Set(selection.locations.map((location: any) => location.page_index)).size).toBe(8);
   for (let index = 1; index <= 8; index++) expect(selection.quote).toContain(`Page ${String(index).padStart(2, '0')} line 01`);
+  expect(selection.locations).toHaveLength(80);
+  await expect(reader.locator('[data-page="1"] .reader-annotation')).toHaveCount(0);
+  await expect(reader.locator('[data-page="8"] .reader-annotation-rect')).toHaveCount(10);
+  // Offscreen overlays are recreated from the complete canonical data after navigation.
+  await page.evaluate(location => (window as any).readerHarness.location(location), selection.locations[0]);
+  await expect(reader.locator('[data-page="1"]')).toHaveAttribute('data-near', 'true');
+  await expect(reader.locator('[data-page="1"] .reader-annotation-rect')).toHaveCount(10);
+  await expect(reader.locator('[data-page="8"] .reader-annotation')).toHaveCount(0);
+  await page.evaluate(location => (window as any).readerHarness.location(location), selection.locations.find((location: any) => location.page_index === 7));
+  await expect(reader.locator('[data-page="8"]')).toHaveAttribute('data-near', 'true');
+  await expect(reader.locator('[data-page="8"] .reader-annotation-rect')).toHaveCount(10);
+  await expect(reader.locator('[data-page="1"] .reader-annotation')).toHaveCount(0);
   await sample('selection-eight-pages-after-raster-eviction');
   await page.screenshot({ path: path.join(output, 'selection-eight-pages.png') });
   const report = { devicePixelRatio: 2, pageCount: 81, maximumAllowedBitmapPixels: 16_777_216, maximumAllowedBitmapSide: 8192,

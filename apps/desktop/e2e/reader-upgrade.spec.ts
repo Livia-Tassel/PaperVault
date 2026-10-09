@@ -121,13 +121,15 @@ for (const dpr of [1, 2]) test(`actual glyphs, rotated CropBox/UserUnit text sel
     expect(x0).toBeGreaterThanOrEqual(50); expect(y0).toBeGreaterThanOrEqual(70); expect(x1).toBeLessThanOrEqual(350); expect(y1).toBeLessThanOrEqual(450);
   }
   expect(selection.locations.length).toBeGreaterThanOrEqual(10);
-  await expect(page.locator('#reader-test-root .reader-annotation-rect')).toHaveCount(selection.locations.length);
+  expect(state.annotations[0].locations).toEqual(selection.locations);
   await zoom(page, 100);
   await page.getByRole('button', { name: '旋转 PDF' }).click();
-  await expect(page.locator('#reader-test-root .reader-annotation-rect')).toHaveCount(selection.locations.length);
   for (const index of [1, 2]) {
     const element = page.locator(`#reader-test-root [data-page="${index}"]`);
+    await element.scrollIntoViewIfNeeded();
+    await expect(element).toHaveAttribute('data-near', 'true');
     await expect(element).toHaveAttribute('data-text-ready', 'true');
+    await expect(element.locator('.reader-annotation-rect')).toHaveCount(selection.locations.filter((location: any) => location.page_index === index - 1).length);
     const errors = await element.evaluate((element, firstPage) => {
       const spans = [...element.querySelectorAll('.textLayer span')];
       const boxes = [...element.querySelectorAll('.reader-annotation-rect')].map(node => node.getBoundingClientRect());
@@ -243,7 +245,8 @@ test('real library persists cross-page highlights, region notes and reading view
   const highlightResult = await highlightResponse; expect(highlightResult.ok(), await highlightResult.text()).toBeTruthy();
   const highlight = await highlightResult.json();
   expect(new Set(highlight.locations.map((value: any) => value.page_index)).size).toBe(2);
-  await expect(reader.locator(`[data-annotation-id="${highlight.id}"]`)).toHaveCount(2);
+  await expect(reader.locator('[data-page="1"]')).toHaveAttribute('data-near', 'true');
+  await expect(reader.locator(`[data-page="1"] [data-annotation-id="${highlight.id}"]`)).toHaveCount(1);
   await page.getByRole('textbox', { name: 'PDF 页码', exact: true }).fill('2');
   await page.getByRole('textbox', { name: 'PDF 页码', exact: true }).press('Enter');
   await page.getByRole('button', { name: '框选区域笔记' }).click();
@@ -272,8 +275,8 @@ test('real library persists cross-page highlights, region notes and reading view
   await page.reload();
   await expect(page.locator('.pdf-reader .zoom-label')).toHaveText('125%');
   await expect(page.getByRole('textbox', { name: 'PDF 页码', exact: true })).toHaveValue('3');
-  await expect(reader.locator(`[data-annotation-id="${highlight.id}"]`)).toHaveCount(2);
-  await expect(reader.locator(`[data-annotation-id="${note.id}"]`)).toHaveCount(1);
+  const storedHighlight = await (await request.get(`${api}/annotations/${highlight.id}`, { headers })).json();
+  expect(storedHighlight.locations).toEqual(highlight.locations);
   const storedNote = await (await request.get(`${api}/annotations/${note.id}`, { headers })).json();
   expect(storedNote.locations).toEqual(note.locations);
   await expect.poll(async () => {
@@ -282,5 +285,13 @@ test('real library persists cross-page highlights, region notes and reading view
   }).toBeLessThan(1);
   await page.screenshot({ path: info.outputPath('real-library-reading-restored.png') });
   await page.screenshot({ path: path.resolve('../../artifacts/reader-upgrade/real-library-reading-restored.png') });
+  for (const index of [0, 1]) {
+    await page.getByRole('textbox', { name: 'PDF 页码', exact: true }).fill(String(index + 1));
+    await page.getByRole('textbox', { name: 'PDF 页码', exact: true }).press('Enter');
+    const visiblePage = reader.locator(`[data-page="${index + 1}"]`);
+    await expect(visiblePage).toHaveAttribute('data-near', 'true');
+    await expect(visiblePage.locator(`[data-annotation-id="${highlight.id}"] .reader-annotation-rect`)).toHaveCount(highlight.locations.filter((location: any) => location.page_index === index).length);
+    if (index === 1) await expect(visiblePage.locator(`[data-annotation-id="${note.id}"]`)).toHaveCount(1);
+  }
   expect(errors).toEqual([]); expect(apiErrors).toEqual([]);
 });
