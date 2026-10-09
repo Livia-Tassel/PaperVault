@@ -14,6 +14,7 @@ from . import search
 from .database import Database
 from .files import atomic_json, check_manifest, manifest, safe_path, sha256, uid
 from .tables import validate_table, write_table
+from .reading import ReadingStore
 
 
 def now() -> str:
@@ -60,7 +61,10 @@ class Library:
             raise ValueError("论文库正在被另一个 PaperVault 进程使用") from exc
         try:
             self.db = Database(self.root / "database/papervault.db")
+            with self.db.read() as con:
+                self.id = con.execute("SELECT value FROM library_meta WHERE key='id'").fetchone()[0]
             self.mutex = threading.RLock()
+            self.reading = ReadingStore(self)
             for name in ("papers", "exports", "backups", ".staging", ".trash"):
                 (self.root / name).mkdir(exist_ok=True)
             self.recover()
@@ -88,7 +92,7 @@ class Library:
                 "SELECT r.kind,count(*) n FROM resources r JOIN papers p ON p.id=r.paper_id "
                 "WHERE r.active=1 AND p.removed=0 GROUP BY r.kind")}
             papers = con.execute("SELECT count(*) FROM papers WHERE removed=0").fetchone()[0]
-        return {"path": str(self.root), "paper_count": papers,
+        return {"id": self.id, "path": str(self.root), "paper_count": papers,
                 "figure_count": counts.get("figure", 0), "table_count": counts.get("table", 0)}
 
     def _paper(self, con, row) -> dict:
@@ -101,13 +105,17 @@ class Library:
         result["figure_count"], result["table_count"] = counts.get("figure", 0), counts.get("table", 0)
         result["folders"] = [r[0] for r in con.execute("SELECT folder_id FROM paper_folders WHERE paper_id=?", (row["id"],))]
         result["edited_fields"] = list(json.loads(row["overrides_json"]))
+        reading = con.execute("SELECT status,last_opened FROM reading_states WHERE paper_id=?", (row["id"],)).fetchone()
+        result["reading_status"] = reading["status"] if reading else "unread"
+        result["last_opened"] = reading["last_opened"] if reading else None
+        result["annotation_count"] = con.execute("SELECT count(*) FROM annotations WHERE paper_id=? AND deleted=0", (row["id"],)).fetchone()[0]
         return result
 
     def paper(self, paper_id: str):
         with self.db.read() as con:
             return self._paper(con, con.execute("SELECT * FROM papers WHERE id=? AND removed=0", (paper_id,)).fetchone())
 
-    def papers(self, q="", tag=None, folder=None, favorite=None, year=None, sort="recent", offset=0, limit=50):
+    def papers(self, q="", tag=None, folder=None, favorite=None, year=None, sort="recent", offset=0, limit=50, reading_status=None, opened=None):
         def effective(field):
             return (f"CASE WHEN json_type(p.overrides_json,'$.{field}') IS NOT NULL "
                     f"THEN json_extract(p.overrides_json,'$.{field}') ELSE json_extract(p.auto_json,'$.{field}') END")
@@ -133,8 +141,18 @@ class Library:
         if year is not None:
             conditions.append(f"({effective('year')})=?")
             args.append(year)
+        if reading_status is not None:
+            if reading_status not in ("unread", "reading", "read"):
+                raise ValueError("阅读状态无效")
+            conditions.append("COALESCE((SELECT status FROM reading_states WHERE paper_id=p.id),'unread')=?")
+            args.append(reading_status)
+        if opened is not None:
+            condition = "EXISTS(SELECT 1 FROM reading_states WHERE paper_id=p.id AND last_opened IS NOT NULL)"
+            conditions.append(condition if opened else "NOT " + condition)
         order = {"title": f"LOWER(COALESCE({effective('title')},p.filename))",
-                 "year": f"COALESCE({effective('year')},0) DESC"}.get(sort, "p.created_at DESC")
+                 "year": f"COALESCE({effective('year')},0) DESC",
+                 "last_opened": "(SELECT last_opened FROM reading_states WHERE paper_id=p.id) DESC"}.get(sort, "p.created_at DESC")
+        order += ",p.id"
         where = " AND ".join(conditions)
         with self.db.read() as con:
             total = con.execute("SELECT COUNT(*) FROM papers p WHERE " + where, args).fetchone()[0]
@@ -441,14 +459,42 @@ class Library:
         for row in con.execute("SELECT * FROM blocks WHERE paper_id=?", (paper_id,)).fetchall():
             search.index_entry(con, row["id"], "content", paper_id, title, row["text"],
                                json.loads(row["location_json"] or "null"))
+        self.reading.reindex(con, paper_id)
 
     def search(self, query):
-        groups = {"papers": [], "figures": [], "tables": [], "content": []}
-        mapping = {"paper": "papers", "figure": "figures", "table": "tables", "content": "content"}
-        with self.db.read() as con:
+        groups = {"papers": [], "figures": [], "tables": [], "content": [], "notes": []}
+        mapping = {"paper": "papers", "figure": "figures", "table": "tables", "content": "content", "notes": "notes"}
+        with self.mutex, self.db.read() as con:
             for kind, group in mapping.items():
                 groups[group] = search.find(con, query, limit=25, kind=kind)
+            for hit in groups["notes"]:
+                annotation = self.reading._get(con, hit["id"])
+                hit.update(annotation_kind=annotation["kind"], locations=annotation["locations"], paper_title=annotation["paper_title"])
         return groups
+
+    def reading_state(self, paper_id):
+        return self.reading.state(paper_id)
+
+    def update_reading_state(self, paper_id, changes):
+        return self.reading.update_state(paper_id, changes)
+
+    def annotations(self, **filters):
+        return self.reading.annotations(**filters)
+
+    def annotation(self, annotation_id, allow_deleted=False):
+        return self.reading.annotation(annotation_id, allow_deleted)
+
+    def create_annotation(self, paper_id, values):
+        return self.reading.create(paper_id, values)
+
+    def update_annotation(self, annotation_id, values):
+        return self.reading.update(annotation_id, values)
+
+    def delete_annotation(self, annotation_id, expected_version):
+        return self.reading.set_deleted(annotation_id, expected_version, True)
+
+    def restore_annotation(self, annotation_id, expected_version):
+        return self.reading.set_deleted(annotation_id, expected_version, False)
 
     def publish(self, job_id, attempt_token, staging: Path, result: dict):
         """The DB transaction is the visibility boundary; never publish a partial revision."""

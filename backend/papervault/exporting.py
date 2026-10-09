@@ -7,6 +7,7 @@ import zipfile
 from pathlib import Path
 
 from .files import safe_path, sha256, uid
+from .annotation_export import annotation_markdown
 
 
 def export_assets(library, paper_ids, resource_ids, format_name="zip", dpi=300):
@@ -59,6 +60,12 @@ def export_assets(library, paper_ids, resource_ids, format_name="zip", dpi=300):
                 prefix = f"papers/{paper_id}"
                 add_file(library.pdf(paper_id), f"{prefix}/original.pdf")
                 add_json(paper, f"{prefix}/metadata.json")
+                annotation_result = library.annotations(paper_id=paper_id, limit=10000)
+                if annotation_result["total"] > 10000:
+                    raise ValueError("论文笔记超过10000条，请分批导出")
+                add_json(annotation_result["items"], f"{prefix}/annotations.json")
+                add_text(annotation_markdown(annotation_result["items"], linked_pdf=True), f"{prefix}/notes.md")
+                add_json(library.reading_state(paper_id), f"{prefix}/reading-state.json")
                 paper_resources = [r for r in resources.values() if r["paper_id"] == paper_id]
                 effective_resources = [exported_resources[r["id"]] for r in paper_resources]
                 text, structure = "", {"metadata": paper, "blocks": [], "resources": effective_resources}

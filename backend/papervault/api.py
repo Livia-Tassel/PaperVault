@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import asyncio
 import json
 import logging
 import secrets
@@ -8,6 +9,7 @@ import sqlite3
 import threading
 from contextlib import asynccontextmanager
 from pathlib import Path, PureWindowsPath
+from urllib.parse import unquote
 
 from fastapi import FastAPI, File, HTTPException, Query, Request, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
@@ -19,8 +21,12 @@ from .exporting import export_assets
 from .files import atomic_json, safe_path, uid
 from .jobs import TaskManager
 from .library import Library
+from .reading import VersionConflict
+from .annotation_export import export_annotations
 from .schemas import (BackupRequest, CropRequest, ExportRequest, FolderRequest, ImportPaths, LibraryOpen,
                       Paper, PaperPatch, PathRequest, Resource, ResourcePatch, RestoreRequest)
+from .schemas import (Annotation, AnnotationCreate, AnnotationExportRequest, AnnotationList,
+                      AnnotationPatch, ExpectedVersion, LibraryInfo, ReadingPatch, ReadingState)
 
 
 class AppState:
@@ -72,6 +78,7 @@ class AppState:
 def create_app(token: str, config_dir: Path, library_path: Path | None = None,
                models_dir: Path | None = None, start_workers=True) -> FastAPI:
     state = AppState(config_dir, models_dir, start_workers)
+    library_mutations = asyncio.Lock()
 
     @asynccontextmanager
     async def lifespan(app):
@@ -95,13 +102,32 @@ def create_app(token: str, config_dir: Path, library_path: Path | None = None,
                 return JSONResponse({"detail": "本地服务认证失败，请重新启动应用"}, status_code=401)
         if request.url.hostname not in ("127.0.0.1", "localhost", "testserver"):
             return JSONResponse({"detail": "仅允许本地服务请求"}, status_code=400)
+        route = request.url.path
+        is_library_mutation = (request.method in ("POST", "PATCH", "DELETE")
+                               and route.startswith("/api/v1/")
+                               and not route.startswith("/api/v1/models/")
+                               and route != "/api/v1/settings")
+        if is_library_mutation:
+            # Keep the scope check and synchronous handler execution inside one
+            # event-loop lock. A threading.RLock across await cannot provide this.
+            async with library_mutations:
+                encoded_scope = request.headers.get("x-papervault-library")
+                if encoded_scope is not None and route != "/api/v1/library/open":
+                    try:
+                        supplied_scope = unquote(encoded_scope, encoding="utf-8", errors="strict")
+                    except UnicodeError:
+                        supplied_scope = ""
+                    current = f"{state.library.id}:{state.library.root}" if state.library else None
+                    if supplied_scope != current:
+                        return JSONResponse({"detail": "论文库已切换，旧操作未执行", "code": "library_switched"}, status_code=409)
+                return await call_next(request)
         return await call_next(request)
 
     # CORS wraps authentication so the desktop can read an expired-session 401.
     app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:1420", "http://127.0.0.1:1420",
                        "http://tauri.localhost", "https://tauri.localhost", "tauri://localhost"],
                        allow_methods=["GET", "POST", "PATCH", "DELETE", "OPTIONS"],
-                       allow_headers=["Authorization", "Content-Type", "Range"],
+                       allow_headers=["Authorization", "Content-Type", "Range", "X-PaperVault-Library"],
                        expose_headers=["Content-Disposition", "Content-Length", "Content-Range", "Accept-Ranges"])
 
     @app.exception_handler(KeyError)
@@ -111,6 +137,10 @@ def create_app(token: str, config_dir: Path, library_path: Path | None = None,
     @app.exception_handler(ValueError)
     async def invalid(request, exc):
         return JSONResponse({"detail": str(exc)}, status_code=400)
+
+    @app.exception_handler(VersionConflict)
+    async def version_conflict(request, exc):
+        return JSONResponse({"detail": str(exc), "current": exc.current}, status_code=409)
 
     @app.exception_handler(FileNotFoundError)
     async def missing_file(request, exc):
@@ -135,18 +165,19 @@ def create_app(token: str, config_dir: Path, library_path: Path | None = None,
     def openapi():
         return app.openapi()
 
-    @app.get(prefix + "/library")
+    @app.get(prefix + "/library", response_model=LibraryInfo)
     def library_info():
         return state.library.info() if state.library else {"path": None, "paper_count": 0, "figure_count": 0, "table_count": 0}
 
-    @app.post(prefix + "/library/open")
+    @app.post(prefix + "/library/open", response_model=LibraryInfo)
     def library_open(body: LibraryOpen):
         return state.open(body.path, body.create)
 
     @app.get(prefix + "/papers")
     def papers(q: str = "", tag: str | None = None, folder: str | None = None, favorite: bool | None = None,
-               year: int | None = None, sort: str = "recent", offset: int = Query(0, ge=0), limit: int = Query(50, ge=1, le=1000)):
-        return state.require_library().papers(q, tag, folder, favorite, year, sort, offset, limit)
+               year: int | None = None, sort: str = "recent", offset: int = Query(0, ge=0), limit: int = Query(50, ge=1, le=1000),
+               reading_status: str | None = None, opened: bool | None = None):
+        return state.require_library().papers(q, tag, folder, favorite, year, sort, offset, limit, reading_status, opened)
 
     @app.post(prefix + "/papers/import-paths")
     def import_paths(body: ImportPaths):
@@ -221,6 +252,45 @@ def create_app(token: str, config_dir: Path, library_path: Path | None = None,
     @app.get(prefix + "/papers/{paper_id}/pdf")
     def pdf(paper_id: str):
         return FileResponse(state.require_library().pdf(paper_id), media_type="application/pdf")
+
+    @app.get(prefix + "/papers/{paper_id}/reading-state", response_model=ReadingState)
+    def reading_state(paper_id: str):
+        return state.require_library().reading_state(paper_id)
+
+    @app.patch(prefix + "/papers/{paper_id}/reading-state", response_model=ReadingState)
+    def update_reading_state(paper_id: str, body: ReadingPatch):
+        return state.require_library().update_reading_state(paper_id, body.model_dump(exclude_unset=True))
+
+    @app.get(prefix + "/annotations", response_model=AnnotationList)
+    def annotations(q: str = Query("", max_length=1000), paper_id: str | None = None, kind: str | None = None,
+                    tag: str | None = Query(None, max_length=80), offset: int = Query(0, ge=0),
+                    limit: int = Query(30, ge=1, le=200), deleted: bool = False):
+        return state.require_library().annotations(q=q, paper_id=paper_id, kind=kind, tag=tag, offset=offset, limit=limit, deleted=deleted)
+
+    @app.post(prefix + "/papers/{paper_id}/annotations", response_model=Annotation)
+    def create_annotation(paper_id: str, body: AnnotationCreate):
+        return state.require_library().create_annotation(paper_id, body.model_dump())
+
+    @app.post(prefix + "/annotations/export")
+    def annotation_export(body: AnnotationExportRequest):
+        result = export_annotations(state.require_library(), body.ids, body.paper_id, body.format)
+        return FileResponse(result, filename=result.name, media_type="application/json" if body.format == "json" else "text/markdown; charset=utf-8")
+
+    @app.get(prefix + "/annotations/{annotation_id}", response_model=Annotation)
+    def annotation(annotation_id: str):
+        return state.require_library().annotation(annotation_id)
+
+    @app.patch(prefix + "/annotations/{annotation_id}", response_model=Annotation)
+    def update_annotation(annotation_id: str, body: AnnotationPatch):
+        return state.require_library().update_annotation(annotation_id, body.model_dump(exclude_unset=True))
+
+    @app.delete(prefix + "/annotations/{annotation_id}", response_model=Annotation)
+    def delete_annotation(annotation_id: str, expected_version: int = Query(..., ge=0)):
+        return state.require_library().delete_annotation(annotation_id, expected_version)
+
+    @app.post(prefix + "/annotations/{annotation_id}/restore", response_model=Annotation)
+    def restore_annotation(annotation_id: str, body: ExpectedVersion):
+        return state.require_library().restore_annotation(annotation_id, body.expected_version)
 
     @app.get(prefix + "/papers/{paper_id}/text")
     def text(paper_id: str):

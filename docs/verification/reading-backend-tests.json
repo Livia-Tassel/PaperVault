@@ -1,0 +1,182 @@
+{
+  "recorded_at": "2026-10-09T09:28:32.816483+00:00",
+  "stage": "0.2 reading workspace backend, source implementation; not frozen package acceptance",
+  "final_unique_coverage": {
+    "all_backend_tests": 117,
+    "unit_and_integration_tests": 87,
+    "parser_tests": 30,
+    "real_docling_tests": 5,
+    "known_failing_tests": 0,
+    "basis": "A single complete release-gate run: 117 passed, zero skipped, including all five real CPU Docling cases."
+  },
+  "commands": [
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/unit tests/integration -q --basetemp=.test-data/reading-final-v02-9 --tb=short -o faulthandler_timeout=25",
+      "passed": 86,
+      "failed": 0,
+      "duration_seconds": 6.66,
+      "permissions": "require_escalated"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/unit/test_reading.py tests/integration/test_reading_api.py -q --basetemp=.test-data/reading-opened-v02-10 --tb=short",
+      "passed": 24,
+      "failed": 0,
+      "duration_seconds": 2.25,
+      "permissions": "require_escalated",
+      "reason": "New opened-history filtering; did not repeat the unaffected full suite."
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest tests/integration/test_reading_api.py -q --basetemp=.test-data/reading-scope-v02-8 --tb=short -o faulthandler_timeout=20",
+      "passed": 3,
+      "failed": 0,
+      "duration_seconds": 1.11,
+      "permissions": "require_escalated",
+      "reason": "Cross-library scope/CORS/TOCTOU regression, later included in the full run."
+    }
+  ],
+  "environment": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.12.8",
+    "fixtures": "Real generated CC0 PDF files in tests/fixtures and test-local ReportLab PDFs; no private papers."
+  },
+  "initial_execution_failures": [
+    {
+      "cause": "Default pytest numbered temp directory could not be created inside the Windows sandbox AC/Temp tree.",
+      "result": "39 fixture-setup errors before application assertions.",
+      "resolution": "Use a project-local .test-data basetemp; no production workaround."
+    },
+    {
+      "cause": "Windows sandbox TestClient/portal run stalled after unit tests completed.",
+      "result": "Interrupted that sandbox process.",
+      "resolution": "Host require_escalated run passed the API test and subsequent full suite; no API weakening."
+    }
+  ],
+  "implemented_safeguards": [
+    "Alembic 0002 adds library_meta, reading_states and annotations without migrating or rewriting existing user Paper.notes/Resource.notes.",
+    "Pre-upgrade SQLite backup retained; explicit BEGIN IMMEDIATE makes DDL and Alembic revision atomic even with sqlite3 legacy transaction mode; engine always disposed.",
+    "Independent reading-state writes do not modify parser metadata, manual_revisions or FTS; opened-history and unread/reading/read status remain separate.",
+    "Annotations retain multiple raw PDF-space locations, quote/body distinction, tags/color, optimistic versions and undoable soft deletion.",
+    "Page count, CropBox bounds, nonfinite values, positive rectangles and field lengths validated; small numerical boundary noise is clamped.",
+    "Mutation and note FTS updates commit together; full paper reindex/reparse retains note indexes; removed papers disappear from global annotation/search results; hard deletion cascades.",
+    "Backup/restore preserves live and deleted annotations, reading states and stable library identity; old 0001 backup ZIP can restore and then migrate.",
+    "Markdown/JSON and whole-paper ZIP exports include traceable annotations and reading state; standalone note export explicitly does not contain the PDF.",
+    "Optional percent-encoded X-PaperVault-Library checked under an asyncio.Lock shared with library switching/restoring; same-id restored copy rejects delayed writes with old path."
+  ],
+  "concurrency_tests": [
+    "Two reading writes using expected_version=0: exactly one commits.",
+    "Two note edits using the same version: exactly one commits.",
+    "Stale edit/delete/restore reports 409 with current entity.",
+    "Library-switched conflict reports 409 code=library_switched without misleading entity current.",
+    "Slow scoped mutation prevents the switch handler from entering until it completes; no deadlock."
+  ],
+  "failure_injection_tests": [
+    "Index failure rolls back annotation body and version.",
+    "Migration failure during CREATE TABLE annotations rolls back all prior 0002 DDL and can be retried.",
+    "Corrupt PDF may record touch/history but cannot save an invented page/anchor."
+  ],
+  "not_claimed": [
+    "Storage reparse-preservation unit tests use explicitly documented normalized parser fixtures; the separate five real Docling regression cases are recorded under release_gate.",
+    "No frozen-backend or Windows-installer acceptance in this report; packaging is controlled by root after source freeze."
+  ],
+  "existing_warnings": [
+    "1 existing Starlette/httpx TestClient deprecation warning.",
+    "5 Docling force_full_page_ocr option deprecation warnings.",
+    "5 Docling generate_table_images option deprecation warnings."
+  ],
+  "contract": "docs/READING_API.md",
+  "release_gate": {
+    "recorded_at": "2026-10-09T09:28:32.816483+00:00",
+    "summary": {
+      "tests": 117,
+      "passed": 117,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "pytest_summary": "117 passed, 11 warnings in 55.62s",
+    "execution": {
+      "command": [
+        "D:\\project\\PaperVault\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "tests",
+        "-v",
+        "--basetemp=.test-data/backend-release-v02-11",
+        "--junitxml=artifacts/backend-release-v02-junit.xml",
+        "--tb=short",
+        "-o",
+        "faulthandler_timeout=120"
+      ],
+      "started_at": "2026-10-09T09:26:48.652817+00:00",
+      "finished_at": "2026-10-09T09:27:46.605391+00:00",
+      "duration_seconds": 57.953,
+      "exit_code": 0,
+      "environment": {
+        "PAPERVAULT_TEST_MODELS": "D:\\project\\PaperVault\\.cache\\models",
+        "HF_HUB_OFFLINE": "1",
+        "TRANSFORMERS_OFFLINE": "1",
+        "PYTHONUTF8": "1"
+      },
+      "log": "artifacts/backend-release-v02.log",
+      "junit": "artifacts/backend-release-v02-junit.xml"
+    },
+    "real_docling": {
+      "required_environment_was_set": true,
+      "passed": 5,
+      "skipped": 0,
+      "offline": true,
+      "testcases": [
+        {
+          "name": "test_real_cpu_figures_tables_and_source_locations[academic.pdf]",
+          "seconds": 38.688
+        },
+        {
+          "name": "test_real_cpu_figures_tables_and_source_locations[two-column.pdf]",
+          "seconds": 3.157
+        },
+        {
+          "name": "test_real_embedded_image_and_merged_table_headers",
+          "seconds": 2.476
+        },
+        {
+          "name": "test_real_scanned_page_reports_no_ocr_without_fabricating_text",
+          "seconds": 1.557
+        },
+        {
+          "name": "test_real_figure_preserves_original_jpeg_bytes_when_match_is_unique",
+          "seconds": 1.611
+        }
+      ],
+      "model_manifest": "D:/project/PaperVault/.cache/models/papervault-models.json",
+      "model_manifest_sha256": "0667a164e1d7633187c24ba81302ca86bb50dff449f49c420e0217a6fd03fd45"
+    },
+    "lint": {
+      "command": ".venv/Scripts/python.exe -m ruff check backend tests scripts",
+      "exit_code": 0,
+      "output": "All checks passed!"
+    },
+    "dependencies": {
+      "docling-slim": "2.135.0",
+      "torch": "2.7.1+cpu",
+      "torchvision": "0.22.1+cpu",
+      "pypdfium2": "5.14.0",
+      "pypdf": "6.19.0",
+      "pytest": "9.1.1",
+      "ruff": "0.16.10"
+    },
+    "native_diagnostics": {
+      "matching_lines_in_retained_run_log": [],
+      "historical_investigation": "artifacts/native-exception-investigation.json",
+      "conclusion": "This run emitted no access violation/fatal diagnostic in the retained stdout/stderr log. The historical observation remains recorded and is not declared solved by this pass.",
+      "faulthandler_disabled": false
+    },
+    "warnings": [
+      "1 existing Starlette/httpx TestClient deprecation warning.",
+      "5 Docling force_full_page_ocr option deprecation warnings.",
+      "5 Docling generate_table_images option deprecation warnings."
+    ],
+    "production_code_changed_for_this_run": false,
+    "backend_service_port_used": false,
+    "frozen_package_validation": false
+  }
+}

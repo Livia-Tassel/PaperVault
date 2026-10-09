@@ -34,10 +34,16 @@ class Database:
                         backup.close()
             finally:
                 previous.close()
-        with engine.begin() as connection:
-            config.attributes["connection"] = connection
-            command.upgrade(config, "head")
-        engine.dispose()
+        try:
+            with engine.begin() as connection:
+                # Python sqlite3 legacy transaction mode otherwise executes DDL
+                # outside a real transaction. An interrupted upgrade must roll back
+                # its CREATE/ALTER statements together with the Alembic version.
+                connection.exec_driver_sql("BEGIN IMMEDIATE")
+                config.attributes["connection"] = connection
+                command.upgrade(config, "head")
+        finally:
+            engine.dispose()
         con = self.connect()
         try:
             con.execute("PRAGMA journal_mode=WAL")
