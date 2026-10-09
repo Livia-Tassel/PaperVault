@@ -25,6 +25,10 @@ from papervault.parsers.docling_parser import _caption_number
     ("figure", "An unnumbered diagram", ""),
     ("table", "Table of contents", ""),
     ("table", "Table XGBoost comparison", ""),
+    ("table", "Table 1.2a: Ablation", ""),
+    ("table", "Table A.1.2a: Ablation", ""),
+    ("figure", "Figure V-Net architecture.", ""),
+    ("table", "Table 1.Results without a separator space", "1"),
     ("figure", "Configuration 1 is shown", ""),
 ])
 def test_caption_number_preserves_printed_identifiers_without_guessing(kind, caption, expected):

@@ -33,7 +33,9 @@ def _caption_number(caption: str, kind: str) -> str:
     # being silently labeled 'X'. Missing captions still produce no number.
     identifier = r"(?:[A-Z][.\-]?\d+(?:[.\-]\d+)*|\d+(?:[.\-]\d+)*|[IVXLCDM]+)"
     panel = r"(?:\([a-z]\))?" if kind == "figure" else ""
-    match = re.search(r"(?<![A-Za-z])" + label + r"\s*(" + identifier + panel + r")(?![A-Za-z0-9])", caption, re.I)
+    # Atomic matching cannot backtrack '1.2a' into the misleading prefix '1'.
+    # A hyphenated word like 'V-Net' is not a Roman-numeral figure label.
+    match = re.search(r"(?<![A-Za-z])" + label + r"\s*((?>" + identifier + panel + r"))(?![A-Za-z0-9]|-[A-Za-z])", caption, re.I)
     return match[1] if match else ""
 
 
