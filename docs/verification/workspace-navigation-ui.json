@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "measured_at": "2026-10-09T09:20:43.082Z",
+  "runId": "1791537627922360",
+  "tests": [
+    {
+      "title": "deduplicated reader tabs, keyboard history, cached search and list controls",
+      "status": "passed",
+      "duration_ms": 3233
+    },
+    {
+      "title": "gallery restores paper/query/year filters, page two, scroll and focused resource after reading",
+      "status": "passed",
+      "duration_ms": 2792
+    },
+    {
+      "title": "a delayed paper B response never exposes an editable paper A snapshot",
+      "status": "passed",
+      "duration_ms": 1249
+    },
+    {
+      "title": "metadata and outline guards support cancel/discard/save, and failed saves do not navigate",
+      "status": "passed",
+      "duration_ms": 3067
+    },
+    {
+      "title": "resource close guard retains drafts on cancel/failure and only persists after successful save",
+      "status": "passed",
+      "duration_ms": 2011
+    }
+  ],
+  "fixture": {
+    "paper_a": "a029b850-f740-4ff2-aabb-04e5160f3da2",
+    "paper_b": "7797c977-4c22-47ea-a7dc-081e9c126c72",
+    "manual_figure_count": 49
+  },
+  "scope": "Real API and UI. GET B delay and one 503 per editor are explicit transport fault injection; no fabricated successful responses. No library switch or edits to pre-existing records."
+}

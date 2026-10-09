@@ -171,6 +171,111 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/papers/{paper_id}/reading-state": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Reading State */
+        get: operations["reading_state_api_v1_papers__paper_id__reading_state_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        /** Update Reading State */
+        patch: operations["update_reading_state_api_v1_papers__paper_id__reading_state_patch"];
+        trace?: never;
+    };
+    "/api/v1/annotations": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Annotations */
+        get: operations["annotations_api_v1_annotations_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/papers/{paper_id}/annotations": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Create Annotation */
+        post: operations["create_annotation_api_v1_papers__paper_id__annotations_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/annotations/export": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Annotation Export */
+        post: operations["annotation_export_api_v1_annotations_export_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/annotations/{annotation_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Annotation */
+        get: operations["annotation_api_v1_annotations__annotation_id__get"];
+        put?: never;
+        post?: never;
+        /** Delete Annotation */
+        delete: operations["delete_annotation_api_v1_annotations__annotation_id__delete"];
+        options?: never;
+        head?: never;
+        /** Update Annotation */
+        patch: operations["update_annotation_api_v1_annotations__annotation_id__patch"];
+        trace?: never;
+    };
+    "/api/v1/annotations/{annotation_id}/restore": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Restore Annotation */
+        post: operations["restore_annotation_api_v1_annotations__annotation_id__restore_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/papers/{paper_id}/text": {
         parameters: {
             query?: never;
@@ -501,6 +606,150 @@ export interface paths {
 export type webhooks = Record<string, never>;
 export interface components {
     schemas: {
+        /** Annotation */
+        Annotation: {
+            /**
+             * Title
+             * @default
+             */
+            title?: string;
+            /**
+             * Quote
+             * @default
+             */
+            quote?: string;
+            /**
+             * Body
+             * @default
+             */
+            body?: string;
+            /**
+             * Color
+             * @default amber
+             * @enum {string}
+             */
+            color?: "amber" | "green" | "blue" | "pink" | "purple";
+            /** Tags */
+            tags?: string[];
+            /** Locations */
+            locations?: components["schemas"]["AnnotationLocation"][];
+            /** Id */
+            id: string;
+            /** Paper Id */
+            paper_id: string;
+            /** Paper Title */
+            paper_title: string;
+            /**
+             * Kind
+             * @enum {string}
+             */
+            kind: "bookmark" | "highlight" | "note";
+            /** Version */
+            version: number;
+            /** Deleted */
+            deleted: boolean;
+            /** Created At */
+            created_at: string;
+            /** Updated At */
+            updated_at: string;
+        } & {
+            [key: string]: unknown;
+        };
+        /** AnnotationCreate */
+        AnnotationCreate: {
+            /**
+             * Title
+             * @default
+             */
+            title?: string;
+            /**
+             * Quote
+             * @default
+             */
+            quote?: string;
+            /**
+             * Body
+             * @default
+             */
+            body?: string;
+            /**
+             * Color
+             * @default amber
+             * @enum {string}
+             */
+            color?: "amber" | "green" | "blue" | "pink" | "purple";
+            /** Tags */
+            tags?: string[];
+            /** Locations */
+            locations?: components["schemas"]["AnnotationLocation"][];
+            /**
+             * Kind
+             * @enum {string}
+             */
+            kind: "bookmark" | "highlight" | "note";
+        };
+        /** AnnotationExportRequest */
+        AnnotationExportRequest: {
+            /** Ids */
+            ids?: string[];
+            /** Paper Id */
+            paper_id?: string | null;
+            /**
+             * Format
+             * @default markdown
+             * @enum {string}
+             */
+            format?: "markdown" | "json";
+        };
+        /** AnnotationList */
+        AnnotationList: {
+            /** Items */
+            items: components["schemas"]["Annotation"][];
+            /** Total */
+            total: number;
+        };
+        /** AnnotationLocation */
+        AnnotationLocation: {
+            /** Page Index */
+            page_index: number;
+            /** Bbox */
+            bbox?: [
+                number,
+                number,
+                number,
+                number
+            ] | null;
+        };
+        /** AnnotationPatch */
+        AnnotationPatch: {
+            /**
+             * Title
+             * @default
+             */
+            title?: string;
+            /**
+             * Quote
+             * @default
+             */
+            quote?: string;
+            /**
+             * Body
+             * @default
+             */
+            body?: string;
+            /**
+             * Color
+             * @default amber
+             * @enum {string}
+             */
+            color?: "amber" | "green" | "blue" | "pink" | "purple";
+            /** Tags */
+            tags?: string[];
+            /** Locations */
+            locations?: components["schemas"]["AnnotationLocation"][];
+            /** Expected Version */
+            expected_version: number;
+        };
         /** BackupRequest */
         BackupRequest: {
             /** Destination */
@@ -536,6 +785,11 @@ export interface components {
              * @default
              */
             caption?: string;
+        };
+        /** ExpectedVersion */
+        ExpectedVersion: {
+            /** Expected Version */
+            expected_version: number;
         };
         /** ExportRequest */
         ExportRequest: {
@@ -576,6 +830,19 @@ export interface components {
              */
             recursive?: boolean;
         };
+        /** LibraryInfo */
+        LibraryInfo: {
+            /** Id */
+            id?: string | null;
+            /** Path */
+            path: string | null;
+            /** Paper Count */
+            paper_count: number;
+            /** Figure Count */
+            figure_count: number;
+            /** Table Count */
+            table_count: number;
+        };
         /** LibraryOpen */
         LibraryOpen: {
             /** Path */
@@ -608,6 +875,19 @@ export interface components {
              * @default 0
              */
             table_count?: number;
+            /**
+             * Reading Status
+             * @default unread
+             * @enum {string}
+             */
+            reading_status?: "unread" | "reading" | "read";
+            /** Last Opened */
+            last_opened?: string | null;
+            /**
+             * Annotation Count
+             * @default 0
+             */
+            annotation_count?: number;
         } & {
             [key: string]: unknown;
         };
@@ -648,6 +928,72 @@ export interface components {
         PathRequest: {
             /** Path */
             path: string;
+        };
+        /** ReadingPatch */
+        ReadingPatch: {
+            /** Expected Version */
+            expected_version: number;
+            /** Page Index */
+            page_index?: number;
+            /** Anchor */
+            anchor?: [
+                number,
+                number
+            ] | null;
+            /** Scale */
+            scale?: number;
+            /**
+             * Rotation
+             * @enum {integer}
+             */
+            rotation?: 0 | 90 | 180 | 270;
+            /**
+             * Fit Mode
+             * @enum {string}
+             */
+            fit_mode?: "custom" | "width" | "page";
+            /**
+             * Status
+             * @enum {string}
+             */
+            status?: "unread" | "reading" | "read";
+            /**
+             * Touch
+             * @default false
+             */
+            touch?: boolean;
+        };
+        /** ReadingState */
+        ReadingState: {
+            /** Paper Id */
+            paper_id: string;
+            /** Version */
+            version: number;
+            /** Page Index */
+            page_index: number;
+            /** Anchor */
+            anchor: [
+                number,
+                number
+            ] | null;
+            /** Scale */
+            scale: number;
+            /** Rotation */
+            rotation: number;
+            /**
+             * Fit Mode
+             * @enum {string}
+             */
+            fit_mode: "custom" | "width" | "page";
+            /**
+             * Status
+             * @enum {string}
+             */
+            status: "unread" | "reading" | "read";
+            /** Last Opened */
+            last_opened: string | null;
+            /** Updated At */
+            updated_at: string | null;
         };
         /** Resource */
         Resource: {
@@ -802,7 +1148,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": unknown;
+                    "application/json": components["schemas"]["LibraryInfo"];
                 };
             };
         };
@@ -826,7 +1172,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": unknown;
+                    "application/json": components["schemas"]["LibraryInfo"];
                 };
             };
             /** @description Validation Error */
@@ -851,6 +1197,8 @@ export interface operations {
                 sort?: string;
                 offset?: number;
                 limit?: number;
+                reading_status?: string | null;
+                opened?: boolean | null;
             };
             header?: never;
             path?: never;
@@ -1092,6 +1440,311 @@ export interface operations {
                 };
                 content: {
                     "application/json": unknown;
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    reading_state_api_v1_papers__paper_id__reading_state_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                paper_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ReadingState"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    update_reading_state_api_v1_papers__paper_id__reading_state_patch: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                paper_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["ReadingPatch"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ReadingState"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    annotations_api_v1_annotations_get: {
+        parameters: {
+            query?: {
+                q?: string;
+                paper_id?: string | null;
+                kind?: string | null;
+                tag?: string | null;
+                offset?: number;
+                limit?: number;
+                deleted?: boolean;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["AnnotationList"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    create_annotation_api_v1_papers__paper_id__annotations_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                paper_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["AnnotationCreate"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Annotation"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    annotation_export_api_v1_annotations_export_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["AnnotationExportRequest"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": unknown;
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    annotation_api_v1_annotations__annotation_id__get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                annotation_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Annotation"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    delete_annotation_api_v1_annotations__annotation_id__delete: {
+        parameters: {
+            query: {
+                expected_version: number;
+            };
+            header?: never;
+            path: {
+                annotation_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Annotation"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    update_annotation_api_v1_annotations__annotation_id__patch: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                annotation_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["AnnotationPatch"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Annotation"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    restore_annotation_api_v1_annotations__annotation_id__restore_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                annotation_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["ExpectedVersion"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Annotation"];
                 };
             };
             /** @description Validation Error */

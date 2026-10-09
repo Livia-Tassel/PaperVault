@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "fixture": "D:\\project\\PaperVault\\.test-data\\workspace-native\\close-guard-ukfnv2x5",
+  "app": "D:\\project\\PaperVault\\apps\\desktop\\src-tauri\\target\\x86_64-pc-windows-msvc\\debug\\papervault.exe",
+  "phases": [
+    "cancel_keeps_window_sidecar_and_draft",
+    "save_then_close_persists_draft_and_reading_progress",
+    "discard_closes_without_overwriting_saved_note"
+  ]
+}

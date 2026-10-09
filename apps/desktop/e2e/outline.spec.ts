@@ -19,10 +19,11 @@ test('chapter and reference corrections preserve location and survive a real sav
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
   await page.goto('/');
+  await page.getByRole('button', { name: '论文库', exact: true }).click();
   await page.getByLabel('搜索论文', { exact: true }).fill('academic.pdf');
   await expect(page.locator('.paper-primary')).toHaveCount(1);
   await page.locator('.paper-primary').click();
-  await page.getByRole('button', { name: '目录', exact: true }).click();
+  await page.getByRole('tablist', { name: '论文面板' }).getByRole('tab', { name: '目录', exact: true }).click();
   await page.getByRole('button', { name: '编辑目录与参考文献', exact: true }).click();
   await page.getByRole('textbox', { name: '章节 1 标题', exact: true }).fill('E2E 修订章节');
   await page.getByRole('spinbutton', { name: '章节 1 层级', exact: true }).fill('2');
@@ -46,10 +47,13 @@ test('chapter and reference corrections preserve location and survive a real sav
   expect(updated.sections.at(-1).location).toEqual({ page_index: 1, bbox: null });
   expect(updated.references).toEqual(correctedReferences);
   await page.reload();
+  await expect(page.getByRole('region', { name: 'PDF 阅读器', exact: true })).toBeVisible();
+  await expect(page.getByRole('tablist', { name: '打开的论文' }).getByRole('tab', { selected: true })).toContainText(original.title || original.filename);
+  await page.getByRole('button', { name: '论文库', exact: true }).click();
   await page.getByLabel('搜索论文', { exact: true }).fill('academic.pdf');
   await expect(page.locator('.paper-primary')).toHaveCount(1);
   await page.locator('.paper-primary').click();
-  await page.getByRole('button', { name: '目录', exact: true }).click();
+  await page.getByRole('tablist', { name: '论文面板' }).getByRole('tab', { name: '目录', exact: true }).click();
   await expect(page.getByRole('button', { name: 'E2E 修订章节', exact: true })).toBeVisible();
   await expect(page.locator('.outline')).toContainText('人工修订参考文献 B。');
   await page.getByRole('button', { name: addedTitle, exact: true }).click();
@@ -75,9 +79,10 @@ test('paper detail pagination can reach resource 201 in the real 1000-image gall
   test.skip(!galleryApi, 'Requires the isolated, explicitly synthetic gallery benchmark backend.');
   await page.route('http://127.0.0.1:8765/api/v1/**', route => route.continue({ url: route.request().url().replace(api, galleryApi!) }));
   await page.goto('/');
+  await page.getByRole('button', { name: '论文库', exact: true }).click();
   await expect(page.locator('.paper-primary')).toHaveCount(1);
   await page.locator('.paper-primary').click();
-  await page.getByRole('button', { name: '图片 1000', exact: true }).click();
+  await page.getByRole('tablist', { name: '论文面板' }).getByRole('tab', { name: '图片 1000', exact: true }).click();
   await expect(page.locator('.detail-resource')).toHaveCount(24);
   for (let index = 1; index <= 8; index++) {
     const response = page.waitForResponse(value => value.url().includes(`/resources?`) && value.url().includes(`offset=${index * 24}`));

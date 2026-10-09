@@ -69,6 +69,9 @@ test('real local library import, PDF selection, caption search, export and reloa
   await expect(page.locator('.search-result mark').first()).toBeVisible();
   await page.screenshot({ path: info.outputPath('search-results.png'), fullPage: true });
   await page.reload();
+  await expect(page.getByRole('heading', { name: '搜索', exact: true })).toBeVisible();
+  await expect(page.getByLabel('全局全文搜索', { exact: true })).toHaveValue('深度 KV');
+  await page.getByRole('button', { name: '论文库', exact: true }).click();
   await expect(page.getByRole('heading', { name: '论文库', exact: true })).toBeVisible();
   await expect(page.locator('.paper-item')).not.toHaveCount(0);
   const resources = await (await request.get(`${apiUrl}/resources?paper_id=${paper.id}`, { headers })).json();
@@ -95,10 +98,12 @@ test('real Docling figures and table editing survive export', async ({ page, req
   await page.locator('.resource-card-image').first().click();
   await expect(page.locator('.table-scroll table')).toBeVisible();
   await page.getByRole('button', { name: '编辑单元格 / 行列', exact: true }).click();
-  await page.getByLabel('第 2 行第 1 列', { exact: true }).fill('TTFT 已人工验证');
+  const editedCell = `TTFT 已人工验证 ${Date.now()}`;
+  await page.getByLabel('第 2 行第 1 列', { exact: true }).fill(editedCell);
   await page.getByRole('button', { name: '结束编辑', exact: true }).click();
+  await expect(page.getByRole('button', { name: '保存人工修改', exact: true })).toBeEnabled();
   await page.getByRole('button', { name: '保存人工修改', exact: true }).click();
-  await expect(page.locator('.table-scroll')).toContainText('TTFT 已人工验证');
+  await expect(page.locator('.table-scroll')).toContainText(editedCell);
   const downloading = page.waitForEvent('download');
   await page.getByRole('button', { name: 'CSV', exact: true }).click();
   const csv = await downloading;
@@ -113,6 +118,9 @@ test('real Docling figures and table editing survive export', async ({ page, req
 test('folders, notes, tags, theme and complete backup restore use the real API', async ({ page, request }, info) => {
   const name = `E2E 研究 ${Date.now()}`;
   await page.goto('/');
+  await page.getByRole('button', { name: '论文库', exact: true }).click();
+  await page.getByLabel('搜索论文', { exact: true }).fill(path.basename(fixture));
+  await expect(page.locator('.paper-primary')).toHaveCount(1);
   await expect(page.locator('.paper-item')).not.toHaveCount(0);
   await page.getByRole('button', { name: '新建收藏夹', exact: true }).click();
   await page.getByLabel('收藏夹名称', { exact: true }).fill(name);
@@ -150,6 +158,10 @@ test('folders, notes, tags, theme and complete backup restore use the real API',
   const libraryData = await (await request.get(`${apiUrl}/library`, { headers })).json();
   expect(path.normalize(libraryData.path)).toBe(path.normalize(target));
   await page.reload();
+  await expect(page.getByRole('tablist', { name: '打开的论文' }).getByRole('tab', { name: '返回工作区', exact: true })).toHaveAttribute('aria-selected', 'true');
+  await page.getByRole('button', { name: '论文库', exact: true }).click();
+  await page.getByLabel('搜索论文', { exact: true }).fill(path.basename(fixture));
+  await expect(page.locator('.paper-primary')).toHaveCount(1);
   await expect(page.locator('.paper-item')).not.toHaveCount(0);
   await page.locator('.paper-primary').first().click();
   await expect(page.getByRole('textbox', { name: '个人备注', exact: true })).toHaveValue('真实端到端持久化备注');

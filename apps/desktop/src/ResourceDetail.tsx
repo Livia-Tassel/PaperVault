@@ -1,28 +1,62 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Copy, Crop, Download, ExternalLink, Image, Plus, Save, Trash2 } from 'lucide-react';
-import { copyImage, copyText, download, updateResource } from './api';
+import { api, copyImage, copyText, exportAssets, updateResource } from './api';
 import { useData } from './hooks';
-import { changedFields } from './edits';
+import { useDraftGuard, useEditGuard } from './EditGuard';
+import { changedFields, mergeUntouchedFields } from './edits';
 import { AssetImage, ErrorMessage, Field, Modal, Spinner, Warnings, filename, splitTags } from './ui';
 import type { Resource, TableData } from './types';
 
 export type Run = (operation: () => Promise<unknown>, success?: string) => Promise<boolean>;
 export function ResourceDetail({ id, revision, onClose, onLocate, onCrop, run, onChanged }: { id: string; revision: number; onClose: () => void; onLocate: (resource: Resource) => void; onCrop: (resource: Resource) => void; run: Run; onChanged: () => void }) {
+  const guard = useEditGuard();
   const { data, error } = useData<Resource>(`/resources/${id}`, revision);
-  return <Modal title={data ? (data.name || `${data.kind === 'figure' ? 'Figure' : 'Table'} ${data.number || ''}`) : '资源详情'} onClose={onClose} wide>
-    <ErrorMessage message={error} />{!data && !error && <Spinner />}{data && <ResourceContent key={`${id}-${revision}`} resource={data} revision={revision} onLocate={onLocate} onCrop={onCrop} run={run} onChanged={onChanged} />}
+  return <Modal title={data ? (data.name || `${data.kind === 'figure' ? 'Figure' : 'Table'} ${data.number || ''}`) : '资源详情'} onClose={() => { void guard.attempt(onClose, [`resource:${id}`]); }} wide>
+    <ErrorMessage message={error} />{!data && !error && <Spinner />}{data && <ResourceContent key={id} resource={data} revision={revision} onLocate={onLocate} onCrop={onCrop} run={run} onChanged={onChanged} />}
   </Modal>;
 }
 function ResourceContent({ resource: r, revision, onLocate, onCrop, run, onChanged }: { resource: Resource; revision: number; onLocate: (resource: Resource) => void; onCrop: (resource: Resource) => void; run: Run; onChanged: () => void }) {
-  const [name, setName] = useState(r.name || ''); const [caption, setCaption] = useState(r.caption || '');
-  const [notes, setNotes] = useState(r.notes || ''); const [tags, setTags] = useState((r.tags || []).join(', '));
+  const guard = useEditGuard();
+  const incomingDraft = (value: Resource) => ({ name: value.name || '', caption: value.caption || '', notes: value.notes || '', tags: (value.tags || []).join(', ') });
+  const [draft, setDraft] = useState(() => incomingDraft(r));
+  const original = useRef(draft);
+  const { name, caption, notes, tags } = draft;
+  const setName = (value: string) => setDraft(current => ({ ...current, name: value }));
+  const setCaption = (value: string) => setDraft(current => ({ ...current, caption: value }));
+  const setNotes = (value: string) => setDraft(current => ({ ...current, notes: value }));
+  const setTags = (value: string) => setDraft(current => ({ ...current, tags: value }));
   const [table, setTable] = useState<TableData | null>(r.table); const [editing, setEditing] = useState(false);
-  const [tableDirty, setTableDirty] = useState(false);
+  const [tableDirty, setTableDirty] = useState(false); const tableDirtyRef = useRef(tableDirty); tableDirtyRef.current = tableDirty;
   const [dpi, setDpi] = useState(300); const [saving, setSaving] = useState(false);
   const [preview, setPreview] = useState<'table' | 'image'>(r.kind === 'table' && r.table?.rows?.length ? 'table' : 'image');
-  const save = async () => { setSaving(true); const values = { name, caption, notes, tags: splitTags(tags) }; const previous = { name: r.name || '', caption: r.caption || '', notes: r.notes || '', tags: r.tags || [] }; const updates = changedFields(previous, values); const ok = await run(() => updateResource(r.id, { ...updates, ...(tableDirty && table ? { table } : {}) }), '人工修改已保存'); setSaving(false); if (ok) { setEditing(false); onChanged(); } };
-  const exportFile = async (format: string) => { await run(() => download(`/resources/${r.id}/files/${format}${format === 'png' ? `?dpi=${dpi}` : ''}`, `${filename(name || r.number, r.kind)}.${format}`), '资源已导出'); };
-  return <div className="resource-detail">
+  useEffect(() => {
+    const incoming = incomingDraft(r), baseline = original.current;
+    setDraft(current => mergeUntouchedFields(baseline, current, incoming)); original.current = incoming;
+    if (!tableDirtyRef.current) setTable(r.table);
+  }, [r]);
+  const values = (value: typeof draft) => ({ ...value, tags: splitTags(value.tags) });
+  const dirty = tableDirty || Object.keys(changedFields(values(original.current), values(draft))).length > 0;
+  const save = async () => {
+    if (saving) return false;
+    setSaving(true);
+    const sent = draft;
+    const updates = changedFields(values(original.current), values(sent));
+    const ok = await run(async () => {
+      const saved = await updateResource(r.id, { ...updates, ...(tableDirty && table ? { table } : {}) });
+      const next = incomingDraft(saved); original.current = next;
+      setDraft(current => mergeUntouchedFields(sent, current, next)); setTable(saved.table); setTableDirty(false);
+    }, '人工修改已保存');
+    setSaving(false); if (ok) { setEditing(false); onChanged(); } return ok;
+  };
+  useDraftGuard({ id: `resource:${r.id}`, label: '资源修改', dirty, priority: 100, onSave: save,
+    onDiscard: () => { setDraft({ ...original.current }); setTable(r.table); setTableDirty(false); setEditing(false); } });
+  const exportFile = (format: 'png' | 'csv' | 'html') => guard.attempt(async () => {
+    await run(async () => {
+      const latest = await api<Resource>(`/resources/${r.id}`);
+      return exportAssets({ paper_ids: [], resource_ids: [r.id], format, dpi: dpi as 150 | 300 | 600 }, `${filename(latest.name || latest.number, r.kind)}.${format}`);
+    }, '资源已导出');
+  }, [`resource:${r.id}`]);
+  return <fieldset className="resource-detail editor-fields" disabled={saving}>
     <div className="resource-main"><div className="resource-actions"><div className="segmented">{r.kind === 'table' && <button className={preview === 'table' ? 'selected' : ''} onClick={() => setPreview('table')}>表格内容</button>}<button className={preview === 'image' ? 'selected' : ''} onClick={() => setPreview('image')}><Image size={14} />原始截图</button></div><button className="button secondary small" onClick={() => onLocate(r)}><ExternalLink size={15} />查看原文</button></div>
       <div className={`resource-preview ${preview === 'table' ? 'table-preview' : ''}`}>{preview === 'table' ? table ? <TableEditor table={table} editable={editing} onChange={value => { setTable(value); setTableDirty(true); }} /> : <p className="muted">未识别到结构化单元格，请查看原始截图。</p> : <AssetImage id={r.id} revision={revision} alt={r.caption || r.name} />}</div>
       {r.kind === 'table' && <div className="table-edit-bar"><button className="button secondary small" disabled={!table} onClick={() => { setPreview('table'); setEditing(!editing); }}>{editing ? '结束编辑' : '编辑单元格 / 行列'}</button><span className="muted">CSV 不保留合并单元格。</span></div>}
@@ -30,9 +64,9 @@ function ResourceContent({ resource: r, revision, onLocate, onCrop, run, onChang
       <div className="export-bar"><select aria-label="图片导出分辨率" value={dpi} onChange={e => setDpi(Number(e.target.value))}><option value="150">150 DPI</option><option value="300">300 DPI</option><option value="600">600 DPI</option></select><button className="button secondary small" onClick={() => void exportFile('png')}><Download size={15} />PNG</button>{r.kind === 'table' && <><button className="button secondary small" onClick={() => void exportFile('csv')}><Download size={15} />CSV</button><button className="button secondary small" onClick={() => void exportFile('html')}><Download size={15} />HTML</button></>}<button className="button secondary small" onClick={() => void run(() => preview === 'table' && table ? copyText(table.rows.map(row => row.join('\t')).join('\n')) : copyImage(`/resources/${r.id}/files/png`), '已复制到剪贴板')}><Copy size={15} />复制{preview === 'table' ? '表格' : '图片'}</button><button className="button secondary small" onClick={() => onCrop(r)}><Crop size={15} />调整裁剪</button></div>
     </div>
     <aside className="resource-meta"><div className="muted">来源论文</div><button className="source-paper" onClick={() => onLocate(r)}>{r.paper_title || '查看原始论文'}<ExternalLink size={14} /></button><div className="source-location">{r.locations?.length ? r.locations.map(l => `第 ${l.page_index + 1} 页`).join('、') : '位置未知'}</div>
-      <Field label="资源名称"><input value={name} onChange={e => setName(e.target.value)} /></Field><Field label="Caption"><textarea rows={4} value={caption} onChange={e => setCaption(e.target.value)} /></Field><Field label="标签（逗号分隔）"><input value={tags} onChange={e => setTags(e.target.value)} placeholder="架构图, 实验结果" /></Field><Field label="个人备注"><textarea rows={3} value={notes} onChange={e => setNotes(e.target.value)} placeholder="备注" /></Field><button className="button primary" disabled={saving} onClick={() => void save()}><Save size={16} />{saving ? '保存中…' : '保存人工修改'}</button>
+      <Field label="资源名称"><input value={name} onChange={e => setName(e.target.value)} /></Field><Field label="Caption"><textarea rows={4} value={caption} onChange={e => setCaption(e.target.value)} /></Field><Field label="标签（逗号分隔）"><input value={tags} onChange={e => setTags(e.target.value)} placeholder="架构图, 实验结果" /></Field><Field label="个人备注"><textarea rows={3} value={notes} onChange={e => setNotes(e.target.value)} placeholder="备注" /></Field><button className="button primary" disabled={saving || !dirty} onClick={() => void save()}><Save size={16} />{saving ? '保存中…' : '保存人工修改'}</button>
     </aside>
-  </div>;
+  </fieldset>;
 }
 export function TableEditor({ table, editable = false, onChange }: { table: TableData; editable?: boolean; onChange?: (table: TableData) => void }) {
   const rows = table.rows || [];

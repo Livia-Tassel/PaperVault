@@ -1,0 +1,730 @@
+{
+  "devicePixelRatio": 2,
+  "pageCount": 81,
+  "maximumAllowedBitmapPixels": 16777216,
+  "maximumAllowedBitmapSide": 8192,
+  "memoryScope": "Entire Playwright browser process tree from CDP SystemInfo. Sampled working set, not a hard process memory bound. Canvas bytes estimate RGBA backing only.",
+  "peakSampledWorkingSetBytes": 1151082496,
+  "peakSampledPrivateBytes": 829542400,
+  "peakCanvasPixels": 33544800,
+  "peakEstimatedBitmapBytes": 134179200,
+  "samples": [
+    {
+      "label": "baseline-100-percent",
+      "pages": [
+        {
+          "page": 1,
+          "width": 1224,
+          "height": 1584,
+          "pixels": 1938816,
+          "ratio": 2,
+          "reduced": false
+        },
+        {
+          "page": 2,
+          "width": 1224,
+          "height": 1584,
+          "pixels": 1938816,
+          "ratio": 2,
+          "reduced": false
+        }
+      ],
+      "totalPixels": 3877632,
+      "heap": 38479964,
+      "estimatedBitmapBytes": 15510528,
+      "processMemory": [
+        {
+          "Id": 31580,
+          "WorkingSet64": 32104448,
+          "PrivateMemorySize64": 10354688,
+          "PeakWorkingSet64": 32317440
+        },
+        {
+          "Id": 1116,
+          "WorkingSet64": 58454016,
+          "PrivateMemorySize64": 27607040,
+          "PeakWorkingSet64": 69222400
+        },
+        {
+          "Id": 2188,
+          "WorkingSet64": 23216128,
+          "PrivateMemorySize64": 7995392,
+          "PeakWorkingSet64": 23220224
+        },
+        {
+          "Id": 5216,
+          "WorkingSet64": 213061632,
+          "PrivateMemorySize64": 164155392,
+          "PeakWorkingSet64": 231251968
+        },
+        {
+          "Id": 18428,
+          "WorkingSet64": 215080960,
+          "PrivateMemorySize64": 95305728,
+          "PeakWorkingSet64": 248537088
+        },
+        {
+          "Id": 28336,
+          "WorkingSet64": 38248448,
+          "PrivateMemorySize64": 17408000,
+          "PeakWorkingSet64": 38252544
+        },
+        {
+          "Id": 29424,
+          "WorkingSet64": 201850880,
+          "PrivateMemorySize64": 182595584,
+          "PeakWorkingSet64": 205381632
+        },
+        {
+          "Id": 29532,
+          "WorkingSet64": 25202688,
+          "PrivateMemorySize64": 8400896,
+          "PeakWorkingSet64": 25202688
+        }
+      ]
+    },
+    {
+      "label": "800-percent-page-1",
+      "pages": [
+        {
+          "page": 1,
+          "width": 3600,
+          "height": 4659,
+          "pixels": 16772400,
+          "ratio": 0.7354136035484716,
+          "reduced": true
+        }
+      ],
+      "totalPixels": 16772400,
+      "heap": 49234534,
+      "estimatedBitmapBytes": 67089600,
+      "processMemory": [
+        {
+          "Id": 31580,
+          "WorkingSet64": 32104448,
+          "PrivateMemorySize64": 10354688,
+          "PeakWorkingSet64": 32317440
+        },
+        {
+          "Id": 1116,
+          "WorkingSet64": 59109376,
+          "PrivateMemorySize64": 27828224,
+          "PeakWorkingSet64": 69222400
+        },
+        {
+          "Id": 2188,
+          "WorkingSet64": 23216128,
+          "PrivateMemorySize64": 7995392,
+          "PeakWorkingSet64": 23220224
+        },
+        {
+          "Id": 5216,
+          "WorkingSet64": 228298752,
+          "PrivateMemorySize64": 174284800,
+          "PeakWorkingSet64": 231251968
+        },
+        {
+          "Id": 12576,
+          "WorkingSet64": 23056384,
+          "PrivateMemorySize64": 7872512,
+          "PeakWorkingSet64": 23056384
+        },
+        {
+          "Id": 18428,
+          "WorkingSet64": 215941120,
+          "PrivateMemorySize64": 94228480,
+          "PeakWorkingSet64": 248537088
+        },
+        {
+          "Id": 28336,
+          "WorkingSet64": 38248448,
+          "PrivateMemorySize64": 17408000,
+          "PeakWorkingSet64": 38252544
+        },
+        {
+          "Id": 29424,
+          "WorkingSet64": 352235520,
+          "PrivateMemorySize64": 332722176,
+          "PeakWorkingSet64": 354119680
+        },
+        {
+          "Id": 29532,
+          "WorkingSet64": 25202688,
+          "PrivateMemorySize64": 8400896,
+          "PeakWorkingSet64": 25202688
+        }
+      ]
+    },
+    {
+      "label": "800-percent-page-2",
+      "pages": [
+        {
+          "page": 1,
+          "width": 3600,
+          "height": 4659,
+          "pixels": 16772400,
+          "ratio": 0.7354136035484716,
+          "reduced": true
+        },
+        {
+          "page": 2,
+          "width": 3600,
+          "height": 4659,
+          "pixels": 16772400,
+          "ratio": 0.7354136035484716,
+          "reduced": true
+        }
+      ],
+      "totalPixels": 33544800,
+      "heap": 40733659,
+      "estimatedBitmapBytes": 134179200,
+      "processMemory": [
+        {
+          "Id": 31580,
+          "WorkingSet64": 32104448,
+          "PrivateMemorySize64": 10354688,
+          "PeakWorkingSet64": 32317440
+        },
+        {
+          "Id": 1116,
+          "WorkingSet64": 59502592,
+          "PrivateMemorySize64": 27971584,
+          "PeakWorkingSet64": 69222400
+        },
+        {
+          "Id": 2188,
+          "WorkingSet64": 23625728,
+          "PrivateMemorySize64": 8015872,
+          "PeakWorkingSet64": 23625728
+        },
+        {
+          "Id": 5216,
+          "WorkingSet64": 237309952,
+          "PrivateMemorySize64": 183660544,
+          "PeakWorkingSet64": 238211072
+        },
+        {
+          "Id": 12576,
+          "WorkingSet64": 23052288,
+          "PrivateMemorySize64": 7868416,
+          "PeakWorkingSet64": 23056384
+        },
+        {
+          "Id": 18428,
+          "WorkingSet64": 215330816,
+          "PrivateMemorySize64": 93466624,
+          "PeakWorkingSet64": 248537088
+        },
+        {
+          "Id": 28336,
+          "WorkingSet64": 38248448,
+          "PrivateMemorySize64": 17408000,
+          "PeakWorkingSet64": 38252544
+        },
+        {
+          "Id": 29424,
+          "WorkingSet64": 350871552,
+          "PrivateMemorySize64": 331374592,
+          "PeakWorkingSet64": 354119680
+        },
+        {
+          "Id": 29532,
+          "WorkingSet64": 25202688,
+          "PrivateMemorySize64": 8400896,
+          "PeakWorkingSet64": 25202688
+        }
+      ]
+    },
+    {
+      "label": "800-percent-page-10",
+      "pages": [
+        {
+          "page": 9,
+          "width": 3600,
+          "height": 4659,
+          "pixels": 16772400,
+          "ratio": 0.7354136035484716,
+          "reduced": true
+        },
+        {
+          "page": 10,
+          "width": 3600,
+          "height": 4659,
+          "pixels": 16772400,
+          "ratio": 0.7354136035484716,
+          "reduced": true
+        }
+      ],
+      "totalPixels": 33544800,
+      "heap": 38812008,
+      "estimatedBitmapBytes": 134179200,
+      "processMemory": [
+        {
+          "Id": 31580,
+          "WorkingSet64": 32104448,
+          "PrivateMemorySize64": 10354688,
+          "PeakWorkingSet64": 32317440
+        },
+        {
+          "Id": 1116,
+          "WorkingSet64": 59539456,
+          "PrivateMemorySize64": 27836416,
+          "PeakWorkingSet64": 69222400
+        },
+        {
+          "Id": 2188,
+          "WorkingSet64": 23625728,
+          "PrivateMemorySize64": 8015872,
+          "PeakWorkingSet64": 23625728
+        },
+        {
+          "Id": 5216,
+          "WorkingSet64": 239624192,
+          "PrivateMemorySize64": 185593856,
+          "PeakWorkingSet64": 239624192
+        },
+        {
+          "Id": 12576,
+          "WorkingSet64": 23052288,
+          "PrivateMemorySize64": 7868416,
+          "PeakWorkingSet64": 23056384
+        },
+        {
+          "Id": 18428,
+          "WorkingSet64": 215998464,
+          "PrivateMemorySize64": 93822976,
+          "PeakWorkingSet64": 248537088
+        },
+        {
+          "Id": 28336,
+          "WorkingSet64": 38248448,
+          "PrivateMemorySize64": 17408000,
+          "PeakWorkingSet64": 38252544
+        },
+        {
+          "Id": 29424,
+          "WorkingSet64": 363118592,
+          "PrivateMemorySize64": 343695360,
+          "PeakWorkingSet64": 363118592
+        },
+        {
+          "Id": 29532,
+          "WorkingSet64": 25202688,
+          "PrivateMemorySize64": 8400896,
+          "PeakWorkingSet64": 25202688
+        }
+      ]
+    },
+    {
+      "label": "800-percent-page-30",
+      "pages": [
+        {
+          "page": 29,
+          "width": 3600,
+          "height": 4659,
+          "pixels": 16772400,
+          "ratio": 0.7354136035484716,
+          "reduced": true
+        },
+        {
+          "page": 30,
+          "width": 3600,
+          "height": 4659,
+          "pixels": 16772400,
+          "ratio": 0.7354136035484716,
+          "reduced": true
+        }
+      ],
+      "totalPixels": 33544800,
+      "heap": 38450640,
+      "estimatedBitmapBytes": 134179200,
+      "processMemory": [
+        {
+          "Id": 31580,
+          "WorkingSet64": 32104448,
+          "PrivateMemorySize64": 10354688,
+          "PeakWorkingSet64": 32317440
+        },
+        {
+          "Id": 1116,
+          "WorkingSet64": 59568128,
+          "PrivateMemorySize64": 27832320,
+          "PeakWorkingSet64": 69222400
+        },
+        {
+          "Id": 2188,
+          "WorkingSet64": 23625728,
+          "PrivateMemorySize64": 8015872,
+          "PeakWorkingSet64": 23625728
+        },
+        {
+          "Id": 5216,
+          "WorkingSet64": 241111040,
+          "PrivateMemorySize64": 185872384,
+          "PeakWorkingSet64": 241111040
+        },
+        {
+          "Id": 12576,
+          "WorkingSet64": 23052288,
+          "PrivateMemorySize64": 7868416,
+          "PeakWorkingSet64": 23056384
+        },
+        {
+          "Id": 18428,
+          "WorkingSet64": 215805952,
+          "PrivateMemorySize64": 93442048,
+          "PeakWorkingSet64": 248537088
+        },
+        {
+          "Id": 28336,
+          "WorkingSet64": 38248448,
+          "PrivateMemorySize64": 17408000,
+          "PeakWorkingSet64": 38252544
+        },
+        {
+          "Id": 29424,
+          "WorkingSet64": 429228032,
+          "PrivateMemorySize64": 409907200,
+          "PeakWorkingSet64": 431157248
+        },
+        {
+          "Id": 29532,
+          "WorkingSet64": 25202688,
+          "PrivateMemorySize64": 8400896,
+          "PeakWorkingSet64": 25202688
+        }
+      ]
+    },
+    {
+      "label": "800-percent-page-60",
+      "pages": [
+        {
+          "page": 59,
+          "width": 3600,
+          "height": 4659,
+          "pixels": 16772400,
+          "ratio": 0.7354136035484716,
+          "reduced": true
+        },
+        {
+          "page": 60,
+          "width": 3600,
+          "height": 4659,
+          "pixels": 16772400,
+          "ratio": 0.7354136035484716,
+          "reduced": true
+        }
+      ],
+      "totalPixels": 33544800,
+      "heap": 39192408,
+      "estimatedBitmapBytes": 134179200,
+      "processMemory": [
+        {
+          "Id": 31580,
+          "WorkingSet64": 32104448,
+          "PrivateMemorySize64": 10354688,
+          "PeakWorkingSet64": 32317440
+        },
+        {
+          "Id": 1116,
+          "WorkingSet64": 59650048,
+          "PrivateMemorySize64": 27848704,
+          "PeakWorkingSet64": 69222400
+        },
+        {
+          "Id": 2188,
+          "WorkingSet64": 23625728,
+          "PrivateMemorySize64": 8015872,
+          "PeakWorkingSet64": 23625728
+        },
+        {
+          "Id": 5216,
+          "WorkingSet64": 241512448,
+          "PrivateMemorySize64": 186560512,
+          "PeakWorkingSet64": 241741824
+        },
+        {
+          "Id": 12576,
+          "WorkingSet64": 23052288,
+          "PrivateMemorySize64": 7868416,
+          "PeakWorkingSet64": 23056384
+        },
+        {
+          "Id": 18428,
+          "WorkingSet64": 215826432,
+          "PrivateMemorySize64": 93429760,
+          "PeakWorkingSet64": 248537088
+        },
+        {
+          "Id": 28336,
+          "WorkingSet64": 38248448,
+          "PrivateMemorySize64": 17408000,
+          "PeakWorkingSet64": 38252544
+        },
+        {
+          "Id": 29424,
+          "WorkingSet64": 431198208,
+          "PrivateMemorySize64": 411889664,
+          "PeakWorkingSet64": 431198208
+        },
+        {
+          "Id": 29532,
+          "WorkingSet64": 25202688,
+          "PrivateMemorySize64": 8400896,
+          "PeakWorkingSet64": 25202688
+        }
+      ]
+    },
+    {
+      "label": "800-percent-page-80",
+      "pages": [
+        {
+          "page": 79,
+          "width": 3600,
+          "height": 4659,
+          "pixels": 16772400,
+          "ratio": 0.7354136035484716,
+          "reduced": true
+        },
+        {
+          "page": 80,
+          "width": 3600,
+          "height": 4659,
+          "pixels": 16772400,
+          "ratio": 0.7354136035484716,
+          "reduced": true
+        }
+      ],
+      "totalPixels": 33544800,
+      "heap": 38407259,
+      "estimatedBitmapBytes": 134179200,
+      "processMemory": [
+        {
+          "Id": 31580,
+          "WorkingSet64": 32157696,
+          "PrivateMemorySize64": 10354688,
+          "PeakWorkingSet64": 32317440
+        },
+        {
+          "Id": 1116,
+          "WorkingSet64": 59744256,
+          "PrivateMemorySize64": 27856896,
+          "PeakWorkingSet64": 69222400
+        },
+        {
+          "Id": 2188,
+          "WorkingSet64": 23625728,
+          "PrivateMemorySize64": 8015872,
+          "PeakWorkingSet64": 23625728
+        },
+        {
+          "Id": 5216,
+          "WorkingSet64": 242257920,
+          "PrivateMemorySize64": 186339328,
+          "PeakWorkingSet64": 242294784
+        },
+        {
+          "Id": 12576,
+          "WorkingSet64": 23052288,
+          "PrivateMemorySize64": 7868416,
+          "PeakWorkingSet64": 23056384
+        },
+        {
+          "Id": 18428,
+          "WorkingSet64": 216031232,
+          "PrivateMemorySize64": 93478912,
+          "PeakWorkingSet64": 248537088
+        },
+        {
+          "Id": 28336,
+          "WorkingSet64": 38273024,
+          "PrivateMemorySize64": 17408000,
+          "PeakWorkingSet64": 38273024
+        },
+        {
+          "Id": 29424,
+          "WorkingSet64": 429273088,
+          "PrivateMemorySize64": 409927680,
+          "PeakWorkingSet64": 431206400
+        },
+        {
+          "Id": 29532,
+          "WorkingSet64": 25202688,
+          "PrivateMemorySize64": 8400896,
+          "PeakWorkingSet64": 25202688
+        }
+      ]
+    },
+    {
+      "label": "800-percent-page-81",
+      "pages": [
+        {
+          "page": 80,
+          "width": 3600,
+          "height": 4659,
+          "pixels": 16772400,
+          "ratio": 0.7354136035484716,
+          "reduced": true
+        },
+        {
+          "page": 81,
+          "width": 8192,
+          "height": 84,
+          "pixels": 688128,
+          "ratio": 0.07314285714285715,
+          "reduced": true
+        }
+      ],
+      "totalPixels": 17460528,
+      "heap": 42142317,
+      "estimatedBitmapBytes": 69842112,
+      "processMemory": [
+        {
+          "Id": 31580,
+          "WorkingSet64": 32157696,
+          "PrivateMemorySize64": 10354688,
+          "PeakWorkingSet64": 32317440
+        },
+        {
+          "Id": 1116,
+          "WorkingSet64": 59805696,
+          "PrivateMemorySize64": 27860992,
+          "PeakWorkingSet64": 69222400
+        },
+        {
+          "Id": 2188,
+          "WorkingSet64": 23625728,
+          "PrivateMemorySize64": 8015872,
+          "PeakWorkingSet64": 23625728
+        },
+        {
+          "Id": 5216,
+          "WorkingSet64": 241819648,
+          "PrivateMemorySize64": 185548800,
+          "PeakWorkingSet64": 247701504
+        },
+        {
+          "Id": 12576,
+          "WorkingSet64": 23052288,
+          "PrivateMemorySize64": 7868416,
+          "PeakWorkingSet64": 23056384
+        },
+        {
+          "Id": 18428,
+          "WorkingSet64": 216416256,
+          "PrivateMemorySize64": 94023680,
+          "PeakWorkingSet64": 248537088
+        },
+        {
+          "Id": 28336,
+          "WorkingSet64": 38273024,
+          "PrivateMemorySize64": 17408000,
+          "PeakWorkingSet64": 38273024
+        },
+        {
+          "Id": 29424,
+          "WorkingSet64": 431210496,
+          "PrivateMemorySize64": 411881472,
+          "PeakWorkingSet64": 431214592
+        },
+        {
+          "Id": 29532,
+          "WorkingSet64": 25411584,
+          "PrivateMemorySize64": 8450048,
+          "PeakWorkingSet64": 25411584
+        }
+      ]
+    },
+    {
+      "label": "selection-eight-pages-after-raster-eviction",
+      "pages": [
+        {
+          "page": 7,
+          "width": 1224,
+          "height": 1584,
+          "pixels": 1938816,
+          "ratio": 2,
+          "reduced": false
+        },
+        {
+          "page": 8,
+          "width": 1224,
+          "height": 1584,
+          "pixels": 1938816,
+          "ratio": 2,
+          "reduced": false
+        },
+        {
+          "page": 9,
+          "width": 1224,
+          "height": 1584,
+          "pixels": 1938816,
+          "ratio": 2,
+          "reduced": false
+        }
+      ],
+      "totalPixels": 5816448,
+      "heap": 54041593,
+      "estimatedBitmapBytes": 23265792,
+      "processMemory": [
+        {
+          "Id": 31580,
+          "WorkingSet64": 32157696,
+          "PrivateMemorySize64": 10354688,
+          "PeakWorkingSet64": 32317440
+        },
+        {
+          "Id": 1116,
+          "WorkingSet64": 59596800,
+          "PrivateMemorySize64": 27910144,
+          "PeakWorkingSet64": 69222400
+        },
+        {
+          "Id": 2188,
+          "WorkingSet64": 23625728,
+          "PrivateMemorySize64": 8015872,
+          "PeakWorkingSet64": 23625728
+        },
+        {
+          "Id": 5216,
+          "WorkingSet64": 296292352,
+          "PrivateMemorySize64": 238673920,
+          "PeakWorkingSet64": 296665088
+        },
+        {
+          "Id": 12576,
+          "WorkingSet64": 23052288,
+          "PrivateMemorySize64": 7868416,
+          "PeakWorkingSet64": 23056384
+        },
+        {
+          "Id": 18428,
+          "WorkingSet64": 222109696,
+          "PrivateMemorySize64": 100106240,
+          "PeakWorkingSet64": 248537088
+        },
+        {
+          "Id": 28336,
+          "WorkingSet64": 38273024,
+          "PrivateMemorySize64": 17408000,
+          "PeakWorkingSet64": 38273024
+        },
+        {
+          "Id": 29424,
+          "WorkingSet64": 430563328,
+          "PrivateMemorySize64": 410755072,
+          "PeakWorkingSet64": 434245632
+        },
+        {
+          "Id": 29532,
+          "WorkingSet64": 25411584,
+          "PrivateMemorySize64": 8450048,
+          "PeakWorkingSet64": 25411584
+        }
+      ]
+    }
+  ],
+  "selectionPages": 8,
+  "selectionLocations": 80,
+  "browserErrors": []
+}

@@ -1,18 +1,20 @@
 import { useState } from 'react';
 import { ArrowUpRight, Download, FolderOpen, RefreshCw, Search, Upload, X } from 'lucide-react';
 import { chooseDirectory, native, post } from './api';
-import { useData, useDebounce } from './hooks';
+import { useData, useDebounce, useWorkspaceScroll } from './hooks';
 import { Empty, ErrorMessage, Field, Spinner, Status } from './ui';
+import { useWorkspaceState } from './Workspace';
 import type { Run } from './ResourceDetail';
 import type { Job, Library, ModelState, Paged, SearchHit, SearchResults } from './types';
 
 export function SearchPage({ initialQuery = '', onResult }: { initialQuery?: string; onResult: (hit: SearchHit, kind: string) => void }) {
-  const [input, setInput] = useState(initialQuery); const q = useDebounce(input, 300);
+  const [input, setInput] = useWorkspaceState('search.query', initialQuery); const q = useDebounce(input, 300);
   const { data, loading, error } = useData<SearchResults>(q.trim() ? `/search?q=${encodeURIComponent(q)}` : null);
-  const [group, setGroup] = useState('all');
-  const groups = [['papers', '论文'], ['figures', '图片'], ['tables', '表格'], ['content', '正文']] as const;
+  const [group, setGroup] = useWorkspaceState('search.group', 'all');
+  const groups = [['papers', '论文'], ['figures', '图片'], ['tables', '表格'], ['content', '正文'], ['notes', '笔记']] as const;
+  useWorkspaceScroll(`search:${q}:${group}`, !!data);
   const total = data ? groups.reduce((sum, [key]) => sum + (data[key]?.length || 0), 0) : 0;
-  return <><div className="global-search-box"><Search size={18} /><input id="global-search" autoFocus aria-label="全局全文搜索" value={input} onChange={e => setInput(e.target.value)} placeholder="搜索论文、图片、表格或正文" /><kbd>Ctrl K</kbd></div><div className="search-tabs"><button className={group === 'all' ? 'active' : ''} onClick={() => setGroup('all')}>全部 {data ? total : ''}</button>{groups.map(([key, label]) => <button className={group === key ? 'active' : ''} key={key} onClick={() => setGroup(key)}>{label} {data?.[key]?.length ?? ''}</button>)}</div><ErrorMessage message={error} />{loading && <Spinner label="搜索中…" />}{!q.trim() && <Empty title="输入关键词进行搜索" />}{q.trim() && data && total === 0 && !loading && <Empty title="未找到结果" />}{data && groups.filter(([key]) => group === 'all' || group === key).map(([key, label]) => !!data[key]?.length && <section className="search-group" key={key}><h3>{label}<span>{data[key].length}</span></h3>{data[key].map((hit, index) => <button className="search-result" key={`${hit.id}-${index}`} onClick={() => onResult(hit, key)}><div className="result-heading"><strong>{hit.title || hit.caption || hit.paper_title || (key === 'content' ? '正文片段' : '搜索结果')}</strong><ArrowUpRight size={16} /></div><p>{Array.isArray(hit.snippet) ? hit.snippet.map((part, i) => part.matched ? <mark key={i}>{part.text}</mark> : <span key={i}>{part.text}</span>) : hit.snippet || hit.text || hit.caption}</p><span className="muted">{hit.paper_title}{hit.location || hit.page_index !== undefined ? ` · 第 ${(hit.location?.page_index ?? hit.page_index ?? 0) + 1} 页` : ''}</span></button>)}</section>)}</>;
+  return <><div className="global-search-box"><Search size={18} /><input id="global-search" autoFocus aria-label="全局全文搜索" value={input} onChange={e => setInput(e.target.value)} placeholder="搜索论文、图表、正文或笔记" /><kbd>Ctrl K</kbd></div><div className="search-tabs"><button className={group === 'all' ? 'active' : ''} onClick={() => setGroup('all')}>全部 {data ? total : ''}</button>{groups.map(([key, label]) => <button className={group === key ? 'active' : ''} key={key} onClick={() => setGroup(key)}>{label} {data?.[key]?.length ?? ''}</button>)}</div><ErrorMessage message={error} />{loading && <Spinner label="搜索中…" />}{!q.trim() && <Empty title="输入关键词进行搜索" />}{q.trim() && data && total === 0 && !loading && <Empty title="未找到结果" />}{data && groups.filter(([key]) => group === 'all' || group === key).map(([key, label]) => !!data[key]?.length && <section className="search-group" key={key}><h3>{label}<span>{data[key].length}</span></h3>{data[key].map((hit, index) => <button data-workspace-focus={`search:${key}:${hit.id}`} className="search-result" key={`${hit.id}-${index}`} onClick={() => onResult(hit, key)}><div className="result-heading"><strong>{hit.title || hit.caption || hit.paper_title || (key === 'content' ? '正文片段' : '搜索结果')}</strong><ArrowUpRight size={16} /></div><p>{Array.isArray(hit.snippet) ? hit.snippet.map((part, i) => part.matched ? <mark key={i}>{part.text}</mark> : <span key={i}>{part.text}</span>) : hit.snippet || hit.text || hit.caption}</p><span className="muted">{hit.paper_title}{hit.location || hit.page_index !== undefined ? `${hit.paper_title ? ' · ' : ''}第 ${(hit.location?.page_index ?? hit.page_index ?? 0) + 1} 页` : ''}</span></button>)}</section>)}</>;
 }
 
 export function JobsPage({ revision, run, onChanged, onPaper }: { revision: number; run: Run; onChanged: () => void; onPaper: (id: string) => void }) {

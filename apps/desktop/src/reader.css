@@ -1,0 +1,39 @@
+.pv-reader { isolation: isolate; min-height: 0; }
+.pv-reader .pdf-toolbar { flex-wrap: wrap; row-gap: 4px; z-index: 6; }
+.pv-reader .reader-toolbar-group { display: flex; align-items: center; gap: 1px; flex-shrink: 0; }
+.pv-reader .reader-toolbar-group form { display: flex; align-items: center; gap: 3px; }
+.pv-reader .reader-small-button { width: 20px; min-width: 20px; padding: 2px; }
+.pv-reader .reader-fit-select { width: 90px; min-height: 28px; height: 28px; padding: 2px 4px; font-size: 11px; }
+.pv-reader .reader-zoom { position: relative; }
+.pv-reader .reader-zoom-popover { position: absolute; top: 35px; left: 0; z-index: 9; padding: 10px; width: 218px; background: var(--surface, white); color: var(--text, #242424); border: 1px solid var(--line, #ddd); box-shadow: 0 4px 18px #0002; border-radius: 5px; flex-wrap: wrap; }
+.pv-reader .reader-zoom-popover label { display: flex; gap: 5px; align-items: center; }
+.pv-reader .reader-zoom-popover input { width: 70px; }
+.pv-reader .reader-zoom-popover > span { width: 100%; color: var(--muted); font-size: 11px; }
+.pv-reader .reader-find { display: flex; align-items: center; gap: 6px; padding: 6px 10px; background: var(--surface, white); color: var(--text); border-bottom: 1px solid var(--line); flex-shrink: 0; }
+.pv-reader .reader-find input { min-width: 60px; flex: 1; height: 29px; }
+.pv-reader .reader-find [role=status] { min-width: 56px; font-size: 11px; text-align: center; white-space: nowrap; }
+.pv-reader .pdf-scroll { overflow-anchor: none; isolation: isolate; z-index: 0; }
+.pv-reader .pdf-page { overflow: hidden; }
+/* PDF.js 6 requires these values outside its own .pdfViewer .page wrapper. */
+.pv-reader .pdf-page .textLayer { --min-font-size: 1; --text-scale-factor: calc(var(--total-scale-factor) * var(--min-font-size)); z-index: 2; }
+.pv-reader .pdf-page .textLayer ::selection { background: #4087eb55; }
+.pv-reader .pdf-highlight { z-index: 4; }
+.pv-reader .reader-annotation { pointer-events: none; position: absolute; inset: 0; z-index: 3; --annotation-color: #e4b527; --annotation-fill: #ecc23745; }
+.pv-reader .reader-color-green { --annotation-color: #449871; --annotation-fill: #5ec49440; }
+.pv-reader .reader-color-blue { --annotation-color: #548cc7; --annotation-fill: #65a7e645; }
+.pv-reader .reader-color-pink { --annotation-color: #c47b9d; --annotation-fill: #e48ab740; }
+.pv-reader .reader-color-purple { --annotation-color: #9368c1; --annotation-fill: #ad80df40; }
+.pv-reader .reader-annotation-rect { position: absolute; background: var(--annotation-fill); mix-blend-mode: multiply; }
+.pv-reader .reader-annotation.is-selected .reader-annotation-rect { outline: 1px solid var(--annotation-color); }
+.pv-reader .reader-annotation-rect.reader-area-note { background: transparent; border: 1px dashed var(--annotation-color); }
+.pv-reader .reader-annotation-marker { position: absolute; pointer-events: auto; border: 1px solid var(--annotation-color); color: #393939; background: #fffdefff; width: 21px; height: 21px; padding: 3px; border-radius: 3px; display: grid; place-items: center; opacity: .8; }
+.pv-reader .reader-annotation-marker:hover, .pv-reader .reader-annotation-marker:focus-visible, .pv-reader .reader-annotation.is-selected .reader-annotation-marker { opacity: 1; outline: 1px solid var(--annotation-color); }
+.pv-reader .reader-search-hit { position: absolute; pointer-events: none; z-index: 3; background: #e8bc2540; border-bottom: 1px solid #c69415; }
+.pv-reader .reader-search-hit.is-active { background: #f98b3650; outline: 2px solid #d4741d; }
+.pv-reader .reader-selection-tools { position: absolute; display: flex; align-items: center; padding: 3px; gap: 2px; z-index: 8; background: var(--surface, white); color: var(--text); border: 1px solid var(--line); box-shadow: 0 2px 10px #0003; border-radius: 5px; }
+.pv-reader .reader-selection-tools button { display: flex; align-items: center; gap: 5px; height: 30px; padding: 4px 8px; background: transparent; color: inherit; border: 0; border-radius: 3px; font-size: 12px; }
+.pv-reader .reader-selection-tools button:hover { background: var(--surface-soft, #eee); }
+.pv-reader.is-cropping .reader-annotation-marker { pointer-events: none; }
+.pv-reader:fullscreen { width: 100vw; height: 100vh; }
+.pv-reader .reader-quality { position: absolute; bottom: 12px; right: 16px; z-index: 5; padding: 5px 8px; border: 1px solid var(--line); border-radius: 4px; color: var(--muted); background: var(--surface); font-size: 11px; user-select: none; }
+@media (max-width: 1150px) { .pv-reader .pdf-toolbar { padding: 5px 6px; } .pv-reader .toolbar-divider { margin: 0 3px; } .pv-reader .reader-fit-select { width: 82px; } }

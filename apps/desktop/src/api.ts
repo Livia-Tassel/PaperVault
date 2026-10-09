@@ -4,6 +4,10 @@ import type { CropRequest, ExportRequest, Library, LibraryOpenRequest, Paper, Pa
 export const native = isTauri();
 interface Connection { baseUrl: string; token: string }
 let current: Promise<Connection> | undefined;
+let activeLibraryScope = '';
+export const setLibraryScope = (scope: string) => { activeLibraryScope = scope; };
+export const getLibraryScope = () => activeLibraryScope;
+export type ApiRequestOptions = RequestInit & { libraryScope?: string };
 
 export function connection(): Promise<Connection> {
   if (!current) current = native
@@ -13,12 +17,17 @@ export function connection(): Promise<Connection> {
 }
 
 export class ApiError extends Error {
-  constructor(message: string, public status: number) { super(message); }
+  constructor(message: string, public status: number, public current?: unknown) { super(message); }
 }
-export async function request(path: string, options: RequestInit = {}): Promise<Response> {
+export async function request(path: string, options: ApiRequestOptions = {}): Promise<Response> {
+  // Capture before the asynchronous IPC handshake. Deferred reader writes pass
+  // their original scope explicitly, so a restored copy cannot receive them.
+  const scope = options.libraryScope ?? activeLibraryScope;
   const { baseUrl, token } = await connection();
   const headers = new Headers(options.headers);
   headers.set('Authorization', `Bearer ${token}`);
+  if (scope && ['POST', 'PATCH', 'DELETE'].includes(options.method || '') && path !== '/library/open' && !path.startsWith('/models/'))
+    headers.set('X-PaperVault-Library', encodeURIComponent(scope));
   if (options.body && !(options.body instanceof FormData)) headers.set('Content-Type', 'application/json');
   let response: Response;
   try { response = await fetch(`${baseUrl.replace(/\/$/, '')}${path}`, { ...options, headers }); }
@@ -26,16 +35,16 @@ export async function request(path: string, options: RequestInit = {}): Promise<
   if (!response.ok) {
     const body = await response.json().catch(() => ({}));
     const detail = body.detail || body.error || `请求失败 (${response.status})`;
-    throw new ApiError(typeof detail === 'string' ? detail : JSON.stringify(detail), response.status);
+    throw new ApiError(typeof detail === 'string' ? detail : JSON.stringify(detail), response.status, body.current);
   }
   return response;
 }
-export async function api<T>(path: string, options?: RequestInit): Promise<T> {
+export async function api<T>(path: string, options?: ApiRequestOptions): Promise<T> {
   const response = await request(path, options);
   return response.status === 204 ? undefined as T : await response.json() as T;
 }
-export const post = <T,>(path: string, data?: unknown) => api<T>(path, { method: 'POST', body: data === undefined ? undefined : JSON.stringify(data) });
-export const patch = <T,>(path: string, data: unknown) => api<T>(path, { method: 'PATCH', body: JSON.stringify(data) });
+export const post = <T,>(path: string, data?: unknown, options?: ApiRequestOptions) => api<T>(path, { ...options, method: 'POST', body: data === undefined ? undefined : JSON.stringify(data) });
+export const patch = <T,>(path: string, data: unknown, options?: ApiRequestOptions) => api<T>(path, { ...options, method: 'PATCH', body: JSON.stringify(data) });
 export const openLibrary = (data: LibraryOpenRequest) => post<Library>('/library/open', data);
 export const updatePaper = (id: string, data: PaperPatch) => patch<Paper>(`/papers/${id}`, data);
 export const updateResource = (id: string, data: ResourcePatch) => patch<Resource>(`/resources/${id}`, data);

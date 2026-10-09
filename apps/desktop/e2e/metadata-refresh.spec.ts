@@ -18,6 +18,7 @@ test('polling server metadata updates untouched fields while retaining an unsave
   const initial = await request.patch(`${api}/papers/${paper.id}`, { headers, data: { title: oldTitle, authors: ['Initial Author'], notes: '' } });
   expect(initial.ok()).toBeTruthy();
   await page.goto('/');
+  await page.getByRole('button', { name: '论文库', exact: true }).click();
   await page.getByLabel('搜索论文', { exact: true }).fill('geometry.pdf');
   await expect(page.locator('.paper-primary')).toHaveCount(1);
   await page.locator('.paper-primary').click();

@@ -52,21 +52,36 @@ test('real PDF.js highlight and raster alignment at DPR 2, CropBox offsets, User
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
   await page.goto('/');
+  await page.getByRole('button', { name: '论文库', exact: true }).click();
   await expect(page.getByRole('heading', { name: '论文库', exact: true })).toBeVisible();
   expect(await page.evaluate(() => devicePixelRatio)).toBe(2);
   const cases: unknown[] = [];
   for (let index = 0; index < 4; index++) {
     await page.getByRole('button', { name: /^图片库/ }).click();
-    await page.getByLabel('按论文筛选', { exact: true }).selectOption(paper.id);
+    await page.getByRole('combobox', { name: '按论文筛选', exact: true }).fill('geometry.pdf');
+    const choices = page.getByRole('listbox', { name: '论文匹配结果' }).getByRole('option');
+    await expect(choices).toHaveCount(1);
+    await choices.first().click();
     await page.getByRole('button', { name: resources[index].name, exact: true }).click();
     await page.getByRole('button', { name: '查看原文', exact: true }).click();
     const highlight = page.locator(`[data-page="${index + 1}"] .pdf-highlight`);
     await expect(highlight).toBeVisible();
     for (const [scale, extraRotation] of [[.55, 0], [1, 0], [2.05, 0], [1, 90]]) {
+      // 0.2 restores persisted reader state. Reset through actual controls before
+      // applying each independent expected transform instead of assuming a mount reset.
+      const textLayer = page.locator(`[data-page="${index + 1}"] .textLayer`);
+      await expect(textLayer).toHaveAttribute('data-main-rotation', /^(0|90|180|270)$/);
+      for (let remaining = 4; Number(await textLayer.getAttribute('data-main-rotation')) !== index * 90 && remaining > 0; remaining--) {
+        const previous = Number(await textLayer.getAttribute('data-main-rotation'));
+        await page.getByRole('button', { name: '旋转 PDF', exact: true }).click();
+        await expect(textLayer).toHaveAttribute('data-main-rotation', String((previous + 90) % 360));
+      }
+      await expect(textLayer).toHaveAttribute('data-main-rotation', String(index * 90));
       await page.getByTitle('恢复 100%', { exact: true }).click();
       if (scale < 1) for (let click = 0; click < 3; click++) await page.getByRole('button', { name: '缩小', exact: true }).click();
       if (scale > 1) for (let click = 0; click < 7; click++) await page.getByRole('button', { name: '放大', exact: true }).click();
       if (extraRotation) await page.getByRole('button', { name: '旋转 PDF', exact: true }).click();
+      await expect(textLayer).toHaveAttribute('data-main-rotation', String((index * 90 + extraRotation) % 360));
       await expect(page.locator('.zoom-label')).toHaveText(`${Math.round(scale * 100)}%`);
       await highlight.scrollIntoViewIfNeeded();
       const rotation = (index * 90 + extraRotation) % 360;
@@ -151,7 +166,7 @@ test('real PDF.js highlight and raster alignment at DPR 2, CropBox offsets, User
     browser: await browser.version(), platform: os.platform(), cpu: os.cpus()[0]?.model,
     method: 'Real authenticated API import and four manual resources; actual PDF.js canvas pixels scanned for red rectangle and compared to DOM highlight plus independent CropBox/UserUnit/rotation formula',
     dpi_scope: 'Browser deviceScaleFactor=2 emulation, canvas DPR=2 verified. Actual Windows system DPI and display scaling were not changed.',
-    ui_scales: [0.55, 1, 2.05], ui_scale_note: 'Existing visible controls use 15% steps; tested 55/100/205%, without changing production controls.',
+    ui_scales: [0.55, 1, 2.05], ui_scale_note: 'Each case explicitly resets persisted rotation through visible controls and resets zoom to 100%; then tests 55/100/205% using 15% steps.',
     supplemental_matrix_scales: [0.5, 1, 2], css_pixel_error_tolerance: 2,
     ui_cases: cases, matrix_checks: matrixChecks, javascript_errors: errors, status: 'passed' };
   await mkdir(path.resolve('../../artifacts'), { recursive: true });

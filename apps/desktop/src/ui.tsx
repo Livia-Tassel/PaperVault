@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { Children, cloneElement, isValidElement, type ReactNode } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { AlertCircle, Check, LoaderCircle, X } from 'lucide-react';
 import { useImage } from './hooks';
@@ -29,6 +29,18 @@ export function Pager({ total, offset, limit, onChange }: { total: number; offse
   return total > limit ? <div className="pager"><span>共 {total} 项 · 第 {Math.floor(offset / limit) + 1} / {Math.ceil(total / limit)} 页</span><button className="button secondary small" disabled={offset === 0} onClick={() => onChange(Math.max(0, offset - limit))}>上一页</button><button className="button secondary small" disabled={offset + limit >= total} onClick={() => onChange(offset + limit)}>下一页</button></div> : null;
 }
 export function Checkbox({ checked, onChange, label }: { checked: boolean; onChange: () => void; label: string }) { return <button aria-label={label} role="checkbox" aria-checked={checked} className={`select-checkbox ${checked ? 'selected' : ''}`} onClick={event => { event.stopPropagation(); onChange(); }}>{checked && <Check size={13} />}</button>; }
-export function Field({ label, children }: { label: string; children: ReactNode }) { return <label className="field"><span>{label}</span>{children}</label>; }
+function labelControls(children: ReactNode, label: string): ReactNode {
+  return Children.map(children, child => {
+    if (!isValidElement<{ children?: ReactNode; 'aria-label'?: string }>(child)) return child;
+    if (typeof child.type === 'string' && ['input', 'textarea', 'select'].includes(child.type))
+      return cloneElement(child, { 'aria-label': child.props['aria-label'] || label });
+    return child.props.children ? cloneElement(child, {}, labelControls(child.props.children, label)) : child;
+  });
+}
+export function Field({ label, children }: { label: string; children: ReactNode }) {
+  // A controlled textarea's DOM text changes with its value. Give each control
+  // a stable label instead of including that value or adjacent browse buttons.
+  return <label className="field"><span>{label}</span>{labelControls(children, label)}</label>;
+}
 export function filename(value: string, fallback: string): string { return (value || fallback).replace(/[<>:"/\\|?*\x00-\x1f]/g, '_').replace(/[. ]+$/, '').slice(0, 100) || fallback; }
 export const splitTags = (value: string): string[] => [...new Set(value.split(/[,，\n]/).map(t => t.trim()).filter(Boolean))];
