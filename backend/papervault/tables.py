@@ -2,7 +2,18 @@ from __future__ import annotations
 
 import csv
 import html
+import re
 from pathlib import Path
+
+
+def safe_csv_cell(value: str) -> str:
+    """Keep negative/scientific numbers; neutralize spreadsheet formula strings."""
+    text = str(value)
+    if re.fullmatch(r"\s*[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?\s*", text):
+        return text
+    if text.lstrip().startswith(("=", "+", "-", "@")) or text.startswith(("\t", "\r")):
+        return "'" + text
+    return text
 
 
 def validate_table(table: dict) -> dict:
@@ -24,7 +35,7 @@ def write_table(table: dict, directory: Path, caption: str = "") -> dict[str, st
     directory.mkdir(parents=True, exist_ok=True)
     csv_path, html_path = directory / "table.csv", directory / "table.html"
     with csv_path.open("w", encoding="utf-8-sig", newline="") as stream:
-        csv.writer(stream).writerows(table["rows"])
+        csv.writer(stream).writerows([[safe_csv_cell(v) for v in row] for row in table["rows"]])
     cells = table.get("cells") or []
     cell_map = {(int(c.get("row", -1)), int(c.get("col", -1))): c for c in cells}
     occupied = set()

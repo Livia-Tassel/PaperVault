@@ -145,3 +145,39 @@ def test_exports_are_portable(library, pdf_file):
         assert f"papers/{paper['id']}/resources/{table['id']}/table.csv" in names
         metadata = json.loads(archive.read(f"papers/{paper['id']}/resources/{table['id']}/metadata.json"))
         assert metadata["files"]["csv"] == "table.csv"
+        structure = json.loads(archive.read(f"papers/{paper['id']}/structure.json"))
+        assert structure["resources"][0]["id"] == table["id"]
+        for resource in structure["resources"]:
+            for file in resource["files"].values():
+                assert f"papers/{paper['id']}/{file}" in names
+        import hashlib
+        manifest = json.loads(archive.read("manifest.json"))
+        assert set(manifest["files"]) == set(names) - {"manifest.json"}
+        for name, checksum in manifest["files"].items():
+            assert hashlib.sha256(archive.read(name)).hexdigest() == checksum
+
+
+def test_sql_pagination_filters_effective_overrides(library, pdf_file):
+    paper, _ = library.import_file(pdf_file)
+    publish_fixture(library, paper["id"])
+    library.update_paper(paper["id"], {"year": 2026, "tags": ["中文"], "favorite": True})
+    assert library.papers(tag="中文", year=2026, favorite=True, limit=1)["total"] == 1
+    assert library.papers(offset=1, limit=1)["items"] == []
+    assert library.resources(tag="中文", year=2026, q="Cache")["total"] == 1
+    assert library.papers(folder="unfiled")["total"] == 0
+    library.update_paper(paper["id"], {"year": None, "tags": []})
+    assert library.papers(year=2026)["total"] == 0
+    assert library.papers(folder="unfiled")["total"] == 1
+
+
+def test_safe_csv_preserves_scientific_numbers():
+    from papervault.tables import safe_csv_cell
+    assert safe_csv_cell("-1.2e-3") == "-1.2e-3"
+    assert safe_csv_cell("=HYPERLINK('test')").startswith("'")
+
+
+def test_caption_change_reexports_table_html(library, pdf_file):
+    paper, _ = library.import_file(pdf_file)
+    table = publish_fixture(library, paper["id"], table=True)
+    library.update_resource(table["id"], {"caption": "人工中文图注"})
+    assert "人工中文图注" in library.resource_file(table["id"], "html").read_text(encoding="utf-8")

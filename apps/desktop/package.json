@@ -1,0 +1,43 @@
+{
+  "name": "papervault-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "postinstall": "node scripts/copy-pdf-assets.mjs",
+    "prebuild": "node scripts/copy-pdf-assets.mjs",
+    "dev": "vite --host 127.0.0.1 --port 1420 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 1420",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "api:generate": "node scripts/generate-api.mjs",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@radix-ui/react-dialog": "1.2.0",
+    "@tauri-apps/api": "2.12.2",
+    "@tauri-apps/plugin-clipboard-manager": "2.4.1",
+    "@tauri-apps/plugin-dialog": "2.8.1",
+    "@tauri-apps/plugin-fs": "2.6.0",
+    "@tauri-apps/plugin-opener": "2.7.0",
+    "lucide-react": "1.53.0",
+    "pdfjs-dist": "6.4.299",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0",
+    "@tailwindcss/vite": "4.3.3",
+    "@tauri-apps/cli": "2.12.1",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "openapi-typescript": "7.13.0",
+    "tailwindcss": "4.3.3",
+    "typescript": "5.9.3",
+    "vite": "8.3.4",
+    "vitest": "5.0.3"
+  }
+}

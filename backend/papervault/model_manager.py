@@ -18,8 +18,8 @@ from filelock import FileLock
 
 MANIFEST_NAME = "papervault-models.json"
 MODEL_REPOSITORIES = (
-    {"id": "docling-project/docling-layout-heron", "revision": "main", "prefix": ""},
-    {"id": "docling-project/docling-models", "revision": "v2.3.0", "prefix": "model_artifacts/tableformer/accurate/"},
+    {"id": "docling-project/docling-layout-heron", "revision": "8f39ad3c0b4c58e9c2d2c84a38465abf757272d8", "prefix": ""},
+    {"id": "docling-project/docling-models", "revision": "fc0f2d45e2218ea24bce5045f58a389aed16dc23", "prefix": "model_artifacts/tableformer/accurate/"},
 )
 
 
@@ -132,7 +132,8 @@ class ModelManager:
                             name = entry["rfilename"]
                             if name.startswith("."):
                                 continue
-                            if spec["prefix"] and not name.startswith(spec["prefix"]) and not name.upper().startswith("LICENSE"):
+                            if (spec["prefix"] and not name.startswith(spec["prefix"])
+                                    and not name.upper().startswith(("LICENSE", "README"))):
                                 continue
                             if not spec["prefix"] and ("/" in name or name.endswith((".png", ".jpg", ".onnx"))):
                                 continue

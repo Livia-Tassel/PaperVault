@@ -6,7 +6,10 @@ from pathlib import Path
 
 from alembic import command
 from alembic.config import Config
+from alembic.script import ScriptDirectory
 from sqlalchemy import URL, create_engine
+
+from .files import uid
 
 
 class Database:
@@ -16,6 +19,21 @@ class Database:
         engine = create_engine(URL.create("sqlite", database=str(path)))
         config = Config()
         config.set_main_option("script_location", str(Path(__file__).parent / "migrations"))
+        if path.exists() and path.stat().st_size:
+            previous = sqlite3.connect(path)
+            try:
+                exists = previous.execute("SELECT 1 FROM sqlite_master WHERE name='alembic_version'").fetchone()
+                version = previous.execute("SELECT version_num FROM alembic_version").fetchone()[0] if exists else None
+                if version != ScriptDirectory.from_config(config).get_current_head():
+                    backup_dir = path.parent / "migration-backups"
+                    backup_dir.mkdir(exist_ok=True)
+                    backup = sqlite3.connect(backup_dir / f"before-upgrade-{uid()}.db")
+                    try:
+                        previous.backup(backup)
+                    finally:
+                        backup.close()
+            finally:
+                previous.close()
         with engine.begin() as connection:
             config.attributes["connection"] = connection
             command.upgrade(config, "head")

@@ -1,0 +1,42 @@
+{
+  "page_count": 2,
+  "figure_bbox": [
+    72,
+    350,
+    540,
+    470
+  ],
+  "table_bbox": [
+    100,
+    119,
+    512,
+    219
+  ],
+  "table_rows": [
+    [
+      "Method",
+      "Figures",
+      "Tables",
+      "Example value"
+    ],
+    [
+      "Method A",
+      "8",
+      "6",
+      "0.70"
+    ],
+    [
+      "Method B",
+      "10",
+      "9",
+      "0.95"
+    ],
+    [
+      "Reference",
+      "10",
+      "10",
+      "1.00"
+    ]
+  ],
+  "title": "Local Research Asset Extraction"
+}

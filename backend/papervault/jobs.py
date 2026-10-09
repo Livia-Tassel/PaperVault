@@ -2,8 +2,10 @@
 from __future__ import annotations
 
 import json
-import multiprocessing
+import os
 import queue
+import subprocess
+import sys
 import threading
 import time
 import traceback
@@ -13,16 +15,20 @@ from .files import atomic_json, uid
 from .library import encode, now
 
 
-def parse_worker(source: str, staging: str, models: str, events):
+def run_worker(source: str, staging: str, models: str) -> int:
+    def emit(event):
+        print(json.dumps(event, ensure_ascii=True), flush=True)
     try:
         from .parsers import parse_pdf
         result = parse_pdf(Path(source), Path(staging), Path(models),
-                           on_progress=lambda event: events.put({"type": "progress", **event}))
+                           on_progress=lambda event: emit({"type": "progress", **event}))
         atomic_json(Path(staging) / "result.json", result)
-        events.put({"type": "result"})
+        emit({"type": "result"})
+        return 0
     except BaseException as exc:
         Path(staging, "error.txt").write_text(traceback.format_exc(), encoding="utf-8")
-        events.put({"type": "error", "error": f"{type(exc).__name__}: {exc}"})
+        emit({"type": "error", "error": f"{type(exc).__name__}: {exc}"})
+        return 1
 
 
 class TaskManager:
@@ -39,9 +45,10 @@ class TaskManager:
     def stop(self):
         self.stop_event.set()
         self.thread.join(timeout=8)
-        if self.process and self.process.is_alive():
-            self.process.terminate()
-            self.process.join(timeout=3)
+        process = self.process
+        if process and process.poll() is None:
+            process.terminate()
+            process.wait(timeout=3)
 
     def cancel(self, job_id):
         with self.library.db.transaction() as con:
@@ -96,19 +103,36 @@ class TaskManager:
             con.execute("UPDATE papers SET status='running' WHERE id=?", (job["paper_id"],))
         staging = self.library.root / ".staging" / uid()
         staging.mkdir()
-        ctx = multiprocessing.get_context("spawn")
-        events = ctx.Queue()
-        process = ctx.Process(target=parse_worker, args=(str(self.library.pdf(job["paper_id"])), str(staging),
-                              str(self.models.root), events), name="papervault-parser")
-        self.process, self.active_job = process, job["id"]
+        events = queue.Queue()
+        command = [sys.executable]
+        if not getattr(sys, "frozen", False):
+            command += ["-m", "papervault"]
+        command += ["--worker", "--source", str(self.library.pdf(job["paper_id"])),
+                    "--output", str(staging), "--models", str(self.models.root)]
+        worker_log = (staging / "worker.log").open("w", encoding="utf-8")
+        process = None
         started, finished = time.monotonic(), False
         try:
-            process.start()
+            process = subprocess.Popen(command, stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=worker_log,
+                                       text=True, encoding="utf-8", errors="replace",
+                                       env={**os.environ, "PYTHONUTF8": "1", "PYTHONIOENCODING": "utf-8"},
+                                       creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0)
+            self.process, self.active_job = process, job["id"]
+            def read_progress():
+                for line in process.stdout:
+                    try:
+                        event = json.loads(line)
+                        if isinstance(event, dict) and event.get("type") in ("progress", "error", "result"):
+                            events.put(event)
+                    except ValueError:
+                        continue
+            reader = threading.Thread(target=read_progress, daemon=True, name="parse-progress")
+            reader.start()
             while not finished:
                 with self.library.db.read() as con:
                     row = con.execute("SELECT status FROM jobs WHERE id=?", (job["id"],)).fetchone()
                 if self.stop_event.is_set() or not row or row["status"] in ("cancel_requested", "cancelled"):
-                    if process.is_alive():
+                    if process.poll() is None:
                         process.terminate()
                     self._set_terminal(job, "interrupted" if self.stop_event.is_set() else "cancelled",
                                        "应用退出，任务可重试" if self.stop_event.is_set() else "已取消")
@@ -120,23 +144,35 @@ class TaskManager:
                 try:
                     event = events.get(timeout=0.2)
                 except queue.Empty:
-                    if not process.is_alive():
+                    if process.poll() is not None:
                         if (staging / "result.json").is_file():
                             event = {"type": "result"}
                         else:
-                            self._set_terminal(job, "failed", "解析进程异常退出", f"进程退出码：{process.exitcode}")
+                            details = (staging / "error.txt").read_text(encoding="utf-8") if (staging / "error.txt").exists() else ""
+                            self._set_terminal(job, "failed", "解析进程异常退出", f"进程退出码：{process.returncode} {details[-2000:]}")
                             break
                     else:
                         continue
                 if event["type"] == "progress":
                     with self.library.db.transaction() as con:
+                        previous = con.execute("SELECT progress_json FROM jobs WHERE id=?", (job["id"],)).fetchone()
+                        progress = json.loads(previous[0]) if previous else {}
+                        progress.update({k: v for k, v in event.items()
+                                         if k in ("pages_done", "pages_total", "resources_count")})
                         con.execute("UPDATE jobs SET phase=?,progress_json=?,updated_at=? WHERE id=? AND status='running'",
-                                    (event.get("phase", "正在解析"), encode({k: v for k, v in event.items()
-                                     if k in ("pages_done", "pages_total", "resources_count")}), now(), job["id"]))
+                                    (event.get("message") or event.get("phase", "正在解析"), encode(progress), now(), job["id"]))
                 elif event["type"] == "error":
                     self._set_terminal(job, "failed", "解析失败，可重试", event["error"])
                     finished = True
                 elif event["type"] == "result":
+                    # Windows cannot rename a revision directory while the stderr
+                    # log is still open. Reap the worker and close all file handles
+                    # before validating and atomically publishing its files.
+                    process.wait(timeout=30)
+                    reader.join(timeout=2)
+                    worker_log.flush()
+                    os.fsync(worker_log.fileno())
+                    worker_log.close()
                     result = json.loads((staging / "result.json").read_text(encoding="utf-8"))
                     finished = self.library.publish(job["id"], job["attempt_token"], staging, result)
                     if not finished:
@@ -145,11 +181,13 @@ class TaskManager:
         except Exception as exc:
             self._set_terminal(job, "failed", "解析失败，可重试", str(exc))
         finally:
-            if process.pid is not None:
-                process.join(timeout=3)
-                if process.is_alive():
+            if process is not None:
+                try:
+                    process.wait(timeout=3)
+                except subprocess.TimeoutExpired:
                     process.terminate()
-                    process.join(timeout=3)
-                process.close()
-            events.close()
+                    process.wait(timeout=3)
+                if process.stdout:
+                    process.stdout.close()
+            worker_log.close()
             self.process, self.active_job = None, None

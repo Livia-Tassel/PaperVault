@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import shutil
 import threading
 from datetime import datetime, timezone
@@ -107,27 +108,58 @@ class Library:
             return self._paper(con, con.execute("SELECT * FROM papers WHERE id=? AND removed=0", (paper_id,)).fetchone())
 
     def papers(self, q="", tag=None, folder=None, favorite=None, year=None, sort="recent", offset=0, limit=50):
-        with self.db.read() as con:
-            rows = con.execute("SELECT * FROM papers WHERE removed=0 ORDER BY created_at DESC").fetchall()
-            items = [self._paper(con, row) for row in rows]
-            if q:
-                ids = {r["paper_id"] for r in search.find(con, q, 100000)}
-                items = [p for p in items if p["id"] in ids]
+        def effective(field):
+            return (f"CASE WHEN json_type(p.overrides_json,'$.{field}') IS NOT NULL "
+                    f"THEN json_extract(p.overrides_json,'$.{field}') ELSE json_extract(p.auto_json,'$.{field}') END")
+        conditions, args = ["p.removed=0"], []
+        if q:
+            expression = search.compile_query(q)
+            if not expression:
+                return {"items": [], "total": 0}
+            conditions.append("p.id IN (SELECT paper_id FROM search_entries WHERE search_entries MATCH ?)")
+            args.append(expression)
         if tag:
-            items = [p for p in items if tag in p.get("tags", [])]
+            conditions.append(f"EXISTS(SELECT 1 FROM json_each({effective('tags')}) WHERE value=?)")
+            args.append(tag)
         if folder == "unfiled":
-            items = [p for p in items if not p["folders"] and not p.get("tags")]
+            conditions.append("NOT EXISTS(SELECT 1 FROM paper_folders WHERE paper_id=p.id)")
+            conditions.append(f"COALESCE(json_array_length({effective('tags')}),0)=0")
         elif folder:
-            items = [p for p in items if folder in p["folders"]]
+            conditions.append("EXISTS(SELECT 1 FROM paper_folders WHERE paper_id=p.id AND folder_id=?)")
+            args.append(folder)
         if favorite is not None:
-            items = [p for p in items if bool(p.get("favorite")) == favorite]
+            conditions.append(f"COALESCE({effective('favorite')},0)=?")
+            args.append(int(favorite))
         if year is not None:
-            items = [p for p in items if p.get("year") == year]
-        if sort == "title":
-            items.sort(key=lambda p: (p.get("title") or p["filename"]).casefold())
-        elif sort == "year":
-            items.sort(key=lambda p: p.get("year") or 0, reverse=True)
-        return {"items": items[offset:offset+limit], "total": len(items)}
+            conditions.append(f"({effective('year')})=?")
+            args.append(year)
+        order = {"title": f"LOWER(COALESCE({effective('title')},p.filename))",
+                 "year": f"COALESCE({effective('year')},0) DESC"}.get(sort, "p.created_at DESC")
+        where = " AND ".join(conditions)
+        with self.db.read() as con:
+            total = con.execute("SELECT COUNT(*) FROM papers p WHERE " + where, args).fetchone()[0]
+            rows = con.execute("SELECT p.* FROM papers p WHERE " + where + " ORDER BY " + order + " LIMIT ? OFFSET ?",
+                               [*args, limit, offset]).fetchall()
+            items = [self._paper(con, row) for row in rows]
+        return {"items": items, "total": total}
+
+    def similar_papers(self, paper_id):
+        paper = self.paper(paper_id)
+        title = re.sub(r"\W+", "", paper.get("title") or "").casefold()
+        results = []
+        with self.db.read() as con:
+            for row in con.execute("SELECT * FROM papers WHERE id!=? AND removed=0", (paper_id,)):
+                data = {**json.loads(row["auto_json"]), **json.loads(row["overrides_json"])}
+                reason = None
+                if paper.get("doi") and (data.get("doi") or "").casefold() == paper["doi"].casefold():
+                    reason = "DOI相同"
+                elif paper.get("arxiv_id") and re.sub(r"v\d+$", "", data.get("arxiv_id") or "") == re.sub(r"v\d+$", "", paper["arxiv_id"]):
+                    reason = "arXiv编号相同，可能为不同版本"
+                elif len(title) >= 15 and title == re.sub(r"\W+", "", data.get("title") or "").casefold():
+                    reason = "标题相同，请核对版本"
+                if reason:
+                    results.append({"id": row["id"], "title": data.get("title") or row["filename"], "reason": reason})
+        return results
 
     def import_file(self, path: Path):
         path = path.expanduser().resolve()
@@ -144,6 +176,8 @@ class Library:
         copied = staging / "original.pdf"
         try:
             shutil.copyfile(path, copied)
+            with copied.open("rb+") as stream:
+                os.fsync(stream.fileno())
             digest = sha256(copied)
             with self.mutex, self.db.transaction() as con:
                 duplicate = con.execute("SELECT * FROM papers WHERE sha256=?", (digest,)).fetchone()
@@ -205,7 +239,13 @@ class Library:
         return self.paper(paper_id)
 
     def _metadata_snapshot(self, paper_id):
-        atomic_json(self.root / "papers" / paper_id / "metadata.json", self.paper(paper_id))
+        try:
+            atomic_json(self.root / "papers" / paper_id / "metadata.json", self.paper(paper_id))
+        except OSError:
+            # The database is authoritative; a failed convenience snapshot must
+            # never turn an already committed parse into an apparent rollback.
+            import logging
+            logging.getLogger(__name__).exception("Could not refresh metadata convenience snapshot")
 
     def _resource(self, con, row):
         if row is None:
@@ -214,7 +254,8 @@ class Library:
                   "locations": [], "files": {}, "warnings": [], **json.loads(row["auto_json"]),
                   **json.loads(row["overrides_json"])}
         result.update({"id": row["id"], "paper_id": row["paper_id"], "kind": row["kind"],
-                       "needs_review": bool(row["needs_review"]), "manual": bool(row["manual"])})
+                       "needs_review": bool(row["needs_review"]), "manual": bool(row["manual"]),
+                       "parse_run_id": row["revision"]})
         paper = con.execute("SELECT * FROM papers WHERE id=?", (row["paper_id"],)).fetchone()
         data = {**json.loads(paper["auto_json"]), **json.loads(paper["overrides_json"])}
         result["paper_title"] = data.get("title") or paper["filename"]
@@ -235,18 +276,29 @@ class Library:
             if value:
                 conditions.append(f"{field}=?")
                 args.append(value)
-        with self.db.read() as con:
-            rows = con.execute("SELECT r.* FROM resources r JOIN papers p ON p.id=r.paper_id WHERE " +
-                               " AND ".join(conditions) + " ORDER BY p.created_at DESC,r.rowid", args).fetchall()
-            items = [self._resource(con, row) for row in rows]
-            if q:
-                ids = {r["id"] for r in search.find(con, q, 100000)}
-                items = [r for r in items if r["id"] in ids]
+        if q:
+            expression = search.compile_query(q)
+            if not expression:
+                return {"items": [], "total": 0}
+            conditions.append("r.id IN (SELECT entity_id FROM search_entries WHERE search_entries MATCH ?)")
+            args.append(expression)
+        def effective(alias, field):
+            return (f"CASE WHEN json_type({alias}.overrides_json,'$.{field}') IS NOT NULL THEN "
+                    f"json_extract({alias}.overrides_json,'$.{field}') ELSE json_extract({alias}.auto_json,'$.{field}') END")
         if tag:
-            items = [r for r in items if tag in r.get("tags", []) or tag in r["paper_tags"]]
+            conditions.append(f"(EXISTS(SELECT 1 FROM json_each({effective('r','tags')}) WHERE value=?) OR "
+                              f"EXISTS(SELECT 1 FROM json_each({effective('p','tags')}) WHERE value=?))")
+            args.extend([tag, tag])
         if year:
-            items = [r for r in items if r["paper_year"] == year]
-        return {"items": items[offset:offset+limit], "total": len(items)}
+            conditions.append(f"({effective('p','year')})=?")
+            args.append(year)
+        base = " FROM resources r JOIN papers p ON p.id=r.paper_id WHERE " + " AND ".join(conditions)
+        with self.db.read() as con:
+            total = con.execute("SELECT COUNT(*)" + base, args).fetchone()[0]
+            rows = con.execute("SELECT r.*" + base + " ORDER BY p.created_at DESC,r.rowid LIMIT ? OFFSET ?",
+                               [*args, limit, offset]).fetchall()
+            items = [self._resource(con, row) for row in rows]
+        return {"items": items, "total": total}
 
     def update_resource(self, resource_id, changes):
         if set(changes) - RESOURCE_EDITABLE:
@@ -300,6 +352,7 @@ class Library:
             else:
                 resource_id = uid()
                 data = {"name": name, "caption": caption, "locations": [location], "files": files,
+                        "extracted_at": now(), "engine": {"name": "manual-pdfium"},
                         "table": {"rows": [[""]], "cells": [], "header_rows": 1} if kind == "table" else None}
                 with self.db.transaction() as con:
                     con.execute("INSERT INTO resources(id,paper_id,kind,auto_json,manual) VALUES(?,?,?,?,1)",
@@ -315,7 +368,7 @@ class Library:
         return path
 
     def resource_file(self, resource_id, format_name, dpi=None):
-        if format_name not in ("png", "thumbnail", "csv", "html"):
+        if format_name not in ("png", "thumbnail", "csv", "html", "original") and not re.fullmatch(r"segment_\d+", format_name):
             raise ValueError("不支持的导出格式")
         resource = self.resource(resource_id)
         if dpi and format_name == "png" and resource["locations"]:
@@ -325,7 +378,33 @@ class Library:
             directory = self.root / "exports" / uid()
             directory.mkdir()
             path = directory / "image.png"
-            render_region(self.pdf(resource["paper_id"]), resource["locations"][0], path, dpi)
+            source = self.pdf(resource["paper_id"])
+            if len(resource["locations"]) == 1:
+                render_region(source, resource["locations"][0], path, dpi)
+            else:
+                from PIL import Image
+                segments = []
+                try:
+                    for index, location in enumerate(resource["locations"]):
+                        if not location.get("bbox"):
+                            raise ValueError("部分页面缺少裁剪坐标，无法生成完整高分辨率PNG，请先校对")
+                        segment = directory / f"segment-{index+1}.png"
+                        render_region(source, location, segment, dpi)
+                        with Image.open(segment) as image:
+                            segments.append(image.convert("RGB"))
+                    width = max(image.width for image in segments)
+                    height = sum(image.height for image in segments) + 16*(len(segments)-1)
+                    if width*height > 100_000_000:
+                        raise ValueError("多页PNG超过像素上限，请降低DPI或分别导出页面区域")
+                    with Image.new("RGB", (width, height), "white") as image:
+                        y = 0
+                        for segment in segments:
+                            image.paste(segment, (0, y))
+                            y += segment.height + 16
+                        image.save(path, dpi=(dpi, dpi))
+                finally:
+                    for image in segments:
+                        image.close()
             return path
         relative = resource["files"].get(format_name)
         if not relative:
@@ -367,8 +446,8 @@ class Library:
         groups = {"papers": [], "figures": [], "tables": [], "content": []}
         mapping = {"paper": "papers", "figure": "figures", "table": "tables", "content": "content"}
         with self.db.read() as con:
-            for result in search.find(con, query):
-                groups[mapping[result["kind"]]].append(result)
+            for kind, group in mapping.items():
+                groups[group] = search.find(con, query, limit=25, kind=kind)
         return groups
 
     def publish(self, job_id, attempt_token, staging: Path, result: dict):
@@ -381,6 +460,9 @@ class Library:
             paper_id, run_id = job["paper_id"], uid()
             expected = manifest(staging)
             check_manifest(staging, expected)
+            for relative in expected:
+                with safe_path(staging, relative).open("rb+") as stream:
+                    os.fsync(stream.fileno())
             atomic_json(staging / "manifest.json", expected)
             destination = self.root / "papers" / paper_id / "revisions" / run_id
             destination.parent.mkdir(exist_ok=True)
@@ -413,7 +495,7 @@ class Library:
                             previous = old[best]
                             used.add(best)
                     resource_id = previous["id"] if previous else uid()
-                    data = {**resource, "id": resource_id, "files": {
+                    data = {**resource, "id": resource_id, "extracted_at": now(), "engine": result.get("engine", {}), "files": {
                         key: (destination / value).relative_to(self.root).as_posix()
                         for key, value in resource.get("files", {}).items()}}
                     if previous:
@@ -447,19 +529,19 @@ class Library:
 
     def remove(self, paper_id, delete_files=False):
         self.paper(paper_id)
-        with self.mutex, self.db.transaction() as con:
-            con.execute("UPDATE jobs SET status='cancelled',phase='论文已移除',updated_at=? "
-                        "WHERE paper_id=? AND status IN ('queued','running','cancel_requested')", (now(), paper_id))
-            con.execute("UPDATE papers SET removed=1 WHERE id=?", (paper_id,))
-            self._reindex(con, paper_id)
-        if delete_files:
-            # Remove DB references first: a crash may retain an unreferenced file,
-            # never a live entry pointing at an intentionally deleted PDF.
+        with self.mutex:
             with self.db.transaction() as con:
-                con.execute("DELETE FROM papers WHERE id=?", (paper_id,))
-            directory = safe_path(self.root, f"papers/{paper_id}")
-            if directory.is_dir():
-                shutil.rmtree(directory)
+                con.execute("UPDATE jobs SET status='cancelled',phase='论文已移除',updated_at=? "
+                            "WHERE paper_id=? AND status IN ('queued','running','cancel_requested')", (now(), paper_id))
+                con.execute("UPDATE papers SET removed=1 WHERE id=?", (paper_id,))
+                self._reindex(con, paper_id)
+            if delete_files:
+                # Backup holds this mutex through snapshot and file copy.
+                with self.db.transaction() as con:
+                    con.execute("DELETE FROM papers WHERE id=?", (paper_id,))
+                directory = safe_path(self.root, f"papers/{paper_id}")
+                if directory.is_dir():
+                    shutil.rmtree(directory)
 
     def folders(self):
         with self.db.read() as con:

@@ -11,11 +11,33 @@ from pathlib import Path
 from .files import atomic_json, check_manifest, manifest, safe_path, uid
 
 
+def validate_snapshot(directory: Path) -> None:
+    db = directory / "database/papervault.db"
+    con = sqlite3.connect(f"file:{db.as_posix()}?mode=ro", uri=True)
+    try:
+        if con.execute("PRAGMA integrity_check").fetchone()[0] != "ok" or con.execute("PRAGMA foreign_key_check").fetchall():
+            raise ValueError("备份数据库完整性校验失败")
+        for paper_id, removed in con.execute("SELECT id,removed FROM papers"):
+            if not removed and not safe_path(directory, f"papers/{paper_id}/original.pdf").is_file():
+                raise ValueError("备份缺少原始PDF")
+        for auto, override in con.execute("SELECT auto_json,overrides_json FROM resources WHERE active=1"):
+            resource = {**json.loads(auto), **json.loads(override)}
+            for relative in resource.get("files", {}).values():
+                if not safe_path(directory, relative).is_file():
+                    raise ValueError("备份缺少资源文件")
+    finally:
+        con.close()
+
+
 def create_backup(library, destination: Path | None = None) -> Path:
     destination = destination or library.root / "backups"
     destination = destination.expanduser().resolve()
-    destination.mkdir(parents=True, exist_ok=True)
-    target = destination / f"papervault-{uid()}.zip"
+    if destination.suffix.lower() == ".zip":
+        target = destination
+        destination.parent.mkdir(parents=True, exist_ok=True)
+    else:
+        destination.mkdir(parents=True, exist_ok=True)
+        target = destination / f"papervault-{uid()}.zip"
     staging = library.root / ".staging" / uid()
     staging.mkdir()
     try:
@@ -35,8 +57,9 @@ def create_backup(library, destination: Path | None = None) -> Path:
                         if item.is_symlink():
                             raise ValueError("论文库含符号链接，无法安全备份")
                     shutil.copytree(source, staging / "papers" / paper_id)
+            validate_snapshot(staging)
             atomic_json(staging / "manifest.json", {"version": 1, "files": manifest(staging)})
-        temporary = target.with_suffix(".zip.partial")
+        temporary = target.with_name(f".{target.name}.{uid()}.partial")
         with zipfile.ZipFile(temporary, "w", zipfile.ZIP_DEFLATED) as archive:
             for file in staging.rglob("*"):
                 if file.is_file():
@@ -79,21 +102,7 @@ def restore_backup(archive_path: Path, destination: Path) -> Path:
         check_manifest(staging, expected)
         if set(manifest(staging)) != set(expected):
             raise ValueError("备份清单与文件不一致")
-        db = staging / "database/papervault.db"
-        con = sqlite3.connect(f"file:{db.as_posix()}?mode=ro", uri=True)
-        try:
-            if con.execute("PRAGMA integrity_check").fetchone()[0] != "ok" or con.execute("PRAGMA foreign_key_check").fetchall():
-                raise ValueError("备份数据库完整性校验失败")
-            for paper_id, removed in con.execute("SELECT id,removed FROM papers"):
-                if not removed and not safe_path(staging, f"papers/{paper_id}/original.pdf").is_file():
-                    raise ValueError("备份缺少原始PDF")
-            for auto, override in con.execute("SELECT auto_json,overrides_json FROM resources WHERE active=1"):
-                resource = {**json.loads(auto), **json.loads(override)}
-                for relative in resource.get("files", {}).values():
-                    if not safe_path(staging, relative).is_file():
-                        raise ValueError("备份缺少资源文件")
-        finally:
-            con.close()
+        validate_snapshot(staging)
         if destination.exists():
             destination.rmdir()  # Verified empty above; fails safely if it changed.
         os.replace(staging, destination)

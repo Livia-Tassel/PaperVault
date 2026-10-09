@@ -79,13 +79,15 @@ def index_entry(con, entity_id, kind, paper_id, title, text, location=None):
     )
 
 
-def find(con, query: str, limit: int = 100):
+def find(con, query: str, limit: int = 100, kind: str | None = None):
     expression = compile_query(query)
     if not expression:
         return []
+    kind_filter = " AND kind=?" if kind else ""
+    args = [expression, kind, limit] if kind else [expression, limit]
     rows = con.execute(
         "SELECT *,bm25(search_entries) AS rank FROM search_entries "
-        "WHERE search_entries MATCH ? ORDER BY rank LIMIT ?", (expression, limit)
+        "WHERE search_entries MATCH ?" + kind_filter + " ORDER BY rank LIMIT ?", args
     ).fetchall()
     return [{"id": row["entity_id"], "kind": row["kind"], "paper_id": row["paper_id"],
              "title": row["title"], "location": json.loads(row["location_json"] or "null"),

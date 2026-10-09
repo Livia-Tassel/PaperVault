@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import math
 import threading
+from functools import lru_cache
 from pathlib import Path
 
 from .geometry import display_size, pdf_to_display_bbox, validate_bbox
@@ -12,11 +13,86 @@ PDFIUM_LOCK = threading.RLock()
 MAX_RENDER_PIXELS = 80_000_000
 
 
+def extract_embedded_image(source: Path, location: dict, destination_prefix: Path) -> dict | None:
+    """Extract only a unique image object overlapping the figure by IoU >= 0.8.
+
+    JPEG/JP2 retain their encoded image stream. Other filters produce a native
+    resolution lossless image and explicitly report that encoding was changed.
+    The rendered region remains authoritative for clipping, masks and overlays.
+    """
+    import pypdfium2 as pdfium
+    import pypdfium2.raw as raw
+
+    if not location.get("bbox"):
+        return None
+    wanted = validate_bbox(location["bbox"])
+    info = inspect_pdf(source)
+    index = int(location["page_index"])
+    if not 0 <= index < info["pages_count"]:
+        return None
+    with PDFIUM_LOCK:
+        pdf = pdfium.PdfDocument(source)
+        try:
+            page = pdf[index]
+            try:
+                candidates = []
+                for obj in page.get_objects(filter=[raw.FPDF_PAGEOBJ_IMAGE]):
+                    # Form matrices may change the coordinate frame of nested
+                    # image bounds. Do not guess when uniqueness is uncertain.
+                    if obj.container is not None:
+                        return None
+                    bounds = validate_bbox(obj.get_bounds())
+                    intersection = max(0, min(wanted[2], bounds[2]) - max(wanted[0], bounds[0])) * max(
+                        0, min(wanted[3], bounds[3]) - max(wanted[1], bounds[1]))
+                    union = ((wanted[2] - wanted[0]) * (wanted[3] - wanted[1])
+                             + (bounds[2] - bounds[0]) * (bounds[3] - bounds[1]) - intersection)
+                    score = intersection / union
+                    if score >= 0.8:
+                        candidates.append((obj, bounds, score))
+                if len(candidates) != 1:
+                    return None
+                obj, bounds, score = candidates[0]
+                width, height = obj.get_px_size()
+                if width * height > MAX_RENDER_PIXELS:
+                    raise ValueError("Embedded image exceeds the 80 megapixel extraction limit")
+                filters = obj.get_filters()
+                complex_filters = [f for f in filters if f not in obj.SIMPLE_FILTERS]
+                if complex_filters == ["DCTDecode"]:
+                    extension, image_format, preserved = "jpg", "jpeg", True
+                elif complex_filters == ["JPXDecode"]:
+                    extension, image_format, preserved = "jp2", "jpeg2000", True
+                else:
+                    metadata = obj.get_metadata()
+                    extension = "tiff" if metadata.colorspace == raw.FPDF_COLORSPACE_DEVICECMYK else "png"
+                    image_format, preserved = extension, False
+                destination_prefix = Path(destination_prefix)
+                destination_prefix.parent.mkdir(parents=True, exist_ok=True)
+                obj.extract(destination_prefix, fb_format=extension)
+                destination = destination_prefix.with_name(destination_prefix.name + "." + extension)
+                if not destination.is_file() or destination.stat().st_size == 0:
+                    raise RuntimeError("PDFium did not produce the expected embedded image")
+                return {"path": str(destination), "format": image_format, "extension": extension,
+                        "width": width, "height": height, "source_filters": filters,
+                        "encoding_preserved": preserved, "page_index": index, "bbox": bounds,
+                        "match_iou": round(score, 6), "includes_page_effects": False}
+            finally:
+                page.close()
+        finally:
+            pdf.close()
+
+
 def inspect_pdf(source: Path) -> dict:
+    source = Path(source).resolve()
+    stat = source.stat()
+    return _inspect_pdf_cached(str(source), stat.st_size, stat.st_mtime_ns)
+
+
+@lru_cache(maxsize=16)
+def _inspect_pdf_cached(source_name: str, file_size: int, modified_ns: int) -> dict:
     from pypdf import PdfReader
 
-    source = Path(source)
-    if source.stat().st_size > 512 * 1024 * 1024:
+    source = Path(source_name)
+    if file_size > 512 * 1024 * 1024:
         raise ValueError("PDF exceeds the 512 MB size limit")
     reader = PdfReader(source, strict=False)
     if reader.is_encrypted and not reader.decrypt(""):

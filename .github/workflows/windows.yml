@@ -1,0 +1,73 @@
+name: Windows desktop
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  windows:
+    runs-on: windows-2022
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: x86_64-pc-windows-msvc
+      - name: Install dependencies
+        shell: pwsh
+        run: ./scripts/bootstrap-windows.ps1
+      - name: Backend checks
+        shell: pwsh
+        run: |
+          ./.venv/Scripts/python.exe -m pytest -m "not real_parser"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Frontend checks
+        working-directory: apps/desktop
+        run: |
+          npm run typecheck
+          npm test -- --run
+      - name: Build installer and smoke test frozen backend
+        shell: pwsh
+        run: ./scripts/package-windows.ps1 -OnlineWebViewInstaller
+      - uses: actions/cache@v4
+        with:
+          path: .cache/models
+          key: papervault-models-${{ hashFiles('backend/papervault/model_manager.py', 'backend/papervault/parsers/models.py') }}
+      - name: Verify real CPU parsing in the frozen backend
+        shell: pwsh
+        run: |
+          $env:PYTHONPATH = 'backend'
+          ./.venv/Scripts/python.exe -c "from pathlib import Path; from papervault.model_manager import ModelManager; manager=ModelManager(Path('.cache/models')); status=manager.status(); status=status if status.get('ready') else manager.download(); assert status.get('ready'), status"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          ./.venv/Scripts/python.exe scripts/acceptance.py --backend build/backend-dist/papervault-backend/papervault-backend.exe --models .cache/models
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Test the actual desktop WebView2 application
+        shell: pwsh
+        run: |
+          ./scripts/bootstrap-webdriver.ps1
+          ./.venv/Scripts/python.exe scripts/package-desktop-smoke.py --app apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/papervault.exe --driver .tools/edgedriver/msedgedriver.exe --models .cache/models --pdf tests/fixtures/academic.pdf --expect-figures 1 --expect-tables 1
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Install NSIS and verify the installed application
+        shell: pwsh
+        run: |
+          $Installer = Get-ChildItem apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis/*.exe | Select-Object -First 1
+          ./scripts/package-install-smoke.ps1 -Installer $Installer.FullName
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PaperVault-Windows-x64
+          path: apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis/*.exe
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Windows-desktop-verification
+          path: |
+            artifacts/desktop-smoke/
+            artifacts/installed-desktop/
+            artifacts/acceptance-frozen.json

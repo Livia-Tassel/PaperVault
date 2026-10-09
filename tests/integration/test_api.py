@@ -8,6 +8,8 @@ def test_authenticated_import_edit_search_restart_and_backup(tmp_path, pdf_file)
     app = create_app("test-token", config, start_workers=False)
     with TestClient(app) as client:
         assert client.get("/api/v1/health").status_code == 401
+        unauthorized = client.get("/api/v1/health", headers={"Origin": "http://tauri.localhost"})
+        assert unauthorized.headers["access-control-allow-origin"] == "http://tauri.localhost"
         client.headers["Authorization"] = "Bearer test-token"
         assert client.get("/api/v1/library").json()["path"] is None
         assert client.post("/api/v1/library/open", json={"path": str(path)}).status_code == 200

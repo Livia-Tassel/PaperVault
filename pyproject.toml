@@ -24,7 +24,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<10", "pytest-cov>=6,<8", "ruff>=0.9,<1", "reportlab>=4.2,<5", "pyinstaller>=6.12,<7"]
-parser = ["docling-slim[convert-core,format-pdf,models-local,cli]==2.135.0"]
+parser = ["docling-slim[convert-core,format-pdf,models-local,cli]==2.135.0", "torch==2.7.1", "torchvision==0.22.1", "opencv-python-headless==4.14.0.94"]
 
 [project.scripts]
 papervault-backend = "papervault.__main__:main"

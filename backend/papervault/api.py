@@ -202,7 +202,8 @@ def create_app(token: str, config_dir: Path, library_path: Path | None = None,
 
     @app.get(prefix + "/papers/{paper_id}", response_model=Paper)
     def paper(paper_id: str):
-        return state.require_library().paper(paper_id)
+        library = state.require_library()
+        return {**library.paper(paper_id), "similar_papers": library.similar_papers(paper_id)}
 
     @app.patch(prefix + "/papers/{paper_id}", response_model=Paper)
     def paper_edit(paper_id: str, body: PaperPatch):
@@ -246,7 +247,8 @@ def create_app(token: str, config_dir: Path, library_path: Path | None = None,
     @app.get(prefix + "/resources/{resource_id}/files/{format_name}")
     def resource_file(resource_id: str, format_name: str, dpi: int | None = None):
         path = state.require_library().resource_file(resource_id, format_name, dpi)
-        media = {"png": "image/png", "thumbnail": "image/jpeg", "csv": "text/csv; charset=utf-8", "html": "text/html; charset=utf-8"}
+        media = {"png": "image/png", "thumbnail": "image/png" if path.suffix == ".png" else "image/jpeg",
+                 "csv": "text/csv; charset=utf-8", "html": "text/html; charset=utf-8"}
         return FileResponse(path, media_type=media.get(format_name), filename=path.name if format_name in ("csv", "html") else None,
                             headers={"Content-Security-Policy": "default-src 'none'; style-src 'unsafe-inline'; sandbox"} if format_name == "html" else None)
 

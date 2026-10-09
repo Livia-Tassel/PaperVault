@@ -17,16 +17,29 @@ from pathlib import Path
 
 
 def main():
+    # A frozen interpreter may ignore PYTHONUTF8. The desktop control channel
+    # and worker progress protocol always use UTF-8, including Chinese paths.
+    for stream in (sys.stdin, sys.stdout, sys.stderr):
+        if stream is not None and hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="backslashreplace")
     import uvicorn
-    from papervault.api import create_app
     parser = argparse.ArgumentParser(description="PaperVault local backend")
     parser.add_argument("--dev", action="store_true", help="Standalone development server")
     parser.add_argument("--port", type=int, default=8765)
     parser.add_argument("--library", type=Path)
     parser.add_argument("--models", type=Path)
     parser.add_argument("--config", type=Path)
+    parser.add_argument("--worker", action="store_true", help=argparse.SUPPRESS)
+    parser.add_argument("--source", type=Path, help=argparse.SUPPRESS)
+    parser.add_argument("--output", type=Path, help=argparse.SUPPRESS)
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, stream=sys.stderr)
+    if args.worker:
+        if not args.source or not args.output or not args.models:
+            parser.error("worker requires source, output and models")
+        from papervault.jobs import run_worker
+        raise SystemExit(run_worker(str(args.source), str(args.output), str(args.models)))
+    from papervault.api import create_app
     if args.dev:
         bootstrap = {"token": os.environ.get("PAPERVAULT_DEV_TOKEN", "dev-token")}
     else:

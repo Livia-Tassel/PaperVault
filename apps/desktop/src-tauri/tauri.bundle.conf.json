@@ -1,0 +1,11 @@
+{
+  "bundle": {
+    "externalBin": ["binaries/papervault-backend"],
+    "resources": {"binaries/_internal/": "_internal/"},
+    "windows": {
+      "webviewInstallMode": {"type": "offlineInstaller"},
+      "nsis": {"installMode": "currentUser", "languages": ["SimpChinese", "English"], "displayLanguageSelector": true}
+    }
+  }
+}
+
