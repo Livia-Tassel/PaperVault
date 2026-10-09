@@ -1,0 +1,23 @@
+{
+  "papers": [
+    {
+      "id": "expanded-damask-python",
+      "title": "A Python Library for Pre- and Post-Processing of DAMASK Simulations",
+      "authors_citation": "Daniel Otto de Mentock, Sharan Roongta, Franz Roters, Philip Eisenlohr, and Martin Diehl (2025), Journal of Open Source Software 10(105): 7164.",
+      "source_url": "https://joss.theoj.org/papers/10.21105/joss.07164",
+      "pdf_url": "https://joss.theoj.org/papers/10.21105/joss.07164.pdf",
+      "doi": "10.21105/joss.07164",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_evidence_url": "https://joss.theoj.org/papers/10.21105/joss.07164",
+      "license_note": "The paper itself is CC BY 4.0. Its referenced simulation software license is a distinct matter; no DAMASK software is installed here.",
+      "local_path": ".test-data/external/expanded-corpus/expanded-damask-python.pdf",
+      "sha256": "11d41887d1b3084da9433fa450e753c608c99c827cfc13f431366f394eb0aa87",
+      "pages": 4,
+      "bytes": 218119,
+      "layout_notes": "Materials engineering/crystal plasticity; complete 4-page JOSS article with journal sidebar and references, providing another check for legitimate no-figure/table content.",
+      "review_level": "inventory_only",
+      "source_verified_at_utc": "2026-10-09T13:16:44.459877+00:00"
+    }
+  ]
+}

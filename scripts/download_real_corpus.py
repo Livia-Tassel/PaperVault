@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import glob
 import hashlib
 import json
 from pathlib import Path
@@ -25,9 +26,13 @@ def validate(path, source):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--verify-only", action="store_true", help="Verify local bytes only; make no network requests")
+    parser.add_argument("--manifest", action="append", help="Specific manifest path or glob; repeatable. Defaults to all corpus manifests recursively.")
     args = parser.parse_args()
     sources = []
-    for manifest in sorted((ROOT / "tests/corpus").glob("sources-*.json")):
+    manifests = sorted({Path(path) for pattern in args.manifest for path in glob.glob(pattern)}) if args.manifest else sorted((ROOT / "tests/corpus").rglob("sources-*.json"))
+    if not manifests:
+        raise ValueError("No source manifests matched")
+    for manifest in manifests:
         sources.extend(json.loads(manifest.read_text(encoding="utf-8"))["papers"])
     if not sources:
         raise ValueError("No pinned corpus source manifests")

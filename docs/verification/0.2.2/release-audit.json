@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-10-09T14:09:23.753035+00:00",
+  "source_commit": "44c568eccca416c9a4103a07a1fae3d315b53b9d",
+  "production_paths_unchanged_since_freeze": [
+    "backend",
+    "apps/desktop/src",
+    "apps/desktop/src-tauri/src",
+    "apps/desktop/package.json",
+    "apps/desktop/package-lock.json",
+    "apps/desktop/src-tauri/Cargo.toml",
+    "apps/desktop/src-tauri/Cargo.lock",
+    "apps/desktop/src-tauri/tauri.conf.json",
+    "pyproject.toml",
+    "docs/DATA_FORMAT.md",
+    "docs/KNOWN_ISSUES.md"
+  ],
+  "installer_sha256": "b883a2e3822b2e81ff902214595575c25a026784df09aa068aeaf848a8a89708",
+  "installed_backend_sha256": "b5e1ece230ab2ec1183057ab1f0050e6899947632897724febb117eeaa51755f",
+  "installed_application_sha256": "e35de8688a86e593cd06fd0338af57770aaeccc554efbe718a53c95317be44ab",
+  "source_suite": {
+    "tests": 146,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "observed_process_exit_code": 0,
+    "pytest_seconds": 42.29,
+    "evidence": "docs/verification/expanded-corpus/backend-v022-final.xml"
+  },
+  "frozen_real_paper": {
+    "source_id": "ml-simcse-emnlp2021",
+    "pages": 17,
+    "resources": 21,
+    "worker_exit_code": 0,
+    "appendix_number_assertions_passed": 9
+  },
+  "native_named_resources": [
+    {
+      "name": "Figure G.1",
+      "page": 17,
+      "located": true
+    },
+    {
+      "name": "Table A.1",
+      "page": 13,
+      "located": true
+    }
+  ],
+  "native_restart_passed": true,
+  "evidence": [
+    {
+      "source": "artifacts/expanded-v022/frozen-report.json",
+      "archive": "docs/verification/0.2.2/expanded-corpus/frozen-report.json",
+      "sha256": "56b7ebde0e727ae6ae2e4ca245d549e6db0d28e7f3dd2c0ad4c5676f402b6939",
+      "bytes": 143738
+    },
+    {
+      "source": "artifacts/expanded-v022/caption-number-validation.json",
+      "archive": "docs/verification/0.2.2/expanded-corpus/caption-number-validation.json",
+      "sha256": "c6fdeaf5e7045215d91bc6928eb6271e8c41e4653a0ec0c092c3f1d3c07ae814",
+      "bytes": 5254
+    },
+    {
+      "source": "artifacts/expanded-v022/native/report.json",
+      "archive": "docs/verification/0.2.2/expanded-corpus/native/report.json",
+      "sha256": "c7ca171cb71da5c331170cbca7a9828f9020eca10e119ab7f907360624634d0a",
+      "bytes": 8414
+    },
+    {
+      "source": "artifacts/expanded-v022/native-run.log",
+      "archive": "docs/verification/0.2.2/expanded-corpus/native-run.log",
+      "sha256": "03527fc35b072f696138c67d37801c5459fc83dfc774a02b9347230f8e15bb47",
+      "bytes": 102
+    },
+    {
+      "source": "artifacts/v022/install-smoke.log",
+      "archive": "docs/verification/0.2.2/install-smoke.log",
+      "sha256": "4012664dbc935dafbda5457eded2c8b02809fe58eb08232f7193e8dc83cf46ff",
+      "bytes": 399
+    },
+    {
+      "source": "artifacts/build-backend-v022-final.log",
+      "archive": "docs/verification/0.2.2/build-backend-final.log",
+      "sha256": "b5be13a8a5f5ef5794f1a80139f28494d82f5fe5613ed6e986ae59718ebeec18",
+      "bytes": 27208
+    },
+    {
+      "source": "artifacts/build-installer-v022-final.log",
+      "archive": "docs/verification/0.2.2/build-installer-final.log",
+      "sha256": "a85066ae7169554a380c00cb2921ae5141aba629e5fdfb12e183a794190964de",
+      "bytes": 4139
+    }
+  ],
+  "limitations": [
+    "All twenty-paper quality figures belong to the retained 0.2.1 baseline; only SimCSE was reparsed on the final 0.2.2 frozen backend.",
+    "Title/table/crop/association findings remain unresolved by the appendix-number patch.",
+    "No clean VM, hosted CI, host DPI change or new uninstall experiment. Unsigned installer. Previous native diagnostic root cause remains unresolved."
+  ]
+}

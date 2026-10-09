@@ -1,0 +1,164 @@
+{
+  "created_at_utc": "2026-10-09T14:06:26.584407+00:00",
+  "baseline_version": "0.2.1",
+  "backend_sha256": "567bc425d9df91f4813dfacdf64a8a8e5548381becc5950627830862439dd43a",
+  "scope": "Immutable expanded 20-paper baseline, human reviews and final source regression evidence. Original PDF/page/PNG/CSV/HTML files remain in local artifacts. Fresh 0.2.2 model/native results are archived separately.",
+  "files": [
+    {
+      "source": "artifacts/real-corpus-expanded/workflow-summary.json",
+      "archive": "docs/verification/expanded-corpus/workflow-summary.json",
+      "bytes": 86159,
+      "sha256": "bf66fb74be03a71007c629307983d02f8217ad22adf4c495aba61789adba5acb"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/quality-summary.json",
+      "archive": "docs/verification/expanded-corpus/quality-summary.json",
+      "bytes": 457872,
+      "sha256": "6068d7dcf3da15e5607a88fe34d7d968f11fd10e9f175f900eefe9fc7f05e101"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/quality-ml.json",
+      "archive": "docs/verification/expanded-corpus/quality-ml.json",
+      "bytes": 152220,
+      "sha256": "b322efd7992d15fc7a5d8e87227aae5ed5c758de7d837d2b72ec233334b166d2"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/quality-diverse.json",
+      "archive": "docs/verification/expanded-corpus/quality-diverse.json",
+      "bytes": 212830,
+      "sha256": "98d050ff3d0444d755b4e8ccaa9e32d5ed7871bba295ba013edb9388b9f71c3c"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/quality-science.json",
+      "archive": "docs/verification/expanded-corpus/quality-science.json",
+      "bytes": 105036,
+      "sha256": "3bfcb0ac417a474b697082c34ae19cd6c2cb7cbfb66ee04332ce6c479c09d11c"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/metadata-observations.json",
+      "archive": "docs/verification/expanded-corpus/metadata-observations.json",
+      "bytes": 36875,
+      "sha256": "e6cf197722976f3eb7114be6a6d8d535f602fe94a729c8b7ccf6ce11ed2e89b2"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/chinese-search.json",
+      "archive": "docs/verification/expanded-corpus/chinese-search.json",
+      "bytes": 29331,
+      "sha256": "b1b4a23e016fd3ad9a1d9683ef16ddde8e0bebd81ecd6203c562e1eade4a94db"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/worker-observer-selftest.json",
+      "archive": "docs/verification/expanded-corpus/worker-observer-selftest.json",
+      "bytes": 907,
+      "sha256": "67a297aae556430a07782459b3ba22f321238ccf128c31e9345139dd0f2afa5a"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/science-source-text-discrepancy.json",
+      "archive": "docs/verification/expanded-corpus/science-source-text-discrepancy.json",
+      "bytes": 4889,
+      "sha256": "04fa4a12c7d9df83a1e69779c07abab17cd47156750901460f6831e0df6999b9"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/caption-number-cases-ml.json",
+      "archive": "docs/verification/expanded-corpus/caption-number-cases-ml.json",
+      "bytes": 5661,
+      "sha256": "297fd2aec2f9deeec31352aa1932944556cad7c16e31587b94918229d2f9ae5e"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/caption-number-replay.json",
+      "archive": "docs/verification/expanded-corpus/caption-number-replay.json",
+      "bytes": 3906,
+      "sha256": "5ade5cfbd34660624b2a029d67e126a20d25de72e27c17bfa5caa73d71a175b5"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/caption-numbers-before.log",
+      "archive": "docs/verification/expanded-corpus/caption-numbers-before.log",
+      "bytes": 6574,
+      "sha256": "eb7a4624ce4ac80d7e24f290ca82bc7bb391a253af6722747cccfcda1327c484"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/caption-boundary-before.log",
+      "archive": "docs/verification/expanded-corpus/caption-boundary-before.log",
+      "bytes": 1696,
+      "sha256": "d1e0312b2cfbf15839a2cf9dd34e57c6d94e347d38c792cbaa0267844f312077"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/backend-v022-final.log",
+      "archive": "docs/verification/expanded-corpus/backend-v022-final.log",
+      "bytes": 2233,
+      "sha256": "d9456d9f72fcbc5ccfbcd877051359dbf8a17cf870ed3852779fbab9e0973656"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/backend-v022-final.xml",
+      "archive": "docs/verification/expanded-corpus/backend-v022-final.xml",
+      "bytes": 19616,
+      "sha256": "e658cc94884663135adba94c2651697d738f70142fccb5d9e02879d0a6959139"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/review-browser.json",
+      "archive": "docs/verification/expanded-corpus/review-browser.json",
+      "bytes": 633,
+      "sha256": "29a733d198cd9655336be2e80fd11cd77e6fa6413a62b989ada790fc267a5438"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/batches/batch-001/report.json",
+      "archive": "docs/verification/expanded-corpus/batches/batch-001/report.json",
+      "bytes": 118730,
+      "sha256": "9955f2dddfaf21dafc83d06d9fae8d97f7754749a269064b9077a9def38c86b0"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/batches/batch-002/report.json",
+      "archive": "docs/verification/expanded-corpus/batches/batch-002/report.json",
+      "bytes": 905900,
+      "sha256": "751fe40426fe0d20530c8d349d9af645d5338915e11a19111a5f5164e5624388"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/batches/batch-003/report.json",
+      "archive": "docs/verification/expanded-corpus/batches/batch-003/report.json",
+      "bytes": 408220,
+      "sha256": "fe73af254840395ced3a3a124c6445fab596acfe669cbff19b5f542b0ee80f0e"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/batches/batch-004/report.json",
+      "archive": "docs/verification/expanded-corpus/batches/batch-004/report.json",
+      "bytes": 135252,
+      "sha256": "beb0e8284e762b2247187d6a52bc9724e5bf3ec946ac6a0799a91bb9e3d3c86c"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/batches/batch-005/report.json",
+      "archive": "docs/verification/expanded-corpus/batches/batch-005/report.json",
+      "bytes": 33695,
+      "sha256": "5e0be1afa07c24cd6a964965fb63724f7143ce6d71e219c403cca807b50bd772"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/input-batches/batch-001.json",
+      "archive": "docs/verification/expanded-corpus/input-batches/batch-001.json",
+      "bytes": 2682,
+      "sha256": "69c99cf942f53ee509ddc7c61aa01c285ebee047858e5c31ca300be3125abb93"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/input-batches/batch-002.json",
+      "archive": "docs/verification/expanded-corpus/input-batches/batch-002.json",
+      "bytes": 13812,
+      "sha256": "be5dcdc12e93341d0c941a890427ffdc630d9024eec255b4aa1ec93f0d95f049"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/input-batches/batch-003.json",
+      "archive": "docs/verification/expanded-corpus/input-batches/batch-003.json",
+      "bytes": 4705,
+      "sha256": "280b5460a8b2c389a94624a8f548126a6165d055be573b8c1fb3c8380a9695e9"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/input-batches/batch-004.json",
+      "archive": "docs/verification/expanded-corpus/input-batches/batch-004.json",
+      "bytes": 2751,
+      "sha256": "e6c370b0b987f9560ef3578fedd5b10bebd31b76feaf8252110039671524bb18"
+    },
+    {
+      "source": "artifacts/real-corpus-expanded/input-batches/batch-005.json",
+      "archive": "docs/verification/expanded-corpus/input-batches/batch-005.json",
+      "bytes": 1369,
+      "sha256": "57116385db1199e23892e542d51280cad77a613d913f27e35863c424ad1c3c8f"
+    }
+  ]
+}

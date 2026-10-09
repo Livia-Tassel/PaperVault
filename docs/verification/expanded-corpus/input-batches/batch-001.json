@@ -1,0 +1,43 @@
+{
+  "papers": [
+    {
+      "id": "ml-bart-acl2020",
+      "title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension",
+      "authors_citation": "Mike Lewis, Yinhan Liu, Naman Goyal, Marjan Ghazvininejad, Abdelrahman Mohamed, Omer Levy, Veselin Stoyanov, Luke Zettlemoyer (2020), ACL, pp.7871-7880.",
+      "source_url": "https://aclanthology.org/2020.acl-main.703/",
+      "pdf_url": "https://aclanthology.org/2020.acl-main.703.pdf",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+      "license_evidence": "Official ACL publisher page and ACL policy: all ACL materials published in or after 2016 are CC BY 4.0. Official publisher PDF, not an arXiv substitute.",
+      "layout_notes": "Two-column paper with wide architecture diagrams, benchmark tables and text-generation examples.",
+      "review_level": "deep_review",
+      "local_path": ".test-data/external/expanded-corpus/ml-bart-acl2020.pdf",
+      "sha256": "3562c723fe7bebb8b362533122b3ca5c065037c8e8d67460654cf3740652bb59",
+      "pages": 10,
+      "bytes": 322247,
+      "final_download_url": "https://aclanthology.org/2020.acl-main.703.pdf",
+      "downloaded_at_utc": "2026-10-09T12:48:15.370322+00:00"
+    },
+    {
+      "id": "ml-scibert-emnlp2019",
+      "title": "SciBERT: A Pretrained Language Model for Scientific Text",
+      "authors_citation": "Iz Beltagy, Kyle Lo, Arman Cohan (2019), EMNLP-IJCNLP, pp.3615-3620.",
+      "source_url": "https://aclanthology.org/D19-1371/",
+      "pdf_url": "https://aclanthology.org/D19-1371.pdf",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+      "license_evidence": "Official ACL publisher page and ACL policy: all ACL materials published in or after 2016 are CC BY 4.0. Official publisher PDF, not an arXiv substitute.",
+      "layout_notes": "Short two-column scientific NLP paper with dense numeric benchmark tables.",
+      "review_level": "inventory_only",
+      "local_path": ".test-data/external/expanded-corpus/ml-scibert-emnlp2019.pdf",
+      "sha256": "42e7bb57b92fbe6077c073edaffaf173728b7b685395700ac255ce0359344268",
+      "pages": 6,
+      "bytes": 187299,
+      "final_download_url": "https://aclanthology.org/D19-1371.pdf",
+      "downloaded_at_utc": "2026-10-09T12:48:24.179042+00:00"
+    }
+  ],
+  "scope": "Frozen input manifest captured before this batch; official source manifests may be appended by concurrent corpus acquisition."
+}

@@ -36,6 +36,8 @@ from PIL import Image
 import psutil
 from pypdf import PdfReader
 
+from worker_observer import WorkerObserver
+
 ROOT = Path(__file__).resolve().parent.parent
 EXPECTED_SHA256 = '40f03cbfe81ad7ab701680627cf9e777dc5903f7d0c377537985babbf0ac8b8a'
 
@@ -131,6 +133,7 @@ class FrozenBackend:
         self.stop_sampling = threading.Event()
         self.forced_termination = False
         self.port = None
+        self.worker_observer = WorkerObserver()
 
     def __enter__(self):
         env = dict(os.environ)
@@ -203,11 +206,16 @@ class FrozenBackend:
             for process in [parent, *parent.children(recursive=True)]:
                 try:
                     total += process.memory_info().rss
+                    if process.pid != parent.pid:
+                        command = process.cmdline()
+                        if '--worker' in command and Path(command[0]).resolve() == self.binary.resolve():
+                            self.worker_observer.observe(process, command)
                 except psutil.Error:
                     pass
             self.peak_memory = max(self.peak_memory, total)
         except psutil.Error:
             pass
+        self.worker_observer.poll()
 
     def call(self, method, route, **kwargs):
         result = self.client.request(method, route, **kwargs)
@@ -237,6 +245,9 @@ class FrozenBackend:
                 self.process.kill()
                 self.process.wait(timeout=10)
         self.stop_sampling.set()
+        if hasattr(self, 'sampler'):
+            self.sampler.join(timeout=2)
+        self.worker_observer.close()
         for reader in getattr(self, 'readers', []):
             reader.join(timeout=2)
         port_closed = True
@@ -245,7 +256,8 @@ class FrozenBackend:
                 probe.settimeout(.5)
                 port_closed = probe.connect_ex(('127.0.0.1', self.port)) != 0
         self.shutdown = {'returncode': self.process.returncode if self.process else None,
-                         'forced_termination': self.forced_termination, 'backend_port_closed': port_closed}
+                         'forced_termination': self.forced_termination, 'backend_port_closed': port_closed,
+                         'worker_processes': self.worker_observer.snapshot()}
 
 
 def list_resources(backend, paper_id):
@@ -440,6 +452,16 @@ def audit_paper(backend, source, library, output, timeout, dpis, save_report, re
     finally:
         result['seconds'] = round(time.perf_counter() - started, 3)
         result['peak_backend_worker_rss_bytes'] = backend.peak_memory
+        if paper_id:
+            worker_source = Path(library['path']) / 'papers' / paper_id / 'original.pdf'
+            result['worker_processes'] = backend.worker_observer.snapshot(worker_source, settle_seconds=1)
+            result['worker_exit_coverage'] = 'captured' if result['worker_processes'] and all(
+                item['exit_code'] is not None for item in result['worker_processes']) else 'unknown'
+            failures = [item for item in result['worker_processes'] if item['exit_code'] not in (None, 0)]
+            if failures:
+                result['passed'] = False
+                result['errors'].append({'stage': 'worker_exit', 'type': 'NonzeroWorkerExit',
+                                         'message': 'Owned worker process exited nonzero', 'workers': failures})
         if path.is_file() and result.get('source_pdf'):
             result['input_pdf_hash_unchanged'] = digest(path) == result['source_pdf']['sha256']
             result['passed'] = result['passed'] and result['input_pdf_hash_unchanged']

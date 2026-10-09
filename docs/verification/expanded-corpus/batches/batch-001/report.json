@@ -1,0 +1,2862 @@
+{
+  "passed": true,
+  "run_id": "20261009T125042Z-b5452ca7",
+  "started_at_utc": "2026-10-09T12:50:42.013416+00:00",
+  "work_directory": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7",
+  "artifacts": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7",
+  "backend": "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+  "sources": [
+    {
+      "id": "ml-bart-acl2020",
+      "title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension",
+      "authors_citation": "Mike Lewis, Yinhan Liu, Naman Goyal, Marjan Ghazvininejad, Abdelrahman Mohamed, Omer Levy, Veselin Stoyanov, Luke Zettlemoyer (2020), ACL, pp.7871-7880.",
+      "source_url": "https://aclanthology.org/2020.acl-main.703/",
+      "pdf_url": "https://aclanthology.org/2020.acl-main.703.pdf",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+      "license_evidence": "Official ACL publisher page and ACL policy: all ACL materials published in or after 2016 are CC BY 4.0. Official publisher PDF, not an arXiv substitute.",
+      "layout_notes": "Two-column paper with wide architecture diagrams, benchmark tables and text-generation examples.",
+      "review_level": "deep_review",
+      "local_path": "D:\\project\\PaperVault\\.test-data\\external\\expanded-corpus\\ml-bart-acl2020.pdf",
+      "sha256": "3562c723fe7bebb8b362533122b3ca5c065037c8e8d67460654cf3740652bb59",
+      "pages": 10,
+      "bytes": 322247,
+      "final_download_url": "https://aclanthology.org/2020.acl-main.703.pdf",
+      "downloaded_at_utc": "2026-10-09T12:48:15.370322+00:00",
+      "manifest": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\input-batches\\batch-001.json",
+      "manifest_sha256": "69c99cf942f53ee509ddc7c61aa01c285ebee047858e5c31ca300be3125abb93"
+    },
+    {
+      "id": "ml-scibert-emnlp2019",
+      "title": "SciBERT: A Pretrained Language Model for Scientific Text",
+      "authors_citation": "Iz Beltagy, Kyle Lo, Arman Cohan (2019), EMNLP-IJCNLP, pp.3615-3620.",
+      "source_url": "https://aclanthology.org/D19-1371/",
+      "pdf_url": "https://aclanthology.org/D19-1371.pdf",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+      "license_evidence": "Official ACL publisher page and ACL policy: all ACL materials published in or after 2016 are CC BY 4.0. Official publisher PDF, not an arXiv substitute.",
+      "layout_notes": "Short two-column scientific NLP paper with dense numeric benchmark tables.",
+      "review_level": "inventory_only",
+      "local_path": "D:\\project\\PaperVault\\.test-data\\external\\expanded-corpus\\ml-scibert-emnlp2019.pdf",
+      "sha256": "42e7bb57b92fbe6077c073edaffaf173728b7b685395700ac255ce0359344268",
+      "pages": 6,
+      "bytes": 187299,
+      "final_download_url": "https://aclanthology.org/D19-1371.pdf",
+      "downloaded_at_utc": "2026-10-09T12:48:24.179042+00:00",
+      "manifest": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\input-batches\\batch-001.json",
+      "manifest_sha256": "69c99cf942f53ee509ddc7c61aa01c285ebee047858e5c31ca300be3125abb93"
+    }
+  ],
+  "backend_origin": "installed",
+  "command": "D:\\project\\PaperVault\\.venv\\Scripts\\python.exe scripts/test_real_corpus.py --manifest artifacts/real-corpus-expanded/input-batches/batch-001.json --expect-version 0.2.1 --expect-sha256 567bc425d9df91f4813dfacdf64a8a8e5548381becc5950627830862439dd43a --dpi 300 --report artifacts/real-corpus-expanded/batches/batch-001/report.json",
+  "papers": [
+    {
+      "source": {
+        "id": "ml-bart-acl2020",
+        "title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension",
+        "authors_citation": "Mike Lewis, Yinhan Liu, Naman Goyal, Marjan Ghazvininejad, Abdelrahman Mohamed, Omer Levy, Veselin Stoyanov, Luke Zettlemoyer (2020), ACL, pp.7871-7880.",
+        "source_url": "https://aclanthology.org/2020.acl-main.703/",
+        "pdf_url": "https://aclanthology.org/2020.acl-main.703.pdf",
+        "license": "CC-BY-4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+        "license_evidence": "Official ACL publisher page and ACL policy: all ACL materials published in or after 2016 are CC BY 4.0. Official publisher PDF, not an arXiv substitute.",
+        "layout_notes": "Two-column paper with wide architecture diagrams, benchmark tables and text-generation examples.",
+        "review_level": "deep_review",
+        "local_path": "D:\\project\\PaperVault\\.test-data\\external\\expanded-corpus\\ml-bart-acl2020.pdf",
+        "sha256": "3562c723fe7bebb8b362533122b3ca5c065037c8e8d67460654cf3740652bb59",
+        "pages": 10,
+        "bytes": 322247,
+        "final_download_url": "https://aclanthology.org/2020.acl-main.703.pdf",
+        "downloaded_at_utc": "2026-10-09T12:48:15.370322+00:00",
+        "manifest": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\input-batches\\batch-001.json",
+        "manifest_sha256": "69c99cf942f53ee509ddc7c61aa01c285ebee047858e5c31ca300be3125abb93"
+      },
+      "passed": true,
+      "errors": [],
+      "resources": [
+        {
+          "id": "6e43bccb-c343-4c34-aeaf-f59971638621",
+          "kind": "figure",
+          "caption": "(a) BERT: Random tokens are replaced with masks, and the document is encoded bidirectionally. Missing tokens are predicted independently, so BERT cannot easily be used for generation.",
+          "locations": [
+            {
+              "page_index": 1,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                142.19817679447456,
+                695.713542541359,
+                240.48525208236384,
+                775.4168737488518
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 2,
+                "bbox": {
+                  "l": 142.19817679447456,
+                  "t": 775.4168737488518,
+                  "r": 240.48525208236384,
+                  "b": 695.713542541359,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\6e43bccb-c343-4c34-aeaf-f59971638621\\png-300.png",
+              "bytes": 24033,
+              "sha256": "47e7807ca05f10250ea820f234abb992e43b108ec429d51fff87f4b788ab514d",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 409,
+                "height": 332
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\6e43bccb-c343-4c34-aeaf-f59971638621\\segment_1.png",
+              "bytes": 10736,
+              "sha256": "ea640749cde9cd353f7704ee7084c2097f216a82aeff2c6da1e22e4347c692ed",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 204,
+                "height": 165
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\6e43bccb-c343-4c34-aeaf-f59971638621\\thumbnail.png",
+              "bytes": 10736,
+              "sha256": "ea640749cde9cd353f7704ee7084c2097f216a82aeff2c6da1e22e4347c692ed",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 204,
+                "height": 165
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\6e43bccb-c343-4c34-aeaf-f59971638621\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "(a) BERT: Random tokens are replaced with masks, and the document is encoded bidirectionally. Missing tokens are predicted independently, so BERT cannot easily be used for generation.",
+            "resource_id": "6e43bccb-c343-4c34-aeaf-f59971638621",
+            "paper_id": "976c60f5-ac13-42ed-9efe-135e53a5d921",
+            "location": {
+              "page_index": 1,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                142.19817679447456,
+                695.713542541359,
+                240.48525208236384,
+                775.4168737488518
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 2,
+                "bbox": {
+                  "l": 142.19817679447456,
+                  "t": 775.4168737488518,
+                  "r": 240.48525208236384,
+                  "b": 695.713542541359,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "97dec932-586a-4a97-aba8-6e3d7b8378fc",
+          "kind": "figure",
+          "caption": "",
+          "locations": [
+            {
+              "page_index": 1,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                356.8628432256711,
+                697.0518228839865,
+                454.0307047977319,
+                774.9888214621465
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 2,
+                "bbox": {
+                  "l": 356.8628432256711,
+                  "t": 774.9888214621465,
+                  "r": 454.0307047977319,
+                  "b": 697.0518228839865,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ],
+          "needs_review": true,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\97dec932-586a-4a97-aba8-6e3d7b8378fc\\png-300.png",
+              "bytes": 31617,
+              "sha256": "ded5bb15b33a7c5403c7b43295ecb3d16e132536c3d3a8e51b7660cbbb0ab664",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 405,
+                "height": 324
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\97dec932-586a-4a97-aba8-6e3d7b8378fc\\segment_1.png",
+              "bytes": 14025,
+              "sha256": "83eb11ca2cf3a53f03e4b5e44e58fc795b8ee44fe5938f9f1203dc139ce4fb76",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 202,
+                "height": 161
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\97dec932-586a-4a97-aba8-6e3d7b8378fc\\thumbnail.png",
+              "bytes": 14025,
+              "sha256": "83eb11ca2cf3a53f03e4b5e44e58fc795b8ee44fe5938f9f1203dc139ce4fb76",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 202,
+                "height": 161
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\97dec932-586a-4a97-aba8-6e3d7b8378fc\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "not_applicable": "Auto parser returned no caption; no caption was fabricated"
+          },
+          "passed": true
+        },
+        {
+          "id": "5a6edf3d-bbcc-43c8-9de4-1841a2cbb656",
+          "kind": "figure",
+          "caption": "(b) GPT: Tokens are predicted auto-regressively, meaning GPT can be used for generation. However words can only condition on leftward context, so it cannot learn bidirectional interactions.",
+          "locations": [
+            {
+              "page_index": 1,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                191.4507736904477,
+                563.035138343213,
+                405.21687479190695,
+                642.3021709659604
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 2,
+                "bbox": {
+                  "l": 191.4507736904477,
+                  "t": 642.3021709659604,
+                  "r": 405.21687479190695,
+                  "b": 563.035138343213,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\5a6edf3d-bbcc-43c8-9de4-1841a2cbb656\\png-300.png",
+              "bytes": 54513,
+              "sha256": "8459cb7904cee92201b0b45c82ca4c99a258f276688e5aa54646128091757c92",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 891,
+                "height": 330
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\5a6edf3d-bbcc-43c8-9de4-1841a2cbb656\\segment_1.png",
+              "bytes": 24795,
+              "sha256": "0a10026a1ec3881c50a8439bf252f2090c0bf39921ad1ec4249eb3879b093178",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 446,
+                "height": 165
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\5a6edf3d-bbcc-43c8-9de4-1841a2cbb656\\thumbnail.png",
+              "bytes": 24795,
+              "sha256": "0a10026a1ec3881c50a8439bf252f2090c0bf39921ad1ec4249eb3879b093178",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 446,
+                "height": 165
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\5a6edf3d-bbcc-43c8-9de4-1841a2cbb656\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "(b) GPT: Tokens are predicted auto-regressively, meaning GPT can be used for generation. However words can only condition on leftward context, so it cannot learn bidirectional interactions.",
+            "resource_id": "5a6edf3d-bbcc-43c8-9de4-1841a2cbb656",
+            "paper_id": "976c60f5-ac13-42ed-9efe-135e53a5d921",
+            "location": {
+              "page_index": 1,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                191.4507736904477,
+                563.035138343213,
+                405.21687479190695,
+                642.3021709659604
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 2,
+                "bbox": {
+                  "l": 191.4507736904477,
+                  "t": 642.3021709659604,
+                  "r": 405.21687479190695,
+                  "b": 563.035138343213,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "9bb6780c-eb2e-4d5f-8974-ecea9f080f7b",
+          "kind": "figure",
+          "caption": "Figure 2: Transformations for noising the input that we experiment with. These transformations can be composed.",
+          "locations": [
+            {
+              "page_index": 2,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                140.84092556363302,
+                696.3195424639414,
+                455.10675811644694,
+                781.09135282
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 3,
+                "bbox": {
+                  "l": 140.84092556363302,
+                  "t": 781.09135282,
+                  "r": 455.1067581164469,
+                  "b": 696.3195424639414,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\9bb6780c-eb2e-4d5f-8974-ecea9f080f7b\\png-300.png",
+              "bytes": 69782,
+              "sha256": "5a3ce57d00bb72ba733d1362a420ca26c5806c3e9c6e6bd4761aa0843feafc54",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 1309,
+                "height": 352
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\9bb6780c-eb2e-4d5f-8974-ecea9f080f7b\\segment_1.png",
+              "bytes": 34481,
+              "sha256": "2e9f82d95f2b81aaef0675e00469cb3f0a3560b581451a5074c48d7f6f91a9bb",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 654,
+                "height": 176
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\9bb6780c-eb2e-4d5f-8974-ecea9f080f7b\\thumbnail.png",
+              "bytes": 37052,
+              "sha256": "5270297614863b2069523b39abf89d14adb090b8881e93254b55349e95d9d3dd",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 512,
+                "height": 138
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\9bb6780c-eb2e-4d5f-8974-ecea9f080f7b\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Figure 2: Transformations for noising the input that we experiment with. These transformations can be composed.",
+            "resource_id": "9bb6780c-eb2e-4d5f-8974-ecea9f080f7b",
+            "paper_id": "976c60f5-ac13-42ed-9efe-135e53a5d921",
+            "location": {
+              "page_index": 2,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                140.84092556363302,
+                696.3195424639414,
+                455.10675811644694,
+                781.09135282
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 3,
+                "bbox": {
+                  "l": 140.84092556363302,
+                  "t": 781.09135282,
+                  "r": 455.1067581164469,
+                  "b": 696.3195424639414,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "5bae341d-fa5a-4c23-bd5b-8b8f289b5999",
+          "kind": "figure",
+          "caption": "",
+          "locations": [
+            {
+              "page_index": 3,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                88.03854602772758,
+                694.6234597501052,
+                476.25901036286825,
+                777.3068855919917
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 4,
+                "bbox": {
+                  "l": 88.03854602772758,
+                  "t": 777.3068855919917,
+                  "r": 476.2590103628683,
+                  "b": 694.6234597501052,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ],
+          "needs_review": true,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\5bae341d-fa5a-4c23-bd5b-8b8f289b5999\\png-300.png",
+              "bytes": 100644,
+              "sha256": "47b673710c2e87d5f43df5ba385340c7c8d39f5f168b7b9546841d1fa7ba0a8e",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 1618,
+                "height": 343
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\5bae341d-fa5a-4c23-bd5b-8b8f289b5999\\segment_1.png",
+              "bytes": 45617,
+              "sha256": "5c97a05e94b61a07d2db40805c03d02b114c380992f4a29dc444eaf5fb75ee24",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 809,
+                "height": 171
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\5bae341d-fa5a-4c23-bd5b-8b8f289b5999\\thumbnail.png",
+              "bytes": 33271,
+              "sha256": "af7fd7db26904ea5df11c9773bbc1b4ccd560fe603c98ec9771be3c5ace34b25",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 512,
+                "height": 108
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\5bae341d-fa5a-4c23-bd5b-8b8f289b5999\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "not_applicable": "Auto parser returned no caption; no caption was fabricated"
+          },
+          "passed": true
+        },
+        {
+          "id": "6d35ce30-7c9c-489b-b931-6c5ba9cb5579",
+          "kind": "table",
+          "caption": "Table 1: Comparison of pre-training objectives, including approaches inspired by BERT, MASS, GPT, XLNet and UniLM. All models are a similar size to BERT Base and are trained for 1M steps on the same data. Entries in the bottom two blocks are trained on identical data using the same code-base, and fine-tuned with the same procedures. Entries in the second block are inspired by pre-training objectives proposed in previous work, but have been simplified to focus on evaluation objectives (see §4.1). Performance varies considerably across tasks, but the BART models with text infilling demonstrate the most consistently strong performance.",
+          "locations": [
+            {
+              "page_index": 4,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                78.58723441340298,
+                578.4588128078578,
+                518.1250222901209,
+                779.7951469055321
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 5,
+                "bbox": {
+                  "l": 78.58723441340298,
+                  "t": 779.7951469055321,
+                  "r": 518.1250222901209,
+                  "b": 578.4588128078578,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\6d35ce30-7c9c-489b-b931-6c5ba9cb5579\\png-300.png",
+              "bytes": 265985,
+              "sha256": "4f507744c41fd26652ab13ee9a88aea80a8ec7c9f7cd52c5cf859343bc4a1c55",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 1831,
+                "height": 838
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\6d35ce30-7c9c-489b-b931-6c5ba9cb5579\\csv.csv",
+              "bytes": 756,
+              "sha256": "4eca11e6f1ce19a22774b16a7c20d5b8e3c4f781618668da5df0aab19fc10a4e",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 14,
+                "columns": 7,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\6d35ce30-7c9c-489b-b931-6c5ba9cb5579\\html.html",
+              "bytes": 2360,
+              "sha256": "3a82ee87df25499978517831196a6b40c86aef0150c5c05dd30ef5fa9e3e7961",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 2359
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\6d35ce30-7c9c-489b-b931-6c5ba9cb5579\\segment_1.png",
+              "bytes": 116060,
+              "sha256": "e97c0bf4e2d3ac3034ec064ecdbed07b01b8af307c8629f092542c476e9fc9c7",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 916,
+                "height": 418
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\6d35ce30-7c9c-489b-b931-6c5ba9cb5579\\thumbnail.png",
+              "bytes": 65046,
+              "sha256": "33b52e58c88c093c976738b346a8c55edb1daf3251da1298c9f9adb8bc116e61",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 512,
+                "height": 234
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\6d35ce30-7c9c-489b-b931-6c5ba9cb5579\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table 1: Comparison of pre-training objectives, including approaches inspired by BERT, MASS, GPT, XLNet and UniLM. All models are a similar size to BERT Base and are trained for 1M steps on the same data. Entries in the bottom two blocks are trained on identical data using the same code-base, and fine-tuned with the same procedures. Entries in the second block are inspired by pre-training objectives proposed in previous work, but have been simplified to focus on evaluation objectives (see §4.1). Performance varies considerably across tasks, but the BART models with text infilling demonstrate the most consistently strong performance.",
+            "resource_id": "6d35ce30-7c9c-489b-b931-6c5ba9cb5579",
+            "paper_id": "976c60f5-ac13-42ed-9efe-135e53a5d921",
+            "location": {
+              "page_index": 4,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                78.58723441340298,
+                578.4588128078578,
+                518.1250222901209,
+                779.7951469055321
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 5,
+                "bbox": {
+                  "l": 78.58723441340298,
+                  "t": 779.7951469055321,
+                  "r": 518.1250222901209,
+                  "b": 578.4588128078578,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "e5763d45-25fb-4dac-8776-0f65245163da",
+          "kind": "table",
+          "caption": "Table 2: Results for large models on GLUE tasks. BART performs comparably to RoBERTa and XLNet, suggesting that BART's uni-directional decoder layers do not reduce performance on discriminative tasks.",
+          "locations": [
+            {
+              "page_index": 5,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                121.31640856216738,
+                684.0154250025805,
+                476.05780853988335,
+                779.7787496644244
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 6,
+                "bbox": {
+                  "l": 121.31640856216737,
+                  "t": 779.7787496644244,
+                  "r": 476.05780853988335,
+                  "b": 684.0154250025805,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\e5763d45-25fb-4dac-8776-0f65245163da\\png-300.png",
+              "bytes": 109202,
+              "sha256": "0e698a6e396211abc75fd0561bf3e5767f50e06c8ef3c5cb2af0d1a9861c288a",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 1478,
+                "height": 398
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\e5763d45-25fb-4dac-8776-0f65245163da\\csv.csv",
+              "bytes": 324,
+              "sha256": "4d47a01d6048ff489ecc452940d4c5d8c1a15b8df71af11f62865a9aaddd2a13",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 6,
+                "columns": 9,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\e5763d45-25fb-4dac-8776-0f65245163da\\html.html",
+              "bytes": 1079,
+              "sha256": "668d9cce03a6630fe91ddd67833d947c4a991b2c08593f1934b2d65d9c4ad411",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 1079
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\e5763d45-25fb-4dac-8776-0f65245163da\\segment_1.png",
+              "bytes": 46953,
+              "sha256": "3f18bd0d7e9de353ead686c183e1716522ed123468e2dee17f9d5de16afa5207",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 739,
+                "height": 198
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\e5763d45-25fb-4dac-8776-0f65245163da\\thumbnail.png",
+              "bytes": 40701,
+              "sha256": "d75bab51850f7e0e3989ba82cf4c1689c95266a311cf51df80d4bb71e6010430",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 512,
+                "height": 137
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\e5763d45-25fb-4dac-8776-0f65245163da\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table 2: Results for large models on GLUE tasks. BART performs comparably to RoBERTa and XLNet, suggesting that BART's uni-directional decoder layers do not reduce performance on discriminative tasks.",
+            "resource_id": "e5763d45-25fb-4dac-8776-0f65245163da",
+            "paper_id": "976c60f5-ac13-42ed-9efe-135e53a5d921",
+            "location": {
+              "page_index": 5,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                121.31640856216738,
+                684.0154250025805,
+                476.05780853988335,
+                779.7787496644244
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 6,
+                "bbox": {
+                  "l": 121.31640856216737,
+                  "t": 779.7787496644244,
+                  "r": 476.05780853988335,
+                  "b": 684.0154250025805,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "f5b846e6-ffd7-480d-a779-03c4bce3bb97",
+          "kind": "table",
+          "caption": "Table 3: BART gives similar results to XLNet and RoBERTa on question answering.",
+          "locations": [
+            {
+              "page_index": 5,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                94.24964264561186,
+                535.2916929448868,
+                267.65487446788813,
+                631.9358496316652
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 6,
+                "bbox": {
+                  "l": 94.24964264561186,
+                  "t": 631.9358496316652,
+                  "r": 267.65487446788813,
+                  "b": 535.2916929448868,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\f5b846e6-ffd7-480d-a779-03c4bce3bb97\\png-300.png",
+              "bytes": 70965,
+              "sha256": "dc9156a3cf38a8a969fd4616ea7c9a31de907542862b83856134a8a0c557572b",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 722,
+                "height": 402
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\f5b846e6-ffd7-480d-a779-03c4bce3bb97\\csv.csv",
+              "bytes": 167,
+              "sha256": "0b2f56f629847325d5dafe304b186d66243628f137f03d5838f8ae39e7cee48b",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 6,
+                "columns": 3,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\f5b846e6-ffd7-480d-a779-03c4bce3bb97\\html.html",
+              "bytes": 510,
+              "sha256": "95e5192f04b1bd1eacf47ba1fb4b66693b496429624483e8040e54acb0271284",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 510
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\f5b846e6-ffd7-480d-a779-03c4bce3bb97\\segment_1.png",
+              "bytes": 26621,
+              "sha256": "d6cc74cac638641710f301937b4bc5996d06ec86066120e86338192933ba2538",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 361,
+                "height": 200
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\f5b846e6-ffd7-480d-a779-03c4bce3bb97\\thumbnail.png",
+              "bytes": 26621,
+              "sha256": "d6cc74cac638641710f301937b4bc5996d06ec86066120e86338192933ba2538",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 361,
+                "height": 200
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\f5b846e6-ffd7-480d-a779-03c4bce3bb97\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table 3: BART gives similar results to XLNet and RoBERTa on question answering.",
+            "resource_id": "f5b846e6-ffd7-480d-a779-03c4bce3bb97",
+            "paper_id": "976c60f5-ac13-42ed-9efe-135e53a5d921",
+            "location": {
+              "page_index": 5,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                94.24964264561186,
+                535.2916929448868,
+                267.65487446788813,
+                631.9358496316652
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 6,
+                "bbox": {
+                  "l": 94.24964264561186,
+                  "t": 631.9358496316652,
+                  "r": 267.65487446788813,
+                  "b": 535.2916929448868,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "005e651d-7bb7-450f-82bf-cb0e462799cd",
+          "kind": "table",
+          "caption": "Table 4: Results on two standard summarization datasets. BART outperforms previous work on summarization on both tasks and all metrics, including those based on large-scale pre-training.",
+          "locations": [
+            {
+              "page_index": 6,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                105.3379403385956,
+                642.7085052040807,
+                491.7318603255508,
+                779.9809212775695
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 7,
+                "bbox": {
+                  "l": 105.3379403385956,
+                  "t": 779.9809212775695,
+                  "r": 491.7318603255508,
+                  "b": 642.7085052040807,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\005e651d-7bb7-450f-82bf-cb0e462799cd\\png-300.png",
+              "bytes": 182031,
+              "sha256": "1320e4c64664129343698de81d19daf890450973e004c72dbad072b048b96cfb",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 1610,
+                "height": 572
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\005e651d-7bb7-450f-82bf-cb0e462799cd\\csv.csv",
+              "bytes": 515,
+              "sha256": "2ff3d775bf6b6e3ef801efc07a8f1aedcbde954919a4b4fa0957bc80d5d6b59a",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 10,
+                "columns": 7,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\005e651d-7bb7-450f-82bf-cb0e462799cd\\html.html",
+              "bytes": 1397,
+              "sha256": "8e4ea6dbda6f70dfbe37e9823eccff2e06a44d4b3b8dae714ddeee3c114bc144",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 1397
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\005e651d-7bb7-450f-82bf-cb0e462799cd\\segment_1.png",
+              "bytes": 80035,
+              "sha256": "66324bd46782f8f35cbad8a069eb705a5e8f33eff71afd4e1e410e4b572d2036",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 805,
+                "height": 286
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\005e651d-7bb7-450f-82bf-cb0e462799cd\\thumbnail.png",
+              "bytes": 55507,
+              "sha256": "509fdb3799af795cb1f2b33e9ea57965cbb9d9c273cf3f73bf983769aefcf4a5",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 512,
+                "height": 182
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\005e651d-7bb7-450f-82bf-cb0e462799cd\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table 4: Results on two standard summarization datasets. BART outperforms previous work on summarization on both tasks and all metrics, including those based on large-scale pre-training.",
+            "resource_id": "005e651d-7bb7-450f-82bf-cb0e462799cd",
+            "paper_id": "976c60f5-ac13-42ed-9efe-135e53a5d921",
+            "location": {
+              "page_index": 6,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                105.3379403385956,
+                642.7085052040807,
+                491.7318603255508,
+                779.9809212775695
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 7,
+                "bbox": {
+                  "l": 105.3379403385956,
+                  "t": 779.9809212775695,
+                  "r": 491.7318603255508,
+                  "b": 642.7085052040807,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "6a48b48e-4acb-44bc-acaa-e88cd3540814",
+          "kind": "table",
+          "caption": "Table 5: Human Evaluation on XSum: BART summaries are preferred to those from previous work, but not to human-written reference summaries.",
+          "locations": [
+            {
+              "page_index": 6,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                71.18436523411897,
+                531.0207360886961,
+                308.44434538832286,
+                590.5538511418504
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 7,
+                "bbox": {
+                  "l": 71.18436523411897,
+                  "t": 590.5538511418504,
+                  "r": 308.44434538832286,
+                  "b": 531.0207360886961,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\6a48b48e-4acb-44bc-acaa-e88cd3540814\\png-300.png",
+              "bytes": 38841,
+              "sha256": "7c8a846ab926bbb1f4d715aa7c82368c5429623a0e10051a382107de031cd8cc",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 988,
+                "height": 247
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\6a48b48e-4acb-44bc-acaa-e88cd3540814\\csv.csv",
+              "bytes": 93,
+              "sha256": "93920d3642b91b6d85ffbac293249a5d8e777293c2d2703873305aa3226f36fd",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 4,
+                "columns": 4,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\6a48b48e-4acb-44bc-acaa-e88cd3540814\\html.html",
+              "bytes": 467,
+              "sha256": "23ea05bcb8671ed3c84524b901bba64227efc874458588c2563af15e5188516e",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 467
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\6a48b48e-4acb-44bc-acaa-e88cd3540814\\segment_1.png",
+              "bytes": 16511,
+              "sha256": "a9905eafa6871ea1cc8c7e359cd8d2205afa741654bb7c70e8a7ddb610786061",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 494,
+                "height": 123
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\6a48b48e-4acb-44bc-acaa-e88cd3540814\\thumbnail.png",
+              "bytes": 16511,
+              "sha256": "a9905eafa6871ea1cc8c7e359cd8d2205afa741654bb7c70e8a7ddb610786061",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 494,
+                "height": 123
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\6a48b48e-4acb-44bc-acaa-e88cd3540814\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table 5: Human Evaluation on XSum: BART summaries are preferred to those from previous work, but not to human-written reference summaries.",
+            "resource_id": "6a48b48e-4acb-44bc-acaa-e88cd3540814",
+            "paper_id": "976c60f5-ac13-42ed-9efe-135e53a5d921",
+            "location": {
+              "page_index": 6,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                71.18436523411897,
+                531.0207360886961,
+                308.44434538832286,
+                590.5538511418504
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 7,
+                "bbox": {
+                  "l": 71.18436523411897,
+                  "t": 590.5538511418504,
+                  "r": 308.44434538832286,
+                  "b": 531.0207360886961,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "951265d3-1816-4b62-ab6b-2a938df6538b",
+          "kind": "table",
+          "caption": "Table 6: BART outperforms previous work on conversational response generation. Perplexities are renormalized based on official tokenizer for ConvAI2.",
+          "locations": [
+            {
+              "page_index": 6,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                77.29950159761569,
+                401.3531689681463,
+                284.286623765779,
+                473.8567878023632
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 7,
+                "bbox": {
+                  "l": 77.29950159761569,
+                  "t": 473.8567878023632,
+                  "r": 284.286623765779,
+                  "b": 401.3531689681463,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\951265d3-1816-4b62-ab6b-2a938df6538b\\png-300.png",
+              "bytes": 41978,
+              "sha256": "e363e485690defcdda2451cbf77b4c2bcc547a1124b0a790897c61fbcc64e095",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 862,
+                "height": 301
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\951265d3-1816-4b62-ab6b-2a938df6538b\\csv.csv",
+              "bytes": 113,
+              "sha256": "720404732abf93a0a31d8b292a6a6dfdeec2a48946d44f643a8f8188fae0073d",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 5,
+                "columns": 3,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\951265d3-1816-4b62-ab6b-2a938df6538b\\html.html",
+              "bytes": 498,
+              "sha256": "91fb1c8a8743d88977c207662a521594171829d9e4001615ffe62bd377efa5f8",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 498
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\951265d3-1816-4b62-ab6b-2a938df6538b\\segment_1.png",
+              "bytes": 17095,
+              "sha256": "03bdd71bbc53840c044d87cb644628e90a660aa32c9a8a78627b85b445df2ab6",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 431,
+                "height": 150
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\951265d3-1816-4b62-ab6b-2a938df6538b\\thumbnail.png",
+              "bytes": 17095,
+              "sha256": "03bdd71bbc53840c044d87cb644628e90a660aa32c9a8a78627b85b445df2ab6",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 431,
+                "height": 150
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\951265d3-1816-4b62-ab6b-2a938df6538b\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table 6: BART outperforms previous work on conversational response generation. Perplexities are renormalized based on official tokenizer for ConvAI2.",
+            "resource_id": "951265d3-1816-4b62-ab6b-2a938df6538b",
+            "paper_id": "976c60f5-ac13-42ed-9efe-135e53a5d921",
+            "location": {
+              "page_index": 6,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                77.29950159761569,
+                401.3531689681463,
+                284.286623765779,
+                473.8567878023632
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 7,
+                "bbox": {
+                  "l": 77.29950159761569,
+                  "t": 473.8567878023632,
+                  "r": 284.286623765779,
+                  "b": 401.3531689681463,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "095567a4-779c-4d5a-8693-d5802c079961",
+          "kind": "table",
+          "caption": "Table 7: BART achieves state-of-the-art results on the challenging ELI5 abstractive question answering dataset. Comparison models are from Fan et al. (2019).",
+          "locations": [
+            {
+              "page_index": 6,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                325.88669327437634,
+                494.6031615870242,
+                506.15395578986045,
+                590.7949085128676
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 7,
+                "bbox": {
+                  "l": 325.88669327437634,
+                  "t": 590.7949085128676,
+                  "r": 506.15395578986045,
+                  "b": 494.6031615870242,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\095567a4-779c-4d5a-8693-d5802c079961\\png-300.png",
+              "bytes": 55649,
+              "sha256": "35b4fd3545ced3570e8ed900cc33ba3b5232fbf43808652397090e185901b692",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 751,
+                "height": 400
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\095567a4-779c-4d5a-8693-d5802c079961\\csv.csv",
+              "bytes": 160,
+              "sha256": "a7170a60dad8524aa05a892066badff232379fc1996a00dbc7f4428a4bd2c721",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 7,
+                "columns": 4,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\095567a4-779c-4d5a-8693-d5802c079961\\html.html",
+              "bytes": 664,
+              "sha256": "24cc9fdf776df63f7fbffc81269e4fe62c734d2350eddf6cd992ffc39d0a3976",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 664
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\095567a4-779c-4d5a-8693-d5802c079961\\segment_1.png",
+              "bytes": 22602,
+              "sha256": "61dd75afaa84ed59dd1311082d66cf74d8507c51c69eb2aa12789f9a322336bb",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 376,
+                "height": 199
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\095567a4-779c-4d5a-8693-d5802c079961\\thumbnail.png",
+              "bytes": 22602,
+              "sha256": "61dd75afaa84ed59dd1311082d66cf74d8507c51c69eb2aa12789f9a322336bb",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 376,
+                "height": 199
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\095567a4-779c-4d5a-8693-d5802c079961\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table 7: BART achieves state-of-the-art results on the challenging ELI5 abstractive question answering dataset. Comparison models are from Fan et al. (2019).",
+            "resource_id": "095567a4-779c-4d5a-8693-d5802c079961",
+            "paper_id": "976c60f5-ac13-42ed-9efe-135e53a5d921",
+            "location": {
+              "page_index": 6,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                325.88669327437634,
+                494.6031615870242,
+                506.15395578986045,
+                590.7949085128676
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 7,
+                "bbox": {
+                  "l": 325.88669327437634,
+                  "t": 590.7949085128676,
+                  "r": 506.15395578986045,
+                  "b": 494.6031615870242,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "2bfd3b6f-5129-4649-823b-6c941556bec2",
+          "kind": "table",
+          "caption": "Table 8: BLEU scores of the baseline and BART on WMT'16 RO-EN augmented with back-translation data. BART improves over a strong back-translation baseline by using monolingual English pre-training.",
+          "locations": [
+            {
+              "page_index": 6,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                362.1132628618279,
+                374.5222020030984,
+                470.49828608795775,
+                434.9512571230636
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 7,
+                "bbox": {
+                  "l": 362.1132628618279,
+                  "t": 434.95125712306367,
+                  "r": 470.49828608795775,
+                  "b": 374.5222020030984,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\2bfd3b6f-5129-4649-823b-6c941556bec2\\png-300.png",
+              "bytes": 27603,
+              "sha256": "c98c0e2596d197fc657e316ea8b6eaf007dd72878fde29d5b0303d2a77d8cc70",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 452,
+                "height": 251
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\2bfd3b6f-5129-4649-823b-6c941556bec2\\csv.csv",
+              "bytes": 63,
+              "sha256": "7422b6cab54a178b713fedfc81590cf25e196a1236f0475eb96e7e970642fd53",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 4,
+                "columns": 2,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\2bfd3b6f-5129-4649-823b-6c941556bec2\\html.html",
+              "bytes": 433,
+              "sha256": "4b31d6dddf77f9b696a4eb92b00bc9bd06730c7b571083c589681647c0036cad",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 433
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\2bfd3b6f-5129-4649-823b-6c941556bec2\\segment_1.png",
+              "bytes": 10992,
+              "sha256": "2e2aab00ba77e22d40c955f734f7d82b19a218a558e35bc156b0011ec1a9d3b9",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 226,
+                "height": 125
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\2bfd3b6f-5129-4649-823b-6c941556bec2\\thumbnail.png",
+              "bytes": 10992,
+              "sha256": "2e2aab00ba77e22d40c955f734f7d82b19a218a558e35bc156b0011ec1a9d3b9",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 226,
+                "height": 125
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\resources\\2bfd3b6f-5129-4649-823b-6c941556bec2\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table 8: BLEU scores of the baseline and BART on WMT'16 RO-EN augmented with back-translation data. BART improves over a strong back-translation baseline by using monolingual English pre-training.",
+            "resource_id": "2bfd3b6f-5129-4649-823b-6c941556bec2",
+            "paper_id": "976c60f5-ac13-42ed-9efe-135e53a5d921",
+            "location": {
+              "page_index": 6,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                362.1132628618279,
+                374.5222020030984,
+                470.49828608795775,
+                434.9512571230636
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 7,
+                "bbox": {
+                  "l": 362.1132628618279,
+                  "t": 434.95125712306367,
+                  "r": 470.49828608795775,
+                  "b": 374.5222020030984,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        }
+      ],
+      "progress": [
+        {
+          "seconds": 0.047,
+          "id": "df6ce295-89ff-4d6c-8ec4-5a52a2cec33b",
+          "status": "queued",
+          "phase": "等待解析",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 0.554,
+          "id": "df6ce295-89ff-4d6c-8ec4-5a52a2cec33b",
+          "status": "running",
+          "phase": "正在加载解析引擎",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 1.565,
+          "id": "df6ce295-89ff-4d6c-8ec4-5a52a2cec33b",
+          "status": "running",
+          "phase": "正在校验离线模型",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 2.073,
+          "id": "df6ce295-89ff-4d6c-8ec4-5a52a2cec33b",
+          "status": "running",
+          "phase": "正在读取 PDF",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 39.389,
+          "id": "df6ce295-89ff-4d6c-8ec4-5a52a2cec33b",
+          "status": "running",
+          "phase": "正在执行 CPU 版面识别与表格解析",
+          "pages_done": null,
+          "pages_total": 10,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 78.336,
+          "id": "df6ce295-89ff-4d6c-8ec4-5a52a2cec33b",
+          "status": "running",
+          "phase": "正在导出图表",
+          "pages_done": null,
+          "pages_total": 10,
+          "resources_count": 2,
+          "error": null
+        },
+        {
+          "seconds": 78.843,
+          "id": "df6ce295-89ff-4d6c-8ec4-5a52a2cec33b",
+          "status": "running",
+          "phase": "正在导出图表",
+          "pages_done": null,
+          "pages_total": 10,
+          "resources_count": 11,
+          "error": null
+        },
+        {
+          "seconds": 79.352,
+          "id": "df6ce295-89ff-4d6c-8ec4-5a52a2cec33b",
+          "status": "running",
+          "phase": "解析完成",
+          "pages_done": 10,
+          "pages_total": 10,
+          "resources_count": 13,
+          "error": null
+        },
+        {
+          "seconds": 80.363,
+          "id": "df6ce295-89ff-4d6c-8ec4-5a52a2cec33b",
+          "status": "completed",
+          "phase": "解析完成",
+          "pages_done": 10,
+          "pages_total": 10,
+          "resources_count": 13,
+          "error": null
+        }
+      ],
+      "source_pdf": {
+        "path": "D:\\project\\PaperVault\\.test-data\\external\\expanded-corpus\\ml-bart-acl2020.pdf",
+        "bytes": 322247,
+        "sha256": "3562c723fe7bebb8b362533122b3ca5c065037c8e8d67460654cf3740652bb59"
+      },
+      "page_count": 10,
+      "paper_id": "976c60f5-ac13-42ed-9efe-135e53a5d921",
+      "job": {
+        "id": "df6ce295-89ff-4d6c-8ec4-5a52a2cec33b",
+        "paper_id": "976c60f5-ac13-42ed-9efe-135e53a5d921",
+        "status": "completed",
+        "phase": "解析完成",
+        "error": null,
+        "created_at": "2026-10-09T12:50:45.612831+00:00",
+        "updated_at": "2026-10-09T12:52:05.732666+00:00",
+        "paper_title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension",
+        "pages_done": 10,
+        "pages_total": 10,
+        "resources_count": 13
+      },
+      "parse_seconds": 80.366,
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\paper-auto.json",
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "counts": {
+        "figure": 5,
+        "table": 8,
+        "resources": 13
+      },
+      "source_revision": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\976c60f5-ac13-42ed-9efe-135e53a5d921\\revisions\\6bcf536f-ac38-439d-b5a3-682546ce540c",
+      "parser_artifacts": [
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\976c60f5-ac13-42ed-9efe-135e53a5d921\\revisions\\6bcf536f-ac38-439d-b5a3-682546ce540c\\structure.json",
+            "bytes": 744144,
+            "sha256": "deafcc0367ccd04ad339e8645e879fa7b9c81583cebd290e1392f005964df671"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\structure.json",
+            "bytes": 744144,
+            "sha256": "deafcc0367ccd04ad339e8645e879fa7b9c81583cebd290e1392f005964df671"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\976c60f5-ac13-42ed-9efe-135e53a5d921\\revisions\\6bcf536f-ac38-439d-b5a3-682546ce540c\\docling.json",
+            "bytes": 394940,
+            "sha256": "5048df764935a5bd2a179e4bae44716d5b9334896c9d59c2d37e17f9969bb441"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\docling.json",
+            "bytes": 394940,
+            "sha256": "5048df764935a5bd2a179e4bae44716d5b9334896c9d59c2d37e17f9969bb441"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\976c60f5-ac13-42ed-9efe-135e53a5d921\\revisions\\6bcf536f-ac38-439d-b5a3-682546ce540c\\fulltext.md",
+            "bytes": 46900,
+            "sha256": "33914e4173f2f982f4c4be1dff4575ee920fc1b1d23090c98b057a32654a7ad9"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\fulltext.md",
+            "bytes": 46900,
+            "sha256": "33914e4173f2f982f4c4be1dff4575ee920fc1b1d23090c98b057a32654a7ad9"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\976c60f5-ac13-42ed-9efe-135e53a5d921\\revisions\\6bcf536f-ac38-439d-b5a3-682546ce540c\\worker.log",
+            "bytes": 2436,
+            "sha256": "da923f1a59606c0aa0c80a817d62d7ca26d1316f2f3f8d932236d2129a490c49"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\worker.log",
+            "bytes": 2436,
+            "sha256": "da923f1a59606c0aa0c80a817d62d7ca26d1316f2f3f8d932236d2129a490c49"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\976c60f5-ac13-42ed-9efe-135e53a5d921\\revisions\\6bcf536f-ac38-439d-b5a3-682546ce540c\\result.json",
+            "bytes": 717213,
+            "sha256": "f2301f1ccaca22a9eef8d32955fd8c417647e634fc2f35e9b6d26d646eb17196"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\result.json",
+            "bytes": 717213,
+            "sha256": "f2301f1ccaca22a9eef8d32955fd8c417647e634fc2f35e9b6d26d646eb17196"
+          }
+        }
+      ],
+      "parser_warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "engine": {
+        "name": "docling",
+        "version": "2.135.0",
+        "device": "cpu",
+        "ocr": false,
+        "elapsed_seconds": 77.547,
+        "model_manifest_sha256": "bd391d3f352a83665faeb58e2852d465a8eda9ac949fed9017b4022f93a6c2ad",
+        "coordinate_space": "pdf_user_space"
+      },
+      "source_pdf_hash_preserved": true,
+      "auto_baseline_unchanged": true,
+      "seconds": 82.014,
+      "peak_backend_worker_rss_bytes": 1908252672,
+      "worker_processes": [
+        {
+          "pid": 18504,
+          "created_at_epoch": 1791550246.1038692,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\976c60f5-ac13-42ed-9efe-135e53a5d921\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\.staging\\9fdc6f64-332d-4229-9b30-be968e7e3332",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\976c60f5-ac13-42ed-9efe-135e53a5d921\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ],
+      "worker_exit_coverage": "captured",
+      "input_pdf_hash_unchanged": true
+    },
+    {
+      "source": {
+        "id": "ml-scibert-emnlp2019",
+        "title": "SciBERT: A Pretrained Language Model for Scientific Text",
+        "authors_citation": "Iz Beltagy, Kyle Lo, Arman Cohan (2019), EMNLP-IJCNLP, pp.3615-3620.",
+        "source_url": "https://aclanthology.org/D19-1371/",
+        "pdf_url": "https://aclanthology.org/D19-1371.pdf",
+        "license": "CC-BY-4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+        "license_evidence": "Official ACL publisher page and ACL policy: all ACL materials published in or after 2016 are CC BY 4.0. Official publisher PDF, not an arXiv substitute.",
+        "layout_notes": "Short two-column scientific NLP paper with dense numeric benchmark tables.",
+        "review_level": "inventory_only",
+        "local_path": "D:\\project\\PaperVault\\.test-data\\external\\expanded-corpus\\ml-scibert-emnlp2019.pdf",
+        "sha256": "42e7bb57b92fbe6077c073edaffaf173728b7b685395700ac255ce0359344268",
+        "pages": 6,
+        "bytes": 187299,
+        "final_download_url": "https://aclanthology.org/D19-1371.pdf",
+        "downloaded_at_utc": "2026-10-09T12:48:24.179042+00:00",
+        "manifest": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\input-batches\\batch-001.json",
+        "manifest_sha256": "69c99cf942f53ee509ddc7c61aa01c285ebee047858e5c31ca300be3125abb93"
+      },
+      "passed": true,
+      "errors": [],
+      "resources": [
+        {
+          "id": "db38b928-d62a-4d7c-a460-fd0bf849fb4c",
+          "kind": "table",
+          "caption": "Table 1: Test performances of all BERT variants on all tasks and datasets. Bold indicates the SOTA result (multiple results bolded if difference within 95% bootstrap confidence interval). Keeping with past work, we report macro F1 scores for NER (span-level), macro F1 scores for REL and CLS (sentence-level), and macro F1 for PICO (token-level), and micro F1 for ChemProt specifically. For DEP, we report labeled (LAS) and unlabeled (UAS) attachment scores (excluding punctuation) for the same model with hyperparameters tuned for LAS. All results are the average of multiple runs with different random seeds.",
+          "locations": [
+            {
+              "page_index": 3,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                85.40496931063248,
+                585.8595792339986,
+                511.6527305924588,
+                779.5301096659771
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 4,
+                "bbox": {
+                  "l": 85.40496931063248,
+                  "t": 779.5301096659771,
+                  "r": 511.6527305924588,
+                  "b": 585.8595792339986,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\002-ml-scibert-emnlp2019\\resources\\db38b928-d62a-4d7c-a460-fd0bf849fb4c\\png-300.png",
+              "bytes": 317331,
+              "sha256": "9e522b07ebd912c481869d05e3347b1d5b01756cb1cf221890128775925b3bf0",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 1776,
+                "height": 806
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\002-ml-scibert-emnlp2019\\resources\\db38b928-d62a-4d7c-a460-fd0bf849fb4c\\csv.csv",
+              "bytes": 909,
+              "sha256": "8f5a3d2fbd858f8bacfd9c3ee2ef9d2aea3c49b12c5c5614640641afde217e90",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 15,
+                "columns": 8,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\002-ml-scibert-emnlp2019\\resources\\db38b928-d62a-4d7c-a460-fd0bf849fb4c\\html.html",
+              "bytes": 2656,
+              "sha256": "2109907f6341ab7fd06d58af0498aec1a4f18766937664676f24d39c5abf5895",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 2656
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\002-ml-scibert-emnlp2019\\resources\\db38b928-d62a-4d7c-a460-fd0bf849fb4c\\segment_1.png",
+              "bytes": 131593,
+              "sha256": "26143a792911fad754e14af80ad8d9bbef508872bf675863fd915385344b31ed",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 888,
+                "height": 403
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\002-ml-scibert-emnlp2019\\resources\\db38b928-d62a-4d7c-a460-fd0bf849fb4c\\thumbnail.png",
+              "bytes": 80003,
+              "sha256": "c34eef0e1e829f36a01b1d6a2fbbfe168b1622347ea21efa925a222c99a73942",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 512,
+                "height": 232
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\002-ml-scibert-emnlp2019\\resources\\db38b928-d62a-4d7c-a460-fd0bf849fb4c\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table 1: Test performances of all BERT variants on all tasks and datasets. Bold indicates the SOTA result (multiple results bolded if difference within 95% bootstrap confidence interval). Keeping with past work, we report macro F1 scores for NER (span-level), macro F1 scores for REL and CLS (sentence-level), and macro F1 for PICO (token-level), and micro F1 for ChemProt specifically. For DEP, we report labeled (LAS) and unlabeled (UAS) attachment scores (excluding punctuation) for the same model with hyperparameters tuned for LAS. All results are the average of multiple runs with different random seeds.",
+            "resource_id": "db38b928-d62a-4d7c-a460-fd0bf849fb4c",
+            "paper_id": "fe577558-deb6-4839-98ea-6a2c4596b71e",
+            "location": {
+              "page_index": 3,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                85.40496931063248,
+                585.8595792339986,
+                511.6527305924588,
+                779.5301096659771
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 4,
+                "bbox": {
+                  "l": 85.40496931063248,
+                  "t": 779.5301096659771,
+                  "r": 511.6527305924588,
+                  "b": 585.8595792339986,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "ecf59dc6-7b48-40f7-83ef-076ecd097282",
+          "kind": "table",
+          "caption": "Table 2: Comparing SCIBERT with the reported BIOBERT results on biomedical datasets.",
+          "locations": [
+            {
+              "page_index": 3,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                86.7832292305351,
+                416.86179327088126,
+                274.73132028362096,
+                486.03589108029905
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 4,
+                "bbox": {
+                  "l": 86.7832292305351,
+                  "t": 486.03589108029905,
+                  "r": 274.73132028362096,
+                  "b": 416.86179327088126,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\002-ml-scibert-emnlp2019\\resources\\ecf59dc6-7b48-40f7-83ef-076ecd097282\\png-300.png",
+              "bytes": 51410,
+              "sha256": "3bda155dd33af7d2e67d665b7d866b804e20969d6c3e1d1aef1772be90ca624f",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 783,
+                "height": 288
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\002-ml-scibert-emnlp2019\\resources\\ecf59dc6-7b48-40f7-83ef-076ecd097282\\csv.csv",
+              "bytes": 131,
+              "sha256": "c1c9cace25f9fb83d186700fd277f62daf620926e6745f57ece52c7fed10abd1",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 5,
+                "columns": 4,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\002-ml-scibert-emnlp2019\\resources\\ecf59dc6-7b48-40f7-83ef-076ecd097282\\html.html",
+              "bytes": 488,
+              "sha256": "0a2307f60563a16375b0c04d555839608194ac007aba65c4dff94dbe9e64d4f7",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 488
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\002-ml-scibert-emnlp2019\\resources\\ecf59dc6-7b48-40f7-83ef-076ecd097282\\segment_1.png",
+              "bytes": 18877,
+              "sha256": "4495f1a5240335b0496b112cf8f7875fab16a130bf57a09d5feb1166d998a8f2",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 392,
+                "height": 143
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\002-ml-scibert-emnlp2019\\resources\\ecf59dc6-7b48-40f7-83ef-076ecd097282\\thumbnail.png",
+              "bytes": 18877,
+              "sha256": "4495f1a5240335b0496b112cf8f7875fab16a130bf57a09d5feb1166d998a8f2",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 392,
+                "height": 143
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\002-ml-scibert-emnlp2019\\resources\\ecf59dc6-7b48-40f7-83ef-076ecd097282\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table 2: Comparing SCIBERT with the reported BIOBERT results on biomedical datasets.",
+            "resource_id": "ecf59dc6-7b48-40f7-83ef-076ecd097282",
+            "paper_id": "fe577558-deb6-4839-98ea-6a2c4596b71e",
+            "location": {
+              "page_index": 3,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                86.7832292305351,
+                416.86179327088126,
+                274.73132028362096,
+                486.03589108029905
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 4,
+                "bbox": {
+                  "l": 86.7832292305351,
+                  "t": 486.03589108029905,
+                  "r": 274.73132028362096,
+                  "b": 416.86179327088126,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        }
+      ],
+      "progress": [
+        {
+          "seconds": 0.047,
+          "id": "b4891304-ce91-46ba-861c-0fa5b9d272aa",
+          "status": "queued",
+          "phase": "等待解析",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 0.559,
+          "id": "b4891304-ce91-46ba-861c-0fa5b9d272aa",
+          "status": "running",
+          "phase": "正在加载解析引擎",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 1.07,
+          "id": "b4891304-ce91-46ba-861c-0fa5b9d272aa",
+          "status": "running",
+          "phase": "正在校验离线模型",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 1.583,
+          "id": "b4891304-ce91-46ba-861c-0fa5b9d272aa",
+          "status": "running",
+          "phase": "正在读取 PDF",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 5.637,
+          "id": "b4891304-ce91-46ba-861c-0fa5b9d272aa",
+          "status": "running",
+          "phase": "正在执行 CPU 版面识别与表格解析",
+          "pages_done": null,
+          "pages_total": 6,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 22.347,
+          "id": "b4891304-ce91-46ba-861c-0fa5b9d272aa",
+          "status": "running",
+          "phase": "解析完成",
+          "pages_done": 6,
+          "pages_total": 6,
+          "resources_count": 2,
+          "error": null
+        },
+        {
+          "seconds": 23.365,
+          "id": "b4891304-ce91-46ba-861c-0fa5b9d272aa",
+          "status": "completed",
+          "phase": "解析完成",
+          "pages_done": 6,
+          "pages_total": 6,
+          "resources_count": 2,
+          "error": null
+        }
+      ],
+      "source_pdf": {
+        "path": "D:\\project\\PaperVault\\.test-data\\external\\expanded-corpus\\ml-scibert-emnlp2019.pdf",
+        "bytes": 187299,
+        "sha256": "42e7bb57b92fbe6077c073edaffaf173728b7b685395700ac255ce0359344268"
+      },
+      "page_count": 6,
+      "paper_id": "fe577558-deb6-4839-98ea-6a2c4596b71e",
+      "job": {
+        "id": "b4891304-ce91-46ba-861c-0fa5b9d272aa",
+        "paper_id": "fe577558-deb6-4839-98ea-6a2c4596b71e",
+        "status": "completed",
+        "phase": "解析完成",
+        "error": null,
+        "created_at": "2026-10-09T12:52:07.653752+00:00",
+        "updated_at": "2026-10-09T12:52:30.881274+00:00",
+        "paper_title": "SciBERT: A Pretrained Language Model for Scientific Text",
+        "pages_done": 6,
+        "pages_total": 6,
+        "resources_count": 2
+      },
+      "parse_seconds": 23.373,
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\002-ml-scibert-emnlp2019\\paper-auto.json",
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "counts": {
+        "figure": 0,
+        "table": 2,
+        "resources": 2
+      },
+      "source_revision": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\fe577558-deb6-4839-98ea-6a2c4596b71e\\revisions\\a56107a0-47d3-4cc6-9a5b-7f4804270806",
+      "parser_artifacts": [
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\fe577558-deb6-4839-98ea-6a2c4596b71e\\revisions\\a56107a0-47d3-4cc6-9a5b-7f4804270806\\structure.json",
+            "bytes": 408903,
+            "sha256": "06f519a29ff2f53612bc2e96f94506aa77be72070ac05a8e7998b30f6bf9bb8b"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\002-ml-scibert-emnlp2019\\structure.json",
+            "bytes": 408903,
+            "sha256": "06f519a29ff2f53612bc2e96f94506aa77be72070ac05a8e7998b30f6bf9bb8b"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\fe577558-deb6-4839-98ea-6a2c4596b71e\\revisions\\a56107a0-47d3-4cc6-9a5b-7f4804270806\\docling.json",
+            "bytes": 190843,
+            "sha256": "ad94dd771dd30535e6a4effb2579b1d3e285e0f129a0c66f066dae071768ea8c"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\002-ml-scibert-emnlp2019\\docling.json",
+            "bytes": 190843,
+            "sha256": "ad94dd771dd30535e6a4effb2579b1d3e285e0f129a0c66f066dae071768ea8c"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\fe577558-deb6-4839-98ea-6a2c4596b71e\\revisions\\a56107a0-47d3-4cc6-9a5b-7f4804270806\\fulltext.md",
+            "bytes": 25865,
+            "sha256": "2408c0e0ee76181236c8d7550e05dbb46bdf83ec71c7bb01883f07c1cff16885"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\002-ml-scibert-emnlp2019\\fulltext.md",
+            "bytes": 25865,
+            "sha256": "2408c0e0ee76181236c8d7550e05dbb46bdf83ec71c7bb01883f07c1cff16885"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\fe577558-deb6-4839-98ea-6a2c4596b71e\\revisions\\a56107a0-47d3-4cc6-9a5b-7f4804270806\\worker.log",
+            "bytes": 2438,
+            "sha256": "6b7818e75b4d56aa8884c4b33de197a93bfcf6dba99529d4145f6999af76b913"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\002-ml-scibert-emnlp2019\\worker.log",
+            "bytes": 2438,
+            "sha256": "6b7818e75b4d56aa8884c4b33de197a93bfcf6dba99529d4145f6999af76b913"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\fe577558-deb6-4839-98ea-6a2c4596b71e\\revisions\\a56107a0-47d3-4cc6-9a5b-7f4804270806\\result.json",
+            "bytes": 393838,
+            "sha256": "aa8eb9fa31bb3f3f2c8ea081bd9ed6a9b37f49ba78e3249acb70683686812495"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\002-ml-scibert-emnlp2019\\result.json",
+            "bytes": 393838,
+            "sha256": "aa8eb9fa31bb3f3f2c8ea081bd9ed6a9b37f49ba78e3249acb70683686812495"
+          }
+        }
+      ],
+      "parser_warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "engine": {
+        "name": "docling",
+        "version": "2.135.0",
+        "device": "cpu",
+        "ocr": false,
+        "elapsed_seconds": 21.266,
+        "model_manifest_sha256": "bd391d3f352a83665faeb58e2852d465a8eda9ac949fed9017b4022f93a6c2ad",
+        "coordinate_space": "pdf_user_space"
+      },
+      "source_pdf_hash_preserved": true,
+      "auto_baseline_unchanged": true,
+      "seconds": 23.741,
+      "peak_backend_worker_rss_bytes": 1850208256,
+      "worker_processes": [
+        {
+          "pid": 5924,
+          "created_at_epoch": 1791550327.8493657,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\fe577558-deb6-4839-98ea-6a2c4596b71e\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\.staging\\d4a6073e-234b-45b4-95c8-a746c8aef305",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\fe577558-deb6-4839-98ea-6a2c4596b71e\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ],
+      "worker_exit_coverage": "captured",
+      "input_pdf_hash_unchanged": true
+    }
+  ],
+  "errors": [],
+  "offline_environment": {
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "PYTHONPATH": null,
+    "VIRTUAL_ENV": null
+  },
+  "machine": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "logical_cpus": 16,
+    "memory_bytes": 16890716160
+  },
+  "scope": "Unedited auto extraction integrity/workflow audit. Counts are observed, never assumed ground truth; precision/recall requires manual source-page review.",
+  "backend_sha256": "567bc425d9df91f4813dfacdf64a8a8e5548381becc5950627830862439dd43a",
+  "models_manifest": {
+    "path": "D:\\project\\PaperVault\\.cache\\models\\papervault-models.json",
+    "bytes": 1806,
+    "sha256": "0667a164e1d7633187c24ba81302ca86bb50dff449f49c420e0217a6fd03fd45"
+  },
+  "health": {
+    "status": "ok",
+    "version": "0.2.1",
+    "protocol": 1
+  },
+  "backend_port": 27701,
+  "backend_pid": 20712,
+  "backend_startup_seconds": 2.816,
+  "auto_baseline_library": {
+    "id": "dd137f85-a7a5-4ef9-b30d-f28c06acd29f",
+    "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline",
+    "paper_count": 0,
+    "figure_count": 0,
+    "table_count": 0
+  },
+  "shutdown": {
+    "returncode": 0,
+    "forced_termination": false,
+    "backend_port_closed": true,
+    "worker_processes": [
+      {
+        "pid": 18504,
+        "created_at_epoch": 1791550246.1038692,
+        "command": [
+          "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+          "--worker",
+          "--source",
+          "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\976c60f5-ac13-42ed-9efe-135e53a5d921\\original.pdf",
+          "--output",
+          "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\.staging\\9fdc6f64-332d-4229-9b30-be968e7e3332",
+          "--models",
+          "D:\\project\\PaperVault\\.cache\\models"
+        ],
+        "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\976c60f5-ac13-42ed-9efe-135e53a5d921\\original.pdf",
+        "exit_code": 0,
+        "state": "exited",
+        "exit_code_hex": "0x00000000"
+      },
+      {
+        "pid": 5924,
+        "created_at_epoch": 1791550327.8493657,
+        "command": [
+          "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+          "--worker",
+          "--source",
+          "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\fe577558-deb6-4839-98ea-6a2c4596b71e\\original.pdf",
+          "--output",
+          "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\.staging\\d4a6073e-234b-45b4-95c8-a746c8aef305",
+          "--models",
+          "D:\\project\\PaperVault\\.cache\\models"
+        ],
+        "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\fe577558-deb6-4839-98ea-6a2c4596b71e\\original.pdf",
+        "exit_code": 0,
+        "state": "exited",
+        "exit_code_hex": "0x00000000"
+      }
+    ]
+  },
+  "seconds": 110.144,
+  "finished_at_utc": "2026-10-09T12:52:32.265365+00:00",
+  "summary": {
+    "papers": 2,
+    "papers_passed": 2,
+    "papers_failed": 0,
+    "resources": 15,
+    "resource_failures": 0
+  }
+}

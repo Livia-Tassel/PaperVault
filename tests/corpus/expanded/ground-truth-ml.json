@@ -1,0 +1,1000 @@
+{
+  "schema_version": 1,
+  "annotated_at_utc": "2026-10-09T13:07:04.032390+00:00",
+  "independence": "Inventory and predefined cells are based only on unchanged publisher PDFs, independent pypdf text scans and Poppler page renders. No PaperVault/Docling parser output was consulted.",
+  "counting_policy": "One logical object per numbered Figure/Table caption. Shared-caption subpanels count once. Numbered equations, algorithms and body-text references do not add figures/tables. Continuations of one numbered table count once. Whole main PDF including appendices is in scope; externally linked supplements are not.",
+  "review_levels": {
+    "deep_review": "All figure/table source pages visually inspected in detail, with ten predefined semantic cells; output quality comparison is separate and not yet implied.",
+    "inventory_only": "Full-PDF text scan plus source-page confirmation of numbered caption candidates; no complete cell-fidelity or output-crop audit is claimed."
+  },
+  "papers": [
+    {
+      "id": "ml-bart-acl2020",
+      "pages": 10,
+      "source_sha256": "3562c723fe7bebb8b362533122b3ca5c065037c8e8d67460654cf3740652bb59",
+      "review_level": "deep_review",
+      "scope": "Complete 10-page publisher PDF (printed pp.7871-7880). No appendix is present. Physical pages 9-10 contain conclusion/references, not additional numbered objects.",
+      "visually_reviewed_page_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            1
+          ],
+          "caption_reference": "Figure 1: A schematic comparison of BART with BERT (Devlin et al., 2019) and GPT (Radford et al., 2018).",
+          "visual_notes": "Three architecture panels (a), (b), (c), including their explanatory text, share one numbered caption and count as one figure."
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Figure 2: Transformations for noising the input that we experiment with. These transformations can be composed.",
+          "visual_notes": "Five noising operations around a common text sequence; one composite figure."
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            3
+          ],
+          "caption_reference": "Figure 3: Fine tuning BART for classification and translation.",
+          "visual_notes": "Two side-by-side panels with explanatory subcaptions; one shared numbered figure."
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            4
+          ],
+          "caption_reference": "Table 1: Comparison of pre-training objectives, including approaches inspired by BERT, MASS, GPT, XLNet and UniLM.",
+          "visual_notes": "Full-width table; two-line metric headers and an internal BART Base section heading."
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_indices": [
+            5
+          ],
+          "caption_reference": "Table 2: Results for large models on GLUE tasks.",
+          "visual_notes": "Full-width top table, distinct from the smaller question-answering Table 3 below."
+        },
+        {
+          "kind": "table",
+          "number": "3",
+          "page_indices": [
+            5
+          ],
+          "caption_reference": "Table 3: BART gives similar results to XLNet and RoBERTa on question answering.",
+          "visual_notes": "Single-column table, SQuAD1.1 and SQuAD2.0 each represented as slash-separated EM/F1 pairs."
+        },
+        {
+          "kind": "table",
+          "number": "4",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Table 4: Results on two standard summarization datasets.",
+          "visual_notes": "Full-width table; CNN/DailyMail and XSum each span R1/R2/RL. Ten sample cells were transcribed visually before reading parser results."
+        },
+        {
+          "kind": "table",
+          "number": "5",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Table 5: Human Evaluation on XSum: BART summaries are preferred to those from previous work, but not to human-written reference summaries.",
+          "visual_notes": "Two-row preference table, upper-left beneath Table 4."
+        },
+        {
+          "kind": "table",
+          "number": "6",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Table 6: BART outperforms previous work on conversational response generation.",
+          "visual_notes": "Three data rows; ConvAI2 Valid F1 and Valid PPL; lower-left."
+        },
+        {
+          "kind": "table",
+          "number": "7",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Table 7: BART achieves state-of-the-art results on the challenging ELI5 abstractive question answering dataset.",
+          "visual_notes": "Five model rows; right column above Table 8."
+        },
+        {
+          "kind": "table",
+          "number": "8",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Table 8: BLEU scores of the baseline and BART on WMT'16 RO-EN augmented with back-translation data.",
+          "visual_notes": "Small right-column table, independent numbered caption despite proximity to Table 7."
+        },
+        {
+          "kind": "table",
+          "number": "9",
+          "page_indices": [
+            7
+          ],
+          "caption_reference": "Table 9: Example summaries from the XSum-tuned BART model on WikiNews articles.",
+          "visual_notes": "Full-width prose table with two columns and five source/summary examples; remains a Table even though its cells contain paragraphs rather than numbers."
+        }
+      ],
+      "sample_cell_indexing": {
+        "zero_based": true,
+        "header_rows": 2,
+        "table_number": "4",
+        "description": "Rows 0 and 1 are dataset-group and metric headers. Rows 2-9 are eight models. Compare semantic model/dataset/metric alignment even if an export combines the two header rows.",
+        "column_labels": [
+          "Model",
+          "CNN/DailyMail / R1",
+          "CNN/DailyMail / R2",
+          "CNN/DailyMail / RL",
+          "XSum / R1",
+          "XSum / R2",
+          "XSum / RL"
+        ],
+        "row_labels": [
+          "dataset header",
+          "metric header",
+          "Lead-3",
+          "PTGEN",
+          "PTGEN+COV",
+          "UniLM",
+          "BERTSUMABS",
+          "BERTSUMEXTABS",
+          "ROBERTASHARE",
+          "BART"
+        ]
+      },
+      "sample_cells": [
+        {
+          "table_number": "4",
+          "page_index": 6,
+          "row": 2,
+          "col": 1,
+          "expected_text": "40.42"
+        },
+        {
+          "table_number": "4",
+          "page_index": 6,
+          "row": 2,
+          "col": 2,
+          "expected_text": "17.62"
+        },
+        {
+          "table_number": "4",
+          "page_index": 6,
+          "row": 2,
+          "col": 3,
+          "expected_text": "36.67"
+        },
+        {
+          "table_number": "4",
+          "page_index": 6,
+          "row": 2,
+          "col": 4,
+          "expected_text": "16.30"
+        },
+        {
+          "table_number": "4",
+          "page_index": 6,
+          "row": 9,
+          "col": 1,
+          "expected_text": "44.16"
+        },
+        {
+          "table_number": "4",
+          "page_index": 6,
+          "row": 9,
+          "col": 2,
+          "expected_text": "21.28"
+        },
+        {
+          "table_number": "4",
+          "page_index": 6,
+          "row": 9,
+          "col": 3,
+          "expected_text": "40.90"
+        },
+        {
+          "table_number": "4",
+          "page_index": 6,
+          "row": 9,
+          "col": 4,
+          "expected_text": "45.14"
+        },
+        {
+          "table_number": "4",
+          "page_index": 6,
+          "row": 9,
+          "col": 5,
+          "expected_text": "22.27"
+        },
+        {
+          "table_number": "4",
+          "page_index": 6,
+          "row": 9,
+          "col": 6,
+          "expected_text": "37.25"
+        }
+      ],
+      "expected_counts": {
+        "figure": 3,
+        "table": 9
+      },
+      "render_directory": "artifacts/real-corpus-expanded/source-pages/ml-bart-acl2020",
+      "render_dpi": 135,
+      "uncertain_objects": []
+    },
+    {
+      "id": "ml-scibert-emnlp2019",
+      "pages": 6,
+      "source_sha256": "42e7bb57b92fbe6077c073edaffaf173728b7b685395700ac255ce0359344268",
+      "review_level": "inventory_only",
+      "scope": "Complete 6-page publisher PDF (pp.3615-3620). No appendix and no numbered figures. All six source page renders were scanned for inventory only; no cell-fidelity review is claimed.",
+      "visually_reviewed_page_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "objects": [
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            3
+          ],
+          "caption_reference": "Table 1: Test performances of all BERT variants on all tasks and datasets.",
+          "visual_notes": "Wide main table with Field/Task/Dataset row groups and grouped BERT-Base/SciBERT Frozen/Finetune columns."
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_indices": [
+            3
+          ],
+          "caption_reference": "Table 2: Comparing SciBERT with the reported BioBERT results on biomedical datasets.",
+          "visual_notes": "Separate smaller left-column table below the wide main table."
+        }
+      ],
+      "sample_cells": [],
+      "expected_counts": {
+        "figure": 0,
+        "table": 2
+      },
+      "render_directory": "artifacts/real-corpus-expanded/source-pages/ml-scibert-emnlp2019",
+      "render_dpi": 100,
+      "uncertain_objects": []
+    },
+    {
+      "id": "ml-simcse-emnlp2021",
+      "pages": 17,
+      "source_sha256": "b6bb8b5d1356095a02aae8e5e41265fde03f8f02101972e338bad0b7715f12fc",
+      "review_level": "inventory_only",
+      "scope": "Complete 17-page publisher PDF including Appendices A-G (physical pages 13-17). Main numbered objects and dotted appendix numbers are included. A body paragraph beginning Table 4. on page index 4 is a reference, not another caption.",
+      "visually_reviewed_page_indices": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            1
+          ],
+          "caption_reference": "Figure 1: (a) Unsupervised SimCSE predicts the input sentence itself from in-batch negatives, with different hidden dropout masks applied.",
+          "visual_notes": "The unsupervised and supervised panels share one Figure 1 caption."
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            3
+          ],
+          "caption_reference": "Figure 2: Alignment-uniformity plot for unsupervised SimCSE, no dropout, fixed 0.1, and delete one word.",
+          "visual_notes": "Caption mathematical subscripts are described textually in this reference."
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            8
+          ],
+          "caption_reference": "Figure 3: Alignment-uniformity plot of models based on BERT-base.",
+          "visual_notes": "Single scatter plot with color scale."
+        },
+        {
+          "kind": "figure",
+          "number": "F.1",
+          "page_indices": [
+            15
+          ],
+          "caption_reference": "Figure F.1: Singular value distributions of sentence embedding matrix from sentences in STS-B.",
+          "visual_notes": "Two model-group plots share one dotted appendix caption."
+        },
+        {
+          "kind": "figure",
+          "number": "G.1",
+          "page_indices": [
+            16
+          ],
+          "caption_reference": "Figure G.1: Density plots of cosine similarities between sentence pairs in STS-B.",
+          "visual_notes": "Six density-plot panels (2 by 3) share one appendix caption."
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Table 1: Comparison of data augmentations on STS-B development set (Spearman's correlation).",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Table 2: Comparison of different unsupervised objectives (STS-B development set, Spearman's correlation).",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "3",
+          "page_indices": [
+            3
+          ],
+          "caption_reference": "Table 3: Effects of different dropout probabilities p on the STS-B development set.",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "4",
+          "page_indices": [
+            4
+          ],
+          "caption_reference": "Table 4: Comparisons of different supervised datasets as positive pairs.",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "5",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Table 5: Sentence embedding performance on STS tasks (Spearman's correlation, all setting).",
+          "visual_notes": "Wide table with unsupervised/supervised section headings; one caption."
+        },
+        {
+          "kind": "table",
+          "number": "6",
+          "page_indices": [
+            7
+          ],
+          "caption_reference": "Table 6: Ablation studies of different pooling methods in unsupervised and supervised SimCSE.",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "7",
+          "page_indices": [
+            7
+          ],
+          "caption_reference": "Table 7: STS-B development results with different hard negative policies.",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "8",
+          "page_indices": [
+            8
+          ],
+          "caption_reference": "Table 8: Retrieved top-3 examples by SBERT and supervised SimCSE from Flickr30k (150k sentences).",
+          "visual_notes": "Prose example table with two query blocks; one Table 8."
+        },
+        {
+          "kind": "table",
+          "number": "A.1",
+          "page_indices": [
+            12
+          ],
+          "caption_reference": "Table A.1: Batch sizes and learning rates for SimCSE.",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "B.1",
+          "page_indices": [
+            12
+          ],
+          "caption_reference": "Table B.1: STS evaluation protocols used in different papers.",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "B.2",
+          "page_indices": [
+            13
+          ],
+          "caption_reference": "Table B.2: Comparisons of our reproduced results using different evaluation protocols and the original numbers.",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "B.3",
+          "page_indices": [
+            13
+          ],
+          "caption_reference": "Table B.3: STS results with wmean setting (Spearman).",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "C.1",
+          "page_indices": [
+            14
+          ],
+          "caption_reference": "Table C.1: Comparison of using NLI or target data for postprocessing methods (all, Spearman's correlation).",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "D.1",
+          "page_indices": [
+            14
+          ],
+          "caption_reference": "Table D.1: STS-B development results (Spearman's correlation) with different temperatures.",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "D.2",
+          "page_indices": [
+            14
+          ],
+          "caption_reference": "Table D.2: Ablation studies of the MLM objective based on the development sets using BERT-base.",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "E.1",
+          "page_indices": [
+            15
+          ],
+          "caption_reference": "Table E.1: Transfer task results of different sentence embedding models (measured as accuracy).",
+          "visual_notes": ""
+        }
+      ],
+      "sample_cells": [],
+      "inventory_notes": "Initial simple numeric-caption candidates missed dotted appendix labels; full original-page text scan and visual confirmation added A.1/B.1/B.2/B.3/C.1/D.1/D.2/E.1/F.1/G.1 before any parser output was read. Cell contents have not been comprehensively audited.",
+      "expected_counts": {
+        "figure": 5,
+        "table": 16
+      },
+      "render_directory": "artifacts/real-corpus-expanded/source-pages/ml-simcse-emnlp2021",
+      "render_dpi": 100,
+      "uncertain_objects": []
+    },
+    {
+      "id": "ml-longt5-naacl2022",
+      "pages": 13,
+      "source_sha256": "59e364e50dc716dc12468acdb85d1625d2bd5eb046c313a73f85960e36de738e",
+      "review_level": "deep_review",
+      "scope": "Complete 13-page publisher PDF (pp.724-736), including Appendices A and B on physical pages 12-13. All 13 pages were visually inspected.",
+      "visually_reviewed_page_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            0
+          ],
+          "caption_reference": "Figure 1: The average ROUGE score ((R-1 + R-2 + R-L)/3) of LongT5 and baseline models on arXiv and PubMed summarization tasks.",
+          "visual_notes": "Two adjacent bubble-plot panels share one caption; located in the first-page right column."
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Figure 2: Illustration of the two attention mechanisms we experimented with in LongT5.",
+          "visual_notes": "Full-width composite attention matrix/flow diagram; all matrices and the global-token pathway belong to one Figure."
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Figure 3: Sequences per second as a function of input length for T5.1.1, LongT5 with Local Attention and LongT5 with TGlobal attention.",
+          "visual_notes": "Left-column log plot with six series and legend; independent from right-column Figure 4."
+        },
+        {
+          "kind": "figure",
+          "number": "4",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Figure 4: Speed versus Performance on NQ (short-answer F1), for T5, LongT5 with Local Attention and LongT5 with TGlobal attention, for different input sequence lengths.",
+          "visual_notes": "Right-column plot with three series and legend; independently numbered."
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            4
+          ],
+          "caption_reference": "Table 1: Statistics for the summarization datasets. Input length measured in tokens using a SentencePiece Model.",
+          "visual_notes": "Full-width table; Example Count has three columns and Input Length four columns; six dataset rows."
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_indices": [
+            4
+          ],
+          "caption_reference": "Table 2: Summarization results comparing LongT5 with best known approaches.",
+          "visual_notes": "Six vertically stacked dataset blocks have repeated headers but ONE Table 2 caption: arXiv, PubMed, BigPatent, MultiNews, MediaSum and CNN/Daily Mail."
+        },
+        {
+          "kind": "table",
+          "number": "3",
+          "page_indices": [
+            5
+          ],
+          "caption_reference": "Table 3: Statistics for the QA datasets. Input length measured in tokens using a SentencePiece Model.",
+          "visual_notes": "Full-width table with grouped headers; NQ's Test cell is intentionally blank in the source."
+        },
+        {
+          "kind": "table",
+          "number": "4",
+          "page_indices": [
+            5
+          ],
+          "caption_reference": "Table 4: QA results: (1) NQ results comparing T5.1.1 and LongT5.",
+          "visual_notes": "NQ and TriviaQA blocks plus Local/TGlobal subsections share one numbered caption; not separate numbered tables."
+        },
+        {
+          "kind": "table",
+          "number": "5",
+          "page_indices": [
+            7
+          ],
+          "caption_reference": "Table 5: Ablation study on dev set for different pre-training strategies using span corruption (SC) vs. principle sentences generation (PSG) and the effects on NQ and arXiv fine-tuning tasks.",
+          "visual_notes": "Grouped NQ/arXiv columns. Last printed metric header reads R-3, not R-L; preserve source text when comparing."
+        },
+        {
+          "kind": "table",
+          "number": "6",
+          "page_indices": [
+            7
+          ],
+          "caption_reference": "Table 6: Ablation study on arXiv and PubMed for different pre-training strategies using span corruption (SC) vs. principle sentences generation (PSG) with T5.1.1 model along with LongT5 with TGlobal attention.",
+          "visual_notes": "Two vertically stacked arXiv/PubMed blocks share Table 6 caption. Printed metric header reads R-3."
+        },
+        {
+          "kind": "table",
+          "number": "7",
+          "page_indices": [
+            11
+          ],
+          "caption_reference": "Table 7: QA results comparing T5.1.1 and LongT5 at different sequence lengths.",
+          "visual_notes": "Tall right-column appendix table with model-size/attention section rows, grouped NQ/TriviaQA EM/F1 columns and source dash entries."
+        },
+        {
+          "kind": "table",
+          "number": "8",
+          "page_indices": [
+            12
+          ],
+          "caption_reference": "Table 8: Summarization results comparing T5, T5 with PEGASUS-style Principle Sentences Generation (PSG) pre-training, and LongT5 with best known approaches for the various datasets.",
+          "visual_notes": "Full-page appendix table. Three stacked groups of paired datasets and repeated headers share one Table 8 caption; all three blocks are required for completeness."
+        }
+      ],
+      "sample_cell_indexing": {
+        "zero_based": true,
+        "header_rows": 2,
+        "table_number": "1",
+        "description": "Rows 0-1 contain grouped and column headers; rows 2-7 are datasets. Preserve semantic dataset/metric alignment even if exported header rows are combined.",
+        "row_labels": [
+          "group header",
+          "column header",
+          "CNN / Daily Mail",
+          "arXiv",
+          "PubMed",
+          "BigPatent",
+          "MediaSum",
+          "Multi-News"
+        ],
+        "column_labels": [
+          "Dataset",
+          "Example Count / Train",
+          "Example Count / Validation",
+          "Example Count / Test",
+          "Input Length / Average",
+          "Input Length / Median",
+          "Input Length / Max",
+          "Input Length / 90th percentile"
+        ]
+      },
+      "sample_cells": [
+        {
+          "table_number": "1",
+          "page_index": 4,
+          "row": 2,
+          "col": 1,
+          "expected_text": "287,113"
+        },
+        {
+          "table_number": "1",
+          "page_index": 4,
+          "row": 2,
+          "col": 2,
+          "expected_text": "13,368"
+        },
+        {
+          "table_number": "1",
+          "page_index": 4,
+          "row": 2,
+          "col": 3,
+          "expected_text": "11,490"
+        },
+        {
+          "table_number": "1",
+          "page_index": 4,
+          "row": 2,
+          "col": 4,
+          "expected_text": "982.39"
+        },
+        {
+          "table_number": "1",
+          "page_index": 4,
+          "row": 2,
+          "col": 5,
+          "expected_text": "894"
+        },
+        {
+          "table_number": "1",
+          "page_index": 4,
+          "row": 3,
+          "col": 4,
+          "expected_text": "10,720.18"
+        },
+        {
+          "table_number": "1",
+          "page_index": 4,
+          "row": 3,
+          "col": 6,
+          "expected_text": "378,825"
+        },
+        {
+          "table_number": "1",
+          "page_index": 4,
+          "row": 4,
+          "col": 7,
+          "expected_text": "8,883"
+        },
+        {
+          "table_number": "1",
+          "page_index": 4,
+          "row": 5,
+          "col": 1,
+          "expected_text": "1,207,222"
+        },
+        {
+          "table_number": "1",
+          "page_index": 4,
+          "row": 7,
+          "col": 5,
+          "expected_text": "1,902.5"
+        }
+      ],
+      "expected_counts": {
+        "figure": 4,
+        "table": 8
+      },
+      "render_directory": "artifacts/real-corpus-expanded/source-pages/ml-longt5-naacl2022",
+      "render_dpi": 135,
+      "uncertain_objects": []
+    },
+    {
+      "id": "ml-mt5-naacl2021",
+      "pages": 16,
+      "source_sha256": "3416c10fe2483b147fe47f2eb9c7a87188ceb3f633db527d0c714cc640218b99",
+      "review_level": "inventory_only",
+      "scope": "Complete 16-page publisher PDF, including Appendices A-C on physical pages 12-16. Whole-PDF text scan and every numbered-object page visually confirmed for inventory; no predefined cell audit.",
+      "visually_reviewed_page_indices": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Figure 1: Page counts per language in mC4 (left axis), and percentage of mT5 training examples coming from each language, for different language sampling exponents.",
+          "visual_notes": "One wide bar/line chart, not a table."
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            5
+          ],
+          "caption_reference": "Figure 2: Average F1 on the TyDi QA GoldP task across languages.",
+          "visual_notes": ""
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            7
+          ],
+          "caption_reference": "Figure 3: Per-language error rates on XQuAD zero-shot, sorted by illegal rate.",
+          "visual_notes": "Two vertically stacked panels, mT5-Small and mT5-XXL, share one caption."
+        },
+        {
+          "kind": "figure",
+          "number": "4",
+          "page_indices": [
+            8
+          ],
+          "caption_reference": "Figure 4: Error rates of mT5 on XQuAD zero-shot.",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Table 1: Comparison of mT5 to existing massively multilingual pre-trained language models.",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_indices": [
+            3
+          ],
+          "caption_reference": "Table 2: Results on XTREME sentence-pair classification, structured prediction and question answering tasks.",
+          "visual_notes": "Full-width table with three training-regime blocks and grouped task headers."
+        },
+        {
+          "kind": "table",
+          "number": "3",
+          "page_indices": [
+            5
+          ],
+          "caption_reference": "Table 3: Comparison of T5 vs. mT5 on SQuAD question answering (F1/EM).",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "4",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Table 4: Average XNLI zero-shot accuracy of various ablations on our mT5-Large model.",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "5",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Table 5: Illegal mT5-XXL predictions on XQuAD zero-shot, illustrating normalization (top), grammatical adjustment (middle) and translation (bottom).",
+          "visual_notes": "Multilingual example table includes Thai, Hindi, Arabic, Cyrillic and Chinese text; inventory does not claim these strings were verified cell by cell."
+        },
+        {
+          "kind": "table",
+          "number": "6",
+          "page_indices": [
+            11
+          ],
+          "caption_reference": "Table 6: Statistics of the mC4 corpus, totaling 6.6B pages and 6.3T tokens.",
+          "visual_notes": "One table arranged as two side-by-side language lists with repeated headers; shared caption."
+        },
+        {
+          "kind": "table",
+          "number": "7",
+          "page_indices": [
+            12
+          ],
+          "caption_reference": "Table 7: XNLI accuracy scores for each language.",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "8",
+          "page_indices": [
+            12
+          ],
+          "caption_reference": "Table 8: PAWS-X accuracy scores for each language.",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "9",
+          "page_indices": [
+            13
+          ],
+          "caption_reference": "Table 9: WikiAnn NER F1 scores for each language.",
+          "visual_notes": "Four stacked matrix blocks under one Table 9 caption; not four independently numbered tables."
+        },
+        {
+          "kind": "table",
+          "number": "10",
+          "page_indices": [
+            13
+          ],
+          "caption_reference": "Table 10: XQuAD results (F1/EM) for each language.",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "11",
+          "page_indices": [
+            13
+          ],
+          "caption_reference": "Table 11: MLQA results (F1/EM) for each language.",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "12",
+          "page_indices": [
+            14
+          ],
+          "caption_reference": "Table 12: TyDi QA GoldP results (F1/EM) for each language.",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "13",
+          "page_indices": [
+            15
+          ],
+          "caption_reference": "Table 13: XNLI zero-shot accuracy of various ablations on our mT5-Large model.",
+          "visual_notes": ""
+        },
+        {
+          "kind": "table",
+          "number": "14",
+          "page_indices": [
+            15
+          ],
+          "caption_reference": "Table 14: XQuAD zero-shot F1/EM of various ablations on our mT5-Large model.",
+          "visual_notes": ""
+        }
+      ],
+      "sample_cells": [],
+      "expected_counts": {
+        "figure": 4,
+        "table": 14
+      },
+      "render_directory": "artifacts/real-corpus-expanded/source-pages/ml-mt5-naacl2021",
+      "render_dpi": 100,
+      "uncertain_objects": []
+    },
+    {
+      "id": "ml-nonattracting-jmlr2021",
+      "pages": 34,
+      "source_sha256": "a61caeb8237dea326c4642ed07286c418299225ed37c610bd1685c9c21533650",
+      "review_level": "inventory_only",
+      "scope": "Complete 34-page single-column publisher PDF. Entire text searched for captions; all four numbered figure pages and first-page license visually confirmed. Equations, matrices, theorem/lemma diagrams nested inside Figure 4 are not extra tables/figures. No numbered Table appears.",
+      "visually_reviewed_page_indices": [
+        0,
+        6,
+        9,
+        15,
+        18
+      ],
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Figure 1: Left: A non-attracting region of local minima.",
+          "visual_notes": "Two surface plots, one shared Figure 1 caption."
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            9
+          ],
+          "caption_reference": "Figure 2: Embedding a smaller two-layer neural network into a larger one.",
+          "visual_notes": "Two network diagrams linked by an embedding arrow, one caption."
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            15
+          ],
+          "caption_reference": "Figure 3: A non-attracting region of local minima in a deep and wide neural network.",
+          "visual_notes": "Panels (a)-(d) collectively include six axes; count one numbered figure."
+        },
+        {
+          "kind": "figure",
+          "number": "4",
+          "page_indices": [
+            18
+          ],
+          "caption_reference": "Figure 4: Non-increasing paths to the global minimum exist from almost everywhere. Visualization of proof ideas.",
+          "visual_notes": "Four proof-idea panels labeled by theorem/lemma references share one numbered Figure 4 caption."
+        }
+      ],
+      "sample_cells": [],
+      "expected_counts": {
+        "figure": 4,
+        "table": 0
+      },
+      "render_directory": "artifacts/real-corpus-expanded/source-pages/ml-nonattracting-jmlr2021",
+      "render_dpi": 100,
+      "uncertain_objects": []
+    }
+  ]
+}

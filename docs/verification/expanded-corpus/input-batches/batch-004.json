@@ -1,0 +1,42 @@
+{
+  "papers": [
+    {
+      "id": "expanded-cellfit",
+      "title": "CellFIT: A Cellular Force-Inference Toolkit Using Curvilinear Cell Boundaries",
+      "authors_citation": "Brodland GW, Veldhuis JH, Kim S, Perrone M, Mashburn D, Hutson MS (2014), PLOS ONE 9(6): e99116.",
+      "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0099116",
+      "pdf_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0099116&type=printable",
+      "doi": "10.1371/journal.pone.0099116",
+      "license": "CC BY",
+      "license_url": "https://journals.plos.org/plosone/s/licenses-and-copyright",
+      "local_path": ".test-data/external/expanded-corpus/expanded-cellfit.pdf",
+      "layout_notes": "Biomechanics/civil engineering; multi-panel cell microscopy, vector force diagrams and a quantitative validation table.",
+      "review_level": "deep_review",
+      "license_evidence_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0099116",
+      "license_note": "The official article declares CC Attribution. Older PLOS papers are not assigned an unprinted version.",
+      "source_verified_at_utc": "2026-10-09T12:55:06.452964+00:00",
+      "sha256": "1693b50cdf811ee6bdaabb60fd0a26d1a807c310c737a4b0a8f0b5322aaf115a",
+      "pages": 15,
+      "bytes": 1951728
+    },
+    {
+      "id": "expanded-strobe",
+      "title": "The Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) Statement: Guidelines for Reporting Observational Studies",
+      "authors_citation": "von Elm E, Altman DG, Egger M, Pocock SJ, Gøtzsche PC, Vandenbroucke JP, for the STROBE Initiative (2007), PLOS Medicine 4(10): e296.",
+      "source_url": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0040296",
+      "pdf_url": "https://journals.plos.org/plosmedicine/article/file?id=10.1371/journal.pmed.0040296&type=printable",
+      "doi": "10.1371/journal.pmed.0040296",
+      "license": "CC BY",
+      "license_url": "https://journals.plos.org/plosmedicine/s/licenses-and-copyright",
+      "local_path": ".test-data/external/expanded-corpus/expanded-strobe.pdf",
+      "layout_notes": "Epidemiological reporting methods; multi-column journal body and long checklist table.",
+      "review_level": "inventory_only",
+      "license_evidence_url": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0040296",
+      "license_note": "The official article declares CC Attribution. Older PLOS papers are not assigned an unprinted version.",
+      "source_verified_at_utc": "2026-10-09T12:55:06.458610+00:00",
+      "sha256": "5969e378c7492e254a97911ceea84db2a0f34aef2680dd261a57c182d292cf8b",
+      "pages": 5,
+      "bytes": 95819
+    }
+  ]
+}

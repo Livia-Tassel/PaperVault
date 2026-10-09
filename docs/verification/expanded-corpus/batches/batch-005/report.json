@@ -1,0 +1,781 @@
+{
+  "passed": true,
+  "run_id": "20261009T132032Z-c69b982b",
+  "started_at_utc": "2026-10-09T13:20:32.887174+00:00",
+  "work_directory": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T132032Z-c69b982b",
+  "artifacts": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b",
+  "backend": "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+  "sources": [
+    {
+      "id": "expanded-damask-python",
+      "title": "A Python Library for Pre- and Post-Processing of DAMASK Simulations",
+      "authors_citation": "Daniel Otto de Mentock, Sharan Roongta, Franz Roters, Philip Eisenlohr, and Martin Diehl (2025), Journal of Open Source Software 10(105): 7164.",
+      "source_url": "https://joss.theoj.org/papers/10.21105/joss.07164",
+      "pdf_url": "https://joss.theoj.org/papers/10.21105/joss.07164.pdf",
+      "doi": "10.21105/joss.07164",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_evidence_url": "https://joss.theoj.org/papers/10.21105/joss.07164",
+      "license_note": "The paper itself is CC BY 4.0. Its referenced simulation software license is a distinct matter; no DAMASK software is installed here.",
+      "local_path": "D:\\project\\PaperVault\\.test-data\\external\\expanded-corpus\\expanded-damask-python.pdf",
+      "sha256": "11d41887d1b3084da9433fa450e753c608c99c827cfc13f431366f394eb0aa87",
+      "pages": 4,
+      "bytes": 218119,
+      "layout_notes": "Materials engineering/crystal plasticity; complete 4-page JOSS article with journal sidebar and references, providing another check for legitimate no-figure/table content.",
+      "review_level": "inventory_only",
+      "source_verified_at_utc": "2026-10-09T13:16:44.459877+00:00",
+      "manifest": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\input-batches\\batch-005.json",
+      "manifest_sha256": "57116385db1199e23892e542d51280cad77a613d913f27e35863c424ad1c3c8f"
+    }
+  ],
+  "backend_origin": "installed",
+  "command": "D:\\project\\PaperVault\\.venv\\Scripts\\python.exe scripts/test_real_corpus.py --manifest artifacts/real-corpus-expanded/input-batches/batch-005.json --expect-version 0.2.1 --expect-sha256 567bc425d9df91f4813dfacdf64a8a8e5548381becc5950627830862439dd43a --dpi 300 --report artifacts/real-corpus-expanded/batches/batch-005/report.json",
+  "papers": [
+    {
+      "source": {
+        "id": "expanded-damask-python",
+        "title": "A Python Library for Pre- and Post-Processing of DAMASK Simulations",
+        "authors_citation": "Daniel Otto de Mentock, Sharan Roongta, Franz Roters, Philip Eisenlohr, and Martin Diehl (2025), Journal of Open Source Software 10(105): 7164.",
+        "source_url": "https://joss.theoj.org/papers/10.21105/joss.07164",
+        "pdf_url": "https://joss.theoj.org/papers/10.21105/joss.07164.pdf",
+        "doi": "10.21105/joss.07164",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence_url": "https://joss.theoj.org/papers/10.21105/joss.07164",
+        "license_note": "The paper itself is CC BY 4.0. Its referenced simulation software license is a distinct matter; no DAMASK software is installed here.",
+        "local_path": "D:\\project\\PaperVault\\.test-data\\external\\expanded-corpus\\expanded-damask-python.pdf",
+        "sha256": "11d41887d1b3084da9433fa450e753c608c99c827cfc13f431366f394eb0aa87",
+        "pages": 4,
+        "bytes": 218119,
+        "layout_notes": "Materials engineering/crystal plasticity; complete 4-page JOSS article with journal sidebar and references, providing another check for legitimate no-figure/table content.",
+        "review_level": "inventory_only",
+        "source_verified_at_utc": "2026-10-09T13:16:44.459877+00:00",
+        "manifest": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\input-batches\\batch-005.json",
+        "manifest_sha256": "57116385db1199e23892e542d51280cad77a613d913f27e35863c424ad1c3c8f"
+      },
+      "passed": true,
+      "errors": [],
+      "resources": [
+        {
+          "id": "08ef396a-8154-4b97-a346-4e5d664632c1",
+          "kind": "figure",
+          "caption": "",
+          "locations": [
+            {
+              "page_index": 0,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                18.96729905324334,
+                770.466989486948,
+                173.27602495549348,
+                829.3724447354681
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 1,
+                "bbox": {
+                  "l": 18.96729905324334,
+                  "t": 829.3724447354681,
+                  "r": 173.27602495549348,
+                  "b": 770.466989486948,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ],
+          "needs_review": true,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\resources\\08ef396a-8154-4b97-a346-4e5d664632c1\\png-300.png",
+              "bytes": 87904,
+              "sha256": "85f214a8ed70f26766edf2905b6ebc57173f679014563c0313e9c15ce630efe0",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 642,
+                "height": 244
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\resources\\08ef396a-8154-4b97-a346-4e5d664632c1\\original.original",
+              "bytes": 67689,
+              "sha256": "fbc71c985f5e54b6976dc327aa4f0b443f8aa364178ce9912262320e959540d0",
+              "format": "original",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 650,
+                "height": 249
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\resources\\08ef396a-8154-4b97-a346-4e5d664632c1\\segment_1.png",
+              "bytes": 30553,
+              "sha256": "c272d64b2dcbd298cf2b910f326e89e91190e2545aa95c370f07f303d6ed1cda",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 321,
+                "height": 121
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\resources\\08ef396a-8154-4b97-a346-4e5d664632c1\\thumbnail.png",
+              "bytes": 30553,
+              "sha256": "c272d64b2dcbd298cf2b910f326e89e91190e2545aa95c370f07f303d6ed1cda",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 321,
+                "height": 121
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\resources\\08ef396a-8154-4b97-a346-4e5d664632c1\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "not_applicable": "Auto parser returned no caption; no caption was fabricated"
+          },
+          "passed": true
+        },
+        {
+          "id": "a804830a-d9e9-4123-a84e-ba4406cd89fa",
+          "kind": "figure",
+          "caption": "",
+          "locations": [
+            {
+              "page_index": 1,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                18.862808067116962,
+                770.6666551714102,
+                173.40430216682995,
+                829.1817023693524
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 2,
+                "bbox": {
+                  "l": 18.862808067116962,
+                  "t": 829.1817023693524,
+                  "r": 173.40430216682995,
+                  "b": 770.6666551714102,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ],
+          "needs_review": true,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\resources\\a804830a-d9e9-4123-a84e-ba4406cd89fa\\png-300.png",
+              "bytes": 87894,
+              "sha256": "0955940aae27f7525111d839ec8e00b6db3bf9dc444307b1b3aa3a047ec09984",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 644,
+                "height": 243
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\resources\\a804830a-d9e9-4123-a84e-ba4406cd89fa\\original.original",
+              "bytes": 67689,
+              "sha256": "fbc71c985f5e54b6976dc327aa4f0b443f8aa364178ce9912262320e959540d0",
+              "format": "original",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 650,
+                "height": 249
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\resources\\a804830a-d9e9-4123-a84e-ba4406cd89fa\\segment_1.png",
+              "bytes": 30564,
+              "sha256": "bb8ecc7537d5b64275030748c2c55aabde115e3c70f05e748bd70a529d648c5b",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 322,
+                "height": 121
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\resources\\a804830a-d9e9-4123-a84e-ba4406cd89fa\\thumbnail.png",
+              "bytes": 30564,
+              "sha256": "bb8ecc7537d5b64275030748c2c55aabde115e3c70f05e748bd70a529d648c5b",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 322,
+                "height": 121
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\resources\\a804830a-d9e9-4123-a84e-ba4406cd89fa\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "not_applicable": "Auto parser returned no caption; no caption was fabricated"
+          },
+          "passed": true
+        },
+        {
+          "id": "c904aac4-9c31-4c41-ade1-2fc88c08ae6b",
+          "kind": "figure",
+          "caption": "",
+          "locations": [
+            {
+              "page_index": 2,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                19.03257496280798,
+                770.5812781430424,
+                173.30763324066777,
+                829.0868146360062
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 3,
+                "bbox": {
+                  "l": 19.03257496280798,
+                  "t": 829.0868146360062,
+                  "r": 173.30763324066777,
+                  "b": 770.5812781430424,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ],
+          "needs_review": true,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\resources\\c904aac4-9c31-4c41-ade1-2fc88c08ae6b\\png-300.png",
+              "bytes": 87868,
+              "sha256": "f9863023795d3a524d5a99a7d7bb1add59ed35bf8345b25fd712def8f697ebf9",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 642,
+                "height": 243
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\resources\\c904aac4-9c31-4c41-ade1-2fc88c08ae6b\\original.original",
+              "bytes": 67689,
+              "sha256": "fbc71c985f5e54b6976dc327aa4f0b443f8aa364178ce9912262320e959540d0",
+              "format": "original",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 650,
+                "height": 249
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\resources\\c904aac4-9c31-4c41-ade1-2fc88c08ae6b\\segment_1.png",
+              "bytes": 30553,
+              "sha256": "c272d64b2dcbd298cf2b910f326e89e91190e2545aa95c370f07f303d6ed1cda",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 321,
+                "height": 121
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\resources\\c904aac4-9c31-4c41-ade1-2fc88c08ae6b\\thumbnail.png",
+              "bytes": 30553,
+              "sha256": "c272d64b2dcbd298cf2b910f326e89e91190e2545aa95c370f07f303d6ed1cda",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 321,
+                "height": 121
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\resources\\c904aac4-9c31-4c41-ade1-2fc88c08ae6b\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "not_applicable": "Auto parser returned no caption; no caption was fabricated"
+          },
+          "passed": true
+        },
+        {
+          "id": "8ad4458e-bddd-442c-89d9-fad5c043ddc7",
+          "kind": "figure",
+          "caption": "",
+          "locations": [
+            {
+              "page_index": 3,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                19.005131076825545,
+                770.5838641699023,
+                173.28872008642412,
+                829.1540875692549
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 4,
+                "bbox": {
+                  "l": 19.005131076825545,
+                  "t": 829.1540875692549,
+                  "r": 173.28872008642412,
+                  "b": 770.5838641699023,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ],
+          "needs_review": true,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\resources\\8ad4458e-bddd-442c-89d9-fad5c043ddc7\\png-300.png",
+              "bytes": 87868,
+              "sha256": "f9863023795d3a524d5a99a7d7bb1add59ed35bf8345b25fd712def8f697ebf9",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 642,
+                "height": 243
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\resources\\8ad4458e-bddd-442c-89d9-fad5c043ddc7\\original.original",
+              "bytes": 67689,
+              "sha256": "fbc71c985f5e54b6976dc327aa4f0b443f8aa364178ce9912262320e959540d0",
+              "format": "original",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 650,
+                "height": 249
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\resources\\8ad4458e-bddd-442c-89d9-fad5c043ddc7\\segment_1.png",
+              "bytes": 30553,
+              "sha256": "c272d64b2dcbd298cf2b910f326e89e91190e2545aa95c370f07f303d6ed1cda",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 321,
+                "height": 121
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\resources\\8ad4458e-bddd-442c-89d9-fad5c043ddc7\\thumbnail.png",
+              "bytes": 30553,
+              "sha256": "c272d64b2dcbd298cf2b910f326e89e91190e2545aa95c370f07f303d6ed1cda",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 321,
+                "height": 121
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\resources\\8ad4458e-bddd-442c-89d9-fad5c043ddc7\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "not_applicable": "Auto parser returned no caption; no caption was fabricated"
+          },
+          "passed": true
+        }
+      ],
+      "progress": [
+        {
+          "seconds": 0.039,
+          "id": "814ac6f0-39b7-475f-8898-e84e3ed5947c",
+          "status": "queued",
+          "phase": "等待解析",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 0.545,
+          "id": "814ac6f0-39b7-475f-8898-e84e3ed5947c",
+          "status": "running",
+          "phase": "正在加载解析引擎",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 1.556,
+          "id": "814ac6f0-39b7-475f-8898-e84e3ed5947c",
+          "status": "running",
+          "phase": "正在校验离线模型",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 2.063,
+          "id": "814ac6f0-39b7-475f-8898-e84e3ed5947c",
+          "status": "running",
+          "phase": "正在读取 PDF",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 5.596,
+          "id": "814ac6f0-39b7-475f-8898-e84e3ed5947c",
+          "status": "running",
+          "phase": "正在执行 CPU 版面识别与表格解析",
+          "pages_done": null,
+          "pages_total": 4,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 12.672,
+          "id": "814ac6f0-39b7-475f-8898-e84e3ed5947c",
+          "status": "running",
+          "phase": "解析完成",
+          "pages_done": 4,
+          "pages_total": 4,
+          "resources_count": 4,
+          "error": null
+        },
+        {
+          "seconds": 13.684,
+          "id": "814ac6f0-39b7-475f-8898-e84e3ed5947c",
+          "status": "completed",
+          "phase": "解析完成",
+          "pages_done": 4,
+          "pages_total": 4,
+          "resources_count": 4,
+          "error": null
+        }
+      ],
+      "source_pdf": {
+        "path": "D:\\project\\PaperVault\\.test-data\\external\\expanded-corpus\\expanded-damask-python.pdf",
+        "bytes": 218119,
+        "sha256": "11d41887d1b3084da9433fa450e753c608c99c827cfc13f431366f394eb0aa87"
+      },
+      "page_count": 4,
+      "paper_id": "df3de596-f134-4b5e-b03a-bd92ff498adb",
+      "job": {
+        "id": "814ac6f0-39b7-475f-8898-e84e3ed5947c",
+        "paper_id": "df3de596-f134-4b5e-b03a-bd92ff498adb",
+        "status": "completed",
+        "phase": "解析完成",
+        "error": null,
+        "created_at": "2026-10-09T13:20:34.736694+00:00",
+        "updated_at": "2026-10-09T13:20:48.188721+00:00",
+        "paper_title": "A Python Library for Pre- and Post-Processing of DAMASK Simulations",
+        "pages_done": 4,
+        "pages_total": 4,
+        "resources_count": 4
+      },
+      "parse_seconds": 13.687,
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\paper-auto.json",
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "counts": {
+        "figure": 4,
+        "table": 0,
+        "resources": 4
+      },
+      "source_revision": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T132032Z-c69b982b\\auto-baseline\\papers\\df3de596-f134-4b5e-b03a-bd92ff498adb\\revisions\\8b4bd4bc-52a7-4c33-9431-2187903a5fe1",
+      "parser_artifacts": [
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T132032Z-c69b982b\\auto-baseline\\papers\\df3de596-f134-4b5e-b03a-bd92ff498adb\\revisions\\8b4bd4bc-52a7-4c33-9431-2187903a5fe1\\structure.json",
+            "bytes": 162542,
+            "sha256": "a776c2775848d94d20a0068930bb32ab6222340ebdab138315d65280f2958506"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\structure.json",
+            "bytes": 162542,
+            "sha256": "a776c2775848d94d20a0068930bb32ab6222340ebdab138315d65280f2958506"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T132032Z-c69b982b\\auto-baseline\\papers\\df3de596-f134-4b5e-b03a-bd92ff498adb\\revisions\\8b4bd4bc-52a7-4c33-9431-2187903a5fe1\\docling.json",
+            "bytes": 53478,
+            "sha256": "f7ca62322ce72b3c9e85afcbad2d1a744732a7940efadada1b3d4fde90e3462d"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\docling.json",
+            "bytes": 53478,
+            "sha256": "f7ca62322ce72b3c9e85afcbad2d1a744732a7940efadada1b3d4fde90e3462d"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T132032Z-c69b982b\\auto-baseline\\papers\\df3de596-f134-4b5e-b03a-bd92ff498adb\\revisions\\8b4bd4bc-52a7-4c33-9431-2187903a5fe1\\fulltext.md",
+            "bytes": 12838,
+            "sha256": "2b8e186aff18d0a720be731d3e3aa428c1900549cf9bf31e73068c0b759efe4e"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\fulltext.md",
+            "bytes": 12838,
+            "sha256": "2b8e186aff18d0a720be731d3e3aa428c1900549cf9bf31e73068c0b759efe4e"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T132032Z-c69b982b\\auto-baseline\\papers\\df3de596-f134-4b5e-b03a-bd92ff498adb\\revisions\\8b4bd4bc-52a7-4c33-9431-2187903a5fe1\\worker.log",
+            "bytes": 2435,
+            "sha256": "83d90e6ee38601d1529fb7b9f006c9d3e8ef75bac22787f379b4a08bf0a3ceb6"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\worker.log",
+            "bytes": 2435,
+            "sha256": "83d90e6ee38601d1529fb7b9f006c9d3e8ef75bac22787f379b4a08bf0a3ceb6"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T132032Z-c69b982b\\auto-baseline\\papers\\df3de596-f134-4b5e-b03a-bd92ff498adb\\revisions\\8b4bd4bc-52a7-4c33-9431-2187903a5fe1\\result.json",
+            "bytes": 156306,
+            "sha256": "f9e2061cf6a5fe4b04dce38aac70dc70c912c87bb0c2e48b62d3a8282677de2f"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\result.json",
+            "bytes": 156306,
+            "sha256": "f9e2061cf6a5fe4b04dce38aac70dc70c912c87bb0c2e48b62d3a8282677de2f"
+          }
+        }
+      ],
+      "parser_warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "engine": {
+        "name": "docling",
+        "version": "2.135.0",
+        "device": "cpu",
+        "ocr": false,
+        "elapsed_seconds": 11.234,
+        "model_manifest_sha256": "bd391d3f352a83665faeb58e2852d465a8eda9ac949fed9017b4022f93a6c2ad",
+        "coordinate_space": "pdf_user_space"
+      },
+      "source_pdf_hash_preserved": true,
+      "auto_baseline_unchanged": true,
+      "seconds": 14.296,
+      "peak_backend_worker_rss_bytes": 1617420288,
+      "worker_processes": [
+        {
+          "pid": 3096,
+          "created_at_epoch": 1791552035.2312834,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T132032Z-c69b982b\\auto-baseline\\papers\\df3de596-f134-4b5e-b03a-bd92ff498adb\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T132032Z-c69b982b\\auto-baseline\\.staging\\c9548a14-a42a-4c1a-b731-a329827ed1bf",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T132032Z-c69b982b\\auto-baseline\\papers\\df3de596-f134-4b5e-b03a-bd92ff498adb\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ],
+      "worker_exit_coverage": "captured",
+      "input_pdf_hash_unchanged": true
+    }
+  ],
+  "errors": [],
+  "offline_environment": {
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "PYTHONPATH": null,
+    "VIRTUAL_ENV": null
+  },
+  "machine": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "logical_cpus": 16,
+    "memory_bytes": 16890716160
+  },
+  "scope": "Unedited auto extraction integrity/workflow audit. Counts are observed, never assumed ground truth; precision/recall requires manual source-page review.",
+  "backend_sha256": "567bc425d9df91f4813dfacdf64a8a8e5548381becc5950627830862439dd43a",
+  "models_manifest": {
+    "path": "D:\\project\\PaperVault\\.cache\\models\\papervault-models.json",
+    "bytes": 1806,
+    "sha256": "0667a164e1d7633187c24ba81302ca86bb50dff449f49c420e0217a6fd03fd45"
+  },
+  "health": {
+    "status": "ok",
+    "version": "0.2.1",
+    "protocol": 1
+  },
+  "backend_port": 6811,
+  "backend_pid": 18428,
+  "backend_startup_seconds": 1.189,
+  "auto_baseline_library": {
+    "id": "e3d63a4a-22ad-4505-b148-991075b96684",
+    "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T132032Z-c69b982b\\auto-baseline",
+    "paper_count": 0,
+    "figure_count": 0,
+    "table_count": 0
+  },
+  "shutdown": {
+    "returncode": 0,
+    "forced_termination": false,
+    "backend_port_closed": true,
+    "worker_processes": [
+      {
+        "pid": 3096,
+        "created_at_epoch": 1791552035.2312834,
+        "command": [
+          "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+          "--worker",
+          "--source",
+          "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T132032Z-c69b982b\\auto-baseline\\papers\\df3de596-f134-4b5e-b03a-bd92ff498adb\\original.pdf",
+          "--output",
+          "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T132032Z-c69b982b\\auto-baseline\\.staging\\c9548a14-a42a-4c1a-b731-a329827ed1bf",
+          "--models",
+          "D:\\project\\PaperVault\\.cache\\models"
+        ],
+        "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T132032Z-c69b982b\\auto-baseline\\papers\\df3de596-f134-4b5e-b03a-bd92ff498adb\\original.pdf",
+        "exit_code": 0,
+        "state": "exited",
+        "exit_code_hex": "0x00000000"
+      }
+    ]
+  },
+  "seconds": 16.859,
+  "finished_at_utc": "2026-10-09T13:20:49.872140+00:00",
+  "summary": {
+    "papers": 1,
+    "papers_passed": 1,
+    "papers_failed": 0,
+    "resources": 4,
+    "resource_failures": 0
+  }
+}

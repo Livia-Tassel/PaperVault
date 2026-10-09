@@ -1,0 +1,92 @@
+{
+  "paper_id": "expanded-cellfit",
+  "page_index": 8,
+  "source_pdf_sha256": "1693b50cdf811ee6bdaabb60fd0a26d1a807c310c737a4b0a8f0b5322aaf115a",
+  "raw_extraction_file": "artifacts/real-corpus-expanded/source-pages/expanded-cellfit/text-by-page.json",
+  "raw_extraction_sha256": "98f1124c1a4ff4578fd5563e57128b09e14190a5f7bf43c1a16470f98eb264f6",
+  "raw_extractor": "pypdfium2 source PDF text layer; captured before model output review",
+  "visual_source": "artifacts/real-corpus-expanded/source-pages/expanded-cellfit/page-09-reading-rotation90.png",
+  "method": "Compare the fixed semantic method/noise/measure cells visually to their method row in independent source text, then to exact table-export coordinates. Presence is checked in the corresponding source row; not a token-anywhere success test.",
+  "cases": [
+    {
+      "row_label": "CellFIT – polyarcs",
+      "column_label": "Noise 1 / normalized tension error",
+      "visible_expected": "3.5±0.7",
+      "source_text_layer_actual": "3.560.7",
+      "source_method_row": "CellFIT – polyarcs 0.7 12.5 3.560.7 13.160.9 6.861.3 14.662.1 17.363.5 23.565.2",
+      "exports_actual": {
+        "json": "3.560.7",
+        "csv": "3.560.7",
+        "html": "3.560.7"
+      },
+      "conclusion": "Source text layer already differs from visible glyph; JSON/CSV/HTML retain that wrong text. Structural rotation/fragmented headers are a separate extraction failure."
+    },
+    {
+      "row_label": "CellFIT – polyarcs",
+      "column_label": "Noise 5 / normalized pressure error",
+      "visible_expected": "23.5±5.2",
+      "source_text_layer_actual": "23.565.2",
+      "source_method_row": "CellFIT – polyarcs 0.7 12.5 3.560.7 13.160.9 6.861.3 14.662.1 17.363.5 23.565.2",
+      "exports_actual": {
+        "json": "23.565.2",
+        "csv": "23.565.2",
+        "html": "23.565.2"
+      },
+      "conclusion": "Source text layer already differs from visible glyph; JSON/CSV/HTML retain that wrong text. Structural rotation/fragmented headers are a separate extraction failure."
+    },
+    {
+      "row_label": "CellFIT – polyarcs, short edges removed",
+      "column_label": "Noise 2 / normalized tension error",
+      "visible_expected": "7.3±1.3",
+      "source_text_layer_actual": "7.361.3",
+      "source_method_row": "CellFIT – polyarcs, short edges removed 0.1 0.3 3.760.7 4.360.9 7.361.3 8.862.1 19.664.2 24.768.2",
+      "exports_actual": {
+        "json": "7.361.3",
+        "csv": "7.361.3",
+        "html": "7.361.3"
+      },
+      "conclusion": "Source text layer already differs from visible glyph; JSON/CSV/HTML retain that wrong text. Structural rotation/fragmented headers are a separate extraction failure."
+    },
+    {
+      "row_label": "CellFIT – angles from closest segment",
+      "column_label": "Noise 1 / normalized pressure error",
+      "visible_expected": "13.7±0.9",
+      "source_text_layer_actual": "13.760.9",
+      "source_method_row": "CellFIT – angles from closest segment 7.4 13.4 8.160.5 13.760.9 9.961.0 14.961.8 18.162.8 22.964.6",
+      "exports_actual": {
+        "json": "13.760.9",
+        "csv": "13.760.9",
+        "html": "13.760.9"
+      },
+      "conclusion": "Source text layer already differs from visible glyph; JSON/CSV/HTML retain that wrong text. Structural rotation/fragmented headers are a separate extraction failure."
+    },
+    {
+      "row_label": "CellFIT – angles from minimal polygons",
+      "column_label": "Noise 5 / normalized tension error",
+      "visible_expected": "31.7±2.5",
+      "source_text_layer_actual": "31.762.5",
+      "source_method_row": "CellFIT – angles from minimal polygons 27.1 25.0 27.360.5 25.060.9 27.961.0 25.961.8 31.762.5 31.164.6",
+      "exports_actual": {
+        "json": "31.762.5",
+        "csv": "31.762.5",
+        "html": "31.762.5"
+      },
+      "conclusion": "Source text layer already differs from visible glyph; JSON/CSV/HTML retain that wrong text. Structural rotation/fragmented headers are a separate extraction failure."
+    },
+    {
+      "row_label": "Bayesian – minimal polygons",
+      "column_label": "Noise 5 / normalized pressure error",
+      "visible_expected": "102±3.0",
+      "source_text_layer_actual": "10263.0",
+      "source_method_row": "Bayesian – minimal polygons 23.8 92.9 24.160.4 94.061.5 25.160.4 98.061.9 26.560.4 10263.0",
+      "exports_actual": {
+        "json": "10263.0",
+        "csv": "10263.0",
+        "html": "10263.0"
+      },
+      "conclusion": "Source text layer already differs from visible glyph; JSON/CSV/HTML retain that wrong text. Structural rotation/fragmented headers are a separate extraction failure."
+    }
+  ],
+  "source_manifest": "tests/corpus/expanded/sources-science.json",
+  "pdf": ".test-data/external/expanded-corpus/expanded-cellfit.pdf"
+}

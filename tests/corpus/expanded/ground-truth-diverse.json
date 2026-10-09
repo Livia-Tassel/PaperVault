@@ -1,0 +1,911 @@
+{
+  "schema_version": 1,
+  "frozen_before_consulting_parser_outputs": true,
+  "annotated_at_utc": "2026-10-09T13:08:18.128518+00:00",
+  "counting_policy": "All complete PDFs inspected as Poppler105dpi page renders/contact sheets. Numbered top-level figures/tables only; multipanel bodies count once. Equations, code Listings, journal logos and external supplements excluded. Human rendering review is independent of model outputs.",
+  "papers": [
+    {
+      "id": "diverse-basictools",
+      "pages": 4,
+      "source_sha256": "421c37c2e9d4484122f13258a39a76505015253694e25069d275588ae116d8b6",
+      "review_level": "inventory_only",
+      "annotation_method": "All original pages visually inspected; captions cross-checked against source PDF text, never parser outputs.",
+      "expected_counts": {
+        "figures": 2,
+        "tables": 0,
+        "table_page_segments": 0
+      },
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Deep learning workflow coupled to finite element simulator",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-basictools/page-3.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Analysis of a mechanical thick plate with two inclusions",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-basictools/page-3.png",
+          "render_dpi": 105
+        }
+      ],
+      "search_probes": [],
+      "table_cell_review": "not_applicable: zero numbered tables in full source"
+    },
+    {
+      "id": "diverse-diffeq",
+      "pages": 10,
+      "source_sha256": "e75c8173a70f71b425c5ad5a5b396f032f654d76f85e67d2a3b0c394e484ea66",
+      "review_level": "inventory_only",
+      "annotation_method": "All original pages visually inspected; captions cross-checked against source PDF text, never parser outputs.",
+      "expected_counts": {
+        "figures": 1,
+        "tables": 0,
+        "table_page_segments": 0
+      },
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Example of the ODE plot recipe",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-diffeq/page-03.png",
+          "render_dpi": 105
+        }
+      ],
+      "search_probes": [],
+      "table_cell_review": "not_applicable: zero numbered tables in full source"
+    },
+    {
+      "id": "diverse-pybamm",
+      "pages": 8,
+      "source_sha256": "9b8917cc70b00d64a89bb040b0a041f37141084d203c47b37763ea66b1817b08",
+      "review_level": "inventory_only",
+      "annotation_method": "All original pages visually inspected; captions cross-checked against source PDF text, never parser outputs.",
+      "expected_counts": {
+        "figures": 3,
+        "tables": 0,
+        "table_page_segments": 0
+      },
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Models are encoded and passed down the pipeline using a symbolic expression tree",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-pybamm/page-3.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "PyBaMM is designed around a pipeline approach",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-pybamm/page-3.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            3
+          ],
+          "caption_reference": "Interactive visualisation of solutions",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-pybamm/page-4.png",
+          "render_dpi": 105
+        }
+      ],
+      "search_probes": [],
+      "table_cell_review": "not_applicable: zero numbered tables in full source",
+      "excluded_objects": [
+        "Listings1 and2 onPDFpage4",
+        "Listing3 onPDFpage6",
+        "publisher and ORCID logos; these are not numbered scientific tables/figures"
+      ]
+    },
+    {
+      "id": "diverse-chinesebert",
+      "pages": 11,
+      "source_sha256": "c19a13f4168cdb40082a39bd68e2b76844f80ba69182288bf780edf3a8ba8d81",
+      "review_level": "deep_review",
+      "annotation_method": "All original pages visually inspected; captions cross-checked against source PDF text, never parser outputs.",
+      "expected_counts": {
+        "figures": 5,
+        "tables": 9,
+        "table_page_segments": 9
+      },
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "An overview of ChineseBERT",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-chinesebert/page-03.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "An overview of inducing the glyph embedding",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-chinesebert/page-03.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "An overview of inducing the pinyin embedding",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-chinesebert/page-03.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "figure",
+          "number": "4",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "An overview of the fusion layer",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-chinesebert/page-03.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "figure",
+          "number": "5",
+          "page_indices": [
+            7
+          ],
+          "caption_reference": "Performances when varying the training size",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-chinesebert/page-08.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            4
+          ],
+          "caption_reference": "Comparison of data statistics between ERNIE, BERT-wwm, MacBERT and ChineseBERT",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-chinesebert/page-05.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_indices": [
+            5
+          ],
+          "caption_reference": "Performances of different models on CMRC",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-chinesebert/page-06.png",
+          "render_dpi": 105,
+          "sample_cells": [
+            {
+              "page_index": 5,
+              "row_label": "Base / ERNIE",
+              "column_label": "CMRC Dev EM",
+              "expected": "66.89"
+            },
+            {
+              "page_index": 5,
+              "row_label": "Base / ERNIE",
+              "column_label": "CMRC Test EM",
+              "expected": "74.70"
+            },
+            {
+              "page_index": 5,
+              "row_label": "Base / BERT",
+              "column_label": "CMRC Dev EM",
+              "expected": "66.77"
+            },
+            {
+              "page_index": 5,
+              "row_label": "Base / BERT",
+              "column_label": "CMRC Test EM",
+              "expected": "71.60"
+            },
+            {
+              "page_index": 5,
+              "row_label": "Base / BERT°",
+              "column_label": "CMRC Dev EM",
+              "expected": "66.96"
+            },
+            {
+              "page_index": 5,
+              "row_label": "Base / BERT°",
+              "column_label": "CMRC Test EM",
+              "expected": "73.95"
+            },
+            {
+              "page_index": 5,
+              "row_label": "Base / ChineseBERT",
+              "column_label": "CMRC Dev EM",
+              "expected": "67.95"
+            },
+            {
+              "page_index": 5,
+              "row_label": "Base / ChineseBERT",
+              "column_label": "CMRC Test EM",
+              "expected": "75.35"
+            },
+            {
+              "page_index": 5,
+              "row_label": "Large / ChineseBERT",
+              "column_label": "CMRC Dev EM",
+              "expected": "70.70"
+            },
+            {
+              "page_index": 5,
+              "row_label": "Large / ChineseBERT",
+              "column_label": "CMRC Test EM",
+              "expected": "78.05"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "3",
+          "page_indices": [
+            5
+          ],
+          "caption_reference": "Performances of different models on the MRC dataset CJRC",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-chinesebert/page-06.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "4",
+          "page_indices": [
+            5
+          ],
+          "caption_reference": "Performances of different models on XNLI",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-chinesebert/page-06.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "5",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Performances on TC datasets ChnSentiCorp, THUCNews and TNEWS",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-chinesebert/page-07.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "6",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Performances on SPM datasets LCQMC and BQ Corpus",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-chinesebert/page-07.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "7",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Performances on NER datasets OntoNotes4.0 and Weibo",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-chinesebert/page-07.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "8",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Performances on CWS datasets MSRA and PKU",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-chinesebert/page-07.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "9",
+          "page_indices": [
+            7
+          ],
+          "caption_reference": "Performances for different models without considering glyph or pinyin information",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-chinesebert/page-08.png",
+          "render_dpi": 105
+        }
+      ],
+      "search_probes": [
+        {
+          "query": "乐",
+          "page_index": 0,
+          "pdf_text_layer": true,
+          "image_only": false,
+          "source_context": "the Chinese character “乐” has two distinctly different pronunciations",
+          "kind": "single_character"
+        },
+        {
+          "query": "我喜欢逛紫禁",
+          "page_index": 3,
+          "pdf_text_layer": true,
+          "image_only": false,
+          "source_context": "context “我喜欢逛紫禁[M] (i like going to The Forbidden [M])”",
+          "kind": "contiguous_chinese"
+        },
+        {
+          "query": "我喜欢逛紫禁[M]",
+          "page_index": 3,
+          "pdf_text_layer": true,
+          "image_only": false,
+          "source_context": "context “我喜欢逛紫禁[M] (i like going to The Forbidden [M])”",
+          "kind": "mixed_chinese_latin"
+        }
+      ]
+    },
+    {
+      "id": "diverse-fractional-wave",
+      "pages": 28,
+      "source_sha256": "68a7661424397b4191c2c4f6ae400ddf9fe68a30303a34e204005bc342d3e99e",
+      "review_level": "deep_review",
+      "annotation_method": "All original pages visually inspected; captions cross-checked against source PDF text, never parser outputs.",
+      "expected_counts": {
+        "figures": 9,
+        "tables": 13,
+        "table_page_segments": 13
+      },
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            12
+          ],
+          "caption_reference": "Example6.1 approximate and exact results at various temporal directions",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fractional-wave/page-13.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            13
+          ],
+          "caption_reference": "3D exact and numerical solutions for Example6.1",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fractional-wave/page-14.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            14
+          ],
+          "caption_reference": "2D and 3D error profiles for Example6.1",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fractional-wave/page-15.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "figure",
+          "number": "4",
+          "page_indices": [
+            18
+          ],
+          "caption_reference": "Example6.2 numerical and exact results at various temporal directions",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fractional-wave/page-19.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "figure",
+          "number": "5",
+          "page_indices": [
+            19
+          ],
+          "caption_reference": "3D exact and numerical solutions for Example6.2",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fractional-wave/page-20.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "figure",
+          "number": "6",
+          "page_indices": [
+            20
+          ],
+          "caption_reference": "2D and 3D error profiles for Example6.2",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fractional-wave/page-21.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "figure",
+          "number": "7",
+          "page_indices": [
+            22
+          ],
+          "caption_reference": "Example6.3 exact and numerical results at various levels of time",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fractional-wave/page-23.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "figure",
+          "number": "8",
+          "page_indices": [
+            22
+          ],
+          "caption_reference": "3D exact and numerical solutions for Example6.3",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fractional-wave/page-23.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "figure",
+          "number": "9",
+          "page_indices": [
+            23
+          ],
+          "caption_reference": "2D and 3D error profiles for Example6.3",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fractional-wave/page-24.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            11
+          ],
+          "caption_reference": "Numerical error/convergence results, printed Table 1",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fractional-wave/page-12.png",
+          "render_dpi": 105,
+          "sample_cells": [
+            {
+              "page_index": 11,
+              "row_label": "u=0.1",
+              "column_label": "Exact results",
+              "expected": "-0.049442719100",
+              "normalization": "ASCII hyphen and visually equivalent Unicode minus may be normalized; precision digits may not be changed."
+            },
+            {
+              "page_index": 11,
+              "row_label": "u=0.1",
+              "column_label": "Approximate results",
+              "expected": "-0.049442670935",
+              "normalization": "ASCII hyphen and visually equivalent Unicode minus may be normalized; precision digits may not be changed."
+            },
+            {
+              "page_index": 11,
+              "row_label": "u=0.2",
+              "column_label": "Exact results",
+              "expected": "-0.094045640367",
+              "normalization": "ASCII hyphen and visually equivalent Unicode minus may be normalized; precision digits may not be changed."
+            },
+            {
+              "page_index": 11,
+              "row_label": "u=0.2",
+              "column_label": "Approximate results",
+              "expected": "-0.094045548809",
+              "normalization": "ASCII hyphen and visually equivalent Unicode minus may be normalized; precision digits may not be changed."
+            },
+            {
+              "page_index": 11,
+              "row_label": "u=0.3",
+              "column_label": "Exact results",
+              "expected": "-0.129442719100",
+              "normalization": "ASCII hyphen and visually equivalent Unicode minus may be normalized; precision digits may not be changed."
+            },
+            {
+              "page_index": 11,
+              "row_label": "u=0.3",
+              "column_label": "Approximate results",
+              "expected": "-0.129442593109",
+              "normalization": "ASCII hyphen and visually equivalent Unicode minus may be normalized; precision digits may not be changed."
+            },
+            {
+              "page_index": 11,
+              "row_label": "u=0.4",
+              "column_label": "Exact results",
+              "expected": "-0.152169042607",
+              "normalization": "ASCII hyphen and visually equivalent Unicode minus may be normalized; precision digits may not be changed."
+            },
+            {
+              "page_index": 11,
+              "row_label": "u=0.4",
+              "column_label": "Approximate results",
+              "expected": "-0.152168894512",
+              "normalization": "ASCII hyphen and visually equivalent Unicode minus may be normalized; precision digits may not be changed."
+            },
+            {
+              "page_index": 11,
+              "row_label": "u=0.5",
+              "column_label": "Exact results",
+              "expected": "-0.160000000000",
+              "normalization": "ASCII hyphen and visually equivalent Unicode minus may be normalized; precision digits may not be changed."
+            },
+            {
+              "page_index": 11,
+              "row_label": "u=0.5",
+              "column_label": "Approximate results",
+              "expected": "-0.159999844291",
+              "normalization": "ASCII hyphen and visually equivalent Unicode minus may be normalized; precision digits may not be changed."
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_indices": [
+            11
+          ],
+          "caption_reference": "Numerical error/convergence results, printed Table 2",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fractional-wave/page-12.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "3",
+          "page_indices": [
+            11
+          ],
+          "caption_reference": "Numerical error/convergence results, printed Table 3",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fractional-wave/page-12.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "4",
+          "page_indices": [
+            12
+          ],
+          "caption_reference": "Numerical error/convergence results, printed Table 4",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fractional-wave/page-13.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "5",
+          "page_indices": [
+            12
+          ],
+          "caption_reference": "Numerical error/convergence results, printed Table 5",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fractional-wave/page-13.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "6",
+          "page_indices": [
+            16
+          ],
+          "caption_reference": "Numerical error/convergence results, printed Table 6",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fractional-wave/page-17.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "7",
+          "page_indices": [
+            17
+          ],
+          "caption_reference": "Numerical error/convergence results, printed Table 7",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fractional-wave/page-18.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "8",
+          "page_indices": [
+            17
+          ],
+          "caption_reference": "Numerical error/convergence results, printed Table 8",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fractional-wave/page-18.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "9",
+          "page_indices": [
+            18
+          ],
+          "caption_reference": "Numerical error/convergence results, printed Table 9",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fractional-wave/page-19.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "10",
+          "page_indices": [
+            20
+          ],
+          "caption_reference": "Numerical error/convergence results, printed Table 10",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fractional-wave/page-21.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "11",
+          "page_indices": [
+            20
+          ],
+          "caption_reference": "Numerical error/convergence results, printed Table 11",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fractional-wave/page-21.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "12",
+          "page_indices": [
+            21
+          ],
+          "caption_reference": "Numerical error/convergence results, printed Table 12",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fractional-wave/page-22.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "13",
+          "page_indices": [
+            21
+          ],
+          "caption_reference": "Numerical error/convergence results, printed Table 13",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fractional-wave/page-22.png",
+          "render_dpi": 105
+        }
+      ],
+      "search_probes": []
+    },
+    {
+      "id": "diverse-fuzzy-tumor",
+      "pages": 14,
+      "source_sha256": "236c9bc42b7ec1c6cd28b5313d919853033385a45cb953a5a38c34fae3174625",
+      "review_level": "inventory_only",
+      "annotation_method": "All original pages visually inspected; captions cross-checked against source PDF text, never parser outputs.",
+      "expected_counts": {
+        "figures": 4,
+        "tables": 1,
+        "table_page_segments": 1
+      },
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            9
+          ],
+          "caption_reference": "Numerical and Exact solution at alpha0.2 and alpha0.4",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fuzzy-tumor/page-10.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            9
+          ],
+          "caption_reference": "Numerical and Exact solution at alpha0.8 and alpha1",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fuzzy-tumor/page-10.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            10
+          ],
+          "caption_reference": "Lower fuzzy numerical solutions",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fuzzy-tumor/page-11.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "figure",
+          "number": "4",
+          "page_indices": [
+            10
+          ],
+          "caption_reference": "Upper fuzzy numerical and exact solutions",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fuzzy-tumor/page-11.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            8
+          ],
+          "caption_reference": "Fuzzy numerical solution of Eq32 by implicit scheme at different alpha and r",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-fuzzy-tumor/page-09.png",
+          "render_dpi": 105
+        }
+      ],
+      "search_probes": []
+    },
+    {
+      "id": "diverse-macbert",
+      "pages": 12,
+      "source_sha256": "5ed22b3574fbf8840352c78a1b7cd2bbf981705a3c6eac2f5cce723d23e63523",
+      "review_level": "inventory_only",
+      "annotation_method": "All original pages visually inspected; captions cross-checked against source PDF text, never parser outputs.",
+      "expected_counts": {
+        "figures": 2,
+        "tables": 11,
+        "table_page_segments": 11
+      },
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            3
+          ],
+          "caption_reference": "Examples of different masking strategies; printed Figure although its body is tabular",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-macbert/page-04.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            7
+          ],
+          "caption_reference": "Results of different MLM tasks on CMRC2018 and DRCD",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-macbert/page-08.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            1
+          ],
+          "caption_reference": "Printed Table 1",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-macbert/page-02.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_indices": [
+            4
+          ],
+          "caption_reference": "Printed Table 2",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-macbert/page-05.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "3",
+          "page_indices": [
+            4
+          ],
+          "caption_reference": "Printed Table 3",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-macbert/page-05.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "4",
+          "page_indices": [
+            5
+          ],
+          "caption_reference": "Printed Table 4",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-macbert/page-06.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "5",
+          "page_indices": [
+            5
+          ],
+          "caption_reference": "Printed Table 5",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-macbert/page-06.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "6",
+          "page_indices": [
+            5
+          ],
+          "caption_reference": "Printed Table 6",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-macbert/page-06.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "7",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Printed Table 7",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-macbert/page-07.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "8",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Printed Table 8",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-macbert/page-07.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "9",
+          "page_indices": [
+            8
+          ],
+          "caption_reference": "Printed Table 9",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-macbert/page-09.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "10",
+          "page_indices": [
+            11
+          ],
+          "caption_reference": "Printed Table 10",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-macbert/page-12.png",
+          "render_dpi": 105
+        },
+        {
+          "kind": "table",
+          "number": "11",
+          "page_indices": [
+            11
+          ],
+          "caption_reference": "Printed Table 11",
+          "source_page_png": "artifacts/real-corpus-expanded/source-pages/diverse-macbert/page-12.png",
+          "render_dpi": 105
+        }
+      ],
+      "search_probes": [
+        {
+          "query": "词",
+          "page_index": 3,
+          "pdf_text_layer": true,
+          "image_only": false,
+          "source_context": "Figure1 Original Sentence: 使用语言模型来预测下一个词的概率。 / we use a language model to predict the probability of the next word.",
+          "kind": "single_character",
+          "note": "These are in a figure body but are genuinely extractable PDF text; failure to index them is distinct from an image-only/OCR limitation."
+        },
+        {
+          "query": "语言模型",
+          "page_index": 3,
+          "pdf_text_layer": true,
+          "image_only": false,
+          "source_context": "Figure1 Original Sentence: 使用语言模型来预测下一个词的概率。 / we use a language model to predict the probability of the next word.",
+          "kind": "contiguous_chinese",
+          "note": "These are in a figure body but are genuinely extractable PDF text; failure to index them is distinct from an image-only/OCR limitation."
+        },
+        {
+          "query": "使用语言模型来预测下一个词的概率",
+          "page_index": 3,
+          "pdf_text_layer": true,
+          "image_only": false,
+          "source_context": "Figure1 Original Sentence: 使用语言模型来预测下一个词的概率。 / we use a language model to predict the probability of the next word.",
+          "kind": "full_chinese_phrase",
+          "note": "These are in a figure body but are genuinely extractable PDF text; failure to index them is distinct from an image-only/OCR limitation."
+        }
+      ],
+      "excluded_objects": [
+        "Printed Figure1 has a table-like body but is a figure under the source-label counting policy."
+      ]
+    }
+  ]
+}

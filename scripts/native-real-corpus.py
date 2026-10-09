@@ -29,6 +29,7 @@ def main():
     parser.add_argument('--source-id', nargs='+', default=[], help='Select source manifest IDs rather than generated paper UUIDs')
     parser.add_argument('--assert-source-title', nargs='+', default=[], help='Require these manifest IDs to show their exact known source title in API and native editor')
     parser.add_argument('--resource-mode', choices=('first', 'captioned'), default='captioned', help='Captioned picks the first captioned resource for scientific-image review; all auto counts remain reported')
+    parser.add_argument('--resource-number', action='append', default=[], metavar='KIND:NUMBER', help='Require an exact source label, e.g. table:A.1 or figure:G.1; repeat once per kind')
     parser.add_argument('--app', type=Path, default=ROOT / '.test-data/installed/PaperVault/papervault.exe')
     parser.add_argument('--expect-version', default='0.2.0')
     parser.add_argument('--expect-sha256', default=EXPECTED_SHA256)
@@ -36,6 +37,9 @@ def main():
     parser.add_argument('--models', type=Path, default=ROOT / '.cache/models')
     parser.add_argument('--output', type=Path, default=ROOT / 'artifacts/real-corpus/native')
     args = parser.parse_args()
+    required_numbers = dict(value.split(':', 1) for value in args.resource_number)
+    assert set(required_numbers) <= {'figure', 'table'} and all(required_numbers.values()), 'Resource-number needs figure/table and a nonempty exact label'
+    assert len(required_numbers) == len(args.resource_number), 'Provide at most one required label per resource kind'
     assert args.paper_id or args.source_id, 'Explicitly select the real papers to review'
     corpus = json.loads(args.corpus_report.read_text(encoding='utf-8'))
     assert corpus.get('finished_at_utc') and corpus['shutdown']['backend_port_closed'], 'Wait for the corpus run to finish'
@@ -117,25 +121,39 @@ def main():
             for kind, label in (('figure', '图片'), ('table', '表格')):
                 subset = [r for r in resources if r['kind'] == kind]
                 if not subset:
+                    assert kind not in required_numbers, f'Required {kind} label {required_numbers.get(kind)} is missing'
                     evidence['resources'].append({'kind': kind, 'count': 0, 'not_applicable': 'No auto resources of this kind'})
                     continue
-                resource_index = next((i for i, item in enumerate(subset) if str(item.get('caption') or '').strip()), 0) if args.resource_mode == 'captioned' else 0
+                if kind in required_numbers:
+                    resource_index = next((i for i, item in enumerate(subset) if item.get('number') == required_numbers[kind]), None)
+                    assert resource_index is not None, f'Required {kind} label {required_numbers[kind]} is missing'
+                else:
+                    resource_index = next((i for i, item in enumerate(subset) if str(item.get('caption') or '').strip()), 0) if args.resource_mode == 'captioned' else 0
                 resource = subset[resource_index]
                 assert resource_index < 24, 'Selected captioned resource is beyond the first detail page; add explicit pagination before reviewing it'
                 client.click(f"//button[@role='tab' and starts-with(normalize-space(),'{label}')]")
                 client.click(f"(//button[contains(@class,'detail-resource')])[{resource_index + 1}]")
                 wait_until(lambda: client.execute('return Boolean(document.querySelector(".resource-detail"))'), 'Real resource detail did not open')
                 assert client.execute('return document.querySelector(".resource-meta textarea[aria-label=Caption]")?.value') == (resource.get('caption') or '')
+                if kind in required_numbers:
+                    expected_name = resource.get('name') or ''
+                    assert required_numbers[kind] in expected_name, resource
+                    assert client.execute('return document.querySelector(".resource-meta input[aria-label=资源名称]")?.value') == expected_name
                 wait_until(lambda: client.execute('return [...document.querySelectorAll(".resource-preview img")].every(e=>e.complete&&e.naturalWidth>0)'), 'Real extracted resource image did not load')
                 if kind == 'table':
                     assert client.execute('return Boolean(document.querySelector(".resource-preview table"))'), 'Structured table is not shown'
                 capture(f'{index:02d}-{kind}-auto-detail')
                 client.click("//button[normalize-space()='查看原文']")
                 page = resource['locations'][0]['page_index'] + 1
-                wait_until(lambda: client.execute(f'return Boolean(document.querySelector(\'.pdf-page[data-page="{page}"] .pdf-highlight\'))'), 'Resource source region was not highlighted in its PDF', timeout=45)
+                wait_until(lambda: client.execute(f'''const page=document.querySelector('.pdf-page[data-page="{page}"]');
+const highlight=page?.querySelector('.pdf-highlight');const canvas=page?.querySelector('canvas');
+if(!highlight||!canvas?.width||page.dataset.textReady!=='true')return false;
+const region=highlight.getBoundingClientRect(), viewport=document.querySelector('.pdf-scroll').getBoundingClientRect();
+return region.bottom>viewport.top&&region.top<viewport.bottom;'''), 'Resource source region was not rendered and visibly highlighted in its PDF', timeout=45)
                 capture(f'{index:02d}-{kind}-source-region')
                 evidence['resources'].append({'kind': kind, 'count': len(subset), 'resource_id': resource['id'],
                                               'selection_mode': args.resource_mode, 'selected_auto_index': resource_index,
+                                              'required_number': required_numbers.get(kind), 'observed_number': resource.get('number'), 'observed_name': resource.get('name'),
                                               'caption': resource.get('caption'), 'source_location': resource['locations'][0], 'native_detail_and_location': True})
 
             target_page = min(2, record['page_count'])

@@ -17,3 +17,9 @@ docs/verification/0.2.0/** -text whitespace=blank-at-eol,blank-at-eof,space-befo
 docs/verification/0.2.1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 docs/verification/real-corpus/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 tests/corpus/*.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+tests/corpus/expanded/*.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+docs/verification/expanded-corpus/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+docs/verification/0.2.2/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Raw test/build logs retain the tools' own whitespace as well as their hashes.
+docs/verification/expanded-corpus/*.log -text -whitespace
+docs/verification/0.2.2/*.log -text -whitespace

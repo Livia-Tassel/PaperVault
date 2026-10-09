@@ -1,0 +1,784 @@
+{
+  "schema": "papervault-independent-corpus-ground-truth-v1",
+  "created_at_utc": "2026-10-09T13:27:47.079974+00:00",
+  "source_manifest": "tests/corpus/expanded/sources-science.json",
+  "source_manifest_sha256": "db1479fb447fb2f47c4c06f5a2eda01fafddaf41fbc9f21c09da9e9551257e57",
+  "method": "Independent full-document source-PDF caption scan and visual inspection of all identified figure/table pages, using Poppler page renders (plus PDFium reading rotation for one vertical table). No application parser output or model-derived inventory was read before this file was written.",
+  "evaluation_levels": {
+    "deep_review": "Two fixed papers: all scientific figure/table pages visually reviewed, 10 semantic cells per paper selected in advance.",
+    "inventory_only": "Five papers: complete numbered-object inventory, not an exhaustive cell/content audit."
+  },
+  "selection_note": "GSTools transfer was incomplete and was replaced by complete CC BY DAMASK paper before annotation/model comparison. CellFIT later downloaded completely and retained its originally selected deep_review role.",
+  "page_index_convention": "Zero-based physical PDF page. Printed page numbers, equations, subpanels and bibliography numbers are not additional Figure/Table objects.",
+  "papers": [
+    {
+      "id": "expanded-ecological-network",
+      "pages": 9,
+      "review_level": "deep_review",
+      "scope": "Complete original publisher PDF, all numbered main-article objects. External supporting files and their textual references are excluded; publisher logos and body citations are not research objects.",
+      "source_sha256": "386a3d74d4c66cd31358078cfbcfd5422a9257e092870aa8fed29ca1b08d4dda",
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            1
+          ],
+          "caption_reference": "Figure 1. A five-species subnetwork of the Zackenberg pollination network, 2010, including three pollinator species and two plant species.",
+          "visual_notes": "One complete composite: static view and nine temporal windows, including species photographs.",
+          "uncertain": false
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Figure 2. Direct (A) and indirect (B) species linkage and time delays (days) between species pairs.",
+          "visual_notes": "One diagram with A and four B subpanels; the time-delay values inside are figure annotations.",
+          "uncertain": false
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            4
+          ],
+          "caption_reference": "Figure 3. Visualization of the temporal dynamics of the network in 2011.",
+          "visual_notes": "Seven circular network panels form one Figure.",
+          "uncertain": false
+        },
+        {
+          "kind": "figure",
+          "number": "4",
+          "page_indices": [
+            5
+          ],
+          "caption_reference": "Figure 4. Temporal segregation of tail pollinators for core plants with the longest tail.",
+          "visual_notes": "Five phenophase plot panels and flower thumbnails form one Figure.",
+          "uncertain": false
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            3
+          ],
+          "caption_reference": "Table 1. Comparison of static and dynamical networks.",
+          "visual_notes": "Single table with stacked Season, Average phenophase and Networks sections; headers change between sections.",
+          "uncertain": false
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Table 2. Frequency of direct and indirect species interactions and their time delays.",
+          "visual_notes": "One table with sections A-E, grouped overlapping/non-overlapping phenophase headers and a footnote.",
+          "uncertain": false
+        }
+      ],
+      "expected_counts": {
+        "figures": 4,
+        "tables": 2
+      },
+      "sample_cells": [
+        {
+          "kind": "table",
+          "number": "2",
+          "page_index": 6,
+          "row_label": "A / From plant to pollinator",
+          "column_label": "Delay between linked species (days)",
+          "expected_text": "8.4"
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_index": 6,
+          "row_label": "A / From pollinator to plant",
+          "column_label": "Delay between linked species (days)",
+          "expected_text": "6.2"
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_index": 6,
+          "row_label": "B / From core",
+          "column_label": "To core",
+          "expected_text": "9"
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_index": 6,
+          "row_label": "B / From core",
+          "column_label": "To tail",
+          "expected_text": "25"
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_index": 6,
+          "row_label": "C / From pollinator to pollinator",
+          "column_label": "Overlapping phenophases / Early-to-late",
+          "expected_text": "1740 (29%)"
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_index": 6,
+          "row_label": "C / From pollinator to pollinator",
+          "column_label": "Non-overlapping phenophases / Late-to-early",
+          "expected_text": "1319 (22%)"
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_index": 6,
+          "row_label": "C / From pollinator to pollinator",
+          "column_label": "Total",
+          "expected_text": "6006"
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_index": 6,
+          "row_label": "C / Total",
+          "column_label": "Total",
+          "expected_text": "11842"
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_index": 6,
+          "row_label": "D / Mean delay",
+          "column_label": "Non-overlapping phenophases / Early-to-late",
+          "expected_text": "31"
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_index": 6,
+          "row_label": "E / From tail",
+          "column_label": "To tail",
+          "expected_text": "40"
+        }
+      ],
+      "render_directory": "artifacts/real-corpus-expanded/source-pages/expanded-ecological-network",
+      "render_dpi": 100,
+      "full_document_caption_scan_page_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "visually_reviewed_page_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "uncertain_objects": [],
+      "content_audit_limit": "All research-object pages visually checked plus 10 independently preselected semantic cells; other cells are not certified.",
+      "sample_cell_indexing": "Semantic section A-E, row label and grouped column label are authoritative; the stacked table sections have different column counts, so a single global numeric column index is deliberately not guessed."
+    },
+    {
+      "id": "expanded-occupancy-response",
+      "pages": 14,
+      "review_level": "inventory_only",
+      "scope": "Complete original publisher PDF, all numbered main-article objects. External supporting files and their textual references are excluded; publisher logos and body citations are not research objects.",
+      "source_sha256": "3959832acf6f229a4f1578d0ff485b8d7191c6bb82372114cba02167047ab0b1",
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Figure 1. Log-likelihood surface displaying the maximum-likelihood estimate (P1) and a saddle point at the boundary.",
+          "visual_notes": "",
+          "uncertain": false
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            4
+          ],
+          "caption_reference": "Figure 2. Simulation results of fitting hierarchical and naïve occupancy models to 5000 data sets from Scenario A1 with 55 sites.",
+          "visual_notes": "",
+          "uncertain": false
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            5
+          ],
+          "caption_reference": "Figure 3. Simulation results of fitting hierarchical and naïve occupancy models to 5000 data sets from Scenario A2 with 55 sites.",
+          "visual_notes": "",
+          "uncertain": false
+        },
+        {
+          "kind": "figure",
+          "number": "4",
+          "page_indices": [
+            7
+          ],
+          "caption_reference": "Figure 4. Beta distributions used to generate detectability in the “abundance” scenarios for the different covariate categories.",
+          "visual_notes": "",
+          "uncertain": false
+        },
+        {
+          "kind": "figure",
+          "number": "5",
+          "page_indices": [
+            9
+          ],
+          "caption_reference": "Figure 5. Simulation results of fitting hierarchical and naïve occupancy models to 5000 data sets from Scenario B2 with 165 sites.",
+          "visual_notes": "",
+          "uncertain": false
+        },
+        {
+          "kind": "figure",
+          "number": "6",
+          "page_indices": [
+            10
+          ],
+          "caption_reference": "Figure 6. Asymptotic bias of the naïve and hierarchical occupancy estimators as a function of heterogeneity in detectability.",
+          "visual_notes": "",
+          "uncertain": false
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Table 1. Simulated scenarios (marked with asterisk * those also tested by WLD).",
+          "visual_notes": "",
+          "uncertain": false
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_indices": [
+            3
+          ],
+          "caption_reference": "Table 2. Counts of different estimation results obtained when fitting hierarchical occupancy models to simulated data from Scenario A1.",
+          "visual_notes": "Two source sections (a) and (b) in one numbered table.",
+          "uncertain": false
+        },
+        {
+          "kind": "table",
+          "number": "3",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Table 3. Mean square error (MSE) for the occupancy estimator in the hierarchical/naïve models, and their ratio, obtained from simulations of (a) Scenario A1 and (b) Scenario A2 (see Table 1 for details).",
+          "visual_notes": "",
+          "uncertain": false
+        },
+        {
+          "kind": "table",
+          "number": "4",
+          "page_indices": [
+            8
+          ],
+          "caption_reference": "Table 4. Mean square error (MSE) for the occupancy estimator in the hierarchical/naïve models, and their ratio, obtained from simulations of three “abundance” scenarios: (a) Scenario B1 from [14], (b) Scenario B2 and (c) Scenario B3.",
+          "visual_notes": "",
+          "uncertain": false
+        }
+      ],
+      "expected_counts": {
+        "figures": 6,
+        "tables": 4
+      },
+      "sample_cells": [],
+      "render_directory": "artifacts/real-corpus-expanded/source-pages/expanded-occupancy-response",
+      "render_dpi": 100,
+      "full_document_caption_scan_page_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "visually_reviewed_page_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "uncertain_objects": [],
+      "content_audit_limit": "Inventory only: type/printed number/physical page/caption heading. No whole-table cell accuracy, full legend fidelity or quantitative crop-quality claim."
+    },
+    {
+      "id": "expanded-scikit-fem",
+      "pages": 4,
+      "review_level": "inventory_only",
+      "scope": "Complete original publisher PDF, all numbered main-article objects. External supporting files and their textual references are excluded; publisher logos and body citations are not research objects.",
+      "source_sha256": "f712cc3b01ceda4fceea956a410688a77cd6e9ecd8394b5aa29c7c0215cbe336",
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            1
+          ],
+          "caption_reference": "Figure 1: (Top left.) A combination of triangular and quadrilateral elements is used to solve the linear elastic contact problem.",
+          "visual_notes": "One composite containing mesh contact, three-dimensional field and three flow-channel panels. Body mention Figure 1 earlier on this page is not a second object.",
+          "uncertain": false
+        }
+      ],
+      "expected_counts": {
+        "figures": 1,
+        "tables": 0
+      },
+      "sample_cells": [],
+      "render_directory": "artifacts/real-corpus-expanded/source-pages/expanded-scikit-fem",
+      "render_dpi": 100,
+      "full_document_caption_scan_page_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "visually_reviewed_page_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "uncertain_objects": [],
+      "content_audit_limit": "Inventory only: type/printed number/physical page/caption heading. No whole-table cell accuracy, full legend fidelity or quantitative crop-quality claim."
+    },
+    {
+      "id": "expanded-antibiotic-transport",
+      "pages": 9,
+      "review_level": "inventory_only",
+      "scope": "Complete original publisher PDF, all numbered main-article objects. External supporting files and their textual references are excluded; publisher logos and body citations are not research objects.",
+      "source_sha256": "bc890b890a6044f0701de877b2e5f1582c577c3b550bbbce39655012ee310788",
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Figure 1. Fleroxacin uptake by Enterobacter aerogenes population.",
+          "visual_notes": "",
+          "uncertain": false
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            3
+          ],
+          "caption_reference": "Figure 2. Fleroxacin uptake by individual Enterobacter aerogenes.",
+          "visual_notes": "",
+          "uncertain": false
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            4
+          ],
+          "caption_reference": "Figure 3. Individual bacteria microspectro-fluorescence measurement.",
+          "visual_notes": "",
+          "uncertain": false
+        },
+        {
+          "kind": "figure",
+          "number": "4",
+          "page_indices": [
+            5
+          ],
+          "caption_reference": "Figure 4. Fluorescence intensity of Fleroxacin from Enterobacter aerogenes bacteria.",
+          "visual_notes": "Separate left-column figure; not merged with right-column Figure 5.",
+          "uncertain": false
+        },
+        {
+          "kind": "figure",
+          "number": "5",
+          "page_indices": [
+            5
+          ],
+          "caption_reference": "Figure 5. Comparison of fluorescence intensity and concentration of Fleroxacin in individual bacteria and lysated bacteria.",
+          "visual_notes": "Separate right-column A/B figure.",
+          "uncertain": false
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Table 1. Major characteristics of bacterial strains and MIC values for fluoroquinolones.",
+          "visual_notes": "",
+          "uncertain": false
+        }
+      ],
+      "expected_counts": {
+        "figures": 5,
+        "tables": 1
+      },
+      "sample_cells": [],
+      "render_directory": "artifacts/real-corpus-expanded/source-pages/expanded-antibiotic-transport",
+      "render_dpi": 100,
+      "full_document_caption_scan_page_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "visually_reviewed_page_indices": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "uncertain_objects": [],
+      "content_audit_limit": "Inventory only: type/printed number/physical page/caption heading. No whole-table cell accuracy, full legend fidelity or quantitative crop-quality claim."
+    },
+    {
+      "id": "expanded-cellfit",
+      "pages": 15,
+      "review_level": "deep_review",
+      "scope": "Complete original publisher PDF, all numbered main-article objects. External supporting files and their textual references are excluded; publisher logos and body citations are not research objects.",
+      "source_sha256": "1693b50cdf811ee6bdaabb60fd0a26d1a807c310c737a4b0a8f0b5322aaf115a",
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Figure 1. A synthetic planar aggregate and its analysis by CellFIT.",
+          "visual_notes": "Nine labeled A-I panels belong to one published Figure; synthetic tissue in the authors’ real paper is not our generated fixture.",
+          "uncertain": false
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            4
+          ],
+          "caption_reference": "Figure 2. Equilibrium considerations.",
+          "visual_notes": "Four force/geometry diagram panels A-D.",
+          "uncertain": false
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            4
+          ],
+          "caption_reference": "Figure 3. The tension equations are generally overdetermined.",
+          "visual_notes": "Printed Figure even though its layout is a grid containing configuration diagrams and numeric equation/unknown rows. Do not reclassify as Table.",
+          "uncertain": false
+        },
+        {
+          "kind": "figure",
+          "number": "4",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Figure 4. The pressure equations are generally overdetermined.",
+          "visual_notes": "Another printed Figure with tabular structure and diagrams; count by source Figure label.",
+          "uncertain": false
+        },
+        {
+          "kind": "figure",
+          "number": "5",
+          "page_indices": [
+            10
+          ],
+          "caption_reference": "Figure 5. CellFIT analysis of cells near the amnioserosa/lateral epidermis boundary during early dorsal closure in a living Drosophila embryo, as imaged in (A) and with inferred Standard Tensions and Pressures illustrated in (B) according to the color bars.",
+          "visual_notes": "Whole A-D composite includes fluorescence micrograph, inferred field and error-bar plots.",
+          "uncertain": false
+        },
+        {
+          "kind": "figure",
+          "number": "6",
+          "page_indices": [
+            11
+          ],
+          "caption_reference": "Figure 6. CellFIT analysis of a wing imaginal disc from a living Drosophila larva.",
+          "visual_notes": "One composite of tissue force field and ordered error-bar plot.",
+          "uncertain": false
+        },
+        {
+          "kind": "figure",
+          "number": "7",
+          "page_indices": [
+            12
+          ],
+          "caption_reference": "Figure 7. CellFIT analysis of an image of a dragonfly wing, published as Fig. 162 in Thompson’s On Growth and Form.",
+          "visual_notes": "Published Figure 7 with three panels. The reference to historical Fig. 162 is not another object in this PDF.",
+          "uncertain": false
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            8
+          ],
+          "caption_reference": "Table 1. Normalized Tension and Pressure Errors.",
+          "visual_notes": "One table rotated 90 degrees relative to the page. Five method rows and eight numeric leaf columns under four noise groups; percentages and ± are meaningful.",
+          "uncertain": false
+        }
+      ],
+      "expected_counts": {
+        "figures": 7,
+        "tables": 1
+      },
+      "sample_cells": [
+        {
+          "kind": "table",
+          "number": "1",
+          "page_index": 8,
+          "row_label": "CellFIT – polyarcs",
+          "column_label": "No Noise / normalized tension error",
+          "expected_text": "0.7",
+          "data_row_index": 0,
+          "column_index": 1
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_index": 8,
+          "row_label": "CellFIT – polyarcs",
+          "column_label": "No Noise / normalized pressure error",
+          "expected_text": "12.5",
+          "data_row_index": 0,
+          "column_index": 2
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_index": 8,
+          "row_label": "CellFIT – polyarcs",
+          "column_label": "Noise 1 / normalized tension error",
+          "expected_text": "3.5±0.7",
+          "data_row_index": 0,
+          "column_index": 3
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_index": 8,
+          "row_label": "CellFIT – polyarcs",
+          "column_label": "Noise 5 / normalized pressure error",
+          "expected_text": "23.5±5.2",
+          "data_row_index": 0,
+          "column_index": 8
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_index": 8,
+          "row_label": "CellFIT – polyarcs, short edges removed",
+          "column_label": "No Noise / normalized pressure error",
+          "expected_text": "0.3",
+          "data_row_index": 1,
+          "column_index": 2
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_index": 8,
+          "row_label": "CellFIT – polyarcs, short edges removed",
+          "column_label": "Noise 2 / normalized tension error",
+          "expected_text": "7.3±1.3",
+          "data_row_index": 1,
+          "column_index": 5
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_index": 8,
+          "row_label": "CellFIT – angles from closest segment",
+          "column_label": "Noise 1 / normalized pressure error",
+          "expected_text": "13.7±0.9",
+          "data_row_index": 2,
+          "column_index": 4
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_index": 8,
+          "row_label": "CellFIT – angles from minimal polygons",
+          "column_label": "Noise 5 / normalized tension error",
+          "expected_text": "31.7±2.5",
+          "data_row_index": 3,
+          "column_index": 7
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_index": 8,
+          "row_label": "Bayesian – minimal polygons",
+          "column_label": "No Noise / normalized pressure error",
+          "expected_text": "92.9",
+          "data_row_index": 4,
+          "column_index": 2
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_index": 8,
+          "row_label": "Bayesian – minimal polygons",
+          "column_label": "Noise 5 / normalized pressure error",
+          "expected_text": "102±3.0",
+          "data_row_index": 4,
+          "column_index": 8
+        }
+      ],
+      "render_directory": "artifacts/real-corpus-expanded/source-pages/expanded-cellfit",
+      "render_dpi": 100,
+      "full_document_caption_scan_page_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "visually_reviewed_page_indices": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        11,
+        12
+      ],
+      "uncertain_objects": [],
+      "content_audit_limit": "All research-object pages visually checked plus 10 independently preselected semantic cells; other cells are not certified.",
+      "extra_visual_render": "artifacts/real-corpus-expanded/source-pages/expanded-cellfit/page-09-reading-rotation90.png",
+      "sample_cell_indexing": "Zero-based data row after visually orienting table for reading; column 0 is Method, columns 1-8 are the two measures in No Noise/Noise 1/Noise 2/Noise 5 order. ± must not be silently replaced by another operator."
+    },
+    {
+      "id": "expanded-strobe",
+      "pages": 5,
+      "review_level": "inventory_only",
+      "scope": "Complete original publisher PDF, all numbered main-article objects. External supporting files and their textual references are excluded; publisher logos and body citations are not research objects.",
+      "source_sha256": "5969e378c7492e254a97911ceea84db2a0f34aef2680dd261a57c182d292cf8b",
+      "objects": [
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Table 1. The STROBE Statement—Checklist of Items That Should Be Addressed in Reports of Observational Studies",
+          "visual_notes": "Full-page table on physical PDF page 3 (printed page 1625). It does not continue onto page 4.",
+          "uncertain": false
+        }
+      ],
+      "expected_counts": {
+        "figures": 0,
+        "tables": 1
+      },
+      "sample_cells": [],
+      "render_directory": "artifacts/real-corpus-expanded/source-pages/expanded-strobe",
+      "render_dpi": 100,
+      "full_document_caption_scan_page_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "visually_reviewed_page_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "uncertain_objects": [],
+      "content_audit_limit": "Inventory only: type/printed number/physical page/caption heading. No whole-table cell accuracy, full legend fidelity or quantitative crop-quality claim."
+    },
+    {
+      "id": "expanded-damask-python",
+      "pages": 4,
+      "review_level": "inventory_only",
+      "scope": "Complete four-page paper and references has zero research figures/tables. Repeated JOSS branding and metadata sidebar are excluded.",
+      "source_sha256": "11d41887d1b3084da9433fa450e753c608c99c827cfc13f431366f394eb0aa87",
+      "objects": [],
+      "expected_counts": {
+        "figures": 0,
+        "tables": 0
+      },
+      "sample_cells": [],
+      "render_directory": "artifacts/real-corpus-expanded/source-pages/expanded-damask-python",
+      "render_dpi": 100,
+      "full_document_caption_scan_page_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "visually_reviewed_page_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "uncertain_objects": [],
+      "content_audit_limit": "Inventory only: type/printed number/physical page/caption heading. No whole-table cell accuracy, full legend fidelity or quantitative crop-quality claim."
+    }
+  ],
+  "summary": {
+    "papers": 7,
+    "pages": 60,
+    "deep_review": 2,
+    "inventory_only": 5,
+    "figures": 23,
+    "tables": 9,
+    "preselected_sample_cells": 20
+  }
+}

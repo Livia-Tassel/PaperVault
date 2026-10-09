@@ -1,0 +1,3615 @@
+{
+  "passed": true,
+  "run_id": "20261009T135135Z-1d029232",
+  "started_at_utc": "2026-10-09T13:51:35.706961+00:00",
+  "work_directory": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T135135Z-1d029232",
+  "artifacts": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232",
+  "backend": "D:\\project\\PaperVault\\build\\backend-dist\\papervault-backend\\papervault-backend.exe",
+  "sources": [
+    {
+      "id": "ml-simcse-emnlp2021",
+      "title": "SimCSE: Simple Contrastive Learning of Sentence Embeddings",
+      "authors_citation": "Tianyu Gao, Xingcheng Yao, Danqi Chen (2021), EMNLP, pp.6894-6910.",
+      "source_url": "https://aclanthology.org/2021.emnlp-main.552/",
+      "pdf_url": "https://aclanthology.org/2021.emnlp-main.552.pdf",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+      "license_evidence": "Official ACL publisher page and ACL policy: all ACL materials published in or after 2016 are CC BY 4.0. Official publisher PDF, not an arXiv substitute.",
+      "layout_notes": "Longer two-column paper, contrastive-loss equations, multi-panel plots and appendices with benchmark tables.",
+      "review_level": "inventory_only",
+      "local_path": "D:\\project\\PaperVault\\.test-data\\external\\expanded-corpus\\ml-simcse-emnlp2021.pdf",
+      "sha256": "b6bb8b5d1356095a02aae8e5e41265fde03f8f02101972e338bad0b7715f12fc",
+      "pages": 17,
+      "bytes": 1670753,
+      "final_download_url": "https://aclanthology.org/2021.emnlp-main.552.pdf",
+      "downloaded_at_utc": "2026-10-09T12:55:18.182223+00:00",
+      "manifest": "D:\\project\\PaperVault\\tests\\corpus\\expanded\\sources-ml.json",
+      "manifest_sha256": "563c32720e7ea88588c5816fec2c9adac206edeb5129d76566a621a301f84e02"
+    }
+  ],
+  "backend_origin": "explicit_frozen_executable",
+  "command": "D:\\project\\PaperVault\\.venv\\Scripts\\python.exe scripts\\test_real_corpus.py --manifest tests\\corpus\\expanded\\sources-ml.json --source-id ml-simcse-emnlp2021 --backend build\\backend-dist\\papervault-backend\\papervault-backend.exe --expect-version 0.2.2 --expect-sha256 B5E1ECE230AB2EC1183057AB1F0050E6899947632897724FEBB117EEAA51755F --report artifacts\\expanded-v022\\frozen-report.json --dpi 300",
+  "papers": [
+    {
+      "source": {
+        "id": "ml-simcse-emnlp2021",
+        "title": "SimCSE: Simple Contrastive Learning of Sentence Embeddings",
+        "authors_citation": "Tianyu Gao, Xingcheng Yao, Danqi Chen (2021), EMNLP, pp.6894-6910.",
+        "source_url": "https://aclanthology.org/2021.emnlp-main.552/",
+        "pdf_url": "https://aclanthology.org/2021.emnlp-main.552.pdf",
+        "license": "CC-BY-4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+        "license_evidence": "Official ACL publisher page and ACL policy: all ACL materials published in or after 2016 are CC BY 4.0. Official publisher PDF, not an arXiv substitute.",
+        "layout_notes": "Longer two-column paper, contrastive-loss equations, multi-panel plots and appendices with benchmark tables.",
+        "review_level": "inventory_only",
+        "local_path": "D:\\project\\PaperVault\\.test-data\\external\\expanded-corpus\\ml-simcse-emnlp2021.pdf",
+        "sha256": "b6bb8b5d1356095a02aae8e5e41265fde03f8f02101972e338bad0b7715f12fc",
+        "pages": 17,
+        "bytes": 1670753,
+        "final_download_url": "https://aclanthology.org/2021.emnlp-main.552.pdf",
+        "downloaded_at_utc": "2026-10-09T12:55:18.182223+00:00",
+        "manifest": "D:\\project\\PaperVault\\tests\\corpus\\expanded\\sources-ml.json",
+        "manifest_sha256": "563c32720e7ea88588c5816fec2c9adac206edeb5129d76566a621a301f84e02"
+      },
+      "passed": true,
+      "errors": [],
+      "resources": [
+        {
+          "id": "d2833717-c541-4455-b1c5-00ab56f76483",
+          "kind": "figure",
+          "caption": "Figure 1: (a) Unsupervised SimCSE predicts the input sentence itself from in-batch negatives, with different hidden dropout masks applied. (b) Supervised SimCSE leverages the NLI datasets and takes the entailment (premisehypothesis) pairs as positives, and contradiction pairs as well as other in-batch instances as negatives.",
+          "locations": [
+            {
+              "page_index": 1,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                73.81372040107266,
+                624.2834376183372,
+                520.6239361297812,
+                766.3185904700853
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 2,
+                "bbox": {
+                  "l": 73.81372040107266,
+                  "t": 766.3185904700853,
+                  "r": 520.6239361297812,
+                  "b": 624.2834376183372,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\d2833717-c541-4455-b1c5-00ab56f76483\\png-300.png",
+              "bytes": 216194,
+              "sha256": "8b4a9910acf0657da14d3a8f6aa430ce53788ec56c3402a37d0a02446f0bb50b",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 1861,
+                "height": 591
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\d2833717-c541-4455-b1c5-00ab56f76483\\segment_1.png",
+              "bytes": 93635,
+              "sha256": "af510f060825d4c63e4249ba0a1bdcee23b8c38c39fb40bc31b3eec57276479c",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 931,
+                "height": 295
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\d2833717-c541-4455-b1c5-00ab56f76483\\thumbnail.png",
+              "bytes": 51537,
+              "sha256": "865a69c9ee45b5cf28263fa41a683e1f044ef602a8a74ec9bf1ea38e36672255",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 512,
+                "height": 162
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\d2833717-c541-4455-b1c5-00ab56f76483\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Figure 1: (a) Unsupervised SimCSE predicts the input sentence itself from in-batch negatives, with different hidden dropout masks applied. (b) Supervised SimCSE leverages the NLI datasets and takes the entailment (premisehypothesis) pairs as positives, and contradiction pairs as well as other in-batch instances as negatives.",
+            "resource_id": "d2833717-c541-4455-b1c5-00ab56f76483",
+            "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+            "location": {
+              "page_index": 1,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                73.81372040107266,
+                624.2834376183372,
+                520.6239361297812,
+                766.3185904700853
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 2,
+                "bbox": {
+                  "l": 73.81372040107266,
+                  "t": 766.3185904700853,
+                  "r": 520.6239361297812,
+                  "b": 624.2834376183372,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "aec9cfb8-c21a-4c6f-89bf-a40392d19fce",
+          "kind": "table",
+          "caption": "Table 1: Comparison of data augmentations on STS-B development set (Spearman's correlation). Crop k%: keep 100-k% of the length; word deletion k%: delete k% words; Synonym replacement: use nlpaug (Ma, 2019) to randomly replace one word with its synonym; MLM k%: use BERTbase to replace k% of words.",
+          "locations": [
+            {
+              "page_index": 2,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                318.0506122772421,
+                637.6080668828606,
+                509.8935786440037,
+                771.8261945247876
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 3,
+                "bbox": {
+                  "l": 318.0506122772421,
+                  "t": 771.8261945247876,
+                  "r": 509.89357864400364,
+                  "b": 637.6080668828606,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\aec9cfb8-c21a-4c6f-89bf-a40392d19fce\\png-300.png",
+              "bytes": 75779,
+              "sha256": "a9d4a8a73247fa395f048710eeff6da7deaf4f9236c47d77ced8b3afe628174a",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 799,
+                "height": 559
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\aec9cfb8-c21a-4c6f-89bf-a40392d19fce\\csv.csv",
+              "bytes": 227,
+              "sha256": "2da4ad11d63c632122ccbed19af449a9e8705b12ff802240594fa255ad03dc14",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 10,
+                "columns": 4,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\aec9cfb8-c21a-4c6f-89bf-a40392d19fce\\html.html",
+              "bytes": 1003,
+              "sha256": "70fa43359280682436a0ec881148343ac042862b0430bdc160fdd72192084270",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 1003
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\aec9cfb8-c21a-4c6f-89bf-a40392d19fce\\segment_1.png",
+              "bytes": 32483,
+              "sha256": "539386e4d666c8e4cd17ed257687a73d6f6aa85051cc7bf01f43c54ac5122b92",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 400,
+                "height": 279
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\aec9cfb8-c21a-4c6f-89bf-a40392d19fce\\thumbnail.png",
+              "bytes": 32483,
+              "sha256": "539386e4d666c8e4cd17ed257687a73d6f6aa85051cc7bf01f43c54ac5122b92",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 400,
+                "height": 279
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\aec9cfb8-c21a-4c6f-89bf-a40392d19fce\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table 1: Comparison of data augmentations on STS-B development set (Spearman's correlation). Crop k%: keep 100-k% of the length; word deletion k%: delete k% words; Synonym replacement: use nlpaug (Ma, 2019) to randomly replace one word with its synonym; MLM k%: use BERTbase to replace k% of words.",
+            "resource_id": "aec9cfb8-c21a-4c6f-89bf-a40392d19fce",
+            "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+            "location": {
+              "page_index": 2,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                318.0506122772421,
+                637.6080668828606,
+                509.8935786440037,
+                771.8261945247876
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 3,
+                "bbox": {
+                  "l": 318.0506122772421,
+                  "t": 771.8261945247876,
+                  "r": 509.89357864400364,
+                  "b": 637.6080668828606,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "1bd18964-b261-4f28-9d24-fc2903509661",
+          "kind": "table",
+          "caption": "Table 2: Comparison of different unsupervised objectives (STS-B development set, Spearman's correlation). The two columns denote whether we use one encoder or two independent encoders. Next 3 sentences: randomly sample one from the next 3 sentences. Delete one word: delete one word randomly (see Table 1).",
+          "locations": [
+            {
+              "page_index": 2,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                324.90055744964803,
+                473.9976690532476,
+                503.0932557360758,
+                540.1498838650302
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 3,
+                "bbox": {
+                  "l": 324.90055744964803,
+                  "t": 540.1498838650302,
+                  "r": 503.0932557360758,
+                  "b": 473.9976690532476,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\1bd18964-b261-4f28-9d24-fc2903509661\\png-300.png",
+              "bytes": 53006,
+              "sha256": "92c1267ce8868afa6606917f2e1d63b48c9e064992bda774e35139ba4060bd00",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 742,
+                "height": 275
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\1bd18964-b261-4f28-9d24-fc2903509661\\csv.csv",
+              "bytes": 155,
+              "sha256": "c254ced3abb150aa07bbd9aa8d1fa36cfedbdba0508590a06f3d31fae8877dd0",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 5,
+                "columns": 3,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\1bd18964-b261-4f28-9d24-fc2903509661\\html.html",
+              "bytes": 697,
+              "sha256": "75a072f340d158e2e6aa2dbdb82ca40da67594bdd4932d4a0e747446b673fb08",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 694
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\1bd18964-b261-4f28-9d24-fc2903509661\\segment_1.png",
+              "bytes": 19884,
+              "sha256": "57217b65593c00df2417105bb02f3818e41af50aad12514c3d26dd48d5bfaa9c",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 371,
+                "height": 137
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\1bd18964-b261-4f28-9d24-fc2903509661\\thumbnail.png",
+              "bytes": 19884,
+              "sha256": "57217b65593c00df2417105bb02f3818e41af50aad12514c3d26dd48d5bfaa9c",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 371,
+                "height": 137
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\1bd18964-b261-4f28-9d24-fc2903509661\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table 2: Comparison of different unsupervised objectives (STS-B development set, Spearman's correlation). The two columns denote whether we use one encoder or two independent encoders. Next 3 sentences: randomly sample one from the next 3 sentences. Delete one word: delete one word randomly (see Table 1).",
+            "resource_id": "1bd18964-b261-4f28-9d24-fc2903509661",
+            "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+            "location": {
+              "page_index": 2,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                324.90055744964803,
+                473.9976690532476,
+                503.0932557360758,
+                540.1498838650302
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 3,
+                "bbox": {
+                  "l": 324.90055744964803,
+                  "t": 540.1498838650302,
+                  "r": 503.0932557360758,
+                  "b": 473.9976690532476,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "21374e93-2c07-4aea-a612-fb4c794cdcdc",
+          "kind": "table",
+          "caption": "Table 3: Effects of different dropout probabilities p on the STS-B development set (Spearman's correlation, BERTbase). Fixed 0.1: default 0.1 dropout rate but apply the same dropout mask on both xi and x+i .",
+          "locations": [
+            {
+              "page_index": 3,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                92.22206411722682,
+                711.9940081352179,
+                265.3165624166399,
+                772.1973771057673
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 4,
+                "bbox": {
+                  "l": 92.22206411722682,
+                  "t": 772.1973771057673,
+                  "r": 265.3165624166399,
+                  "b": 711.9940081352179,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\21374e93-2c07-4aea-a612-fb4c794cdcdc\\png-300.png",
+              "bytes": 33583,
+              "sha256": "6ffaef114f56a0a7e3274e3ffd30a3318ebb30654b0d11ef9d1c89034c8a3fc0",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 721,
+                "height": 250
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\21374e93-2c07-4aea-a612-fb4c794cdcdc\\csv.csv",
+              "bytes": 104,
+              "sha256": "3d1e5145cd4a2676f4b15d7c66ac5f534213097d1022db754f02e871c95be390",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 4,
+                "columns": 5,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\21374e93-2c07-4aea-a612-fb4c794cdcdc\\html.html",
+              "bytes": 581,
+              "sha256": "3fd8142bf231953589737678befa9035d1192c94a1f1c905f2d9ef9c7f6c06c1",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 581
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\21374e93-2c07-4aea-a612-fb4c794cdcdc\\segment_1.png",
+              "bytes": 13898,
+              "sha256": "897bba35e337746331074f6e1f3230d613246411b85b349d99997ecd86d9c6f4",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 360,
+                "height": 124
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\21374e93-2c07-4aea-a612-fb4c794cdcdc\\thumbnail.png",
+              "bytes": 13898,
+              "sha256": "897bba35e337746331074f6e1f3230d613246411b85b349d99997ecd86d9c6f4",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 360,
+                "height": 124
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\21374e93-2c07-4aea-a612-fb4c794cdcdc\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table 3: Effects of different dropout probabilities p on the STS-B development set (Spearman's correlation, BERTbase). Fixed 0.1: default 0.1 dropout rate but apply the same dropout mask on both xi and x+i .",
+            "resource_id": "21374e93-2c07-4aea-a612-fb4c794cdcdc",
+            "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+            "location": {
+              "page_index": 3,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                92.22206411722682,
+                711.9940081352179,
+                265.3165624166399,
+                772.1973771057673
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 4,
+                "bbox": {
+                  "l": 92.22206411722682,
+                  "t": 772.1973771057673,
+                  "r": 265.3165624166399,
+                  "b": 711.9940081352179,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "73713e1e-84f8-431d-960b-e62b4d9c007e",
+          "kind": "figure",
+          "caption": "Figure 2: ℓalign-ℓuniform plot for unsupervised SimCSE, \"no dropout\", \"fixed 0.1\", and \"delete one word\". We visualize checkpoints every 10 training steps and the arrows indicate the training direction. For both ℓalign and ℓuniform, lower numbers are better.",
+          "locations": [
+            {
+              "page_index": 3,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                306.92961662097906,
+                631.6957229251816,
+                520.5715096587111,
+                768.2226080516172
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 4,
+                "bbox": {
+                  "l": 306.92961662097906,
+                  "t": 768.2226080516172,
+                  "r": 520.5715096587111,
+                  "b": 631.6957229251816,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\73713e1e-84f8-431d-960b-e62b4d9c007e\\png-300.png",
+              "bytes": 76198,
+              "sha256": "a228f369b45e3c5127eaf522a49bbe752914889ebe3f22351aa2ef692ca7ca37",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 890,
+                "height": 568
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\73713e1e-84f8-431d-960b-e62b4d9c007e\\segment_1.png",
+              "bytes": 39444,
+              "sha256": "fd353447591b317959c1e97dbb7e25bc2313865856c3cca07dd5dcacb65e9ef6",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 445,
+                "height": 283
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\73713e1e-84f8-431d-960b-e62b4d9c007e\\thumbnail.png",
+              "bytes": 39444,
+              "sha256": "fd353447591b317959c1e97dbb7e25bc2313865856c3cca07dd5dcacb65e9ef6",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 445,
+                "height": 283
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\73713e1e-84f8-431d-960b-e62b4d9c007e\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Figure 2: ℓalign-ℓuniform plot for unsupervised SimCSE, \"no dropout\", \"fixed 0.1\", and \"delete one word\". We visualize checkpoints every 10 training steps and the arrows indicate the training direction. For both ℓalign and ℓuniform, lower numbers are better.",
+            "resource_id": "73713e1e-84f8-431d-960b-e62b4d9c007e",
+            "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+            "location": {
+              "page_index": 3,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                306.92961662097906,
+                631.6957229251816,
+                520.5715096587111,
+                768.2226080516172
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 4,
+                "bbox": {
+                  "l": 306.92961662097906,
+                  "t": 768.2226080516172,
+                  "r": 520.5715096587111,
+                  "b": 631.6957229251816,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "4c0e918a-4969-479f-808e-1fe86d37a27e",
+          "kind": "table",
+          "caption": "Table 4: Comparisons of different supervised datasets as positive pairs. Results are Spearman's correlations on the STS-B development set using BERTbase (we use the same hyperparameters as the final SimCSE model). Numbers in brackets denote the # of pairs. Sample: subsampling 134k positive pairs for a fair comparison among datasets; full: using the full dataset. In the last block, we use entailment pairs as positives and contradiction pairs as hard negatives (our final model).",
+          "locations": [
+            {
+              "page_index": 4,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                326.7707498830501,
+                606.6877904704404,
+                500.68752080459086,
+                771.487737770443
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 5,
+                "bbox": {
+                  "l": 326.7707498830501,
+                  "t": 771.487737770443,
+                  "r": 500.6875208045908,
+                  "b": 606.6877904704404,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\4c0e918a-4969-479f-808e-1fe86d37a27e\\png-300.png",
+              "bytes": 105556,
+              "sha256": "02fc3023799d1de892337cb1739e7a96263c74c2955a4d700b53d01458132aba",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 724,
+                "height": 686
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\4c0e918a-4969-479f-808e-1fe86d37a27e\\csv.csv",
+              "bytes": 312,
+              "sha256": "06558453039c31283e93372cef471b3cbd2fa929bfc67185437f330bee41edf0",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 11,
+                "columns": 3,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\4c0e918a-4969-479f-808e-1fe86d37a27e\\html.html",
+              "bytes": 1219,
+              "sha256": "26fcd46562bd338cce408efc5c9da5f66b0487cc1d082be0af9748e5e16046b9",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 1219
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\4c0e918a-4969-479f-808e-1fe86d37a27e\\segment_1.png",
+              "bytes": 43293,
+              "sha256": "d4449f022d0798aad791be48905e769c54bb204aad2a1fa798892139897fe15b",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 362,
+                "height": 343
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\4c0e918a-4969-479f-808e-1fe86d37a27e\\thumbnail.png",
+              "bytes": 43293,
+              "sha256": "d4449f022d0798aad791be48905e769c54bb204aad2a1fa798892139897fe15b",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 362,
+                "height": 343
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\4c0e918a-4969-479f-808e-1fe86d37a27e\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table 4: Comparisons of different supervised datasets as positive pairs. Results are Spearman's correlations on the STS-B development set using BERTbase (we use the same hyperparameters as the final SimCSE model). Numbers in brackets denote the # of pairs. Sample: subsampling 134k positive pairs for a fair comparison among datasets; full: using the full dataset. In the last block, we use entailment pairs as positives and contradiction pairs as hard negatives (our final model).",
+            "resource_id": "4c0e918a-4969-479f-808e-1fe86d37a27e",
+            "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+            "location": {
+              "page_index": 4,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                326.7707498830501,
+                606.6877904704404,
+                500.68752080459086,
+                771.487737770443
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 5,
+                "bbox": {
+                  "l": 326.7707498830501,
+                  "t": 771.487737770443,
+                  "r": 500.6875208045908,
+                  "b": 606.6877904704404,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "91ec1660-98ab-43f3-bc92-4b1d7645d7a5",
+          "kind": "table",
+          "caption": "Table 5: Sentence embedding performance on STS tasks (Spearman's correlation, \"all\" setting). We highlight the highest numbers among models with the same pre-trained encoder. ♣: results from Reimers and Gurevych (2019); ♥: results from Zhang et al. (2020); all other results are reproduced or reevaluated by ourselves. For BERT-flow (Li et al., 2020) and whitening (Su et al., 2021), we only report the \"NLI\" setting (see Table C.1).",
+          "locations": [
+            {
+              "page_index": 6,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                88.16465912310709,
+                459.24715492556606,
+                506.5889430972105,
+                771.5028419981206
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 7,
+                "bbox": {
+                  "l": 88.16465912310709,
+                  "t": 771.5028419981206,
+                  "r": 506.5889430972105,
+                  "b": 459.24715492556606,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\91ec1660-98ab-43f3-bc92-4b1d7645d7a5\\png-300.png",
+              "bytes": 507950,
+              "sha256": "c1b45a73c5d332fd6b671ef9d7e0b97f8f13c88af9fb2022dc971b4c4e4db75b",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 1743,
+                "height": 1300
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\91ec1660-98ab-43f3-bc92-4b1d7645d7a5\\csv.csv",
+              "bytes": 1710,
+              "sha256": "506c65af8bda2962e5c787d0eff78385db4939170de33c8828bfc4529bae73de",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 26,
+                "columns": 9,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\91ec1660-98ab-43f3-bc92-4b1d7645d7a5\\html.html",
+              "bytes": 4205,
+              "sha256": "79080314c9b3fa6edff1bf3458a438db57270304d2883c39ccbdffecb807b4a5",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 4177
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\91ec1660-98ab-43f3-bc92-4b1d7645d7a5\\segment_1.png",
+              "bytes": 220684,
+              "sha256": "8c615ddf18da02e7c3cb80669a5f5e1c73742531bafa342664cd6b7ee3fd67d2",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 872,
+                "height": 650
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\91ec1660-98ab-43f3-bc92-4b1d7645d7a5\\thumbnail.png",
+              "bytes": 147026,
+              "sha256": "40642bd5cb3d94b935faee7e6914ec75c3e4b1a2dc991d54b6b870d62e529e48",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 512,
+                "height": 382
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\91ec1660-98ab-43f3-bc92-4b1d7645d7a5\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table 5: Sentence embedding performance on STS tasks (Spearman's correlation, \"all\" setting). We highlight the highest numbers among models with the same pre-trained encoder. ♣: results from Reimers and Gurevych (2019); ♥: results from Zhang et al. (2020); all other results are reproduced or reevaluated by ourselves. For BERT-flow (Li et al., 2020) and whitening (Su et al., 2021), we only report the \"NLI\" setting (see Table C.1).",
+            "resource_id": "91ec1660-98ab-43f3-bc92-4b1d7645d7a5",
+            "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+            "location": {
+              "page_index": 6,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                88.16465912310709,
+                459.24715492556606,
+                506.5889430972105,
+                771.5028419981206
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 7,
+                "bbox": {
+                  "l": 88.16465912310709,
+                  "t": 771.5028419981206,
+                  "r": 506.5889430972105,
+                  "b": 459.24715492556606,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "7473c403-de62-41f7-bf7c-ae6eb5c2fbb2",
+          "kind": "table",
+          "caption": "Table 6: Ablation studies of different pooling methods in unsupervised and supervised SimCSE. [CLS] w/ MLP (train): using MLP on [CLS] during training but removing it during testing. The results are based on the development set of STS-B using BERTbase.",
+          "locations": [
+            {
+              "page_index": 7,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                92.1638539700604,
+                684.1129311834775,
+                265.0627512395462,
+                772.1740265800494
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 8,
+                "bbox": {
+                  "l": 92.1638539700604,
+                  "t": 772.1740265800494,
+                  "r": 265.0627512395462,
+                  "b": 684.1129311834775,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\7473c403-de62-41f7-bf7c-ae6eb5c2fbb2\\png-300.png",
+              "bytes": 51489,
+              "sha256": "523f1279c5768067a52fd176f0938f945e1d76ea7f5a4929c3ea0813ad1b3cfe",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 720,
+                "height": 366
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\7473c403-de62-41f7-bf7c-ae6eb5c2fbb2\\csv.csv",
+              "bytes": 122,
+              "sha256": "e1bd7f5ab8675d3a3929abdbacb04032740775891ab514e81f85a6c8317e0477",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 6,
+                "columns": 3,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\7473c403-de62-41f7-bf7c-ae6eb5c2fbb2\\html.html",
+              "bytes": 639,
+              "sha256": "8736a9a41bc54dc52a75fbfbfd1721c9b1a3ac4c7d20eb492d8f0f8e4fb3ac88",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 639
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\7473c403-de62-41f7-bf7c-ae6eb5c2fbb2\\segment_1.png",
+              "bytes": 18933,
+              "sha256": "147ecaa1ff08032daca3162e2eacf91a976c9ebe36db2f0446ab2f4be2276d6a",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 360,
+                "height": 182
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\7473c403-de62-41f7-bf7c-ae6eb5c2fbb2\\thumbnail.png",
+              "bytes": 18933,
+              "sha256": "147ecaa1ff08032daca3162e2eacf91a976c9ebe36db2f0446ab2f4be2276d6a",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 360,
+                "height": 182
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\7473c403-de62-41f7-bf7c-ae6eb5c2fbb2\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table 6: Ablation studies of different pooling methods in unsupervised and supervised SimCSE. [CLS] w/ MLP (train): using MLP on [CLS] during training but removing it during testing. The results are based on the development set of STS-B using BERTbase.",
+            "resource_id": "7473c403-de62-41f7-bf7c-ae6eb5c2fbb2",
+            "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+            "location": {
+              "page_index": 7,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                92.1638539700604,
+                684.1129311834775,
+                265.0627512395462,
+                772.1740265800494
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 8,
+                "bbox": {
+                  "l": 92.1638539700604,
+                  "t": 772.1740265800494,
+                  "r": 265.0627512395462,
+                  "b": 684.1129311834775,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "bd72c4e4-4102-4590-b51a-ab68a504d84f",
+          "kind": "table",
+          "caption": "Table 7: STS-B development results with different hard negative policies. \"N/A\": no hard negative.",
+          "locations": [
+            {
+              "page_index": 7,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                70.35660612083281,
+                531.029157839886,
+                287.02441333437923,
+                594.230876200805
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 8,
+                "bbox": {
+                  "l": 70.35660612083281,
+                  "t": 594.230876200805,
+                  "r": 287.02441333437923,
+                  "b": 531.029157839886,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\bd72c4e4-4102-4590-b51a-ab68a504d84f\\png-300.png",
+              "bytes": 37498,
+              "sha256": "7f4dee2a63488536040b124e0d63dae3c58b8dc7ec3d4c9d0d3567aed51b895a",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 902,
+                "height": 263
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\bd72c4e4-4102-4590-b51a-ab68a504d84f\\csv.csv",
+              "bytes": 105,
+              "sha256": "caab80f69a289f50bbe6beda7b414742533e8ed7199132f8d5619cb0df9e1e7c",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 3,
+                "columns": 6,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\bd72c4e4-4102-4590-b51a-ab68a504d84f\\html.html",
+              "bytes": 447,
+              "sha256": "f8d0aaabcfc19cbfa744f21a9149c93f146ea0d65385010e637a454b6109c5d2",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 446
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\bd72c4e4-4102-4590-b51a-ab68a504d84f\\segment_1.png",
+              "bytes": 16581,
+              "sha256": "49c4eff6039ed5c32b0ad7922effc7d9ca346e2eb22fa09ff142050dcad11f89",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 451,
+                "height": 131
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\bd72c4e4-4102-4590-b51a-ab68a504d84f\\thumbnail.png",
+              "bytes": 16581,
+              "sha256": "49c4eff6039ed5c32b0ad7922effc7d9ca346e2eb22fa09ff142050dcad11f89",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 451,
+                "height": 131
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\bd72c4e4-4102-4590-b51a-ab68a504d84f\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table 7: STS-B development results with different hard negative policies. \"N/A\": no hard negative.",
+            "resource_id": "bd72c4e4-4102-4590-b51a-ab68a504d84f",
+            "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+            "location": {
+              "page_index": 7,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                70.35660612083281,
+                531.029157839886,
+                287.02441333437923,
+                594.230876200805
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 8,
+                "bbox": {
+                  "l": 70.35660612083281,
+                  "t": 594.230876200805,
+                  "r": 287.02441333437923,
+                  "b": 531.029157839886,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "4520873a-17e1-4b9f-93c1-2284ef67fe56",
+          "kind": "table",
+          "caption": "Table 8: Retrieved top-3 examples by SBERT and supervised SimCSE from Flickr30k (150k sentences).",
+          "locations": [
+            {
+              "page_index": 8,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                74.83610516808017,
+                641.9883844501559,
+                517.8705100613793,
+                772.0111908002477
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 9,
+                "bbox": {
+                  "l": 74.83610516808017,
+                  "t": 772.0111908002477,
+                  "r": 517.8705100613793,
+                  "b": 641.9883844501559,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\4520873a-17e1-4b9f-93c1-2284ef67fe56\\png-300.png",
+              "bytes": 168299,
+              "sha256": "320c8e2b8c37b6019ca601695ae67affce8305eeb6fdbb8a99422851fc354f3e",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 1846,
+                "height": 541
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\4520873a-17e1-4b9f-93c1-2284ef67fe56\\csv.csv",
+              "bytes": 724,
+              "sha256": "19868dc395a3283c67670d121eb8d39ff364725fb40543bc6050da032d0918c4",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 9,
+                "columns": 3,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\4520873a-17e1-4b9f-93c1-2284ef67fe56\\html.html",
+              "bytes": 1170,
+              "sha256": "15617b77febfc8d66fec566672ed50fe272987ef830e66d00e572de6555f69a5",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 1170
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\4520873a-17e1-4b9f-93c1-2284ef67fe56\\segment_1.png",
+              "bytes": 76126,
+              "sha256": "974e87531009899a378cf6f4575c4e831dd3896a151315b43f70473f3acef879",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 923,
+                "height": 270
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\4520873a-17e1-4b9f-93c1-2284ef67fe56\\thumbnail.png",
+              "bytes": 50918,
+              "sha256": "e1d5b7d8fec114e414f2260d219a63723c9b7c441d35cf9de0cd1140305db423",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 512,
+                "height": 150
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\4520873a-17e1-4b9f-93c1-2284ef67fe56\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table 8: Retrieved top-3 examples by SBERT and supervised SimCSE from Flickr30k (150k sentences).",
+            "resource_id": "4520873a-17e1-4b9f-93c1-2284ef67fe56",
+            "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+            "location": {
+              "page_index": 8,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                74.83610516808017,
+                641.9883844501559,
+                517.8705100613793,
+                772.0111908002477
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 9,
+                "bbox": {
+                  "l": 74.83610516808017,
+                  "t": 772.0111908002477,
+                  "r": 517.8705100613793,
+                  "b": 641.9883844501559,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "0570b1d5-bc9a-4b38-b20f-bac74d24d0f0",
+          "kind": "figure",
+          "caption": "Figure 3: ℓalign-ℓuniform plot of models based on BERTbase. Color of points and numbers in brackets represent average STS performance (Spearman's correlation). Next3Sent: \"next 3 sentences\" from Table 2.",
+          "locations": [
+            {
+              "page_index": 8,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                73.54171236163657,
+                454.4594504012518,
+                282.4454182939977,
+                601.5078642439672
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 9,
+                "bbox": {
+                  "l": 73.54171236163657,
+                  "t": 601.5078642439672,
+                  "r": 282.4454182939977,
+                  "b": 454.4594504012518,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\0570b1d5-bc9a-4b38-b20f-bac74d24d0f0\\png-300.png",
+              "bytes": 109202,
+              "sha256": "08cf5276fb832227b58a6e75d6bd1b98764f386c6e4443815814470f2bc07dc7",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 870,
+                "height": 612
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\0570b1d5-bc9a-4b38-b20f-bac74d24d0f0\\segment_1.png",
+              "bytes": 44631,
+              "sha256": "24c2aaf2a0f677856fa92117b42144fc382596adc068d7d6fb582820fa2067e8",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 435,
+                "height": 306
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\0570b1d5-bc9a-4b38-b20f-bac74d24d0f0\\thumbnail.png",
+              "bytes": 44631,
+              "sha256": "24c2aaf2a0f677856fa92117b42144fc382596adc068d7d6fb582820fa2067e8",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 435,
+                "height": 306
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\0570b1d5-bc9a-4b38-b20f-bac74d24d0f0\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Figure 3: ℓalign-ℓuniform plot of models based on BERTbase. Color of points and numbers in brackets represent average STS performance (Spearman's correlation). Next3Sent: \"next 3 sentences\" from Table 2.",
+            "resource_id": "0570b1d5-bc9a-4b38-b20f-bac74d24d0f0",
+            "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+            "location": {
+              "page_index": 8,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                73.54171236163657,
+                454.4594504012518,
+                282.4454182939977,
+                601.5078642439672
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 9,
+                "bbox": {
+                  "l": 73.54171236163657,
+                  "t": 601.5078642439672,
+                  "r": 282.4454182939977,
+                  "b": 454.4594504012518,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "3cb57400-3ddc-4fe6-8d30-5adc0d6ed1b9",
+          "kind": "table",
+          "caption": "Table A.1: Batch sizes and learning rates for SimCSE.",
+          "locations": [
+            {
+              "page_index": 12,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                72.03050409278613,
+                432.92991478310626,
+                285.1794587603063,
+                498.3310985730096
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 13,
+                "bbox": {
+                  "l": 72.03050409278613,
+                  "t": 498.3310985730096,
+                  "r": 285.1794587603063,
+                  "b": 432.92991478310626,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\3cb57400-3ddc-4fe6-8d30-5adc0d6ed1b9\\png-300.png",
+              "bytes": 36929,
+              "sha256": "3112166636206914c5eb5e560429903762b7a8fd2c2129ead8f83fc4d2e8f27c",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 887,
+                "height": 272
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\3cb57400-3ddc-4fe6-8d30-5adc0d6ed1b9\\csv.csv",
+              "bytes": 166,
+              "sha256": "9f093f28a7964d7b3d27b9080116dbe9ab4d3e0dfdb08046884e7128802651a4",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 5,
+                "columns": 7,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\3cb57400-3ddc-4fe6-8d30-5adc0d6ed1b9\\html.html",
+              "bytes": 606,
+              "sha256": "98d332cc08c732b883ae3bc980bd8a1b5b0c7f2bcbb7bfd888713fca504900ea",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 606
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\3cb57400-3ddc-4fe6-8d30-5adc0d6ed1b9\\segment_1.png",
+              "bytes": 13815,
+              "sha256": "4d07e911eecdc99aa105e6d7e22d427a8d629dcd4f35d1644f2e3b4ba4d23327",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 443,
+                "height": 136
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\3cb57400-3ddc-4fe6-8d30-5adc0d6ed1b9\\thumbnail.png",
+              "bytes": 13815,
+              "sha256": "4d07e911eecdc99aa105e6d7e22d427a8d629dcd4f35d1644f2e3b4ba4d23327",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 443,
+                "height": 136
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\3cb57400-3ddc-4fe6-8d30-5adc0d6ed1b9\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table A.1: Batch sizes and learning rates for SimCSE.",
+            "resource_id": "3cb57400-3ddc-4fe6-8d30-5adc0d6ed1b9",
+            "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+            "location": {
+              "page_index": 12,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                72.03050409278613,
+                432.92991478310626,
+                285.1794587603063,
+                498.3310985730096
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 13,
+                "bbox": {
+                  "l": 72.03050409278613,
+                  "t": 498.3310985730096,
+                  "r": 285.1794587603063,
+                  "b": 432.92991478310626,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "48d34c9a-246d-4b50-940b-0ba7a0774b7b",
+          "kind": "table",
+          "caption": "Table B.1: STS evaluation protocols used in different papers. \"Reg.\": whether an additional regressor is used; \"aggr.\": methods to aggregate different subset results.",
+          "locations": [
+            {
+              "page_index": 12,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                307.2268015587314,
+                646.2458237854148,
+                520.5124384372378,
+                771.7877245145966
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 13,
+                "bbox": {
+                  "l": 307.2268015587314,
+                  "t": 771.7877245145966,
+                  "r": 520.5124384372378,
+                  "b": 646.2458237854148,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\48d34c9a-246d-4b50-940b-0ba7a0774b7b\\png-300.png",
+              "bytes": 123659,
+              "sha256": "0e8b4f03ad9361fd2afb5a43a2935e47ebf254fc64a132b9fd26fcf2c689d38a",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 888,
+                "height": 522
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\48d34c9a-246d-4b50-940b-0ba7a0774b7b\\csv.csv",
+              "bytes": 364,
+              "sha256": "bea6a72b29ff5c69da907e500458841580fc618ed16d214b344232c9de600bcf",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 2,
+                "columns": 4,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\48d34c9a-246d-4b50-940b-0ba7a0774b7b\\html.html",
+              "bytes": 703,
+              "sha256": "9c78b4166bd654fc9a3d0bd8b2b237f1fa4c1b0ea27a54de352732861fea9643",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 699
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\48d34c9a-246d-4b50-940b-0ba7a0774b7b\\segment_1.png",
+              "bytes": 36913,
+              "sha256": "9dd08fcefaa64736d92974bfb23cef2494c8fc8751930c8c46f34a1bae618d63",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 444,
+                "height": 260
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\48d34c9a-246d-4b50-940b-0ba7a0774b7b\\thumbnail.png",
+              "bytes": 36913,
+              "sha256": "9dd08fcefaa64736d92974bfb23cef2494c8fc8751930c8c46f34a1bae618d63",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 444,
+                "height": 260
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\48d34c9a-246d-4b50-940b-0ba7a0774b7b\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table B.1: STS evaluation protocols used in different papers. \"Reg.\": whether an additional regressor is used; \"aggr.\": methods to aggregate different subset results.",
+            "resource_id": "48d34c9a-246d-4b50-940b-0ba7a0774b7b",
+            "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+            "location": {
+              "page_index": 12,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                307.2268015587314,
+                646.2458237854148,
+                520.5124384372378,
+                771.7877245145966
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 13,
+                "bbox": {
+                  "l": 307.2268015587314,
+                  "t": 771.7877245145966,
+                  "r": 520.5124384372378,
+                  "b": 646.2458237854148,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "d5643e64-a209-4f92-90ca-fd08680e50ca",
+          "kind": "table",
+          "caption": "Table B.2: Comparisons of our reproduced results using different evaluation protocols and the original numbers. ♣: results from Reimers and Gurevych (2019); ♠: results from Su et al. (2021); Other results are reproduced by us. From the table we see that SBERT takes the \"all\" evaluation and BERT-whitening takes the \"wmean\" evaluation.",
+          "locations": [
+            {
+              "page_index": 13,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                82.72929139402248,
+                650.0186462641554,
+                512.0138026717013,
+                771.9917155006209
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 14,
+                "bbox": {
+                  "l": 82.72929139402248,
+                  "t": 771.9917155006209,
+                  "r": 512.0138026717013,
+                  "b": 650.0186462641554,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\d5643e64-a209-4f92-90ca-fd08680e50ca\\png-300.png",
+              "bytes": 200242,
+              "sha256": "832f330f763713c75624854650e93aa70289874d5e89041b1026af3484ee8d11",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 1789,
+                "height": 507
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\d5643e64-a209-4f92-90ca-fd08680e50ca\\csv.csv",
+              "bytes": 707,
+              "sha256": "bad96dd7349a5fc38ce2f9cfa42013ff0258b7b566d353756e1294f96b816d49",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 10,
+                "columns": 9,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\d5643e64-a209-4f92-90ca-fd08680e50ca\\html.html",
+              "bytes": 1931,
+              "sha256": "017e9d5d4e4888ee9f0d1eb5e6f5531b33090a17b1b54dd332d6c0f0fa5d4935",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 1921
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\d5643e64-a209-4f92-90ca-fd08680e50ca\\segment_1.png",
+              "bytes": 88485,
+              "sha256": "03b9eeafbaa15fdb51e25f1c8f1d20f70a46ce607709357fd553c9b3b5b77465",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 894,
+                "height": 253
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\d5643e64-a209-4f92-90ca-fd08680e50ca\\thumbnail.png",
+              "bytes": 57620,
+              "sha256": "66049412e5fb8cf93249cc9547bc22258a0683c2009f1c5538071d5b45133e4e",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 512,
+                "height": 145
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\d5643e64-a209-4f92-90ca-fd08680e50ca\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table B.2: Comparisons of our reproduced results using different evaluation protocols and the original numbers. ♣: results from Reimers and Gurevych (2019); ♠: results from Su et al. (2021); Other results are reproduced by us. From the table we see that SBERT takes the \"all\" evaluation and BERT-whitening takes the \"wmean\" evaluation.",
+            "resource_id": "d5643e64-a209-4f92-90ca-fd08680e50ca",
+            "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+            "location": {
+              "page_index": 13,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                82.72929139402248,
+                650.0186462641554,
+                512.0138026717013,
+                771.9917155006209
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 14,
+                "bbox": {
+                  "l": 82.72929139402248,
+                  "t": 771.9917155006209,
+                  "r": 512.0138026717013,
+                  "b": 650.0186462641554,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "97184eee-bd7b-4329-8d3f-fff0ae67a77d",
+          "kind": "table",
+          "caption": "Table B.3: STS results with \"wmean\" setting (Spearman). ♠: from Li et al. (2020); Su et al. (2021).",
+          "locations": [
+            {
+              "page_index": 13,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                89.00659929201267,
+                429.80932031771914,
+                505.68239187478696,
+                588.0611195871892
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 14,
+                "bbox": {
+                  "l": 89.00659929201267,
+                  "t": 588.0611195871892,
+                  "r": 505.68239187478696,
+                  "b": 429.80932031771914,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\97184eee-bd7b-4329-8d3f-fff0ae67a77d\\png-300.png",
+              "bytes": 253563,
+              "sha256": "b6b908f61373679b8b99d80f1cd844fc84fd4610ba956e55c8a2b675b50091cd",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 1736,
+                "height": 659
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\97184eee-bd7b-4329-8d3f-fff0ae67a77d\\csv.csv",
+              "bytes": 927,
+              "sha256": "ca5474d69c3130ee6d33d66a83b90c2f70e8b71530aac20709026e9d23169238",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 13,
+                "columns": 9,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\97184eee-bd7b-4329-8d3f-fff0ae67a77d\\html.html",
+              "bytes": 2144,
+              "sha256": "9978c149272f8fc303cbc6b308e74bee4b9ab752fcd4c7b218dc5fba3ea66cc6",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 2118
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\97184eee-bd7b-4329-8d3f-fff0ae67a77d\\segment_1.png",
+              "bytes": 108777,
+              "sha256": "a776ab8477e73dc36d8ca4a382f61a073cfec836faa590e9335030fd29959f15",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 868,
+                "height": 329
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\97184eee-bd7b-4329-8d3f-fff0ae67a77d\\thumbnail.png",
+              "bytes": 76157,
+              "sha256": "2930f10f06f703ffeae08c69575825decfb6842f59d0a381df1b0af5dde7e285",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 512,
+                "height": 194
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\97184eee-bd7b-4329-8d3f-fff0ae67a77d\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table B.3: STS results with \"wmean\" setting (Spearman). ♠: from Li et al. (2020); Su et al. (2021).",
+            "resource_id": "97184eee-bd7b-4329-8d3f-fff0ae67a77d",
+            "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+            "location": {
+              "page_index": 13,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                89.00659929201267,
+                429.80932031771914,
+                505.68239187478696,
+                588.0611195871892
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 14,
+                "bbox": {
+                  "l": 89.00659929201267,
+                  "t": 588.0611195871892,
+                  "r": 505.68239187478696,
+                  "b": 429.80932031771914,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "d231b13d-0dea-4c4a-a2bd-6748d5996cbf",
+          "kind": "table",
+          "caption": "Table C.1: Comparison of using NLI or target data for postprocessing methods (\"all\", Spearman's correlation).",
+          "locations": [
+            {
+              "page_index": 14,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                92.17629001668635,
+                648.7173331373491,
+                499.80325083237204,
+                771.716421880201
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 15,
+                "bbox": {
+                  "l": 92.17629001668635,
+                  "t": 771.716421880201,
+                  "r": 499.80325083237204,
+                  "b": 648.7173331373491,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\d231b13d-0dea-4c4a-a2bd-6748d5996cbf\\png-300.png",
+              "bytes": 189849,
+              "sha256": "c5474d4853f262d4bef8bff02208f621032bf76bfc5050d759fb14e9d11c56b3",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 1698,
+                "height": 512
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\d231b13d-0dea-4c4a-a2bd-6748d5996cbf\\csv.csv",
+              "bytes": 614,
+              "sha256": "477f0711c3608d49e82eba87e757cafde0db9be6401831d7d08fd753bc24380a",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 9,
+                "columns": 9,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\d231b13d-0dea-4c4a-a2bd-6748d5996cbf\\html.html",
+              "bytes": 1531,
+              "sha256": "1c38fb88985a9b7d84f9d06008149f9922f320d8b0d30f6a122b052871ebd849",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 1531
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\d231b13d-0dea-4c4a-a2bd-6748d5996cbf\\segment_1.png",
+              "bytes": 84664,
+              "sha256": "8ab4525c170fa01522c7d27f9375e15b4adc9b8fabb90904a31b16f5d4df50fe",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 849,
+                "height": 255
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\d231b13d-0dea-4c4a-a2bd-6748d5996cbf\\thumbnail.png",
+              "bytes": 60185,
+              "sha256": "f47ca4be7dab4d58fe49442ad054a1d78fc52fd267dd6b823ec578769aa947ca",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 512,
+                "height": 154
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\d231b13d-0dea-4c4a-a2bd-6748d5996cbf\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table C.1: Comparison of using NLI or target data for postprocessing methods (\"all\", Spearman's correlation).",
+            "resource_id": "d231b13d-0dea-4c4a-a2bd-6748d5996cbf",
+            "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+            "location": {
+              "page_index": 14,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                92.17629001668635,
+                648.7173331373491,
+                499.80325083237204,
+                771.716421880201
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 15,
+                "bbox": {
+                  "l": 92.17629001668635,
+                  "t": 771.716421880201,
+                  "r": 499.80325083237204,
+                  "b": 648.7173331373491,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "b7214a9a-c227-4a20-aa5d-9302a8db98ee",
+          "kind": "table",
+          "caption": "Table D.1: STS-B development results (Spearman's correlation) with different temperatures. \"N/A\": Dot product instead of cosine similarity.",
+          "locations": [
+            {
+              "page_index": 14,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                80.89548506517858,
+                568.5751249466487,
+                276.63885133740723,
+                603.5470265212251
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 15,
+                "bbox": {
+                  "l": 80.89548506517858,
+                  "t": 603.5470265212251,
+                  "r": 276.63885133740723,
+                  "b": 568.5751249466487,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\b7214a9a-c227-4a20-aa5d-9302a8db98ee\\png-300.png",
+              "bytes": 19503,
+              "sha256": "1919592cf18c98a037a8043c6f6508826198bc795fa42b8d9237d67fea26bd03",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 815,
+                "height": 144
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\b7214a9a-c227-4a20-aa5d-9302a8db98ee\\csv.csv",
+              "bytes": 70,
+              "sha256": "c5bba513b4e08189deaca494946679cd715e16c7417b9f220f5cd1ae5994735b",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 2,
+                "columns": 7,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\b7214a9a-c227-4a20-aa5d-9302a8db98ee\\html.html",
+              "bytes": 425,
+              "sha256": "39da42d0ba91427f3352ba1e5550e1e8bae86e3caf5a46e28a0ce6045611da56",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 424
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\b7214a9a-c227-4a20-aa5d-9302a8db98ee\\segment_1.png",
+              "bytes": 9006,
+              "sha256": "0ba5a27855b4035be7cd0e7fb1a17a315a48ee6991e106624c7c13f18e5513b0",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 408,
+                "height": 72
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\b7214a9a-c227-4a20-aa5d-9302a8db98ee\\thumbnail.png",
+              "bytes": 9006,
+              "sha256": "0ba5a27855b4035be7cd0e7fb1a17a315a48ee6991e106624c7c13f18e5513b0",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 408,
+                "height": 72
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\b7214a9a-c227-4a20-aa5d-9302a8db98ee\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table D.1: STS-B development results (Spearman's correlation) with different temperatures. \"N/A\": Dot product instead of cosine similarity.",
+            "resource_id": "b7214a9a-c227-4a20-aa5d-9302a8db98ee",
+            "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+            "location": {
+              "page_index": 14,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                80.89548506517858,
+                568.5751249466487,
+                276.63885133740723,
+                603.5470265212251
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 15,
+                "bbox": {
+                  "l": 80.89548506517858,
+                  "t": 603.5470265212251,
+                  "r": 276.63885133740723,
+                  "b": 568.5751249466487,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "bf6cf094-b8a9-48db-84a3-c945c8179b14",
+          "kind": "table",
+          "caption": "Table D.2: Ablation studies of the MLM objective based on the development sets using BERTbase.",
+          "locations": [
+            {
+              "page_index": 14,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                327.2226233909658,
+                518.7264440037236,
+                500.2853000416595,
+                603.2868523852785
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 15,
+                "bbox": {
+                  "l": 327.2226233909658,
+                  "t": 603.2868523852785,
+                  "r": 500.2853000416595,
+                  "b": 518.7264440037236,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\bf6cf094-b8a9-48db-84a3-c945c8179b14\\png-300.png",
+              "bytes": 48484,
+              "sha256": "353751cc9791bfffc9f4d7e3122b0aae7d4a8cc691ff1632e27432125c575c13",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 721,
+                "height": 351
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\bf6cf094-b8a9-48db-84a3-c945c8179b14\\csv.csv",
+              "bytes": 115,
+              "sha256": "c32da4379e843bbc2d14c7ac1e7d98497e0828b427ea000bcfdfcd797665aac8",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 5,
+                "columns": 3,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\bf6cf094-b8a9-48db-84a3-c945c8179b14\\html.html",
+              "bytes": 442,
+              "sha256": "e94c1bf769afad57fc923fbd88af9427202ab34a2901012762d4cd447436d8ff",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 439
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\bf6cf094-b8a9-48db-84a3-c945c8179b14\\segment_1.png",
+              "bytes": 16702,
+              "sha256": "6bbeb72a5c5abed2b802dabe952ddcacddd248d4b2129bb0ec3eab355de6e7fc",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 361,
+                "height": 175
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\bf6cf094-b8a9-48db-84a3-c945c8179b14\\thumbnail.png",
+              "bytes": 16702,
+              "sha256": "6bbeb72a5c5abed2b802dabe952ddcacddd248d4b2129bb0ec3eab355de6e7fc",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 361,
+                "height": 175
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\bf6cf094-b8a9-48db-84a3-c945c8179b14\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table D.2: Ablation studies of the MLM objective based on the development sets using BERTbase.",
+            "resource_id": "bf6cf094-b8a9-48db-84a3-c945c8179b14",
+            "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+            "location": {
+              "page_index": 14,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                327.2226233909658,
+                518.7264440037236,
+                500.2853000416595,
+                603.2868523852785
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 15,
+                "bbox": {
+                  "l": 327.2226233909658,
+                  "t": 603.2868523852785,
+                  "r": 500.2853000416595,
+                  "b": 518.7264440037236,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "c982009a-c275-4cf0-91ef-9ab96c5ae4f8",
+          "kind": "table",
+          "caption": "Table E.1: Transfer task results of different sentence embedding models (measured as accuracy). ♣: results from Reimers and Gurevych (2019); ♥: results from Zhang et al. (2020). We highlight the highest numbers among models with the same pre-trained encoder. MLM: adding MLM as an auxiliary task with λ = 0.1.",
+          "locations": [
+            {
+              "page_index": 15,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                98.3557326286367,
+                466.2859691320859,
+                496.65482788106414,
+                771.6210897926819
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 16,
+                "bbox": {
+                  "l": 98.3557326286367,
+                  "t": 771.6210897926819,
+                  "r": 496.65482788106414,
+                  "b": 466.2859691320859,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\c982009a-c275-4cf0-91ef-9ab96c5ae4f8\\png-300.png",
+              "bytes": 467667,
+              "sha256": "80465444edcd350880e785761984a2230115cf2d99e93afece77261bc09f6db6",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 1660,
+                "height": 1272
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\c982009a-c275-4cf0-91ef-9ab96c5ae4f8\\csv.csv",
+              "bytes": 1486,
+              "sha256": "a8ee84f4bdb5b90bab8fef209e7a058a3f6e95418782512ef3a5f8e86ef848f3",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 24,
+                "columns": 9,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\c982009a-c275-4cf0-91ef-9ab96c5ae4f8\\html.html",
+              "bytes": 3673,
+              "sha256": "f3a4b0db0f18531c20f6f25d09330a9a39dba64cc9d69d98f936a0c8a075ee03",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 3640
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\c982009a-c275-4cf0-91ef-9ab96c5ae4f8\\segment_1.png",
+              "bytes": 200270,
+              "sha256": "28f2620550efd5e4970734262881614f26515492ffbd6fffbbd5f7503019bc5c",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 830,
+                "height": 635
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\c982009a-c275-4cf0-91ef-9ab96c5ae4f8\\thumbnail.png",
+              "bytes": 136934,
+              "sha256": "7b66b24bbe923d107f927a5a9ce333eb4550bf534ecbb35f52a8f058d3a5b2a0",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 502,
+                "height": 384
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\c982009a-c275-4cf0-91ef-9ab96c5ae4f8\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table E.1: Transfer task results of different sentence embedding models (measured as accuracy). ♣: results from Reimers and Gurevych (2019); ♥: results from Zhang et al. (2020). We highlight the highest numbers among models with the same pre-trained encoder. MLM: adding MLM as an auxiliary task with λ = 0.1.",
+            "resource_id": "c982009a-c275-4cf0-91ef-9ab96c5ae4f8",
+            "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+            "location": {
+              "page_index": 15,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                98.3557326286367,
+                466.2859691320859,
+                496.65482788106414,
+                771.6210897926819
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 16,
+                "bbox": {
+                  "l": 98.3557326286367,
+                  "t": 771.6210897926819,
+                  "r": 496.65482788106414,
+                  "b": 466.2859691320859,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "f9d6b924-7b78-4991-a0d9-bcbe512b6dae",
+          "kind": "figure",
+          "caption": "",
+          "locations": [
+            {
+              "page_index": 15,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                310.15853858978477,
+                295.3957912657097,
+                519.4141038683181,
+                393.3275757336107
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 16,
+                "bbox": {
+                  "l": 310.15853858978477,
+                  "t": 393.3275757336107,
+                  "r": 519.4141038683181,
+                  "b": 295.3957912657097,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ],
+          "needs_review": true,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\f9d6b924-7b78-4991-a0d9-bcbe512b6dae\\png-300.png",
+              "bytes": 73038,
+              "sha256": "b66b719991a137d98831e85ef8964bb9eb874f2ab521182357fc55b0fac78114",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 871,
+                "height": 407
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\f9d6b924-7b78-4991-a0d9-bcbe512b6dae\\segment_1.png",
+              "bytes": 29087,
+              "sha256": "a185befc2dd6c9a4b06bcd455100f31a059ce6b9be50c00bad2e1dcb23d7d637",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 435,
+                "height": 203
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\f9d6b924-7b78-4991-a0d9-bcbe512b6dae\\thumbnail.png",
+              "bytes": 29087,
+              "sha256": "a185befc2dd6c9a4b06bcd455100f31a059ce6b9be50c00bad2e1dcb23d7d637",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 435,
+                "height": 203
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\f9d6b924-7b78-4991-a0d9-bcbe512b6dae\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "not_applicable": "Auto parser returned no caption; no caption was fabricated"
+          },
+          "passed": true
+        },
+        {
+          "id": "6c03a8ec-4072-4630-828a-9326e2a104ce",
+          "kind": "figure",
+          "caption": "Figure G.1: Density plots of cosine similarities between sentence pairs in STS-B. Pairs are divided into 5 groups based on ground truth ratings (higher means more similar) along the y-axis, and x-axis is the cosine similarity.",
+          "locations": [
+            {
+              "page_index": 16,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                90.51926300504543,
+                324.1148782312389,
+                509.06716067300056,
+                547.9071100643638
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 17,
+                "bbox": {
+                  "l": 90.51926300504543,
+                  "t": 547.9071100643638,
+                  "r": 509.0671606730006,
+                  "b": 324.1148782312389,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\6c03a8ec-4072-4630-828a-9326e2a104ce\\png-300.png",
+              "bytes": 169209,
+              "sha256": "41c2b8ff354c821ddb21facb29580a131e1c76c70d749afffe2f6625b355b548",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 1743,
+                "height": 932
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\6c03a8ec-4072-4630-828a-9326e2a104ce\\segment_1.png",
+              "bytes": 75189,
+              "sha256": "799c0dfea91a6aa843182b0cb6f0a42fddad7497dcdd5567604f58abe22e6d1d",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 872,
+                "height": 465
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\6c03a8ec-4072-4630-828a-9326e2a104ce\\thumbnail.png",
+              "bytes": 46310,
+              "sha256": "2ab6c1fe55494a740d429fdbbe0a30c1c441a2b7d682289d743ef6e4f297f9f8",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 512,
+                "height": 273
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources\\6c03a8ec-4072-4630-828a-9326e2a104ce\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Figure G.1: Density plots of cosine similarities between sentence pairs in STS-B. Pairs are divided into 5 groups based on ground truth ratings (higher means more similar) along the y-axis, and x-axis is the cosine similarity.",
+            "resource_id": "6c03a8ec-4072-4630-828a-9326e2a104ce",
+            "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+            "location": {
+              "page_index": 16,
+              "crop_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                595.276,
+                841.89
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 595.276,
+              "height": 841.89,
+              "bbox": [
+                90.51926300504543,
+                324.1148782312389,
+                509.06716067300056,
+                547.9071100643638
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 17,
+                "bbox": {
+                  "l": 90.51926300504543,
+                  "t": 547.9071100643638,
+                  "r": 509.0671606730006,
+                  "b": 324.1148782312389,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        }
+      ],
+      "progress": [
+        {
+          "seconds": 0.055,
+          "id": "86488cf9-dcd5-4397-9101-3a1d5ae5fb34",
+          "status": "queued",
+          "phase": "等待解析",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 0.562,
+          "id": "86488cf9-dcd5-4397-9101-3a1d5ae5fb34",
+          "status": "running",
+          "phase": "正在加载解析引擎",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 1.572,
+          "id": "86488cf9-dcd5-4397-9101-3a1d5ae5fb34",
+          "status": "running",
+          "phase": "正在校验离线模型",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 2.091,
+          "id": "86488cf9-dcd5-4397-9101-3a1d5ae5fb34",
+          "status": "running",
+          "phase": "正在读取 PDF",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 5.626,
+          "id": "86488cf9-dcd5-4397-9101-3a1d5ae5fb34",
+          "status": "running",
+          "phase": "正在执行 CPU 版面识别与表格解析",
+          "pages_done": null,
+          "pages_total": 17,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 72.375,
+          "id": "86488cf9-dcd5-4397-9101-3a1d5ae5fb34",
+          "status": "running",
+          "phase": "正在导出图表",
+          "pages_done": null,
+          "pages_total": 17,
+          "resources_count": 6,
+          "error": null
+        },
+        {
+          "seconds": 72.882,
+          "id": "86488cf9-dcd5-4397-9101-3a1d5ae5fb34",
+          "status": "running",
+          "phase": "正在导出图表",
+          "pages_done": null,
+          "pages_total": 17,
+          "resources_count": 14,
+          "error": null
+        },
+        {
+          "seconds": 73.389,
+          "id": "86488cf9-dcd5-4397-9101-3a1d5ae5fb34",
+          "status": "running",
+          "phase": "正在保存解析结果",
+          "pages_done": null,
+          "pages_total": 17,
+          "resources_count": 21,
+          "error": null
+        },
+        {
+          "seconds": 73.898,
+          "id": "86488cf9-dcd5-4397-9101-3a1d5ae5fb34",
+          "status": "running",
+          "phase": "解析完成",
+          "pages_done": 17,
+          "pages_total": 17,
+          "resources_count": 21,
+          "error": null
+        },
+        {
+          "seconds": 75.414,
+          "id": "86488cf9-dcd5-4397-9101-3a1d5ae5fb34",
+          "status": "completed",
+          "phase": "解析完成",
+          "pages_done": 17,
+          "pages_total": 17,
+          "resources_count": 21,
+          "error": null
+        }
+      ],
+      "source_pdf": {
+        "path": "D:\\project\\PaperVault\\.test-data\\external\\expanded-corpus\\ml-simcse-emnlp2021.pdf",
+        "bytes": 1670753,
+        "sha256": "b6bb8b5d1356095a02aae8e5e41265fde03f8f02101972e338bad0b7715f12fc"
+      },
+      "page_count": 17,
+      "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+      "job": {
+        "id": "86488cf9-dcd5-4397-9101-3a1d5ae5fb34",
+        "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+        "status": "completed",
+        "phase": "解析完成",
+        "error": null,
+        "created_at": "2026-10-09T13:51:37.998839+00:00",
+        "updated_at": "2026-10-09T13:52:52.978111+00:00",
+        "paper_title": "SimCSE: Simple Contrastive Learning of Sentence Embeddings",
+        "pages_done": 17,
+        "pages_total": 17,
+        "resources_count": 21
+      },
+      "parse_seconds": 75.417,
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\paper-auto.json",
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "counts": {
+        "figure": 5,
+        "table": 16,
+        "resources": 21
+      },
+      "source_revision": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T135135Z-1d029232\\auto-baseline\\papers\\d7660cac-296c-45c2-b673-a4a5170bbc77\\revisions\\c35427d1-d627-44da-9281-a458494b2b4e",
+      "parser_artifacts": [
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T135135Z-1d029232\\auto-baseline\\papers\\d7660cac-296c-45c2-b673-a4a5170bbc77\\revisions\\c35427d1-d627-44da-9281-a458494b2b4e\\structure.json",
+            "bytes": 1474618,
+            "sha256": "9e1363e78160ab8b2b6f78a2f9ac1613e5bdde705e56dd5596b5751cc5fff0c4"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\structure.json",
+            "bytes": 1474618,
+            "sha256": "9e1363e78160ab8b2b6f78a2f9ac1613e5bdde705e56dd5596b5751cc5fff0c4"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T135135Z-1d029232\\auto-baseline\\papers\\d7660cac-296c-45c2-b673-a4a5170bbc77\\revisions\\c35427d1-d627-44da-9281-a458494b2b4e\\docling.json",
+            "bytes": 1003770,
+            "sha256": "4947a9aa7f118531335e2be4f49dfe6d913f4c468db923fd24f910f242f675c4"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\docling.json",
+            "bytes": 1003770,
+            "sha256": "4947a9aa7f118531335e2be4f49dfe6d913f4c468db923fd24f910f242f675c4"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T135135Z-1d029232\\auto-baseline\\papers\\d7660cac-296c-45c2-b673-a4a5170bbc77\\revisions\\c35427d1-d627-44da-9281-a458494b2b4e\\fulltext.md",
+            "bytes": 81742,
+            "sha256": "ecc2703cc2df5047a892af5b0b3a95ad7263b1422a7441502611304538dcc0ef"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\fulltext.md",
+            "bytes": 81742,
+            "sha256": "ecc2703cc2df5047a892af5b0b3a95ad7263b1422a7441502611304538dcc0ef"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T135135Z-1d029232\\auto-baseline\\papers\\d7660cac-296c-45c2-b673-a4a5170bbc77\\revisions\\c35427d1-d627-44da-9281-a458494b2b4e\\worker.log",
+            "bytes": 2436,
+            "sha256": "013b52baa9c15fca0f297db2b1845148f0f3dc162352bbae3e8968b064d5be2f"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\worker.log",
+            "bytes": 2436,
+            "sha256": "013b52baa9c15fca0f297db2b1845148f0f3dc162352bbae3e8968b064d5be2f"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T135135Z-1d029232\\auto-baseline\\papers\\d7660cac-296c-45c2-b673-a4a5170bbc77\\revisions\\c35427d1-d627-44da-9281-a458494b2b4e\\result.json",
+            "bytes": 1423876,
+            "sha256": "3f00a6934d098e018c1360df33d055877d4a044de8fdd60df33616b73ec1b491"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\result.json",
+            "bytes": 1423876,
+            "sha256": "3f00a6934d098e018c1360df33d055877d4a044de8fdd60df33616b73ec1b491"
+          }
+        }
+      ],
+      "parser_warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "engine": {
+        "name": "docling",
+        "version": "2.135.0",
+        "device": "cpu",
+        "ocr": false,
+        "elapsed_seconds": 72.203,
+        "model_manifest_sha256": "bd391d3f352a83665faeb58e2852d465a8eda9ac949fed9017b4022f93a6c2ad",
+        "coordinate_space": "pdf_user_space"
+      },
+      "source_pdf_hash_preserved": true,
+      "auto_baseline_unchanged": true,
+      "seconds": 78.618,
+      "peak_backend_worker_rss_bytes": 2114486272,
+      "worker_processes": [
+        {
+          "pid": 1728,
+          "created_at_epoch": 1791553898.4678826,
+          "command": [
+            "D:\\project\\PaperVault\\build\\backend-dist\\papervault-backend\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T135135Z-1d029232\\auto-baseline\\papers\\d7660cac-296c-45c2-b673-a4a5170bbc77\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T135135Z-1d029232\\auto-baseline\\.staging\\d434c226-894d-41e2-80f9-1df6d2c8e1c2",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T135135Z-1d029232\\auto-baseline\\papers\\d7660cac-296c-45c2-b673-a4a5170bbc77\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ],
+      "worker_exit_coverage": "captured",
+      "input_pdf_hash_unchanged": true
+    }
+  ],
+  "errors": [],
+  "offline_environment": {
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "PYTHONPATH": null,
+    "VIRTUAL_ENV": null
+  },
+  "machine": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "logical_cpus": 16,
+    "memory_bytes": 16890716160
+  },
+  "scope": "Unedited auto extraction integrity/workflow audit. Counts are observed, never assumed ground truth; precision/recall requires manual source-page review.",
+  "backend_sha256": "b5e1ece230ab2ec1183057ab1f0050e6899947632897724febb117eeaa51755f",
+  "models_manifest": {
+    "path": "D:\\project\\PaperVault\\.cache\\models\\papervault-models.json",
+    "bytes": 1806,
+    "sha256": "0667a164e1d7633187c24ba81302ca86bb50dff449f49c420e0217a6fd03fd45"
+  },
+  "health": {
+    "status": "ok",
+    "version": "0.2.2",
+    "protocol": 1
+  },
+  "backend_port": 23339,
+  "backend_pid": 1068,
+  "backend_startup_seconds": 1.679,
+  "auto_baseline_library": {
+    "id": "68a11461-412c-48ac-8b0e-27db6ffd2926",
+    "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T135135Z-1d029232\\auto-baseline",
+    "paper_count": 0,
+    "figure_count": 0,
+    "table_count": 0
+  },
+  "shutdown": {
+    "returncode": 0,
+    "forced_termination": false,
+    "backend_port_closed": true,
+    "worker_processes": [
+      {
+        "pid": 1728,
+        "created_at_epoch": 1791553898.4678826,
+        "command": [
+          "D:\\project\\PaperVault\\build\\backend-dist\\papervault-backend\\papervault-backend.exe",
+          "--worker",
+          "--source",
+          "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T135135Z-1d029232\\auto-baseline\\papers\\d7660cac-296c-45c2-b673-a4a5170bbc77\\original.pdf",
+          "--output",
+          "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T135135Z-1d029232\\auto-baseline\\.staging\\d434c226-894d-41e2-80f9-1df6d2c8e1c2",
+          "--models",
+          "D:\\project\\PaperVault\\.cache\\models"
+        ],
+        "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T135135Z-1d029232\\auto-baseline\\papers\\d7660cac-296c-45c2-b673-a4a5170bbc77\\original.pdf",
+        "exit_code": 0,
+        "state": "exited",
+        "exit_code_hex": "0x00000000"
+      }
+    ]
+  },
+  "seconds": 81.66,
+  "finished_at_utc": "2026-10-09T13:52:57.444321+00:00",
+  "summary": {
+    "papers": 1,
+    "papers_passed": 1,
+    "papers_failed": 0,
+    "resources": 21,
+    "resource_failures": 0
+  }
+}

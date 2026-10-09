@@ -1,0 +1,4 @@
+Using matching WebDriver 154.0.4258.62
+PASS: actual Tauri desktop, native IPC, authenticated API, denied anonymous access, screenshot
+PASS: native reading/bookmark, real legacy migration, same-ID backup-copy isolation, stale-scope rejection
+Installed and verified PaperVault at D:\project\PaperVault\.test-data\installed\PaperVault. This host has development tools; this is not a clean-VM test.

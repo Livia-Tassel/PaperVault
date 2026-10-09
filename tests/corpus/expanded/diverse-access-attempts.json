@@ -1,0 +1,52 @@
+{
+  "attempts": [
+    {
+      "id": "diverse-basictools",
+      "url": "https://www.theoj.org/joss-papers/joss.05142/10.21105.joss.05142.pdf",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "diverse-cn-engineering",
+      "url": "https://www.sciengine.com/doi/pdf/DEFE9FDC472748FD8E9ABC6A081A04DF",
+      "error": "HTTP Error 429: "
+    },
+    {
+      "id": "diverse-cn-shock",
+      "url": "https://pdf.hanspub.org/mos2024136_632571999.pdf",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "diverse-sympy",
+      "url": "https://peerj.com/articles/cs-103.pdf",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "diverse-cn-fractional",
+      "url": "https://pdf.hanspub.org/aam20231000000_80056684.pdf",
+      "error": "Client error '403 Forbidden' for url 'https://pdf.hanspub.org/aam20231000000_80056684.pdf'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+    },
+    {
+      "id": "diverse-cn-shock",
+      "url": "https://pdf.hanspub.org/mos2024136_632571999.pdf",
+      "error": "Client error '403 Forbidden' for url 'https://pdf.hanspub.org/mos2024136_632571999.pdf'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+    },
+    {
+      "id": "diverse-sympy",
+      "url": "https://peerj.com/articles/cs-103.pdf",
+      "error": "Client error '403 Forbidden' for url 'https://peerj.com/articles/cs-103.pdf'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+    },
+    {
+      "id": "diverse-fenics",
+      "url": "https://journals.ub.uni-heidelberg.de/index.php/ans/article/download/20553/20092/75264",
+      "error": "text/html; charset=utf-8"
+    },
+    {
+      "id": "diverse-astropy",
+      "url": "https://www.aanda.org/articles/aa/pdf/2013/10/aa22068-13.pdf",
+      "error": "Client error '403 Forbidden' for url 'https://www.aanda.org/articles/aa/pdf/2013/10/aa22068-13.pdf'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+    }
+  ],
+  "excluded_clue": "COLING is not necessarily covered by ACL-owned material policy; conservative exclusion, replaced by ACL-owned MacBERT.",
+  "excluded_pdf_preserved_at": "artifacts/real-corpus-expanded/acquisition-attempts/diverse-clue-not-selected.pdf",
+  "note": "The downloaded but unselected CLUE PDF was moved out of the final sample folder; no selected PDF was moved or modified. It was excluded because this acquisition pass did not independently confirm its license."
+}

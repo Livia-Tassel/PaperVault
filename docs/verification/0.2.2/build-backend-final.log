@@ -1,0 +1,253 @@
+202 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.8
+203 INFO: Python: 3.12.8
+241 INFO: Platform: Windows-11-10.0.26300-SP0
+241 INFO: Python environment: D:\project\PaperVault\.venv
+4414 WARNING: Failed to collect submodules for 'docling.service_client' because importing 'docling.service_client' raised: ModuleNotFoundError: No module named 'websockets'
+824 WARNING: Failed to collect submodules for 'docling_core.transforms.chunker' because importing 'docling_core.transforms.chunker' raised: ModuleNotFoundError: No module named 'tree_sitter'
+16304 INFO: Module search paths (PYTHONPATH):
+['D:\\project\\PaperVault',
+ 'D:\\Python\\python312.zip',
+ 'D:\\Python\\DLLs',
+ 'D:\\Python\\Lib',
+ 'D:\\Python',
+ 'D:\\project\\PaperVault\\.venv',
+ 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages',
+ 'D:\\project\\PaperVault\\backend',
+ 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\win32',
+ 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\win32\\lib',
+ 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\pythonwin',
+ 'D:\\project\\PaperVault\\backend']
+16714 INFO: Appending 'binaries' from .spec
+16714 INFO: Appending 'datas' from .spec
+16798 INFO: checking Analysis
+17065 INFO: Building because excludes changed
+17065 INFO: Looking for Python shared library...
+17065 INFO: Using Python shared library: D:\Python\python312.dll
+17065 INFO: Running Analysis Analysis-00.toc
+17065 INFO: Target bytecode optimization level: 0
+17065 INFO: Initializing module dependency graph...
+17066 INFO: Initializing module graph hook caches...
+17126 INFO: Analyzing modules for base_library.zip ...
+18306 INFO: Processing standard module hook 'hook-heapq.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+18438 INFO: Processing standard module hook 'hook-encodings.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+20473 INFO: Processing standard module hook 'hook-math.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+20805 INFO: Processing standard module hook 'hook-pickle.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+24384 INFO: Caching module dependency graph...
+24415 INFO: Analyzing D:\project\PaperVault\backend\papervault\__main__.py
+24532 INFO: Processing standard module hook 'hook-multiprocessing.util.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+24824 INFO: Processing standard module hook 'hook-xml.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+25310 INFO: Processing standard module hook 'hook-_ctypes.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+25488 INFO: Processing standard module hook 'hook-uvicorn.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+27322 INFO: Processing pre-safe-import-module hook 'hook-typing_extensions.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+27322 INFO: SetuptoolsInfo: initializing cached setuptools info...
+28666 INFO: Processing standard module hook 'hook-platform.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+29108 INFO: Processing standard module hook 'hook-difflib.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+29357 INFO: Processing standard module hook 'hook-webbrowser.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+30392 INFO: Processing standard module hook 'hook-sqlite3.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+31145 INFO: Processing standard module hook 'hook-sqlalchemy.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+32146 INFO: Processing standard module hook 'hook-sysconfig.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+37455 INFO: Processing pre-safe-import-module hook 'hook-tomli.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+37458 INFO: Setuptools: 'tomli' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.tomli'!
+37482 INFO: Processing standard module hook 'hook-setuptools.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+37536 INFO: Processing pre-safe-import-module hook 'hook-distutils.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+37655 INFO: Processing pre-safe-import-module hook 'hook-jaraco.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+37655 INFO: Setuptools: 'jaraco' appears to be a full setuptools-vendored copy - creating alias to 'setuptools._vendor.jaraco'!
+37689 INFO: Processing pre-safe-import-module hook 'hook-more_itertools.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+37689 INFO: Setuptools: 'more_itertools' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.more_itertools'!
+37912 INFO: Processing standard module hook 'hook-_osx_support.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+37984 INFO: Processing pre-safe-import-module hook 'hook-packaging.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+38491 INFO: Processing standard module hook 'hook-setuptools._vendor.jaraco.text.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+38493 INFO: Processing pre-safe-import-module hook 'hook-importlib_resources.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+38806 INFO: Processing pre-safe-import-module hook 'hook-backports.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+38807 INFO: Setuptools: 'backports' appears to be a full setuptools-vendored copy - creating alias to 'setuptools._vendor.backports'!
+40952 INFO: Processing pre-safe-import-module hook 'hook-wheel.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+40953 INFO: Setuptools: 'wheel' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.wheel'!
+42015 INFO: Processing standard module hook 'hook-mako.codegen.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+42378 INFO: Processing standard module hook 'hook-pygments.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+44701 INFO: Processing standard module hook 'hook-zoneinfo.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+46942 INFO: Processing standard module hook 'hook-pydantic.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+48253 INFO: Processing standard module hook 'hook-rich.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+53297 INFO: Processing standard module hook 'hook-pypdfium2.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+53319 INFO: Processing standard module hook 'hook-pypdfium2_raw.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+53605 INFO: Processing standard module hook 'hook-PIL.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+53698 INFO: Processing standard module hook 'hook-PIL.Image.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+54105 INFO: Processing standard module hook 'hook-numpy.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+57842 INFO: Processing standard module hook 'hook-psutil.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+58405 INFO: Processing standard module hook 'hook-charset_normalizer.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+59040 INFO: Processing standard module hook 'hook-xml.etree.cElementTree.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+59219 INFO: Processing standard module hook 'hook-xml.dom.domreg.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+60024 INFO: Processing standard module hook 'hook-PIL.ImageFilter.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+63122 INFO: Processing standard module hook 'hook-certifi.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+63478 INFO: Processing standard module hook 'hook-anyio.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+66166 INFO: Processing standard module hook 'hook-pandas.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+68211 INFO: Processing standard module hook 'hook-scipy.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+69273 INFO: Processing standard module hook 'hook-torch.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+1672 WARNING: Failed to collect submodules for 'torch.utils.tensorboard' because importing 'torch.utils.tensorboard' raised: ModuleNotFoundError: No module named 'tensorboard'
+W1009 21:46:07.483000 25468 .venv\Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+D:\project\PaperVault\.venv\Lib\site-packages\PyInstaller\utils\hooks\__init__.py:665: DeprecationWarning: `torch.distributed._sharding_spec` will be deprecated, use `torch.distributed._shard.sharding_spec` instead
+  __import__(name)
+D:\project\PaperVault\.venv\Lib\site-packages\PyInstaller\utils\hooks\__init__.py:665: DeprecationWarning: `torch.distributed._sharded_tensor` will be deprecated, use `torch.distributed._shard.sharded_tensor` instead
+  __import__(name)
+D:\project\PaperVault\.venv\Lib\site-packages\PyInstaller\utils\hooks\__init__.py:665: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  __import__(name)
+79086 INFO: hook-torch: this torch build does not depend on MKL...
+81103 INFO: Processing standard module hook 'hook-py.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+96907 INFO: Processing standard module hook 'hook-scipy.linalg.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+97422 INFO: Processing standard module hook 'hook-scipy.special._ufuncs.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+105332 INFO: Processing standard module hook 'hook-scipy.spatial._ckdtree.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+108313 INFO: Processing standard module hook 'hook-scipy.spatial.transform.rotation.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+109811 INFO: Processing standard module hook 'hook-scipy.stats._stats.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+110780 INFO: Processing standard module hook 'hook-scipy.sparse.csgraph.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+112949 INFO: Processing standard module hook 'hook-pandas.io.formats.style.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+116222 INFO: Processing standard module hook 'hook-pandas.plotting.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+117351 INFO: Processing standard module hook 'hook-dateutil.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+117600 INFO: Processing pre-safe-import-module hook 'hook-six.moves.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+120349 INFO: Processing standard module hook 'hook-pandas.io.clipboard.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+120663 INFO: Processing standard module hook 'hook-fsspec.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+121536 INFO: Processing standard module hook 'hook-lxml.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+121908 INFO: Processing standard module hook 'hook-lxml.etree.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+126915 INFO: Processing standard module hook 'hook-transformers.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+128743 INFO: Processing standard module hook 'hook-regex.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+133989 INFO: Processing standard module hook 'hook-opentelemetry.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+135300 INFO: Processing standard module hook 'hook-jinja2.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+137988 INFO: Processing pre-safe-import-module hook 'hook-importlib_metadata.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+137989 INFO: Setuptools: 'importlib_metadata' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.importlib_metadata'!
+138023 INFO: Processing standard module hook 'hook-setuptools._vendor.importlib_metadata.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+138191 INFO: Processing pre-safe-import-module hook 'hook-zipp.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+138192 INFO: Setuptools: 'zipp' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.zipp'!
+138355 INFO: Processing standard module hook 'hook-urllib3.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+143533 INFO: Processing standard module hook 'hook-torchvision.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+143599 INFO: Processing standard module hook 'hook-torchvision.io.image.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+144898 INFO: Processing standard module hook 'hook-scipy.io.matlab.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+148299 INFO: Processing standard module hook 'hook-cv2.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+181819 INFO: Processing pre-safe-import-module hook 'hook-win32com.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\pre_safe_import_module'
+181929 INFO: Processing standard module hook 'hook-win32com.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+181935 INFO: Processing standard module hook 'hook-pythoncom.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+182032 INFO: Processing standard module hook 'hook-pywintypes.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+195232 INFO: Processing standard module hook 'hook-scipy.special._ellip_harm_2.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+207296 INFO: Processing standard module hook 'hook-langcodes.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+210978 INFO: Processing standard module hook 'hook-rtree.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+211699 INFO: Analyzing hidden import 'uvicorn.loops.auto'
+211744 INFO: Analyzing hidden import 'uvicorn.protocols.http.auto'
+211759 INFO: Analyzing hidden import 'uvicorn.protocols.websockets.auto'
+211772 INFO: Analyzing hidden import 'uvicorn.lifespan.on'
+211790 INFO: Analyzing hidden import 'docling.backend.docling_parse_v2_backend'
+211809 INFO: Analyzing hidden import 'docling.backend.docling_parse_v4_backend'
+211826 INFO: Analyzing hidden import 'docling.backend.latex.context'
+211828 INFO: Analyzing hidden import 'docling.backend.latex.libraries'
+211829 INFO: Analyzing hidden import 'docling.backend.latex.libraries.base'
+211831 INFO: Analyzing hidden import 'docling.backend.managed_pdfium_backend'
+211847 INFO: Analyzing hidden import 'docling.backend.pypdfium2_backend'
+211881 INFO: Analyzing hidden import 'docling.cli'
+211882 INFO: Analyzing hidden import 'docling.cli.export_utils'
+212748 INFO: Analyzing hidden import 'docling.cli.main'
+213769 INFO: Analyzing hidden import 'docling.cli.models'
+214356 INFO: Analyzing hidden import 'docling.cli.tools'
+214356 INFO: Analyzing hidden import 'docling.datamodel.extraction'
+214356 INFO: Analyzing hidden import 'docling.document_extractor'
+214480 INFO: Analyzing hidden import 'docling.experimental'
+214490 INFO: Analyzing hidden import 'docling.experimental.datamodel'
+214496 INFO: Analyzing hidden import 'docling.experimental.datamodel.table_crops_layout_options'
+214510 INFO: Analyzing hidden import 'docling.experimental.datamodel.threaded_layout_vlm_pipeline_options'
+214523 INFO: Analyzing hidden import 'docling.experimental.models'
+214539 INFO: Analyzing hidden import 'docling.experimental.models.table_crops_layout_model'
+214553 INFO: Analyzing hidden import 'docling.experimental.pipeline'
+214556 INFO: Analyzing hidden import 'docling.experimental.pipeline.threaded_layout_vlm_pipeline'
+214591 INFO: Analyzing hidden import 'docling.models.extraction.nuextract_transformers_model'
+214618 INFO: Analyzing hidden import 'docling.models.plugins'
+214620 INFO: Analyzing hidden import 'docling.models.plugins.defaults'
+214899 INFO: Analyzing hidden import 'docling.models.stages.ocr._nemotron_ocr_model'
+214924 INFO: Analyzing hidden import 'docling.pipeline.threaded_standard_pdf_pipeline'
+214924 INFO: Analyzing hidden import 'docling.utils.paddleocr_vl_utils'
+214955 INFO: Analyzing hidden import 'docling_core.cli'
+214962 INFO: Analyzing hidden import 'docling_core.cli.serialize'
+214984 INFO: Analyzing hidden import 'docling_core.cli.view'
+214988 INFO: Analyzing hidden import 'docling_core.compat'
+215046 INFO: Analyzing hidden import 'docling_core.experimental'
+215060 INFO: Analyzing hidden import 'docling_core.experimental.serializer'
+215061 INFO: Analyzing hidden import 'docling_core.experimental.serializer.outline'
+215094 INFO: Analyzing hidden import 'docling_core.search'
+215107 INFO: Analyzing hidden import 'docling_core.search.package'
+215124 INFO: Analyzing hidden import 'docling_core.transforms.profiler'
+215163 INFO: Analyzing hidden import 'docling_core.transforms.serializer.azure'
+215188 INFO: Analyzing hidden import 'docling_core.transforms.serializer.markdown_excel'
+215207 INFO: Analyzing hidden import 'docling_core.transforms.visualizer.table_visualizer'
+215223 INFO: Analyzing hidden import 'docling_core.types.legacy_doc'
+215242 INFO: Analyzing hidden import 'docling_core.types.legacy_doc.base'
+215244 INFO: Analyzing hidden import 'docling_core.types.legacy_doc.document'
+215254 INFO: Analyzing hidden import 'docling_core.utils.alias'
+215272 INFO: Analyzing hidden import 'docling_core.utils.generate_docs'
+215305 INFO: Analyzing hidden import 'docling_core.utils.legacy'
+215319 INFO: Analyzing hidden import 'docling_parse.visualize'
+215339 INFO: Analyzing hidden import 'pypdfium2.__main__'
+215388 INFO: Analyzing hidden import 'cv2.config'
+215389 INFO: Analyzing hidden import 'cv2.config-3'
+215400 INFO: Analyzing hidden import 'cv2.cv2'
+215400 INFO: Analyzing hidden import 'cv2.data'
+215417 INFO: Analyzing hidden import 'cv2.gapi'
+215424 INFO: Analyzing hidden import 'cv2.load_config_py2'
+215446 INFO: Analyzing hidden import 'cv2.mat_wrapper'
+215456 INFO: Analyzing hidden import 'cv2.misc'
+215481 INFO: Analyzing hidden import 'cv2.typing'
+215487 INFO: Analyzing hidden import 'cv2.utils'
+215501 INFO: Processing module hooks (post-graph stage)...
+217093 INFO: Processing standard module hook 'hook-lxml.isoschematron.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+221285 INFO: Processing pre-safe-import-module hook 'hook-tensorflow.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\pre_safe_import_module'
+230580 INFO: Processing standard module hook 'hook-PIL.SpiderImagePlugin.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+237010 WARNING: Hidden import "scipy.special._cdflib" not found!
+237061 INFO: Processing standard module hook 'hook-sqlalchemy.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+237520 WARNING: Hidden import "pysqlite2" not found!
+237520 WARNING: Hidden import "MySQLdb" not found!
+237763 INFO: Processing standard module hook 'hook-lxml.objectify.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+237764 INFO: Processing standard module hook 'hook-tzdata.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+238334 INFO: Performing binary vs. data reclassification (2814 entries)
+245394 INFO: Looking for ctypes DLLs
+245500 WARNING: Ignoring /usr/lib64/libgomp.so.1 imported from D:\project\PaperVault\.venv\Lib\site-packages\torch\_inductor\codecache.py - only basenames are supported with ctypes imports!
+245822 INFO: Analyzing run-time hooks ...
+245856 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+245877 INFO: Including run-time hook 'pyi_rth_pkgutil.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+245897 INFO: Including run-time hook 'pyi_rth_setuptools.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+245915 INFO: Including run-time hook 'pyi_rth_pywintypes.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks'
+245931 INFO: Including run-time hook 'pyi_rth_pythoncom.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks'
+245934 INFO: Including run-time hook 'pyi_rth_multiprocessing.py' from 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+246145 INFO: Creating base_library.zip...
+246169 INFO: Looking for dynamic libraries
+W1009 21:49:05.361000 21888 .venv\Lib\site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+D:\project\PaperVault\.venv\Lib\site-packages\PyInstaller\building\build_main.py:227: DeprecationWarning: `torch.distributed._sharding_spec` will be deprecated, use `torch.distributed._shard.sharding_spec` instead
+  __import__(package)
+D:\project\PaperVault\.venv\Lib\site-packages\PyInstaller\building\build_main.py:227: DeprecationWarning: `torch.distributed._sharded_tensor` will be deprecated, use `torch.distributed._shard.sharded_tensor` instead
+  __import__(package)
+D:\project\PaperVault\.venv\Lib\site-packages\PyInstaller\building\build_main.py:227: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  __import__(package)
+D:\project\PaperVault\.venv\Lib\site-packages\docling\datamodel\service\options.py:1037: DeprecationWarning: deprecated
+  self.picture_description_local is not None
+260606 INFO: Extra DLL search directories (AddDllDirectory): ['D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\numpy.libs', 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\cv2\\../../x64/vc17/bin', 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\torch\\lib', 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\pandas.libs', 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\scipy.libs', 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\torchvision', 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\torchvision', 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\torchvision', 'D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\torchvision']
+260606 INFO: Extra DLL search directories (PATH): ['D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\cv2\\../../x64/vc17/bin']
+263654 INFO: Warnings written to D:\project\PaperVault\build\pyinstaller\backend\warn-backend.txt
+264439 INFO: Graph cross-reference written to D:\project\PaperVault\build\pyinstaller\backend\xref-backend.html
+264790 INFO: checking PYZ
+264910 INFO: Building because D:\project\PaperVault\backend\papervault\parsers\docling_parser.py changed
+264910 INFO: Building PYZ (ZlibArchive) D:\project\PaperVault\build\pyinstaller\backend\PYZ-00.pyz
+271886 INFO: Building PYZ (ZlibArchive) D:\project\PaperVault\build\pyinstaller\backend\PYZ-00.pyz completed successfully.
+272018 INFO: checking PKG
+272041 INFO: Building because D:\project\PaperVault\build\pyinstaller\backend\PYZ-00.pyz changed
+272041 INFO: Building PKG (CArchive) papervault-backend.pkg
+272137 INFO: Building PKG (CArchive) papervault-backend.pkg completed successfully.
+272137 INFO: Bootloader D:\project\PaperVault\.venv\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\run.exe
+272137 INFO: checking EXE
+272162 INFO: Rebuilding EXE-00.toc because pkg is more recent
+272162 INFO: Building EXE from EXE-00.toc
+272162 INFO: Copying bootloader EXE to D:\project\PaperVault\build\pyinstaller\backend\papervault-backend.exe
+272289 INFO: Copying icon to EXE
+272377 INFO: Copying 0 resources to EXE
+272378 INFO: Embedding manifest in EXE
+272419 INFO: Appending PKG archive to EXE
+272607 INFO: Fixing EXE headers
+273287 INFO: Building EXE from EXE-00.toc completed successfully.
+273339 INFO: checking COLLECT
+273470 INFO: Removing dir D:\project\PaperVault\build\backend-dist\papervault-backend
+274991 INFO: Building COLLECT COLLECT-00.toc
+281181 INFO: Building COLLECT COLLECT-00.toc completed successfully.
+281306 INFO: Build complete! The results are available in: D:\project\PaperVault\build\backend-dist
+PASS: backend startup, authenticated health, unauthorized access rejected, stdin EOF shutdown
+Frozen backend staged at D:\project\PaperVault\apps\desktop\src-tauri\binaries

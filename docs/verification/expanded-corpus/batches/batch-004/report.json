@@ -1,0 +1,3094 @@
+{
+  "passed": true,
+  "run_id": "20261009T131328Z-1e526b8e",
+  "started_at_utc": "2026-10-09T13:13:28.289752+00:00",
+  "work_directory": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e",
+  "artifacts": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e",
+  "backend": "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+  "sources": [
+    {
+      "id": "expanded-cellfit",
+      "title": "CellFIT: A Cellular Force-Inference Toolkit Using Curvilinear Cell Boundaries",
+      "authors_citation": "Brodland GW, Veldhuis JH, Kim S, Perrone M, Mashburn D, Hutson MS (2014), PLOS ONE 9(6): e99116.",
+      "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0099116",
+      "pdf_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0099116&type=printable",
+      "doi": "10.1371/journal.pone.0099116",
+      "license": "CC BY",
+      "license_url": "https://journals.plos.org/plosone/s/licenses-and-copyright",
+      "local_path": "D:\\project\\PaperVault\\.test-data\\external\\expanded-corpus\\expanded-cellfit.pdf",
+      "layout_notes": "Biomechanics/civil engineering; multi-panel cell microscopy, vector force diagrams and a quantitative validation table.",
+      "review_level": "deep_review",
+      "license_evidence_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0099116",
+      "license_note": "The official article declares CC Attribution. Older PLOS papers are not assigned an unprinted version.",
+      "source_verified_at_utc": "2026-10-09T12:55:06.452964+00:00",
+      "sha256": "1693b50cdf811ee6bdaabb60fd0a26d1a807c310c737a4b0a8f0b5322aaf115a",
+      "pages": 15,
+      "bytes": 1951728,
+      "manifest": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\input-batches\\batch-004.json",
+      "manifest_sha256": "e6c370b0b987f9560ef3578fedd5b10bebd31b76feaf8252110039671524bb18"
+    },
+    {
+      "id": "expanded-strobe",
+      "title": "The Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) Statement: Guidelines for Reporting Observational Studies",
+      "authors_citation": "von Elm E, Altman DG, Egger M, Pocock SJ, Gøtzsche PC, Vandenbroucke JP, for the STROBE Initiative (2007), PLOS Medicine 4(10): e296.",
+      "source_url": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0040296",
+      "pdf_url": "https://journals.plos.org/plosmedicine/article/file?id=10.1371/journal.pmed.0040296&type=printable",
+      "doi": "10.1371/journal.pmed.0040296",
+      "license": "CC BY",
+      "license_url": "https://journals.plos.org/plosmedicine/s/licenses-and-copyright",
+      "local_path": "D:\\project\\PaperVault\\.test-data\\external\\expanded-corpus\\expanded-strobe.pdf",
+      "layout_notes": "Epidemiological reporting methods; multi-column journal body and long checklist table.",
+      "review_level": "inventory_only",
+      "license_evidence_url": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0040296",
+      "license_note": "The official article declares CC Attribution. Older PLOS papers are not assigned an unprinted version.",
+      "source_verified_at_utc": "2026-10-09T12:55:06.458610+00:00",
+      "sha256": "5969e378c7492e254a97911ceea84db2a0f34aef2680dd261a57c182d292cf8b",
+      "pages": 5,
+      "bytes": 95819,
+      "manifest": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\input-batches\\batch-004.json",
+      "manifest_sha256": "e6c370b0b987f9560ef3578fedd5b10bebd31b76feaf8252110039671524bb18"
+    }
+  ],
+  "backend_origin": "installed",
+  "command": "D:\\project\\PaperVault\\.venv\\Scripts\\python.exe scripts/test_real_corpus.py --manifest artifacts/real-corpus-expanded/input-batches/batch-004.json --expect-version 0.2.1 --expect-sha256 567bc425d9df91f4813dfacdf64a8a8e5548381becc5950627830862439dd43a --dpi 300 --report artifacts/real-corpus-expanded/batches/batch-004/report.json",
+  "papers": [
+    {
+      "source": {
+        "id": "expanded-cellfit",
+        "title": "CellFIT: A Cellular Force-Inference Toolkit Using Curvilinear Cell Boundaries",
+        "authors_citation": "Brodland GW, Veldhuis JH, Kim S, Perrone M, Mashburn D, Hutson MS (2014), PLOS ONE 9(6): e99116.",
+        "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0099116",
+        "pdf_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0099116&type=printable",
+        "doi": "10.1371/journal.pone.0099116",
+        "license": "CC BY",
+        "license_url": "https://journals.plos.org/plosone/s/licenses-and-copyright",
+        "local_path": "D:\\project\\PaperVault\\.test-data\\external\\expanded-corpus\\expanded-cellfit.pdf",
+        "layout_notes": "Biomechanics/civil engineering; multi-panel cell microscopy, vector force diagrams and a quantitative validation table.",
+        "review_level": "deep_review",
+        "license_evidence_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0099116",
+        "license_note": "The official article declares CC Attribution. Older PLOS papers are not assigned an unprinted version.",
+        "source_verified_at_utc": "2026-10-09T12:55:06.452964+00:00",
+        "sha256": "1693b50cdf811ee6bdaabb60fd0a26d1a807c310c737a4b0a8f0b5322aaf115a",
+        "pages": 15,
+        "bytes": 1951728,
+        "manifest": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\input-batches\\batch-004.json",
+        "manifest_sha256": "e6c370b0b987f9560ef3578fedd5b10bebd31b76feaf8252110039671524bb18"
+      },
+      "passed": true,
+      "errors": [],
+      "resources": [
+        {
+          "id": "bc4e786d-967c-4539-b281-181a37a5f92c",
+          "kind": "figure",
+          "caption": "",
+          "locations": [
+            {
+              "page_index": 0,
+              "crop_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 612.28302,
+              "height": 790.866028,
+              "bbox": [
+                57.42997653301581,
+                751.4431941689754,
+                199.86101086852878,
+                764.6434383755385
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 1,
+                "bbox": {
+                  "l": 57.42997653301581,
+                  "t": 764.6434383755385,
+                  "r": 199.86101086852878,
+                  "b": 751.4431941689754,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ],
+          "needs_review": true,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\bc4e786d-967c-4539-b281-181a37a5f92c\\png-300.png",
+              "bytes": 10982,
+              "sha256": "17b35d26189f6fc6a3902bd2bd2c65e33a8c89b94099aacddd093095181604d3",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 593,
+                "height": 54
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\bc4e786d-967c-4539-b281-181a37a5f92c\\segment_1.png",
+              "bytes": 5589,
+              "sha256": "e3562c36e275e0222cc9a627bb1ddd6bfffe8449f6d04332d0956450815c3a04",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 296,
+                "height": 27
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\bc4e786d-967c-4539-b281-181a37a5f92c\\thumbnail.png",
+              "bytes": 5589,
+              "sha256": "e3562c36e275e0222cc9a627bb1ddd6bfffe8449f6d04332d0956450815c3a04",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 296,
+                "height": 27
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\bc4e786d-967c-4539-b281-181a37a5f92c\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "not_applicable": "Auto parser returned no caption; no caption was fabricated"
+          },
+          "passed": true
+        },
+        {
+          "id": "592e54ab-8c38-41ee-b221-f6ce1591bdd3",
+          "kind": "figure",
+          "caption": "",
+          "locations": [
+            {
+              "page_index": 0,
+              "crop_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 612.28302,
+              "height": 790.866028,
+              "bbox": [
+                476.33555478765635,
+                750.8212482870397,
+                554.1289501225881,
+                769.452001479524
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 1,
+                "bbox": {
+                  "l": 476.3355547876564,
+                  "t": 769.452001479524,
+                  "r": 554.1289501225881,
+                  "b": 750.8212482870397,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ],
+          "needs_review": true,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\592e54ab-8c38-41ee-b221-f6ce1591bdd3\\png-300.png",
+              "bytes": 8300,
+              "sha256": "b9d6d1460b6b25452583809b528d909b8616f27e40954426511bad43bd41b078",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 324,
+                "height": 77
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\592e54ab-8c38-41ee-b221-f6ce1591bdd3\\segment_1.png",
+              "bytes": 3800,
+              "sha256": "ac90b7a9f62ca67b01b0abf95f4da2836de3f79e0c808f7191aa633b7c997b51",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 161,
+                "height": 38
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\592e54ab-8c38-41ee-b221-f6ce1591bdd3\\thumbnail.png",
+              "bytes": 3800,
+              "sha256": "ac90b7a9f62ca67b01b0abf95f4da2836de3f79e0c808f7191aa633b7c997b51",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 161,
+                "height": 38
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\592e54ab-8c38-41ee-b221-f6ce1591bdd3\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "not_applicable": "Auto parser returned no caption; no caption was fabricated"
+          },
+          "passed": true
+        },
+        {
+          "id": "8256a3bb-c138-466e-8f08-a000143c71c3",
+          "kind": "figure",
+          "caption": "",
+          "locations": [
+            {
+              "page_index": 0,
+              "crop_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 612.28302,
+              "height": 790.866028,
+              "bbox": [
+                563.346854738186,
+                694.5511363813744,
+                602.466634073771,
+                733.2904502883947
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 1,
+                "bbox": {
+                  "l": 563.346854738186,
+                  "t": 733.2904502883947,
+                  "r": 602.466634073771,
+                  "b": 694.5511363813744,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ],
+          "needs_review": true,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\8256a3bb-c138-466e-8f08-a000143c71c3\\png-300.png",
+              "bytes": 27804,
+              "sha256": "3700dd511faa6292363abb3846b91196d50175aeb1bce27d8c896ba6f51dd311",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 163,
+                "height": 162
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\8256a3bb-c138-466e-8f08-a000143c71c3\\original.original",
+              "bytes": 34788,
+              "sha256": "c1535b320a02a8c89ee3041c6295a51bf20be62f4479ea5a79aa503627c1285b",
+              "format": "original",
+              "dpi": null,
+              "decoded": {
+                "format": "JPEG",
+                "width": 104,
+                "height": 103
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\8256a3bb-c138-466e-8f08-a000143c71c3\\segment_1.png",
+              "bytes": 9378,
+              "sha256": "03bd12328118b4fefee973d6dacbf10162b281a6b866530373f9baf045e5d3f7",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 81,
+                "height": 81
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\8256a3bb-c138-466e-8f08-a000143c71c3\\thumbnail.png",
+              "bytes": 9378,
+              "sha256": "03bd12328118b4fefee973d6dacbf10162b281a6b866530373f9baf045e5d3f7",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 81,
+                "height": 81
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\8256a3bb-c138-466e-8f08-a000143c71c3\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "not_applicable": "Auto parser returned no caption; no caption was fabricated"
+          },
+          "passed": true
+        },
+        {
+          "id": "c4bd33c9-c367-4828-aabb-33c1b8d49558",
+          "kind": "figure",
+          "caption": "Figure 1. A synthetic planar aggregate and its analysis by CellFIT. (A) shows a representative region consisting of 50 complete cells, 177 complete edges, and 30 partial cells and corresponding incomplete edges taken from a larger aggregate. Its cells were assigned to one of three types, as indicated by coloured shading and a finite element model was used to determine its annealed state, as shown. The edge tensions were assigned the following values according to their type 5:6:7:10:11:12. (B) shows the topological and geometric information provided to the CellFIT algorithms. The spectra shown in (C) provide legends for the tension and pressure colours used in the remaining parts of the figure. (D) shows the ground truth Standard Tensions and Pressures as determined by the FE annealing process, and extracted using Equation 16 and its associated text. (E) shows the values that the standard Polyarc version of CellFIT calculates based solely on the data in (B). (F) shows the results obtained by calculating the angles at triple junctions using straight edges only. (G) and (H) show CellFIT results when noise levels of 2 or 5 are respectively introduced into the CellFIT input data. A noise level of x corresponds to x degrees of angle error and x% curvature error. (I) shows CellFIT results obtained after the original mesh was converted into an image and redigitized before analysis. doi:10.1371/journal.pone.0099116.g001",
+          "locations": [
+            {
+              "page_index": 2,
+              "crop_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 612.28302,
+              "height": 790.866028,
+              "bbox": [
+                58.53273108151261,
+                263.509194785163,
+                539.3324339869837,
+                728.7296803677665
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 3,
+                "bbox": {
+                  "l": 58.5327310815126,
+                  "t": 728.7296803677665,
+                  "r": 539.3324339869837,
+                  "b": 263.509194785163,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\c4bd33c9-c367-4828-aabb-33c1b8d49558\\png-300.png",
+              "bytes": 2623992,
+              "sha256": "b60b1bee5a8cf3f9ca869a2cdee8790b7184d40e82166dc5c7f9885f24e46d9f",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 2004,
+                "height": 1939
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\c4bd33c9-c367-4828-aabb-33c1b8d49558\\original.original",
+              "bytes": 330441,
+              "sha256": "04fa5981eee15ab3d2ed15fee83c9fbae8f960609d077049474208fabdbfb470",
+              "format": "original",
+              "dpi": null,
+              "decoded": {
+                "format": "JPEG",
+                "width": 2239,
+                "height": 2168
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\c4bd33c9-c367-4828-aabb-33c1b8d49558\\segment_1.png",
+              "bytes": 860562,
+              "sha256": "452fd70e318e8776572f1b469441e73ea63cb3b76c60609ff9e0a0396f1a39db",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 1002,
+                "height": 969
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\c4bd33c9-c367-4828-aabb-33c1b8d49558\\thumbnail.png",
+              "bytes": 184177,
+              "sha256": "e35214467bf606247131d1403b52fad214cca5ad44abf15f51c3f09f7408fb6c",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 397,
+                "height": 384
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\c4bd33c9-c367-4828-aabb-33c1b8d49558\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Figure 1. A synthetic planar aggregate and its analysis by CellFIT. (A) shows a representative region consisting of 50 complete cells, 177 complete edges, and 30 partial cells and corresponding incomplete edges taken from a larger aggregate. Its cells were assigned to one of three types, as indicated by coloured shading and a finite element model was used to determine its annealed state, as shown. The edge tensions were assigned the following values according to their type 5:6:7:10:11:12. (B) shows the topological and geometric information provided to the CellFIT algorithms. The spectra shown in (C) provide legends for the tension and pressure colours used in the remaining parts of the figure. (D) shows the ground truth Standard Tensions and Pressures as determined by the FE annealing process, and extracted using Equation 16 and its associated text. (E) shows the values that the standard Polyarc version of CellFIT calculates based",
+            "resource_id": "c4bd33c9-c367-4828-aabb-33c1b8d49558",
+            "paper_id": "10c7fb88-a55a-494b-bfd3-465e22b00107",
+            "location": {
+              "page_index": 2,
+              "crop_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 612.28302,
+              "height": 790.866028,
+              "bbox": [
+                58.53273108151261,
+                263.509194785163,
+                539.3324339869837,
+                728.7296803677665
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 3,
+                "bbox": {
+                  "l": 58.5327310815126,
+                  "t": 728.7296803677665,
+                  "r": 539.3324339869837,
+                  "b": 263.509194785163,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "71c282dc-1617-4f14-a478-f9de2a4751dd",
+          "kind": "figure",
+          "caption": "Figure 2. Equilibrium considerations. (A) shows a curved cell edge and the forces acting on it, while (B) shows how edge tension, curvature and pressure are related. Specifically, the pressure difference Dp generates a force Fy~2Dp dL~2Dp r dh in the y-direction. This force must be just balanced by the vertical components of the tension c. Thus we have that 2Dp r dh~2 c sin (dh)%2 c dh which, when simplified, gives Dp~c=r, the Laplace equation. (C) shows the forces that act at a typical triple junction, while (D) shows the forces that act on an edge that is constrained to remain straight by beam action, as described in the text. doi:10.1371/journal.pone.0099116.g002",
+          "locations": [
+            {
+              "page_index": 4,
+              "crop_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 612.28302,
+              "height": 790.866028,
+              "bbox": [
+                58.977819931339674,
+                415.5505472699104,
+                459.19074478988966,
+                729.0961649164701
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 5,
+                "bbox": {
+                  "l": 58.97781993133968,
+                  "t": 729.0961649164701,
+                  "r": 459.1907447898897,
+                  "b": 415.5505472699104,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\71c282dc-1617-4f14-a478-f9de2a4751dd\\png-300.png",
+              "bytes": 667167,
+              "sha256": "0e5e79b45f1db5e9fb01ca5887dbeecfb8d9b5df9cd66b47942c492ef2c75031",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 1668,
+                "height": 1306
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\71c282dc-1617-4f14-a478-f9de2a4751dd\\original.original",
+              "bytes": 178426,
+              "sha256": "0415a82a2e9075ebb6b8446aca6d9db27e319573cd15752bbf5261ad410b315b",
+              "format": "original",
+              "dpi": null,
+              "decoded": {
+                "format": "JPEG",
+                "width": 2255,
+                "height": 1778
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\71c282dc-1617-4f14-a478-f9de2a4751dd\\segment_1.png",
+              "bytes": 217408,
+              "sha256": "202d9cb6a2933db2aec3905e34efc4b5b3799adbfaf988c9b09d7f97fdb426ea",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 834,
+                "height": 653
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\71c282dc-1617-4f14-a478-f9de2a4751dd\\thumbnail.png",
+              "bytes": 93881,
+              "sha256": "8bca3c08a159a07d2ecfef684263280c1c9237427ea24766338c84735ec34745",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 490,
+                "height": 384
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\71c282dc-1617-4f14-a478-f9de2a4751dd\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Figure 2. Equilibrium considerations. (A) shows a curved cell edge and the forces acting on it, while (B) shows how edge tension, curvature and pressure are related. Specifically, the pressure difference Dp generates a force Fy~2Dp dL~2Dp r dh in the y-direction. This force must be just balanced by the vertical components of the tension c. Thus we have that 2Dp r dh~2 c sin (dh)%2 c dh which, when simplified, gives Dp~c=r, the Laplace equation. (C) shows the forces that act at a typical triple junction, while (D) shows the forces that act on an edge that is constrained to remain straight by beam action, as described in the text. doi:10.1371/journal.pone.0099116.g002",
+            "resource_id": "71c282dc-1617-4f14-a478-f9de2a4751dd",
+            "paper_id": "10c7fb88-a55a-494b-bfd3-465e22b00107",
+            "location": {
+              "page_index": 4,
+              "crop_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 612.28302,
+              "height": 790.866028,
+              "bbox": [
+                58.977819931339674,
+                415.5505472699104,
+                459.19074478988966,
+                729.0961649164701
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 5,
+                "bbox": {
+                  "l": 58.97781993133968,
+                  "t": 729.0961649164701,
+                  "r": 459.1907447898897,
+                  "b": 415.5505472699104,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "ae202c8d-7e24-499e-a790-6b71bc6c9682",
+          "kind": "figure",
+          "caption": "Figure 3. The tension equations are generally overdetermined. Geometric considerations show that the tension equations are, within a scale factor (see text), adequately determined (A, and B). When a full cell is enclosed (C) and as more cells become fully enclosed, they generally become increasingly overdetermined (D and E), though scaling information external to the image is still needed. doi:10.1371/journal.pone.0099116.g003",
+          "locations": [
+            {
+              "page_index": 4,
+              "crop_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 612.28302,
+              "height": 790.866028,
+              "bbox": [
+                59.1359713762844,
+                107.15262480808326,
+                445.8248349164755,
+                276.09708926253074
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 5,
+                "bbox": {
+                  "l": 59.1359713762844,
+                  "t": 276.09708926253074,
+                  "r": 445.8248349164754,
+                  "b": 107.15262480808326,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\ae202c8d-7e24-499e-a790-6b71bc6c9682\\png-300.png",
+              "bytes": 158031,
+              "sha256": "244fd9f43724a5b76e3afa846e018fa6f09826fa5f1b96ed15fa91f7fc6dfb92",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 1611,
+                "height": 704
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\ae202c8d-7e24-499e-a790-6b71bc6c9682\\original.original",
+              "bytes": 147924,
+              "sha256": "26d8f2d0869688f7995c29ba42cd630bb902d9670899077ddca64ed4ac20fa7c",
+              "format": "original",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 1622,
+                "height": 716
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\ae202c8d-7e24-499e-a790-6b71bc6c9682\\segment_1.png",
+              "bytes": 56855,
+              "sha256": "51d5037c397b07dce8702da87555b6be9c31845636001be30896ffa3e85f16b4",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 805,
+                "height": 351
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\ae202c8d-7e24-499e-a790-6b71bc6c9682\\thumbnail.png",
+              "bytes": 30993,
+              "sha256": "05fd42505985d28c7dd24c8c73816ad6e52c4122437baae3db83b657f24a7034",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 512,
+                "height": 223
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\ae202c8d-7e24-499e-a790-6b71bc6c9682\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Figure 3. The tension equations are generally overdetermined. Geometric considerations show that the tension equations are, within a scale factor (see text), adequately determined (A, and B). When a full cell is enclosed (C) and as more cells become fully enclosed, they generally become increasingly overdetermined (D and E), though scaling information external to the image is still needed. doi:10.1371/journal.pone.0099116.g003",
+            "resource_id": "ae202c8d-7e24-499e-a790-6b71bc6c9682",
+            "paper_id": "10c7fb88-a55a-494b-bfd3-465e22b00107",
+            "location": {
+              "page_index": 4,
+              "crop_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 612.28302,
+              "height": 790.866028,
+              "bbox": [
+                59.1359713762844,
+                107.15262480808326,
+                445.8248349164755,
+                276.09708926253074
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 5,
+                "bbox": {
+                  "l": 59.1359713762844,
+                  "t": 276.09708926253074,
+                  "r": 445.8248349164754,
+                  "b": 107.15262480808326,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "18e22b1e-bf20-483e-b3c5-f3ef612dafbb",
+          "kind": "figure",
+          "caption": "Figure 4. The pressure equations are generally overdetermined. As the number of cells increases and cells acquire multiple neighbours, the Pressure Equations become increasingly well determined (A to E). Even when the system is seemingly overdetermined (D and E), external data still is needed to ascertain the pressure offset (see text). doi:10.1371/journal.pone.0099116.g004",
+          "locations": [
+            {
+              "page_index": 6,
+              "crop_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 612.28302,
+              "height": 790.866028,
+              "bbox": [
+                59.57401891090543,
+                562.4484076543133,
+                440.191203595833,
+                728.8877727887116
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 7,
+                "bbox": {
+                  "l": 59.57401891090542,
+                  "t": 728.8877727887116,
+                  "r": 440.191203595833,
+                  "b": 562.4484076543133,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\18e22b1e-bf20-483e-b3c5-f3ef612dafbb\\png-300.png",
+              "bytes": 141545,
+              "sha256": "e6f50debbf6bb366314004ea515df9e851109ef6c0109f10a96aef3b9a40f216",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 1585,
+                "height": 693
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\18e22b1e-bf20-483e-b3c5-f3ef612dafbb\\original.original",
+              "bytes": 111749,
+              "sha256": "284675eb7d862f91e552be6348e7a7b0d6d64e9515dea0e208acfe22780fe49b",
+              "format": "original",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 1599,
+                "height": 706
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\18e22b1e-bf20-483e-b3c5-f3ef612dafbb\\segment_1.png",
+              "bytes": 53219,
+              "sha256": "586a468a0bf1816ca95fdf90ea8b2b5099f728f54d830bbbdd3dfe9e01059c93",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 792,
+                "height": 346
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\18e22b1e-bf20-483e-b3c5-f3ef612dafbb\\thumbnail.png",
+              "bytes": 32365,
+              "sha256": "f09505a2e498bf4b02fe37aa1ff1429ed2fffd9e31f7e1a3a9189d25df70ce4d",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 512,
+                "height": 224
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\18e22b1e-bf20-483e-b3c5-f3ef612dafbb\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Figure 4. The pressure equations are generally overdetermined. As the number of cells increases and cells acquire multiple neighbours, the Pressure Equations become increasingly well determined (A to E). Even when the system is seemingly overdetermined (D and E), external data still is needed to ascertain the pressure offset (see text). doi:10.1371/journal.pone.0099116.g004",
+            "resource_id": "18e22b1e-bf20-483e-b3c5-f3ef612dafbb",
+            "paper_id": "10c7fb88-a55a-494b-bfd3-465e22b00107",
+            "location": {
+              "page_index": 6,
+              "crop_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 612.28302,
+              "height": 790.866028,
+              "bbox": [
+                59.57401891090543,
+                562.4484076543133,
+                440.191203595833,
+                728.8877727887116
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 7,
+                "bbox": {
+                  "l": 59.57401891090542,
+                  "t": 728.8877727887116,
+                  "r": 440.191203595833,
+                  "b": 562.4484076543133,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "327f1856-15b8-4f26-84f5-926ddba4d8bd",
+          "kind": "table",
+          "caption": "Table 1. Normalized Tension and Pressure Errors. The RMS errors in the inferred tensions DcRMS and pressures DpRMS have been normalized to the mean ground truth tension ScT and RMS ground truth pressurepRMS, respectively, and reported as a percentage.",
+          "locations": [
+            {
+              "page_index": 8,
+              "crop_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 612.28302,
+              "height": 790.866028,
+              "bbox": [
+                122.35815361102803,
+                65.92535574101692,
+                231.93941403428792,
+                734.1121151457313
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 9,
+                "bbox": {
+                  "l": 122.35815361102803,
+                  "t": 734.1121151457313,
+                  "r": 231.93941403428792,
+                  "b": 65.92535574101703,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\327f1856-15b8-4f26-84f5-926ddba4d8bd\\png-300.png",
+              "bytes": 188173,
+              "sha256": "9a28d2a41bebbca343df21aea53cc3f6fbbdbd492a79c341c44a83c074316bbd",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 457,
+                "height": 2784
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\327f1856-15b8-4f26-84f5-926ddba4d8bd\\csv.csv",
+              "bytes": 640,
+              "sha256": "555eac5ddef1cc271d74ab69bbab07b1a27d43cb2ff8bbfa0122eb20d318dea0",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 14,
+                "columns": 7,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\327f1856-15b8-4f26-84f5-926ddba4d8bd\\html.html",
+              "bytes": 1857,
+              "sha256": "0a223b37204bb1a51bff05c73d110fa9798e7ecb9d190a44424eefd49cddd654",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 1857
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\327f1856-15b8-4f26-84f5-926ddba4d8bd\\segment_1.png",
+              "bytes": 74353,
+              "sha256": "cd04f6072163924b2b9e428a4f85e37ce31b07da4b7df864a09ef6bf422d4fdf",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 228,
+                "height": 1391
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\327f1856-15b8-4f26-84f5-926ddba4d8bd\\thumbnail.png",
+              "bytes": 15184,
+              "sha256": "fc4c331292d7cd542d1358502ad02f61d68602c4eb4837b3d8da76792a0f44d0",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 63,
+                "height": 384
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\327f1856-15b8-4f26-84f5-926ddba4d8bd\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table 1. Normalized Tension and Pressure Errors. The RMS errors in the inferred tensions DcRMS and pressures DpRMS have been normalized to the mean ground truth tension ScT and RMS ground truth pressurepRMS, respectively, and reported as a percentage.",
+            "resource_id": "327f1856-15b8-4f26-84f5-926ddba4d8bd",
+            "paper_id": "10c7fb88-a55a-494b-bfd3-465e22b00107",
+            "location": {
+              "page_index": 8,
+              "crop_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 612.28302,
+              "height": 790.866028,
+              "bbox": [
+                122.35815361102803,
+                65.92535574101692,
+                231.93941403428792,
+                734.1121151457313
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 9,
+                "bbox": {
+                  "l": 122.35815361102803,
+                  "t": 734.1121151457313,
+                  "r": 231.93941403428792,
+                  "b": 65.92535574101703,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "5cfc7705-1c85-4922-8b89-80a903abf292",
+          "kind": "figure",
+          "caption": "Figure 5. CellFIT analysis of cells near the amnioserosa/lateral epidermis boundary during early dorsal closure in a living Drosophila embryo, as imaged in (A) and with inferred Standard Tensions and Pressures illustrated in (B) according to the color bars. The amnioserosa is visible in a wide band from the lower left-hand corner towards the upper right, while the lateral epidermis, identifiable by its smaller cells, is confined to a large triangle in the upper left corner. The boundary between these two tissues is indicated by the black arrows. The blue and green arrows point to features discussed in the text. Overall, the CellFIT equations were very well conditioned - having tension and pressure condition numbers of 30.3 and 15.6, respectively. The tension and pressure residuals are shown in (B) as thin lines emanating from each triple junction and bisecting each cell edge, respectively. These residuals are scaled so that a residual equal to the mean tension has a length equal to the mean cell radius. Even at this scaling, the residuals are generally quite small and many are barely discernable. Finally, confidence limits are shown for individual tensions and pressures, (C) and (D) respectively, by boundary type. The points and bars indicate best estimate +/2 one standard error (based on the covariance matrix), respectively. These confidence limits are a significant, but modest, fraction of the inferred tensions and pressures. Prior investigations have suggested the existence of a uniform high-tension purse-string along the edge of the amnioserosa, but CellFIT reveals a more complex and interesting scenario. See text for details. doi:10.1371/journal.pone.0099116.g005",
+          "locations": [
+            {
+              "page_index": 10,
+              "crop_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 612.28302,
+              "height": 790.866028,
+              "bbox": [
+                59.60958364907282,
+                317.464349263695,
+                491.3942760895054,
+                729.0696954013589
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 11,
+                "bbox": {
+                  "l": 59.60958364907282,
+                  "t": 729.0696954013589,
+                  "r": 491.3942760895054,
+                  "b": 317.464349263695,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\5cfc7705-1c85-4922-8b89-80a903abf292\\png-300.png",
+              "bytes": 1440224,
+              "sha256": "26b2c9138a537d7b949890af3256bff123715eb2edcefc61cc28fd7dd5440839",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 1799,
+                "height": 1715
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\5cfc7705-1c85-4922-8b89-80a903abf292\\original.original",
+              "bytes": 327058,
+              "sha256": "e5ef09ebbba428dc06e355477d60de23d005da72e9ccb79fafec4adaaf81efe5",
+              "format": "original",
+              "dpi": null,
+              "decoded": {
+                "format": "JPEG",
+                "width": 2186,
+                "height": 2095
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\5cfc7705-1c85-4922-8b89-80a903abf292\\segment_1.png",
+              "bytes": 470923,
+              "sha256": "7e5fb4de5b5370fc3ba1e83e6c226f23b42fbeba9390f2a4514425bb9013e9d6",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 899,
+                "height": 857
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\5cfc7705-1c85-4922-8b89-80a903abf292\\thumbnail.png",
+              "bytes": 133722,
+              "sha256": "24f33cd0b1a2ec43ac8154d2aed185b396be9c59bae4fc096ae78507c3ef7551",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 403,
+                "height": 384
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\5cfc7705-1c85-4922-8b89-80a903abf292\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Figure 5. CellFIT analysis of cells near the amnioserosa/lateral epidermis boundary during early dorsal closure in a living Drosophila embryo, as imaged in (A) and with inferred Standard Tensions and Pressures illustrated in (B) according to the color bars. The amnioserosa is visible in a wide band from the lower left-hand corner towards the upper right, while the lateral epidermis, identifiable by its smaller cells, is confined to a large triangle in the upper left corner. The boundary between these two tissues is indicated by the black arrows. The blue and green arrows point to features discussed in the text. Overall, the CellFIT equations were very well conditioned - having tension and pressure condition numbers of 30.3 and 15.6, respectively. The tension and pressure residuals are shown in (B) as thin lines emanating from each triple junction and bisecting each cell edge, respectively. These residuals are scaled so that a residual",
+            "resource_id": "5cfc7705-1c85-4922-8b89-80a903abf292",
+            "paper_id": "10c7fb88-a55a-494b-bfd3-465e22b00107",
+            "location": {
+              "page_index": 10,
+              "crop_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 612.28302,
+              "height": 790.866028,
+              "bbox": [
+                59.60958364907282,
+                317.464349263695,
+                491.3942760895054,
+                729.0696954013589
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 11,
+                "bbox": {
+                  "l": 59.60958364907282,
+                  "t": 729.0696954013589,
+                  "r": 491.3942760895054,
+                  "b": 317.464349263695,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "933ef725-0498-4a81-abf2-dbf798bb7d24",
+          "kind": "figure",
+          "caption": "Figure 6. CellFIT analysis of a wing imaginal disc from a living Drosophila larva. (A) shows the inferred Standard Tensions based on Fig. 4D of Reference [4]. The tension equations are well conditioned (condition number of 11.1), the confidence limits are acceptable and the force residuals are a bit larger than for the previous case. The black arrows in (A) indicate the boundary between compartments within the imaginal disc. (B) shows that the forces along that boundary tend to be higher than those elsewhere (see also text). Pressures were not calculated as boundary curvatures could not be obtained from the source image. doi:10.1371/journal.pone.0099116.g006",
+          "locations": [
+            {
+              "page_index": 11,
+              "crop_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 612.28302,
+              "height": 790.866028,
+              "bbox": [
+                59.05017249327032,
+                197.73554674343438,
+                441.03122335535045,
+                725.8209476406298
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 12,
+                "bbox": {
+                  "l": 59.050172493270324,
+                  "t": 725.8209476406298,
+                  "r": 441.03122335535045,
+                  "b": 197.73554674343438,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\933ef725-0498-4a81-abf2-dbf798bb7d24\\png-300.png",
+              "bytes": 942599,
+              "sha256": "0e21e9d9ec796a35323db36765b39ca6ebb5e7d8b9fd2a56df3a55a0c3395eb8",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 1591,
+                "height": 2200
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\933ef725-0498-4a81-abf2-dbf798bb7d24\\original.original",
+              "bytes": 191277,
+              "sha256": "6d32837c85e2ee42fa012ad8a3adf849f5026364b45c9d50b0a58409b6773cfe",
+              "format": "original",
+              "dpi": null,
+              "decoded": {
+                "format": "JPEG",
+                "width": 1750,
+                "height": 2441
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\933ef725-0498-4a81-abf2-dbf798bb7d24\\segment_1.png",
+              "bytes": 310302,
+              "sha256": "8d3233bdd7186299c00e1df56ef69313375ce9c1b2de8481996ed8dabb02c5d3",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 795,
+                "height": 1100
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\933ef725-0498-4a81-abf2-dbf798bb7d24\\thumbnail.png",
+              "bytes": 56354,
+              "sha256": "51019be5944f391ffb3240dab77fc8aead8b73a92d7656f99dc266ca94f5c98f",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 278,
+                "height": 384
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\933ef725-0498-4a81-abf2-dbf798bb7d24\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Figure 6. CellFIT analysis of a wing imaginal disc from a living Drosophila larva. (A) shows the inferred Standard Tensions based on Fig. 4D of Reference [4]. The tension equations are well conditioned (condition number of 11.1), the confidence limits are acceptable and the force residuals are a bit larger than for the previous case. The black arrows in (A) indicate the boundary between compartments within the imaginal disc. (B) shows that the forces along that boundary tend to be higher than those elsewhere (see also text). Pressures were not calculated as boundary curvatures could not be obtained from the source image. doi:10.1371/journal.pone.0099116.g006",
+            "resource_id": "933ef725-0498-4a81-abf2-dbf798bb7d24",
+            "paper_id": "10c7fb88-a55a-494b-bfd3-465e22b00107",
+            "location": {
+              "page_index": 11,
+              "crop_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 612.28302,
+              "height": 790.866028,
+              "bbox": [
+                59.05017249327032,
+                197.73554674343438,
+                441.03122335535045,
+                725.8209476406298
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 12,
+                "bbox": {
+                  "l": 59.050172493270324,
+                  "t": 725.8209476406298,
+                  "r": 441.03122335535045,
+                  "b": 197.73554674343438,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "35eda981-4a7c-4e25-86c0-ae588acd9f01",
+          "kind": "figure",
+          "caption": "Figure 7. CellFIT analysis of an image of a dragonfly wing, published as Fig. 162 in Thompson's On Growth and Form [60]. (A) shows the inferred Standard Tensions and Pressures. The CellFIT equations were well conditioned (tension and pressure condition numbers of 16.7 and 13.9 respectively), the residuals are quite small, and the confidence limits for the tensions and pressures are acceptable (B and C). As noted in the text, the tensions along the veins (indicated with arrows) are significantly higher than those along the other cell edges. This example shows that CellFIT can extract useful information from historical images or from fixed or otherwise non-living tissues. doi:10.1371/journal.pone.0099116.g007",
+          "locations": [
+            {
+              "page_index": 12,
+              "crop_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 612.28302,
+              "height": 790.866028,
+              "bbox": [
+                58.86507125262624,
+                149.75258614698987,
+                536.0884909269876,
+                730.3934152561926
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 13,
+                "bbox": {
+                  "l": 58.86507125262623,
+                  "t": 730.3934152561926,
+                  "r": 536.0884909269876,
+                  "b": 149.75258614698987,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\35eda981-4a7c-4e25-86c0-ae588acd9f01\\png-300.png",
+              "bytes": 798257,
+              "sha256": "5bedad8ad51db9fc6f3f1d8920b95c8fb0bf7cdab9f8a6248fc01e2f8068ffc2",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 1988,
+                "height": 2420
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\35eda981-4a7c-4e25-86c0-ae588acd9f01\\original.original",
+              "bytes": 397055,
+              "sha256": "a1470eb550ba71d31e9ee7dbfc92d27270e0f5b755dfec47a9b1100aa2e30b09",
+              "format": "original",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 2126,
+                "height": 2586
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\35eda981-4a7c-4e25-86c0-ae588acd9f01\\segment_1.png",
+              "bytes": 383625,
+              "sha256": "8214dfb90a580ae83072933df93f753aa89a96c1fafb5882e021fd16855a892e",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 994,
+                "height": 1210
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\35eda981-4a7c-4e25-86c0-ae588acd9f01\\thumbnail.png",
+              "bytes": 107762,
+              "sha256": "ddd7ecf95a6d21f99d6b490a2b5e0a7e8f5ef362240aad5b766b543c57a370b8",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 315,
+                "height": 384
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\resources\\35eda981-4a7c-4e25-86c0-ae588acd9f01\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Figure 7. CellFIT analysis of an image of a dragonfly wing, published as Fig. 162 in Thompson's On Growth and Form [60]. (A) shows the inferred Standard Tensions and Pressures. The CellFIT equations were well conditioned (tension and pressure condition numbers of 16.7 and 13.9 respectively), the residuals are quite small, and the confidence limits for the tensions and pressures are acceptable (B and C). As noted in the text, the tensions along the veins (indicated with arrows) are significantly higher than those along the other cell edges. This example shows that CellFIT can extract useful information from historical images or from fixed or otherwise non-living tissues. doi:10.1371/journal.pone.0099116.g007",
+            "resource_id": "35eda981-4a7c-4e25-86c0-ae588acd9f01",
+            "paper_id": "10c7fb88-a55a-494b-bfd3-465e22b00107",
+            "location": {
+              "page_index": 12,
+              "crop_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 612.28302,
+              "height": 790.866028,
+              "bbox": [
+                58.86507125262624,
+                149.75258614698987,
+                536.0884909269876,
+                730.3934152561926
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 13,
+                "bbox": {
+                  "l": 58.86507125262623,
+                  "t": 730.3934152561926,
+                  "r": 536.0884909269876,
+                  "b": 149.75258614698987,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        }
+      ],
+      "progress": [
+        {
+          "seconds": 0.046,
+          "id": "3e10eef1-b3e6-4833-949b-bd1622391c34",
+          "status": "queued",
+          "phase": "等待解析",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 0.56,
+          "id": "3e10eef1-b3e6-4833-949b-bd1622391c34",
+          "status": "running",
+          "phase": "正在加载解析引擎",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 1.571,
+          "id": "3e10eef1-b3e6-4833-949b-bd1622391c34",
+          "status": "running",
+          "phase": "正在校验离线模型",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 2.078,
+          "id": "3e10eef1-b3e6-4833-949b-bd1622391c34",
+          "status": "running",
+          "phase": "正在读取 PDF",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 5.609,
+          "id": "3e10eef1-b3e6-4833-949b-bd1622391c34",
+          "status": "running",
+          "phase": "正在执行 CPU 版面识别与表格解析",
+          "pages_done": null,
+          "pages_total": 15,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 24.354,
+          "id": "3e10eef1-b3e6-4833-949b-bd1622391c34",
+          "status": "running",
+          "phase": "正在导出图表",
+          "pages_done": null,
+          "pages_total": 15,
+          "resources_count": 3,
+          "error": null
+        },
+        {
+          "seconds": 24.894,
+          "id": "3e10eef1-b3e6-4833-949b-bd1622391c34",
+          "status": "running",
+          "phase": "正在导出图表",
+          "pages_done": null,
+          "pages_total": 15,
+          "resources_count": 6,
+          "error": null
+        },
+        {
+          "seconds": 25.402,
+          "id": "3e10eef1-b3e6-4833-949b-bd1622391c34",
+          "status": "running",
+          "phase": "正在导出图表",
+          "pages_done": null,
+          "pages_total": 15,
+          "resources_count": 10,
+          "error": null
+        },
+        {
+          "seconds": 25.909,
+          "id": "3e10eef1-b3e6-4833-949b-bd1622391c34",
+          "status": "running",
+          "phase": "解析完成",
+          "pages_done": 15,
+          "pages_total": 15,
+          "resources_count": 11,
+          "error": null
+        },
+        {
+          "seconds": 26.922,
+          "id": "3e10eef1-b3e6-4833-949b-bd1622391c34",
+          "status": "completed",
+          "phase": "解析完成",
+          "pages_done": 15,
+          "pages_total": 15,
+          "resources_count": 11,
+          "error": null
+        }
+      ],
+      "source_pdf": {
+        "path": "D:\\project\\PaperVault\\.test-data\\external\\expanded-corpus\\expanded-cellfit.pdf",
+        "bytes": 1951728,
+        "sha256": "1693b50cdf811ee6bdaabb60fd0a26d1a807c310c737a4b0a8f0b5322aaf115a"
+      },
+      "page_count": 15,
+      "paper_id": "10c7fb88-a55a-494b-bfd3-465e22b00107",
+      "job": {
+        "id": "3e10eef1-b3e6-4833-949b-bd1622391c34",
+        "paper_id": "10c7fb88-a55a-494b-bfd3-465e22b00107",
+        "status": "completed",
+        "phase": "解析完成",
+        "error": null,
+        "created_at": "2026-10-09T13:13:30.093301+00:00",
+        "updated_at": "2026-10-09T13:13:56.909537+00:00",
+        "paper_title": "CellFIT: A Cellular Force-Inference Toolkit Using Curvilinear Cell Boundaries",
+        "pages_done": 15,
+        "pages_total": 15,
+        "resources_count": 11
+      },
+      "parse_seconds": 26.926,
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\paper-auto.json",
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text.",
+        "Title inferred from the prominent heading before the abstract; please review metadata."
+      ],
+      "counts": {
+        "figure": 10,
+        "table": 1,
+        "resources": 11
+      },
+      "source_revision": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\10c7fb88-a55a-494b-bfd3-465e22b00107\\revisions\\8b9828b7-474d-44de-80be-84c1b5def0f8",
+      "parser_artifacts": [
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\10c7fb88-a55a-494b-bfd3-465e22b00107\\revisions\\8b9828b7-474d-44de-80be-84c1b5def0f8\\structure.json",
+            "bytes": 613256,
+            "sha256": "7c8ceb2e6991993d4d46fa48391fcd41cf5c96967d625a1715c473d58c1a11d9"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\structure.json",
+            "bytes": 613256,
+            "sha256": "7c8ceb2e6991993d4d46fa48391fcd41cf5c96967d625a1715c473d58c1a11d9"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\10c7fb88-a55a-494b-bfd3-465e22b00107\\revisions\\8b9828b7-474d-44de-80be-84c1b5def0f8\\docling.json",
+            "bytes": 321158,
+            "sha256": "268532c958b5122ac0991547459314ed2310f6048783a281b6b6de8a1acd5102"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\docling.json",
+            "bytes": 321158,
+            "sha256": "268532c958b5122ac0991547459314ed2310f6048783a281b6b6de8a1acd5102"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\10c7fb88-a55a-494b-bfd3-465e22b00107\\revisions\\8b9828b7-474d-44de-80be-84c1b5def0f8\\fulltext.md",
+            "bytes": 77002,
+            "sha256": "20a73b36d59bec73268ac27e9e9e8609a4199cf3e9f5b048c800c6478a327b78"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\fulltext.md",
+            "bytes": 77002,
+            "sha256": "20a73b36d59bec73268ac27e9e9e8609a4199cf3e9f5b048c800c6478a327b78"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\10c7fb88-a55a-494b-bfd3-465e22b00107\\revisions\\8b9828b7-474d-44de-80be-84c1b5def0f8\\worker.log",
+            "bytes": 2438,
+            "sha256": "b39222bc5a39db0e57337756dae082ae517fc3d2875656469affdf5b2e3adb59"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\worker.log",
+            "bytes": 2438,
+            "sha256": "b39222bc5a39db0e57337756dae082ae517fc3d2875656469affdf5b2e3adb59"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\10c7fb88-a55a-494b-bfd3-465e22b00107\\revisions\\8b9828b7-474d-44de-80be-84c1b5def0f8\\result.json",
+            "bytes": 591932,
+            "sha256": "43dd649574c41574307d9f28afe6ca2b485dea327102fe6984bbddba23ebec01"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\result.json",
+            "bytes": 591932,
+            "sha256": "43dd649574c41574307d9f28afe6ca2b485dea327102fe6984bbddba23ebec01"
+          }
+        }
+      ],
+      "parser_warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text.",
+        "Title inferred from the prominent heading before the abstract; please review metadata."
+      ],
+      "engine": {
+        "name": "docling",
+        "version": "2.135.0",
+        "device": "cpu",
+        "ocr": false,
+        "elapsed_seconds": 24.438,
+        "model_manifest_sha256": "bd391d3f352a83665faeb58e2852d465a8eda9ac949fed9017b4022f93a6c2ad",
+        "coordinate_space": "pdf_user_space"
+      },
+      "source_pdf_hash_preserved": true,
+      "auto_baseline_unchanged": true,
+      "seconds": 29.538,
+      "peak_backend_worker_rss_bytes": 2085257216,
+      "worker_processes": [
+        {
+          "pid": 28192,
+          "created_at_epoch": 1791551610.575163,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\10c7fb88-a55a-494b-bfd3-465e22b00107\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\.staging\\8631b552-7889-4a82-961d-e8bfb0fb01c7",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\10c7fb88-a55a-494b-bfd3-465e22b00107\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ],
+      "worker_exit_coverage": "captured",
+      "input_pdf_hash_unchanged": true
+    },
+    {
+      "source": {
+        "id": "expanded-strobe",
+        "title": "The Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) Statement: Guidelines for Reporting Observational Studies",
+        "authors_citation": "von Elm E, Altman DG, Egger M, Pocock SJ, Gøtzsche PC, Vandenbroucke JP, for the STROBE Initiative (2007), PLOS Medicine 4(10): e296.",
+        "source_url": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0040296",
+        "pdf_url": "https://journals.plos.org/plosmedicine/article/file?id=10.1371/journal.pmed.0040296&type=printable",
+        "doi": "10.1371/journal.pmed.0040296",
+        "license": "CC BY",
+        "license_url": "https://journals.plos.org/plosmedicine/s/licenses-and-copyright",
+        "local_path": "D:\\project\\PaperVault\\.test-data\\external\\expanded-corpus\\expanded-strobe.pdf",
+        "layout_notes": "Epidemiological reporting methods; multi-column journal body and long checklist table.",
+        "review_level": "inventory_only",
+        "license_evidence_url": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0040296",
+        "license_note": "The official article declares CC Attribution. Older PLOS papers are not assigned an unprinted version.",
+        "source_verified_at_utc": "2026-10-09T12:55:06.458610+00:00",
+        "sha256": "5969e378c7492e254a97911ceea84db2a0f34aef2680dd261a57c182d292cf8b",
+        "pages": 5,
+        "bytes": 95819,
+        "manifest": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\input-batches\\batch-004.json",
+        "manifest_sha256": "e6c370b0b987f9560ef3578fedd5b10bebd31b76feaf8252110039671524bb18"
+      },
+      "passed": true,
+      "errors": [],
+      "resources": [
+        {
+          "id": "7666db6b-31c0-4715-9437-373bd22bf18d",
+          "kind": "figure",
+          "caption": "",
+          "locations": [
+            {
+              "page_index": 0,
+              "crop_box": [
+                0.0,
+                0.0,
+                593.972,
+                782.986
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                593.972,
+                782.986
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 593.972,
+              "height": 782.986,
+              "bbox": [
+                44.42936692190973,
+                744.3971590340177,
+                189.3285231225627,
+                758.0188236628613
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 1,
+                "bbox": {
+                  "l": 44.42936692190973,
+                  "t": 758.0188236628613,
+                  "r": 189.3285231225627,
+                  "b": 744.3971590340177,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ],
+          "needs_review": true,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\7666db6b-31c0-4715-9437-373bd22bf18d\\png-300.png",
+              "bytes": 12021,
+              "sha256": "12b50514202d31353d62b0439531f422a501df8183a83f2fffd19d6d3abc3068",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 602,
+                "height": 56
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\7666db6b-31c0-4715-9437-373bd22bf18d\\segment_1.png",
+              "bytes": 6141,
+              "sha256": "b8d40076725c835fc2831fef657468f4c469cab174fa8bde557e7a2e4eb6e5a0",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 301,
+                "height": 28
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\7666db6b-31c0-4715-9437-373bd22bf18d\\thumbnail.png",
+              "bytes": 6141,
+              "sha256": "b8d40076725c835fc2831fef657468f4c469cab174fa8bde557e7a2e4eb6e5a0",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 301,
+                "height": 28
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\7666db6b-31c0-4715-9437-373bd22bf18d\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "not_applicable": "Auto parser returned no caption; no caption was fabricated"
+          },
+          "passed": true
+        },
+        {
+          "id": "6493bc90-1234-4305-8916-b70e4db2f174",
+          "kind": "figure",
+          "caption": "",
+          "locations": [
+            {
+              "page_index": 0,
+              "crop_box": [
+                0.0,
+                0.0,
+                593.972,
+                782.986
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                593.972,
+                782.986
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 593.972,
+              "height": 782.986,
+              "bbox": [
+                482.77729057666505,
+                745.3648846507456,
+                548.7750339174623,
+                758.597846207732
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 1,
+                "bbox": {
+                  "l": 482.77729057666505,
+                  "t": 758.597846207732,
+                  "r": 548.7750339174623,
+                  "b": 745.3648846507456,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ],
+          "needs_review": true,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\6493bc90-1234-4305-8916-b70e4db2f174\\png-300.png",
+              "bytes": 6883,
+              "sha256": "cbe99a6513d3b5fe80344193786c731ab67bb07b4583c61c481b09a7be1a625b",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 274,
+                "height": 55
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\6493bc90-1234-4305-8916-b70e4db2f174\\segment_1.png",
+              "bytes": 3377,
+              "sha256": "40f8dc8d85315d2b6b8c0ef697f69c7cec29f159260dc50b341d27065a459684",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 137,
+                "height": 28
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\6493bc90-1234-4305-8916-b70e4db2f174\\thumbnail.png",
+              "bytes": 3377,
+              "sha256": "40f8dc8d85315d2b6b8c0ef697f69c7cec29f159260dc50b341d27065a459684",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 137,
+                "height": 28
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\6493bc90-1234-4305-8916-b70e4db2f174\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "not_applicable": "Auto parser returned no caption; no caption was fabricated"
+          },
+          "passed": true
+        },
+        {
+          "id": "4741fec2-a6b3-46ae-8f4a-69bd03231d11",
+          "kind": "figure",
+          "caption": "",
+          "locations": [
+            {
+              "page_index": 0,
+              "crop_box": [
+                0.0,
+                0.0,
+                593.972,
+                782.986
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                593.972,
+                782.986
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 593.972,
+              "height": 782.986,
+              "bbox": [
+                44.66211733304932,
+                27.18152082304391,
+                62.33873613988188,
+                45.90951848094642
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 1,
+                "bbox": {
+                  "l": 44.66211733304932,
+                  "t": 45.90951848094642,
+                  "r": 62.33873613988189,
+                  "b": 27.18152082304391,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ],
+          "needs_review": true,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\4741fec2-a6b3-46ae-8f4a-69bd03231d11\\png-300.png",
+              "bytes": 4298,
+              "sha256": "1c491d94b92d28523926afb4fcd471518f002414fcff9d1b4ee5f11bc6841fe2",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 72,
+                "height": 77
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\4741fec2-a6b3-46ae-8f4a-69bd03231d11\\original.original",
+              "bytes": 710,
+              "sha256": "4ce622d0711f5bbe5241831d0b875ed35179c1f83a78421275ba4256226863cf",
+              "format": "original",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 75,
+                "height": 71
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\4741fec2-a6b3-46ae-8f4a-69bd03231d11\\segment_1.png",
+              "bytes": 1997,
+              "sha256": "2133772c626518d5fe86ab3cb4fb2f99e1cb4bd8a8d46ef04dd738760f44e108",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 36,
+                "height": 39
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\4741fec2-a6b3-46ae-8f4a-69bd03231d11\\thumbnail.png",
+              "bytes": 1997,
+              "sha256": "2133772c626518d5fe86ab3cb4fb2f99e1cb4bd8a8d46ef04dd738760f44e108",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 36,
+                "height": 39
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\4741fec2-a6b3-46ae-8f4a-69bd03231d11\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "not_applicable": "Auto parser returned no caption; no caption was fabricated"
+          },
+          "passed": true
+        },
+        {
+          "id": "57d08d0d-c29a-49be-bae1-08c187c215e2",
+          "kind": "figure",
+          "caption": "",
+          "locations": [
+            {
+              "page_index": 1,
+              "crop_box": [
+                0.0,
+                0.0,
+                593.972,
+                782.986
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                593.972,
+                782.986
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 593.972,
+              "height": 782.986,
+              "bbox": [
+                44.69617715934471,
+                27.21521162689328,
+                62.38890085884377,
+                45.793370655356966
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 2,
+                "bbox": {
+                  "l": 44.69617715934471,
+                  "t": 45.793370655356966,
+                  "r": 62.38890085884377,
+                  "b": 27.21521162689328,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ],
+          "needs_review": true,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\57d08d0d-c29a-49be-bae1-08c187c215e2\\png-300.png",
+              "bytes": 4302,
+              "sha256": "9b1b00cf52b9e4dde2c8c2d6139d89e0b446e1be76bda251e0f8f0cd5df1b34f",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 73,
+                "height": 77
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\57d08d0d-c29a-49be-bae1-08c187c215e2\\original.original",
+              "bytes": 710,
+              "sha256": "4ce622d0711f5bbe5241831d0b875ed35179c1f83a78421275ba4256226863cf",
+              "format": "original",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 75,
+                "height": 71
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\57d08d0d-c29a-49be-bae1-08c187c215e2\\segment_1.png",
+              "bytes": 1997,
+              "sha256": "2133772c626518d5fe86ab3cb4fb2f99e1cb4bd8a8d46ef04dd738760f44e108",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 36,
+                "height": 39
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\57d08d0d-c29a-49be-bae1-08c187c215e2\\thumbnail.png",
+              "bytes": 1997,
+              "sha256": "2133772c626518d5fe86ab3cb4fb2f99e1cb4bd8a8d46ef04dd738760f44e108",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 36,
+                "height": 39
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\57d08d0d-c29a-49be-bae1-08c187c215e2\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "not_applicable": "Auto parser returned no caption; no caption was fabricated"
+          },
+          "passed": true
+        },
+        {
+          "id": "9cb05bd0-41f6-41f3-8481-205c58fd2117",
+          "kind": "table",
+          "caption": "Table 1. The STROBE Statement-Checklist of Items That Should Be Addressed in Reports of Observational Studies",
+          "locations": [
+            {
+              "page_index": 2,
+              "crop_box": [
+                0.0,
+                0.0,
+                593.972,
+                782.986
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                593.972,
+                782.986
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 593.972,
+              "height": 782.986,
+              "bbox": [
+                43.6560955738363,
+                97.03439781140253,
+                549.956985035906,
+                707.9123911644167
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 3,
+                "bbox": {
+                  "l": 43.6560955738363,
+                  "t": 707.9123911644167,
+                  "r": 549.956985035906,
+                  "b": 97.03439781140241,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [],
+          "needs_review": false,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\9cb05bd0-41f6-41f3-8481-205c58fd2117\\png-300.png",
+              "bytes": 887813,
+              "sha256": "a5cd7c36014285d2c7950b8e46d7ddcea980e9c7c2043f3c17617bf7a4fcb40f",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 2109,
+                "height": 2545
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\9cb05bd0-41f6-41f3-8481-205c58fd2117\\csv.csv",
+              "bytes": 4672,
+              "sha256": "e7ea776095260202624fc33548499cf28fd64c0411d0a6c80e52075cd04e2b2f",
+              "format": "csv",
+              "dpi": null,
+              "decoded": {
+                "rows": 28,
+                "columns": 3,
+                "empty": false
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\9cb05bd0-41f6-41f3-8481-205c58fd2117\\html.html",
+              "bytes": 5728,
+              "sha256": "6547ab04900ee08d6d51987ec386d1f1b2f493255d7669bcd090dd543fff5505",
+              "format": "html",
+              "dpi": null,
+              "decoded": {
+                "characters": 5728
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\9cb05bd0-41f6-41f3-8481-205c58fd2117\\segment_1.png",
+              "bytes": 377692,
+              "sha256": "94efae18c3793421198c61727988a88980c0f01fcffa048c0401a0ceed9e5aea",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 1055,
+                "height": 1272
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\9cb05bd0-41f6-41f3-8481-205c58fd2117\\thumbnail.png",
+              "bytes": 80591,
+              "sha256": "3cde8559680f143ec8e7deed694ec8a446e86075892bceffe85a30521c3b4e47",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 318,
+                "height": 384
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\9cb05bd0-41f6-41f3-8481-205c58fd2117\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "query": "Table 1. The STROBE Statement-Checklist of Items That Should Be Addressed in Reports of Observational Studies",
+            "resource_id": "9cb05bd0-41f6-41f3-8481-205c58fd2117",
+            "paper_id": "4435d985-8cfd-477d-9a8b-5051153d5016",
+            "location": {
+              "page_index": 2,
+              "crop_box": [
+                0.0,
+                0.0,
+                593.972,
+                782.986
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                593.972,
+                782.986
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 593.972,
+              "height": 782.986,
+              "bbox": [
+                43.6560955738363,
+                97.03439781140253,
+                549.956985035906,
+                707.9123911644167
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 3,
+                "bbox": {
+                  "l": 43.6560955738363,
+                  "t": 707.9123911644167,
+                  "r": 549.956985035906,
+                  "b": 97.03439781140241,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          "passed": true
+        },
+        {
+          "id": "dadc9eb6-7358-43eb-af9d-7c41a8266090",
+          "kind": "figure",
+          "caption": "",
+          "locations": [
+            {
+              "page_index": 2,
+              "crop_box": [
+                0.0,
+                0.0,
+                593.972,
+                782.986
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                593.972,
+                782.986
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 593.972,
+              "height": 782.986,
+              "bbox": [
+                44.59305549464884,
+                27.137332160024016,
+                62.356145597515685,
+                44.811393584464554
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 3,
+                "bbox": {
+                  "l": 44.59305549464884,
+                  "t": 44.811393584464554,
+                  "r": 62.356145597515685,
+                  "b": 27.137332160024016,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ],
+          "needs_review": true,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\dadc9eb6-7358-43eb-af9d-7c41a8266090\\png-300.png",
+              "bytes": 4282,
+              "sha256": "2d680e192776bceb0c630334211c8d7f2325cd2f7cddaf2fa58a36dc9c4e39bb",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 73,
+                "height": 73
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\dadc9eb6-7358-43eb-af9d-7c41a8266090\\original.original",
+              "bytes": 710,
+              "sha256": "4ce622d0711f5bbe5241831d0b875ed35179c1f83a78421275ba4256226863cf",
+              "format": "original",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 75,
+                "height": 71
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\dadc9eb6-7358-43eb-af9d-7c41a8266090\\segment_1.png",
+              "bytes": 2007,
+              "sha256": "29333dba9095ea2c8c2ce2ab47d668210aaca12eccb872daa4455fe456f794e6",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 37,
+                "height": 37
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\dadc9eb6-7358-43eb-af9d-7c41a8266090\\thumbnail.png",
+              "bytes": 2007,
+              "sha256": "29333dba9095ea2c8c2ce2ab47d668210aaca12eccb872daa4455fe456f794e6",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 37,
+                "height": 37
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\dadc9eb6-7358-43eb-af9d-7c41a8266090\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "not_applicable": "Auto parser returned no caption; no caption was fabricated"
+          },
+          "passed": true
+        },
+        {
+          "id": "dd41d7f3-fa38-4e45-8de6-14331bfa7727",
+          "kind": "figure",
+          "caption": "",
+          "locations": [
+            {
+              "page_index": 3,
+              "crop_box": [
+                0.0,
+                0.0,
+                593.972,
+                782.986
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                593.972,
+                782.986
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 593.972,
+              "height": 782.986,
+              "bbox": [
+                44.75960495547413,
+                27.202272405125086,
+                62.44122459468135,
+                45.713293962149805
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 4,
+                "bbox": {
+                  "l": 44.75960495547413,
+                  "t": 45.713293962149805,
+                  "r": 62.44122459468135,
+                  "b": 27.202272405124972,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ],
+          "needs_review": true,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\dd41d7f3-fa38-4e45-8de6-14331bfa7727\\png-300.png",
+              "bytes": 4302,
+              "sha256": "9b1b00cf52b9e4dde2c8c2d6139d89e0b446e1be76bda251e0f8f0cd5df1b34f",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 73,
+                "height": 77
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\dd41d7f3-fa38-4e45-8de6-14331bfa7727\\original.original",
+              "bytes": 710,
+              "sha256": "4ce622d0711f5bbe5241831d0b875ed35179c1f83a78421275ba4256226863cf",
+              "format": "original",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 75,
+                "height": 71
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\dd41d7f3-fa38-4e45-8de6-14331bfa7727\\segment_1.png",
+              "bytes": 1997,
+              "sha256": "2133772c626518d5fe86ab3cb4fb2f99e1cb4bd8a8d46ef04dd738760f44e108",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 36,
+                "height": 39
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\dd41d7f3-fa38-4e45-8de6-14331bfa7727\\thumbnail.png",
+              "bytes": 1997,
+              "sha256": "2133772c626518d5fe86ab3cb4fb2f99e1cb4bd8a8d46ef04dd738760f44e108",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 36,
+                "height": 39
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\dd41d7f3-fa38-4e45-8de6-14331bfa7727\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "not_applicable": "Auto parser returned no caption; no caption was fabricated"
+          },
+          "passed": true
+        },
+        {
+          "id": "d7bcac62-2dcf-4563-a990-3ee17b51160b",
+          "kind": "figure",
+          "caption": "",
+          "locations": [
+            {
+              "page_index": 4,
+              "crop_box": [
+                0.0,
+                0.0,
+                593.972,
+                782.986
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                593.972,
+                782.986
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 593.972,
+              "height": 782.986,
+              "bbox": [
+                44.75559208311858,
+                27.304870668296758,
+                62.3814320336801,
+                45.91025088972583
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 5,
+                "bbox": {
+                  "l": 44.75559208311858,
+                  "t": 45.91025088972572,
+                  "r": 62.3814320336801,
+                  "b": 27.304870668296758,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ],
+          "needs_review": true,
+          "errors": [],
+          "exports": [
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\d7bcac62-2dcf-4563-a990-3ee17b51160b\\png-300.png",
+              "bytes": 4302,
+              "sha256": "9b1b00cf52b9e4dde2c8c2d6139d89e0b446e1be76bda251e0f8f0cd5df1b34f",
+              "format": "png",
+              "dpi": 300,
+              "decoded": {
+                "format": "PNG",
+                "width": 73,
+                "height": 77
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\d7bcac62-2dcf-4563-a990-3ee17b51160b\\original.original",
+              "bytes": 710,
+              "sha256": "4ce622d0711f5bbe5241831d0b875ed35179c1f83a78421275ba4256226863cf",
+              "format": "original",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 75,
+                "height": 71
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\d7bcac62-2dcf-4563-a990-3ee17b51160b\\segment_1.png",
+              "bytes": 1997,
+              "sha256": "2133772c626518d5fe86ab3cb4fb2f99e1cb4bd8a8d46ef04dd738760f44e108",
+              "format": "segment_1",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 36,
+                "height": 39
+              }
+            },
+            {
+              "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\d7bcac62-2dcf-4563-a990-3ee17b51160b\\thumbnail.png",
+              "bytes": 1997,
+              "sha256": "2133772c626518d5fe86ab3cb4fb2f99e1cb4bd8a8d46ef04dd738760f44e108",
+              "format": "thumbnail",
+              "dpi": null,
+              "decoded": {
+                "format": "PNG",
+                "width": 36,
+                "height": 39
+              }
+            }
+          ],
+          "auto_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\resources\\d7bcac62-2dcf-4563-a990-3ee17b51160b\\resource-auto.json",
+          "geometry": {
+            "coordinate_space": "pdf_user_space",
+            "segments": 1,
+            "bounds_tolerance_points": 0.5
+          },
+          "caption_search": {
+            "not_applicable": "Auto parser returned no caption; no caption was fabricated"
+          },
+          "passed": true
+        }
+      ],
+      "progress": [
+        {
+          "seconds": 0.044,
+          "id": "7fec1596-dfef-4291-9ea7-e0ef50ffdd6c",
+          "status": "queued",
+          "phase": "等待解析",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 0.556,
+          "id": "7fec1596-dfef-4291-9ea7-e0ef50ffdd6c",
+          "status": "running",
+          "phase": "正在加载解析引擎",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 1.572,
+          "id": "7fec1596-dfef-4291-9ea7-e0ef50ffdd6c",
+          "status": "running",
+          "phase": "正在读取 PDF",
+          "pages_done": null,
+          "pages_total": null,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 5.108,
+          "id": "7fec1596-dfef-4291-9ea7-e0ef50ffdd6c",
+          "status": "running",
+          "phase": "正在执行 CPU 版面识别与表格解析",
+          "pages_done": null,
+          "pages_total": 5,
+          "resources_count": 0,
+          "error": null
+        },
+        {
+          "seconds": 16.777,
+          "id": "7fec1596-dfef-4291-9ea7-e0ef50ffdd6c",
+          "status": "running",
+          "phase": "正在导出图表",
+          "pages_done": null,
+          "pages_total": 5,
+          "resources_count": 7,
+          "error": null
+        },
+        {
+          "seconds": 17.289,
+          "id": "7fec1596-dfef-4291-9ea7-e0ef50ffdd6c",
+          "status": "running",
+          "phase": "解析完成",
+          "pages_done": 5,
+          "pages_total": 5,
+          "resources_count": 8,
+          "error": null
+        },
+        {
+          "seconds": 18.305,
+          "id": "7fec1596-dfef-4291-9ea7-e0ef50ffdd6c",
+          "status": "completed",
+          "phase": "解析完成",
+          "pages_done": 5,
+          "pages_total": 5,
+          "resources_count": 8,
+          "error": null
+        }
+      ],
+      "source_pdf": {
+        "path": "D:\\project\\PaperVault\\.test-data\\external\\expanded-corpus\\expanded-strobe.pdf",
+        "bytes": 95819,
+        "sha256": "5969e378c7492e254a97911ceea84db2a0f34aef2680dd261a57c182d292cf8b"
+      },
+      "page_count": 5,
+      "paper_id": "4435d985-8cfd-477d-9a8b-5051153d5016",
+      "job": {
+        "id": "7fec1596-dfef-4291-9ea7-e0ef50ffdd6c",
+        "paper_id": "4435d985-8cfd-477d-9a8b-5051153d5016",
+        "status": "completed",
+        "phase": "解析完成",
+        "error": null,
+        "created_at": "2026-10-09T13:13:59.643135+00:00",
+        "updated_at": "2026-10-09T13:14:17.496995+00:00",
+        "paper_title": "untitled",
+        "pages_done": 5,
+        "pages_total": 5,
+        "resources_count": 8
+      },
+      "parse_seconds": 18.312,
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\paper-auto.json",
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "counts": {
+        "figure": 7,
+        "table": 1,
+        "resources": 8
+      },
+      "source_revision": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\4435d985-8cfd-477d-9a8b-5051153d5016\\revisions\\30c2d1a1-b45e-4a9a-a6e9-cbc129492185",
+      "parser_artifacts": [
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\4435d985-8cfd-477d-9a8b-5051153d5016\\revisions\\30c2d1a1-b45e-4a9a-a6e9-cbc129492185\\structure.json",
+            "bytes": 311868,
+            "sha256": "6b29f752d9fa9406cd3768981553d811cd6176714fea1ced373db1221a96951e"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\structure.json",
+            "bytes": 311868,
+            "sha256": "6b29f752d9fa9406cd3768981553d811cd6176714fea1ced373db1221a96951e"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\4435d985-8cfd-477d-9a8b-5051153d5016\\revisions\\30c2d1a1-b45e-4a9a-a6e9-cbc129492185\\docling.json",
+            "bytes": 160154,
+            "sha256": "e26ae525bc596709a1f338e4eb27eba1b17f32307698dc6824d3d1cc312085f5"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\docling.json",
+            "bytes": 160154,
+            "sha256": "e26ae525bc596709a1f338e4eb27eba1b17f32307698dc6824d3d1cc312085f5"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\4435d985-8cfd-477d-9a8b-5051153d5016\\revisions\\30c2d1a1-b45e-4a9a-a6e9-cbc129492185\\fulltext.md",
+            "bytes": 41447,
+            "sha256": "513f6177ba67dd4a58f93b0b0ba68459be51df2fed5bccfd5a0d60f8afb25f84"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\fulltext.md",
+            "bytes": 41447,
+            "sha256": "513f6177ba67dd4a58f93b0b0ba68459be51df2fed5bccfd5a0d60f8afb25f84"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\4435d985-8cfd-477d-9a8b-5051153d5016\\revisions\\30c2d1a1-b45e-4a9a-a6e9-cbc129492185\\worker.log",
+            "bytes": 2440,
+            "sha256": "14228074731fcf73679d52e74af18efc3a2f5a94b54fa9a40025064bf4490765"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\worker.log",
+            "bytes": 2440,
+            "sha256": "14228074731fcf73679d52e74af18efc3a2f5a94b54fa9a40025064bf4490765"
+          }
+        },
+        {
+          "original": {
+            "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\4435d985-8cfd-477d-9a8b-5051153d5016\\revisions\\30c2d1a1-b45e-4a9a-a6e9-cbc129492185\\result.json",
+            "bytes": 301123,
+            "sha256": "d19d2b3534d45bd342252644dd67f7d15519a6286dc8b3625db8ab3955b87ec6"
+          },
+          "baseline_copy": {
+            "path": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\result.json",
+            "bytes": 301123,
+            "sha256": "d19d2b3534d45bd342252644dd67f7d15519a6286dc8b3625db8ab3955b87ec6"
+          }
+        }
+      ],
+      "parser_warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "engine": {
+        "name": "docling",
+        "version": "2.135.0",
+        "device": "cpu",
+        "ocr": false,
+        "elapsed_seconds": 15.64,
+        "model_manifest_sha256": "bd391d3f352a83665faeb58e2852d465a8eda9ac949fed9017b4022f93a6c2ad",
+        "coordinate_space": "pdf_user_space"
+      },
+      "source_pdf_hash_preserved": true,
+      "auto_baseline_unchanged": true,
+      "seconds": 19.071,
+      "peak_backend_worker_rss_bytes": 1904119808,
+      "worker_processes": [
+        {
+          "pid": 28540,
+          "created_at_epoch": 1791551640.0498552,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\4435d985-8cfd-477d-9a8b-5051153d5016\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\.staging\\ed32bc63-0d4c-42b5-a56a-f953e3ff0596",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\4435d985-8cfd-477d-9a8b-5051153d5016\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ],
+      "worker_exit_coverage": "captured",
+      "input_pdf_hash_unchanged": true
+    }
+  ],
+  "errors": [],
+  "offline_environment": {
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "PYTHONPATH": null,
+    "VIRTUAL_ENV": null
+  },
+  "machine": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "logical_cpus": 16,
+    "memory_bytes": 16890716160
+  },
+  "scope": "Unedited auto extraction integrity/workflow audit. Counts are observed, never assumed ground truth; precision/recall requires manual source-page review.",
+  "backend_sha256": "567bc425d9df91f4813dfacdf64a8a8e5548381becc5950627830862439dd43a",
+  "models_manifest": {
+    "path": "D:\\project\\PaperVault\\.cache\\models\\papervault-models.json",
+    "bytes": 1806,
+    "sha256": "0667a164e1d7633187c24ba81302ca86bb50dff449f49c420e0217a6fd03fd45"
+  },
+  "health": {
+    "status": "ok",
+    "version": "0.2.1",
+    "protocol": 1
+  },
+  "backend_port": 56542,
+  "backend_pid": 19308,
+  "backend_startup_seconds": 1.188,
+  "auto_baseline_library": {
+    "id": "7115cd2e-f5ce-48da-a875-14cd1d6694f7",
+    "path": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline",
+    "paper_count": 0,
+    "figure_count": 0,
+    "table_count": 0
+  },
+  "shutdown": {
+    "returncode": 0,
+    "forced_termination": false,
+    "backend_port_closed": true,
+    "worker_processes": [
+      {
+        "pid": 28192,
+        "created_at_epoch": 1791551610.575163,
+        "command": [
+          "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+          "--worker",
+          "--source",
+          "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\10c7fb88-a55a-494b-bfd3-465e22b00107\\original.pdf",
+          "--output",
+          "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\.staging\\8631b552-7889-4a82-961d-e8bfb0fb01c7",
+          "--models",
+          "D:\\project\\PaperVault\\.cache\\models"
+        ],
+        "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\10c7fb88-a55a-494b-bfd3-465e22b00107\\original.pdf",
+        "exit_code": 0,
+        "state": "exited",
+        "exit_code_hex": "0x00000000"
+      },
+      {
+        "pid": 28540,
+        "created_at_epoch": 1791551640.0498552,
+        "command": [
+          "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+          "--worker",
+          "--source",
+          "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\4435d985-8cfd-477d-9a8b-5051153d5016\\original.pdf",
+          "--output",
+          "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\.staging\\ed32bc63-0d4c-42b5-a56a-f953e3ff0596",
+          "--models",
+          "D:\\project\\PaperVault\\.cache\\models"
+        ],
+        "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\4435d985-8cfd-477d-9a8b-5051153d5016\\original.pdf",
+        "exit_code": 0,
+        "state": "exited",
+        "exit_code_hex": "0x00000000"
+      }
+    ]
+  },
+  "seconds": 51.184,
+  "finished_at_utc": "2026-10-09T13:14:19.566460+00:00",
+  "summary": {
+    "papers": 2,
+    "papers_passed": 2,
+    "papers_failed": 0,
+    "resources": 19,
+    "resource_failures": 0
+  }
+}

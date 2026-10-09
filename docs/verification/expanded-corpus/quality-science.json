@@ -1,0 +1,2466 @@
+{
+  "schema": "papervault-expanded-corpus-quality-review-v1",
+  "review_complete": true,
+  "reviewed_at_utc": "2026-10-09T13:46:55.015446+00:00",
+  "ground_truth": "tests/corpus/expanded/ground-truth-science.json",
+  "ground_truth_sha256": "e99b4d02e8b56742c2a2dd81a41485f3516ed4ce58588c373eca92f9ca715aeb",
+  "ground_truth_unchanged": true,
+  "source_manifest": "tests/corpus/expanded/sources-science.json",
+  "backend_version": "0.2.1",
+  "backend_sha256": "567bc425d9df91f4813dfacdf64a8a8e5548381becc5950627830862439dd43a",
+  "parser_reports": [
+    "artifacts/real-corpus-expanded/batches/batch-002/report.json",
+    "artifacts/real-corpus-expanded/batches/batch-004/report.json",
+    "artifacts/real-corpus-expanded/batches/batch-005/report.json"
+  ],
+  "method": "Independent frozen source inventory compared against installed-backend baseline. Two deep papers: all 18 scientific resource PNGs visually inspected, three table CSV/HTML/JSON structures read, 20 preselected cells checked at semantic row/column in all three formats. Five inventory-only papers: printed kind/number/page/caption association and warnings checked; six antibiotic subpanel PNGs also viewed to verify fragmentation, without certifying complete crop/text/cell accuracy. Publisher marks classified using source page placement and representative logo/badge PNGs. No parser rerun, product edit or modification of source/ground truth/baseline.",
+  "field_semantics": {
+    "crop_complete": "Deep review only: all scientific illustration panels/axes or table grid body visible across matched exports. Captions are assessed separately; exclusion of explanatory footnotes is explicitly noted. null means not reviewed at this level.",
+    "correct_number": "Every matched resource segment has the logical printed number; unnumbered fragments make this false.",
+    "caption_association": "correct/partial/missing refers to association, not exact fidelity of every mathematical glyph or unit.",
+    "sample_cell_status": "exact: expected string at explicitly mapped semantic row/column in JSON, CSV and expanded HTML grid; normalized: whitespace-only normalization; mismatch: content differs; ambiguous_missing: semantic row/column absent. Missing groups here are confirmed omissions, not merely unidentified tokens.",
+    "auxiliary_logo": "Publisher logos/CrossMark/footer marks are gallery noise, separately counted from fabricated scientific objects. Matched panel fragments are assigned to their true parent object and are not double-counted as extra resources.",
+    "indices": "Physical PDF pages and exported row/col indices are zero-based.",
+    "scope_limit": "Inventory match or format/HTTP success is not content accuracy. No new quantitative accuracy claim is made for unselected cells or five inventory-only papers. Baseline is 0.2.1; no 0.2.2 correction result is included."
+  },
+  "papers": [
+    {
+      "id": "expanded-ecological-network",
+      "paper_id": "50a48ff3-b869-48a7-8134-ca7cb160fae2",
+      "review_level": "deep_review",
+      "pages": 9,
+      "expected_counts": {
+        "figures": 4,
+        "tables": 2
+      },
+      "observed_counts": {
+        "figures": 10,
+        "tables": 2,
+        "resources": 12,
+        "matched_scientific_resource_segments": 10,
+        "auxiliary_logo": 2,
+        "unmatched_scientific_false_detections": 0
+      },
+      "baseline_resources": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/008-expanded-ecological-network/resources-auto.json",
+      "baseline_resources_sha256": "990c2931aa1bf1a7fb26d1475238f7ce94f6dc4676af9369ca047601f7bfce1a",
+      "source_sha256": "386a3d74d4c66cd31358078cfbcfd5422a9257e092870aa8fed29ca1b08d4dda",
+      "source_pdf_unchanged": true,
+      "source_visual_directory": "artifacts/real-corpus-expanded/source-pages/expanded-ecological-network",
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            1
+          ],
+          "caption_reference": "Figure 1. A five-species subnetwork of the Zackenberg pollination network, 2010, including three pollinator species and two plant species.",
+          "resource_ids": [
+            "0c4682a7-66f4-49de-b9a2-ce2bbd3bd974"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "0c4682a7-66f4-49de-b9a2-ce2bbd3bd974",
+              "page_indices": [
+                1
+              ],
+              "number": "1",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/008-expanded-ecological-network/resources/0c4682a7-66f4-49de-b9a2-ce2bbd3bd974/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Figure 2. Direct (A) and indirect (B) species linkage and time delays (days) between species pairs.",
+          "resource_ids": [
+            "2d318fa2-54ec-423e-87f6-131623d99866",
+            "53f69d87-9170-40aa-97ce-2fa076b7e2a2",
+            "4616520d-c5ab-4ea8-893a-c85fbc9a0fc7",
+            "67dd7e5b-e336-40e0-97c2-605a5d601735",
+            "197bb15b-35f4-4ec5-b650-b1bcb3db2428"
+          ],
+          "resource_segments": 5,
+          "correct_type": true,
+          "correct_number": false,
+          "correct_page": true,
+          "caption_association": "partial",
+          "crop_complete": false,
+          "complete_as_single_resource": false,
+          "issues": [
+            {
+              "classification": "fragmentation",
+              "severity": "object_integrity",
+              "detail": "One printed Figure becomes 5 separately selectable/exportable resources. Only the last has the printed number and full caption; uncaptioned fragments carry manual-review warnings."
+            },
+            {
+              "classification": "crop_omission",
+              "severity": "scientific_content",
+              "detail": "Five boxed diagrams survive, but the source A) Direct species linkage and time delay and B) Indirect species linkage and time delay headings are outside every exported crop."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "2d318fa2-54ec-423e-87f6-131623d99866",
+              "page_indices": [
+                2
+              ],
+              "number": "",
+              "caption_present": false,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/008-expanded-ecological-network/resources/2d318fa2-54ec-423e-87f6-131623d99866/png-300.png",
+              "needs_review": true,
+              "warnings": [
+                "No caption association was detected; manual review is required"
+              ]
+            },
+            {
+              "resource_id": "53f69d87-9170-40aa-97ce-2fa076b7e2a2",
+              "page_indices": [
+                2
+              ],
+              "number": "",
+              "caption_present": false,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/008-expanded-ecological-network/resources/53f69d87-9170-40aa-97ce-2fa076b7e2a2/png-300.png",
+              "needs_review": true,
+              "warnings": [
+                "No caption association was detected; manual review is required"
+              ]
+            },
+            {
+              "resource_id": "4616520d-c5ab-4ea8-893a-c85fbc9a0fc7",
+              "page_indices": [
+                2
+              ],
+              "number": "",
+              "caption_present": false,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/008-expanded-ecological-network/resources/4616520d-c5ab-4ea8-893a-c85fbc9a0fc7/png-300.png",
+              "needs_review": true,
+              "warnings": [
+                "No caption association was detected; manual review is required"
+              ]
+            },
+            {
+              "resource_id": "67dd7e5b-e336-40e0-97c2-605a5d601735",
+              "page_indices": [
+                2
+              ],
+              "number": "",
+              "caption_present": false,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/008-expanded-ecological-network/resources/67dd7e5b-e336-40e0-97c2-605a5d601735/png-300.png",
+              "needs_review": true,
+              "warnings": [
+                "No caption association was detected; manual review is required"
+              ]
+            },
+            {
+              "resource_id": "197bb15b-35f4-4ec5-b650-b1bcb3db2428",
+              "page_indices": [
+                2
+              ],
+              "number": "2",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/008-expanded-ecological-network/resources/197bb15b-35f4-4ec5-b650-b1bcb3db2428/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            4
+          ],
+          "caption_reference": "Figure 3. Visualization of the temporal dynamics of the network in 2011.",
+          "resource_ids": [
+            "e67ec122-6b1b-4c08-8bf5-8dcd95bc1948"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "e67ec122-6b1b-4c08-8bf5-8dcd95bc1948",
+              "page_indices": [
+                4
+              ],
+              "number": "3",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/008-expanded-ecological-network/resources/e67ec122-6b1b-4c08-8bf5-8dcd95bc1948/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "4",
+          "page_indices": [
+            5
+          ],
+          "caption_reference": "Figure 4. Temporal segregation of tail pollinators for core plants with the longest tail.",
+          "resource_ids": [
+            "3345e44d-f82c-4a90-9cb6-7672ce000c99"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": false,
+          "complete_as_single_resource": false,
+          "issues": [
+            {
+              "classification": "tight_crop",
+              "severity": "minor_visual_truncation",
+              "detail": "All five plot panels are present; the upper-right 240 axis label is cut at the right boundary and top Season (day) labels touch/cross the upper boundary. This is not a lost panel but fails strict complete-crop review."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "3345e44d-f82c-4a90-9cb6-7672ce000c99",
+              "page_indices": [
+                5
+              ],
+              "number": "4",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/008-expanded-ecological-network/resources/3345e44d-f82c-4a90-9cb6-7672ce000c99/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            3
+          ],
+          "caption_reference": "Table 1. Comparison of static and dynamical networks.",
+          "resource_ids": [
+            "32f141ef-8227-4671-a771-dcbbd599d726"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "32f141ef-8227-4671-a771-dcbbd599d726",
+              "page_indices": [
+                3
+              ],
+              "number": "1",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/008-expanded-ecological-network/resources/32f141ef-8227-4671-a771-dcbbd599d726/png-300.png",
+              "needs_review": false,
+              "warnings": [],
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/008-expanded-ecological-network/resources/32f141ef-8227-4671-a771-dcbbd599d726/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/008-expanded-ecological-network/resources/32f141ef-8227-4671-a771-dcbbd599d726/html.html"
+            }
+          ],
+          "structured_shape_correct": true,
+          "table_structure_note": "22 x 5 padded grid preserves the three stacked table sections; HTML includes colspan=2 for Static/Dynamical networks. No exhaustive cell score beyond the fixed sample set on Table 2."
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Table 2. Frequency of direct and indirect species interactions and their time delays.",
+          "resource_ids": [
+            "e97730dd-1ab2-4fbf-adcc-cf35a0f29897"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": false,
+          "correct_page": true,
+          "caption_association": "missing",
+          "crop_complete": false,
+          "complete_as_single_resource": false,
+          "issues": [
+            {
+              "classification": "missing_table_sections",
+              "severity": "scientific_content",
+              "detail": "Only C-E are captured in PNG/CSV/HTML/JSON. Entire direct-linkage sections A and B, their headings, Table 2 caption/number and the explanatory footnote are absent; no other resource contains them. Four preselected A/B cells are therefore missing. This is one page, not a cross-page stitching failure."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "e97730dd-1ab2-4fbf-adcc-cf35a0f29897",
+              "page_indices": [
+                6
+              ],
+              "number": "",
+              "caption_present": false,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/008-expanded-ecological-network/resources/e97730dd-1ab2-4fbf-adcc-cf35a0f29897/png-300.png",
+              "needs_review": true,
+              "warnings": [
+                "No caption association was detected; manual review is required"
+              ],
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/008-expanded-ecological-network/resources/e97730dd-1ab2-4fbf-adcc-cf35a0f29897/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/008-expanded-ecological-network/resources/e97730dd-1ab2-4fbf-adcc-cf35a0f29897/html.html"
+            }
+          ],
+          "structured_shape_correct": false,
+          "footnote_included": false
+        }
+      ],
+      "extra_resources": [
+        {
+          "resource_id": "d37cd651-5edc-46da-a6aa-e4307f3c2be9",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            0
+          ],
+          "bbox_pdf": [
+            57.394110786243836,
+            751.4127160860859,
+            199.82670350807675,
+            764.6206837462656
+          ],
+          "reason": "Open Access publication banner on first page.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/008-expanded-ecological-network/resources/d37cd651-5edc-46da-a6aa-e4307f3c2be9/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "b7535ee9-1478-4e0e-af8c-4265ac4a9d46",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            0
+          ],
+          "bbox_pdf": [
+            476.2940079797522,
+            750.7764560701138,
+            554.1101123182706,
+            769.4163381940706
+          ],
+          "reason": "Publisher PLOS header logo on first page.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/008-expanded-ecological-network/resources/b7535ee9-1478-4e0e-af8c-4265ac4a9d46/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        }
+      ],
+      "sample_cells": [
+        {
+          "kind": "table",
+          "number": "2",
+          "page_index": 6,
+          "row_label": "A / From plant to pollinator",
+          "column_label": "Delay between linked species (days)",
+          "expected": "8.4",
+          "resource_id": "e97730dd-1ab2-4fbf-adcc-cf35a0f29897",
+          "exported_row_index": null,
+          "exported_col_index": null,
+          "actual": {
+            "json": null,
+            "csv": null,
+            "html": null
+          },
+          "status": "ambiguous_missing",
+          "issue": "Confirmed missing source section A/B in every table export; no semantic cell exists."
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_index": 6,
+          "row_label": "A / From pollinator to plant",
+          "column_label": "Delay between linked species (days)",
+          "expected": "6.2",
+          "resource_id": "e97730dd-1ab2-4fbf-adcc-cf35a0f29897",
+          "exported_row_index": null,
+          "exported_col_index": null,
+          "actual": {
+            "json": null,
+            "csv": null,
+            "html": null
+          },
+          "status": "ambiguous_missing",
+          "issue": "Confirmed missing source section A/B in every table export; no semantic cell exists."
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_index": 6,
+          "row_label": "B / From core",
+          "column_label": "To core",
+          "expected": "9",
+          "resource_id": "e97730dd-1ab2-4fbf-adcc-cf35a0f29897",
+          "exported_row_index": null,
+          "exported_col_index": null,
+          "actual": {
+            "json": null,
+            "csv": null,
+            "html": null
+          },
+          "status": "ambiguous_missing",
+          "issue": "Confirmed missing source section A/B in every table export; no semantic cell exists."
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_index": 6,
+          "row_label": "B / From core",
+          "column_label": "To tail",
+          "expected": "25",
+          "resource_id": "e97730dd-1ab2-4fbf-adcc-cf35a0f29897",
+          "exported_row_index": null,
+          "exported_col_index": null,
+          "actual": {
+            "json": null,
+            "csv": null,
+            "html": null
+          },
+          "status": "ambiguous_missing",
+          "issue": "Confirmed missing source section A/B in every table export; no semantic cell exists."
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_index": 6,
+          "row_label": "C / From pollinator to pollinator",
+          "column_label": "Overlapping phenophases / Early-to-late",
+          "expected": "1740 (29%)",
+          "resource_id": "e97730dd-1ab2-4fbf-adcc-cf35a0f29897",
+          "exported_row_index": 2,
+          "exported_col_index": 2,
+          "actual": {
+            "json": "1740 (29%)",
+            "csv": "1740 (29%)",
+            "html": "1740 (29%)"
+          },
+          "status": "exact"
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_index": 6,
+          "row_label": "C / From pollinator to pollinator",
+          "column_label": "Non-overlapping phenophases / Late-to-early",
+          "expected": "1319 (22%)",
+          "resource_id": "e97730dd-1ab2-4fbf-adcc-cf35a0f29897",
+          "exported_row_index": 2,
+          "exported_col_index": 5,
+          "actual": {
+            "json": "1319 (22%)",
+            "csv": "1319 (22%)",
+            "html": "1319 (22%)"
+          },
+          "status": "exact"
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_index": 6,
+          "row_label": "C / From pollinator to pollinator",
+          "column_label": "Total",
+          "expected": "6006",
+          "resource_id": "e97730dd-1ab2-4fbf-adcc-cf35a0f29897",
+          "exported_row_index": 2,
+          "exported_col_index": 6,
+          "actual": {
+            "json": "6006",
+            "csv": "6006",
+            "html": "6006"
+          },
+          "status": "exact"
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_index": 6,
+          "row_label": "C / Total",
+          "column_label": "Total",
+          "expected": "11842",
+          "resource_id": "e97730dd-1ab2-4fbf-adcc-cf35a0f29897",
+          "exported_row_index": 6,
+          "exported_col_index": 6,
+          "actual": {
+            "json": "11842",
+            "csv": "11842",
+            "html": "11842"
+          },
+          "status": "exact"
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_index": 6,
+          "row_label": "D / Mean delay",
+          "column_label": "Non-overlapping phenophases / Early-to-late",
+          "expected": "31",
+          "resource_id": "e97730dd-1ab2-4fbf-adcc-cf35a0f29897",
+          "exported_row_index": 12,
+          "exported_col_index": 4,
+          "actual": {
+            "json": "31",
+            "csv": "31",
+            "html": "31"
+          },
+          "status": "exact"
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_index": 6,
+          "row_label": "E / From tail",
+          "column_label": "To tail",
+          "expected": "40",
+          "resource_id": "e97730dd-1ab2-4fbf-adcc-cf35a0f29897",
+          "exported_row_index": 15,
+          "exported_col_index": 3,
+          "actual": {
+            "json": "40",
+            "csv": "40",
+            "html": "40"
+          },
+          "status": "exact"
+        }
+      ],
+      "sample_cell_counts": {
+        "ambiguous_missing": 4,
+        "exact": 6
+      },
+      "notes": [
+        "All expected tables are single-page; this paper does not test cross-page table merging. No duplicate data rows found in the retained selected table grid, but CellFIT method-label shattering and ecological missing sections remain failures."
+      ]
+    },
+    {
+      "id": "expanded-occupancy-response",
+      "paper_id": "de570135-39db-4b98-8077-feebb8805f79",
+      "review_level": "inventory_only",
+      "pages": 14,
+      "expected_counts": {
+        "figures": 6,
+        "tables": 4
+      },
+      "observed_counts": {
+        "figures": 9,
+        "tables": 4,
+        "resources": 13,
+        "matched_scientific_resource_segments": 10,
+        "auxiliary_logo": 3,
+        "unmatched_scientific_false_detections": 0
+      },
+      "baseline_resources": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/resources-auto.json",
+      "baseline_resources_sha256": "f5ec87cad3a6d836b53942ec70992057799dc9b6e4bc2770dadd67d1c14c580d",
+      "source_sha256": "3959832acf6f229a4f1578d0ff485b8d7191c6bb82372114cba02167047ab0b1",
+      "source_pdf_unchanged": true,
+      "source_visual_directory": "artifacts/real-corpus-expanded/source-pages/expanded-occupancy-response",
+      "inventory_matches": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Figure 1. Log-likelihood surface displaying the maximum-likelihood estimate (P1) and a saddle point at the boundary.",
+          "resource_ids": [
+            "a02a2466-50e5-428c-9896-9e4d75a2b747"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "a02a2466-50e5-428c-9896-9e4d75a2b747",
+              "page_indices": [
+                2
+              ],
+              "number": "1",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/resources/a02a2466-50e5-428c-9896-9e4d75a2b747/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            4
+          ],
+          "caption_reference": "Figure 2. Simulation results of fitting hierarchical and naïve occupancy models to 5000 data sets from Scenario A1 with 55 sites.",
+          "resource_ids": [
+            "9fc0906f-9aec-485e-9118-f3ef75f73e35"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "9fc0906f-9aec-485e-9118-f3ef75f73e35",
+              "page_indices": [
+                4
+              ],
+              "number": "2",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/resources/9fc0906f-9aec-485e-9118-f3ef75f73e35/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            5
+          ],
+          "caption_reference": "Figure 3. Simulation results of fitting hierarchical and naïve occupancy models to 5000 data sets from Scenario A2 with 55 sites.",
+          "resource_ids": [
+            "6eeeb261-bd6a-4774-85b8-9f00752cd2fe"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "6eeeb261-bd6a-4774-85b8-9f00752cd2fe",
+              "page_indices": [
+                5
+              ],
+              "number": "3",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/resources/6eeeb261-bd6a-4774-85b8-9f00752cd2fe/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "4",
+          "page_indices": [
+            7
+          ],
+          "caption_reference": "Figure 4. Beta distributions used to generate detectability in the “abundance” scenarios for the different covariate categories.",
+          "resource_ids": [
+            "a0a0ef0f-2f56-4146-9ace-618166a0d18b"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "a0a0ef0f-2f56-4146-9ace-618166a0d18b",
+              "page_indices": [
+                7
+              ],
+              "number": "4",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/resources/a0a0ef0f-2f56-4146-9ace-618166a0d18b/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "5",
+          "page_indices": [
+            9
+          ],
+          "caption_reference": "Figure 5. Simulation results of fitting hierarchical and naïve occupancy models to 5000 data sets from Scenario B2 with 165 sites.",
+          "resource_ids": [
+            "40dae6c1-055e-44fa-a3eb-d1b64e723666"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "40dae6c1-055e-44fa-a3eb-d1b64e723666",
+              "page_indices": [
+                9
+              ],
+              "number": "5",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/resources/40dae6c1-055e-44fa-a3eb-d1b64e723666/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "6",
+          "page_indices": [
+            10
+          ],
+          "caption_reference": "Figure 6. Asymptotic bias of the naïve and hierarchical occupancy estimators as a function of heterogeneity in detectability.",
+          "resource_ids": [
+            "f09461a9-23bb-4d24-b016-1029cab8615e"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "f09461a9-23bb-4d24-b016-1029cab8615e",
+              "page_indices": [
+                10
+              ],
+              "number": "6",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/resources/f09461a9-23bb-4d24-b016-1029cab8615e/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Table 1. Simulated scenarios (marked with asterisk * those also tested by WLD).",
+          "resource_ids": [
+            "1a9d65f3-76e1-4195-9bdb-362371073782"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "1a9d65f3-76e1-4195-9bdb-362371073782",
+              "page_indices": [
+                2
+              ],
+              "number": "1",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/resources/1a9d65f3-76e1-4195-9bdb-362371073782/png-300.png",
+              "needs_review": false,
+              "warnings": [],
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/resources/1a9d65f3-76e1-4195-9bdb-362371073782/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/resources/1a9d65f3-76e1-4195-9bdb-362371073782/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_indices": [
+            3
+          ],
+          "caption_reference": "Table 2. Counts of different estimation results obtained when fitting hierarchical occupancy models to simulated data from Scenario A1.",
+          "resource_ids": [
+            "de0baaea-30cd-41e7-a3e7-3de5cc791f2a"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "de0baaea-30cd-41e7-a3e7-3de5cc791f2a",
+              "page_indices": [
+                3
+              ],
+              "number": "2",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/resources/de0baaea-30cd-41e7-a3e7-3de5cc791f2a/png-300.png",
+              "needs_review": false,
+              "warnings": [],
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/resources/de0baaea-30cd-41e7-a3e7-3de5cc791f2a/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/resources/de0baaea-30cd-41e7-a3e7-3de5cc791f2a/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "3",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Table 3. Mean square error (MSE) for the occupancy estimator in the hierarchical/naïve models, and their ratio, obtained from simulations of (a) Scenario A1 and (b) Scenario A2 (see Table 1 for details).",
+          "resource_ids": [
+            "8fcdb97f-85c3-4c6f-a11c-711564d46760"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "8fcdb97f-85c3-4c6f-a11c-711564d46760",
+              "page_indices": [
+                6
+              ],
+              "number": "3",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/resources/8fcdb97f-85c3-4c6f-a11c-711564d46760/png-300.png",
+              "needs_review": false,
+              "warnings": [],
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/resources/8fcdb97f-85c3-4c6f-a11c-711564d46760/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/resources/8fcdb97f-85c3-4c6f-a11c-711564d46760/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "4",
+          "page_indices": [
+            8
+          ],
+          "caption_reference": "Table 4. Mean square error (MSE) for the occupancy estimator in the hierarchical/naïve models, and their ratio, obtained from simulations of three “abundance” scenarios: (a) Scenario B1 from [14], (b) Scenario B2 and (c) Scenario B3.",
+          "resource_ids": [
+            "49f8c446-72ba-43a0-bac2-38e1b0892c1d"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "49f8c446-72ba-43a0-bac2-38e1b0892c1d",
+              "page_indices": [
+                8
+              ],
+              "number": "4",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/resources/49f8c446-72ba-43a0-bac2-38e1b0892c1d/png-300.png",
+              "needs_review": false,
+              "warnings": [],
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/resources/49f8c446-72ba-43a0-bac2-38e1b0892c1d/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/resources/49f8c446-72ba-43a0-bac2-38e1b0892c1d/html.html"
+            }
+          ]
+        }
+      ],
+      "extra_resources": [
+        {
+          "resource_id": "1c4acd39-b098-48b2-8340-91564e275107",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            0
+          ],
+          "bbox_pdf": [
+            57.427638982800836,
+            751.4426679240249,
+            199.80231147440028,
+            764.6300430550557
+          ],
+          "reason": "Open Access publication banner on first page.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/resources/1c4acd39-b098-48b2-8340-91564e275107/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "a2b3e427-bedc-4fad-b1f6-8c8a2e689e4e",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            0
+          ],
+          "bbox_pdf": [
+            476.32264539181585,
+            750.8160422234903,
+            554.1412467029068,
+            769.38817660603
+          ],
+          "reason": "Publisher PLOS header logo on first page.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/resources/a2b3e427-bedc-4fad-b1f6-8c8a2e689e4e/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "187db0f1-87f4-44c5-b230-bc5c38dbdda1",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            0
+          ],
+          "bbox_pdf": [
+            563.3540300610591,
+            694.6718112503418,
+            602.5044728931222,
+            733.2670365658747
+          ],
+          "reason": "CrossMark publication-update badge on first page.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/resources/187db0f1-87f4-44c5-b230-bc5c38dbdda1/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        }
+      ],
+      "sample_cells": [],
+      "sample_cell_counts": {},
+      "notes": [
+        "Inventory-only: no claim of complete crop, mathematical-caption fidelity, or table-cell accuracy. The fixed 20-cell score is confined to the two deep papers."
+      ]
+    },
+    {
+      "id": "expanded-scikit-fem",
+      "paper_id": "56191189-230e-47ae-9287-b88dee4504bd",
+      "review_level": "inventory_only",
+      "pages": 4,
+      "expected_counts": {
+        "figures": 1,
+        "tables": 0
+      },
+      "observed_counts": {
+        "figures": 1,
+        "tables": 0,
+        "resources": 1,
+        "matched_scientific_resource_segments": 1,
+        "auxiliary_logo": 0,
+        "unmatched_scientific_false_detections": 0
+      },
+      "baseline_resources": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/010-expanded-scikit-fem/resources-auto.json",
+      "baseline_resources_sha256": "5776cdb1d8cda09da89310acd3febe7414c4a07f7fc93c9961ca44a51289c69f",
+      "source_sha256": "f712cc3b01ceda4fceea956a410688a77cd6e9ecd8394b5aa29c7c0215cbe336",
+      "source_pdf_unchanged": true,
+      "source_visual_directory": "artifacts/real-corpus-expanded/source-pages/expanded-scikit-fem",
+      "inventory_matches": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            1
+          ],
+          "caption_reference": "Figure 1: (Top left.) A combination of triangular and quadrilateral elements is used to solve the linear elastic contact problem.",
+          "resource_ids": [
+            "6f9ed288-7f85-4f8d-958f-b52491e3a305"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "6f9ed288-7f85-4f8d-958f-b52491e3a305",
+              "page_indices": [
+                1
+              ],
+              "number": "1",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/010-expanded-scikit-fem/resources/6f9ed288-7f85-4f8d-958f-b52491e3a305/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "extra_resources": [],
+      "sample_cells": [],
+      "sample_cell_counts": {},
+      "notes": [
+        "Inventory-only: no claim of complete crop, mathematical-caption fidelity, or table-cell accuracy. The fixed 20-cell score is confined to the two deep papers."
+      ]
+    },
+    {
+      "id": "expanded-antibiotic-transport",
+      "paper_id": "82d326d5-51d8-4308-a123-0818911a5373",
+      "review_level": "inventory_only",
+      "pages": 9,
+      "expected_counts": {
+        "figures": 5,
+        "tables": 1
+      },
+      "observed_counts": {
+        "figures": 19,
+        "tables": 1,
+        "resources": 20,
+        "matched_scientific_resource_segments": 9,
+        "auxiliary_logo": 11,
+        "unmatched_scientific_false_detections": 0
+      },
+      "baseline_resources": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources-auto.json",
+      "baseline_resources_sha256": "b5c5438e687307ffd84578c2c723ee32301b819e81cc44e4062030ccbc06a6af",
+      "source_sha256": "bc890b890a6044f0701de877b2e5f1582c577c3b550bbbce39655012ee310788",
+      "source_pdf_unchanged": true,
+      "source_visual_directory": "artifacts/real-corpus-expanded/source-pages/expanded-antibiotic-transport",
+      "inventory_matches": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Figure 1. Fleroxacin uptake by Enterobacter aerogenes population.",
+          "resource_ids": [
+            "7e730bb8-65b4-4dab-82f2-da4438b8fbe2",
+            "2089d9f9-4e4a-416d-b0a6-049297333829"
+          ],
+          "resource_segments": 2,
+          "correct_type": true,
+          "correct_number": false,
+          "correct_page": true,
+          "caption_association": "partial",
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [
+            {
+              "classification": "fragmentation",
+              "severity": "object_integrity",
+              "detail": "One printed Figure becomes 2 separately selectable/exportable resources. Only the last has the printed number and full caption; uncaptioned fragments carry manual-review warnings."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "7e730bb8-65b4-4dab-82f2-da4438b8fbe2",
+              "page_indices": [
+                2
+              ],
+              "number": "",
+              "caption_present": false,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources/7e730bb8-65b4-4dab-82f2-da4438b8fbe2/png-300.png",
+              "needs_review": true,
+              "warnings": [
+                "No caption association was detected; manual review is required"
+              ]
+            },
+            {
+              "resource_id": "2089d9f9-4e4a-416d-b0a6-049297333829",
+              "page_indices": [
+                2
+              ],
+              "number": "1",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources/2089d9f9-4e4a-416d-b0a6-049297333829/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ],
+          "content_audit": "inventory_only; fragment identity visually confirmed, complete crop and text fidelity not certified"
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            3
+          ],
+          "caption_reference": "Figure 2. Fleroxacin uptake by individual Enterobacter aerogenes.",
+          "resource_ids": [
+            "f23f7f12-56dc-4f92-9ca6-1c8391bf6354"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "f23f7f12-56dc-4f92-9ca6-1c8391bf6354",
+              "page_indices": [
+                3
+              ],
+              "number": "2",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources/f23f7f12-56dc-4f92-9ca6-1c8391bf6354/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            4
+          ],
+          "caption_reference": "Figure 3. Individual bacteria microspectro-fluorescence measurement.",
+          "resource_ids": [
+            "e15692d9-d0e6-4044-949f-76c21a8484f4",
+            "fda72bae-2c16-4e76-8007-6eb56f93a23c"
+          ],
+          "resource_segments": 2,
+          "correct_type": true,
+          "correct_number": false,
+          "correct_page": true,
+          "caption_association": "partial",
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [
+            {
+              "classification": "fragmentation",
+              "severity": "object_integrity",
+              "detail": "One printed Figure becomes 2 separately selectable/exportable resources. Only the last has the printed number and full caption; uncaptioned fragments carry manual-review warnings."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "e15692d9-d0e6-4044-949f-76c21a8484f4",
+              "page_indices": [
+                4
+              ],
+              "number": "",
+              "caption_present": false,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources/e15692d9-d0e6-4044-949f-76c21a8484f4/png-300.png",
+              "needs_review": true,
+              "warnings": [
+                "No caption association was detected; manual review is required"
+              ]
+            },
+            {
+              "resource_id": "fda72bae-2c16-4e76-8007-6eb56f93a23c",
+              "page_indices": [
+                4
+              ],
+              "number": "3",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources/fda72bae-2c16-4e76-8007-6eb56f93a23c/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ],
+          "content_audit": "inventory_only; fragment identity visually confirmed, complete crop and text fidelity not certified"
+        },
+        {
+          "kind": "figure",
+          "number": "4",
+          "page_indices": [
+            5
+          ],
+          "caption_reference": "Figure 4. Fluorescence intensity of Fleroxacin from Enterobacter aerogenes bacteria.",
+          "resource_ids": [
+            "45edc27e-aa26-4daf-b63c-a757e5ca519a"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "45edc27e-aa26-4daf-b63c-a757e5ca519a",
+              "page_indices": [
+                5
+              ],
+              "number": "4",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources/45edc27e-aa26-4daf-b63c-a757e5ca519a/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "5",
+          "page_indices": [
+            5
+          ],
+          "caption_reference": "Figure 5. Comparison of fluorescence intensity and concentration of Fleroxacin in individual bacteria and lysated bacteria.",
+          "resource_ids": [
+            "c4f14e94-8647-4c56-9112-6fe925ce6243",
+            "83c0d347-7638-41e0-8b90-abb8b2f92fa7"
+          ],
+          "resource_segments": 2,
+          "correct_type": true,
+          "correct_number": false,
+          "correct_page": true,
+          "caption_association": "partial",
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [
+            {
+              "classification": "fragmentation",
+              "severity": "object_integrity",
+              "detail": "One printed Figure becomes 2 separately selectable/exportable resources. Only the last has the printed number and full caption; uncaptioned fragments carry manual-review warnings."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "c4f14e94-8647-4c56-9112-6fe925ce6243",
+              "page_indices": [
+                5
+              ],
+              "number": "",
+              "caption_present": false,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources/c4f14e94-8647-4c56-9112-6fe925ce6243/png-300.png",
+              "needs_review": true,
+              "warnings": [
+                "No caption association was detected; manual review is required"
+              ]
+            },
+            {
+              "resource_id": "83c0d347-7638-41e0-8b90-abb8b2f92fa7",
+              "page_indices": [
+                5
+              ],
+              "number": "5",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources/83c0d347-7638-41e0-8b90-abb8b2f92fa7/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ],
+          "content_audit": "inventory_only; fragment identity visually confirmed, complete crop and text fidelity not certified"
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Table 1. Major characteristics of bacterial strains and MIC values for fluoroquinolones.",
+          "resource_ids": [
+            "c4ae4371-145c-4073-b354-2ef1d10c9a92"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "c4ae4371-145c-4073-b354-2ef1d10c9a92",
+              "page_indices": [
+                2
+              ],
+              "number": "1",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources/c4ae4371-145c-4073-b354-2ef1d10c9a92/png-300.png",
+              "needs_review": false,
+              "warnings": [],
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources/c4ae4371-145c-4073-b354-2ef1d10c9a92/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources/c4ae4371-145c-4073-b354-2ef1d10c9a92/html.html"
+            }
+          ]
+        }
+      ],
+      "extra_resources": [
+        {
+          "resource_id": "a7d7d6bd-2324-4563-967b-c5beed11f5be",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            0
+          ],
+          "bbox_pdf": [
+            57.37439727783203,
+            751.5171356201172,
+            199.88815307617188,
+            764.7027702331543
+          ],
+          "reason": "Open Access publication banner on first page.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources/a7d7d6bd-2324-4563-967b-c5beed11f5be/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "eb8b672f-b6b6-4627-8810-379f4d0af91e",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            0
+          ],
+          "bbox_pdf": [
+            476.8073425292969,
+            752.9305992126465,
+            554.0457153320312,
+            773.2485866546631
+          ],
+          "reason": "Publisher PLOS header logo on first page.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources/eb8b672f-b6b6-4627-8810-379f4d0af91e/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "d84de2af-5cf1-4c4b-833a-9fef4e267182",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            0
+          ],
+          "bbox_pdf": [
+            57.384620666503906,
+            23.92486572265625,
+            75.40045928955078,
+            42.42755126953125
+          ],
+          "reason": "Repeated PLOS footer globe mark, not a scientific Figure.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources/d84de2af-5cf1-4c4b-833a-9fef4e267182/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "3c900cec-7bda-4401-bba5-48c090bc6451",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            1
+          ],
+          "bbox_pdf": [
+            57.504425048828125,
+            23.93438720703125,
+            75.33416748046875,
+            42.65484619140625
+          ],
+          "reason": "Repeated PLOS footer globe mark, not a scientific Figure.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources/3c900cec-7bda-4401-bba5-48c090bc6451/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "f9b87f14-e1fe-4906-b42a-efbbda23f9eb",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            2
+          ],
+          "bbox_pdf": [
+            57.468013763427734,
+            23.86700439453125,
+            75.32665252685547,
+            42.61590576171875
+          ],
+          "reason": "Repeated PLOS footer globe mark, not a scientific Figure.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources/f9b87f14-e1fe-4906-b42a-efbbda23f9eb/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "f0272524-a75b-46bb-a127-b7360e8b8c44",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            3
+          ],
+          "bbox_pdf": [
+            57.406898498535156,
+            23.9136962890625,
+            75.30026245117188,
+            42.55322265625
+          ],
+          "reason": "Repeated PLOS footer globe mark, not a scientific Figure.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources/f0272524-a75b-46bb-a127-b7360e8b8c44/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "15123a28-e27a-4800-8798-c158a33d890c",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            4
+          ],
+          "bbox_pdf": [
+            57.408111572265625,
+            23.9212646484375,
+            75.29391479492188,
+            42.5369873046875
+          ],
+          "reason": "Repeated PLOS footer globe mark, not a scientific Figure.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources/15123a28-e27a-4800-8798-c158a33d890c/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "ef15d24f-b2f0-44da-9f2d-fa7377e49964",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            5
+          ],
+          "bbox_pdf": [
+            57.43208312988281,
+            23.90020751953125,
+            75.37737274169922,
+            42.5086669921875
+          ],
+          "reason": "Repeated PLOS footer globe mark, not a scientific Figure.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources/ef15d24f-b2f0-44da-9f2d-fa7377e49964/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "79043679-20f0-4073-a57e-1e9732460e72",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            6
+          ],
+          "bbox_pdf": [
+            57.51764678955078,
+            23.873779296875,
+            75.31197357177734,
+            42.49871826171875
+          ],
+          "reason": "Repeated PLOS footer globe mark, not a scientific Figure.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources/79043679-20f0-4073-a57e-1e9732460e72/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "e698c9ee-7e7f-4cc2-9ee3-07891a833887",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            7
+          ],
+          "bbox_pdf": [
+            57.4335823059082,
+            23.84375,
+            75.30337524414062,
+            42.574951171875
+          ],
+          "reason": "Repeated PLOS footer globe mark, not a scientific Figure.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources/e698c9ee-7e7f-4cc2-9ee3-07891a833887/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "375f5ad8-6a04-4a5c-ac10-46f2b8787dd7",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            8
+          ],
+          "bbox_pdf": [
+            57.47861099243164,
+            23.99481201171875,
+            75.37105560302734,
+            42.52056884765625
+          ],
+          "reason": "Repeated PLOS footer globe mark, not a scientific Figure.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/resources/375f5ad8-6a04-4a5c-ac10-46f2b8787dd7/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        }
+      ],
+      "sample_cells": [],
+      "sample_cell_counts": {},
+      "notes": [
+        "Inventory-only: no claim of complete crop, mathematical-caption fidelity, or table-cell accuracy. The fixed 20-cell score is confined to the two deep papers.",
+        "Printed Figures 1, 3 and 5 each split into two resources; upper fragments are unnumbered/uncaptioned, lower fragments carry the whole Figure caption. These are matched fragments, not three new scientific figures."
+      ]
+    },
+    {
+      "id": "expanded-cellfit",
+      "paper_id": "10c7fb88-a55a-494b-bfd3-465e22b00107",
+      "review_level": "deep_review",
+      "pages": 15,
+      "expected_counts": {
+        "figures": 7,
+        "tables": 1
+      },
+      "observed_counts": {
+        "figures": 10,
+        "tables": 1,
+        "resources": 11,
+        "matched_scientific_resource_segments": 8,
+        "auxiliary_logo": 3,
+        "unmatched_scientific_false_detections": 0
+      },
+      "baseline_resources": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/001-expanded-cellfit/resources-auto.json",
+      "baseline_resources_sha256": "db071d88bf035239a231f8b4377b77b5e9a3e4c525099d24f3c8ca8396e4fc66",
+      "source_sha256": "1693b50cdf811ee6bdaabb60fd0a26d1a807c310c737a4b0a8f0b5322aaf115a",
+      "source_pdf_unchanged": true,
+      "source_visual_directory": "artifacts/real-corpus-expanded/source-pages/expanded-cellfit",
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Figure 1. A synthetic planar aggregate and its analysis by CellFIT.",
+          "resource_ids": [
+            "c4bd33c9-c367-4828-aabb-33c1b8d49558"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "c4bd33c9-c367-4828-aabb-33c1b8d49558",
+              "page_indices": [
+                2
+              ],
+              "number": "1",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/001-expanded-cellfit/resources/c4bd33c9-c367-4828-aabb-33c1b8d49558/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            4
+          ],
+          "caption_reference": "Figure 2. Equilibrium considerations.",
+          "resource_ids": [
+            "71c282dc-1617-4f14-a478-f9de2a4751dd"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "71c282dc-1617-4f14-a478-f9de2a4751dd",
+              "page_indices": [
+                4
+              ],
+              "number": "2",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/001-expanded-cellfit/resources/71c282dc-1617-4f14-a478-f9de2a4751dd/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            4
+          ],
+          "caption_reference": "Figure 3. The tension equations are generally overdetermined.",
+          "resource_ids": [
+            "ae202c8d-7e24-499e-a790-6b71bc6c9682"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "ae202c8d-7e24-499e-a790-6b71bc6c9682",
+              "page_indices": [
+                4
+              ],
+              "number": "3",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/001-expanded-cellfit/resources/ae202c8d-7e24-499e-a790-6b71bc6c9682/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ],
+          "classification_note": "Correctly kept as Figure according to the printed caption despite diagram/table-like grid layout."
+        },
+        {
+          "kind": "figure",
+          "number": "4",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Figure 4. The pressure equations are generally overdetermined.",
+          "resource_ids": [
+            "18e22b1e-bf20-483e-b3c5-f3ef612dafbb"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "18e22b1e-bf20-483e-b3c5-f3ef612dafbb",
+              "page_indices": [
+                6
+              ],
+              "number": "4",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/001-expanded-cellfit/resources/18e22b1e-bf20-483e-b3c5-f3ef612dafbb/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ],
+          "classification_note": "Correctly kept as Figure according to the printed caption despite diagram/table-like grid layout."
+        },
+        {
+          "kind": "figure",
+          "number": "5",
+          "page_indices": [
+            10
+          ],
+          "caption_reference": "Figure 5. CellFIT analysis of cells near the amnioserosa/lateral epidermis boundary during early dorsal closure in a living Drosophila embryo, as imaged in (A) and with inferred Standard Tensions and Pressures illustrated in (B) according to the color bars.",
+          "resource_ids": [
+            "5cfc7705-1c85-4922-8b89-80a903abf292"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "5cfc7705-1c85-4922-8b89-80a903abf292",
+              "page_indices": [
+                10
+              ],
+              "number": "5",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/001-expanded-cellfit/resources/5cfc7705-1c85-4922-8b89-80a903abf292/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "6",
+          "page_indices": [
+            11
+          ],
+          "caption_reference": "Figure 6. CellFIT analysis of a wing imaginal disc from a living Drosophila larva.",
+          "resource_ids": [
+            "933ef725-0498-4a81-abf2-dbf798bb7d24"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": false,
+          "complete_as_single_resource": false,
+          "issues": [
+            {
+              "classification": "tight_crop",
+              "severity": "minor_visual_truncation",
+              "detail": "Both panels, arrows, color key and plot labels remain present, but the top cyan edge endpoint in panel A is clipped; the source page shows its rounded tip above the export boundary."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "933ef725-0498-4a81-abf2-dbf798bb7d24",
+              "page_indices": [
+                11
+              ],
+              "number": "6",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/001-expanded-cellfit/resources/933ef725-0498-4a81-abf2-dbf798bb7d24/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "7",
+          "page_indices": [
+            12
+          ],
+          "caption_reference": "Figure 7. CellFIT analysis of an image of a dragonfly wing, published as Fig. 162 in Thompson’s On Growth and Form.",
+          "resource_ids": [
+            "35eda981-4a7c-4e25-86c0-ae588acd9f01"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "35eda981-4a7c-4e25-86c0-ae588acd9f01",
+              "page_indices": [
+                12
+              ],
+              "number": "7",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/001-expanded-cellfit/resources/35eda981-4a7c-4e25-86c0-ae588acd9f01/png-300.png",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            8
+          ],
+          "caption_reference": "Table 1. Normalized Tension and Pressure Errors.",
+          "resource_ids": [
+            "327f1856-15b8-4f26-84f5-926ddba4d8bd"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [
+            {
+              "classification": "rotated_table_structure",
+              "severity": "scientific_structure",
+              "detail": "PNG shows the complete table body with visible plus/minus signs. JSON/CSV/HTML instead form a 14 x 7 transposed grid: 8 measure/noise rows followed by 6 shredded method-label rows; header_rows=0. Requires manual restructuring before use."
+            },
+            {
+              "classification": "source_text_layer_discrepancy",
+              "severity": "scientific_text",
+              "detail": "Six selected plus/minus expressions render correctly in source and PNG but contain digit 6 in the independently extracted PDFium text and exported JSON/CSV/HTML, e.g. 3.5+/-0.7 becomes 3.560.7. This predates CSV/HTML serialization; no blind replacement was applied."
+            },
+            {
+              "classification": "footnote_not_exported",
+              "severity": "scientific_context",
+              "detail": "The source table footnote explaining injected noise and 100 runs is not included in the PNG grid or structured table export."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "327f1856-15b8-4f26-84f5-926ddba4d8bd",
+              "page_indices": [
+                8
+              ],
+              "number": "1",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/001-expanded-cellfit/resources/327f1856-15b8-4f26-84f5-926ddba4d8bd/png-300.png",
+              "needs_review": false,
+              "warnings": [],
+              "csv": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/001-expanded-cellfit/resources/327f1856-15b8-4f26-84f5-926ddba4d8bd/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/001-expanded-cellfit/resources/327f1856-15b8-4f26-84f5-926ddba4d8bd/html.html"
+            }
+          ],
+          "crop_complete_scope": "Complete five-method/eight-value-column table body in source orientation; excludes caption and explanatory footnote.",
+          "structured_shape_correct": false,
+          "footnote_included": false
+        }
+      ],
+      "extra_resources": [
+        {
+          "resource_id": "bc4e786d-967c-4539-b281-181a37a5f92c",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            0
+          ],
+          "bbox_pdf": [
+            57.42997653301581,
+            751.4431941689754,
+            199.86101086852878,
+            764.6434383755385
+          ],
+          "reason": "Open Access publication banner on first page.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/001-expanded-cellfit/resources/bc4e786d-967c-4539-b281-181a37a5f92c/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "592e54ab-8c38-41ee-b221-f6ce1591bdd3",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            0
+          ],
+          "bbox_pdf": [
+            476.33555478765635,
+            750.8212482870397,
+            554.1289501225881,
+            769.452001479524
+          ],
+          "reason": "Publisher PLOS header logo on first page.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/001-expanded-cellfit/resources/592e54ab-8c38-41ee-b221-f6ce1591bdd3/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "8256a3bb-c138-466e-8f08-a000143c71c3",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            0
+          ],
+          "bbox_pdf": [
+            563.346854738186,
+            694.5511363813744,
+            602.466634073771,
+            733.2904502883947
+          ],
+          "reason": "CrossMark publication-update badge on first page.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/001-expanded-cellfit/resources/8256a3bb-c138-466e-8f08-a000143c71c3/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        }
+      ],
+      "sample_cells": [
+        {
+          "kind": "table",
+          "number": "1",
+          "page_index": 8,
+          "row_label": "CellFIT – polyarcs",
+          "column_label": "No Noise / normalized tension error",
+          "data_row_index": 0,
+          "column_index": 1,
+          "expected": "0.7",
+          "resource_id": "327f1856-15b8-4f26-84f5-926ddba4d8bd",
+          "exported_row_index": 7,
+          "exported_col_index": 2,
+          "actual": {
+            "json": "0.7",
+            "csv": "0.7",
+            "html": "0.7"
+          },
+          "status": "exact",
+          "mapping_note": "Semantic source method column is recoverable by joining label fragments across output rows 8-13; measured noise/type identifies output row. The coordinate is not claimed to have an intact automatic header."
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_index": 8,
+          "row_label": "CellFIT – polyarcs",
+          "column_label": "No Noise / normalized pressure error",
+          "data_row_index": 0,
+          "column_index": 2,
+          "expected": "12.5",
+          "resource_id": "327f1856-15b8-4f26-84f5-926ddba4d8bd",
+          "exported_row_index": 6,
+          "exported_col_index": 2,
+          "actual": {
+            "json": "12.5",
+            "csv": "12.5",
+            "html": "12.5"
+          },
+          "status": "exact",
+          "mapping_note": "Semantic source method column is recoverable by joining label fragments across output rows 8-13; measured noise/type identifies output row. The coordinate is not claimed to have an intact automatic header."
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_index": 8,
+          "row_label": "CellFIT – polyarcs",
+          "column_label": "Noise 1 / normalized tension error",
+          "data_row_index": 0,
+          "column_index": 3,
+          "expected": "3.5±0.7",
+          "resource_id": "327f1856-15b8-4f26-84f5-926ddba4d8bd",
+          "exported_row_index": 5,
+          "exported_col_index": 2,
+          "actual": {
+            "json": "3.560.7",
+            "csv": "3.560.7",
+            "html": "3.560.7"
+          },
+          "status": "mismatch",
+          "issue": "source_text_layer_discrepancy: visible plus/minus glyph decoded as digit 6 before export",
+          "mapping_note": "Semantic source method column is recoverable by joining label fragments across output rows 8-13; measured noise/type identifies output row. The coordinate is not claimed to have an intact automatic header."
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_index": 8,
+          "row_label": "CellFIT – polyarcs",
+          "column_label": "Noise 5 / normalized pressure error",
+          "data_row_index": 0,
+          "column_index": 8,
+          "expected": "23.5±5.2",
+          "resource_id": "327f1856-15b8-4f26-84f5-926ddba4d8bd",
+          "exported_row_index": 0,
+          "exported_col_index": 2,
+          "actual": {
+            "json": "23.565.2",
+            "csv": "23.565.2",
+            "html": "23.565.2"
+          },
+          "status": "mismatch",
+          "issue": "source_text_layer_discrepancy: visible plus/minus glyph decoded as digit 6 before export",
+          "mapping_note": "Semantic source method column is recoverable by joining label fragments across output rows 8-13; measured noise/type identifies output row. The coordinate is not claimed to have an intact automatic header."
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_index": 8,
+          "row_label": "CellFIT – polyarcs, short edges removed",
+          "column_label": "No Noise / normalized pressure error",
+          "data_row_index": 1,
+          "column_index": 2,
+          "expected": "0.3",
+          "resource_id": "327f1856-15b8-4f26-84f5-926ddba4d8bd",
+          "exported_row_index": 6,
+          "exported_col_index": 3,
+          "actual": {
+            "json": "0.3",
+            "csv": "0.3",
+            "html": "0.3"
+          },
+          "status": "exact",
+          "mapping_note": "Semantic source method column is recoverable by joining label fragments across output rows 8-13; measured noise/type identifies output row. The coordinate is not claimed to have an intact automatic header."
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_index": 8,
+          "row_label": "CellFIT – polyarcs, short edges removed",
+          "column_label": "Noise 2 / normalized tension error",
+          "data_row_index": 1,
+          "column_index": 5,
+          "expected": "7.3±1.3",
+          "resource_id": "327f1856-15b8-4f26-84f5-926ddba4d8bd",
+          "exported_row_index": 3,
+          "exported_col_index": 3,
+          "actual": {
+            "json": "7.361.3",
+            "csv": "7.361.3",
+            "html": "7.361.3"
+          },
+          "status": "mismatch",
+          "issue": "source_text_layer_discrepancy: visible plus/minus glyph decoded as digit 6 before export",
+          "mapping_note": "Semantic source method column is recoverable by joining label fragments across output rows 8-13; measured noise/type identifies output row. The coordinate is not claimed to have an intact automatic header."
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_index": 8,
+          "row_label": "CellFIT – angles from closest segment",
+          "column_label": "Noise 1 / normalized pressure error",
+          "data_row_index": 2,
+          "column_index": 4,
+          "expected": "13.7±0.9",
+          "resource_id": "327f1856-15b8-4f26-84f5-926ddba4d8bd",
+          "exported_row_index": 4,
+          "exported_col_index": 4,
+          "actual": {
+            "json": "13.760.9",
+            "csv": "13.760.9",
+            "html": "13.760.9"
+          },
+          "status": "mismatch",
+          "issue": "source_text_layer_discrepancy: visible plus/minus glyph decoded as digit 6 before export",
+          "mapping_note": "Semantic source method column is recoverable by joining label fragments across output rows 8-13; measured noise/type identifies output row. The coordinate is not claimed to have an intact automatic header."
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_index": 8,
+          "row_label": "CellFIT – angles from minimal polygons",
+          "column_label": "Noise 5 / normalized tension error",
+          "data_row_index": 3,
+          "column_index": 7,
+          "expected": "31.7±2.5",
+          "resource_id": "327f1856-15b8-4f26-84f5-926ddba4d8bd",
+          "exported_row_index": 1,
+          "exported_col_index": 5,
+          "actual": {
+            "json": "31.762.5",
+            "csv": "31.762.5",
+            "html": "31.762.5"
+          },
+          "status": "mismatch",
+          "issue": "source_text_layer_discrepancy: visible plus/minus glyph decoded as digit 6 before export",
+          "mapping_note": "Semantic source method column is recoverable by joining label fragments across output rows 8-13; measured noise/type identifies output row. The coordinate is not claimed to have an intact automatic header."
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_index": 8,
+          "row_label": "Bayesian – minimal polygons",
+          "column_label": "No Noise / normalized pressure error",
+          "data_row_index": 4,
+          "column_index": 2,
+          "expected": "92.9",
+          "resource_id": "327f1856-15b8-4f26-84f5-926ddba4d8bd",
+          "exported_row_index": 6,
+          "exported_col_index": 6,
+          "actual": {
+            "json": "92.9",
+            "csv": "92.9",
+            "html": "92.9"
+          },
+          "status": "exact",
+          "mapping_note": "Semantic source method column is recoverable by joining label fragments across output rows 8-13; measured noise/type identifies output row. The coordinate is not claimed to have an intact automatic header."
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_index": 8,
+          "row_label": "Bayesian – minimal polygons",
+          "column_label": "Noise 5 / normalized pressure error",
+          "data_row_index": 4,
+          "column_index": 8,
+          "expected": "102±3.0",
+          "resource_id": "327f1856-15b8-4f26-84f5-926ddba4d8bd",
+          "exported_row_index": 0,
+          "exported_col_index": 6,
+          "actual": {
+            "json": "10263.0",
+            "csv": "10263.0",
+            "html": "10263.0"
+          },
+          "status": "mismatch",
+          "issue": "source_text_layer_discrepancy: visible plus/minus glyph decoded as digit 6 before export",
+          "mapping_note": "Semantic source method column is recoverable by joining label fragments across output rows 8-13; measured noise/type identifies output row. The coordinate is not claimed to have an intact automatic header."
+        }
+      ],
+      "sample_cell_counts": {
+        "exact": 4,
+        "mismatch": 6
+      },
+      "notes": [
+        "All expected tables are single-page; this paper does not test cross-page table merging. No duplicate data rows found in the retained selected table grid, but CellFIT method-label shattering and ecological missing sections remain failures."
+      ]
+    },
+    {
+      "id": "expanded-strobe",
+      "paper_id": "4435d985-8cfd-477d-9a8b-5051153d5016",
+      "review_level": "inventory_only",
+      "pages": 5,
+      "expected_counts": {
+        "figures": 0,
+        "tables": 1
+      },
+      "observed_counts": {
+        "figures": 7,
+        "tables": 1,
+        "resources": 8,
+        "matched_scientific_resource_segments": 1,
+        "auxiliary_logo": 7,
+        "unmatched_scientific_false_detections": 0
+      },
+      "baseline_resources": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/002-expanded-strobe/resources-auto.json",
+      "baseline_resources_sha256": "b49394adad61c8110c86634b135149d729ea35c26bfb59a4841f80f80ae79439",
+      "source_sha256": "5969e378c7492e254a97911ceea84db2a0f34aef2680dd261a57c182d292cf8b",
+      "source_pdf_unchanged": true,
+      "source_visual_directory": "artifacts/real-corpus-expanded/source-pages/expanded-strobe",
+      "inventory_matches": [
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Table 1. The STROBE Statement—Checklist of Items That Should Be Addressed in Reports of Observational Studies",
+          "resource_ids": [
+            "9cb05bd0-41f6-41f3-8481-205c58fd2117"
+          ],
+          "resource_segments": 1,
+          "correct_type": true,
+          "correct_number": true,
+          "correct_page": true,
+          "caption_association": "correct",
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "9cb05bd0-41f6-41f3-8481-205c58fd2117",
+              "page_indices": [
+                2
+              ],
+              "number": "1",
+              "caption_present": true,
+              "png": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/002-expanded-strobe/resources/9cb05bd0-41f6-41f3-8481-205c58fd2117/png-300.png",
+              "needs_review": false,
+              "warnings": [],
+              "csv": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/002-expanded-strobe/resources/9cb05bd0-41f6-41f3-8481-205c58fd2117/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/002-expanded-strobe/resources/9cb05bd0-41f6-41f3-8481-205c58fd2117/html.html"
+            }
+          ]
+        }
+      ],
+      "extra_resources": [
+        {
+          "resource_id": "7666db6b-31c0-4715-9437-373bd22bf18d",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            0
+          ],
+          "bbox_pdf": [
+            44.42936692190973,
+            744.3971590340177,
+            189.3285231225627,
+            758.0188236628613
+          ],
+          "reason": "Open Access publication banner on first page.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/002-expanded-strobe/resources/7666db6b-31c0-4715-9437-373bd22bf18d/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "6493bc90-1234-4305-8916-b70e4db2f174",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            0
+          ],
+          "bbox_pdf": [
+            482.77729057666505,
+            745.3648846507456,
+            548.7750339174623,
+            758.597846207732
+          ],
+          "reason": "Publisher PLOS header logo on first page.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/002-expanded-strobe/resources/6493bc90-1234-4305-8916-b70e4db2f174/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "4741fec2-a6b3-46ae-8f4a-69bd03231d11",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            0
+          ],
+          "bbox_pdf": [
+            44.66211733304932,
+            27.18152082304391,
+            62.33873613988188,
+            45.90951848094642
+          ],
+          "reason": "Repeated PLOS footer globe mark, not a scientific Figure.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/002-expanded-strobe/resources/4741fec2-a6b3-46ae-8f4a-69bd03231d11/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "57d08d0d-c29a-49be-bae1-08c187c215e2",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            1
+          ],
+          "bbox_pdf": [
+            44.69617715934471,
+            27.21521162689328,
+            62.38890085884377,
+            45.793370655356966
+          ],
+          "reason": "Repeated PLOS footer globe mark, not a scientific Figure.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/002-expanded-strobe/resources/57d08d0d-c29a-49be-bae1-08c187c215e2/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "dadc9eb6-7358-43eb-af9d-7c41a8266090",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            2
+          ],
+          "bbox_pdf": [
+            44.59305549464884,
+            27.137332160024016,
+            62.356145597515685,
+            44.811393584464554
+          ],
+          "reason": "Repeated PLOS footer globe mark, not a scientific Figure.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/002-expanded-strobe/resources/dadc9eb6-7358-43eb-af9d-7c41a8266090/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "dd41d7f3-fa38-4e45-8de6-14331bfa7727",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            3
+          ],
+          "bbox_pdf": [
+            44.75960495547413,
+            27.202272405125086,
+            62.44122459468135,
+            45.713293962149805
+          ],
+          "reason": "Repeated PLOS footer globe mark, not a scientific Figure.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/002-expanded-strobe/resources/dd41d7f3-fa38-4e45-8de6-14331bfa7727/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "d7bcac62-2dcf-4563-a990-3ee17b51160b",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            4
+          ],
+          "bbox_pdf": [
+            44.75559208311858,
+            27.304870668296758,
+            62.3814320336801,
+            45.91025088972583
+          ],
+          "reason": "Repeated PLOS footer globe mark, not a scientific Figure.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/002-expanded-strobe/resources/d7bcac62-2dcf-4563-a990-3ee17b51160b/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        }
+      ],
+      "sample_cells": [],
+      "sample_cell_counts": {},
+      "notes": [
+        "Inventory-only: no claim of complete crop, mathematical-caption fidelity, or table-cell accuracy. The fixed 20-cell score is confined to the two deep papers."
+      ]
+    },
+    {
+      "id": "expanded-damask-python",
+      "paper_id": "df3de596-f134-4b5e-b03a-bd92ff498adb",
+      "review_level": "inventory_only",
+      "pages": 4,
+      "expected_counts": {
+        "figures": 0,
+        "tables": 0
+      },
+      "observed_counts": {
+        "figures": 4,
+        "tables": 0,
+        "resources": 4,
+        "matched_scientific_resource_segments": 0,
+        "auxiliary_logo": 4,
+        "unmatched_scientific_false_detections": 0
+      },
+      "baseline_resources": "artifacts/real-corpus-expanded/batches/batch-005/runs/20261009T132032Z-c69b982b/001-expanded-damask-python/resources-auto.json",
+      "baseline_resources_sha256": "4a9307d2fda7983e3d4b5de372e02d08720685cc256cc09b30f99651b6bd1b66",
+      "source_sha256": "11d41887d1b3084da9433fa450e753c608c99c827cfc13f431366f394eb0aa87",
+      "source_pdf_unchanged": true,
+      "source_visual_directory": "artifacts/real-corpus-expanded/source-pages/expanded-damask-python",
+      "inventory_matches": [],
+      "extra_resources": [
+        {
+          "resource_id": "08ef396a-8154-4b97-a346-4e5d664632c1",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            0
+          ],
+          "bbox_pdf": [
+            18.96729905324334,
+            770.466989486948,
+            173.27602495549348,
+            829.3724447354681
+          ],
+          "reason": "JOSS header logo; no numbered scientific figure/table in this four-page article.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-005/runs/20261009T132032Z-c69b982b/001-expanded-damask-python/resources/08ef396a-8154-4b97-a346-4e5d664632c1/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "a804830a-d9e9-4123-a84e-ba4406cd89fa",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            1
+          ],
+          "bbox_pdf": [
+            18.862808067116962,
+            770.6666551714102,
+            173.40430216682995,
+            829.1817023693524
+          ],
+          "reason": "JOSS header logo; no numbered scientific figure/table in this four-page article.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-005/runs/20261009T132032Z-c69b982b/001-expanded-damask-python/resources/a804830a-d9e9-4123-a84e-ba4406cd89fa/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "c904aac4-9c31-4c41-ade1-2fc88c08ae6b",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            2
+          ],
+          "bbox_pdf": [
+            19.03257496280798,
+            770.5812781430424,
+            173.30763324066777,
+            829.0868146360062
+          ],
+          "reason": "JOSS header logo; no numbered scientific figure/table in this four-page article.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-005/runs/20261009T132032Z-c69b982b/001-expanded-damask-python/resources/c904aac4-9c31-4c41-ade1-2fc88c08ae6b/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        },
+        {
+          "resource_id": "8ad4458e-bddd-442c-89d9-fad5c043ddc7",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            3
+          ],
+          "bbox_pdf": [
+            19.005131076825545,
+            770.5838641699023,
+            173.28872008642412,
+            829.1540875692549
+          ],
+          "reason": "JOSS header logo; no numbered scientific figure/table in this four-page article.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-005/runs/20261009T132032Z-c69b982b/001-expanded-damask-python/resources/8ad4458e-bddd-442c-89d9-fad5c043ddc7/png-300.png",
+          "needs_review": true,
+          "warnings": [
+            "No caption association was detected; manual review is required"
+          ]
+        }
+      ],
+      "sample_cells": [],
+      "sample_cell_counts": {},
+      "notes": [
+        "Inventory-only: no claim of complete crop, mathematical-caption fidelity, or table-cell accuracy. The fixed 20-cell score is confined to the two deep papers.",
+        "Correct scientific inventory is zero Figures/zero Tables, while the gallery contains four publisher logos. Thus a raw figure_count=4 does not mean four scientific figures."
+      ]
+    }
+  ],
+  "summary": {
+    "papers": 7,
+    "pages": 60,
+    "deep_review_papers": 2,
+    "inventory_only_papers": 5,
+    "expected_figures": 23,
+    "expected_tables": 9,
+    "observed_figures": 60,
+    "observed_tables": 9,
+    "raw_resources": 69,
+    "logical_objects_with_any_matched_resource": 32,
+    "matched_scientific_resource_segments": 39,
+    "auxiliary_logo_resources": 30,
+    "fragmented_logical_figures": 4,
+    "fully_numbered_logical_objects": 27,
+    "correct_caption_association": 27,
+    "partial_caption_association": 4,
+    "missing_caption_association": 1,
+    "deep_logical_objects": 14,
+    "deep_png_resources_visually_reviewed": 18,
+    "deep_table_structures_reviewed": 3,
+    "preselected_cells": 20,
+    "sample_cell_counts": {
+      "ambiguous_missing": 4,
+      "exact": 10,
+      "mismatch": 6
+    },
+    "all_objects_fully_correct": false,
+    "all_source_hashes_preserved": true
+  },
+  "conclusion": "All 32 expected logical scientific objects have at least one matched resource, but this is not full accuracy: four Figures fragment; ecological Table 2 loses A/B; two deep Figure crops have minor clipping; CellFIT table structure and six source-encoded plus/minus cells need human correction. Thirty publisher marks add gallery noise. The 20 preselected semantic cells score 10 exact, 6 mismatched and 4 missing. Five inventory-only papers remain outside an exhaustive content audit.",
+  "source_text_discrepancy_evidence": "artifacts/real-corpus-expanded/science-source-text-discrepancy.json",
+  "evidence_integrity_checks": {
+    "resource_paths_exist": true,
+    "each_baseline_resource_classified_exactly_once": true,
+    "all_matched_kind_and_page_checks_passed": true,
+    "selected_cell_values_agree_across_json_csv_html": true,
+    "note": "Integrity checks certify report references and sampled serialization agreement; they do not turn the recorded content errors into passes."
+  }
+}

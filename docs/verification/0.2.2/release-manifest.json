@@ -1,0 +1,46 @@
+{
+  "version": "0.2.2",
+  "verified_at_utc": "2026-10-09T14:05:15.946280+00:00",
+  "source_commit": "44c568eccca416c9a4103a07a1fae3d315b53b9d",
+  "source_worktree_dirty": true,
+  "installer": {
+    "path": "apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis/PaperVault_0.2.2_x64-setup.exe",
+    "bytes": 536386869,
+    "sha256": "b883a2e3822b2e81ff902214595575c25a026784df09aa068aeaf848a8a89708",
+    "signed": false
+  },
+  "application_sha256": "E35DE8688A86E593CD06FD0338AF57770AAECCC554EFBE718A53C95317BE44AB",
+  "backend_sha256": "B5E1ECE230AB2EC1183057AB1F0050E6899947632897724FEBB117EEAA51755F",
+  "frontend_bundle": "index-Bi9K65xx.js",
+  "license_files_verified": 846,
+  "source_archives_verified": 7,
+  "bundled_documents_verified": {
+    "docs/API.md": "60B12901959090CBEBAD09EB73E6358E6C85A3CA08182AC0C4D402A918667C6B",
+    "docs/DATA_FORMAT.md": "43A237C51C4CF9DC6549FA78564D61BD09B7F95A5F488B7B3B92B38088B67215",
+    "docs/READING_API.md": "1F5FA3A3860DFCDC14FC8C8929E16DFB754E510D7F48C0AB444DE6E9A38B564D",
+    "docs/KNOWN_ISSUES.md": "D37CA07FEECD2E98AF3943040CB5C26DC4097909B9895BE6F870F3A4FC49E14D",
+    "docs/USER_GUIDE.md": "881E4EC0D78AB2DBB8FF5442DCA81CDE4DAB8EBBDF24F7FB9E8A78CD9A5C6EF5",
+    "docs/WINDOWS.md": "27717A4FD8387AF0DFE513341A101EDF53585BB9353787E52BEB47C7FD852C42",
+    "licenses/MPL-SOURCE-NOTICE.md": "F21B0A09822A3CFA2F4F75F443375B76ACC95EB9A12C60B6E2150BA2E7384421",
+    "licenses/license-supplements.json": "063058DA9787865B3B8764D353CBCA3AC9DDB37628D21116D37B300389925E2D",
+    "licenses/web-rust-dependencies.json": "EC86A019906A0D18A7AA8D9CBB6AF567F3874DBDF6C1D7AC5830520E0BA5C777",
+    "licenses/python-dependencies.json": "C0AC7EB2B9054D52EA9365D147F41FB4C158D57B8974F0308A210C17B27CA85E",
+    "licenses/THIRD_PARTY_NOTICES.md": "EADCFB4F142AFFC8E5988BF71005E29964C18460A0690D15DE22B54E5F0B380D"
+  },
+  "verification": {
+    "real_pdf_workflow": true,
+    "installed_tauri": true,
+    "uninstall_retention": false,
+    "installed_reading_notes_legacy_migration": true,
+    "same_id_restored_library_isolation": true,
+    "clean_windows_vm": false,
+    "hosted_ci_executed": false
+  },
+  "prior_version_uninstall_retention": {
+    "version": "0.1.0",
+    "passed": true,
+    "evidence": "docs/verification/uninstall-retention.json",
+    "evidence_sha256": "0caefdac14c6c19d30892910cc785a418a8cdf1b6fef9e14eac5563eb8972509"
+  },
+  "known_diagnostics": "See TEST_REPORT.md and docs/KNOWN_ISSUES.md for observed native diagnostics and the precise validation scope."
+}

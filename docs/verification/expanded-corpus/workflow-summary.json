@@ -1,0 +1,1652 @@
+{
+  "status": "workflow-reviewed",
+  "application_version": "0.2.1",
+  "backend_sha256": "567BC425D9DF91F4813DFACDF64A8A8E5548381BECC5950627830862439DD43A",
+  "source_manifests": [
+    "tests\\corpus\\expanded\\sources-diverse.json",
+    "tests\\corpus\\expanded\\sources-ml.json",
+    "tests\\corpus\\expanded\\sources-science.json"
+  ],
+  "expected_new_papers": 20,
+  "selected_papers": 20,
+  "completed_papers": 20,
+  "pages": 243,
+  "workflow_passed_papers": 20,
+  "resource_counts": {
+    "figure": 130,
+    "table": 96,
+    "resources": 226
+  },
+  "worker_exit_code_counts": {
+    "0": 20
+  },
+  "worker_exit_coverage_complete": true,
+  "native_diagnostic_log_matches": [],
+  "missing_sources": [],
+  "batches": [
+    {
+      "path": "artifacts\\real-corpus-expanded\\batches\\batch-001\\report.json",
+      "sha256": "9955f2dddfaf21dafc83d06d9fae8d97f7754749a269064b9077a9def38c86b0",
+      "run_id": "20261009T125042Z-b5452ca7",
+      "passed": true,
+      "shutdown": {
+        "returncode": 0,
+        "forced_termination": false,
+        "backend_port_closed": true,
+        "worker_processes": [
+          {
+            "pid": 18504,
+            "created_at_epoch": 1791550246.1038692,
+            "command": [
+              "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+              "--worker",
+              "--source",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\976c60f5-ac13-42ed-9efe-135e53a5d921\\original.pdf",
+              "--output",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\.staging\\9fdc6f64-332d-4229-9b30-be968e7e3332",
+              "--models",
+              "D:\\project\\PaperVault\\.cache\\models"
+            ],
+            "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\976c60f5-ac13-42ed-9efe-135e53a5d921\\original.pdf",
+            "exit_code": 0,
+            "state": "exited",
+            "exit_code_hex": "0x00000000"
+          },
+          {
+            "pid": 5924,
+            "created_at_epoch": 1791550327.8493657,
+            "command": [
+              "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+              "--worker",
+              "--source",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\fe577558-deb6-4839-98ea-6a2c4596b71e\\original.pdf",
+              "--output",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\.staging\\d4a6073e-234b-45b4-95c8-a746c8aef305",
+              "--models",
+              "D:\\project\\PaperVault\\.cache\\models"
+            ],
+            "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\fe577558-deb6-4839-98ea-6a2c4596b71e\\original.pdf",
+            "exit_code": 0,
+            "state": "exited",
+            "exit_code_hex": "0x00000000"
+          }
+        ]
+      },
+      "errors": [],
+      "copy_exercise_passed": null
+    },
+    {
+      "path": "artifacts\\real-corpus-expanded\\batches\\batch-002\\report.json",
+      "sha256": "751fe40426fe0d20530c8d349d9af645d5338915e11a19111a5f5164e5624388",
+      "run_id": "20261009T125550Z-ef5b5e72",
+      "passed": true,
+      "shutdown": {
+        "returncode": 0,
+        "forced_termination": false,
+        "backend_port_closed": true,
+        "worker_processes": [
+          {
+            "pid": 27304,
+            "created_at_epoch": 1791550552.7903335,
+            "command": [
+              "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+              "--worker",
+              "--source",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\dfd5e353-97f0-4565-a81b-3d9cece51d73\\original.pdf",
+              "--output",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\.staging\\77318263-9fcb-4076-9063-1469f63d5808",
+              "--models",
+              "D:\\project\\PaperVault\\.cache\\models"
+            ],
+            "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\dfd5e353-97f0-4565-a81b-3d9cece51d73\\original.pdf",
+            "exit_code": 0,
+            "state": "exited",
+            "exit_code_hex": "0x00000000"
+          },
+          {
+            "pid": 29076,
+            "created_at_epoch": 1791550568.6754613,
+            "command": [
+              "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+              "--worker",
+              "--source",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\e78020ad-5613-4128-930d-3092eb5db7bf\\original.pdf",
+              "--output",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\.staging\\40e1d3e8-f26d-4e60-9e26-5ad2223c6fa6",
+              "--models",
+              "D:\\project\\PaperVault\\.cache\\models"
+            ],
+            "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\e78020ad-5613-4128-930d-3092eb5db7bf\\original.pdf",
+            "exit_code": 0,
+            "state": "exited",
+            "exit_code_hex": "0x00000000"
+          },
+          {
+            "pid": 3876,
+            "created_at_epoch": 1791550587.4706428,
+            "command": [
+              "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+              "--worker",
+              "--source",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\399a6623-3590-4a97-8547-476f0c750b60\\original.pdf",
+              "--output",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\.staging\\b7e00a59-5337-4b9d-9ce3-7c1d0f59112b",
+              "--models",
+              "D:\\project\\PaperVault\\.cache\\models"
+            ],
+            "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\399a6623-3590-4a97-8547-476f0c750b60\\original.pdf",
+            "exit_code": 0,
+            "state": "exited",
+            "exit_code_hex": "0x00000000"
+          },
+          {
+            "pid": 12576,
+            "created_at_epoch": 1791550604.6893587,
+            "command": [
+              "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+              "--worker",
+              "--source",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\31dc95d9-4522-4cec-96bc-4dcb9edb4870\\original.pdf",
+              "--output",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\.staging\\e274c49a-15ee-49ab-b5da-b95315cca773",
+              "--models",
+              "D:\\project\\PaperVault\\.cache\\models"
+            ],
+            "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\31dc95d9-4522-4cec-96bc-4dcb9edb4870\\original.pdf",
+            "exit_code": 0,
+            "state": "exited",
+            "exit_code_hex": "0x00000000"
+          },
+          {
+            "pid": 21844,
+            "created_at_epoch": 1791550686.8753147,
+            "command": [
+              "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+              "--worker",
+              "--source",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\21d3ba24-7be1-4166-bfe6-17e37f97f393\\original.pdf",
+              "--output",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\.staging\\aa3346aa-e2ed-4392-bcf4-d30e8bf586bf",
+              "--models",
+              "D:\\project\\PaperVault\\.cache\\models"
+            ],
+            "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\21d3ba24-7be1-4166-bfe6-17e37f97f393\\original.pdf",
+            "exit_code": 0,
+            "state": "exited",
+            "exit_code_hex": "0x00000000"
+          },
+          {
+            "pid": 7312,
+            "created_at_epoch": 1791550761.0781996,
+            "command": [
+              "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+              "--worker",
+              "--source",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\7900a12c-5bd2-4663-843b-b63e387e610c\\original.pdf",
+              "--output",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\.staging\\03ddb817-0d4f-4b91-8109-979b768a38a6",
+              "--models",
+              "D:\\project\\PaperVault\\.cache\\models"
+            ],
+            "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\7900a12c-5bd2-4663-843b-b63e387e610c\\original.pdf",
+            "exit_code": 0,
+            "state": "exited",
+            "exit_code_hex": "0x00000000"
+          },
+          {
+            "pid": 15392,
+            "created_at_epoch": 1791550931.9866452,
+            "command": [
+              "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+              "--worker",
+              "--source",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\339f9bba-004d-4bb0-934a-e0967f5ec3b4\\original.pdf",
+              "--output",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\.staging\\a2a8855a-3f90-4494-8254-fdd9f2a8d946",
+              "--models",
+              "D:\\project\\PaperVault\\.cache\\models"
+            ],
+            "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\339f9bba-004d-4bb0-934a-e0967f5ec3b4\\original.pdf",
+            "exit_code": 0,
+            "state": "exited",
+            "exit_code_hex": "0x00000000"
+          },
+          {
+            "pid": 25192,
+            "created_at_epoch": 1791550980.218728,
+            "command": [
+              "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+              "--worker",
+              "--source",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\50a48ff3-b869-48a7-8134-ca7cb160fae2\\original.pdf",
+              "--output",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\.staging\\c1147354-dede-431f-8541-999f479dd595",
+              "--models",
+              "D:\\project\\PaperVault\\.cache\\models"
+            ],
+            "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\50a48ff3-b869-48a7-8134-ca7cb160fae2\\original.pdf",
+            "exit_code": 0,
+            "state": "exited",
+            "exit_code_hex": "0x00000000"
+          },
+          {
+            "pid": 30660,
+            "created_at_epoch": 1791551011.5897765,
+            "command": [
+              "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+              "--worker",
+              "--source",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\de570135-39db-4b98-8077-feebb8805f79\\original.pdf",
+              "--output",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\.staging\\f2959053-bb40-4938-ba7b-9dce74d29527",
+              "--models",
+              "D:\\project\\PaperVault\\.cache\\models"
+            ],
+            "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\de570135-39db-4b98-8077-feebb8805f79\\original.pdf",
+            "exit_code": 0,
+            "state": "exited",
+            "exit_code_hex": "0x00000000"
+          },
+          {
+            "pid": 19740,
+            "created_at_epoch": 1791551049.6041877,
+            "command": [
+              "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+              "--worker",
+              "--source",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\56191189-230e-47ae-9287-b88dee4504bd\\original.pdf",
+              "--output",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\.staging\\843e5e6a-ad34-4d8a-89b5-903077e57d43",
+              "--models",
+              "D:\\project\\PaperVault\\.cache\\models"
+            ],
+            "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\56191189-230e-47ae-9287-b88dee4504bd\\original.pdf",
+            "exit_code": 0,
+            "state": "exited",
+            "exit_code_hex": "0x00000000"
+          },
+          {
+            "pid": 25740,
+            "created_at_epoch": 1791551084.93255,
+            "command": [
+              "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+              "--worker",
+              "--source",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\82d326d5-51d8-4308-a123-0818911a5373\\original.pdf",
+              "--output",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\.staging\\5fa6a251-ffe9-4109-8586-875a8ca81cfa",
+              "--models",
+              "D:\\project\\PaperVault\\.cache\\models"
+            ],
+            "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\82d326d5-51d8-4308-a123-0818911a5373\\original.pdf",
+            "exit_code": 0,
+            "state": "exited",
+            "exit_code_hex": "0x00000000"
+          }
+        ]
+      },
+      "errors": [],
+      "copy_exercise_passed": true
+    },
+    {
+      "path": "artifacts\\real-corpus-expanded\\batches\\batch-003\\report.json",
+      "sha256": "fe73af254840395ced3a3a124c6445fab596acfe669cbff19b5f542b0ee80f0e",
+      "run_id": "20261009T130706Z-049990b3",
+      "passed": true,
+      "shutdown": {
+        "returncode": 0,
+        "forced_termination": false,
+        "backend_port_closed": true,
+        "worker_processes": [
+          {
+            "pid": 25904,
+            "created_at_epoch": 1791551228.797568,
+            "command": [
+              "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+              "--worker",
+              "--source",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\papers\\6a788dc8-2a0d-4160-a134-aadcde1a0a1f\\original.pdf",
+              "--output",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\.staging\\9a5756cc-260d-4e25-b627-f635cbd10adf",
+              "--models",
+              "D:\\project\\PaperVault\\.cache\\models"
+            ],
+            "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\papers\\6a788dc8-2a0d-4160-a134-aadcde1a0a1f\\original.pdf",
+            "exit_code": 0,
+            "state": "exited",
+            "exit_code_hex": "0x00000000"
+          },
+          {
+            "pid": 23700,
+            "created_at_epoch": 1791551273.6685505,
+            "command": [
+              "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+              "--worker",
+              "--source",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\papers\\3ea6cd99-d8ad-4d4d-960c-8f238f02546d\\original.pdf",
+              "--output",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\.staging\\0658d27b-86fd-4231-b170-d63615080dec",
+              "--models",
+              "D:\\project\\PaperVault\\.cache\\models"
+            ],
+            "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\papers\\3ea6cd99-d8ad-4d4d-960c-8f238f02546d\\original.pdf",
+            "exit_code": 0,
+            "state": "exited",
+            "exit_code_hex": "0x00000000"
+          },
+          {
+            "pid": 2644,
+            "created_at_epoch": 1791551334.0021546,
+            "command": [
+              "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+              "--worker",
+              "--source",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\papers\\7516a751-bfe8-4dea-a4eb-ac2605e0243d\\original.pdf",
+              "--output",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\.staging\\588c435c-9470-45c2-862f-51e2d0ddcc08",
+              "--models",
+              "D:\\project\\PaperVault\\.cache\\models"
+            ],
+            "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\papers\\7516a751-bfe8-4dea-a4eb-ac2605e0243d\\original.pdf",
+            "exit_code": 0,
+            "state": "exited",
+            "exit_code_hex": "0x00000000"
+          },
+          {
+            "pid": 23336,
+            "created_at_epoch": 1791551362.0518188,
+            "command": [
+              "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+              "--worker",
+              "--source",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\papers\\0d95f65d-fc3a-4e2b-873e-8243a7242d01\\original.pdf",
+              "--output",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\.staging\\f68f9c43-dee8-495c-83b5-97184c977455",
+              "--models",
+              "D:\\project\\PaperVault\\.cache\\models"
+            ],
+            "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\papers\\0d95f65d-fc3a-4e2b-873e-8243a7242d01\\original.pdf",
+            "exit_code": 0,
+            "state": "exited",
+            "exit_code_hex": "0x00000000"
+          }
+        ]
+      },
+      "errors": [],
+      "copy_exercise_passed": null
+    },
+    {
+      "path": "artifacts\\real-corpus-expanded\\batches\\batch-004\\report.json",
+      "sha256": "beb0e8284e762b2247187d6a52bc9724e5bf3ec946ac6a0799a91bb9e3d3c86c",
+      "run_id": "20261009T131328Z-1e526b8e",
+      "passed": true,
+      "shutdown": {
+        "returncode": 0,
+        "forced_termination": false,
+        "backend_port_closed": true,
+        "worker_processes": [
+          {
+            "pid": 28192,
+            "created_at_epoch": 1791551610.575163,
+            "command": [
+              "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+              "--worker",
+              "--source",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\10c7fb88-a55a-494b-bfd3-465e22b00107\\original.pdf",
+              "--output",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\.staging\\8631b552-7889-4a82-961d-e8bfb0fb01c7",
+              "--models",
+              "D:\\project\\PaperVault\\.cache\\models"
+            ],
+            "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\10c7fb88-a55a-494b-bfd3-465e22b00107\\original.pdf",
+            "exit_code": 0,
+            "state": "exited",
+            "exit_code_hex": "0x00000000"
+          },
+          {
+            "pid": 28540,
+            "created_at_epoch": 1791551640.0498552,
+            "command": [
+              "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+              "--worker",
+              "--source",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\4435d985-8cfd-477d-9a8b-5051153d5016\\original.pdf",
+              "--output",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\.staging\\ed32bc63-0d4c-42b5-a56a-f953e3ff0596",
+              "--models",
+              "D:\\project\\PaperVault\\.cache\\models"
+            ],
+            "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\4435d985-8cfd-477d-9a8b-5051153d5016\\original.pdf",
+            "exit_code": 0,
+            "state": "exited",
+            "exit_code_hex": "0x00000000"
+          }
+        ]
+      },
+      "errors": [],
+      "copy_exercise_passed": null
+    },
+    {
+      "path": "artifacts\\real-corpus-expanded\\batches\\batch-005\\report.json",
+      "sha256": "5e0be1afa07c24cd6a964965fb63724f7143ce6d71e219c403cca807b50bd772",
+      "run_id": "20261009T132032Z-c69b982b",
+      "passed": true,
+      "shutdown": {
+        "returncode": 0,
+        "forced_termination": false,
+        "backend_port_closed": true,
+        "worker_processes": [
+          {
+            "pid": 3096,
+            "created_at_epoch": 1791552035.2312834,
+            "command": [
+              "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+              "--worker",
+              "--source",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T132032Z-c69b982b\\auto-baseline\\papers\\df3de596-f134-4b5e-b03a-bd92ff498adb\\original.pdf",
+              "--output",
+              "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T132032Z-c69b982b\\auto-baseline\\.staging\\c9548a14-a42a-4c1a-b731-a329827ed1bf",
+              "--models",
+              "D:\\project\\PaperVault\\.cache\\models"
+            ],
+            "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T132032Z-c69b982b\\auto-baseline\\papers\\df3de596-f134-4b5e-b03a-bd92ff498adb\\original.pdf",
+            "exit_code": 0,
+            "state": "exited",
+            "exit_code_hex": "0x00000000"
+          }
+        ]
+      },
+      "errors": [],
+      "copy_exercise_passed": null
+    }
+  ],
+  "papers": [
+    {
+      "source": {
+        "id": "ml-bart-acl2020",
+        "title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension",
+        "authors_citation": "Mike Lewis, Yinhan Liu, Naman Goyal, Marjan Ghazvininejad, Abdelrahman Mohamed, Omer Levy, Veselin Stoyanov, Luke Zettlemoyer (2020), ACL, pp.7871-7880.",
+        "source_url": "https://aclanthology.org/2020.acl-main.703/",
+        "pdf_url": "https://aclanthology.org/2020.acl-main.703.pdf",
+        "license": "CC-BY-4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+        "license_evidence": "Official ACL publisher page and ACL policy: all ACL materials published in or after 2016 are CC BY 4.0. Official publisher PDF, not an arXiv substitute.",
+        "layout_notes": "Two-column paper with wide architecture diagrams, benchmark tables and text-generation examples.",
+        "review_level": "deep_review",
+        "local_path": ".test-data/external/expanded-corpus/ml-bart-acl2020.pdf",
+        "sha256": "3562c723fe7bebb8b362533122b3ca5c065037c8e8d67460654cf3740652bb59",
+        "pages": 10,
+        "bytes": 322247,
+        "final_download_url": "https://aclanthology.org/2020.acl-main.703.pdf",
+        "downloaded_at_utc": "2026-10-09T12:55:18.149369+00:00"
+      },
+      "paper_id": "976c60f5-ac13-42ed-9efe-135e53a5d921",
+      "batch_report": "artifacts\\real-corpus-expanded\\batches\\batch-001\\report.json",
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\001-ml-bart-acl2020\\paper-auto.json",
+      "job_status": "completed",
+      "workflow_passed": true,
+      "pages": 10,
+      "counts": {
+        "figure": 5,
+        "table": 8,
+        "resources": 13
+      },
+      "parse_seconds": 80.366,
+      "peak_backend_worker_rss_bytes": 1908252672,
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "errors": [],
+      "resource_errors": [],
+      "worker_exit_coverage": "captured",
+      "worker_processes": [
+        {
+          "pid": 18504,
+          "created_at_epoch": 1791550246.1038692,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\976c60f5-ac13-42ed-9efe-135e53a5d921\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\.staging\\9fdc6f64-332d-4229-9b30-be968e7e3332",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\976c60f5-ac13-42ed-9efe-135e53a5d921\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "ml-scibert-emnlp2019",
+        "title": "SciBERT: A Pretrained Language Model for Scientific Text",
+        "authors_citation": "Iz Beltagy, Kyle Lo, Arman Cohan (2019), EMNLP-IJCNLP, pp.3615-3620.",
+        "source_url": "https://aclanthology.org/D19-1371/",
+        "pdf_url": "https://aclanthology.org/D19-1371.pdf",
+        "license": "CC-BY-4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+        "license_evidence": "Official ACL publisher page and ACL policy: all ACL materials published in or after 2016 are CC BY 4.0. Official publisher PDF, not an arXiv substitute.",
+        "layout_notes": "Short two-column scientific NLP paper with dense numeric benchmark tables.",
+        "review_level": "inventory_only",
+        "local_path": ".test-data/external/expanded-corpus/ml-scibert-emnlp2019.pdf",
+        "sha256": "42e7bb57b92fbe6077c073edaffaf173728b7b685395700ac255ce0359344268",
+        "pages": 6,
+        "bytes": 187299,
+        "final_download_url": "https://aclanthology.org/D19-1371.pdf",
+        "downloaded_at_utc": "2026-10-09T12:55:18.153185+00:00"
+      },
+      "paper_id": "fe577558-deb6-4839-98ea-6a2c4596b71e",
+      "batch_report": "artifacts\\real-corpus-expanded\\batches\\batch-001\\report.json",
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-001\\runs\\20261009T125042Z-b5452ca7\\002-ml-scibert-emnlp2019\\paper-auto.json",
+      "job_status": "completed",
+      "workflow_passed": true,
+      "pages": 6,
+      "counts": {
+        "figure": 0,
+        "table": 2,
+        "resources": 2
+      },
+      "parse_seconds": 23.373,
+      "peak_backend_worker_rss_bytes": 1850208256,
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "errors": [],
+      "resource_errors": [],
+      "worker_exit_coverage": "captured",
+      "worker_processes": [
+        {
+          "pid": 5924,
+          "created_at_epoch": 1791550327.8493657,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\fe577558-deb6-4839-98ea-6a2c4596b71e\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\.staging\\d4a6073e-234b-45b4-95c8-a746c8aef305",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125042Z-b5452ca7\\auto-baseline\\papers\\fe577558-deb6-4839-98ea-6a2c4596b71e\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "diverse-basictools",
+        "title": "BasicTools: a numerical simulation toolbox",
+        "authors_citation": "Felipe Bordeu, Fabien Casenave, and Julien Cortial (2023). Journal of Open Source Software 8(86), 5142.",
+        "source_url": "https://joss.theoj.org/papers/10.21105/joss.05142",
+        "pdf_url": "https://joss.theoj.org/papers/10.21105/joss.05142.pdf",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence": "Official paper page 1 explicitly states CC BY 4.0 for this paper.",
+        "local_path": ".test-data/external/expanded-corpus/diverse-basictools.pdf",
+        "sha256": "421c37c2e9d4484122f13258a39a76505015253694e25069d275588ae116d8b6",
+        "pages": 4,
+        "language": "English",
+        "layout_notes": "Four-page full JOSS engineering simulation paper; journal metadata sidebar, mesh images and variational formula, compact bibliography."
+      },
+      "paper_id": "dfd5e353-97f0-4565-a81b-3d9cece51d73",
+      "batch_report": "artifacts\\real-corpus-expanded\\batches\\batch-002\\report.json",
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-002\\runs\\20261009T125550Z-ef5b5e72\\001-diverse-basictools\\paper-auto.json",
+      "job_status": "completed",
+      "workflow_passed": true,
+      "pages": 4,
+      "counts": {
+        "figure": 9,
+        "table": 0,
+        "resources": 9
+      },
+      "parse_seconds": 14.736,
+      "peak_backend_worker_rss_bytes": 1664933888,
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "errors": [],
+      "resource_errors": [],
+      "worker_exit_coverage": "captured",
+      "worker_processes": [
+        {
+          "pid": 27304,
+          "created_at_epoch": 1791550552.7903335,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\dfd5e353-97f0-4565-a81b-3d9cece51d73\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\.staging\\77318263-9fcb-4076-9063-1469f63d5808",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\dfd5e353-97f0-4565-a81b-3d9cece51d73\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "diverse-diffeq",
+        "title": "DifferentialEquations.jl – A Performant and Feature-Rich Ecosystem for Solving Differential Equations in Julia",
+        "authors_citation": "Christopher Rackauckas and Qing Nie (2017), Journal of Open Research Software 5:15.",
+        "source_url": "https://openresearchsoftware.metajnl.com/articles/10.5334/jors.151",
+        "pdf_url": "https://openresearchsoftware.metajnl.com/articles/151/files/submission/proof/151-1-1934-1-10-20170525.pdf",
+        "final_pdf_url": "https://storage.googleapis.com/jnl-up-j-jors-files/journals/1/articles/151/submission/proof/151-1-1934-1-10-20170525.pdf",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence": "The final page of the full publisher PDF explicitly licenses the article CC BY 4.0.",
+        "local_path": ".test-data/external/expanded-corpus/diverse-diffeq.pdf",
+        "sha256": "e75c8173a70f71b425c5ad5a5b396f032f654d76f85e67d2a3b0c394e484ea66",
+        "pages": 10,
+        "language": "English",
+        "layout_notes": "Two-column mathematical software paper; many ODE/SDE formulas, numerical plots and code; full 10 pages."
+      },
+      "paper_id": "e78020ad-5613-4128-930d-3092eb5db7bf",
+      "batch_report": "artifacts\\real-corpus-expanded\\batches\\batch-002\\report.json",
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-002\\runs\\20261009T125550Z-ef5b5e72\\002-diverse-diffeq\\paper-auto.json",
+      "job_status": "completed",
+      "workflow_passed": true,
+      "pages": 10,
+      "counts": {
+        "figure": 3,
+        "table": 0,
+        "resources": 3
+      },
+      "parse_seconds": 18.3,
+      "peak_backend_worker_rss_bytes": 1968586752,
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "errors": [],
+      "resource_errors": [],
+      "worker_exit_coverage": "captured",
+      "worker_processes": [
+        {
+          "pid": 29076,
+          "created_at_epoch": 1791550568.6754613,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\e78020ad-5613-4128-930d-3092eb5db7bf\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\.staging\\40e1d3e8-f26d-4e60-9e26-5ad2223c6fa6",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\e78020ad-5613-4128-930d-3092eb5db7bf\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "diverse-pybamm",
+        "title": "Python Battery Mathematical Modelling (PyBaMM)",
+        "authors_citation": "Valentin Sulzer, Scott G. Marquis, Robert Timms, Martin Robinson, S. Jon Chapman (2021), Journal of Open Research Software 9:14.",
+        "source_url": "https://openresearchsoftware.metajnl.com/articles/10.5334/jors.309",
+        "pdf_url": "https://openresearchsoftware.metajnl.com/articles/309/files/submission/proof/309-1-5018-1-10-20210608.pdf",
+        "final_pdf_url": "https://storage.googleapis.com/jnl-up-j-jors-files/journals/1/articles/309/submission/proof/309-1-5018-1-10-20210608.pdf",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence": "The final page of the full publisher PDF explicitly licenses the article CC BY 4.0.",
+        "local_path": ".test-data/external/expanded-corpus/diverse-pybamm.pdf",
+        "sha256": "9b8917cc70b00d64a89bb040b0a041f37141084d203c47b37763ea66b1817b08",
+        "pages": 8,
+        "language": "English",
+        "layout_notes": "8-page battery-engineering mathematical modelling paper, large expression-tree diagrams, plots, sidebar publication metadata."
+      },
+      "paper_id": "399a6623-3590-4a97-8547-476f0c750b60",
+      "batch_report": "artifacts\\real-corpus-expanded\\batches\\batch-002\\report.json",
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-002\\runs\\20261009T125550Z-ef5b5e72\\003-diverse-pybamm\\paper-auto.json",
+      "job_status": "completed",
+      "workflow_passed": true,
+      "pages": 8,
+      "counts": {
+        "figure": 7,
+        "table": 0,
+        "resources": 7
+      },
+      "parse_seconds": 16.807,
+      "peak_backend_worker_rss_bytes": 1906630656,
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text.",
+        "Title inferred from the prominent heading before the abstract; please review metadata."
+      ],
+      "errors": [],
+      "resource_errors": [],
+      "worker_exit_coverage": "captured",
+      "worker_processes": [
+        {
+          "pid": 3876,
+          "created_at_epoch": 1791550587.4706428,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\399a6623-3590-4a97-8547-476f0c750b60\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\.staging\\b7e00a59-5337-4b9d-9ce3-7c1d0f59112b",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\399a6623-3590-4a97-8547-476f0c750b60\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "ml-simcse-emnlp2021",
+        "title": "SimCSE: Simple Contrastive Learning of Sentence Embeddings",
+        "authors_citation": "Tianyu Gao, Xingcheng Yao, Danqi Chen (2021), EMNLP, pp.6894-6910.",
+        "source_url": "https://aclanthology.org/2021.emnlp-main.552/",
+        "pdf_url": "https://aclanthology.org/2021.emnlp-main.552.pdf",
+        "license": "CC-BY-4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+        "license_evidence": "Official ACL publisher page and ACL policy: all ACL materials published in or after 2016 are CC BY 4.0. Official publisher PDF, not an arXiv substitute.",
+        "layout_notes": "Longer two-column paper, contrastive-loss equations, multi-panel plots and appendices with benchmark tables.",
+        "review_level": "inventory_only",
+        "local_path": ".test-data/external/expanded-corpus/ml-simcse-emnlp2021.pdf",
+        "sha256": "b6bb8b5d1356095a02aae8e5e41265fde03f8f02101972e338bad0b7715f12fc",
+        "pages": 17,
+        "bytes": 1670753,
+        "final_download_url": "https://aclanthology.org/2021.emnlp-main.552.pdf",
+        "downloaded_at_utc": "2026-10-09T12:55:18.182223+00:00"
+      },
+      "paper_id": "31dc95d9-4522-4cec-96bc-4dcb9edb4870",
+      "batch_report": "artifacts\\real-corpus-expanded\\batches\\batch-002\\report.json",
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-002\\runs\\20261009T125550Z-ef5b5e72\\004-ml-simcse-emnlp2021\\paper-auto.json",
+      "job_status": "completed",
+      "workflow_passed": true,
+      "pages": 17,
+      "counts": {
+        "figure": 5,
+        "table": 16,
+        "resources": 21
+      },
+      "parse_seconds": 78.263,
+      "peak_backend_worker_rss_bytes": 2224828416,
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "errors": [],
+      "resource_errors": [],
+      "worker_exit_coverage": "captured",
+      "worker_processes": [
+        {
+          "pid": 12576,
+          "created_at_epoch": 1791550604.6893587,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\31dc95d9-4522-4cec-96bc-4dcb9edb4870\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\.staging\\e274c49a-15ee-49ab-b5da-b95315cca773",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\31dc95d9-4522-4cec-96bc-4dcb9edb4870\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "ml-longt5-naacl2022",
+        "title": "LongT5: Efficient Text-To-Text Transformer for Long Sequences",
+        "authors_citation": "Mandy Guo, Joshua Ainslie, David Uthus, Santiago Ontanon, Jianmo Ni, Yun-Hsuan Sung, Yinfei Yang (2022), Findings of NAACL, pp.724-736.",
+        "source_url": "https://aclanthology.org/2022.findings-naacl.55/",
+        "pdf_url": "https://aclanthology.org/2022.findings-naacl.55.pdf",
+        "license": "CC-BY-4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+        "license_evidence": "Official ACL publisher page and ACL policy: all ACL materials published in or after 2016 are CC BY 4.0. Official publisher PDF, not an arXiv substitute.",
+        "layout_notes": "Two-column paper with wide attention diagrams, long-sequence plots, multi-level numeric table headers and appendices.",
+        "review_level": "deep_review",
+        "local_path": ".test-data/external/expanded-corpus/ml-longt5-naacl2022.pdf",
+        "sha256": "59e364e50dc716dc12468acdb85d1625d2bd5eb046c313a73f85960e36de738e",
+        "pages": 13,
+        "bytes": 384932,
+        "final_download_url": "https://aclanthology.org/2022.findings-naacl.55.pdf",
+        "downloaded_at_utc": "2026-10-09T12:55:18.231068+00:00"
+      },
+      "paper_id": "21d3ba24-7be1-4166-bfe6-17e37f97f393",
+      "batch_report": "artifacts\\real-corpus-expanded\\batches\\batch-002\\report.json",
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-002\\runs\\20261009T125550Z-ef5b5e72\\005-ml-longt5-naacl2022\\paper-auto.json",
+      "job_status": "completed",
+      "workflow_passed": true,
+      "pages": 13,
+      "counts": {
+        "figure": 5,
+        "table": 8,
+        "resources": 13
+      },
+      "parse_seconds": 72.329,
+      "peak_backend_worker_rss_bytes": 2035015680,
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text.",
+        "Title inferred from the prominent heading before the abstract; please review metadata."
+      ],
+      "errors": [],
+      "resource_errors": [],
+      "worker_exit_coverage": "captured",
+      "worker_processes": [
+        {
+          "pid": 21844,
+          "created_at_epoch": 1791550686.8753147,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\21d3ba24-7be1-4166-bfe6-17e37f97f393\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\.staging\\aa3346aa-e2ed-4392-bcf4-d30e8bf586bf",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\21d3ba24-7be1-4166-bfe6-17e37f97f393\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "ml-mt5-naacl2021",
+        "title": "mT5: A Massively Multilingual Pre-trained Text-to-Text Transformer",
+        "authors_citation": "Linting Xue, Noah Constant, Adam Roberts, Mihir Kale, Rami Al-Rfou, Aditya Siddhant, Aditya Barua, Colin Raffel (2021), NAACL-HLT, pp.483-498.",
+        "source_url": "https://aclanthology.org/2021.naacl-main.41/",
+        "pdf_url": "https://aclanthology.org/2021.naacl-main.41.pdf",
+        "license": "CC-BY-4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+        "license_evidence": "Official ACL publisher page and ACL policy: all ACL materials published in or after 2016 are CC BY 4.0. Official publisher PDF, not an arXiv substitute.",
+        "layout_notes": "Longer two-column paper with large cross-lingual numeric tables and multilingual examples in appendices.",
+        "review_level": "inventory_only",
+        "local_path": ".test-data/external/expanded-corpus/ml-mt5-naacl2021.pdf",
+        "sha256": "3416c10fe2483b147fe47f2eb9c7a87188ceb3f633db527d0c714cc640218b99",
+        "pages": 16,
+        "bytes": 610847,
+        "final_download_url": "https://aclanthology.org/2021.naacl-main.41.pdf",
+        "downloaded_at_utc": "2026-10-09T12:55:18.219301+00:00"
+      },
+      "paper_id": "7900a12c-5bd2-4663-843b-b63e387e610c",
+      "batch_report": "artifacts\\real-corpus-expanded\\batches\\batch-002\\report.json",
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-002\\runs\\20261009T125550Z-ef5b5e72\\006-ml-mt5-naacl2021\\paper-auto.json",
+      "job_status": "completed",
+      "workflow_passed": true,
+      "pages": 16,
+      "counts": {
+        "figure": 4,
+        "table": 14,
+        "resources": 18
+      },
+      "parse_seconds": 167.344,
+      "peak_backend_worker_rss_bytes": 2226900992,
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "errors": [],
+      "resource_errors": [],
+      "worker_exit_coverage": "captured",
+      "worker_processes": [
+        {
+          "pid": 7312,
+          "created_at_epoch": 1791550761.0781996,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\7900a12c-5bd2-4663-843b-b63e387e610c\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\.staging\\03ddb817-0d4f-4b91-8109-979b768a38a6",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\7900a12c-5bd2-4663-843b-b63e387e610c\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "ml-nonattracting-jmlr2021",
+        "title": "Non-attracting Regions of Local Minima in Deep and Wide Neural Networks",
+        "authors_citation": "Henning Petzka, Cristian Sminchisescu (2021), JMLR 22(143):1-34.",
+        "source_url": "https://www.jmlr.org/papers/v22/19-586.html",
+        "pdf_url": "https://www.jmlr.org/papers/volume22/19-586/19-586.pdf",
+        "license": "CC-BY-4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence_url": "https://www.jmlr.org/papers/volume22/19-586/19-586.pdf#page=1",
+        "license_evidence": "Publisher PDF page 1 explicitly states License: CC-BY 4.0 and links the license.",
+        "layout_notes": "Long single-column theoretical neural-network article, extensive displayed equations and proofs, network/landscape diagrams. Entire 34-page article, not truncated.",
+        "review_level": "inventory_only",
+        "local_path": ".test-data/external/expanded-corpus/ml-nonattracting-jmlr2021.pdf",
+        "sha256": "a61caeb8237dea326c4642ed07286c418299225ed37c610bd1685c9c21533650",
+        "pages": 34,
+        "bytes": 1949650,
+        "final_download_url": "https://www.jmlr.org/papers/volume22/19-586/19-586.pdf",
+        "downloaded_at_utc": "2026-10-09T12:55:30.935844+00:00"
+      },
+      "paper_id": "339f9bba-004d-4bb0-934a-e0967f5ec3b4",
+      "batch_report": "artifacts\\real-corpus-expanded\\batches\\batch-002\\report.json",
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-002\\runs\\20261009T125550Z-ef5b5e72\\007-ml-nonattracting-jmlr2021\\paper-auto.json",
+      "job_status": "completed",
+      "workflow_passed": true,
+      "pages": 34,
+      "counts": {
+        "figure": 8,
+        "table": 3,
+        "resources": 11
+      },
+      "parse_seconds": 46.127,
+      "peak_backend_worker_rss_bytes": 2366181376,
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text.",
+        "Title inferred from the prominent heading before the abstract; please review metadata."
+      ],
+      "errors": [],
+      "resource_errors": [],
+      "worker_exit_coverage": "captured",
+      "worker_processes": [
+        {
+          "pid": 15392,
+          "created_at_epoch": 1791550931.9866452,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\339f9bba-004d-4bb0-934a-e0967f5ec3b4\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\.staging\\a2a8855a-3f90-4494-8254-fdd9f2a8d946",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\339f9bba-004d-4bb0-934a-e0967f5ec3b4\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "expanded-ecological-network",
+        "title": "Strong Impact of Temporal Resolution on the Structure of an Ecological Network",
+        "authors_citation": "Rasmussen C, Dupont YL, Mosbacher JB, Trøjelsgaard K, Olesen JM (2013), PLOS ONE 8(12): e81694.",
+        "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0081694",
+        "pdf_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0081694&type=printable",
+        "doi": "10.1371/journal.pone.0081694",
+        "license": "CC BY",
+        "license_url": "https://journals.plos.org/plosone/s/licenses-and-copyright",
+        "local_path": ".test-data/external/expanded-corpus/expanded-ecological-network.pdf",
+        "layout_notes": "Ecology; two-column article with temporal-network diagrams, multi-panel plots and two quantitative tables.",
+        "review_level": "deep_review",
+        "license_evidence_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0081694",
+        "license_note": "The official article declares CC Attribution. Older PLOS papers are not assigned an unprinted version.",
+        "source_verified_at_utc": "2026-10-09T12:55:06.450478+00:00",
+        "sha256": "386a3d74d4c66cd31358078cfbcfd5422a9257e092870aa8fed29ca1b08d4dda",
+        "pages": 9,
+        "bytes": 954097
+      },
+      "paper_id": "50a48ff3-b869-48a7-8134-ca7cb160fae2",
+      "batch_report": "artifacts\\real-corpus-expanded\\batches\\batch-002\\report.json",
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-002\\runs\\20261009T125550Z-ef5b5e72\\008-expanded-ecological-network\\paper-auto.json",
+      "job_status": "completed",
+      "workflow_passed": true,
+      "pages": 9,
+      "counts": {
+        "figure": 10,
+        "table": 2,
+        "resources": 12
+      },
+      "parse_seconds": 29.346,
+      "peak_backend_worker_rss_bytes": 1959006208,
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text.",
+        "Title inferred from the prominent heading before the abstract; please review metadata."
+      ],
+      "errors": [],
+      "resource_errors": [],
+      "worker_exit_coverage": "captured",
+      "worker_processes": [
+        {
+          "pid": 25192,
+          "created_at_epoch": 1791550980.218728,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\50a48ff3-b869-48a7-8134-ca7cb160fae2\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\.staging\\c1147354-dede-431f-8541-999f479dd595",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\50a48ff3-b869-48a7-8134-ca7cb160fae2\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "expanded-occupancy-response",
+        "title": "Ignoring Imperfect Detection in Biological Surveys Is Dangerous: A Response to ‘Fitting and Interpreting Occupancy Models’",
+        "authors_citation": "Guillera-Arroita G, Lahoz-Monfort JJ, MacKenzie DI, Wintle BA, McCarthy MA (2014), PLOS ONE 9(7): e99571.",
+        "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0099571",
+        "pdf_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0099571&type=printable",
+        "doi": "10.1371/journal.pone.0099571",
+        "license": "CC BY",
+        "license_url": "https://journals.plos.org/plosone/s/licenses-and-copyright",
+        "local_path": ".test-data/external/expanded-corpus/expanded-occupancy-response.pdf",
+        "layout_notes": "Ecological statistical methods; dense multipanel simulation plots, equations and grouped tables.",
+        "review_level": "inventory_only",
+        "license_evidence_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0099571",
+        "license_note": "The official article declares CC Attribution. Older PLOS papers are not assigned an unprinted version.",
+        "source_verified_at_utc": "2026-10-09T12:55:06.452964+00:00",
+        "sha256": "3959832acf6f229a4f1578d0ff485b8d7191c6bb82372114cba02167047ab0b1",
+        "pages": 14,
+        "bytes": 1815268
+      },
+      "paper_id": "de570135-39db-4b98-8077-feebb8805f79",
+      "batch_report": "artifacts\\real-corpus-expanded\\batches\\batch-002\\report.json",
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-002\\runs\\20261009T125550Z-ef5b5e72\\009-expanded-occupancy-response\\paper-auto.json",
+      "job_status": "completed",
+      "workflow_passed": true,
+      "pages": 14,
+      "counts": {
+        "figure": 9,
+        "table": 4,
+        "resources": 13
+      },
+      "parse_seconds": 35.067,
+      "peak_backend_worker_rss_bytes": 2251247616,
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text.",
+        "Title inferred from the prominent heading before the abstract; please review metadata."
+      ],
+      "errors": [],
+      "resource_errors": [],
+      "worker_exit_coverage": "captured",
+      "worker_processes": [
+        {
+          "pid": 30660,
+          "created_at_epoch": 1791551011.5897765,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\de570135-39db-4b98-8077-feebb8805f79\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\.staging\\f2959053-bb40-4938-ba7b-9dce74d29527",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\de570135-39db-4b98-8077-feebb8805f79\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "expanded-scikit-fem",
+        "title": "scikit-fem: A Python package for finite element assembly",
+        "authors_citation": "Tom Gustafsson and G. D. McBain (2020), Journal of Open Source Software 5(52): 2369.",
+        "source_url": "https://joss.theoj.org/papers/10.21105/joss.02369",
+        "pdf_url": "https://joss.theoj.org/papers/10.21105/joss.02369.pdf",
+        "doi": "10.21105/joss.02369",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "local_path": ".test-data/external/expanded-corpus/expanded-scikit-fem.pdf",
+        "layout_notes": "Finite-element engineering; mathematical software article with equations and code.",
+        "review_level": "inventory_only",
+        "license_evidence_url": "https://joss.theoj.org/papers/10.21105/joss.02369",
+        "license_note": "The official article declares CC Attribution. Older PLOS papers are not assigned an unprinted version.",
+        "source_verified_at_utc": "2026-10-09T12:55:06.458610+00:00",
+        "sha256": "f712cc3b01ceda4fceea956a410688a77cd6e9ecd8394b5aa29c7c0215cbe336",
+        "pages": 4,
+        "bytes": 426571
+      },
+      "paper_id": "56191189-230e-47ae-9287-b88dee4504bd",
+      "batch_report": "artifacts\\real-corpus-expanded\\batches\\batch-002\\report.json",
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-002\\runs\\20261009T125550Z-ef5b5e72\\010-expanded-scikit-fem\\paper-auto.json",
+      "job_status": "completed",
+      "workflow_passed": true,
+      "pages": 4,
+      "counts": {
+        "figure": 1,
+        "table": 0,
+        "resources": 1
+      },
+      "parse_seconds": 34.882,
+      "peak_backend_worker_rss_bytes": 2866585600,
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "errors": [],
+      "resource_errors": [],
+      "worker_exit_coverage": "captured",
+      "worker_processes": [
+        {
+          "pid": 19740,
+          "created_at_epoch": 1791551049.6041877,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\56191189-230e-47ae-9287-b88dee4504bd\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\.staging\\843e5e6a-ad34-4d8a-89b5-903077e57d43",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\56191189-230e-47ae-9287-b88dee4504bd\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "expanded-antibiotic-transport",
+        "title": "Antibiotic Transport in Resistant Bacteria: Synchrotron UV Fluorescence Microscopy to Determine Antibiotic Accumulation with Single Cell Resolution",
+        "authors_citation": "Slávka Kaščáková, Laure Maigre, Jacqueline Chevalier, Matthieu Réfrégiers, Jean-Marie Pagès (2012), PLOS ONE 7(6): e38624.",
+        "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0038624",
+        "pdf_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0038624&type=printable",
+        "doi": "10.1371/journal.pone.0038624",
+        "license": "CC BY",
+        "license_url": "https://journals.plos.org/plosone/s/licenses-and-copyright",
+        "local_path": ".test-data/external/expanded-corpus/expanded-antibiotic-transport.pdf",
+        "layout_notes": "Microbiology and spectroscopy; microscopy panels, spectra and bacterial-strain table.",
+        "review_level": "inventory_only",
+        "license_evidence_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0038624",
+        "license_note": "The official article declares CC Attribution. Older PLOS papers are not assigned an unprinted version.",
+        "source_verified_at_utc": "2026-10-09T12:55:06.475285+00:00",
+        "sha256": "bc890b890a6044f0701de877b2e5f1582c577c3b550bbbce39655012ee310788",
+        "pages": 9,
+        "bytes": 1923913
+      },
+      "paper_id": "82d326d5-51d8-4308-a123-0818911a5373",
+      "batch_report": "artifacts\\real-corpus-expanded\\batches\\batch-002\\report.json",
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-002\\runs\\20261009T125550Z-ef5b5e72\\011-expanded-antibiotic-transport\\paper-auto.json",
+      "job_status": "completed",
+      "workflow_passed": true,
+      "pages": 9,
+      "counts": {
+        "figure": 19,
+        "table": 1,
+        "resources": 20
+      },
+      "parse_seconds": 20.854,
+      "peak_backend_worker_rss_bytes": 1973620736,
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text.",
+        "Title inferred from the prominent heading before the abstract; please review metadata."
+      ],
+      "errors": [],
+      "resource_errors": [],
+      "worker_exit_coverage": "captured",
+      "worker_processes": [
+        {
+          "pid": 25740,
+          "created_at_epoch": 1791551084.93255,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\82d326d5-51d8-4308-a123-0818911a5373\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\.staging\\5fa6a251-ffe9-4109-8586-875a8ca81cfa",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T125550Z-ef5b5e72\\auto-baseline\\papers\\82d326d5-51d8-4308-a123-0818911a5373\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "diverse-chinesebert",
+        "title": "ChineseBERT: Chinese Pretraining Enhanced by Glyph and Pinyin Information",
+        "authors_citation": "Zijun Sun, Xiaoya Li, Xiaofei Sun, Yuxian Meng, Xiang Ao, Qing He, Fei Wu, and Jiwei Li (2021), ACL-IJCNLP, 2065–2075.",
+        "source_url": "https://aclanthology.org/2021.acl-long.161/",
+        "pdf_url": "https://aclanthology.org/2021.acl-long.161.pdf",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+        "license_evidence": "ACL-copyright 2021 article under post-2016 CC BY4 policy.",
+        "local_path": ".test-data/external/expanded-corpus/diverse-chinesebert.pdf",
+        "sha256": "c19a13f4168cdb40082a39bd68e2b76844f80ba69182288bf780edf3a8ba8d81",
+        "pages": 11,
+        "language": "English-with-Chinese",
+        "layout_notes": "Two-column 11-page English paper with substantial real Chinese characters, glyph images, pinyin, equations, multi-level tables and appendix. Not a Chinese-language article."
+      },
+      "paper_id": "6a788dc8-2a0d-4160-a134-aadcde1a0a1f",
+      "batch_report": "artifacts\\real-corpus-expanded\\batches\\batch-003\\report.json",
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-003\\runs\\20261009T130706Z-049990b3\\001-diverse-chinesebert\\paper-auto.json",
+      "job_status": "completed",
+      "workflow_passed": true,
+      "pages": 11,
+      "counts": {
+        "figure": 4,
+        "table": 9,
+        "resources": 13
+      },
+      "parse_seconds": 43.042,
+      "peak_backend_worker_rss_bytes": 1976045568,
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "errors": [],
+      "resource_errors": [],
+      "worker_exit_coverage": "captured",
+      "worker_processes": [
+        {
+          "pid": 25904,
+          "created_at_epoch": 1791551228.797568,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\papers\\6a788dc8-2a0d-4160-a134-aadcde1a0a1f\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\.staging\\9a5756cc-260d-4e25-b627-f635cbd10adf",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\papers\\6a788dc8-2a0d-4160-a134-aadcde1a0a1f\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "diverse-fractional-wave",
+        "title": "Numerical investigation of the fractional diffusion wave equation with exponential kernel via cubic B-Spline approach",
+        "authors_citation": "Madiha Shafiq, Muhammad Abbas, Homan Emadifar, Ahmed SM Alzaidi, Tahir Nazir, Farah Aini Abdullah (2023), PLOS ONE 18(12):e0295525.",
+        "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0295525",
+        "pdf_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0295525&type=printable",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0295525",
+        "license_evidence": "Publisher article Copyright paragraph links CC BY4.0.",
+        "local_path": ".test-data/external/expanded-corpus/diverse-fractional-wave.pdf",
+        "sha256": "68a7661424397b4191c2c4f6ae400ddf9fe68a30303a34e204005bc342d3e99e",
+        "pages": 28,
+        "language": "English",
+        "layout_notes": "28-page applied mathematics paper; dense formulas/proofs, 2D/3D plots, numerous numerical convergence/error tables; complete PDF."
+      },
+      "paper_id": "3ea6cd99-d8ad-4d4d-960c-8f238f02546d",
+      "batch_report": "artifacts\\real-corpus-expanded\\batches\\batch-003\\report.json",
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-003\\runs\\20261009T130706Z-049990b3\\002-diverse-fractional-wave\\paper-auto.json",
+      "job_status": "completed",
+      "workflow_passed": true,
+      "pages": 28,
+      "counts": {
+        "figure": 12,
+        "table": 14,
+        "resources": 26
+      },
+      "parse_seconds": 56.42,
+      "peak_backend_worker_rss_bytes": 2134876160,
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "errors": [],
+      "resource_errors": [],
+      "worker_exit_coverage": "captured",
+      "worker_processes": [
+        {
+          "pid": 23700,
+          "created_at_epoch": 1791551273.6685505,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\papers\\3ea6cd99-d8ad-4d4d-960c-8f238f02546d\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\.staging\\0658d27b-86fd-4231-b170-d63615080dec",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\papers\\3ea6cd99-d8ad-4d4d-960c-8f238f02546d\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "diverse-fuzzy-tumor",
+        "title": "An in-depth examination of the fuzzy fractional cancer tumor model and its numerical solution by implicit finite difference method",
+        "authors_citation": "Hamzeh Zureigat, Saleh Alshammari, Mohammad Alshammari, Mohammed Al-Smadi, M. Mossa Al-Sawallah (2024), PLOS ONE 19(12):e0303891.",
+        "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0303891",
+        "pdf_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0303891&type=printable",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0303891",
+        "license_evidence": "Publisher article Copyright paragraph links CC BY4.0.",
+        "local_path": ".test-data/external/expanded-corpus/diverse-fuzzy-tumor.pdf",
+        "sha256": "236c9bc42b7ec1c6cd28b5313d919853033385a45cb953a5a38c34fae3174625",
+        "pages": 14,
+        "language": "English",
+        "layout_notes": "14-page mathematical biology/numerical-analysis paper with dense fractional/fuzzy equations and solution surfaces; original full PDF."
+      },
+      "paper_id": "7516a751-bfe8-4dea-a4eb-ac2605e0243d",
+      "batch_report": "artifacts\\real-corpus-expanded\\batches\\batch-003\\report.json",
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-003\\runs\\20261009T130706Z-049990b3\\003-diverse-fuzzy-tumor\\paper-auto.json",
+      "job_status": "completed",
+      "workflow_passed": true,
+      "pages": 14,
+      "counts": {
+        "figure": 7,
+        "table": 1,
+        "resources": 8
+      },
+      "parse_seconds": 26.525,
+      "peak_backend_worker_rss_bytes": 1950343168,
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "errors": [],
+      "resource_errors": [],
+      "worker_exit_coverage": "captured",
+      "worker_processes": [
+        {
+          "pid": 2644,
+          "created_at_epoch": 1791551334.0021546,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\papers\\7516a751-bfe8-4dea-a4eb-ac2605e0243d\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\.staging\\588c435c-9470-45c2-862f-51e2d0ddcc08",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\papers\\7516a751-bfe8-4dea-a4eb-ac2605e0243d\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "diverse-macbert",
+        "title": "Revisiting Pre-Trained Models for Chinese Natural Language Processing",
+        "authors_citation": "Yiming Cui, Wanxiang Che, Ting Liu, Bing Qin, Shijin Wang, Guoping Hu (2020), Findings of ACL: EMNLP 2020, 657–668.",
+        "source_url": "https://aclanthology.org/2020.findings-emnlp.58/",
+        "pdf_url": "https://aclanthology.org/2020.findings-emnlp.58.pdf",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+        "license_evidence": "First page states copyright2020 ACL; ACL materials published after2016 use CC BY4.0.",
+        "local_path": ".test-data/external/expanded-corpus/diverse-macbert.pdf",
+        "sha256": "5ed22b3574fbf8840352c78a1b7cd2bbf981705a3c6eac2f5cce723d23e63523",
+        "pages": 12,
+        "language": "English-with-Chinese",
+        "layout_notes": "12-page full English paper containing original Chinese sentence examples, masking variants, several benchmark tables and ablation plots; not a Chinese-language article."
+      },
+      "paper_id": "0d95f65d-fc3a-4e2b-873e-8243a7242d01",
+      "batch_report": "artifacts\\real-corpus-expanded\\batches\\batch-003\\report.json",
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-003\\runs\\20261009T130706Z-049990b3\\004-diverse-macbert\\paper-auto.json",
+      "job_status": "completed",
+      "workflow_passed": true,
+      "pages": 12,
+      "counts": {
+        "figure": 1,
+        "table": 12,
+        "resources": 13
+      },
+      "parse_seconds": 49.881,
+      "peak_backend_worker_rss_bytes": 2035245056,
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "errors": [],
+      "resource_errors": [],
+      "worker_exit_coverage": "captured",
+      "worker_processes": [
+        {
+          "pid": 23336,
+          "created_at_epoch": 1791551362.0518188,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\papers\\0d95f65d-fc3a-4e2b-873e-8243a7242d01\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\.staging\\f68f9c43-dee8-495c-83b5-97184c977455",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T130706Z-049990b3\\auto-baseline\\papers\\0d95f65d-fc3a-4e2b-873e-8243a7242d01\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "expanded-cellfit",
+        "title": "CellFIT: A Cellular Force-Inference Toolkit Using Curvilinear Cell Boundaries",
+        "authors_citation": "Brodland GW, Veldhuis JH, Kim S, Perrone M, Mashburn D, Hutson MS (2014), PLOS ONE 9(6): e99116.",
+        "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0099116",
+        "pdf_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0099116&type=printable",
+        "doi": "10.1371/journal.pone.0099116",
+        "license": "CC BY",
+        "license_url": "https://journals.plos.org/plosone/s/licenses-and-copyright",
+        "local_path": ".test-data/external/expanded-corpus/expanded-cellfit.pdf",
+        "layout_notes": "Biomechanics/civil engineering; multi-panel cell microscopy, vector force diagrams and a quantitative validation table.",
+        "review_level": "deep_review",
+        "license_evidence_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0099116",
+        "license_note": "The official article declares CC Attribution. Older PLOS papers are not assigned an unprinted version.",
+        "source_verified_at_utc": "2026-10-09T12:55:06.452964+00:00",
+        "sha256": "1693b50cdf811ee6bdaabb60fd0a26d1a807c310c737a4b0a8f0b5322aaf115a",
+        "pages": 15,
+        "bytes": 1951728
+      },
+      "paper_id": "10c7fb88-a55a-494b-bfd3-465e22b00107",
+      "batch_report": "artifacts\\real-corpus-expanded\\batches\\batch-004\\report.json",
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\001-expanded-cellfit\\paper-auto.json",
+      "job_status": "completed",
+      "workflow_passed": true,
+      "pages": 15,
+      "counts": {
+        "figure": 10,
+        "table": 1,
+        "resources": 11
+      },
+      "parse_seconds": 26.926,
+      "peak_backend_worker_rss_bytes": 2085257216,
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text.",
+        "Title inferred from the prominent heading before the abstract; please review metadata."
+      ],
+      "errors": [],
+      "resource_errors": [],
+      "worker_exit_coverage": "captured",
+      "worker_processes": [
+        {
+          "pid": 28192,
+          "created_at_epoch": 1791551610.575163,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\10c7fb88-a55a-494b-bfd3-465e22b00107\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\.staging\\8631b552-7889-4a82-961d-e8bfb0fb01c7",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\10c7fb88-a55a-494b-bfd3-465e22b00107\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "expanded-strobe",
+        "title": "The Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) Statement: Guidelines for Reporting Observational Studies",
+        "authors_citation": "von Elm E, Altman DG, Egger M, Pocock SJ, Gøtzsche PC, Vandenbroucke JP, for the STROBE Initiative (2007), PLOS Medicine 4(10): e296.",
+        "source_url": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0040296",
+        "pdf_url": "https://journals.plos.org/plosmedicine/article/file?id=10.1371/journal.pmed.0040296&type=printable",
+        "doi": "10.1371/journal.pmed.0040296",
+        "license": "CC BY",
+        "license_url": "https://journals.plos.org/plosmedicine/s/licenses-and-copyright",
+        "local_path": ".test-data/external/expanded-corpus/expanded-strobe.pdf",
+        "layout_notes": "Epidemiological reporting methods; multi-column journal body and long checklist table.",
+        "review_level": "inventory_only",
+        "license_evidence_url": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0040296",
+        "license_note": "The official article declares CC Attribution. Older PLOS papers are not assigned an unprinted version.",
+        "source_verified_at_utc": "2026-10-09T12:55:06.458610+00:00",
+        "sha256": "5969e378c7492e254a97911ceea84db2a0f34aef2680dd261a57c182d292cf8b",
+        "pages": 5,
+        "bytes": 95819
+      },
+      "paper_id": "4435d985-8cfd-477d-9a8b-5051153d5016",
+      "batch_report": "artifacts\\real-corpus-expanded\\batches\\batch-004\\report.json",
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-004\\runs\\20261009T131328Z-1e526b8e\\002-expanded-strobe\\paper-auto.json",
+      "job_status": "completed",
+      "workflow_passed": true,
+      "pages": 5,
+      "counts": {
+        "figure": 7,
+        "table": 1,
+        "resources": 8
+      },
+      "parse_seconds": 18.312,
+      "peak_backend_worker_rss_bytes": 1904119808,
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "errors": [],
+      "resource_errors": [],
+      "worker_exit_coverage": "captured",
+      "worker_processes": [
+        {
+          "pid": 28540,
+          "created_at_epoch": 1791551640.0498552,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\4435d985-8cfd-477d-9a8b-5051153d5016\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\.staging\\ed32bc63-0d4c-42b5-a56a-f953e3ff0596",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T131328Z-1e526b8e\\auto-baseline\\papers\\4435d985-8cfd-477d-9a8b-5051153d5016\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ]
+    },
+    {
+      "source": {
+        "id": "expanded-damask-python",
+        "title": "A Python Library for Pre- and Post-Processing of DAMASK Simulations",
+        "authors_citation": "Daniel Otto de Mentock, Sharan Roongta, Franz Roters, Philip Eisenlohr, and Martin Diehl (2025), Journal of Open Source Software 10(105): 7164.",
+        "source_url": "https://joss.theoj.org/papers/10.21105/joss.07164",
+        "pdf_url": "https://joss.theoj.org/papers/10.21105/joss.07164.pdf",
+        "doi": "10.21105/joss.07164",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence_url": "https://joss.theoj.org/papers/10.21105/joss.07164",
+        "license_note": "The paper itself is CC BY 4.0. Its referenced simulation software license is a distinct matter; no DAMASK software is installed here.",
+        "local_path": ".test-data/external/expanded-corpus/expanded-damask-python.pdf",
+        "sha256": "11d41887d1b3084da9433fa450e753c608c99c827cfc13f431366f394eb0aa87",
+        "pages": 4,
+        "bytes": 218119,
+        "layout_notes": "Materials engineering/crystal plasticity; complete 4-page JOSS article with journal sidebar and references, providing another check for legitimate no-figure/table content.",
+        "review_level": "inventory_only",
+        "source_verified_at_utc": "2026-10-09T13:16:44.459877+00:00"
+      },
+      "paper_id": "df3de596-f134-4b5e-b03a-bd92ff498adb",
+      "batch_report": "artifacts\\real-corpus-expanded\\batches\\batch-005\\report.json",
+      "paper_json": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\batches\\batch-005\\runs\\20261009T132032Z-c69b982b\\001-expanded-damask-python\\paper-auto.json",
+      "job_status": "completed",
+      "workflow_passed": true,
+      "pages": 4,
+      "counts": {
+        "figure": 4,
+        "table": 0,
+        "resources": 4
+      },
+      "parse_seconds": 13.687,
+      "peak_backend_worker_rss_bytes": 1617420288,
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text."
+      ],
+      "errors": [],
+      "resource_errors": [],
+      "worker_exit_coverage": "captured",
+      "worker_processes": [
+        {
+          "pid": 3096,
+          "created_at_epoch": 1791552035.2312834,
+          "command": [
+            "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+            "--worker",
+            "--source",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T132032Z-c69b982b\\auto-baseline\\papers\\df3de596-f134-4b5e-b03a-bd92ff498adb\\original.pdf",
+            "--output",
+            "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T132032Z-c69b982b\\auto-baseline\\.staging\\c9548a14-a42a-4c1a-b731-a329827ed1bf",
+            "--models",
+            "D:\\project\\PaperVault\\.cache\\models"
+          ],
+          "source": "D:\\project\\PaperVault\\.test-data\\real-corpus\\20261009T132032Z-c69b982b\\auto-baseline\\papers\\df3de596-f134-4b5e-b03a-bd92ff498adb\\original.pdf",
+          "exit_code": 0,
+          "state": "exited",
+          "exit_code_hex": "0x00000000"
+        }
+      ]
+    }
+  ],
+  "accuracy_scope": "This file summarizes integrity, exports, searches and actual process outcomes. Human inventory/deep reviews are separate; successful decoding or exit 0 never implies all text/cells/captions are correct.",
+  "diagnostic_scope": "Worker exit codes are read through handles acquired while the owned processes are alive. Absence of log messages does not establish faulthandler was enabled or resolve previous source-pytest diagnostics."
+}

@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "scope": "Owned tiny Python children, no model or product state changes; both zero and nonzero exit codes checked.",
+  "cases": [
+    {
+      "pid": 21252,
+      "created_at_epoch": 1791550084.025952,
+      "command": [
+        "owned-self-test",
+        "--source",
+        "D:\\project\\PaperVault\\.test-data\\observer-test.pdf"
+      ],
+      "source": "D:\\project\\PaperVault\\.test-data\\observer-test.pdf",
+      "exit_code": 0,
+      "state": "exited",
+      "exit_code_hex": "0x00000000"
+    },
+    {
+      "pid": 18900,
+      "created_at_epoch": 1791550084.5837476,
+      "command": [
+        "owned-self-test",
+        "--source",
+        "D:\\project\\PaperVault\\.test-data\\observer-test.pdf"
+      ],
+      "source": "D:\\project\\PaperVault\\.test-data\\observer-test.pdf",
+      "exit_code": 7,
+      "state": "exited",
+      "exit_code_hex": "0x00000007"
+    }
+  ]
+}

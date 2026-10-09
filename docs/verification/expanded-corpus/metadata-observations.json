@@ -1,0 +1,643 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-10-09T14:03:10.701522+00:00",
+  "scope": "Title-only comparison for all 20 newly downloaded publisher PDFs against the official-source manifests. This is not a claim of complete author/year/DOI metadata accuracy.",
+  "baseline_version": "0.2.1",
+  "backend_sha256": "567bc425d9df91f4813dfacdf64a8a8e5548381becc5950627830862439dd43a",
+  "latest_source_commit_inspected": "44c568eccca416c9a4103a07a1fae3d315b53b9d",
+  "latest_release_scope": "0.2.2 source change addresses caption numbering. Neither title anomaly was fixed; no new 0.2.2 parser run was made for this review.",
+  "comparison_policy": "Exact strings count as exact. Only curly-versus-straight quotation marks are treated as punctuation-equivalent for the one occupancy paper; author lists and placeholder titles are explicit mismatches.",
+  "source_manifests": [
+    {
+      "path": "tests/corpus/expanded/sources-ml.json",
+      "sha256": "563c32720e7ea88588c5816fec2c9adac206edeb5129d76566a621a301f84e02"
+    },
+    {
+      "path": "tests/corpus/expanded/sources-diverse.json",
+      "sha256": "e7da9727ccdcc0956a9931e1c755004681cbeaaef65f8644d1e39cd27e3be75f"
+    },
+    {
+      "path": "tests/corpus/expanded/sources-science.json",
+      "sha256": "db1479fb447fb2f47c4c06f5a2eda01fafddaf41fbc9f21c09da9e9551257e57"
+    }
+  ],
+  "papers": [
+    {
+      "id": "ml-bart-acl2020",
+      "expected_title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension",
+      "actual_title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension",
+      "comparison": "exact",
+      "source_manifest": "tests/corpus/expanded/sources-ml.json",
+      "source_url": "https://aclanthology.org/2020.acl-main.703/",
+      "source_pdf": ".test-data/external/expanded-corpus/ml-bart-acl2020.pdf",
+      "source_pdf_sha256": "3562c723fe7bebb8b362533122b3ca5c065037c8e8d67460654cf3740652bb59",
+      "baseline_paper_json": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/paper-auto.json",
+      "baseline_paper_json_sha256": "34ccda4b07093ac68f46f54663ec143db7d1d725362deda94eddcaeea89947cd",
+      "baseline_report": "artifacts/real-corpus-expanded/batches/batch-001/report.json",
+      "repair_status": "not_needed_for_title"
+    },
+    {
+      "id": "ml-scibert-emnlp2019",
+      "expected_title": "SciBERT: A Pretrained Language Model for Scientific Text",
+      "actual_title": "SciBERT: A Pretrained Language Model for Scientific Text",
+      "comparison": "exact",
+      "source_manifest": "tests/corpus/expanded/sources-ml.json",
+      "source_url": "https://aclanthology.org/D19-1371/",
+      "source_pdf": ".test-data/external/expanded-corpus/ml-scibert-emnlp2019.pdf",
+      "source_pdf_sha256": "42e7bb57b92fbe6077c073edaffaf173728b7b685395700ac255ce0359344268",
+      "baseline_paper_json": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/002-ml-scibert-emnlp2019/paper-auto.json",
+      "baseline_paper_json_sha256": "2bb785cb10ed1a869fb24a6d73a42f99fc9970b181ea337d4a37ebaf79ec3a47",
+      "baseline_report": "artifacts/real-corpus-expanded/batches/batch-001/report.json",
+      "repair_status": "not_needed_for_title"
+    },
+    {
+      "id": "ml-simcse-emnlp2021",
+      "expected_title": "SimCSE: Simple Contrastive Learning of Sentence Embeddings",
+      "actual_title": "SimCSE: Simple Contrastive Learning of Sentence Embeddings",
+      "comparison": "exact",
+      "source_manifest": "tests/corpus/expanded/sources-ml.json",
+      "source_url": "https://aclanthology.org/2021.emnlp-main.552/",
+      "source_pdf": ".test-data/external/expanded-corpus/ml-simcse-emnlp2021.pdf",
+      "source_pdf_sha256": "b6bb8b5d1356095a02aae8e5e41265fde03f8f02101972e338bad0b7715f12fc",
+      "baseline_paper_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/paper-auto.json",
+      "baseline_paper_json_sha256": "ad347716d08639c88e6b8cd1db8c81ff969480a413eaae4462b150392b511cd8",
+      "baseline_report": "artifacts/real-corpus-expanded/batches/batch-002/report.json",
+      "repair_status": "not_needed_for_title"
+    },
+    {
+      "id": "ml-longt5-naacl2022",
+      "expected_title": "LongT5: Efficient Text-To-Text Transformer for Long Sequences",
+      "actual_title": "Mandy Guo∗† , Joshua Ainslie∗† , David Uthus∗, Santiago Ontañón∗ Jianmo Ni, Yun-Hsuan Sung, Yinfei Yang",
+      "comparison": "mismatch",
+      "source_manifest": "tests/corpus/expanded/sources-ml.json",
+      "source_url": "https://aclanthology.org/2022.findings-naacl.55/",
+      "source_pdf": ".test-data/external/expanded-corpus/ml-longt5-naacl2022.pdf",
+      "source_pdf_sha256": "59e364e50dc716dc12468acdb85d1625d2bd5eb046c313a73f85960e36de738e",
+      "baseline_paper_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/paper-auto.json",
+      "baseline_paper_json_sha256": "a56e168c3a417b0a2ba618fea94fa52e63d49fb7c9768db201bbdfab4430f94c",
+      "baseline_report": "artifacts/real-corpus-expanded/batches/batch-002/report.json",
+      "repair_status": "unresolved; not fixed in caption-number-only 0.2.2 source",
+      "evidence": {
+        "source_pdf_metadata_reader": "pypdfium2.PdfDocument.get_metadata_dict()",
+        "source_pdf_metadata": {
+          "Title": "",
+          "Author": "",
+          "Subject": "",
+          "Keywords": "",
+          "Creator": "LaTeX with hyperref",
+          "Producer": "pdfTeX-1.40.22",
+          "CreationDate": "D:20220705112323+02'00'",
+          "ModDate": "D:20220705112323+02'00'"
+        },
+        "source_first_page_text_prefix": "Findings of the Association for Computational Linguistics: NAACL 2022, pages 724 - 736\r\nJuly 10-15, 2022 ©2022 Association for Computational Linguistics\r\nLongT5: Efficient Text-To-Text Transformer for Long Sequences\r\nMandy Guo∗†\r\n, Joshua Ainslie∗†, David Uthus∗\r\n, Santiago Ontañón∗\r\nJianmo Ni, Yun-Hsuan Sung, Yinfei Yang\r\nGoogle Research\r\n{xyguo, jainslie, duthus, santiontanon, jianmon, yhsung, yinfeiy}@google.com\r\nAbstract\r\nRecent work has shown that either (1) in￾creasing the input length or (2) increasing\r\nmodel size can improve the performance of\r\nTransformer-based neural models. In this pa￾per, we present LongT5, a new model that\r\nexplores the effects of scaling both the in￾put length ",
+        "structure_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/structure.json",
+        "structure_sha256": "d72861adc295bbcbbaf76c6697c0d660513006b619b6165f9f428f8ad95193f2",
+        "structure_metadata_title": "Mandy Guo∗† , Joshua Ainslie∗† , David Uthus∗, Santiago Ontañón∗ Jianmo Ni, Yun-Hsuan Sung, Yinfei Yang",
+        "structure_title_source": "layout_heading",
+        "first_page_headings": [
+          {
+            "id": "#/texts/0",
+            "label": "section_header",
+            "text": "LongT5: Efficient Text-To-Text Transformer for Long Sequences",
+            "page_index": 0,
+            "bbox_pdf": [
+              99.2379623,
+              747.2453081472902,
+              496.0450012599798,
+              765.9106475676001
+            ],
+            "bbox_height_points": 18.66533942030992,
+            "text_newline_count": 0
+          },
+          {
+            "id": "#/texts/1",
+            "label": "section_header",
+            "text": "Mandy Guo∗† , Joshua Ainslie∗† , David Uthus∗, Santiago Ontañón∗ Jianmo Ni, Yun-Hsuan Sung, Yinfei Yang",
+            "page_index": 0,
+            "bbox_pdf": [
+              136.77583909999998,
+              704.0934816638401,
+              465.7267999557065,
+              733.5956718996001
+            ],
+            "bbox_height_points": 29.502190235760054,
+            "text_newline_count": 0
+          },
+          {
+            "id": "#/texts/2",
+            "label": "section_header",
+            "text": "Google Research",
+            "page_index": 0,
+            "bbox_pdf": [
+              256.6378319000001,
+              669.7960788794401,
+              338.64264873584017,
+              684.20281518024
+            ],
+            "bbox_height_points": 14.406736300799935,
+            "text_newline_count": 0
+          },
+          {
+            "id": "#/texts/4",
+            "label": "section_header",
+            "text": "Abstract",
+            "page_index": 0,
+            "bbox_pdf": [
+              157.75288790000005,
+              614.2469895638401,
+              202.2404113649601,
+              629.8014824496
+            ],
+            "bbox_height_points": 15.554492885759942,
+            "text_newline_count": 0
+          },
+          {
+            "id": "#/texts/6",
+            "label": "section_header",
+            "text": "1 Introduction",
+            "page_index": 0,
+            "bbox_pdf": [
+              70.85654330000001,
+              319.29124251383985,
+              153.67435438352004,
+              334.8457353995999
+            ],
+            "bbox_height_points": 15.554492885760055,
+            "text_newline_count": 0
+          }
+        ],
+        "correct_title_present_in_structure": true,
+        "source_first_page_png": "artifacts/real-corpus-expanded/source-pages/ml-longt5-naacl2022/page-01.png",
+        "first_page_visual_review": true,
+        "source_code_reference": "backend/papervault/parsers/docling_parser.py:40",
+        "analysis": "PDF Title is empty. Both the correct title and the author list are labeled section_header. The current fallback ranks heading bbox height divided by newline count+1. The visually two-line author block is flattened with zero newlines (height 29.50 pt), exceeding the real one-line title (18.67 pt), and becomes metadata.title. This diagnosis is supported by stored blocks and read-only source inspection; it is not a new model rerun."
+      },
+      "failure": "Author heading chosen instead of the article title."
+    },
+    {
+      "id": "ml-mt5-naacl2021",
+      "expected_title": "mT5: A Massively Multilingual Pre-trained Text-to-Text Transformer",
+      "actual_title": "mT5: A Massively Multilingual Pre-trained Text-to-Text Transformer",
+      "comparison": "exact",
+      "source_manifest": "tests/corpus/expanded/sources-ml.json",
+      "source_url": "https://aclanthology.org/2021.naacl-main.41/",
+      "source_pdf": ".test-data/external/expanded-corpus/ml-mt5-naacl2021.pdf",
+      "source_pdf_sha256": "3416c10fe2483b147fe47f2eb9c7a87188ceb3f633db527d0c714cc640218b99",
+      "baseline_paper_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/paper-auto.json",
+      "baseline_paper_json_sha256": "4ce52c3e44f06e033fa2796f2e91a8aaada7a589040d8985c25078e48961e774",
+      "baseline_report": "artifacts/real-corpus-expanded/batches/batch-002/report.json",
+      "repair_status": "not_needed_for_title"
+    },
+    {
+      "id": "ml-nonattracting-jmlr2021",
+      "expected_title": "Non-attracting Regions of Local Minima in Deep and Wide Neural Networks",
+      "actual_title": "Non-attracting Regions of Local Minima in Deep and Wide Neural Networks",
+      "comparison": "exact",
+      "source_manifest": "tests/corpus/expanded/sources-ml.json",
+      "source_url": "https://www.jmlr.org/papers/v22/19-586.html",
+      "source_pdf": ".test-data/external/expanded-corpus/ml-nonattracting-jmlr2021.pdf",
+      "source_pdf_sha256": "a61caeb8237dea326c4642ed07286c418299225ed37c610bd1685c9c21533650",
+      "baseline_paper_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/007-ml-nonattracting-jmlr2021/paper-auto.json",
+      "baseline_paper_json_sha256": "41f4db57c932b44bd9279f502d7bcc50a5bfc8cfea20aba69d229f4521778645",
+      "baseline_report": "artifacts/real-corpus-expanded/batches/batch-002/report.json",
+      "repair_status": "not_needed_for_title"
+    },
+    {
+      "id": "diverse-basictools",
+      "expected_title": "BasicTools: a numerical simulation toolbox",
+      "actual_title": "BasicTools: a numerical simulation toolbox",
+      "comparison": "exact",
+      "source_manifest": "tests/corpus/expanded/sources-diverse.json",
+      "source_url": "https://joss.theoj.org/papers/10.21105/joss.05142",
+      "source_pdf": ".test-data/external/expanded-corpus/diverse-basictools.pdf",
+      "source_pdf_sha256": "421c37c2e9d4484122f13258a39a76505015253694e25069d275588ae116d8b6",
+      "baseline_paper_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/001-diverse-basictools/paper-auto.json",
+      "baseline_paper_json_sha256": "96c32edfd8f1ca86f820560c952eba2ea3533eacc9a9cfded8f63cd951ef44b1",
+      "baseline_report": "artifacts/real-corpus-expanded/batches/batch-002/report.json",
+      "repair_status": "not_needed_for_title"
+    },
+    {
+      "id": "diverse-diffeq",
+      "expected_title": "DifferentialEquations.jl – A Performant and Feature-Rich Ecosystem for Solving Differential Equations in Julia",
+      "actual_title": "DifferentialEquations.jl – A Performant and Feature-Rich Ecosystem for Solving Differential Equations in Julia",
+      "comparison": "exact",
+      "source_manifest": "tests/corpus/expanded/sources-diverse.json",
+      "source_url": "https://openresearchsoftware.metajnl.com/articles/10.5334/jors.151",
+      "source_pdf": ".test-data/external/expanded-corpus/diverse-diffeq.pdf",
+      "source_pdf_sha256": "e75c8173a70f71b425c5ad5a5b396f032f654d76f85e67d2a3b0c394e484ea66",
+      "baseline_paper_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/002-diverse-diffeq/paper-auto.json",
+      "baseline_paper_json_sha256": "9d2610679d93a19a322ab6c51c43c8d26b6db93df02d886292391b0963d38699",
+      "baseline_report": "artifacts/real-corpus-expanded/batches/batch-002/report.json",
+      "repair_status": "not_needed_for_title"
+    },
+    {
+      "id": "diverse-pybamm",
+      "expected_title": "Python Battery Mathematical Modelling (PyBaMM)",
+      "actual_title": "Python Battery Mathematical Modelling (PyBaMM)",
+      "comparison": "exact",
+      "source_manifest": "tests/corpus/expanded/sources-diverse.json",
+      "source_url": "https://openresearchsoftware.metajnl.com/articles/10.5334/jors.309",
+      "source_pdf": ".test-data/external/expanded-corpus/diverse-pybamm.pdf",
+      "source_pdf_sha256": "9b8917cc70b00d64a89bb040b0a041f37141084d203c47b37763ea66b1817b08",
+      "baseline_paper_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/003-diverse-pybamm/paper-auto.json",
+      "baseline_paper_json_sha256": "87c88a7a4a326fce1602d17428c7284371d9ba9f363963b5f55ada00f231f083",
+      "baseline_report": "artifacts/real-corpus-expanded/batches/batch-002/report.json",
+      "repair_status": "not_needed_for_title"
+    },
+    {
+      "id": "diverse-chinesebert",
+      "expected_title": "ChineseBERT: Chinese Pretraining Enhanced by Glyph and Pinyin Information",
+      "actual_title": "ChineseBERT: Chinese Pretraining Enhanced by Glyph and Pinyin Information",
+      "comparison": "exact",
+      "source_manifest": "tests/corpus/expanded/sources-diverse.json",
+      "source_url": "https://aclanthology.org/2021.acl-long.161/",
+      "source_pdf": ".test-data/external/expanded-corpus/diverse-chinesebert.pdf",
+      "source_pdf_sha256": "c19a13f4168cdb40082a39bd68e2b76844f80ba69182288bf780edf3a8ba8d81",
+      "baseline_paper_json": "artifacts/real-corpus-expanded/batches/batch-003/runs/20261009T130706Z-049990b3/001-diverse-chinesebert/paper-auto.json",
+      "baseline_paper_json_sha256": "009f8d898a97d890716534e9d0a14b8adcb5eb7c1c21180a446cb72872d4e55f",
+      "baseline_report": "artifacts/real-corpus-expanded/batches/batch-003/report.json",
+      "repair_status": "not_needed_for_title"
+    },
+    {
+      "id": "diverse-fractional-wave",
+      "expected_title": "Numerical investigation of the fractional diffusion wave equation with exponential kernel via cubic B-Spline approach",
+      "actual_title": "Numerical investigation of the fractional diffusion wave equation with exponential kernel via cubic B-Spline approach",
+      "comparison": "exact",
+      "source_manifest": "tests/corpus/expanded/sources-diverse.json",
+      "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0295525",
+      "source_pdf": ".test-data/external/expanded-corpus/diverse-fractional-wave.pdf",
+      "source_pdf_sha256": "68a7661424397b4191c2c4f6ae400ddf9fe68a30303a34e204005bc342d3e99e",
+      "baseline_paper_json": "artifacts/real-corpus-expanded/batches/batch-003/runs/20261009T130706Z-049990b3/002-diverse-fractional-wave/paper-auto.json",
+      "baseline_paper_json_sha256": "736ebd0bde5a2f15537c204eaa148f1377b2cf95a30d3e541ce62ac617315cba",
+      "baseline_report": "artifacts/real-corpus-expanded/batches/batch-003/report.json",
+      "repair_status": "not_needed_for_title"
+    },
+    {
+      "id": "diverse-fuzzy-tumor",
+      "expected_title": "An in-depth examination of the fuzzy fractional cancer tumor model and its numerical solution by implicit finite difference method",
+      "actual_title": "An in-depth examination of the fuzzy fractional cancer tumor model and its numerical solution by implicit finite difference method",
+      "comparison": "exact",
+      "source_manifest": "tests/corpus/expanded/sources-diverse.json",
+      "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0303891",
+      "source_pdf": ".test-data/external/expanded-corpus/diverse-fuzzy-tumor.pdf",
+      "source_pdf_sha256": "236c9bc42b7ec1c6cd28b5313d919853033385a45cb953a5a38c34fae3174625",
+      "baseline_paper_json": "artifacts/real-corpus-expanded/batches/batch-003/runs/20261009T130706Z-049990b3/003-diverse-fuzzy-tumor/paper-auto.json",
+      "baseline_paper_json_sha256": "e1b7be20781f2e493baca48b14e445e1606f3714ec6e808430c368bf941cfa1e",
+      "baseline_report": "artifacts/real-corpus-expanded/batches/batch-003/report.json",
+      "repair_status": "not_needed_for_title"
+    },
+    {
+      "id": "diverse-macbert",
+      "expected_title": "Revisiting Pre-Trained Models for Chinese Natural Language Processing",
+      "actual_title": "Revisiting Pre-Trained Models for Chinese Natural Language Processing",
+      "comparison": "exact",
+      "source_manifest": "tests/corpus/expanded/sources-diverse.json",
+      "source_url": "https://aclanthology.org/2020.findings-emnlp.58/",
+      "source_pdf": ".test-data/external/expanded-corpus/diverse-macbert.pdf",
+      "source_pdf_sha256": "5ed22b3574fbf8840352c78a1b7cd2bbf981705a3c6eac2f5cce723d23e63523",
+      "baseline_paper_json": "artifacts/real-corpus-expanded/batches/batch-003/runs/20261009T130706Z-049990b3/004-diverse-macbert/paper-auto.json",
+      "baseline_paper_json_sha256": "5a7ee32eeb74a6c6e5b9d2245727262cf96c7b57f3d08635db2eb87c20dce8a2",
+      "baseline_report": "artifacts/real-corpus-expanded/batches/batch-003/report.json",
+      "repair_status": "not_needed_for_title"
+    },
+    {
+      "id": "expanded-ecological-network",
+      "expected_title": "Strong Impact of Temporal Resolution on the Structure of an Ecological Network",
+      "actual_title": "Strong Impact of Temporal Resolution on the Structure of an Ecological Network",
+      "comparison": "exact",
+      "source_manifest": "tests/corpus/expanded/sources-science.json",
+      "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0081694",
+      "source_pdf": ".test-data/external/expanded-corpus/expanded-ecological-network.pdf",
+      "source_pdf_sha256": "386a3d74d4c66cd31358078cfbcfd5422a9257e092870aa8fed29ca1b08d4dda",
+      "baseline_paper_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/008-expanded-ecological-network/paper-auto.json",
+      "baseline_paper_json_sha256": "2b1bcd8bef03f4eb6288b5b589ac37786f8fb746280ad6b849c1e9e1cd224d79",
+      "baseline_report": "artifacts/real-corpus-expanded/batches/batch-002/report.json",
+      "repair_status": "not_needed_for_title"
+    },
+    {
+      "id": "expanded-occupancy-response",
+      "expected_title": "Ignoring Imperfect Detection in Biological Surveys Is Dangerous: A Response to ‘Fitting and Interpreting Occupancy Models’",
+      "actual_title": "Ignoring Imperfect Detection in Biological Surveys Is Dangerous: A Response to 'Fitting and Interpreting Occupancy Models'",
+      "comparison": "punctuation_equivalent",
+      "source_manifest": "tests/corpus/expanded/sources-science.json",
+      "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0099571",
+      "source_pdf": ".test-data/external/expanded-corpus/expanded-occupancy-response.pdf",
+      "source_pdf_sha256": "3959832acf6f229a4f1578d0ff485b8d7191c6bb82372114cba02167047ab0b1",
+      "baseline_paper_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/009-expanded-occupancy-response/paper-auto.json",
+      "baseline_paper_json_sha256": "aa3870abcb956ddd5982b219742c5c8c2e742468c9071c32b1fc928570aac277",
+      "baseline_report": "artifacts/real-corpus-expanded/batches/batch-002/report.json",
+      "repair_status": "not_needed_for_title",
+      "difference": "Curly single quotes around Fitting and Interpreting Occupancy Models become straight single quotes. Wording is unchanged."
+    },
+    {
+      "id": "expanded-scikit-fem",
+      "expected_title": "scikit-fem: A Python package for finite element assembly",
+      "actual_title": "scikit-fem: A Python package for finite element assembly",
+      "comparison": "exact",
+      "source_manifest": "tests/corpus/expanded/sources-science.json",
+      "source_url": "https://joss.theoj.org/papers/10.21105/joss.02369",
+      "source_pdf": ".test-data/external/expanded-corpus/expanded-scikit-fem.pdf",
+      "source_pdf_sha256": "f712cc3b01ceda4fceea956a410688a77cd6e9ecd8394b5aa29c7c0215cbe336",
+      "baseline_paper_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/010-expanded-scikit-fem/paper-auto.json",
+      "baseline_paper_json_sha256": "7a8adc3fbd82c957ea53a20cd4d7e1007d03b48dcab4c5ce513b0551e313510b",
+      "baseline_report": "artifacts/real-corpus-expanded/batches/batch-002/report.json",
+      "repair_status": "not_needed_for_title"
+    },
+    {
+      "id": "expanded-antibiotic-transport",
+      "expected_title": "Antibiotic Transport in Resistant Bacteria: Synchrotron UV Fluorescence Microscopy to Determine Antibiotic Accumulation with Single Cell Resolution",
+      "actual_title": "Antibiotic Transport in Resistant Bacteria: Synchrotron UV Fluorescence Microscopy to Determine Antibiotic Accumulation with Single Cell Resolution",
+      "comparison": "exact",
+      "source_manifest": "tests/corpus/expanded/sources-science.json",
+      "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0038624",
+      "source_pdf": ".test-data/external/expanded-corpus/expanded-antibiotic-transport.pdf",
+      "source_pdf_sha256": "bc890b890a6044f0701de877b2e5f1582c577c3b550bbbce39655012ee310788",
+      "baseline_paper_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/011-expanded-antibiotic-transport/paper-auto.json",
+      "baseline_paper_json_sha256": "9e6f0cf572ec3c0ed244031bbb6846090743c7641b44741c1b784c447efafe2b",
+      "baseline_report": "artifacts/real-corpus-expanded/batches/batch-002/report.json",
+      "repair_status": "not_needed_for_title"
+    },
+    {
+      "id": "expanded-cellfit",
+      "expected_title": "CellFIT: A Cellular Force-Inference Toolkit Using Curvilinear Cell Boundaries",
+      "actual_title": "CellFIT: A Cellular Force-Inference Toolkit Using Curvilinear Cell Boundaries",
+      "comparison": "exact",
+      "source_manifest": "tests/corpus/expanded/sources-science.json",
+      "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0099116",
+      "source_pdf": ".test-data/external/expanded-corpus/expanded-cellfit.pdf",
+      "source_pdf_sha256": "1693b50cdf811ee6bdaabb60fd0a26d1a807c310c737a4b0a8f0b5322aaf115a",
+      "baseline_paper_json": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/001-expanded-cellfit/paper-auto.json",
+      "baseline_paper_json_sha256": "d6086394bf51f5dd7b304ce853991648b707521c66bd9bdf2140a6a79a4d2aee",
+      "baseline_report": "artifacts/real-corpus-expanded/batches/batch-004/report.json",
+      "repair_status": "not_needed_for_title"
+    },
+    {
+      "id": "expanded-strobe",
+      "expected_title": "The Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) Statement: Guidelines for Reporting Observational Studies",
+      "actual_title": "untitled",
+      "comparison": "mismatch",
+      "source_manifest": "tests/corpus/expanded/sources-science.json",
+      "source_url": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0040296",
+      "source_pdf": ".test-data/external/expanded-corpus/expanded-strobe.pdf",
+      "source_pdf_sha256": "5969e378c7492e254a97911ceea84db2a0f34aef2680dd261a57c182d292cf8b",
+      "baseline_paper_json": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/002-expanded-strobe/paper-auto.json",
+      "baseline_paper_json_sha256": "aaec8e6336f3de00ebe1ef8eae55ee774b03a89f95c5d7ee179e17701e916c19",
+      "baseline_report": "artifacts/real-corpus-expanded/batches/batch-004/report.json",
+      "repair_status": "unresolved; not fixed in caption-number-only 0.2.2 source",
+      "evidence": {
+        "source_pdf_metadata_reader": "pypdfium2.PdfDocument.get_metadata_dict()",
+        "source_pdf_metadata": {
+          "Title": "untitled",
+          "Author": "",
+          "Subject": "",
+          "Keywords": "",
+          "Creator": "3B2 Total Publishing System 8.07c/W",
+          "Producer": "Acrobat Distiller 7.0.5 (Windows)",
+          "CreationDate": "D:20071022165241-05'00'",
+          "ModDate": "D:20071022165241-05'00'"
+        },
+        "source_first_page_text_prefix": "The Strengthening the Reporting of\r\nObservational Studies in Epidemiology (STROBE)\r\nStatement: Guidelines for Reporting\r\nObservational Studies\r\nErik von Elm1*, Douglas G. Altman2\r\n, Matthias Egger1,3, Stuart J. Pocock4\r\n, Peter C. Gøtzsche5\r\n,\r\nJan P. Vandenbroucke6 for the STROBE Initiative\r\n1 Institute of Social and Preventive Medicine (ISPM), University of Bern, Bern, Switzerland, 2 Centre for Statistics in Medicine, University of Oxford, Oxford, United Kingdom,\r\n3 Department of Social Medicine, University of Bristol, Bristol, United Kingdom, 4 London School of Hygiene and Tropical Medicine, University of London, London, United\r\nKingdom, 5 Nordic Cochrane Centre, Copenhagen, Denmark, 6 De",
+        "structure_json": "artifacts/real-corpus-expanded/batches/batch-004/runs/20261009T131328Z-1e526b8e/002-expanded-strobe/structure.json",
+        "structure_sha256": "6b29f752d9fa9406cd3768981553d811cd6176714fea1ced373db1221a96951e",
+        "structure_metadata_title": "untitled",
+        "structure_title_source": "pdf_metadata",
+        "first_page_headings": [
+          {
+            "id": "#/texts/1",
+            "label": "section_header",
+            "text": "The Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) Statement: Guidelines for Reporting Observational Studies",
+            "page_index": 0,
+            "bbox_pdf": [
+              45.0141,
+              618.9851320507042,
+              548.87212734,
+              730.3239484
+            ],
+            "bbox_height_points": 111.33881634929571,
+            "text_newline_count": 0
+          },
+          {
+            "id": "#/texts/13",
+            "label": "section_header",
+            "text": "A B S T R A C T",
+            "page_index": 0,
+            "bbox_pdf": [
+              171.496,
+              523.943418642534,
+              267.17779655,
+              535.53296
+            ],
+            "bbox_height_points": 11.589541357466032,
+            "text_newline_count": 0
+          }
+        ],
+        "correct_title_present_in_structure": true,
+        "source_first_page_png": "artifacts/real-corpus-expanded/source-pages/expanded-strobe/page-1.png",
+        "first_page_visual_review": true,
+        "source_code_reference": "backend/papervault/parsers/docling_parser.py:40",
+        "analysis": "Source PDF Title is literally untitled; structure.title_source is pdf_metadata although the correct full title is present as a first-page heading. The current filter rejects one publisher export-ID pattern but not this placeholder. First-page Abstract is stored as A B S T R A C T, which also does not match the existing exact abstract-heading fallback. Merely blanking the placeholder is therefore not a demonstrated complete fix."
+      },
+      "failure": "Placeholder PDF Title untitled is treated as the article title."
+    },
+    {
+      "id": "expanded-damask-python",
+      "expected_title": "A Python Library for Pre- and Post-Processing of DAMASK Simulations",
+      "actual_title": "A Python Library for Pre- and Post-Processing of DAMASK Simulations",
+      "comparison": "exact",
+      "source_manifest": "tests/corpus/expanded/sources-science.json",
+      "source_url": "https://joss.theoj.org/papers/10.21105/joss.07164",
+      "source_pdf": ".test-data/external/expanded-corpus/expanded-damask-python.pdf",
+      "source_pdf_sha256": "11d41887d1b3084da9433fa450e753c608c99c827cfc13f431366f394eb0aa87",
+      "baseline_paper_json": "artifacts/real-corpus-expanded/batches/batch-005/runs/20261009T132032Z-c69b982b/001-expanded-damask-python/paper-auto.json",
+      "baseline_paper_json_sha256": "018dc29462ba9e56acc5b411fb45407baabd94002d5509d80ccc28248c15d298",
+      "baseline_report": "artifacts/real-corpus-expanded/batches/batch-005/report.json",
+      "repair_status": "not_needed_for_title"
+    }
+  ],
+  "title_summary": {
+    "papers": 20,
+    "status_counts": {
+      "exact": 17,
+      "mismatch": 2,
+      "punctuation_equivalent": 1
+    },
+    "unresolved_ids": [
+      "ml-longt5-naacl2022",
+      "expanded-strobe"
+    ],
+    "claim_boundary": "18 titles agree including one punctuation-only equivalent; 2 are demonstrably wrong. This small selected corpus does not establish general title-extraction accuracy."
+  },
+  "quality_summary_audit": {
+    "file": "artifacts/real-corpus-expanded/quality-summary.json",
+    "sha256": "6068d7dcf3da15e5607a88fe34d7d968f11fd10e9f175f900eefe9fc7f05e101",
+    "verdict": "usable_with_existing_scope_qualifications",
+    "arithmetic_checks": [
+      {
+        "metric": "new papers/pages/raw figure/raw table/raw resources",
+        "expected_from_summary": [
+          20,
+          243,
+          130,
+          96,
+          226
+        ],
+        "independently_recounted": [
+          20,
+          243,
+          130,
+          96,
+          226
+        ]
+      },
+      {
+        "metric": "deep_review papers/pages/logical objects/resource-matched objects",
+        "expected_from_summary": [
+          6,
+          86,
+          74,
+          72
+        ],
+        "independently_recounted": [
+          6,
+          86,
+          74,
+          72
+        ]
+      },
+      {
+        "metric": "deep_review correct_type true/false",
+        "expected_from_summary": [
+          72,
+          2
+        ],
+        "independently_recounted": [
+          72,
+          2
+        ]
+      },
+      {
+        "metric": "deep_review correct_number true/false",
+        "expected_from_summary": [
+          67,
+          7
+        ],
+        "independently_recounted": [
+          67,
+          7
+        ]
+      },
+      {
+        "metric": "deep_review crop_complete true/false",
+        "expected_from_summary": [
+          65,
+          9
+        ],
+        "independently_recounted": [
+          65,
+          9
+        ]
+      },
+      {
+        "metric": "deep_review complete_as_single_resource true/false",
+        "expected_from_summary": [
+          63,
+          11
+        ],
+        "independently_recounted": [
+          63,
+          11
+        ]
+      },
+      {
+        "metric": "inventory_only papers/pages/logical objects/resource-matched objects",
+        "expected_from_summary": [
+          14,
+          157,
+          87,
+          87
+        ],
+        "independently_recounted": [
+          14,
+          157,
+          87,
+          87
+        ]
+      },
+      {
+        "metric": "inventory_only correct_type true/false",
+        "expected_from_summary": [
+          86,
+          1
+        ],
+        "independently_recounted": [
+          86,
+          1
+        ]
+      },
+      {
+        "metric": "inventory_only correct_number true/false",
+        "expected_from_summary": [
+          71,
+          16
+        ],
+        "independently_recounted": [
+          71,
+          16
+        ]
+      }
+    ],
+    "all_arithmetic_checks_passed": true,
+    "review_file_hash_checks": [
+      {
+        "path": "artifacts/real-corpus-expanded/quality-ml.json",
+        "hash_matches": true
+      },
+      {
+        "path": "artifacts/real-corpus-expanded/quality-diverse.json",
+        "hash_matches": true
+      },
+      {
+        "path": "artifacts/real-corpus-expanded/quality-science.json",
+        "hash_matches": true
+      }
+    ],
+    "extra_classification_totals_match": true,
+    "worker_exit_records_independently_recounted": 20,
+    "worker_exit_code_counts": {
+      "0": 20
+    },
+    "selected_cells": {
+      "frozen_gt_checkpoints": 60,
+      "papers": 6,
+      "checkpoints_per_paper": 10,
+      "statuses": {
+        "exact": 50,
+        "mismatch": 6,
+        "ambiguous_missing": 4
+      },
+      "expected_table_page_and_value_match_frozen_gt": true,
+      "existing_cell_coordinates_reloaded_from_original_json_csv_html": 56,
+      "status_discrepancies_on_raw_format_reload": 0,
+      "confirmed_missing": 4,
+      "missing_scope": "Ecological-network Table 2 source groups A/B absent from all exports, confirmed in this agent's prior source-vs-export deep review.",
+      "mismatch_scope": "CellFIT six plus/minus cells disagree with visible source; independently extracted source text already encodes plus/minus as digit 6. JSON/CSV/HTML agree with one another but remain scientifically wrong."
+    },
+    "reportable_wording": "The six deep-reviewed papers had 60 preselected semantic checkpoints: 50 exact, 6 mismatched and 4 missing. This is a selected-checkpoint result, not a full-table or general parser accuracy rate. Fourteen inventory-only papers are excluded from crop/cell denominators.",
+    "required_caveats": [
+      "A partial resource match is not full logical-object recovery.",
+      "Complete body coverage may coexist with merged/oversized crops; preserve clean/separate qualification and the not-graded cases.",
+      "The sampled numeric checks do not override missing table groups, fragmented headers, wrong caption association or other unselected-cell errors.",
+      "The 20-paper baseline is installed 0.2.1. A later 0.2.2 caption-number replay does not repair or invalidate baseline title/content failures.",
+      "Zero worker exit codes do not prove absence of historical source-suite native diagnostic causes.",
+      "No title-correctness claim may be inferred from workflow or sampled-cell success."
+    ],
+    "scope_of_this_independent_review": "Recomputed aggregate counts from frozen GT, original batch resource lists and per-paper quality files; matched every fixed expected checkpoint by table/page/value; independently reread JSON/CSV/HTML at 56 existing coordinates. Did not repeat all 20 source-page visual inspections or regrade all underlying object/caption judgments."
+  },
+  "integrity": {
+    "source_pdfs_unchanged": true,
+    "production_code_changed": false,
+    "ground_truth_changed": false,
+    "baseline_outputs_changed": false,
+    "only_written_file": "artifacts/real-corpus-expanded/metadata-observations.json"
+  }
+}

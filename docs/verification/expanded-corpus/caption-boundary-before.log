@@ -1,0 +1,25 @@
+.....................FFF..                                               [100%]
+================================== FAILURES ===================================
+_ test_caption_number_preserves_printed_identifiers_without_guessing[table-Table 1.2a: Ablation-] _
+tests\parser\test_caption_numbers.py:35: in test_caption_number_preserves_printed_identifiers_without_guessing
+    assert _caption_number(caption, kind) == expected
+E   AssertionError: assert '1' == ''
+E     
+E     + 1
+_ test_caption_number_preserves_printed_identifiers_without_guessing[table-Table A.1.2a: Ablation-] _
+tests\parser\test_caption_numbers.py:35: in test_caption_number_preserves_printed_identifiers_without_guessing
+    assert _caption_number(caption, kind) == expected
+E   AssertionError: assert 'A.1' == ''
+E     
+E     + A.1
+_ test_caption_number_preserves_printed_identifiers_without_guessing[figure-Figure V-Net architecture.-] _
+tests\parser\test_caption_numbers.py:35: in test_caption_number_preserves_printed_identifiers_without_guessing
+    assert _caption_number(caption, kind) == expected
+E   AssertionError: assert 'V' == ''
+E     
+E     + V
+=========================== short test summary info ===========================
+FAILED tests/parser/test_caption_numbers.py::test_caption_number_preserves_printed_identifiers_without_guessing[table-Table 1.2a: Ablation-]
+FAILED tests/parser/test_caption_numbers.py::test_caption_number_preserves_printed_identifiers_without_guessing[table-Table A.1.2a: Ablation-]
+FAILED tests/parser/test_caption_numbers.py::test_caption_number_preserves_printed_identifiers_without_guessing[figure-Figure V-Net architecture.-]
+3 failed, 23 passed in 0.29s

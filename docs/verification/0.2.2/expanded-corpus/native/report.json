@@ -1,0 +1,217 @@
+{
+  "passed": true,
+  "app": "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault.exe",
+  "backend_sha256": "b5e1ece230ab2ec1183057ab1f0050e6899947632897724febb117eeaa51755f",
+  "corpus_report": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\frozen-report.json",
+  "corpus_report_sha256": "56b7ebde0e727ae6ae2e4ca245d549e6db0d28e7f3dd2c0ad4c5676f402b6939",
+  "fixture": "D:\\project\\PaperVault\\.test-data\\real-corpus-native\\native-ze6vtaq5",
+  "library": "D:\\project\\PaperVault\\.test-data\\real-corpus-native\\native-ze6vtaq5\\real-paper-ui-copy",
+  "papers": [
+    {
+      "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+      "source": {
+        "id": "ml-simcse-emnlp2021",
+        "title": "SimCSE: Simple Contrastive Learning of Sentence Embeddings",
+        "authors_citation": "Tianyu Gao, Xingcheng Yao, Danqi Chen (2021), EMNLP, pp.6894-6910.",
+        "source_url": "https://aclanthology.org/2021.emnlp-main.552/",
+        "pdf_url": "https://aclanthology.org/2021.emnlp-main.552.pdf",
+        "license": "CC-BY-4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+        "license_evidence": "Official ACL publisher page and ACL policy: all ACL materials published in or after 2016 are CC BY 4.0. Official publisher PDF, not an arXiv substitute.",
+        "layout_notes": "Longer two-column paper, contrastive-loss equations, multi-panel plots and appendices with benchmark tables.",
+        "review_level": "inventory_only",
+        "local_path": "D:\\project\\PaperVault\\.test-data\\external\\expanded-corpus\\ml-simcse-emnlp2021.pdf",
+        "sha256": "b6bb8b5d1356095a02aae8e5e41265fde03f8f02101972e338bad0b7715f12fc",
+        "pages": 17,
+        "bytes": 1670753,
+        "final_download_url": "https://aclanthology.org/2021.emnlp-main.552.pdf",
+        "downloaded_at_utc": "2026-10-09T12:55:18.182223+00:00",
+        "manifest": "D:\\project\\PaperVault\\tests\\corpus\\expanded\\sources-ml.json",
+        "manifest_sha256": "563c32720e7ea88588c5816fec2c9adac206edeb5129d76566a621a301f84e02"
+      },
+      "checks": [
+        "real_pdf_hash_matches_source_and_native_pdfjs_canvas_rendered",
+        "native_note_bookmark_and_reading_position_persisted_in_copy"
+      ],
+      "resources": [
+        {
+          "kind": "figure",
+          "count": 5,
+          "resource_id": "6c03a8ec-4072-4630-828a-9326e2a104ce",
+          "selection_mode": "captioned",
+          "selected_auto_index": 4,
+          "required_number": "G.1",
+          "observed_number": "G.1",
+          "observed_name": "Figure G.1",
+          "caption": "Figure G.1: Density plots of cosine similarities between sentence pairs in STS-B. Pairs are divided into 5 groups based on ground truth ratings (higher means more similar) along the y-axis, and x-axis is the cosine similarity.",
+          "source_location": {
+            "page_index": 16,
+            "crop_box": [
+              0.0,
+              0.0,
+              595.276,
+              841.89
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              595.276,
+              841.89
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 595.276,
+            "height": 841.89,
+            "bbox": [
+              90.51926300504543,
+              324.1148782312389,
+              509.06716067300056,
+              547.9071100643638
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 17,
+              "bbox": {
+                "l": 90.51926300504543,
+                "t": 547.9071100643638,
+                "r": 509.0671606730006,
+                "b": 324.1148782312389,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                0
+              ]
+            }
+          },
+          "native_detail_and_location": true
+        },
+        {
+          "kind": "table",
+          "count": 16,
+          "resource_id": "3cb57400-3ddc-4fe6-8d30-5adc0d6ed1b9",
+          "selection_mode": "captioned",
+          "selected_auto_index": 8,
+          "required_number": "A.1",
+          "observed_number": "A.1",
+          "observed_name": "Table A.1",
+          "caption": "Table A.1: Batch sizes and learning rates for SimCSE.",
+          "source_location": {
+            "page_index": 12,
+            "crop_box": [
+              0.0,
+              0.0,
+              595.276,
+              841.89
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              595.276,
+              841.89
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 595.276,
+            "height": 841.89,
+            "bbox": [
+              72.03050409278613,
+              432.92991478310626,
+              285.1794587603063,
+              498.3310985730096
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 13,
+              "bbox": {
+                "l": 72.03050409278613,
+                "t": 498.3310985730096,
+                "r": 285.1794587603063,
+                "b": 432.92991478310626,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                0
+              ]
+            }
+          },
+          "native_detail_and_location": true
+        }
+      ],
+      "observed_auto_title": "SimCSE: Simple Contrastive Learning of Sentence Embeddings",
+      "pdf_find": {
+        "query": "Proceedings",
+        "status": "1 / 10"
+      },
+      "reading_state": {
+        "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+        "version": 6,
+        "page_index": 1,
+        "anchor": [
+          0.0,
+          841.60875
+        ],
+        "scale": 1.0,
+        "rotation": 0,
+        "fit_mode": "custom",
+        "status": "reading",
+        "last_opened": "2026-10-09T14:05:50.208492+00:00",
+        "updated_at": "2026-10-09T14:05:53.629604+00:00"
+      },
+      "annotations": [
+        {
+          "title": "Real corpus native review 1: ml-simcse-emnlp2021.pdf",
+          "quote": "",
+          "body": "Source inspected through the installed reader: https://aclanthology.org/2021.emnlp-main.552/",
+          "color": "amber",
+          "tags": [],
+          "locations": [],
+          "id": "d87e0ac0-213a-4712-8e0b-123e129b8e72",
+          "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+          "paper_title": "SimCSE: Simple Contrastive Learning of Sentence Embeddings",
+          "kind": "note",
+          "version": 1,
+          "deleted": false,
+          "created_at": "2026-10-09T14:05:54.264962+00:00",
+          "updated_at": "2026-10-09T14:05:54.264962+00:00",
+          "paper_filename": "ml-simcse-emnlp2021.pdf",
+          "pdf_sha256": "b6bb8b5d1356095a02aae8e5e41265fde03f8f02101972e338bad0b7715f12fc"
+        },
+        {
+          "title": "第 2 页",
+          "quote": "",
+          "body": "",
+          "color": "amber",
+          "tags": [],
+          "locations": [
+            {
+              "page_index": 1,
+              "bbox": null
+            }
+          ],
+          "id": "9e811879-c152-4195-9650-92c081665762",
+          "paper_id": "d7660cac-296c-45c2-b673-a4a5170bbc77",
+          "paper_title": "SimCSE: Simple Contrastive Learning of Sentence Embeddings",
+          "kind": "bookmark",
+          "version": 1,
+          "deleted": false,
+          "created_at": "2026-10-09T14:05:53.506660+00:00",
+          "updated_at": "2026-10-09T14:05:53.506660+00:00",
+          "paper_filename": "ml-simcse-emnlp2021.pdf",
+          "pdf_sha256": "b6bb8b5d1356095a02aae8e5e41265fde03f8f02101972e338bad0b7715f12fc"
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "phases": [
+    "installed_backend_restored_separate_copy_without_manual_baseline_edits",
+    "native_restart_retains_real_paper_notes_bookmarks_reading_and_closes_sidecar"
+  ],
+  "desktop_version": "0.2.2",
+  "document_scripts": [
+    "http://tauri.localhost/assets/index-Bi9K65xx.js"
+  ]
+}

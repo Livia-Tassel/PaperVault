@@ -1,0 +1,2934 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-10-09T13:22:43.167262+00:00",
+  "baseline_version": "0.2.1",
+  "ground_truth": "tests/corpus/expanded/ground-truth-ml.json",
+  "ground_truth_sha256": "c035473dcf30efc34d891182c17aa1d33dba16820749c4d37be410731853aa47",
+  "scope": "Six new complete PDFs, 96 pages. Only BART and LongT5 receive detailed output-crop/table-grid review and twenty predefined cells. The other four papers receive numbered-object inventory matching, with limited explicit spot checks; null crop fields mean not comprehensively reviewed.",
+  "method": "Ground truth was fully saved before reading the two batch reports. Deep review opened all 26 resource PNGs (including fragments/blank noise), read all 16 emitted table CSV/HTML grids and checked semantic rows/columns for the predefined cells. Inventory review compares original captions/pages to emitted resource types/numbers/captions; extra/split resources are independently classified using source-page and output spot checks.",
+  "crop_policy": "Full figure body includes printed panel labels/subcaptions within a composite figure; only the top-level caption may be stored separately. Diagram-only coverage is reported separately when panel explanations are omitted. Inventory-only crop_complete=null must not be counted as a pass.",
+  "papers": [
+    {
+      "id": "ml-bart-acl2020",
+      "review_level": "deep_review",
+      "pages": 10,
+      "expected_counts": {
+        "figure": 3,
+        "table": 9
+      },
+      "observed_counts": {
+        "figure": 5,
+        "table": 8
+      },
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            1
+          ],
+          "resource_ids": [
+            "6e43bccb-c343-4c34-aeaf-f59971638621",
+            "97dec932-586a-4a97-aba8-6e3d7b8378fc",
+            "5a6edf3d-bbcc-43c8-9de4-1841a2cbb656"
+          ],
+          "inventory_status": "fragmented",
+          "correct_type": true,
+          "correct_number": false,
+          "actual_numbers": [
+            "",
+            "",
+            ""
+          ],
+          "caption_association": false,
+          "expected_caption_reference": "Figure 1: A schematic comparison of BART with BERT (Devlin et al., 2019) and GPT (Radford et al., 2018).",
+          "actual_captions": [
+            "(a) BERT: Random tokens are replaced with masks, and the document is encoded bidirectionally. Missing tokens are predicted independently, so BERT cannot easily be used for generation.",
+            "",
+            "(b) GPT: Tokens are predicted auto-regressively, meaning GPT can be used for generation. However words can only condition on leftward context, so it cannot learn bidirectional interactions."
+          ],
+          "crop_complete": false,
+          "complete_as_single_resource": false,
+          "issues": [
+            {
+              "code": "fragmented_composite_figure",
+              "detail": "Three diagrams are exported as three unrelated resources. No resource contains the whole figure; printed (a)/(b)/(c) panel labels and explanatory subcaptions are excluded from their PNGs."
+            },
+            {
+              "code": "wrong_subcaption_association",
+              "detail": "The BERT crop gets the (a) BERT text, GPT crop has no caption, and BART panel (c) gets the (b) GPT text. The top-level Figure 1 caption and number are not associated."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "6e43bccb-c343-4c34-aeaf-f59971638621",
+              "png": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/6e43bccb-c343-4c34-aeaf-f59971638621/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/6e43bccb-c343-4c34-aeaf-f59971638621/resource-auto.json"
+            },
+            {
+              "resource_id": "97dec932-586a-4a97-aba8-6e3d7b8378fc",
+              "png": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/97dec932-586a-4a97-aba8-6e3d7b8378fc/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/97dec932-586a-4a97-aba8-6e3d7b8378fc/resource-auto.json"
+            },
+            {
+              "resource_id": "5a6edf3d-bbcc-43c8-9de4-1841a2cbb656",
+              "png": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/5a6edf3d-bbcc-43c8-9de4-1841a2cbb656/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/5a6edf3d-bbcc-43c8-9de4-1841a2cbb656/resource-auto.json"
+            }
+          ],
+          "graphical_panels_present_across_resources": true
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            2
+          ],
+          "resource_ids": [
+            "9bb6780c-eb2e-4d5f-8974-ecea9f080f7b"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "2"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Figure 2: Transformations for noising the input that we experiment with. These transformations can be composed.",
+          "actual_captions": [
+            "Figure 2: Transformations for noising the input that we experiment with. These transformations can be composed."
+          ],
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "9bb6780c-eb2e-4d5f-8974-ecea9f080f7b",
+              "png": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/9bb6780c-eb2e-4d5f-8974-ecea9f080f7b/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/9bb6780c-eb2e-4d5f-8974-ecea9f080f7b/resource-auto.json"
+            }
+          ],
+          "graphical_panels_present_across_resources": true
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            3
+          ],
+          "resource_ids": [
+            "5bae341d-fa5a-4c23-bd5b-8b8f289b5999"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": false,
+          "actual_numbers": [
+            ""
+          ],
+          "caption_association": false,
+          "expected_caption_reference": "Figure 3: Fine tuning BART for classification and translation.",
+          "actual_captions": [
+            ""
+          ],
+          "crop_complete": false,
+          "complete_as_single_resource": false,
+          "issues": [
+            {
+              "code": "missing_caption_and_number",
+              "detail": "Both graphical diagrams are present in one PNG, but Figure 3 caption and number are absent."
+            },
+            {
+              "code": "missing_panel_labels_and_explanations",
+              "detail": "Printed (a)/(b) panel labels and their explanatory subcaptions are outside the crop and are absent from resource caption. Diagram-only coverage is complete; full figure content including panel labels is not."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "5bae341d-fa5a-4c23-bd5b-8b8f289b5999",
+              "png": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/5bae341d-fa5a-4c23-bd5b-8b8f289b5999/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/5bae341d-fa5a-4c23-bd5b-8b8f289b5999/resource-auto.json"
+            }
+          ],
+          "graphical_panels_present_across_resources": true
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            4
+          ],
+          "resource_ids": [
+            "6d35ce30-7c9c-489b-b931-6c5ba9cb5579"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "1"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 1: Comparison of pre-training objectives, including approaches inspired by BERT, MASS, GPT, XLNet and UniLM.",
+          "actual_captions": [
+            "Table 1: Comparison of pre-training objectives, including approaches inspired by BERT, MASS, GPT, XLNet and UniLM. All models are a similar size to BERT Base and are trained for 1M steps on the same data. Entries in the bottom two blocks are trained on identical data using the same code-base, and fine-tuned with the same procedures. Entries in the second block are inspired by pre-training objectives proposed in previous work, but have been simplified to focus on evaluation objectives (see §4.1). Performance varies considerably across tasks, but the BART models with text infilling demonstrate the most consistently strong performance."
+          ],
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "6d35ce30-7c9c-489b-b931-6c5ba9cb5579",
+              "png": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/6d35ce30-7c9c-489b-b931-6c5ba9cb5579/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/6d35ce30-7c9c-489b-b931-6c5ba9cb5579/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/6d35ce30-7c9c-489b-b931-6c5ba9cb5579/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/6d35ce30-7c9c-489b-b931-6c5ba9cb5579/html.html"
+            }
+          ],
+          "structured_table_review": "no_additional_discrepancy_identified_in_review",
+          "cell_fidelity_review_scope": "Visual/grid structure review, not an exhaustive cell-by-cell transcription"
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_indices": [
+            5
+          ],
+          "resource_ids": [
+            "e5763d45-25fb-4dac-8776-0f65245163da"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "2"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 2: Results for large models on GLUE tasks.",
+          "actual_captions": [
+            "Table 2: Results for large models on GLUE tasks. BART performs comparably to RoBERTa and XLNet, suggesting that BART's uni-directional decoder layers do not reduce performance on discriminative tasks."
+          ],
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "e5763d45-25fb-4dac-8776-0f65245163da",
+              "png": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/e5763d45-25fb-4dac-8776-0f65245163da/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/e5763d45-25fb-4dac-8776-0f65245163da/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/e5763d45-25fb-4dac-8776-0f65245163da/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/e5763d45-25fb-4dac-8776-0f65245163da/html.html"
+            }
+          ],
+          "structured_table_review": "no_additional_discrepancy_identified_in_review",
+          "cell_fidelity_review_scope": "Visual/grid structure review, not an exhaustive cell-by-cell transcription"
+        },
+        {
+          "kind": "table",
+          "number": "3",
+          "page_indices": [
+            5
+          ],
+          "resource_ids": [
+            "f5b846e6-ffd7-480d-a779-03c4bce3bb97"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "3"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 3: BART gives similar results to XLNet and RoBERTa on question answering.",
+          "actual_captions": [
+            "Table 3: BART gives similar results to XLNet and RoBERTa on question answering."
+          ],
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "f5b846e6-ffd7-480d-a779-03c4bce3bb97",
+              "png": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/f5b846e6-ffd7-480d-a779-03c4bce3bb97/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/f5b846e6-ffd7-480d-a779-03c4bce3bb97/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/f5b846e6-ffd7-480d-a779-03c4bce3bb97/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/f5b846e6-ffd7-480d-a779-03c4bce3bb97/html.html"
+            }
+          ],
+          "structured_table_review": "no_additional_discrepancy_identified_in_review",
+          "cell_fidelity_review_scope": "Visual/grid structure review, not an exhaustive cell-by-cell transcription"
+        },
+        {
+          "kind": "table",
+          "number": "4",
+          "page_indices": [
+            6
+          ],
+          "resource_ids": [
+            "005e651d-7bb7-450f-82bf-cb0e462799cd"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "4"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 4: Results on two standard summarization datasets.",
+          "actual_captions": [
+            "Table 4: Results on two standard summarization datasets. BART outperforms previous work on summarization on both tasks and all metrics, including those based on large-scale pre-training."
+          ],
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "005e651d-7bb7-450f-82bf-cb0e462799cd",
+              "png": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/005e651d-7bb7-450f-82bf-cb0e462799cd/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/005e651d-7bb7-450f-82bf-cb0e462799cd/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/005e651d-7bb7-450f-82bf-cb0e462799cd/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/005e651d-7bb7-450f-82bf-cb0e462799cd/html.html"
+            }
+          ],
+          "structured_table_review": "no_additional_discrepancy_identified_in_review",
+          "cell_fidelity_review_scope": "Ten predefined cells only"
+        },
+        {
+          "kind": "table",
+          "number": "5",
+          "page_indices": [
+            6
+          ],
+          "resource_ids": [
+            "6a48b48e-4acb-44bc-acaa-e88cd3540814"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "5"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 5: Human Evaluation on XSum: BART summaries are preferred to those from previous work, but not to human-written reference summaries.",
+          "actual_captions": [
+            "Table 5: Human Evaluation on XSum: BART summaries are preferred to those from previous work, but not to human-written reference summaries."
+          ],
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [
+            {
+              "code": "row_label_split_into_extra_column",
+              "detail": "The original comparison labels 'vs. BERTSUMEXTABS' and 'vs. Reference' are split into two columns, making a four-column grid rather than the three semantic columns of the source. Percentages remain paired correctly; this is a structural defect, not a numeric-value error."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "6a48b48e-4acb-44bc-acaa-e88cd3540814",
+              "png": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/6a48b48e-4acb-44bc-acaa-e88cd3540814/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/6a48b48e-4acb-44bc-acaa-e88cd3540814/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/6a48b48e-4acb-44bc-acaa-e88cd3540814/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/6a48b48e-4acb-44bc-acaa-e88cd3540814/html.html"
+            }
+          ],
+          "structured_table_review": "structure_issue",
+          "cell_fidelity_review_scope": "Visual/grid structure review, not an exhaustive cell-by-cell transcription"
+        },
+        {
+          "kind": "table",
+          "number": "6",
+          "page_indices": [
+            6
+          ],
+          "resource_ids": [
+            "951265d3-1816-4b62-ab6b-2a938df6538b"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "6"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 6: BART outperforms previous work on conversational response generation.",
+          "actual_captions": [
+            "Table 6: BART outperforms previous work on conversational response generation. Perplexities are renormalized based on official tokenizer for ConvAI2."
+          ],
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "951265d3-1816-4b62-ab6b-2a938df6538b",
+              "png": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/951265d3-1816-4b62-ab6b-2a938df6538b/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/951265d3-1816-4b62-ab6b-2a938df6538b/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/951265d3-1816-4b62-ab6b-2a938df6538b/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/951265d3-1816-4b62-ab6b-2a938df6538b/html.html"
+            }
+          ],
+          "structured_table_review": "no_additional_discrepancy_identified_in_review",
+          "cell_fidelity_review_scope": "Visual/grid structure review, not an exhaustive cell-by-cell transcription"
+        },
+        {
+          "kind": "table",
+          "number": "7",
+          "page_indices": [
+            6
+          ],
+          "resource_ids": [
+            "095567a4-779c-4d5a-8693-d5802c079961"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "7"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 7: BART achieves state-of-the-art results on the challenging ELI5 abstractive question answering dataset.",
+          "actual_captions": [
+            "Table 7: BART achieves state-of-the-art results on the challenging ELI5 abstractive question answering dataset. Comparison models are from Fan et al. (2019)."
+          ],
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "095567a4-779c-4d5a-8693-d5802c079961",
+              "png": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/095567a4-779c-4d5a-8693-d5802c079961/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/095567a4-779c-4d5a-8693-d5802c079961/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/095567a4-779c-4d5a-8693-d5802c079961/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/095567a4-779c-4d5a-8693-d5802c079961/html.html"
+            }
+          ],
+          "structured_table_review": "no_additional_discrepancy_identified_in_review",
+          "cell_fidelity_review_scope": "Visual/grid structure review, not an exhaustive cell-by-cell transcription"
+        },
+        {
+          "kind": "table",
+          "number": "8",
+          "page_indices": [
+            6
+          ],
+          "resource_ids": [
+            "2bfd3b6f-5129-4649-823b-6c941556bec2"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "8"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 8: BLEU scores of the baseline and BART on WMT'16 RO-EN augmented with back-translation data.",
+          "actual_captions": [
+            "Table 8: BLEU scores of the baseline and BART on WMT'16 RO-EN augmented with back-translation data. BART improves over a strong back-translation baseline by using monolingual English pre-training."
+          ],
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "2bfd3b6f-5129-4649-823b-6c941556bec2",
+              "png": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/2bfd3b6f-5129-4649-823b-6c941556bec2/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/2bfd3b6f-5129-4649-823b-6c941556bec2/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/2bfd3b6f-5129-4649-823b-6c941556bec2/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/001-ml-bart-acl2020/resources/2bfd3b6f-5129-4649-823b-6c941556bec2/html.html"
+            }
+          ],
+          "structured_table_review": "no_additional_discrepancy_identified_in_review",
+          "cell_fidelity_review_scope": "Visual/grid structure review, not an exhaustive cell-by-cell transcription"
+        },
+        {
+          "kind": "table",
+          "number": "9",
+          "page_indices": [
+            7
+          ],
+          "resource_ids": [],
+          "inventory_status": "missing",
+          "correct_type": false,
+          "correct_number": false,
+          "actual_numbers": [],
+          "caption_association": false,
+          "expected_caption_reference": "Table 9: Example summaries from the XSum-tuned BART model on WikiNews articles.",
+          "actual_captions": [],
+          "crop_complete": false,
+          "complete_as_single_resource": false,
+          "issues": [
+            {
+              "code": "omitted_numbered_table",
+              "detail": "The full-width two-column prose source/summary table on physical page 8 has a Table 9 caption but no figure/table resource is emitted."
+            }
+          ],
+          "exports": [],
+          "structured_table_review": "missing",
+          "cell_fidelity_review_scope": "Visual/grid structure review, not an exhaustive cell-by-cell transcription"
+        }
+      ],
+      "extra_resources": [],
+      "sample_cells": [
+        {
+          "resource_id": "005e651d-7bb7-450f-82bf-cb0e462799cd",
+          "table_number": "4",
+          "page_index": 6,
+          "row": 2,
+          "col": 1,
+          "row_label": "Lead-3",
+          "column_label": "CNN/DailyMail / R1",
+          "expected": "40.42",
+          "actual": {
+            "structured": "40.42",
+            "csv": "40.42",
+            "html": "40.42"
+          },
+          "status": "exact"
+        },
+        {
+          "resource_id": "005e651d-7bb7-450f-82bf-cb0e462799cd",
+          "table_number": "4",
+          "page_index": 6,
+          "row": 2,
+          "col": 2,
+          "row_label": "Lead-3",
+          "column_label": "CNN/DailyMail / R2",
+          "expected": "17.62",
+          "actual": {
+            "structured": "17.62",
+            "csv": "17.62",
+            "html": "17.62"
+          },
+          "status": "exact"
+        },
+        {
+          "resource_id": "005e651d-7bb7-450f-82bf-cb0e462799cd",
+          "table_number": "4",
+          "page_index": 6,
+          "row": 2,
+          "col": 3,
+          "row_label": "Lead-3",
+          "column_label": "CNN/DailyMail / RL",
+          "expected": "36.67",
+          "actual": {
+            "structured": "36.67",
+            "csv": "36.67",
+            "html": "36.67"
+          },
+          "status": "exact"
+        },
+        {
+          "resource_id": "005e651d-7bb7-450f-82bf-cb0e462799cd",
+          "table_number": "4",
+          "page_index": 6,
+          "row": 2,
+          "col": 4,
+          "row_label": "Lead-3",
+          "column_label": "XSum / R1",
+          "expected": "16.30",
+          "actual": {
+            "structured": "16.30",
+            "csv": "16.30",
+            "html": "16.30"
+          },
+          "status": "exact"
+        },
+        {
+          "resource_id": "005e651d-7bb7-450f-82bf-cb0e462799cd",
+          "table_number": "4",
+          "page_index": 6,
+          "row": 9,
+          "col": 1,
+          "row_label": "BART",
+          "column_label": "CNN/DailyMail / R1",
+          "expected": "44.16",
+          "actual": {
+            "structured": "44.16",
+            "csv": "44.16",
+            "html": "44.16"
+          },
+          "status": "exact"
+        },
+        {
+          "resource_id": "005e651d-7bb7-450f-82bf-cb0e462799cd",
+          "table_number": "4",
+          "page_index": 6,
+          "row": 9,
+          "col": 2,
+          "row_label": "BART",
+          "column_label": "CNN/DailyMail / R2",
+          "expected": "21.28",
+          "actual": {
+            "structured": "21.28",
+            "csv": "21.28",
+            "html": "21.28"
+          },
+          "status": "exact"
+        },
+        {
+          "resource_id": "005e651d-7bb7-450f-82bf-cb0e462799cd",
+          "table_number": "4",
+          "page_index": 6,
+          "row": 9,
+          "col": 3,
+          "row_label": "BART",
+          "column_label": "CNN/DailyMail / RL",
+          "expected": "40.90",
+          "actual": {
+            "structured": "40.90",
+            "csv": "40.90",
+            "html": "40.90"
+          },
+          "status": "exact"
+        },
+        {
+          "resource_id": "005e651d-7bb7-450f-82bf-cb0e462799cd",
+          "table_number": "4",
+          "page_index": 6,
+          "row": 9,
+          "col": 4,
+          "row_label": "BART",
+          "column_label": "XSum / R1",
+          "expected": "45.14",
+          "actual": {
+            "structured": "45.14",
+            "csv": "45.14",
+            "html": "45.14"
+          },
+          "status": "exact"
+        },
+        {
+          "resource_id": "005e651d-7bb7-450f-82bf-cb0e462799cd",
+          "table_number": "4",
+          "page_index": 6,
+          "row": 9,
+          "col": 5,
+          "row_label": "BART",
+          "column_label": "XSum / R2",
+          "expected": "22.27",
+          "actual": {
+            "structured": "22.27",
+            "csv": "22.27",
+            "html": "22.27"
+          },
+          "status": "exact"
+        },
+        {
+          "resource_id": "005e651d-7bb7-450f-82bf-cb0e462799cd",
+          "table_number": "4",
+          "page_index": 6,
+          "row": 9,
+          "col": 6,
+          "row_label": "BART",
+          "column_label": "XSum / RL",
+          "expected": "37.25",
+          "actual": {
+            "structured": "37.25",
+            "csv": "37.25",
+            "html": "37.25"
+          },
+          "status": "exact"
+        }
+      ],
+      "notes": [
+        "All original source pages and all emitted PNGs visually inspected; all emitted table CSV/HTML grids read. Twenty total predefined cells across the two deep papers are not a representative all-cell accuracy metric."
+      ]
+    },
+    {
+      "id": "ml-scibert-emnlp2019",
+      "review_level": "inventory_only",
+      "pages": 6,
+      "expected_counts": {
+        "figure": 0,
+        "table": 2
+      },
+      "observed_counts": {
+        "figure": 0,
+        "table": 2
+      },
+      "objects": [
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            3
+          ],
+          "resource_ids": [
+            "db38b928-d62a-4d7c-a460-fd0bf849fb4c"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "1"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 1: Test performances of all BERT variants on all tasks and datasets.",
+          "actual_captions": [
+            "Table 1: Test performances of all BERT variants on all tasks and datasets. Bold indicates the SOTA result (multiple results bolded if difference within 95% bootstrap confidence interval). Keeping with past work, we report macro F1 scores for NER (span-level), macro F1 scores for REL and CLS (sentence-level), and macro F1 for PICO (token-level), and micro F1 for ChemProt specifically. For DEP, we report labeled (LAS) and unlabeled (UAS) attachment scores (excluding punctuation) for the same model with hyperparameters tuned for LAS. All results are the average of multiple runs with different random seeds."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "db38b928-d62a-4d7c-a460-fd0bf849fb4c",
+              "png": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/002-ml-scibert-emnlp2019/resources/db38b928-d62a-4d7c-a460-fd0bf849fb4c/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/002-ml-scibert-emnlp2019/resources/db38b928-d62a-4d7c-a460-fd0bf849fb4c/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/002-ml-scibert-emnlp2019/resources/db38b928-d62a-4d7c-a460-fd0bf849fb4c/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/002-ml-scibert-emnlp2019/resources/db38b928-d62a-4d7c-a460-fd0bf849fb4c/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_indices": [
+            3
+          ],
+          "resource_ids": [
+            "ecf59dc6-7b48-40f7-83ef-076ecd097282"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "2"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 2: Comparing SciBERT with the reported BioBERT results on biomedical datasets.",
+          "actual_captions": [
+            "Table 2: Comparing SCIBERT with the reported BIOBERT results on biomedical datasets."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "ecf59dc6-7b48-40f7-83ef-076ecd097282",
+              "png": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/002-ml-scibert-emnlp2019/resources/ecf59dc6-7b48-40f7-83ef-076ecd097282/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/002-ml-scibert-emnlp2019/resources/ecf59dc6-7b48-40f7-83ef-076ecd097282/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/002-ml-scibert-emnlp2019/resources/ecf59dc6-7b48-40f7-83ef-076ecd097282/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-001/runs/20261009T125042Z-b5452ca7/002-ml-scibert-emnlp2019/resources/ecf59dc6-7b48-40f7-83ef-076ecd097282/html.html"
+            }
+          ]
+        }
+      ],
+      "extra_resources": [],
+      "sample_cells": [],
+      "notes": [
+        "Inventory only: matching caption/number/page does not establish full crop completeness or cell accuracy. No blanket completeness or table-quality pass is assigned; only explicit spot-check findings are recorded."
+      ]
+    },
+    {
+      "id": "ml-simcse-emnlp2021",
+      "review_level": "inventory_only",
+      "pages": 17,
+      "expected_counts": {
+        "figure": 5,
+        "table": 16
+      },
+      "observed_counts": {
+        "figure": 5,
+        "table": 16
+      },
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            1
+          ],
+          "resource_ids": [
+            "f93b1e04-bd3e-4f4a-a4be-0d9dd82588c4"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "1"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Figure 1: (a) Unsupervised SimCSE predicts the input sentence itself from in-batch negatives, with different hidden dropout masks applied.",
+          "actual_captions": [
+            "Figure 1: (a) Unsupervised SimCSE predicts the input sentence itself from in-batch negatives, with different hidden dropout masks applied. (b) Supervised SimCSE leverages the NLI datasets and takes the entailment (premisehypothesis) pairs as positives, and contradiction pairs as well as other in-batch instances as negatives."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "f93b1e04-bd3e-4f4a-a4be-0d9dd82588c4",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/f93b1e04-bd3e-4f4a-a4be-0d9dd82588c4/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/f93b1e04-bd3e-4f4a-a4be-0d9dd82588c4/resource-auto.json"
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            3
+          ],
+          "resource_ids": [
+            "b0649f01-f22a-4658-90d3-522a1d1e1ab6"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "2"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Figure 2: Alignment-uniformity plot for unsupervised SimCSE, no dropout, fixed 0.1, and delete one word.",
+          "actual_captions": [
+            "Figure 2: ℓalign-ℓuniform plot for unsupervised SimCSE, \"no dropout\", \"fixed 0.1\", and \"delete one word\". We visualize checkpoints every 10 training steps and the arrows indicate the training direction. For both ℓalign and ℓuniform, lower numbers are better."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "b0649f01-f22a-4658-90d3-522a1d1e1ab6",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/b0649f01-f22a-4658-90d3-522a1d1e1ab6/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/b0649f01-f22a-4658-90d3-522a1d1e1ab6/resource-auto.json"
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            8
+          ],
+          "resource_ids": [
+            "0f6f1c2a-d53f-41bc-a151-8e22f58215f4"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "3"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Figure 3: Alignment-uniformity plot of models based on BERT-base.",
+          "actual_captions": [
+            "Figure 3: ℓalign-ℓuniform plot of models based on BERTbase. Color of points and numbers in brackets represent average STS performance (Spearman's correlation). Next3Sent: \"next 3 sentences\" from Table 2."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "0f6f1c2a-d53f-41bc-a151-8e22f58215f4",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/0f6f1c2a-d53f-41bc-a151-8e22f58215f4/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/0f6f1c2a-d53f-41bc-a151-8e22f58215f4/resource-auto.json"
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "F.1",
+          "page_indices": [
+            15
+          ],
+          "resource_ids": [
+            "5536a651-65c8-49a3-89c4-5f5a786d28fb"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": false,
+          "actual_numbers": [
+            ""
+          ],
+          "caption_association": false,
+          "expected_caption_reference": "Figure F.1: Singular value distributions of sentence embedding matrix from sentences in STS-B.",
+          "actual_captions": [
+            ""
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [
+            {
+              "code": "missing_caption_and_number",
+              "detail": "The two singular-value plots are present, but their Figure F.1 caption and number are empty. Spot check also shows the lower 'Unsupervised models'/'Supervised models' panel labels are omitted from the crop. No blanket crop-completeness score is assigned to this inventory-only paper."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "5536a651-65c8-49a3-89c4-5f5a786d28fb",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/5536a651-65c8-49a3-89c4-5f5a786d28fb/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/5536a651-65c8-49a3-89c4-5f5a786d28fb/resource-auto.json"
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "G.1",
+          "page_indices": [
+            16
+          ],
+          "resource_ids": [
+            "592b5ce2-90eb-492f-a614-a57deba16c84"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": false,
+          "actual_numbers": [
+            ""
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Figure G.1: Density plots of cosine similarities between sentence pairs in STS-B.",
+          "actual_captions": [
+            "Figure G.1: Density plots of cosine similarities between sentence pairs in STS-B. Pairs are divided into 5 groups based on ground truth ratings (higher means more similar) along the y-axis, and x-axis is the cosine similarity."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [
+            {
+              "code": "dotted_appendix_number_not_extracted",
+              "detail": "Caption contains the correct dotted appendix label but resource.number is empty; this is a number-field failure, not a missing caption."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "592b5ce2-90eb-492f-a614-a57deba16c84",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/592b5ce2-90eb-492f-a614-a57deba16c84/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/592b5ce2-90eb-492f-a614-a57deba16c84/resource-auto.json"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "resource_ids": [
+            "4d23d3fe-3316-4bf2-8a1e-5c6bc7cfbae4"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "1"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 1: Comparison of data augmentations on STS-B development set (Spearman's correlation).",
+          "actual_captions": [
+            "Table 1: Comparison of data augmentations on STS-B development set (Spearman's correlation). Crop k%: keep 100-k% of the length; word deletion k%: delete k% words; Synonym replacement: use nlpaug (Ma, 2019) to randomly replace one word with its synonym; MLM k%: use BERTbase to replace k% of words."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "4d23d3fe-3316-4bf2-8a1e-5c6bc7cfbae4",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/4d23d3fe-3316-4bf2-8a1e-5c6bc7cfbae4/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/4d23d3fe-3316-4bf2-8a1e-5c6bc7cfbae4/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/4d23d3fe-3316-4bf2-8a1e-5c6bc7cfbae4/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/4d23d3fe-3316-4bf2-8a1e-5c6bc7cfbae4/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_indices": [
+            2
+          ],
+          "resource_ids": [
+            "bd5e4326-a16c-40a8-a9b8-53143b61b3c4"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "2"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 2: Comparison of different unsupervised objectives (STS-B development set, Spearman's correlation).",
+          "actual_captions": [
+            "Table 2: Comparison of different unsupervised objectives (STS-B development set, Spearman's correlation). The two columns denote whether we use one encoder or two independent encoders. Next 3 sentences: randomly sample one from the next 3 sentences. Delete one word: delete one word randomly (see Table 1)."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "bd5e4326-a16c-40a8-a9b8-53143b61b3c4",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/bd5e4326-a16c-40a8-a9b8-53143b61b3c4/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/bd5e4326-a16c-40a8-a9b8-53143b61b3c4/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/bd5e4326-a16c-40a8-a9b8-53143b61b3c4/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/bd5e4326-a16c-40a8-a9b8-53143b61b3c4/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "3",
+          "page_indices": [
+            3
+          ],
+          "resource_ids": [
+            "acb19226-14dc-4074-8089-27221cc18a3c"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "3"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 3: Effects of different dropout probabilities p on the STS-B development set.",
+          "actual_captions": [
+            "Table 3: Effects of different dropout probabilities p on the STS-B development set (Spearman's correlation, BERTbase). Fixed 0.1: default 0.1 dropout rate but apply the same dropout mask on both xi and x+i ."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "acb19226-14dc-4074-8089-27221cc18a3c",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/acb19226-14dc-4074-8089-27221cc18a3c/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/acb19226-14dc-4074-8089-27221cc18a3c/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/acb19226-14dc-4074-8089-27221cc18a3c/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/acb19226-14dc-4074-8089-27221cc18a3c/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "4",
+          "page_indices": [
+            4
+          ],
+          "resource_ids": [
+            "39d778d6-e628-4209-aea3-61d513ede130"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "4"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 4: Comparisons of different supervised datasets as positive pairs.",
+          "actual_captions": [
+            "Table 4: Comparisons of different supervised datasets as positive pairs. Results are Spearman's correlations on the STS-B development set using BERTbase (we use the same hyperparameters as the final SimCSE model). Numbers in brackets denote the # of pairs. Sample: subsampling 134k positive pairs for a fair comparison among datasets; full: using the full dataset. In the last block, we use entailment pairs as positives and contradiction pairs as hard negatives (our final model)."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "39d778d6-e628-4209-aea3-61d513ede130",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/39d778d6-e628-4209-aea3-61d513ede130/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/39d778d6-e628-4209-aea3-61d513ede130/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/39d778d6-e628-4209-aea3-61d513ede130/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/39d778d6-e628-4209-aea3-61d513ede130/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "5",
+          "page_indices": [
+            6
+          ],
+          "resource_ids": [
+            "1194052d-6149-4a64-a374-ca911ec06c8d"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "5"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 5: Sentence embedding performance on STS tasks (Spearman's correlation, all setting).",
+          "actual_captions": [
+            "Table 5: Sentence embedding performance on STS tasks (Spearman's correlation, \"all\" setting). We highlight the highest numbers among models with the same pre-trained encoder. ♣: results from Reimers and Gurevych (2019); ♥: results from Zhang et al. (2020); all other results are reproduced or reevaluated by ourselves. For BERT-flow (Li et al., 2020) and whitening (Su et al., 2021), we only report the \"NLI\" setting (see Table C.1)."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "1194052d-6149-4a64-a374-ca911ec06c8d",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/1194052d-6149-4a64-a374-ca911ec06c8d/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/1194052d-6149-4a64-a374-ca911ec06c8d/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/1194052d-6149-4a64-a374-ca911ec06c8d/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/1194052d-6149-4a64-a374-ca911ec06c8d/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "6",
+          "page_indices": [
+            7
+          ],
+          "resource_ids": [
+            "12be6f7e-087c-4be4-adf9-b7c971cd9ea4"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "6"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 6: Ablation studies of different pooling methods in unsupervised and supervised SimCSE.",
+          "actual_captions": [
+            "Table 6: Ablation studies of different pooling methods in unsupervised and supervised SimCSE. [CLS] w/ MLP (train): using MLP on [CLS] during training but removing it during testing. The results are based on the development set of STS-B using BERTbase."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "12be6f7e-087c-4be4-adf9-b7c971cd9ea4",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/12be6f7e-087c-4be4-adf9-b7c971cd9ea4/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/12be6f7e-087c-4be4-adf9-b7c971cd9ea4/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/12be6f7e-087c-4be4-adf9-b7c971cd9ea4/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/12be6f7e-087c-4be4-adf9-b7c971cd9ea4/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "7",
+          "page_indices": [
+            7
+          ],
+          "resource_ids": [
+            "55e90f87-e364-4370-9b9b-505eb095d7da"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "7"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 7: STS-B development results with different hard negative policies.",
+          "actual_captions": [
+            "Table 7: STS-B development results with different hard negative policies. \"N/A\": no hard negative."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "55e90f87-e364-4370-9b9b-505eb095d7da",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/55e90f87-e364-4370-9b9b-505eb095d7da/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/55e90f87-e364-4370-9b9b-505eb095d7da/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/55e90f87-e364-4370-9b9b-505eb095d7da/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/55e90f87-e364-4370-9b9b-505eb095d7da/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "8",
+          "page_indices": [
+            8
+          ],
+          "resource_ids": [
+            "e63b83c3-64e4-4210-8861-a205637a5ab5"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "8"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 8: Retrieved top-3 examples by SBERT and supervised SimCSE from Flickr30k (150k sentences).",
+          "actual_captions": [
+            "Table 8: Retrieved top-3 examples by SBERT and supervised SimCSE from Flickr30k (150k sentences)."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "e63b83c3-64e4-4210-8861-a205637a5ab5",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/e63b83c3-64e4-4210-8861-a205637a5ab5/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/e63b83c3-64e4-4210-8861-a205637a5ab5/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/e63b83c3-64e4-4210-8861-a205637a5ab5/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/e63b83c3-64e4-4210-8861-a205637a5ab5/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "A.1",
+          "page_indices": [
+            12
+          ],
+          "resource_ids": [
+            "55f13919-1c23-4945-a8d3-fbf4d0d2b6c6"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": false,
+          "actual_numbers": [
+            ""
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table A.1: Batch sizes and learning rates for SimCSE.",
+          "actual_captions": [
+            "Table A.1: Batch sizes and learning rates for SimCSE."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [
+            {
+              "code": "dotted_appendix_number_not_extracted",
+              "detail": "Caption contains the correct dotted appendix label but resource.number is empty; this is a number-field failure, not a missing caption."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "55f13919-1c23-4945-a8d3-fbf4d0d2b6c6",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/55f13919-1c23-4945-a8d3-fbf4d0d2b6c6/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/55f13919-1c23-4945-a8d3-fbf4d0d2b6c6/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/55f13919-1c23-4945-a8d3-fbf4d0d2b6c6/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/55f13919-1c23-4945-a8d3-fbf4d0d2b6c6/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "B.1",
+          "page_indices": [
+            12
+          ],
+          "resource_ids": [
+            "13906f8c-a102-4f92-8a1b-825569807339"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": false,
+          "actual_numbers": [
+            ""
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table B.1: STS evaluation protocols used in different papers.",
+          "actual_captions": [
+            "Table B.1: STS evaluation protocols used in different papers. \"Reg.\": whether an additional regressor is used; \"aggr.\": methods to aggregate different subset results."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [
+            {
+              "code": "dotted_appendix_number_not_extracted",
+              "detail": "Caption contains the correct dotted appendix label but resource.number is empty; this is a number-field failure, not a missing caption."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "13906f8c-a102-4f92-8a1b-825569807339",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/13906f8c-a102-4f92-8a1b-825569807339/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/13906f8c-a102-4f92-8a1b-825569807339/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/13906f8c-a102-4f92-8a1b-825569807339/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/13906f8c-a102-4f92-8a1b-825569807339/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "B.2",
+          "page_indices": [
+            13
+          ],
+          "resource_ids": [
+            "9462ade8-7081-4b91-a196-7f6d88aaabbd"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": false,
+          "actual_numbers": [
+            ""
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table B.2: Comparisons of our reproduced results using different evaluation protocols and the original numbers.",
+          "actual_captions": [
+            "Table B.2: Comparisons of our reproduced results using different evaluation protocols and the original numbers. ♣: results from Reimers and Gurevych (2019); ♠: results from Su et al. (2021); Other results are reproduced by us. From the table we see that SBERT takes the \"all\" evaluation and BERT-whitening takes the \"wmean\" evaluation."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [
+            {
+              "code": "dotted_appendix_number_not_extracted",
+              "detail": "Caption contains the correct dotted appendix label but resource.number is empty; this is a number-field failure, not a missing caption."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "9462ade8-7081-4b91-a196-7f6d88aaabbd",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/9462ade8-7081-4b91-a196-7f6d88aaabbd/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/9462ade8-7081-4b91-a196-7f6d88aaabbd/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/9462ade8-7081-4b91-a196-7f6d88aaabbd/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/9462ade8-7081-4b91-a196-7f6d88aaabbd/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "B.3",
+          "page_indices": [
+            13
+          ],
+          "resource_ids": [
+            "b2f95e59-b823-49fb-a4bf-38bcee4ebe35"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": false,
+          "actual_numbers": [
+            ""
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table B.3: STS results with wmean setting (Spearman).",
+          "actual_captions": [
+            "Table B.3: STS results with \"wmean\" setting (Spearman). ♠: from Li et al. (2020); Su et al. (2021)."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [
+            {
+              "code": "dotted_appendix_number_not_extracted",
+              "detail": "Caption contains the correct dotted appendix label but resource.number is empty; this is a number-field failure, not a missing caption."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "b2f95e59-b823-49fb-a4bf-38bcee4ebe35",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/b2f95e59-b823-49fb-a4bf-38bcee4ebe35/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/b2f95e59-b823-49fb-a4bf-38bcee4ebe35/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/b2f95e59-b823-49fb-a4bf-38bcee4ebe35/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/b2f95e59-b823-49fb-a4bf-38bcee4ebe35/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "C.1",
+          "page_indices": [
+            14
+          ],
+          "resource_ids": [
+            "6165f635-c1dc-4fe4-8a27-835517fdfdc2"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": false,
+          "actual_numbers": [
+            ""
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table C.1: Comparison of using NLI or target data for postprocessing methods (all, Spearman's correlation).",
+          "actual_captions": [
+            "Table C.1: Comparison of using NLI or target data for postprocessing methods (\"all\", Spearman's correlation)."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [
+            {
+              "code": "dotted_appendix_number_not_extracted",
+              "detail": "Caption contains the correct dotted appendix label but resource.number is empty; this is a number-field failure, not a missing caption."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "6165f635-c1dc-4fe4-8a27-835517fdfdc2",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/6165f635-c1dc-4fe4-8a27-835517fdfdc2/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/6165f635-c1dc-4fe4-8a27-835517fdfdc2/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/6165f635-c1dc-4fe4-8a27-835517fdfdc2/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/6165f635-c1dc-4fe4-8a27-835517fdfdc2/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "D.1",
+          "page_indices": [
+            14
+          ],
+          "resource_ids": [
+            "8f6bda0f-7c39-44ea-a8c6-1711c22e6d58"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": false,
+          "actual_numbers": [
+            ""
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table D.1: STS-B development results (Spearman's correlation) with different temperatures.",
+          "actual_captions": [
+            "Table D.1: STS-B development results (Spearman's correlation) with different temperatures. \"N/A\": Dot product instead of cosine similarity."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [
+            {
+              "code": "dotted_appendix_number_not_extracted",
+              "detail": "Caption contains the correct dotted appendix label but resource.number is empty; this is a number-field failure, not a missing caption."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "8f6bda0f-7c39-44ea-a8c6-1711c22e6d58",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/8f6bda0f-7c39-44ea-a8c6-1711c22e6d58/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/8f6bda0f-7c39-44ea-a8c6-1711c22e6d58/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/8f6bda0f-7c39-44ea-a8c6-1711c22e6d58/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/8f6bda0f-7c39-44ea-a8c6-1711c22e6d58/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "D.2",
+          "page_indices": [
+            14
+          ],
+          "resource_ids": [
+            "7170086e-d05b-4435-b3f0-04af3ff4f237"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": false,
+          "actual_numbers": [
+            ""
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table D.2: Ablation studies of the MLM objective based on the development sets using BERT-base.",
+          "actual_captions": [
+            "Table D.2: Ablation studies of the MLM objective based on the development sets using BERTbase."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [
+            {
+              "code": "dotted_appendix_number_not_extracted",
+              "detail": "Caption contains the correct dotted appendix label but resource.number is empty; this is a number-field failure, not a missing caption."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "7170086e-d05b-4435-b3f0-04af3ff4f237",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/7170086e-d05b-4435-b3f0-04af3ff4f237/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/7170086e-d05b-4435-b3f0-04af3ff4f237/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/7170086e-d05b-4435-b3f0-04af3ff4f237/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/7170086e-d05b-4435-b3f0-04af3ff4f237/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "E.1",
+          "page_indices": [
+            15
+          ],
+          "resource_ids": [
+            "6801db26-f53e-473c-ad4e-661cd4d97b29"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": false,
+          "actual_numbers": [
+            ""
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table E.1: Transfer task results of different sentence embedding models (measured as accuracy).",
+          "actual_captions": [
+            "Table E.1: Transfer task results of different sentence embedding models (measured as accuracy). ♣: results from Reimers and Gurevych (2019); ♥: results from Zhang et al. (2020). We highlight the highest numbers among models with the same pre-trained encoder. MLM: adding MLM as an auxiliary task with λ = 0.1."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [
+            {
+              "code": "dotted_appendix_number_not_extracted",
+              "detail": "Caption contains the correct dotted appendix label but resource.number is empty; this is a number-field failure, not a missing caption."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "6801db26-f53e-473c-ad4e-661cd4d97b29",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/6801db26-f53e-473c-ad4e-661cd4d97b29/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/6801db26-f53e-473c-ad4e-661cd4d97b29/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/6801db26-f53e-473c-ad4e-661cd4d97b29/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/6801db26-f53e-473c-ad4e-661cd4d97b29/html.html"
+            }
+          ]
+        }
+      ],
+      "extra_resources": [],
+      "sample_cells": [],
+      "notes": [
+        "Inventory only: matching caption/number/page does not establish full crop completeness or cell accuracy. No blanket completeness or table-quality pass is assigned; only explicit spot-check findings are recorded."
+      ]
+    },
+    {
+      "id": "ml-longt5-naacl2022",
+      "review_level": "deep_review",
+      "pages": 13,
+      "expected_counts": {
+        "figure": 4,
+        "table": 8
+      },
+      "observed_counts": {
+        "figure": 5,
+        "table": 8
+      },
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            0
+          ],
+          "resource_ids": [
+            "18ce713e-34d7-41a0-a521-23b882b6f4a2"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "1"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Figure 1: The average ROUGE score ((R-1 + R-2 + R-L)/3) of LongT5 and baseline models on arXiv and PubMed summarization tasks.",
+          "actual_captions": [
+            "Figure 1: The average ROUGE score ((R-1 + R-2 + R-L)/3) of LongT5 and baseline models on arXiv and PubMed summarization tasks (Cohan et al., 2018) with different input length (x axis). Baseline models: HATBART (Rohde et al., 2021), BigBird-PEGASUS (Zaheer et al., 2020b), PRIMER (Xiao et al., 2021), LED (Beltagy et al., 2020). The size of circle roughly indicates the # of parameters for each model."
+          ],
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "18ce713e-34d7-41a0-a521-23b882b6f4a2",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/18ce713e-34d7-41a0-a521-23b882b6f4a2/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/18ce713e-34d7-41a0-a521-23b882b6f4a2/resource-auto.json"
+            }
+          ],
+          "graphical_panels_present_across_resources": true
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            2
+          ],
+          "resource_ids": [
+            "d02535ce-6517-4cb7-bcc3-a93e0fa8d94f"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "2"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Figure 2: Illustration of the two attention mechanisms we experimented with in LongT5.",
+          "actual_captions": [
+            "Figure 2: Illustration of the two attention mechanisms we experimented with in LongT5."
+          ],
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "d02535ce-6517-4cb7-bcc3-a93e0fa8d94f",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/d02535ce-6517-4cb7-bcc3-a93e0fa8d94f/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/d02535ce-6517-4cb7-bcc3-a93e0fa8d94f/resource-auto.json"
+            }
+          ],
+          "graphical_panels_present_across_resources": true
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            6
+          ],
+          "resource_ids": [
+            "d67ea731-2e13-4308-80c6-00b7838e5d2b"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "3"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Figure 3: Sequences per second as a function of input length for T5.1.1, LongT5 with Local Attention and LongT5 with TGlobal attention.",
+          "actual_captions": [
+            "Figure 3: Sequences per second as a function of input length for T5.1.1, LongT5 with Local Attention and LongT5 with TGlobal attention. Input lengths start at 512, and go as far as possible before running out of memory. Measurements taken with batch size 128, on 4x8 TPUv3 slices. base and large model sizes shown."
+          ],
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "d67ea731-2e13-4308-80c6-00b7838e5d2b",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/d67ea731-2e13-4308-80c6-00b7838e5d2b/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/d67ea731-2e13-4308-80c6-00b7838e5d2b/resource-auto.json"
+            }
+          ],
+          "graphical_panels_present_across_resources": true
+        },
+        {
+          "kind": "figure",
+          "number": "4",
+          "page_indices": [
+            6
+          ],
+          "resource_ids": [
+            "05384d2c-aa69-4e90-ae2e-361ed0edc34a"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "4"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Figure 4: Speed versus Performance on NQ (short-answer F1), for T5, LongT5 with Local Attention and LongT5 with TGlobal attention, for different input sequence lengths.",
+          "actual_captions": [
+            "Figure 4: Speed versus Performance on NQ (shortanswer F1), for T5, LongT5 with Local Attention and LongT5 with TGlobal attention, for different input sequence lengths. Input lengths start at 512, and go as far as possible before running out of memory. Measurements taken with batch size 128, on 4x8 TPUv3 slices."
+          ],
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "05384d2c-aa69-4e90-ae2e-361ed0edc34a",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/05384d2c-aa69-4e90-ae2e-361ed0edc34a/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/05384d2c-aa69-4e90-ae2e-361ed0edc34a/resource-auto.json"
+            }
+          ],
+          "graphical_panels_present_across_resources": true
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            4
+          ],
+          "resource_ids": [
+            "25666ec3-d26e-41bc-9d66-f17412acc2a5"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "1"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 1: Statistics for the summarization datasets. Input length measured in tokens using a SentencePiece Model.",
+          "actual_captions": [
+            "Table 1: Statistics for the summarization datasets. Input length measured in tokens using a SentencePiece Model."
+          ],
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "25666ec3-d26e-41bc-9d66-f17412acc2a5",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/25666ec3-d26e-41bc-9d66-f17412acc2a5/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/25666ec3-d26e-41bc-9d66-f17412acc2a5/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/25666ec3-d26e-41bc-9d66-f17412acc2a5/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/25666ec3-d26e-41bc-9d66-f17412acc2a5/html.html"
+            }
+          ],
+          "structured_table_review": "no_additional_discrepancy_identified_in_review",
+          "cell_fidelity_review_scope": "Ten predefined cells only"
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_indices": [
+            4
+          ],
+          "resource_ids": [
+            "27c21bbe-bf30-41f9-8171-667c21d8d864"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "2"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 2: Summarization results comparing LongT5 with best known approaches.",
+          "actual_captions": [
+            "Table 2: Summarization results comparing LongT5 with best known approaches. LongT5 scores are with models using TGlobal attention. For each task, we scale up the input length depending on the inputs' statistics, thus not all are scaled to 16k. For more results, please see Section A in the Appendix."
+          ],
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [
+            {
+              "code": "group_header_hierarchy_lost",
+              "detail": "The first arXiv group header is merged only into the R-2 header cell ('arXiv R-2'); its colspan over R-1/R-2/R-L is lost. All six dataset blocks and reviewed numeric rows remain present."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "27c21bbe-bf30-41f9-8171-667c21d8d864",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/27c21bbe-bf30-41f9-8171-667c21d8d864/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/27c21bbe-bf30-41f9-8171-667c21d8d864/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/27c21bbe-bf30-41f9-8171-667c21d8d864/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/27c21bbe-bf30-41f9-8171-667c21d8d864/html.html"
+            }
+          ],
+          "structured_table_review": "structure_issue",
+          "cell_fidelity_review_scope": "Visual/grid structure review, not an exhaustive cell-by-cell transcription"
+        },
+        {
+          "kind": "table",
+          "number": "3",
+          "page_indices": [
+            5
+          ],
+          "resource_ids": [
+            "6f41787b-ac12-4c1a-9e06-19b970e9b062"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "3"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 3: Statistics for the QA datasets. Input length measured in tokens using a SentencePiece Model.",
+          "actual_captions": [
+            "Table 3: Statistics for the QA datasets. Input length measured in tokens using a SentencePiece Model."
+          ],
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "6f41787b-ac12-4c1a-9e06-19b970e9b062",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/6f41787b-ac12-4c1a-9e06-19b970e9b062/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/6f41787b-ac12-4c1a-9e06-19b970e9b062/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/6f41787b-ac12-4c1a-9e06-19b970e9b062/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/6f41787b-ac12-4c1a-9e06-19b970e9b062/html.html"
+            }
+          ],
+          "structured_table_review": "no_additional_discrepancy_identified_in_review",
+          "cell_fidelity_review_scope": "Visual/grid structure review, not an exhaustive cell-by-cell transcription"
+        },
+        {
+          "kind": "table",
+          "number": "4",
+          "page_indices": [
+            5
+          ],
+          "resource_ids": [
+            "61e58ba0-c80d-41a8-b498-20691ff733da"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "4"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 4: QA results: (1) NQ results comparing T5.1.1 and LongT5.",
+          "actual_captions": [
+            "Table 4: QA results: (1) NQ results comparing T5.1.1 and LongT5. Base/large models are trained on 4x8 TPUv3 with no model partitioning. Xl models are trained on 8x16 TPUv3 with 8 partitions. (2) TriviaQA results compared to top models on leader board. LongT5 scores using Local and TGlobal attention. Full results in Appendix B."
+          ],
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "61e58ba0-c80d-41a8-b498-20691ff733da",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/61e58ba0-c80d-41a8-b498-20691ff733da/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/61e58ba0-c80d-41a8-b498-20691ff733da/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/61e58ba0-c80d-41a8-b498-20691ff733da/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/61e58ba0-c80d-41a8-b498-20691ff733da/html.html"
+            }
+          ],
+          "structured_table_review": "no_additional_discrepancy_identified_in_review",
+          "cell_fidelity_review_scope": "Visual/grid structure review, not an exhaustive cell-by-cell transcription"
+        },
+        {
+          "kind": "table",
+          "number": "5",
+          "page_indices": [
+            7
+          ],
+          "resource_ids": [
+            "32a1db4c-5f0c-44e7-aa40-258c43425192"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "5"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 5: Ablation study on dev set for different pre-training strategies using span corruption (SC) vs. principle sentences generation (PSG) and the effects on NQ and arXiv fine-tuning tasks.",
+          "actual_captions": [
+            "Table 5: Ablation study on dev set for different pretraining strategies using span corruption (SC) vs. principle sentences generation (PSG) and the effects on NQ and arXiv fine-tuning tasks. The models are TGlobal base, and fine-tuning is done with input sequence length 4096."
+          ],
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "32a1db4c-5f0c-44e7-aa40-258c43425192",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/32a1db4c-5f0c-44e7-aa40-258c43425192/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/32a1db4c-5f0c-44e7-aa40-258c43425192/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/32a1db4c-5f0c-44e7-aa40-258c43425192/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/32a1db4c-5f0c-44e7-aa40-258c43425192/html.html"
+            }
+          ],
+          "structured_table_review": "no_additional_discrepancy_identified_in_review",
+          "cell_fidelity_review_scope": "Visual/grid structure review, not an exhaustive cell-by-cell transcription"
+        },
+        {
+          "kind": "table",
+          "number": "6",
+          "page_indices": [
+            7
+          ],
+          "resource_ids": [
+            "9bd3c1f9-ef58-4872-995c-2b09e37593db"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "6"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 6: Ablation study on arXiv and PubMed for different pre-training strategies using span corruption (SC) vs. principle sentences generation (PSG) with T5.1.1 model along with LongT5 with TGlobal attention.",
+          "actual_captions": [
+            "Table 6: Ablation study on arXiv and PubMed for different pre-training strategies using span corruption (SC) vs. principle sentences generation (PSG) with T5.1.1 model along with LongT5 with TGlobal attention. Fine-tuning was done on large model size, with input sequence length of 4096 except where otherwise noted."
+          ],
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "9bd3c1f9-ef58-4872-995c-2b09e37593db",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/9bd3c1f9-ef58-4872-995c-2b09e37593db/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/9bd3c1f9-ef58-4872-995c-2b09e37593db/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/9bd3c1f9-ef58-4872-995c-2b09e37593db/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/9bd3c1f9-ef58-4872-995c-2b09e37593db/html.html"
+            }
+          ],
+          "structured_table_review": "no_additional_discrepancy_identified_in_review",
+          "cell_fidelity_review_scope": "Visual/grid structure review, not an exhaustive cell-by-cell transcription"
+        },
+        {
+          "kind": "table",
+          "number": "7",
+          "page_indices": [
+            11
+          ],
+          "resource_ids": [
+            "8692c5a7-5b68-47c6-9a13-037195b5d6f6"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "7"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 7: QA results comparing T5.1.1 and LongT5 at different sequence lengths.",
+          "actual_captions": [
+            "Table 7: QA results comparing T5.1.1 and LongT5 at different sequence lengths. Base and large models are trained on 4x8 TPUv3 with no model partitioning, and xl models are trained on 8x16 TPUv3 with 8 partitions."
+          ],
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [
+            {
+              "code": "section_headers_merged_into_model_rows",
+              "detail": "The separate 'large:' and 'xl:' source section headings are appended to the preceding model labels ('T5.1.1 (6k) large:' and 'T5.1.1 (3k) xl:'). 'base TGlobal:' is merged with the first LongT5 (512) row. Numeric cells remain visible, but row/group structure is wrong."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "8692c5a7-5b68-47c6-9a13-037195b5d6f6",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/8692c5a7-5b68-47c6-9a13-037195b5d6f6/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/8692c5a7-5b68-47c6-9a13-037195b5d6f6/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/8692c5a7-5b68-47c6-9a13-037195b5d6f6/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/8692c5a7-5b68-47c6-9a13-037195b5d6f6/html.html"
+            }
+          ],
+          "structured_table_review": "structure_issue",
+          "cell_fidelity_review_scope": "Visual/grid structure review, not an exhaustive cell-by-cell transcription"
+        },
+        {
+          "kind": "table",
+          "number": "8",
+          "page_indices": [
+            12
+          ],
+          "resource_ids": [
+            "eaacf967-72e7-4875-b995-52302c0ab9ff"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "8"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 8: Summarization results comparing T5, T5 with PEGASUS-style Principle Sentences Generation (PSG) pre-training, and LongT5 with best known approaches for the various datasets.",
+          "actual_captions": [
+            "Table 8: Summarization results comparing T5, T5 with PEGASUS-style Principle Sentences Generation (PSG) pre-training, and LongT5 with best known approaches for the various datasets. All T5 scores are with standard T5.1.1 model. All LongT5 scores are with models using TGlobal attention. For each task, we scale up the input length depending on the statistics of the inputs, thus not all of the tasks were scaled to 16k. We do not include input length of other models because each model uses the input differently, and hence, direct comparison is not possible."
+          ],
+          "crop_complete": true,
+          "complete_as_single_resource": true,
+          "issues": [
+            {
+              "code": "group_header_hierarchy_lost",
+              "detail": "The first paired dataset headers arXiv and PubMed are merged only into the respective R-2 cells, losing their three-column grouping. All three large stacked blocks are present; no whole block is omitted."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "eaacf967-72e7-4875-b995-52302c0ab9ff",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/eaacf967-72e7-4875-b995-52302c0ab9ff/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/eaacf967-72e7-4875-b995-52302c0ab9ff/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/eaacf967-72e7-4875-b995-52302c0ab9ff/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/eaacf967-72e7-4875-b995-52302c0ab9ff/html.html"
+            }
+          ],
+          "structured_table_review": "structure_issue",
+          "cell_fidelity_review_scope": "Visual/grid structure review, not an exhaustive cell-by-cell transcription"
+        }
+      ],
+      "extra_resources": [
+        {
+          "resource_id": "a19bcea7-be7b-4d9d-8ffc-6e7befb3f179",
+          "kind": "figure",
+          "page_indices": [
+            2
+          ],
+          "classification": "blank_region_false_positive",
+          "reason": "Entire PNG is RGB(255,255,255), 84,042 pixels; no scientific figure content, caption or number. Not a publication logo.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/005-ml-longt5-naacl2022/resources/a19bcea7-be7b-4d9d-8ffc-6e7befb3f179/png-300.png"
+        }
+      ],
+      "sample_cells": [
+        {
+          "resource_id": "25666ec3-d26e-41bc-9d66-f17412acc2a5",
+          "table_number": "1",
+          "page_index": 4,
+          "row": 2,
+          "col": 1,
+          "row_label": "CNN / Daily Mail",
+          "column_label": "Example Count / Train",
+          "expected": "287,113",
+          "actual": {
+            "structured": "287,113",
+            "csv": "287,113",
+            "html": "287,113"
+          },
+          "status": "exact"
+        },
+        {
+          "resource_id": "25666ec3-d26e-41bc-9d66-f17412acc2a5",
+          "table_number": "1",
+          "page_index": 4,
+          "row": 2,
+          "col": 2,
+          "row_label": "CNN / Daily Mail",
+          "column_label": "Example Count / Validation",
+          "expected": "13,368",
+          "actual": {
+            "structured": "13,368",
+            "csv": "13,368",
+            "html": "13,368"
+          },
+          "status": "exact"
+        },
+        {
+          "resource_id": "25666ec3-d26e-41bc-9d66-f17412acc2a5",
+          "table_number": "1",
+          "page_index": 4,
+          "row": 2,
+          "col": 3,
+          "row_label": "CNN / Daily Mail",
+          "column_label": "Example Count / Test",
+          "expected": "11,490",
+          "actual": {
+            "structured": "11,490",
+            "csv": "11,490",
+            "html": "11,490"
+          },
+          "status": "exact"
+        },
+        {
+          "resource_id": "25666ec3-d26e-41bc-9d66-f17412acc2a5",
+          "table_number": "1",
+          "page_index": 4,
+          "row": 2,
+          "col": 4,
+          "row_label": "CNN / Daily Mail",
+          "column_label": "Input Length / Average",
+          "expected": "982.39",
+          "actual": {
+            "structured": "982.39",
+            "csv": "982.39",
+            "html": "982.39"
+          },
+          "status": "exact"
+        },
+        {
+          "resource_id": "25666ec3-d26e-41bc-9d66-f17412acc2a5",
+          "table_number": "1",
+          "page_index": 4,
+          "row": 2,
+          "col": 5,
+          "row_label": "CNN / Daily Mail",
+          "column_label": "Input Length / Median",
+          "expected": "894",
+          "actual": {
+            "structured": "894",
+            "csv": "894",
+            "html": "894"
+          },
+          "status": "exact"
+        },
+        {
+          "resource_id": "25666ec3-d26e-41bc-9d66-f17412acc2a5",
+          "table_number": "1",
+          "page_index": 4,
+          "row": 3,
+          "col": 4,
+          "row_label": "arXiv",
+          "column_label": "Input Length / Average",
+          "expected": "10,720.18",
+          "actual": {
+            "structured": "10,720.18",
+            "csv": "10,720.18",
+            "html": "10,720.18"
+          },
+          "status": "exact"
+        },
+        {
+          "resource_id": "25666ec3-d26e-41bc-9d66-f17412acc2a5",
+          "table_number": "1",
+          "page_index": 4,
+          "row": 3,
+          "col": 6,
+          "row_label": "arXiv",
+          "column_label": "Input Length / Max",
+          "expected": "378,825",
+          "actual": {
+            "structured": "378,825",
+            "csv": "378,825",
+            "html": "378,825"
+          },
+          "status": "exact"
+        },
+        {
+          "resource_id": "25666ec3-d26e-41bc-9d66-f17412acc2a5",
+          "table_number": "1",
+          "page_index": 4,
+          "row": 4,
+          "col": 7,
+          "row_label": "PubMed",
+          "column_label": "Input Length / 90th percentile",
+          "expected": "8,883",
+          "actual": {
+            "structured": "8,883",
+            "csv": "8,883",
+            "html": "8,883"
+          },
+          "status": "exact"
+        },
+        {
+          "resource_id": "25666ec3-d26e-41bc-9d66-f17412acc2a5",
+          "table_number": "1",
+          "page_index": 4,
+          "row": 5,
+          "col": 1,
+          "row_label": "BigPatent",
+          "column_label": "Example Count / Train",
+          "expected": "1,207,222",
+          "actual": {
+            "structured": "1,207,222",
+            "csv": "1,207,222",
+            "html": "1,207,222"
+          },
+          "status": "exact"
+        },
+        {
+          "resource_id": "25666ec3-d26e-41bc-9d66-f17412acc2a5",
+          "table_number": "1",
+          "page_index": 4,
+          "row": 7,
+          "col": 5,
+          "row_label": "Multi-News",
+          "column_label": "Input Length / Median",
+          "expected": "1,902.5",
+          "actual": {
+            "structured": "1,902.5",
+            "csv": "1,902.5",
+            "html": "1,902.5"
+          },
+          "status": "exact"
+        }
+      ],
+      "notes": [
+        "All original source pages and all emitted PNGs visually inspected; all emitted table CSV/HTML grids read. Twenty total predefined cells across the two deep papers are not a representative all-cell accuracy metric."
+      ]
+    },
+    {
+      "id": "ml-mt5-naacl2021",
+      "review_level": "inventory_only",
+      "pages": 16,
+      "expected_counts": {
+        "figure": 4,
+        "table": 14
+      },
+      "observed_counts": {
+        "figure": 4,
+        "table": 14
+      },
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "resource_ids": [
+            "6ecf2756-af6f-4a6b-b62e-82fd78461293"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "1"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Figure 1: Page counts per language in mC4 (left axis), and percentage of mT5 training examples coming from each language, for different language sampling exponents.",
+          "actual_captions": [
+            "Figure 1: Page counts per language in mC4 (left axis), and percentage of mT5 training examples coming from each language, for different language sampling exponents α (right axis). Our final model uses α=0.3."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "6ecf2756-af6f-4a6b-b62e-82fd78461293",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/6ecf2756-af6f-4a6b-b62e-82fd78461293/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/6ecf2756-af6f-4a6b-b62e-82fd78461293/resource-auto.json"
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            5
+          ],
+          "resource_ids": [
+            "c9df34a7-77de-4c2c-a06e-0b9e1eb3daac"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "2"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Figure 2: Average F1 on the TyDi QA GoldP task across languages.",
+          "actual_captions": [
+            "Figure 2: Average F1 on the TyDi QA GoldP task across languages. Performance improves with increasing model capacity. The importance of in-language training data (whether gold In-Language Multitask or synthetic Translate-Train) decreases with model scale, as seen by Zero-Shot closing the quality gap."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "c9df34a7-77de-4c2c-a06e-0b9e1eb3daac",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/c9df34a7-77de-4c2c-a06e-0b9e1eb3daac/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/c9df34a7-77de-4c2c-a06e-0b9e1eb3daac/resource-auto.json"
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            7
+          ],
+          "resource_ids": [
+            "71e209b8-3dfe-4055-a090-cde121f5cd1d"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "3"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Figure 3: Per-language error rates on XQuAD zero-shot, sorted by illegal rate.",
+          "actual_captions": [
+            "Figure 3: Per-language error rates on XQuAD zeroshot, sorted by illegal rate. Incorrect: Not matching the target span. Illegal: Missing from the input context. Illegal after norm: Illegal even after Unicode NFKC normalization is applied to the prediction and context."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "71e209b8-3dfe-4055-a090-cde121f5cd1d",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/71e209b8-3dfe-4055-a090-cde121f5cd1d/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/71e209b8-3dfe-4055-a090-cde121f5cd1d/resource-auto.json"
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "4",
+          "page_indices": [
+            8
+          ],
+          "resource_ids": [
+            "033e8aab-739b-40b4-8dcb-a6d18149f2eb"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "4"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Figure 4: Error rates of mT5 on XQuAD zero-shot.",
+          "actual_captions": [
+            "Figure 4: Error rates of mT5 on XQuAD zero-shot. Baseline: Fine-tuning on XQuAD alone. Domain Preserving Training (DPT): Mixing in the unsupervised mC4 task with fine-tuning."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "033e8aab-739b-40b4-8dcb-a6d18149f2eb",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/033e8aab-739b-40b4-8dcb-a6d18149f2eb/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/033e8aab-739b-40b4-8dcb-a6d18149f2eb/resource-auto.json"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "resource_ids": [
+            "871be3d0-88bd-4dc1-adba-5d5d44d6c71e"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "1"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 1: Comparison of mT5 to existing massively multilingual pre-trained language models.",
+          "actual_captions": [
+            "Table 1: Comparison of mT5 to existing massively multilingual pre-trained language models. Multiple versions of XLM and mBERT exist; we refer here to the ones that cover the most languages. Note that XLM-R counts five Romanized variants as separate languages, while we ignore six Romanized variants in the mT5 language count."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "871be3d0-88bd-4dc1-adba-5d5d44d6c71e",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/871be3d0-88bd-4dc1-adba-5d5d44d6c71e/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/871be3d0-88bd-4dc1-adba-5d5d44d6c71e/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/871be3d0-88bd-4dc1-adba-5d5d44d6c71e/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/871be3d0-88bd-4dc1-adba-5d5d44d6c71e/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_indices": [
+            3
+          ],
+          "resource_ids": [
+            "eb907175-28bf-4259-9e79-2d534e166a26"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "2"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 2: Results on XTREME sentence-pair classification, structured prediction and question answering tasks.",
+          "actual_captions": [
+            "Table 2: Results on XTREME sentence-pair classification, structured prediction and question answering tasks. mBERT metrics are from Hu et al. (2020). Metrics for XLM, InfoXLM, X-STILTs and XLM-R are from Fang et al. (2020), though Conneau et al. (2020) report better performance of XLM-R on XNLI (80.9). All other metrics are from the original sources: FILTER (Fang et al., 2020), VECO (Luo et al., 2020) and RemBERT (Chung et al., 2020). For the \"translate-train\" setting, we include English training data, so as to be comparable with Fang et al. (2020) and Luo et al. (2020). This differs from the XTREME \"translate-train\" setup of Hu et al. (2020). For mT5 results on TyDi QA zero-shot, we report the median across five fine-tuning runs, as we observed high variance across runs. 6 Full results for all languages in all tasks are provided in the appendix."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "eb907175-28bf-4259-9e79-2d534e166a26",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/eb907175-28bf-4259-9e79-2d534e166a26/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/eb907175-28bf-4259-9e79-2d534e166a26/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/eb907175-28bf-4259-9e79-2d534e166a26/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/eb907175-28bf-4259-9e79-2d534e166a26/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "3",
+          "page_indices": [
+            5
+          ],
+          "resource_ids": [
+            "dd6d6fc7-f43d-405d-8ddb-44cd5d4c0b9f"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "3"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 3: Comparison of T5 vs. mT5 on SQuAD question answering (F1/EM).",
+          "actual_captions": [
+            "Table 3: Comparison of T5 vs. mT5 on SQuAD question answering (F1/EM)."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "dd6d6fc7-f43d-405d-8ddb-44cd5d4c0b9f",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/dd6d6fc7-f43d-405d-8ddb-44cd5d4c0b9f/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/dd6d6fc7-f43d-405d-8ddb-44cd5d4c0b9f/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/dd6d6fc7-f43d-405d-8ddb-44cd5d4c0b9f/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/dd6d6fc7-f43d-405d-8ddb-44cd5d4c0b9f/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "4",
+          "page_indices": [
+            6
+          ],
+          "resource_ids": [
+            "d388cd26-6971-42bf-97a6-50b17e1b74b7"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "4"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 4: Average XNLI zero-shot accuracy of various ablations on our mT5-Large model.",
+          "actual_captions": [
+            "Table 4: Average XNLI zero-shot accuracy of various ablations on our mT5-Large model. Per-language metrics are shown in Appendix C."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "d388cd26-6971-42bf-97a6-50b17e1b74b7",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/d388cd26-6971-42bf-97a6-50b17e1b74b7/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/d388cd26-6971-42bf-97a6-50b17e1b74b7/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/d388cd26-6971-42bf-97a6-50b17e1b74b7/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/d388cd26-6971-42bf-97a6-50b17e1b74b7/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "5",
+          "page_indices": [
+            6
+          ],
+          "resource_ids": [
+            "0ea44980-1ffb-4713-b16b-e3d1e77c2818"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "5"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 5: Illegal mT5-XXL predictions on XQuAD zero-shot, illustrating normalization (top), grammatical adjustment (middle) and translation (bottom).",
+          "actual_captions": [
+            "Table 5: Illegal mT5-XXLpredictions onXQuADzeroshot, illustrating normalization (top), grammatical adjustment (middle) and translation (bottom)."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "0ea44980-1ffb-4713-b16b-e3d1e77c2818",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/0ea44980-1ffb-4713-b16b-e3d1e77c2818/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/0ea44980-1ffb-4713-b16b-e3d1e77c2818/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/0ea44980-1ffb-4713-b16b-e3d1e77c2818/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/0ea44980-1ffb-4713-b16b-e3d1e77c2818/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "6",
+          "page_indices": [
+            11
+          ],
+          "resource_ids": [
+            "e7eb0257-f439-4fee-a2da-d61058167ee2"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "6"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 6: Statistics of the mC4 corpus, totaling 6.6B pages and 6.3T tokens.",
+          "actual_captions": [
+            "Table 6: Statistics of the mC4 corpus, totaling 6.6B pages and 6.3T tokens. The \"mT5\" column indicates the percentage of mT5 training data coming from a given language, using the default exponential smoothing value of α=0.3. We list 107 \"languages\" as detected by cld3, but note six of these (marked \"Latin\") are just Romanized variants of existing languages."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "e7eb0257-f439-4fee-a2da-d61058167ee2",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/e7eb0257-f439-4fee-a2da-d61058167ee2/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/e7eb0257-f439-4fee-a2da-d61058167ee2/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/e7eb0257-f439-4fee-a2da-d61058167ee2/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/e7eb0257-f439-4fee-a2da-d61058167ee2/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "7",
+          "page_indices": [
+            12
+          ],
+          "resource_ids": [
+            "051f0d47-33f1-4412-8b4c-bf615681a6f3"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "7"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 7: XNLI accuracy scores for each language.",
+          "actual_captions": [
+            "Table 7: XNLI accuracy scores for each language."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "051f0d47-33f1-4412-8b4c-bf615681a6f3",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/051f0d47-33f1-4412-8b4c-bf615681a6f3/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/051f0d47-33f1-4412-8b4c-bf615681a6f3/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/051f0d47-33f1-4412-8b4c-bf615681a6f3/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/051f0d47-33f1-4412-8b4c-bf615681a6f3/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "8",
+          "page_indices": [
+            12
+          ],
+          "resource_ids": [
+            "8304971f-ab50-43b9-93b0-52f7991fac20"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "8"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 8: PAWS-X accuracy scores for each language.",
+          "actual_captions": [
+            "Table 8: PAWS-X accuracy scores for each language."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "8304971f-ab50-43b9-93b0-52f7991fac20",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/8304971f-ab50-43b9-93b0-52f7991fac20/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/8304971f-ab50-43b9-93b0-52f7991fac20/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/8304971f-ab50-43b9-93b0-52f7991fac20/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/8304971f-ab50-43b9-93b0-52f7991fac20/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "9",
+          "page_indices": [
+            13
+          ],
+          "resource_ids": [
+            "4af8f2f8-69b0-410b-82d9-c08e18a3f355"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "9"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 9: WikiAnn NER F1 scores for each language.",
+          "actual_captions": [
+            "Table 9: WikiAnn NER F1 scores for each language."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "4af8f2f8-69b0-410b-82d9-c08e18a3f355",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/4af8f2f8-69b0-410b-82d9-c08e18a3f355/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/4af8f2f8-69b0-410b-82d9-c08e18a3f355/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/4af8f2f8-69b0-410b-82d9-c08e18a3f355/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/4af8f2f8-69b0-410b-82d9-c08e18a3f355/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "10",
+          "page_indices": [
+            13
+          ],
+          "resource_ids": [
+            "29014f7f-2c20-4663-8f4b-7109d85fb739"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "10"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 10: XQuAD results (F1/EM) for each language.",
+          "actual_captions": [
+            "Table 10: XQuAD results (F1/EM) for each language."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "29014f7f-2c20-4663-8f4b-7109d85fb739",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/29014f7f-2c20-4663-8f4b-7109d85fb739/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/29014f7f-2c20-4663-8f4b-7109d85fb739/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/29014f7f-2c20-4663-8f4b-7109d85fb739/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/29014f7f-2c20-4663-8f4b-7109d85fb739/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "11",
+          "page_indices": [
+            13
+          ],
+          "resource_ids": [
+            "34191e49-1ffb-4da1-9fb5-f3c815749e6e"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "11"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 11: MLQA results (F1/EM) for each language.",
+          "actual_captions": [
+            "Table 11: MLQA results (F1/EM) for each language."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "34191e49-1ffb-4da1-9fb5-f3c815749e6e",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/34191e49-1ffb-4da1-9fb5-f3c815749e6e/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/34191e49-1ffb-4da1-9fb5-f3c815749e6e/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/34191e49-1ffb-4da1-9fb5-f3c815749e6e/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/34191e49-1ffb-4da1-9fb5-f3c815749e6e/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "12",
+          "page_indices": [
+            14
+          ],
+          "resource_ids": [
+            "a6d8a023-797a-4503-91a2-282cf5f415c4"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "12"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 12: TyDi QA GoldP results (F1/EM) for each language.",
+          "actual_captions": [
+            "Table 12: TyDi QA GoldP results (F1/EM) for each language."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "a6d8a023-797a-4503-91a2-282cf5f415c4",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/a6d8a023-797a-4503-91a2-282cf5f415c4/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/a6d8a023-797a-4503-91a2-282cf5f415c4/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/a6d8a023-797a-4503-91a2-282cf5f415c4/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/a6d8a023-797a-4503-91a2-282cf5f415c4/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "13",
+          "page_indices": [
+            15
+          ],
+          "resource_ids": [
+            "0b683843-36f7-4b24-987f-5bdecf30e513"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "13"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 13: XNLI zero-shot accuracy of various ablations on our mT5-Large model.",
+          "actual_captions": [
+            "Table 13: XNLI zero-shot accuracy of various ablations on our mT5-Large model."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "0b683843-36f7-4b24-987f-5bdecf30e513",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/0b683843-36f7-4b24-987f-5bdecf30e513/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/0b683843-36f7-4b24-987f-5bdecf30e513/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/0b683843-36f7-4b24-987f-5bdecf30e513/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/0b683843-36f7-4b24-987f-5bdecf30e513/html.html"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "14",
+          "page_indices": [
+            15
+          ],
+          "resource_ids": [
+            "7681c7a8-d774-4a9c-87c6-0a85910f64fc"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "14"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Table 14: XQuAD zero-shot F1/EM of various ablations on our mT5-Large model.",
+          "actual_captions": [
+            "Table 14: XQuAD zero-shot F1/EM of various ablations on our mT5-Large model."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "7681c7a8-d774-4a9c-87c6-0a85910f64fc",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/7681c7a8-d774-4a9c-87c6-0a85910f64fc/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/7681c7a8-d774-4a9c-87c6-0a85910f64fc/resource-auto.json",
+              "csv": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/7681c7a8-d774-4a9c-87c6-0a85910f64fc/csv.csv",
+              "html": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/006-ml-mt5-naacl2021/resources/7681c7a8-d774-4a9c-87c6-0a85910f64fc/html.html"
+            }
+          ]
+        }
+      ],
+      "extra_resources": [],
+      "sample_cells": [],
+      "notes": [
+        "Inventory only: matching caption/number/page does not establish full crop completeness or cell accuracy. No blanket completeness or table-quality pass is assigned; only explicit spot-check findings are recorded."
+      ]
+    },
+    {
+      "id": "ml-nonattracting-jmlr2021",
+      "review_level": "inventory_only",
+      "pages": 34,
+      "expected_counts": {
+        "figure": 4,
+        "table": 0
+      },
+      "observed_counts": {
+        "figure": 8,
+        "table": 3
+      },
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            6
+          ],
+          "resource_ids": [
+            "98d44331-cba4-4254-9ff0-ac5d780f3f3c",
+            "06cec33d-fad1-4142-89e5-b4ec9f055630"
+          ],
+          "inventory_status": "fragmented",
+          "correct_type": true,
+          "correct_number": false,
+          "actual_numbers": [
+            "1",
+            ""
+          ],
+          "caption_association": false,
+          "expected_caption_reference": "Figure 1: Left: A non-attracting region of local minima.",
+          "actual_captions": [
+            "Figure 1: Left: A non-attracting region of local minima given by R = {(x, y) | x = 0, y ∈ (-1, 1)} illustrated by the function f(x, y) = x2 (1 - y2 ). Right: An attracting region of local minima at the same region R for comparison. (These examples do not exactly appear in neural networks considered in this paper, but are of similar nature.)",
+            ""
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [
+            {
+              "code": "fragmented_composite_figure",
+              "detail": "Left/right surface plots are separate resources; only the left crop carries Figure 1's full caption and number. No single resource contains both plots."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "98d44331-cba4-4254-9ff0-ac5d780f3f3c",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/007-ml-nonattracting-jmlr2021/resources/98d44331-cba4-4254-9ff0-ac5d780f3f3c/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/007-ml-nonattracting-jmlr2021/resources/98d44331-cba4-4254-9ff0-ac5d780f3f3c/resource-auto.json"
+            },
+            {
+              "resource_id": "06cec33d-fad1-4142-89e5-b4ec9f055630",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/007-ml-nonattracting-jmlr2021/resources/06cec33d-fad1-4142-89e5-b4ec9f055630/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/007-ml-nonattracting-jmlr2021/resources/06cec33d-fad1-4142-89e5-b4ec9f055630/resource-auto.json"
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            9
+          ],
+          "resource_ids": [
+            "60b83539-9178-4105-a543-056ba2d3a577"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "2"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Figure 2: Embedding a smaller two-layer neural network into a larger one.",
+          "actual_captions": [
+            "Figure 2: Embedding a smaller two-layer neural network into a larger one. Weights of the larger network are defined by the weights of the smaller network and the embedding map γ 1λ . Numbers in hidden nodes (circles) denote the index of a neuron in form of (layer, neuron index) with negative index for the added neuron. Rectangles correspond to bias terms."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "60b83539-9178-4105-a543-056ba2d3a577",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/007-ml-nonattracting-jmlr2021/resources/60b83539-9178-4105-a543-056ba2d3a577/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/007-ml-nonattracting-jmlr2021/resources/60b83539-9178-4105-a543-056ba2d3a577/resource-auto.json"
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            15
+          ],
+          "resource_ids": [
+            "95eda30c-3b69-4ca7-9e2a-bdedf491c992"
+          ],
+          "inventory_status": "present",
+          "correct_type": true,
+          "correct_number": true,
+          "actual_numbers": [
+            "3"
+          ],
+          "caption_association": true,
+          "expected_caption_reference": "Figure 3: A non-attracting region of local minima in a deep and wide neural network.",
+          "actual_captions": [
+            "Figure 3: A non-attracting region of local minima in a deep and wide neural network. (a) Local minimum. Top: Loss evolution for 5000 random directions. Bottom: Minimum over sampled directions. (b) Path along a degenerate direction to a saddle point. (c) Saddle point with the same loss value. Top: Loss evolution for 5000 random directions. Bottom: Minimum over sampled directions. (d) Error evolution along an analytically known direction of descent at the saddle point."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "95eda30c-3b69-4ca7-9e2a-bdedf491c992",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/007-ml-nonattracting-jmlr2021/resources/95eda30c-3b69-4ca7-9e2a-bdedf491c992/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/007-ml-nonattracting-jmlr2021/resources/95eda30c-3b69-4ca7-9e2a-bdedf491c992/resource-auto.json"
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "4",
+          "page_indices": [
+            18
+          ],
+          "resource_ids": [
+            "24bf364d-9859-441e-98e6-7bfe87ce3bd2",
+            "3afe1ae9-fe48-4973-83d6-896b25ba6084",
+            "b0223e69-fa6e-4623-8602-4146aab196b7",
+            "d11bb580-e10e-4085-aee5-eb8fba8cf814"
+          ],
+          "inventory_status": "fragmented",
+          "correct_type": true,
+          "correct_number": false,
+          "actual_numbers": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "caption_association": false,
+          "expected_caption_reference": "Figure 4: Non-increasing paths to the global minimum exist from almost everywhere. Visualization of proof ideas.",
+          "actual_captions": [
+            "Theorem 5: Visualization of considered neural network architecture.",
+            "Lemma 16: An ϵ-change guarantees linear independence.",
+            "",
+            "Lemma 18&19: Realizing paths of activation vectors for decreasing hidden dimensions."
+          ],
+          "crop_complete": null,
+          "complete_as_single_resource": null,
+          "issues": [
+            {
+              "code": "fragmented_composite_figure",
+              "detail": "The four theorem/lemma diagram panels are four resources. Some get local panel subcaptions; all lack the outer Figure 4 caption and number. Not four extra numbered research figures."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "24bf364d-9859-441e-98e6-7bfe87ce3bd2",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/007-ml-nonattracting-jmlr2021/resources/24bf364d-9859-441e-98e6-7bfe87ce3bd2/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/007-ml-nonattracting-jmlr2021/resources/24bf364d-9859-441e-98e6-7bfe87ce3bd2/resource-auto.json"
+            },
+            {
+              "resource_id": "3afe1ae9-fe48-4973-83d6-896b25ba6084",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/007-ml-nonattracting-jmlr2021/resources/3afe1ae9-fe48-4973-83d6-896b25ba6084/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/007-ml-nonattracting-jmlr2021/resources/3afe1ae9-fe48-4973-83d6-896b25ba6084/resource-auto.json"
+            },
+            {
+              "resource_id": "b0223e69-fa6e-4623-8602-4146aab196b7",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/007-ml-nonattracting-jmlr2021/resources/b0223e69-fa6e-4623-8602-4146aab196b7/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/007-ml-nonattracting-jmlr2021/resources/b0223e69-fa6e-4623-8602-4146aab196b7/resource-auto.json"
+            },
+            {
+              "resource_id": "d11bb580-e10e-4085-aee5-eb8fba8cf814",
+              "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/007-ml-nonattracting-jmlr2021/resources/d11bb580-e10e-4085-aee5-eb8fba8cf814/png-300.png",
+              "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/007-ml-nonattracting-jmlr2021/resources/d11bb580-e10e-4085-aee5-eb8fba8cf814/resource-auto.json"
+            }
+          ]
+        }
+      ],
+      "extra_resources": [
+        {
+          "resource_id": "bf70862a-b5c7-4574-9e57-10ad58ec5fc2",
+          "kind": "table",
+          "page_indices": [
+            28
+          ],
+          "classification": "valid_unnumbered_notation_table_outside_numbered_scope",
+          "reason": "Source Appendix B pages 29-30 contains three real bordered symbol/meaning tables under B.1/B.2/B.3 headings, without numbered Table captions. They are legitimate unnumbered tables, not equation false positives or extra numbered-object true positives.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/007-ml-nonattracting-jmlr2021/resources/bf70862a-b5c7-4574-9e57-10ad58ec5fc2/png-300.png"
+        },
+        {
+          "resource_id": "7df0e609-3b06-4a27-93c7-1cec29bb752a",
+          "kind": "table",
+          "page_indices": [
+            29
+          ],
+          "classification": "valid_unnumbered_notation_table_outside_numbered_scope",
+          "reason": "Source Appendix B pages 29-30 contains three real bordered symbol/meaning tables under B.1/B.2/B.3 headings, without numbered Table captions. They are legitimate unnumbered tables, not equation false positives or extra numbered-object true positives.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/007-ml-nonattracting-jmlr2021/resources/7df0e609-3b06-4a27-93c7-1cec29bb752a/png-300.png"
+        },
+        {
+          "resource_id": "74b26640-a948-4ae5-b94b-cfc45d9343d9",
+          "kind": "table",
+          "page_indices": [
+            29
+          ],
+          "classification": "valid_unnumbered_notation_table_outside_numbered_scope",
+          "reason": "Source Appendix B pages 29-30 contains three real bordered symbol/meaning tables under B.1/B.2/B.3 headings, without numbered Table captions. They are legitimate unnumbered tables, not equation false positives or extra numbered-object true positives.",
+          "png": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/007-ml-nonattracting-jmlr2021/resources/74b26640-a948-4ae5-b94b-cfc45d9343d9/png-300.png"
+        }
+      ],
+      "sample_cells": [],
+      "notes": [
+        "Inventory only: matching caption/number/page does not establish full crop completeness or cell accuracy. No blanket completeness or table-quality pass is assigned; only explicit spot-check findings are recorded.",
+        "Two additional source pages (indices 28/29) were opened after GT was locked solely to classify extra unnumbered detections. Numbered GT remains unchanged at 4 figures, 0 tables. Do not treat the three valid notation tables as false positives."
+      ]
+    }
+  ],
+  "summary": {
+    "papers": 6,
+    "pages": 96,
+    "deep_review_papers": 2,
+    "inventory_only_papers": 4,
+    "expected_numbered_figures": 20,
+    "expected_numbered_tables": 49,
+    "observed_resources": 78,
+    "numbered_objects_with_at_least_one_matched_resource": 68,
+    "deep_expected_objects": 24,
+    "deep_complete_body_including_printed_panel_labels": 21,
+    "deep_graphical_panels_or_table_data_present_across_resources": 23,
+    "deep_graphical_panels_or_table_data_present_in_one_resource": 22,
+    "deep_confirmed_table_structure_issues": 4,
+    "predeclared_cell_status": {
+      "exact": 20
+    },
+    "dotted_appendix_caption_number_cases": 9,
+    "blank_noise_resources": 1,
+    "valid_unnumbered_tables_outside_numbered_scope": 3,
+    "limits": "Do not combine inventory-only null crop/cell fields with deep-review passes. Only one omitted numbered object (BART Table 9) is claimed; fragmented figures and caption/number failures are separate defects. The 78 emitted resources are not 78 correctly preserved research objects."
+  }
+}

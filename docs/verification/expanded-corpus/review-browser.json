@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checked_at": "2026-10-09T13:59:24.704Z",
+  "browser": "154.0.4258.62",
+  "page_sections": 20,
+  "resource_images": 226,
+  "checked_local_files": 569,
+  "deep_filter": 6,
+  "inventory_filter": 14,
+  "title_filter": "ChineseBERT",
+  "visible_images_decoded": 13,
+  "issue_filter_resource_count": 3,
+  "horizontal_overflow": false,
+  "javascript_errors": [],
+  "failed_requests": [],
+  "scope": "Local evidence catalogue. Every local link exists; ChineseBERT visible PNGs decoded in the browser. All 226 exports were separately decoded in frozen-backend workflow tests; this is not an app UI or accuracy test."
+}

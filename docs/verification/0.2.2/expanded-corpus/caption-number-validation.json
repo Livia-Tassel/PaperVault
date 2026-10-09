@@ -1,0 +1,136 @@
+{
+  "passed": true,
+  "parser_report": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\frozen-report.json",
+  "parser_report_sha256": "56b7ebde0e727ae6ae2e4ca245d549e6db0d28e7f3dd2c0ad4c5676f402b6939",
+  "cases": "D:\\project\\PaperVault\\artifacts\\real-corpus-expanded\\caption-number-cases-ml.json",
+  "cases_sha256": "297fd2aec2f9deeec31352aa1932944556cad7c16e31587b94918229d2f9ae5e",
+  "backend": "D:\\project\\PaperVault\\build\\backend-dist\\papervault-backend\\papervault-backend.exe",
+  "backend_sha256": "b5e1ece230ab2ec1183057ab1f0050e6899947632897724febb117eeaa51755f",
+  "health": {
+    "status": "ok",
+    "version": "0.2.2",
+    "protocol": 1
+  },
+  "checks": [
+    {
+      "kind": "figure",
+      "expected_number": "G.1",
+      "caption": "Figure G.1: Density plots of cosine similarities between sentence pairs in STS-B. Pairs are divided into 5 groups based on ground truth ratings (higher means more similar) along the y-axis, and x-axis is the cosine similarity.",
+      "matched_resource_ids": [
+        "6c03a8ec-4072-4630-828a-9326e2a104ce"
+      ],
+      "actual_numbers": [
+        "G.1"
+      ],
+      "passed": true
+    },
+    {
+      "kind": "table",
+      "expected_number": "A.1",
+      "caption": "Table A.1: Batch sizes and learning rates for SimCSE.",
+      "matched_resource_ids": [
+        "3cb57400-3ddc-4fe6-8d30-5adc0d6ed1b9"
+      ],
+      "actual_numbers": [
+        "A.1"
+      ],
+      "passed": true
+    },
+    {
+      "kind": "table",
+      "expected_number": "B.1",
+      "caption": "Table B.1: STS evaluation protocols used in different papers. \"Reg.\": whether an additional regressor is used; \"aggr.\": methods to aggregate different subset results.",
+      "matched_resource_ids": [
+        "48d34c9a-246d-4b50-940b-0ba7a0774b7b"
+      ],
+      "actual_numbers": [
+        "B.1"
+      ],
+      "passed": true
+    },
+    {
+      "kind": "table",
+      "expected_number": "B.2",
+      "caption": "Table B.2: Comparisons of our reproduced results using different evaluation protocols and the original numbers. ♣: results from Reimers and Gurevych (2019); ♠: results from Su et al. (2021); Other results are reproduced by us. From the table we see that SBERT takes the \"all\" evaluation and BERT-whitening takes the \"wmean\" evaluation.",
+      "matched_resource_ids": [
+        "d5643e64-a209-4f92-90ca-fd08680e50ca"
+      ],
+      "actual_numbers": [
+        "B.2"
+      ],
+      "passed": true
+    },
+    {
+      "kind": "table",
+      "expected_number": "B.3",
+      "caption": "Table B.3: STS results with \"wmean\" setting (Spearman). ♠: from Li et al. (2020); Su et al. (2021).",
+      "matched_resource_ids": [
+        "97184eee-bd7b-4329-8d3f-fff0ae67a77d"
+      ],
+      "actual_numbers": [
+        "B.3"
+      ],
+      "passed": true
+    },
+    {
+      "kind": "table",
+      "expected_number": "C.1",
+      "caption": "Table C.1: Comparison of using NLI or target data for postprocessing methods (\"all\", Spearman's correlation).",
+      "matched_resource_ids": [
+        "d231b13d-0dea-4c4a-a2bd-6748d5996cbf"
+      ],
+      "actual_numbers": [
+        "C.1"
+      ],
+      "passed": true
+    },
+    {
+      "kind": "table",
+      "expected_number": "D.1",
+      "caption": "Table D.1: STS-B development results (Spearman's correlation) with different temperatures. \"N/A\": Dot product instead of cosine similarity.",
+      "matched_resource_ids": [
+        "b7214a9a-c227-4a20-aa5d-9302a8db98ee"
+      ],
+      "actual_numbers": [
+        "D.1"
+      ],
+      "passed": true
+    },
+    {
+      "kind": "table",
+      "expected_number": "D.2",
+      "caption": "Table D.2: Ablation studies of the MLM objective based on the development sets using BERTbase.",
+      "matched_resource_ids": [
+        "bf6cf094-b8a9-48db-84a3-c945c8179b14"
+      ],
+      "actual_numbers": [
+        "D.2"
+      ],
+      "passed": true
+    },
+    {
+      "kind": "table",
+      "expected_number": "E.1",
+      "caption": "Table E.1: Transfer task results of different sentence embedding models (measured as accuracy). ♣: results from Reimers and Gurevych (2019); ♥: results from Zhang et al. (2020). We highlight the highest numbers among models with the same pre-trained encoder. MLM: adding MLM as an auxiliary task with λ = 0.1.",
+      "matched_resource_ids": [
+        "c982009a-c275-4cf0-91ef-9ab96c5ae4f8"
+      ],
+      "actual_numbers": [
+        "E.1"
+      ],
+      "passed": true
+    }
+  ],
+  "scope": "Nine explicitly captioned appendix labels only. Does not claim that missing captions, cropping or table structure are repaired.",
+  "resources_auto": "D:\\project\\PaperVault\\artifacts\\expanded-v022\\runs\\20261009T135135Z-1d029232\\001-ml-simcse-emnlp2021\\resources-auto.json",
+  "resources_auto_sha256": "65b50e7f60de66b2a1e5e85d42aaaf7ab8e189521dcec0c79f2594f59b37e5bf",
+  "excluded_figure_F1": {
+    "resource_id": "f9d6b924-7b78-4991-a0d9-bcbe512b6dae",
+    "page_index": 15,
+    "caption": "",
+    "number": "",
+    "correctly_not_invented": true,
+    "source_caption_still_missing": true
+  },
+  "empty_caption_resources_checked": 1
+}

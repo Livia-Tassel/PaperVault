@@ -1,0 +1,96 @@
+FFFFFFFFFFF...F.....F.                                                   [100%]
+================================== FAILURES ===================================
+_ test_caption_number_preserves_printed_identifiers_without_guessing[table-Table A.1: STS results-A.1] _
+tests\parser\test_caption_numbers.py:31: in test_caption_number_preserves_printed_identifiers_without_guessing
+    assert _caption_number(caption, kind) == expected
+E   AssertionError: assert '' == 'A.1'
+E     
+E     - A.1
+_ test_caption_number_preserves_printed_identifiers_without_guessing[table-Table B.1: Learning rates-B.1] _
+tests\parser\test_caption_numbers.py:31: in test_caption_number_preserves_printed_identifiers_without_guessing
+    assert _caption_number(caption, kind) == expected
+E   AssertionError: assert '' == 'B.1'
+E     
+E     - B.1
+_ test_caption_number_preserves_printed_identifiers_without_guessing[table-Table B.2: Training data-B.2] _
+tests\parser\test_caption_numbers.py:31: in test_caption_number_preserves_printed_identifiers_without_guessing
+    assert _caption_number(caption, kind) == expected
+E   AssertionError: assert '' == 'B.2'
+E     
+E     - B.2
+_ test_caption_number_preserves_printed_identifiers_without_guessing[table-Table B.3: Batch sizes-B.3] _
+tests\parser\test_caption_numbers.py:31: in test_caption_number_preserves_printed_identifiers_without_guessing
+    assert _caption_number(caption, kind) == expected
+E   AssertionError: assert '' == 'B.3'
+E     
+E     - B.3
+_ test_caption_number_preserves_printed_identifiers_without_guessing[table-Table C.1: Ablation study-C.1] _
+tests\parser\test_caption_numbers.py:31: in test_caption_number_preserves_printed_identifiers_without_guessing
+    assert _caption_number(caption, kind) == expected
+E   AssertionError: assert '' == 'C.1'
+E     
+E     - C.1
+_ test_caption_number_preserves_printed_identifiers_without_guessing[table-Table D.1: Examples-D.1] _
+tests\parser\test_caption_numbers.py:31: in test_caption_number_preserves_printed_identifiers_without_guessing
+    assert _caption_number(caption, kind) == expected
+E   AssertionError: assert '' == 'D.1'
+E     
+E     - D.1
+_ test_caption_number_preserves_printed_identifiers_without_guessing[table-Table D.2: More examples-D.2] _
+tests\parser\test_caption_numbers.py:31: in test_caption_number_preserves_printed_identifiers_without_guessing
+    assert _caption_number(caption, kind) == expected
+E   AssertionError: assert '' == 'D.2'
+E     
+E     - D.2
+_ test_caption_number_preserves_printed_identifiers_without_guessing[table-Table E.1: Reproduction results-E.1] _
+tests\parser\test_caption_numbers.py:31: in test_caption_number_preserves_printed_identifiers_without_guessing
+    assert _caption_number(caption, kind) == expected
+E   AssertionError: assert '' == 'E.1'
+E     
+E     - E.1
+_ test_caption_number_preserves_printed_identifiers_without_guessing[figure-Figure G.1: Embedding analysis-G.1] _
+tests\parser\test_caption_numbers.py:31: in test_caption_number_preserves_printed_identifiers_without_guessing
+    assert _caption_number(caption, kind) == expected
+E   AssertionError: assert '' == 'G.1'
+E     
+E     - G.1
+_ test_caption_number_preserves_printed_identifiers_without_guessing[figure-Fig. S1. Additional view-S1] _
+tests\parser\test_caption_numbers.py:31: in test_caption_number_preserves_printed_identifiers_without_guessing
+    assert _caption_number(caption, kind) == expected
+E   AssertionError: assert '' == 'S1'
+E     
+E     - S1
+_ test_caption_number_preserves_printed_identifiers_without_guessing[table-Table A-1. Summary-A-1] _
+tests\parser\test_caption_numbers.py:31: in test_caption_number_preserves_printed_identifiers_without_guessing
+    assert _caption_number(caption, kind) == expected
+E   AssertionError: assert '' == 'A-1'
+E     
+E     - A-1
+_ test_caption_number_preserves_printed_identifiers_without_guessing[table-Table XL: Late appendix-XL] _
+tests\parser\test_caption_numbers.py:31: in test_caption_number_preserves_printed_identifiers_without_guessing
+    assert _caption_number(caption, kind) == expected
+E   AssertionError: assert 'X' == 'XL'
+E     
+E     - XL
+E     + X
+_ test_caption_number_preserves_printed_identifiers_without_guessing[table-Table XGBoost comparison-] _
+tests\parser\test_caption_numbers.py:31: in test_caption_number_preserves_printed_identifiers_without_guessing
+    assert _caption_number(caption, kind) == expected
+E   AssertionError: assert 'X' == ''
+E     
+E     + X
+=========================== short test summary info ===========================
+FAILED tests/parser/test_caption_numbers.py::test_caption_number_preserves_printed_identifiers_without_guessing[table-Table A.1: STS results-A.1]
+FAILED tests/parser/test_caption_numbers.py::test_caption_number_preserves_printed_identifiers_without_guessing[table-Table B.1: Learning rates-B.1]
+FAILED tests/parser/test_caption_numbers.py::test_caption_number_preserves_printed_identifiers_without_guessing[table-Table B.2: Training data-B.2]
+FAILED tests/parser/test_caption_numbers.py::test_caption_number_preserves_printed_identifiers_without_guessing[table-Table B.3: Batch sizes-B.3]
+FAILED tests/parser/test_caption_numbers.py::test_caption_number_preserves_printed_identifiers_without_guessing[table-Table C.1: Ablation study-C.1]
+FAILED tests/parser/test_caption_numbers.py::test_caption_number_preserves_printed_identifiers_without_guessing[table-Table D.1: Examples-D.1]
+FAILED tests/parser/test_caption_numbers.py::test_caption_number_preserves_printed_identifiers_without_guessing[table-Table D.2: More examples-D.2]
+FAILED tests/parser/test_caption_numbers.py::test_caption_number_preserves_printed_identifiers_without_guessing[table-Table E.1: Reproduction results-E.1]
+FAILED tests/parser/test_caption_numbers.py::test_caption_number_preserves_printed_identifiers_without_guessing[figure-Figure G.1: Embedding analysis-G.1]
+FAILED tests/parser/test_caption_numbers.py::test_caption_number_preserves_printed_identifiers_without_guessing[figure-Fig. S1. Additional view-S1]
+FAILED tests/parser/test_caption_numbers.py::test_caption_number_preserves_printed_identifiers_without_guessing[table-Table A-1. Summary-A-1]
+FAILED tests/parser/test_caption_numbers.py::test_caption_number_preserves_printed_identifiers_without_guessing[table-Table XL: Late appendix-XL]
+FAILED tests/parser/test_caption_numbers.py::test_caption_number_preserves_printed_identifiers_without_guessing[table-Table XGBoost comparison-]
+13 failed, 9 passed in 0.29s

@@ -1,0 +1,756 @@
+{
+  "executed": true,
+  "version": "0.2.1",
+  "backend_sha256": "567bc425d9df91f4813dfacdf64a8a8e5548381becc5950627830862439dd43a",
+  "corpus_report": "artifacts\\real-corpus-expanded\\batches\\batch-003\\report.json",
+  "ground_truth": "D:\\project\\PaperVault\\tests\\corpus\\expanded\\ground-truth-diverse.json",
+  "ground_truth_sha256": "abb4690790b8d25977c7e7f0f315af478a2a8df7709a38eff6db93d317ec8a24",
+  "papers": [
+    {
+      "id": "diverse-chinesebert",
+      "paper_id": "6a788dc8-2a0d-4160-a134-aadcde1a0a1f",
+      "probes": [
+        {
+          "source_probe": {
+            "query": "乐",
+            "page_index": 0,
+            "pdf_text_layer": true,
+            "image_only": false,
+            "source_context": "the Chinese character “乐” has two distinctly different pronunciations",
+            "kind": "single_character"
+          },
+          "original_pdfium_text_contains_query": true,
+          "structured_blocks_containing_query": [
+            {
+              "id": "#/texts/10",
+              "label": "text",
+              "text": "For the latter, pinyin, the Romanized sequence of a Chinese character representing its pronunciation(s), is crucial in modeling both semantic and syntax information that can not be captured by contextualized or glyph embeddings. This aspect is especially important considering the highly prevalent heteronym phenomenon in Chinese 2 , where the same character have multiple pronunciations, each of which is associated with a specific meaning. Each pronunciation is associated with a specific pinyin expression. At the semantic level, for example, the Chinese character \"乐\" has two distinctly different pronunciations: \"乐\" can be pronounced as \"yuè [yE51 ]\", which means \"music\", and \"lè [lG51 ]\", which means \"happy\". On the syntax level, pronunciations help identify the part-of-speech of a character. For example, character \"还\" has two pronunciations: \"huán[xwan35 ]\" and \"hái[xaI35 ]\", with the former meaning the verb \"return\" and the latter meaning the adverb \"also\". Different pronunciations of the same character cannot be distinguished by the glyph embedding since the logographic is the same, or the char-ID embedding, since they both point to the same character ID, but can be characterized by pinyin.",
+              "location": {
+                "page_index": 0,
+                "crop_box": [
+                  0.0,
+                  0.0,
+                  595.276,
+                  841.89
+                ],
+                "media_box": [
+                  0.0,
+                  0.0,
+                  595.276,
+                  841.89
+                ],
+                "rotation": 0,
+                "user_unit": 1.0,
+                "width": 595.276,
+                "height": 841.89,
+                "bbox": [
+                  307.276,
+                  117.84047196814163,
+                  527.4554562100004,
+                  344.1881879
+                ],
+                "coordinate_space": "pdf_user_space",
+                "docling_provenance": {
+                  "page_no": 1,
+                  "bbox": {
+                    "l": 307.276,
+                    "t": 344.1881879,
+                    "r": 527.4554562100004,
+                    "b": 117.84047196814163,
+                    "coord_origin": "BOTTOMLEFT"
+                  },
+                  "charspan": [
+                    0,
+                    836
+                  ]
+                }
+              }
+            }
+          ],
+          "matched_this_paper": true,
+          "hits": [
+            {
+              "group": "content",
+              "id": "bba27159-60ac-4b1d-9543-c008fde458da",
+              "kind": "content",
+              "paper_id": "6a788dc8-2a0d-4160-a134-aadcde1a0a1f",
+              "title": "ChineseBERT: Chinese Pretraining Enhanced by Glyph and Pinyin Information",
+              "location": {
+                "page_index": 0,
+                "crop_box": [
+                  0.0,
+                  0.0,
+                  595.276,
+                  841.89
+                ],
+                "media_box": [
+                  0.0,
+                  0.0,
+                  595.276,
+                  841.89
+                ],
+                "rotation": 0,
+                "user_unit": 1.0,
+                "width": 595.276,
+                "height": 841.89,
+                "bbox": [
+                  307.276,
+                  117.84047196814163,
+                  527.4554562100004,
+                  344.1881879
+                ],
+                "coordinate_space": "pdf_user_space",
+                "docling_provenance": {
+                  "page_no": 1,
+                  "bbox": {
+                    "l": 307.276,
+                    "t": 344.1881879,
+                    "r": 527.4554562100004,
+                    "b": 117.84047196814163,
+                    "coord_origin": "BOTTOMLEFT"
+                  },
+                  "charspan": [
+                    0,
+                    836
+                  ]
+                }
+              },
+              "snippet": [
+                {
+                  "text": "…",
+                  "matched": false
+                },
+                {
+                  "text": "xpression. At the semantic level, for example, the Chinese character \"",
+                  "matched": false
+                },
+                {
+                  "text": "乐",
+                  "matched": true
+                },
+                {
+                  "text": "\" has two distinctly different pronunciations: \"",
+                  "matched": false
+                },
+                {
+                  "text": "乐",
+                  "matched": true
+                },
+                {
+                  "text": "\" can be pronounced as \"yuè [yE51 ]\", which means \"music\", and \"lè [lG51 ]\", which means \"happy\". On the syntax level, pronunciations help i",
+                  "matched": false
+                },
+                {
+                  "text": "…",
+                  "matched": false
+                }
+              ],
+              "rank": -3.8215997249564544
+            }
+          ],
+          "correct_page_hit": true,
+          "diagnosis": "matched"
+        },
+        {
+          "source_probe": {
+            "query": "我喜欢逛紫禁",
+            "page_index": 3,
+            "pdf_text_layer": true,
+            "image_only": false,
+            "source_context": "context “我喜欢逛紫禁[M] (i like going to The Forbidden [M])”",
+            "kind": "contiguous_chinese"
+          },
+          "original_pdfium_text_contains_query": true,
+          "structured_blocks_containing_query": [
+            {
+              "id": "#/texts/295",
+              "label": "text",
+              "text": "We use two masking strategies - Whole Word Masking (WWM) and Char Masking (CM) for ChineseBERT. Li et al. (2019b) suggested that using Chinese characters as the basic input unit can alleviate the out-of-vocabulary issue in the Chinese language. We thus adopt the method of masking random characters in the given context, denoted by Char Masking. On the other hand, a large number of words in Chinese consist of multiple characters, for which the CM strategy may be too easy for the model to predict. For example, for the input context \"我喜欢 逛紫禁[M] (i like going to The Forbidden [M])\", the model can easily predict that the masked character is \"城(City)\". Hence, we follow Cui et al. (2019a) to use WWM, a strategy to mask out all characters within a selected word, mitigating the easy-predicting shortcoming of the CM strategy. Note that for both WWM and CM, the basic input unit is Chinese characters. The main difference between WWM and CM lies in how they mask characters and how the model predicts masked characters.",
+              "location": {
+                "page_index": 3,
+                "crop_box": [
+                  0.0,
+                  0.0,
+                  595.276,
+                  841.89
+                ],
+                "media_box": [
+                  0.0,
+                  0.0,
+                  595.276,
+                  841.89
+                ],
+                "rotation": 0,
+                "user_unit": 1.0,
+                "width": 595.276,
+                "height": 841.89,
+                "bbox": [
+                  306.763,
+                  384.46347196814156,
+                  527.3592379480006,
+                  678.3608241000001
+                ],
+                "coordinate_space": "pdf_user_space",
+                "docling_provenance": {
+                  "page_no": 4,
+                  "bbox": {
+                    "l": 306.763,
+                    "t": 678.3608241000001,
+                    "r": 527.3592379480006,
+                    "b": 384.4634719681416,
+                    "coord_origin": "BOTTOMLEFT"
+                  },
+                  "charspan": [
+                    0,
+                    1019
+                  ]
+                }
+              }
+            }
+          ],
+          "matched_this_paper": true,
+          "hits": [
+            {
+              "group": "content",
+              "id": "588cded6-5ffd-421d-9738-dc7d8b536289",
+              "kind": "content",
+              "paper_id": "6a788dc8-2a0d-4160-a134-aadcde1a0a1f",
+              "title": "ChineseBERT: Chinese Pretraining Enhanced by Glyph and Pinyin Information",
+              "location": {
+                "page_index": 3,
+                "crop_box": [
+                  0.0,
+                  0.0,
+                  595.276,
+                  841.89
+                ],
+                "media_box": [
+                  0.0,
+                  0.0,
+                  595.276,
+                  841.89
+                ],
+                "rotation": 0,
+                "user_unit": 1.0,
+                "width": 595.276,
+                "height": 841.89,
+                "bbox": [
+                  306.763,
+                  384.46347196814156,
+                  527.3592379480006,
+                  678.3608241000001
+                ],
+                "coordinate_space": "pdf_user_space",
+                "docling_provenance": {
+                  "page_no": 4,
+                  "bbox": {
+                    "l": 306.763,
+                    "t": 678.3608241000001,
+                    "r": 527.3592379480006,
+                    "b": 384.4634719681416,
+                    "coord_origin": "BOTTOMLEFT"
+                  },
+                  "charspan": [
+                    0,
+                    1019
+                  ]
+                }
+              },
+              "snippet": [
+                {
+                  "text": "…",
+                  "matched": false
+                },
+                {
+                  "text": "oo easy for the model to predict. For example, for the input context \"",
+                  "matched": false
+                },
+                {
+                  "text": "我喜欢 逛紫禁",
+                  "matched": true
+                },
+                {
+                  "text": "[M] (i like going to The Forbidden [M])\", the model can easily predict that the masked character is \"城(City)\". Hence, we follow Cui et al. (2019a) to use WWM, a strategy to mask out a",
+                  "matched": false
+                },
+                {
+                  "text": "…",
+                  "matched": false
+                }
+              ],
+              "rank": -2.2153506230381392
+            }
+          ],
+          "correct_page_hit": true,
+          "diagnosis": "matched"
+        },
+        {
+          "source_probe": {
+            "query": "我喜欢逛紫禁[M]",
+            "page_index": 3,
+            "pdf_text_layer": true,
+            "image_only": false,
+            "source_context": "context “我喜欢逛紫禁[M] (i like going to The Forbidden [M])”",
+            "kind": "mixed_chinese_latin"
+          },
+          "original_pdfium_text_contains_query": true,
+          "structured_blocks_containing_query": [
+            {
+              "id": "#/texts/295",
+              "label": "text",
+              "text": "We use two masking strategies - Whole Word Masking (WWM) and Char Masking (CM) for ChineseBERT. Li et al. (2019b) suggested that using Chinese characters as the basic input unit can alleviate the out-of-vocabulary issue in the Chinese language. We thus adopt the method of masking random characters in the given context, denoted by Char Masking. On the other hand, a large number of words in Chinese consist of multiple characters, for which the CM strategy may be too easy for the model to predict. For example, for the input context \"我喜欢 逛紫禁[M] (i like going to The Forbidden [M])\", the model can easily predict that the masked character is \"城(City)\". Hence, we follow Cui et al. (2019a) to use WWM, a strategy to mask out all characters within a selected word, mitigating the easy-predicting shortcoming of the CM strategy. Note that for both WWM and CM, the basic input unit is Chinese characters. The main difference between WWM and CM lies in how they mask characters and how the model predicts masked characters.",
+              "location": {
+                "page_index": 3,
+                "crop_box": [
+                  0.0,
+                  0.0,
+                  595.276,
+                  841.89
+                ],
+                "media_box": [
+                  0.0,
+                  0.0,
+                  595.276,
+                  841.89
+                ],
+                "rotation": 0,
+                "user_unit": 1.0,
+                "width": 595.276,
+                "height": 841.89,
+                "bbox": [
+                  306.763,
+                  384.46347196814156,
+                  527.3592379480006,
+                  678.3608241000001
+                ],
+                "coordinate_space": "pdf_user_space",
+                "docling_provenance": {
+                  "page_no": 4,
+                  "bbox": {
+                    "l": 306.763,
+                    "t": 678.3608241000001,
+                    "r": 527.3592379480006,
+                    "b": 384.4634719681416,
+                    "coord_origin": "BOTTOMLEFT"
+                  },
+                  "charspan": [
+                    0,
+                    1019
+                  ]
+                }
+              }
+            }
+          ],
+          "matched_this_paper": true,
+          "hits": [
+            {
+              "group": "content",
+              "id": "588cded6-5ffd-421d-9738-dc7d8b536289",
+              "kind": "content",
+              "paper_id": "6a788dc8-2a0d-4160-a134-aadcde1a0a1f",
+              "title": "ChineseBERT: Chinese Pretraining Enhanced by Glyph and Pinyin Information",
+              "location": {
+                "page_index": 3,
+                "crop_box": [
+                  0.0,
+                  0.0,
+                  595.276,
+                  841.89
+                ],
+                "media_box": [
+                  0.0,
+                  0.0,
+                  595.276,
+                  841.89
+                ],
+                "rotation": 0,
+                "user_unit": 1.0,
+                "width": 595.276,
+                "height": 841.89,
+                "bbox": [
+                  306.763,
+                  384.46347196814156,
+                  527.3592379480006,
+                  678.3608241000001
+                ],
+                "coordinate_space": "pdf_user_space",
+                "docling_provenance": {
+                  "page_no": 4,
+                  "bbox": {
+                    "l": 306.763,
+                    "t": 678.3608241000001,
+                    "r": 527.3592379480006,
+                    "b": 384.4634719681416,
+                    "coord_origin": "BOTTOMLEFT"
+                  },
+                  "charspan": [
+                    0,
+                    1019
+                  ]
+                }
+              },
+              "snippet": [
+                {
+                  "text": "…",
+                  "matched": false
+                },
+                {
+                  "text": "oo easy for the model to predict. For example, for the input context \"",
+                  "matched": false
+                },
+                {
+                  "text": "我喜欢 逛紫禁[M",
+                  "matched": true
+                },
+                {
+                  "text": "] (i like going to The Forbidden [M])\", the model can easily predict that the masked character is \"城(City)\". Hence, we follow Cui et al. (2019a) to use WWM, a strategy to mask out a",
+                  "matched": false
+                },
+                {
+                  "text": "…",
+                  "matched": false
+                }
+              ],
+              "rank": -2.2153506230381392
+            }
+          ],
+          "correct_page_hit": true,
+          "diagnosis": "matched"
+        }
+      ],
+      "paper_unchanged": true
+    },
+    {
+      "id": "diverse-macbert",
+      "paper_id": "0d95f65d-fc3a-4e2b-873e-8243a7242d01",
+      "probes": [
+        {
+          "source_probe": {
+            "query": "词",
+            "page_index": 3,
+            "pdf_text_layer": true,
+            "image_only": false,
+            "source_context": "Figure1 Original Sentence: 使用语言模型来预测下一个词的概率。 / we use a language model to predict the probability of the next word.",
+            "kind": "single_character",
+            "note": "These are in a figure body but are genuinely extractable PDF text; failure to index them is distinct from an image-only/OCR limitation."
+          },
+          "original_pdfium_text_contains_query": true,
+          "structured_blocks_containing_query": [],
+          "matched_this_paper": true,
+          "hits": [
+            {
+              "group": "tables",
+              "id": "0bda8033-822c-4c26-a39e-8e978c5ec234",
+              "kind": "table",
+              "paper_id": "0d95f65d-fc3a-4e2b-873e-8243a7242d01",
+              "title": "Table",
+              "location": {
+                "page_index": 3,
+                "crop_box": [
+                  0.0,
+                  0.0,
+                  595.276,
+                  841.89
+                ],
+                "media_box": [
+                  0.0,
+                  0.0,
+                  595.276,
+                  841.89
+                ],
+                "rotation": 0,
+                "user_unit": 1.0,
+                "width": 595.276,
+                "height": 841.89,
+                "bbox": [
+                  80.32319069646029,
+                  704.3368512584477,
+                  516.4565803288197,
+                  778.5933919986353
+                ],
+                "coordinate_space": "pdf_user_space",
+                "docling_provenance": {
+                  "page_no": 4,
+                  "bbox": {
+                    "l": 80.32319069646029,
+                    "t": 778.5933919986353,
+                    "r": 516.4565803288197,
+                    "b": 704.3368512584477,
+                    "coord_origin": "BOTTOMLEFT"
+                  },
+                  "charspan": [
+                    0,
+                    0
+                  ]
+                }
+              },
+              "snippet": [
+                {
+                  "text": "…",
+                  "matched": false
+                },
+                {
+                  "text": "hinese English\nOriginal Sentence + CWS + BERT Tokenizer 使用语言模 型来 预测下一个",
+                  "matched": false
+                },
+                {
+                  "text": "词",
+                  "matched": true
+                },
+                {
+                  "text": "的概率。 使用 语言 模 型 来 预测 下 一个 ",
+                  "matched": false
+                },
+                {
+                  "text": "词",
+                  "matched": true
+                },
+                {
+                  "text": " 的 概率 。 使用语言模 型 来 预 测 下 一 个",
+                  "matched": false
+                },
+                {
+                  "text": "词",
+                  "matched": true
+                },
+                {
+                  "text": " 的 概率。 we use a language model to predict the probability of the next word. - we use a language model to pre ##di ##ct the pro ##ba ##b",
+                  "matched": false
+                },
+                {
+                  "text": "…",
+                  "matched": false
+                }
+              ],
+              "rank": -7.084798185682521
+            }
+          ],
+          "correct_page_hit": true,
+          "diagnosis": "matched"
+        },
+        {
+          "source_probe": {
+            "query": "语言模型",
+            "page_index": 3,
+            "pdf_text_layer": true,
+            "image_only": false,
+            "source_context": "Figure1 Original Sentence: 使用语言模型来预测下一个词的概率。 / we use a language model to predict the probability of the next word.",
+            "kind": "contiguous_chinese",
+            "note": "These are in a figure body but are genuinely extractable PDF text; failure to index them is distinct from an image-only/OCR limitation."
+          },
+          "original_pdfium_text_contains_query": true,
+          "structured_blocks_containing_query": [],
+          "matched_this_paper": true,
+          "hits": [
+            {
+              "group": "tables",
+              "id": "0bda8033-822c-4c26-a39e-8e978c5ec234",
+              "kind": "table",
+              "paper_id": "0d95f65d-fc3a-4e2b-873e-8243a7242d01",
+              "title": "Table",
+              "location": {
+                "page_index": 3,
+                "crop_box": [
+                  0.0,
+                  0.0,
+                  595.276,
+                  841.89
+                ],
+                "media_box": [
+                  0.0,
+                  0.0,
+                  595.276,
+                  841.89
+                ],
+                "rotation": 0,
+                "user_unit": 1.0,
+                "width": 595.276,
+                "height": 841.89,
+                "bbox": [
+                  80.32319069646029,
+                  704.3368512584477,
+                  516.4565803288197,
+                  778.5933919986353
+                ],
+                "coordinate_space": "pdf_user_space",
+                "docling_provenance": {
+                  "page_no": 4,
+                  "bbox": {
+                    "l": 80.32319069646029,
+                    "t": 778.5933919986353,
+                    "r": 516.4565803288197,
+                    "b": 704.3368512584477,
+                    "coord_origin": "BOTTOMLEFT"
+                  },
+                  "charspan": [
+                    0,
+                    0
+                  ]
+                }
+              },
+              "snippet": [
+                {
+                  "text": "…",
+                  "matched": false
+                },
+                {
+                  "text": "egies.\n\n\n\n Chinese English\nOriginal Sentence + CWS + BERT Tokenizer 使用",
+                  "matched": false
+                },
+                {
+                  "text": "语言模 型",
+                  "matched": true
+                },
+                {
+                  "text": "来 预测下一个词的概率。 使用 ",
+                  "matched": false
+                },
+                {
+                  "text": "语言 模 型",
+                  "matched": true
+                },
+                {
+                  "text": " 来 预测 下 一个 词 的 概率 。 使用",
+                  "matched": false
+                },
+                {
+                  "text": "语言模 型",
+                  "matched": true
+                },
+                {
+                  "text": " 来 预 测 下 一 个词 的 概率。 we use a language model to predict the probability of the next word. - we use a language model to pre ##di ##ct the ",
+                  "matched": false
+                },
+                {
+                  "text": "…",
+                  "matched": false
+                }
+              ],
+              "rank": -4.236259984925194
+            }
+          ],
+          "correct_page_hit": true,
+          "diagnosis": "matched"
+        },
+        {
+          "source_probe": {
+            "query": "使用语言模型来预测下一个词的概率",
+            "page_index": 3,
+            "pdf_text_layer": true,
+            "image_only": false,
+            "source_context": "Figure1 Original Sentence: 使用语言模型来预测下一个词的概率。 / we use a language model to predict the probability of the next word.",
+            "kind": "full_chinese_phrase",
+            "note": "These are in a figure body but are genuinely extractable PDF text; failure to index them is distinct from an image-only/OCR limitation."
+          },
+          "original_pdfium_text_contains_query": true,
+          "structured_blocks_containing_query": [],
+          "matched_this_paper": true,
+          "hits": [
+            {
+              "group": "tables",
+              "id": "0bda8033-822c-4c26-a39e-8e978c5ec234",
+              "kind": "table",
+              "paper_id": "0d95f65d-fc3a-4e2b-873e-8243a7242d01",
+              "title": "Table",
+              "location": {
+                "page_index": 3,
+                "crop_box": [
+                  0.0,
+                  0.0,
+                  595.276,
+                  841.89
+                ],
+                "media_box": [
+                  0.0,
+                  0.0,
+                  595.276,
+                  841.89
+                ],
+                "rotation": 0,
+                "user_unit": 1.0,
+                "width": 595.276,
+                "height": 841.89,
+                "bbox": [
+                  80.32319069646029,
+                  704.3368512584477,
+                  516.4565803288197,
+                  778.5933919986353
+                ],
+                "coordinate_space": "pdf_user_space",
+                "docling_provenance": {
+                  "page_no": 4,
+                  "bbox": {
+                    "l": 80.32319069646029,
+                    "t": 778.5933919986353,
+                    "r": 516.4565803288197,
+                    "b": 704.3368512584477,
+                    "coord_origin": "BOTTOMLEFT"
+                  },
+                  "charspan": [
+                    0,
+                    0
+                  ]
+                }
+              },
+              "snippet": [
+                {
+                  "text": "…",
+                  "matched": false
+                },
+                {
+                  "text": "ategies.\n\n\n\n Chinese English\nOriginal Sentence + CWS + BERT Tokenizer ",
+                  "matched": false
+                },
+                {
+                  "text": "使用语言模 型来 预测下一个词的概率",
+                  "matched": true
+                },
+                {
+                  "text": "。 ",
+                  "matched": false
+                },
+                {
+                  "text": "使用 语言 模 型 来 预测 下 一个 词 的 概率",
+                  "matched": true
+                },
+                {
+                  "text": " 。 ",
+                  "matched": false
+                },
+                {
+                  "text": "使用语言模 型 来 预 测 下 一 个词 的 概率",
+                  "matched": true
+                },
+                {
+                  "text": "。 we use a language model to predict the probability of the next word. - we use a language model to pre ##di ##ct th",
+                  "matched": false
+                },
+                {
+                  "text": "…",
+                  "matched": false
+                }
+              ],
+              "rank": -4.236259984925194
+            }
+          ],
+          "correct_page_hit": true,
+          "diagnosis": "matched"
+        }
+      ],
+      "paper_unchanged": true
+    }
+  ],
+  "scope": "Read-only real API queries from source-PDF probes fixed before model inspection. A miss is recorded, never replaced by an easier query.",
+  "shutdown": {
+    "returncode": 0,
+    "forced_termination": false,
+    "backend_port_closed": true,
+    "worker_processes": []
+  },
+  "summary": {
+    "probes": 6,
+    "matched": 6,
+    "correct_page": 6,
+    "missed": 0
+  }
+}

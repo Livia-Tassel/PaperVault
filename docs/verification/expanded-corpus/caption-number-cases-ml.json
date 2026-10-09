@@ -1,0 +1,92 @@
+{
+  "baseline_version": "0.2.1",
+  "ground_truth_sha256": "c035473dcf30efc34d891182c17aa1d33dba16820749c4d37be410731853aa47",
+  "cases": [
+    {
+      "paper": "ml-simcse-emnlp2021",
+      "resource_id": "592b5ce2-90eb-492f-a614-a57deba16c84",
+      "kind": "figure",
+      "caption": "Figure G.1: Density plots of cosine similarities between sentence pairs in STS-B. Pairs are divided into 5 groups based on ground truth ratings (higher means more similar) along the y-axis, and x-axis is the cosine similarity.",
+      "actual_number": "",
+      "expected_number": "G.1",
+      "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/592b5ce2-90eb-492f-a614-a57deba16c84/resource-auto.json"
+    },
+    {
+      "paper": "ml-simcse-emnlp2021",
+      "resource_id": "55f13919-1c23-4945-a8d3-fbf4d0d2b6c6",
+      "kind": "table",
+      "caption": "Table A.1: Batch sizes and learning rates for SimCSE.",
+      "actual_number": "",
+      "expected_number": "A.1",
+      "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/55f13919-1c23-4945-a8d3-fbf4d0d2b6c6/resource-auto.json"
+    },
+    {
+      "paper": "ml-simcse-emnlp2021",
+      "resource_id": "13906f8c-a102-4f92-8a1b-825569807339",
+      "kind": "table",
+      "caption": "Table B.1: STS evaluation protocols used in different papers. \"Reg.\": whether an additional regressor is used; \"aggr.\": methods to aggregate different subset results.",
+      "actual_number": "",
+      "expected_number": "B.1",
+      "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/13906f8c-a102-4f92-8a1b-825569807339/resource-auto.json"
+    },
+    {
+      "paper": "ml-simcse-emnlp2021",
+      "resource_id": "9462ade8-7081-4b91-a196-7f6d88aaabbd",
+      "kind": "table",
+      "caption": "Table B.2: Comparisons of our reproduced results using different evaluation protocols and the original numbers. ♣: results from Reimers and Gurevych (2019); ♠: results from Su et al. (2021); Other results are reproduced by us. From the table we see that SBERT takes the \"all\" evaluation and BERT-whitening takes the \"wmean\" evaluation.",
+      "actual_number": "",
+      "expected_number": "B.2",
+      "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/9462ade8-7081-4b91-a196-7f6d88aaabbd/resource-auto.json"
+    },
+    {
+      "paper": "ml-simcse-emnlp2021",
+      "resource_id": "b2f95e59-b823-49fb-a4bf-38bcee4ebe35",
+      "kind": "table",
+      "caption": "Table B.3: STS results with \"wmean\" setting (Spearman). ♠: from Li et al. (2020); Su et al. (2021).",
+      "actual_number": "",
+      "expected_number": "B.3",
+      "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/b2f95e59-b823-49fb-a4bf-38bcee4ebe35/resource-auto.json"
+    },
+    {
+      "paper": "ml-simcse-emnlp2021",
+      "resource_id": "6165f635-c1dc-4fe4-8a27-835517fdfdc2",
+      "kind": "table",
+      "caption": "Table C.1: Comparison of using NLI or target data for postprocessing methods (\"all\", Spearman's correlation).",
+      "actual_number": "",
+      "expected_number": "C.1",
+      "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/6165f635-c1dc-4fe4-8a27-835517fdfdc2/resource-auto.json"
+    },
+    {
+      "paper": "ml-simcse-emnlp2021",
+      "resource_id": "8f6bda0f-7c39-44ea-a8c6-1711c22e6d58",
+      "kind": "table",
+      "caption": "Table D.1: STS-B development results (Spearman's correlation) with different temperatures. \"N/A\": Dot product instead of cosine similarity.",
+      "actual_number": "",
+      "expected_number": "D.1",
+      "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/8f6bda0f-7c39-44ea-a8c6-1711c22e6d58/resource-auto.json"
+    },
+    {
+      "paper": "ml-simcse-emnlp2021",
+      "resource_id": "7170086e-d05b-4435-b3f0-04af3ff4f237",
+      "kind": "table",
+      "caption": "Table D.2: Ablation studies of the MLM objective based on the development sets using BERTbase.",
+      "actual_number": "",
+      "expected_number": "D.2",
+      "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/7170086e-d05b-4435-b3f0-04af3ff4f237/resource-auto.json"
+    },
+    {
+      "paper": "ml-simcse-emnlp2021",
+      "resource_id": "6801db26-f53e-473c-ad4e-661cd4d97b29",
+      "kind": "table",
+      "caption": "Table E.1: Transfer task results of different sentence embedding models (measured as accuracy). ♣: results from Reimers and Gurevych (2019); ♥: results from Zhang et al. (2020). We highlight the highest numbers among models with the same pre-trained encoder. MLM: adding MLM as an auxiliary task with λ = 0.1.",
+      "actual_number": "",
+      "expected_number": "E.1",
+      "auto_json": "artifacts/real-corpus-expanded/batches/batch-002/runs/20261009T125550Z-ef5b5e72/004-ml-simcse-emnlp2021/resources/6801db26-f53e-473c-ad4e-661cd4d97b29/resource-auto.json"
+    }
+  ],
+  "excluded_case": {
+    "paper": "ml-simcse-emnlp2021",
+    "expected_number": "F.1",
+    "reason": "Resource caption is empty; a caption-number-only helper must not invent a missing number from no evidence."
+  }
+}
