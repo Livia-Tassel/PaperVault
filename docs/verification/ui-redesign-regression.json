@@ -1,0 +1,158 @@
+{
+  "recorded_at": "2026-10-09T07:41:25.593570+00:00",
+  "application_version": "0.1.1",
+  "purpose": "Regression evidence for the compact desktop UI redesign",
+  "execution_strategy": "One full suite followed by --last-failed; six passing tests were not repeated.",
+  "final_unique_results": {
+    "total": 7,
+    "passed": 7,
+    "failed": 0,
+    "skipped": 0
+  },
+  "full_run": {
+    "command": "npm run test:e2e",
+    "total": 7,
+    "passed": 6,
+    "failed": 1,
+    "skipped": 0,
+    "duration_seconds": 48.7,
+    "last_case_measured_at": "2026-10-09T07:34:58.354Z"
+  },
+  "targeted_rerun": {
+    "command": "npm run test:e2e -- --last-failed",
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "duration_seconds": 7.4,
+    "command_issued_at": "2026-10-09T07:39:33.063Z"
+  },
+  "duration_precision": "Durations are the actual Playwright console values rounded to one decimal second.",
+  "environment": {
+    "PAPERVAULT_E2E_REQUIRE_PARSE": "1",
+    "PAPERVAULT_GALLERY_API": "http://127.0.0.1:8766/api/v1",
+    "frontend": "http://127.0.0.1:1420",
+    "backend": "http://127.0.0.1:8765/api/v1",
+    "browser_channel": "msedge",
+    "browser_version": "154.0.4258.62",
+    "headless": true,
+    "platform": "win32",
+    "cpu": "13th Gen Intel(R) Core(TM) i7-1360P",
+    "execution_permissions": "require_escalated for Windows loopback access",
+    "isolated_benchmark_service_cleanup": "The test-owned 8766 process was stopped after completion; shared 1420 and 8765 processes were not stopped."
+  },
+  "test_selector_updates": [
+    "Initial library readiness now waits for the actual open/create button or library heading, not the loading form container.",
+    "Backup destination selector uses textbox accessible-name prefix because the existing wrapper also includes the Create Backup button label."
+  ],
+  "datasets": {
+    "main": "Generated CC0 academic.pdf and geometry.pdf plus existing real parsed resources in the UI test library. No API responses or image assets were mocked.",
+    "parser_scope": "REQUIRE_PARSE=1 verifies real persisted Docling figures/tables; existing imported PDFs may be hash-deduplicated rather than reparsed.",
+    "pagination_benchmark": {
+      "synthetic_metadata": true,
+      "figures": 1000,
+      "images": "Real PDFium crop PNG/thumbnail shared by the explicit synthetic records; not a parser accuracy dataset.",
+      "library": "D:\\project\\PaperVault\\.test-data\\gallery-benchmark-library",
+      "api": "http://127.0.0.1:8766/api/v1",
+      "isolated": true
+    }
+  },
+  "current_main_test_library": "D:\\project\\PaperVault\\.test-data\\ui-library-restore-1791531589359",
+  "windows_dpi_scope": "Geometry test uses browser deviceScaleFactor=2; Windows system display scaling is unchanged.",
+  "cases": [
+    {
+      "name": "real local library import, PDF selection, caption search, export and reload",
+      "file": "e2e/library.spec.ts",
+      "status": "passed",
+      "attempts": [
+        {
+          "run": "full",
+          "status": "passed",
+          "duration_seconds": 5.8
+        }
+      ]
+    },
+    {
+      "name": "real Docling figures and table editing survive export",
+      "file": "e2e/library.spec.ts",
+      "status": "passed",
+      "attempts": [
+        {
+          "run": "full",
+          "status": "passed",
+          "duration_seconds": 1.4
+        }
+      ]
+    },
+    {
+      "name": "folders, notes, tags, theme and complete backup restore use the real API",
+      "file": "e2e/library.spec.ts",
+      "status": "passed",
+      "attempts": [
+        {
+          "run": "full",
+          "status": "failed",
+          "duration_seconds": 16.7,
+          "failure": "Exact getByLabel for backup destination did not include the nested Create Backup button in its accessible name."
+        },
+        {
+          "run": "targeted_last_failed",
+          "status": "passed",
+          "duration_seconds": 5.9
+        }
+      ]
+    },
+    {
+      "name": "polling server metadata updates untouched fields while retaining an unsaved note",
+      "file": "e2e/metadata-refresh.spec.ts",
+      "status": "passed",
+      "measured_at": "2026-10-09T07:34:42.512Z",
+      "attempts": [
+        {
+          "run": "full",
+          "status": "passed",
+          "duration_seconds": 6.4
+        }
+      ]
+    },
+    {
+      "name": "chapter and reference corrections preserve location and survive a real save/reload",
+      "file": "e2e/outline.spec.ts",
+      "status": "passed",
+      "measured_at": "2026-10-09T07:34:45.702Z",
+      "attempts": [
+        {
+          "run": "full",
+          "status": "passed",
+          "duration_seconds": 3.1
+        }
+      ]
+    },
+    {
+      "name": "paper detail pagination can reach resource 201 in the real 1000-image gallery fixture",
+      "file": "e2e/outline.spec.ts",
+      "status": "passed",
+      "synthetic_load": true,
+      "attempts": [
+        {
+          "run": "full",
+          "status": "passed",
+          "duration_seconds": 2.1
+        }
+      ]
+    },
+    {
+      "name": "real PDF.js highlight and raster alignment at DPR 2, CropBox offsets, UserUnit 2 and four rotations",
+      "file": "e2e/pdf-geometry.spec.ts",
+      "status": "passed",
+      "measured_at": "2026-10-09T07:34:58.354Z",
+      "attempts": [
+        {
+          "run": "full",
+          "status": "passed",
+          "duration_seconds": 10.6
+        }
+      ]
+    }
+  ]
+}

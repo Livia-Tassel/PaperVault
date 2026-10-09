@@ -10,7 +10,7 @@ test('real local library import, PDF selection, caption search, export and reloa
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
   await page.goto('/');
-  await expect(page.locator('.welcome-form, .page-header h1').first()).toBeVisible();
+  await expect(page.getByRole('button', { name: '打开 / 创建论文库', exact: true }).or(page.getByRole('heading', { name: '论文库', exact: true }))).toBeVisible();
   if (await page.getByRole('button', { name: '打开 / 创建论文库' }).isVisible()) {
     await page.getByLabel('论文库目录', { exact: true }).fill(library);
     await page.getByRole('button', { name: '打开 / 创建论文库' }).click();
@@ -133,6 +133,7 @@ test('folders, notes, tags, theme and complete backup restore use the real API',
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
   await page.screenshot({ path: info.outputPath('settings-dark.png'), fullPage: true });
   await page.getByRole('button', { name: '浅色', exact: true }).click();
+  await expect(page.getByRole('textbox', { name: /^备份文件路径/ })).toBeVisible();
   const backup = page.waitForResponse(response => response.url().endsWith('/backups') && response.request().method() === 'POST');
   await page.getByRole('button', { name: '创建备份', exact: true }).click();
   const backupResponse = await backup;

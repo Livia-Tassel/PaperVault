@@ -69,3 +69,12 @@ Starlette TestClient的httpx迁移提示和Docling内部弃用warning不影响�
 证据：artifacts/installed-desktop/report.json、install-layout.json、uninstall-retention.json；最终可审查快照保存在docs/verification。安装器未签名。本机含开发工具，因此不把这些结果宣称为干净VM验收；实际宿主系统DPI变更、另一台机器、托管CI仍未验证。
 
 一次组合测试曾打印两条Windows原生access violation诊断，但进程exit0且70项全部通过。保持faulthandler开启后的35项分组、70项完整详细输出、70项原默认捕获模式三次受控复验均未再出现该诊断。CPython的Windows vectored handler会打印后继续交由其他处理器，故不能仅凭这行文字判断进程终止；目前缺少故障DLL/地址及C栈，原因未定位，也不认定为无害CPU探测。应用按单PDF独立worker运行，源码/冻结/原生队列流程验证均通过。保留此历史偶发记录与artifacts/native-exception-investigation.json，未通过禁用诊断或改写结果掩盖问题。
+
+
+## 0.1.1 UI回归（2026-10-09）
+
+本次修改界面和桌面版本，Python业务与冻结后端未改。16项前端单元测试通过，TypeScript检查与Vite生产构建通过。第一次在受限沙箱运行Vitest曾因临时SSR文件ENOENT加载失败，在正常Windows执行环境复验16项全部通过；该失败未当作通过记录。
+
+`scripts/ui-review.mjs`对已有真实测试PDF及其持久化资源执行只读浏览，生成26张截图（`artifacts/ui-review`）：覆盖浅/深色、1440×1000和1280×800、论文列表、PDF/目录、图片/表格库、表格详情、搜索结果、任务、设置，以及侧栏折叠后刷新。严格断言折叠宽度56px并验证展开/主题持久化。截图已目视检查；0个JS错误、请求失败、坏图或主内容横向溢出。图库中的几何标注和人工裁剪均是测试数据，不冒充真实论文集合。证据快照：`docs/verification/ui-review-review.json`。
+
+本次7条Playwright业务用例最终全部通过（首轮6 passed、1 failed；备份textbox精确名称因同Field按钮文案而不匹配，调整为名称前缀后仅重跑该条，1 passed）。测试未mock API，覆盖真实导入、裁剪定位、PNG/CSV/HTML导出、表格人工修改、标签收藏夹、备份恢复、目录编辑、元数据刷新和DPR2几何。跨200项资源分页专项使用明确合成测试库，不计为真实论文解析准确性验收。命令、每次结果和环境见docs/verification/ui-redesign-regression.json。

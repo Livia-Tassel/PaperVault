@@ -8,7 +8,8 @@ REPORTS = ["acceptance-source.json", "acceptance-public-paper.json", "acceptance
            "pdf-geometry-browser.json", "outline-ui-acceptance.json", "excel-csv.json",
            "pytest-final.xml", "uninstall-retention.json", "release-manifest.json",
            "metadata-refresh-ui.json", "native-exception-investigation.json",
-           "installed-desktop/report.json", "install-layout.json"]
+           "installed-desktop/report.json", "install-layout.json",
+           "ui-review/review.json", "ui-redesign-regression.json"]
 
 
 def main():
