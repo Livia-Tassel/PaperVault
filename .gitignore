@@ -19,5 +19,6 @@ playwright-report/
 test-results/
 .env
 *.log
+!docs/verification/**/*.log
 artifacts/
 apps/desktop/public/pdfjs/

@@ -1,0 +1,1066 @@
+{
+  "review_complete": true,
+  "reviewed_at_utc": "2026-10-09T12:05:57.585276+00:00",
+  "run_id": "20261009T115143Z-32839973",
+  "ground_truth": "tests/corpus/ground-truth-science.json",
+  "ground_truth_sha256": "cde0dd062669ed41a8cc12ba2dc4b4e81a8763adf53255cf8fec619dbbbda9a5",
+  "parser_report": "artifacts/real-corpus/installed-backend-report.json",
+  "backend_sha256": "40f03cbfe81ad7ab701680627cf9e777dc5903f7d0c377537985babbf0ac8b8a",
+  "method": "Ground truth was independently frozen after visual review of all 27 source pages, before consulting parser outputs. This review visually inspected every matched 300-DPI PNG and every unmatched auxiliary crop, read all five CSV/HTML table exports, and compared 20 preselected cells at the actual semantic row/column in resources-auto, CSV and expanded HTML grid. No parsing rerun, no baseline or source-file edits.",
+  "field_semantics": {
+    "crop_complete": "True means all scientific body content is present across the matched export segment(s); it does not promise one merged resource. complete_as_single_resource states that separately.",
+    "correct_number": "All matched segments must have the correct printed logical number; a missing number on any continuation segment makes this false.",
+    "caption_association": "Association to the correct scientific object, separate from text fidelity of units and glyphs.",
+    "sample_cell_status": "exact = exact expected string at the semantic row/column in all three formats; normalized = only whitespace normalization needed; mismatch = differing content; ambiguous_missing = semantic row/column unavailable.",
+    "auxiliary_logo": "Publisher logos, badges or page furniture; reported as gallery noise separately from fabricated scientific detections.",
+    "coordinates": "page_indices and exported row/col indices are zero-based."
+  },
+  "papers": [
+    {
+      "id": "science-halogen-microscopy",
+      "paper_id": "5065937a-3d79-4e8c-ae33-01f07568e6f5",
+      "expected_counts": {
+        "figures": 4,
+        "tables": 2,
+        "table_page_segments": 2
+      },
+      "observed_counts": {
+        "figures": 14,
+        "tables": 2,
+        "resources": 16,
+        "matched_scientific_resource_segments": 6,
+        "auxiliary_logo": 10,
+        "unmatched_scientific_false_detections": 0
+      },
+      "baseline_resources": "artifacts/real-corpus/runs/20261009T115143Z-32839973/005-science-halogen-microscopy/resources-auto.json",
+      "baseline_resources_sha256": "1cfceb51ad21a52b77698d7d4883fd78879392450ec4be62d2bcef9dfba0cd82",
+      "source_sha256": "b5a43de706b5f097346bd1a59e6c21eb71a918ee66594a5e54cd1fcd1732a202",
+      "source_pdf_unchanged": true,
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            1
+          ],
+          "resource_ids": [
+            "021f0985-3648-4b3a-aa4b-dfded93fcd67"
+          ],
+          "correct_type": true,
+          "correct_number": true,
+          "caption_association": "correct",
+          "crop_complete": true,
+          "crop_complete_scope": "single_resource",
+          "complete_as_single_resource": true,
+          "issues": [
+            {
+              "classification": "source_text_layer_discrepancy",
+              "severity": "scientific_text",
+              "detail": "Correct figure/caption association and full 12-panel crop. Visually printed ×20/×40 and µm become 620/640 and mm in extracted caption. The independently extracted source PDFium text contains the same wrong Unicode; the PNG remains visually correct."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "021f0985-3648-4b3a-aa4b-dfded93fcd67",
+              "page_indices": [
+                1
+              ],
+              "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/005-science-halogen-microscopy/resources/021f0985-3648-4b3a-aa4b-dfded93fcd67/png-300.png",
+              "number": "1",
+              "caption": "Figure 1. Observation of fluorescent dyes using a halogen lamp. Fixed mouse blastocysts were treated with anti-Cdx2- and anti-Oct3/4antibodies and stained with Alexa Fluor 488 (green) and 548 (red), respectively, then observed using a mercury vapor lamp (A-C) or an inverted microscope with a halogen lamp (D-F). Although the images produced by halogen light illumination were slightly weaker than images produced with the mercury vapor lamp, they could substitute for those seen using a traditional fluorescence microscope. Similar specimens were observed using an upright microscope with halogen lamp (G-L). These images were taken using an LCPlanF1 objective lens (620; bar = 100 mm). (J) Bright field illumination. (K, L) A different focal plane of the same embryo shown in (I). (J) Inner cell mass (ICM) cells appear as Oct3/4-positive cells. (K, L) Merged images. (J-L) Observed using an LCPlanF1 objective lens (640; bar =50 mm). doi:10.1371/journal.pone.0031638.g001",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            2
+          ],
+          "resource_ids": [
+            "a25f025c-b4f3-4d23-9874-9712e17b2732"
+          ],
+          "correct_type": true,
+          "correct_number": true,
+          "caption_association": "correct",
+          "crop_complete": true,
+          "crop_complete_scope": "single_resource",
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "a25f025c-b4f3-4d23-9874-9712e17b2732",
+              "page_indices": [
+                2
+              ],
+              "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/005-science-halogen-microscopy/resources/a25f025c-b4f3-4d23-9874-9712e17b2732/png-300.png",
+              "number": "2",
+              "caption": "Figure 2. The newly designed filter adapter and its applications. The adapter is placed on the top of the condenser (A). This adapter has a diaphragm (B) and a gap between the filter and frame (C). (D) Bright field and (E) fluorescence of green fluorescent protein (GFP)-labeled embryonic stem (ES) cells in the ICM of a chimeric mouse blastocyst. When the diaphragm is opened, halogen light can pass around the filter and a merged image can be obtained (F). This filter adapter could also be useful in purifying rare cell populations. Typically, fluorescence-activated cell sorting is used for this purpose, but cannot be applied if samples do not contain sufficient cell numbers. We collected spermatogonia from neonatal mouse testes using a CD9 antibody labeled with phycoerythrin. The CD9-positive spermatogonia could be discriminated from other cells and we were able to collect them using a micromanipulator without the need for a mercury vapor lamp. (G) Spermatogonia were detected using a CD9 antibodyphycoerythrin conjugate and positively stained cells (arrows) were drawn into a micropipette using a micromanipulator (H). doi:10.1371/journal.pone.0031638.g002",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            4
+          ],
+          "resource_ids": [
+            "4fa22aef-6a14-467d-84ad-4a8b90d39987"
+          ],
+          "correct_type": true,
+          "correct_number": true,
+          "caption_association": "correct",
+          "crop_complete": true,
+          "crop_complete_scope": "single_resource",
+          "complete_as_single_resource": true,
+          "issues": [
+            {
+              "classification": "source_text_layer_discrepancy",
+              "severity": "scientific_text",
+              "detail": "Correct full 15-panel crop. Caption visually says 75 µg/mL, while caption data says 75 mg/mL; raw source PDFium text agrees with the latter. Do not silently treat this as an equivalent normalization."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "4fa22aef-6a14-467d-84ad-4a8b90d39987",
+              "page_indices": [
+                4
+              ],
+              "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/005-science-halogen-microscopy/resources/4fa22aef-6a14-467d-84ad-4a8b90d39987/png-300.png",
+              "number": "3",
+              "caption": "Figure 3. Staining of MII spindle using phycoerythrin and observation. The antibody-phycoerythrin conjugate diffused immediately after microinjection into mouse oocytes (A) but the conjugate could bind to the MII chromosome array within a few minutes (B, C). Five minutes later, the chromosomes became sufficiently bright for enucleation (D). The brightness of MII chromosomes was measured by comparison with the cytoplasm; the luminance increased with time up to 8 min (E). Imaging could reveal individual chromosomes (F, G). Different concentrations of the phycoerythrin conjugate were microinjected into oocytes (H-K). The staining intensity was proportional to the concentration of conjugate used and 75 mg/mL of antibody was the minimum needed for clear observation. Fading of the phycoerythrin label was examined (L-O). (L, M) Images of phycoerythrininjected oocytes observed using a conventional fluorescence microscope faded within 30 s. (M, N) When these samples were observed using the halogen light system, the image did not fade even when observed continuously for over 10 min. doi:10.1371/journal.pone.0031638.g003",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "kind": "figure",
+          "number": "4",
+          "page_indices": [
+            5
+          ],
+          "resource_ids": [
+            "73571a27-f1e6-46ab-89fe-86a838b7338a"
+          ],
+          "correct_type": true,
+          "correct_number": true,
+          "caption_association": "correct",
+          "crop_complete": true,
+          "crop_complete_scope": "single_resource",
+          "complete_as_single_resource": true,
+          "issues": [],
+          "exports": [
+            {
+              "resource_id": "73571a27-f1e6-46ab-89fe-86a838b7338a",
+              "page_indices": [
+                5
+              ],
+              "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/005-science-halogen-microscopy/resources/73571a27-f1e6-46ab-89fe-86a838b7338a/png-300.png",
+              "number": "4",
+              "caption": "Figure 4. Enucleation of MII chromosomes from oocytes with fluorescence observation using halogen lamp. The MII chromosomes of bovine oocytes are normally invisible by conventional microscopy because of dark lipid droplets in the ooplasm (A). After labeling with an H3S10ph antibody-phycoerythrin conjugate, the MII chromosomes could be recognized clearly and this allowed us to remove them along with minimal cytoplasm (B). MII chromosomes in porcine oocytes were detected by the same method (C). Some chromosomes (arrow) were left occasionally inside the cytoplasm of mouse oocytes after enucleation (D). Live and healthy cloned mice (brown) were obtained after enucleation using this method without any significant decrease in the success rate (E). Enucleation of the MII spindle frommouse oocytes with this system. (F) Before, (G) during and (H) after enucleation.",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            3
+          ],
+          "resource_ids": [
+            "92a6c3a8-6ad1-49e8-8f58-99e725e5ab99"
+          ],
+          "correct_type": true,
+          "correct_number": true,
+          "caption_association": "correct",
+          "crop_complete": true,
+          "crop_complete_scope": "single_resource",
+          "complete_as_single_resource": true,
+          "issues": [
+            {
+              "classification": "source_text_layer_discrepancy",
+              "severity": "scientific_text",
+              "detail": "Negative Hoechst/Mercury condition markers shown as minus glyphs in the original and exported PNG become the digit 2 in structured rows, CSV and HTML. The original PDF text layer exposes these incorrect digit codes too. Positive + cells receive an intentional CSV safety apostrophe; that is a separate export convention."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "92a6c3a8-6ad1-49e8-8f58-99e725e5ab99",
+              "page_indices": [
+                3
+              ],
+              "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/005-science-halogen-microscopy/resources/92a6c3a8-6ad1-49e8-8f58-99e725e5ab99/png-300.png",
+              "number": "1",
+              "caption": "Table 1. Toxicity of Hoechst and mercury lamp for mouse embryo development.",
+              "needs_review": false,
+              "warnings": []
+            }
+          ],
+          "table_exports": [
+            {
+              "resource_id": "92a6c3a8-6ad1-49e8-8f58-99e725e5ab99",
+              "csv": "artifacts/real-corpus/runs/20261009T115143Z-32839973/005-science-halogen-microscopy/resources/92a6c3a8-6ad1-49e8-8f58-99e725e5ab99/csv.csv",
+              "html": "artifacts/real-corpus/runs/20261009T115143Z-32839973/005-science-halogen-microscopy/resources/92a6c3a8-6ad1-49e8-8f58-99e725e5ab99/html.html",
+              "rows_including_headers": 14,
+              "columns": 8,
+              "html_spans": [
+                {
+                  "row": 0,
+                  "col": 5,
+                  "rs": 1,
+                  "cs": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_indices": [
+            5
+          ],
+          "resource_ids": [
+            "471a852e-6842-4b3e-b60d-949d9c992160"
+          ],
+          "correct_type": true,
+          "correct_number": true,
+          "caption_association": "correct",
+          "crop_complete": true,
+          "crop_complete_scope": "single_resource",
+          "complete_as_single_resource": true,
+          "issues": [
+            {
+              "classification": "source_text_layer_discrepancy",
+              "severity": "scientific_text",
+              "detail": "The first header is visually µg/ml but resources-auto, CSV and HTML say mg/ml, matching raw PDFium source text. All ten predetermined sampled data cells are exact; they do not test or excuse this unit error."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "471a852e-6842-4b3e-b60d-949d9c992160",
+              "page_indices": [
+                5
+              ],
+              "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/005-science-halogen-microscopy/resources/471a852e-6842-4b3e-b60d-949d9c992160/png-300.png",
+              "number": "2",
+              "caption": "Table 2. Production of cloned mice using phycoerythrin and antibody injected oocyte.",
+              "needs_review": false,
+              "warnings": []
+            }
+          ],
+          "table_exports": [
+            {
+              "resource_id": "471a852e-6842-4b3e-b60d-949d9c992160",
+              "csv": "artifacts/real-corpus/runs/20261009T115143Z-32839973/005-science-halogen-microscopy/resources/471a852e-6842-4b3e-b60d-949d9c992160/csv.csv",
+              "html": "artifacts/real-corpus/runs/20261009T115143Z-32839973/005-science-halogen-microscopy/resources/471a852e-6842-4b3e-b60d-949d9c992160/html.html",
+              "rows_including_headers": 6,
+              "columns": 9,
+              "html_spans": []
+            }
+          ]
+        }
+      ],
+      "extra_resources": [
+        {
+          "resource_id": "cc0533e9-1399-49f5-86e8-28e1238e4939",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            0
+          ],
+          "reason": "First-page Open Access banner.",
+          "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/005-science-halogen-microscopy/resources/cc0533e9-1399-49f5-86e8-28e1238e4939/png-300.png",
+          "caption": "",
+          "needs_review": true
+        },
+        {
+          "resource_id": "04990902-3233-4ec4-91f8-1b4d3eb97a25",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            0
+          ],
+          "reason": "First-page PLOS ONE journal logo.",
+          "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/005-science-halogen-microscopy/resources/04990902-3233-4ec4-91f8-1b4d3eb97a25/png-300.png",
+          "caption": "",
+          "needs_review": true
+        },
+        {
+          "resource_id": "b01de5d2-ee8e-45b0-a066-6544ffc5220e",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            0
+          ],
+          "reason": "PLOS footer globe mark repeated on this page.",
+          "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/005-science-halogen-microscopy/resources/b01de5d2-ee8e-45b0-a066-6544ffc5220e/png-300.png",
+          "caption": "",
+          "needs_review": true
+        },
+        {
+          "resource_id": "5d6eb49c-02e5-4fe7-ad42-95c29acd799f",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            1
+          ],
+          "reason": "PLOS footer globe mark repeated on this page.",
+          "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/005-science-halogen-microscopy/resources/5d6eb49c-02e5-4fe7-ad42-95c29acd799f/png-300.png",
+          "caption": "",
+          "needs_review": true
+        },
+        {
+          "resource_id": "d355efd9-8301-4e63-b734-42f9dcef1baa",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            2
+          ],
+          "reason": "PLOS footer globe mark repeated on this page.",
+          "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/005-science-halogen-microscopy/resources/d355efd9-8301-4e63-b734-42f9dcef1baa/png-300.png",
+          "caption": "",
+          "needs_review": true
+        },
+        {
+          "resource_id": "1162ee57-daa3-45e4-9cdc-6ca85c7d94d6",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            3
+          ],
+          "reason": "PLOS footer globe mark repeated on this page.",
+          "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/005-science-halogen-microscopy/resources/1162ee57-daa3-45e4-9cdc-6ca85c7d94d6/png-300.png",
+          "caption": "",
+          "needs_review": true
+        },
+        {
+          "resource_id": "ff6fd2e5-fdea-4d78-a0bd-3b3a73b4cdcc",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            4
+          ],
+          "reason": "PLOS footer globe mark repeated on this page.",
+          "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/005-science-halogen-microscopy/resources/ff6fd2e5-fdea-4d78-a0bd-3b3a73b4cdcc/png-300.png",
+          "caption": "",
+          "needs_review": true
+        },
+        {
+          "resource_id": "fc965740-b462-438f-b561-0f56b72efaf6",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            5
+          ],
+          "reason": "PLOS footer globe mark repeated on this page.",
+          "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/005-science-halogen-microscopy/resources/fc965740-b462-438f-b561-0f56b72efaf6/png-300.png",
+          "caption": "",
+          "needs_review": true
+        },
+        {
+          "resource_id": "58cf1eb6-e5c2-4ae9-97c4-9bf2bd9bebd0",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            6
+          ],
+          "reason": "PLOS footer globe mark repeated on this page.",
+          "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/005-science-halogen-microscopy/resources/58cf1eb6-e5c2-4ae9-97c4-9bf2bd9bebd0/png-300.png",
+          "caption": "",
+          "needs_review": true
+        },
+        {
+          "resource_id": "9d90043e-0fb8-4521-9480-1a0e60d2b4a3",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            7
+          ],
+          "reason": "PLOS footer globe mark repeated on this page.",
+          "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/005-science-halogen-microscopy/resources/9d90043e-0fb8-4521-9480-1a0e60d2b4a3/png-300.png",
+          "caption": "",
+          "needs_review": true
+        }
+      ],
+      "sample_cells": [
+        {
+          "table_number": "2",
+          "resource_id": "471a852e-6842-4b3e-b60d-949d9c992160",
+          "page_index": 5,
+          "semantic_row": "0",
+          "semantic_column": "No. used oocyte",
+          "row": 1,
+          "col": 1,
+          "expected": "197",
+          "actual": "197",
+          "actual_resource_json": "197",
+          "actual_html_grid": "197",
+          "status": "exact"
+        },
+        {
+          "table_number": "2",
+          "resource_id": "471a852e-6842-4b3e-b60d-949d9c992160",
+          "page_index": 5,
+          "semantic_row": "0",
+          "semantic_column": "No. offspring (% against pronuclear egg)",
+          "row": 1,
+          "col": 8,
+          "expected": "13 (7.6)",
+          "actual": "13 (7.6)",
+          "actual_resource_json": "13 (7.6)",
+          "actual_html_grid": "13 (7.6)",
+          "status": "exact"
+        },
+        {
+          "table_number": "2",
+          "resource_id": "471a852e-6842-4b3e-b60d-949d9c992160",
+          "page_index": 5,
+          "semantic_row": "75",
+          "semantic_column": "No. survived after antibody injection",
+          "row": 2,
+          "col": 2,
+          "expected": "141",
+          "actual": "141",
+          "actual_resource_json": "141",
+          "actual_html_grid": "141",
+          "status": "exact"
+        },
+        {
+          "table_number": "2",
+          "resource_id": "471a852e-6842-4b3e-b60d-949d9c992160",
+          "page_index": 5,
+          "semantic_row": "75",
+          "semantic_column": "No. offspring (% against pronuclear egg)",
+          "row": 2,
+          "col": 8,
+          "expected": "8 (7.0)",
+          "actual": "8 (7.0)",
+          "actual_resource_json": "8 (7.0)",
+          "actual_html_grid": "8 (7.0)",
+          "status": "exact"
+        },
+        {
+          "table_number": "2",
+          "resource_id": "471a852e-6842-4b3e-b60d-949d9c992160",
+          "page_index": 5,
+          "semantic_row": "150",
+          "semantic_column": "No. used oocyte",
+          "row": 3,
+          "col": 1,
+          "expected": "182",
+          "actual": "182",
+          "actual_resource_json": "182",
+          "actual_html_grid": "182",
+          "status": "exact"
+        },
+        {
+          "table_number": "2",
+          "resource_id": "471a852e-6842-4b3e-b60d-949d9c992160",
+          "page_index": 5,
+          "semantic_row": "150",
+          "semantic_column": "No. embryo developed to 2-cell",
+          "row": 3,
+          "col": 7,
+          "expected": "127",
+          "actual": "127",
+          "actual_resource_json": "127",
+          "actual_html_grid": "127",
+          "status": "exact"
+        },
+        {
+          "table_number": "2",
+          "resource_id": "471a852e-6842-4b3e-b60d-949d9c992160",
+          "page_index": 5,
+          "semantic_row": "300",
+          "semantic_column": "No. pronuclear formation",
+          "row": 4,
+          "col": 6,
+          "expected": "115",
+          "actual": "115",
+          "actual_resource_json": "115",
+          "actual_html_grid": "115",
+          "status": "exact"
+        },
+        {
+          "table_number": "2",
+          "resource_id": "471a852e-6842-4b3e-b60d-949d9c992160",
+          "page_index": 5,
+          "semantic_row": "300",
+          "semantic_column": "No. offspring (% against pronuclear egg)",
+          "row": 4,
+          "col": 8,
+          "expected": "7 (6.0)",
+          "actual": "7 (6.0)",
+          "actual_resource_json": "7 (6.0)",
+          "actual_html_grid": "7 (6.0)",
+          "status": "exact"
+        },
+        {
+          "table_number": "2",
+          "resource_id": "471a852e-6842-4b3e-b60d-949d9c992160",
+          "page_index": 5,
+          "semantic_row": "Total",
+          "semantic_column": "No. used oocyte",
+          "row": 5,
+          "col": 1,
+          "expected": "690",
+          "actual": "690",
+          "actual_resource_json": "690",
+          "actual_html_grid": "690",
+          "status": "exact"
+        },
+        {
+          "table_number": "2",
+          "resource_id": "471a852e-6842-4b3e-b60d-949d9c992160",
+          "page_index": 5,
+          "semantic_row": "Total",
+          "semantic_column": "No. offspring (% against pronuclear egg)",
+          "row": 5,
+          "col": 8,
+          "expected": "35 (6.4)",
+          "actual": "35 (6.4)",
+          "actual_resource_json": "35 (6.4)",
+          "actual_html_grid": "35 (6.4)",
+          "status": "exact"
+        }
+      ],
+      "notes": [
+        "All four complete scientific figures and both table body crops visually match the independent source renders. Ten unmatched figure resources are actual publishing marks, separately reported as gallery noise.",
+        "Numerical samples were preselected before parser output and all pass; source text-layer unit/condition errors outside that sample make unrestricted whole-table correctness claims invalid.",
+        "Raw source-PDF text evidence: artifacts/real-corpus/source-pages/science-halogen-microscopy/text-by-page.json. Source and exported PNGs visually preserve the glyphs."
+      ]
+    },
+    {
+      "id": "science-prisma2020",
+      "paper_id": "edd8b94c-b3f0-4bb3-bbb6-3c26e7327398",
+      "expected_counts": {
+        "figures": 1,
+        "tables": 2,
+        "table_page_segments": 3
+      },
+      "observed_counts": {
+        "figures": 3,
+        "tables": 3,
+        "resources": 6,
+        "matched_scientific_resource_segments": 4,
+        "auxiliary_logo": 2,
+        "unmatched_scientific_false_detections": 0
+      },
+      "baseline_resources": "artifacts/real-corpus/runs/20261009T115143Z-32839973/006-science-prisma2020/resources-auto.json",
+      "baseline_resources_sha256": "f8b6e68925e00b6eae51a578dc8441ce17924e791aa28bda6b3761e8d6a0356f",
+      "source_sha256": "a09df7b2977b925736d0dd7bf0087d8e918a6bbdf52cb7af1246965dd06663a7",
+      "source_pdf_unchanged": true,
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            9
+          ],
+          "resource_ids": [
+            "d83cd8b5-1ded-4005-8c11-51a41f10ddd4"
+          ],
+          "correct_type": true,
+          "correct_number": true,
+          "caption_association": "correct",
+          "crop_complete": true,
+          "crop_complete_scope": "single_resource",
+          "complete_as_single_resource": true,
+          "issues": [
+            {
+              "classification": "text_whitespace_artifacts",
+              "severity": "caption_text",
+              "detail": "Association and full diagram crop are correct; extracted caption joins spaces in PRISMA2020 and flowdiagram."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "d83cd8b5-1ded-4005-8c11-51a41f10ddd4",
+              "page_indices": [
+                9
+              ],
+              "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/006-science-prisma2020/resources/d83cd8b5-1ded-4005-8c11-51a41f10ddd4/png-300.png",
+              "number": "1",
+              "caption": "Fig 1. PRISMA2020 flowdiagram template for systematic reviews. The new design is adapted from flowdiagrams proposed by Boers,[55]Mayo-Wilson et al.[56] and Stovold et al.[57] The boxes in grey should only be completed if applicable; otherwise they should be removed from the flow diagram. Note that a \"report\" could be a journal article, preprint, conference abstract, study register entry, clinical study report, dissertation, unpublished manuscript, government report or any other document providing relevant information.",
+              "needs_review": false,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            6,
+            7
+          ],
+          "resource_ids": [
+            "f18d0c83-da35-466f-9556-3c1254e70633",
+            "add90439-0ae4-411b-bd9c-2a2a1be0fb74"
+          ],
+          "correct_type": true,
+          "correct_number": false,
+          "caption_association": "partial",
+          "crop_complete": true,
+          "crop_complete_scope": "union_of_matched_page_segments",
+          "complete_as_single_resource": false,
+          "issues": [
+            {
+              "classification": "fragment",
+              "severity": "structure",
+              "detail": "One logical Table 1 is exposed as two independent single-page table resources and two CSV/HTML/PNG files; neither single resource contains both pages."
+            },
+            {
+              "classification": "missing_caption_association",
+              "severity": "metadata",
+              "detail": "Page-index 6 resource has empty caption/number despite Table 1 heading in source; page-index 7 has number 1 and only Table 1. (Continued). The latter does not recover the original PRISMA 2020 item checklist title."
+            },
+            {
+              "classification": "merged_cell_structure_loss",
+              "severity": "structure",
+              "detail": "The first HTML segment has no rowspan, losing source topic spans such as Data items (10a-10b), Synthesis methods (13a-13f) and Study selection (16a-16b). The second segment correctly retains three topic rowspans."
+            },
+            {
+              "classification": "text_whitespace_artifacts",
+              "severity": "text",
+              "detail": "Some unsampled prose cells lose word separators, e.g. study met -> studymet and how many -> howmany. The 10 predeclared sample cells are still exact."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "f18d0c83-da35-466f-9556-3c1254e70633",
+              "page_indices": [
+                6
+              ],
+              "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/006-science-prisma2020/resources/f18d0c83-da35-466f-9556-3c1254e70633/png-300.png",
+              "number": "",
+              "caption": "",
+              "needs_review": true,
+              "warnings": [
+                "No caption association was detected; manual review is required"
+              ]
+            },
+            {
+              "resource_id": "add90439-0ae4-411b-bd9c-2a2a1be0fb74",
+              "page_indices": [
+                7
+              ],
+              "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/006-science-prisma2020/resources/add90439-0ae4-411b-bd9c-2a2a1be0fb74/png-300.png",
+              "number": "1",
+              "caption": "Table 1. (Continued)",
+              "needs_review": false,
+              "warnings": []
+            }
+          ],
+          "table_exports": [
+            {
+              "resource_id": "f18d0c83-da35-466f-9556-3c1254e70633",
+              "csv": "artifacts/real-corpus/runs/20261009T115143Z-32839973/006-science-prisma2020/resources/f18d0c83-da35-466f-9556-3c1254e70633/csv.csv",
+              "html": "artifacts/real-corpus/runs/20261009T115143Z-32839973/006-science-prisma2020/resources/f18d0c83-da35-466f-9556-3c1254e70633/html.html",
+              "rows_including_headers": 30,
+              "columns": 4,
+              "html_spans": []
+            },
+            {
+              "resource_id": "add90439-0ae4-411b-bd9c-2a2a1be0fb74",
+              "csv": "artifacts/real-corpus/runs/20261009T115143Z-32839973/006-science-prisma2020/resources/add90439-0ae4-411b-bd9c-2a2a1be0fb74/csv.csv",
+              "html": "artifacts/real-corpus/runs/20261009T115143Z-32839973/006-science-prisma2020/resources/add90439-0ae4-411b-bd9c-2a2a1be0fb74/html.html",
+              "rows_including_headers": 21,
+              "columns": 4,
+              "html_spans": [
+                {
+                  "row": 3,
+                  "col": 0,
+                  "rs": 4,
+                  "cs": 1
+                },
+                {
+                  "row": 10,
+                  "col": 0,
+                  "rs": 4,
+                  "cs": 1
+                },
+                {
+                  "row": 15,
+                  "col": 0,
+                  "rs": 3,
+                  "cs": 1
+                }
+              ]
+            }
+          ],
+          "continuation": {
+            "logical_tables": 1,
+            "matched_segments": 2,
+            "merged_into_single_resource": false,
+            "full_source_item_code_inventory": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10a",
+              "10b",
+              "11",
+              "12",
+              "13a",
+              "13b",
+              "13c",
+              "13d",
+              "13e",
+              "13f",
+              "14",
+              "15",
+              "16a",
+              "16b",
+              "17",
+              "18",
+              "19",
+              "20a",
+              "20b",
+              "20c",
+              "20d",
+              "21",
+              "22",
+              "23a",
+              "23b",
+              "23c",
+              "23d",
+              "24a",
+              "24b",
+              "24c",
+              "25",
+              "26",
+              "27"
+            ],
+            "exported_item_codes": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10a",
+              "10b",
+              "11",
+              "12",
+              "13a",
+              "13b",
+              "13c",
+              "13d",
+              "13e",
+              "13f",
+              "14",
+              "15",
+              "16a",
+              "16b",
+              "17",
+              "18",
+              "19",
+              "20a",
+              "20b",
+              "20c",
+              "20d",
+              "21",
+              "22",
+              "23a",
+              "23b",
+              "23c",
+              "23d",
+              "24a",
+              "24b",
+              "24c",
+              "25",
+              "26",
+              "27"
+            ],
+            "missing_item_rows": [],
+            "unexpected_item_rows": [],
+            "duplicate_data_item_codes": [],
+            "headers_across_exports": 2,
+            "header_note": "Both page exports retain their own repeated source column header. Joining the CSV files manually would require dropping the second header; the product did not create a merged table.",
+            "all_segments_crop_complete": true
+          }
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_indices": [
+            8
+          ],
+          "resource_ids": [
+            "a7b820b1-e6c2-4cb7-afc4-4864cf5a089e"
+          ],
+          "correct_type": true,
+          "correct_number": true,
+          "caption_association": "correct",
+          "crop_complete": true,
+          "crop_complete_scope": "single_resource",
+          "complete_as_single_resource": true,
+          "issues": [
+            {
+              "classification": "text_encoding",
+              "severity": "caption_text",
+              "detail": "Table number and association are correct, but the caption footnote marker becomes U+FFFD replacement character. Body crop and the 12 checklist item rows are present."
+            }
+          ],
+          "exports": [
+            {
+              "resource_id": "a7b820b1-e6c2-4cb7-afc4-4864cf5a089e",
+              "page_indices": [
+                8
+              ],
+              "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/006-science-prisma2020/resources/a7b820b1-e6c2-4cb7-afc4-4864cf5a089e/png-300.png",
+              "number": "2",
+              "caption": "Table 2. PRISMA 2020 for Abstracts checklist� .",
+              "needs_review": false,
+              "warnings": []
+            }
+          ],
+          "table_exports": [
+            {
+              "resource_id": "a7b820b1-e6c2-4cb7-afc4-4864cf5a089e",
+              "csv": "artifacts/real-corpus/runs/20261009T115143Z-32839973/006-science-prisma2020/resources/a7b820b1-e6c2-4cb7-afc4-4864cf5a089e/csv.csv",
+              "html": "artifacts/real-corpus/runs/20261009T115143Z-32839973/006-science-prisma2020/resources/a7b820b1-e6c2-4cb7-afc4-4864cf5a089e/html.html",
+              "rows_including_headers": 19,
+              "columns": 3,
+              "html_spans": []
+            }
+          ]
+        }
+      ],
+      "extra_resources": [
+        {
+          "resource_id": "276382a2-4b4f-461a-a736-bc01c209f10f",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            0
+          ],
+          "reason": "First-page CrossMark check-for-updates publisher badge.",
+          "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/006-science-prisma2020/resources/276382a2-4b4f-461a-a736-bc01c209f10f/png-300.png",
+          "caption": "",
+          "needs_review": true
+        },
+        {
+          "resource_id": "233f98d3-1918-4b25-ba5e-afec90731b0e",
+          "classification": "auxiliary_logo",
+          "page_indices": [
+            0
+          ],
+          "reason": "First-page Open Access publisher icon/text.",
+          "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/006-science-prisma2020/resources/233f98d3-1918-4b25-ba5e-afec90731b0e/png-300.png",
+          "caption": "",
+          "needs_review": true
+        }
+      ],
+      "sample_cells": [
+        {
+          "table_number": "1",
+          "resource_id": "f18d0c83-da35-466f-9556-3c1254e70633",
+          "page_index": 6,
+          "semantic_row": "Title / item 1",
+          "semantic_column": "Checklist item",
+          "row": 2,
+          "col": 2,
+          "expected": "Identify the report as a systematic review.",
+          "actual": "Identify the report as a systematic review.",
+          "actual_resource_json": "Identify the report as a systematic review.",
+          "actual_html_grid": "Identify the report as a systematic review.",
+          "status": "exact"
+        },
+        {
+          "table_number": "1",
+          "resource_id": "f18d0c83-da35-466f-9556-3c1254e70633",
+          "page_index": 6,
+          "semantic_row": "Objectives / item 4",
+          "semantic_column": "Item #",
+          "row": 7,
+          "col": 1,
+          "expected": "4",
+          "actual": "4",
+          "actual_resource_json": "4",
+          "actual_html_grid": "4",
+          "status": "exact"
+        },
+        {
+          "table_number": "1",
+          "resource_id": "f18d0c83-da35-466f-9556-3c1254e70633",
+          "page_index": 6,
+          "semantic_row": "Data items / item 10a",
+          "semantic_column": "Item #",
+          "row": 14,
+          "col": 1,
+          "expected": "10a",
+          "actual": "10a",
+          "actual_resource_json": "10a",
+          "actual_html_grid": "10a",
+          "status": "exact"
+        },
+        {
+          "table_number": "1",
+          "resource_id": "f18d0c83-da35-466f-9556-3c1254e70633",
+          "page_index": 6,
+          "semantic_row": "Synthesis methods / item 13f",
+          "semantic_column": "Checklist item",
+          "row": 23,
+          "col": 2,
+          "expected": "Describe any sensitivity analyses conducted to assess robustness of the synthesised results.",
+          "actual": "Describe any sensitivity analyses conducted to assess robustness of the synthesised results.",
+          "actual_resource_json": "Describe any sensitivity analyses conducted to assess robustness of the synthesised results.",
+          "actual_html_grid": "Describe any sensitivity analyses conducted to assess robustness of the synthesised results.",
+          "status": "exact"
+        },
+        {
+          "table_number": "1",
+          "resource_id": "f18d0c83-da35-466f-9556-3c1254e70633",
+          "page_index": 6,
+          "semantic_row": "Study characteristics / item 17",
+          "semantic_column": "Checklist item",
+          "row": 29,
+          "col": 2,
+          "expected": "Cite each included study and present its characteristics.",
+          "actual": "Cite each included study and present its characteristics.",
+          "actual_resource_json": "Cite each included study and present its characteristics.",
+          "actual_html_grid": "Cite each included study and present its characteristics.",
+          "status": "exact"
+        },
+        {
+          "table_number": "1",
+          "resource_id": "add90439-0ae4-411b-bd9c-2a2a1be0fb74",
+          "page_index": 7,
+          "semantic_row": "Risk of bias in studies / item 18",
+          "semantic_column": "Checklist item",
+          "row": 1,
+          "col": 2,
+          "expected": "Present assessments of risk of bias for each included study.",
+          "actual": "Present assessments of risk of bias for each included study.",
+          "actual_resource_json": "Present assessments of risk of bias for each included study.",
+          "actual_html_grid": "Present assessments of risk of bias for each included study.",
+          "status": "exact"
+        },
+        {
+          "table_number": "1",
+          "resource_id": "add90439-0ae4-411b-bd9c-2a2a1be0fb74",
+          "page_index": 7,
+          "semantic_row": "Results of syntheses / item 20d",
+          "semantic_column": "Checklist item",
+          "row": 6,
+          "col": 2,
+          "expected": "Present results of all sensitivity analyses conducted to assess the robustness of the synthesised results.",
+          "actual": "Present results of all sensitivity analyses conducted to assess the robustness of the synthesised results.",
+          "actual_resource_json": "Present results of all sensitivity analyses conducted to assess the robustness of the synthesised results.",
+          "actual_html_grid": "Present results of all sensitivity analyses conducted to assess the robustness of the synthesised results.",
+          "status": "exact"
+        },
+        {
+          "table_number": "1",
+          "resource_id": "add90439-0ae4-411b-bd9c-2a2a1be0fb74",
+          "page_index": 7,
+          "semantic_row": "Registration and protocol / item 24b",
+          "semantic_column": "Checklist item",
+          "row": 16,
+          "col": 2,
+          "expected": "Indicate where the review protocol can be accessed, or state that a protocol was not prepared.",
+          "actual": "Indicate where the review protocol can be accessed, or state that a protocol was not prepared.",
+          "actual_resource_json": "Indicate where the review protocol can be accessed, or state that a protocol was not prepared.",
+          "actual_html_grid": "Indicate where the review protocol can be accessed, or state that a protocol was not prepared.",
+          "status": "exact"
+        },
+        {
+          "table_number": "1",
+          "resource_id": "add90439-0ae4-411b-bd9c-2a2a1be0fb74",
+          "page_index": 7,
+          "semantic_row": "Competing interests / item 26",
+          "semantic_column": "Checklist item",
+          "row": 19,
+          "col": 2,
+          "expected": "Declare any competing interests of review authors.",
+          "actual": "Declare any competing interests of review authors.",
+          "actual_resource_json": "Declare any competing interests of review authors.",
+          "actual_html_grid": "Declare any competing interests of review authors.",
+          "status": "exact"
+        },
+        {
+          "table_number": "1",
+          "resource_id": "add90439-0ae4-411b-bd9c-2a2a1be0fb74",
+          "page_index": 7,
+          "semantic_row": "Competing interests / item 26",
+          "semantic_column": "Location where item is reported",
+          "row": 19,
+          "col": 3,
+          "expected": "",
+          "actual": "",
+          "actual_resource_json": "",
+          "actual_html_grid": "",
+          "status": "exact"
+        }
+      ],
+      "notes": [
+        "Three expected logical scientific objects are present through four research resource segments. Table 1 is one logical table, not two correct standalone detections.",
+        "All 42 printed checklist item/subitem codes from Table 1 occur once in row/Item# positions; no item row is missing, but the logical table is split and the first-page topic-rowspan structure is lost.",
+        "Prose Boxes 1/2 were not emitted as scientific figures/tables. Two first-page badges are auxiliary gallery noise."
+      ]
+    },
+    {
+      "id": "science-porespy",
+      "paper_id": "1ff11a2f-8ccd-4ef3-9237-16bb7c57c133",
+      "expected_counts": {
+        "figures": 0,
+        "tables": 0,
+        "table_page_segments": 0
+      },
+      "observed_counts": {
+        "figures": 0,
+        "tables": 0,
+        "resources": 0,
+        "matched_scientific_resource_segments": 0,
+        "auxiliary_logo": 0,
+        "unmatched_scientific_false_detections": 0
+      },
+      "baseline_resources": "artifacts/real-corpus/runs/20261009T115143Z-32839973/007-science-porespy/resources-auto.json",
+      "baseline_resources_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "source_sha256": "e4fe500a9fffd3a73f8ea2823f5098ef71aa917cb28bb90a34039498ba621057",
+      "source_pdf_unchanged": true,
+      "objects": [],
+      "extra_resources": [],
+      "sample_cells": [],
+      "notes": [
+        "Correct research zero result: all four original pages were independently reviewed; no research figures/tables exist. The large repeated JOSS logo was correctly not emitted."
+      ]
+    }
+  ],
+  "summary": {
+    "papers_reviewed": 3,
+    "source_pages_reviewed": 27,
+    "expected_logical_figures": 5,
+    "expected_logical_tables": 4,
+    "expected_logical_objects_present": 9,
+    "missed_logical_scientific_objects": 0,
+    "objects_correct_type": 9,
+    "objects_all_segments_correct_number": 8,
+    "objects_with_complete_caption_association": 8,
+    "objects_complete_crop_across_segments": 9,
+    "objects_complete_as_single_resource": 8,
+    "fragmented_logical_tables": 1,
+    "observed_figure_resources": 17,
+    "observed_table_resources": 5,
+    "research_resource_segments": 10,
+    "auxiliary_logo_resources": 12,
+    "other_unmatched_false_detections": 0,
+    "predeclared_sample_cells": 20,
+    "sample_status_counts": {
+      "exact": 20,
+      "normalized": 0,
+      "mismatch": 0,
+      "ambiguous_missing": 0
+    },
+    "scientific_text_discrepancies_outside_predeclared_sample": true,
+    "quality_conclusion": "All expected scientific object regions are represented, but not all metadata/structure/text are correct. Major limits are one split continuation table, missing first-segment caption/number, lost merged-cell spans, source text-layer unit/negative-marker discrepancies and 12 auxiliary publishing crops. This is a three-paper purposeful sample, not a population accuracy claim."
+  }
+}

@@ -1,0 +1,8366 @@
+{
+  "reviewed_at": "2026-10-09T12:12:52.418228+00:00",
+  "tables": [
+    {
+      "paper": "bert-naacl2019",
+      "number": "1",
+      "resource_id": "d9315e24-04ec-4b37-bd37-e1d77ec6a6ab",
+      "rows": [
+        [
+          "System",
+          "MNLI-(m/mm) 392k",
+          "QQP 363k",
+          "QNLI 108k",
+          "SST-2 67k",
+          "CoLA 8.5k",
+          "STS-B 5.7k",
+          "MRPC 3.5k",
+          "RTE 2.5k",
+          "Average -"
+        ],
+        [
+          "Pre-OpenAI SOTA",
+          "80.6/80.1",
+          "66.1",
+          "82.3",
+          "93.2",
+          "35.0",
+          "81.0",
+          "86.0",
+          "61.7",
+          "74.0"
+        ],
+        [
+          "BiLSTM+ELMo+Attn",
+          "76.4/76.1",
+          "64.8",
+          "79.8",
+          "90.4",
+          "36.0",
+          "73.3",
+          "84.9",
+          "56.8",
+          "71.0"
+        ],
+        [
+          "OpenAI GPT",
+          "82.1/81.4",
+          "70.3",
+          "87.4",
+          "91.3",
+          "45.4",
+          "80.0",
+          "82.3",
+          "56.0",
+          "75.1"
+        ],
+        [
+          "BERTBASE",
+          "84.6/83.4",
+          "71.2",
+          "90.5",
+          "93.5",
+          "52.1",
+          "85.8",
+          "88.9",
+          "66.4",
+          "79.6"
+        ],
+        [
+          "BERTLARGE",
+          "86.7/85.9",
+          "72.1",
+          "92.7",
+          "94.9",
+          "60.5",
+          "86.5",
+          "89.3",
+          "70.1",
+          "82.1"
+        ]
+      ],
+      "csv_rows": [
+        [
+          "System",
+          "MNLI-(m/mm) 392k",
+          "QQP 363k",
+          "QNLI 108k",
+          "SST-2 67k",
+          "CoLA 8.5k",
+          "STS-B 5.7k",
+          "MRPC 3.5k",
+          "RTE 2.5k",
+          "Average -"
+        ],
+        [
+          "Pre-OpenAI SOTA",
+          "80.6/80.1",
+          "66.1",
+          "82.3",
+          "93.2",
+          "35.0",
+          "81.0",
+          "86.0",
+          "61.7",
+          "74.0"
+        ],
+        [
+          "BiLSTM+ELMo+Attn",
+          "76.4/76.1",
+          "64.8",
+          "79.8",
+          "90.4",
+          "36.0",
+          "73.3",
+          "84.9",
+          "56.8",
+          "71.0"
+        ],
+        [
+          "OpenAI GPT",
+          "82.1/81.4",
+          "70.3",
+          "87.4",
+          "91.3",
+          "45.4",
+          "80.0",
+          "82.3",
+          "56.0",
+          "75.1"
+        ],
+        [
+          "BERTBASE",
+          "84.6/83.4",
+          "71.2",
+          "90.5",
+          "93.5",
+          "52.1",
+          "85.8",
+          "88.9",
+          "66.4",
+          "79.6"
+        ],
+        [
+          "BERTLARGE",
+          "86.7/85.9",
+          "72.1",
+          "92.7",
+          "94.9",
+          "60.5",
+          "86.5",
+          "89.3",
+          "70.1",
+          "82.1"
+        ]
+      ],
+      "html_rows": [
+        [
+          "System",
+          "MNLI-(m/mm) 392k",
+          "QQP 363k",
+          "QNLI 108k",
+          "SST-2 67k",
+          "CoLA 8.5k",
+          "STS-B 5.7k",
+          "MRPC 3.5k",
+          "RTE 2.5k",
+          "Average -"
+        ],
+        [
+          "Pre-OpenAI SOTA",
+          "80.6/80.1",
+          "66.1",
+          "82.3",
+          "93.2",
+          "35.0",
+          "81.0",
+          "86.0",
+          "61.7",
+          "74.0"
+        ],
+        [
+          "BiLSTM+ELMo+Attn",
+          "76.4/76.1",
+          "64.8",
+          "79.8",
+          "90.4",
+          "36.0",
+          "73.3",
+          "84.9",
+          "56.8",
+          "71.0"
+        ],
+        [
+          "OpenAI GPT",
+          "82.1/81.4",
+          "70.3",
+          "87.4",
+          "91.3",
+          "45.4",
+          "80.0",
+          "82.3",
+          "56.0",
+          "75.1"
+        ],
+        [
+          "BERTBASE",
+          "84.6/83.4",
+          "71.2",
+          "90.5",
+          "93.5",
+          "52.1",
+          "85.8",
+          "88.9",
+          "66.4",
+          "79.6"
+        ],
+        [
+          "BERTLARGE",
+          "86.7/85.9",
+          "72.1",
+          "92.7",
+          "94.9",
+          "60.5",
+          "86.5",
+          "89.3",
+          "70.1",
+          "82.1"
+        ]
+      ],
+      "html_cells": [
+        [
+          {
+            "text": "System",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "MNLI-(m/mm) 392k",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "QQP 363k",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "QNLI 108k",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "SST-2 67k",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "CoLA 8.5k",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "STS-B 5.7k",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "MRPC 3.5k",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "RTE 2.5k",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "Average -",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "Pre-OpenAI SOTA",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "80.6/80.1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "66.1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "82.3",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "93.2",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "35.0",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "81.0",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "86.0",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "61.7",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "74.0",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "BiLSTM+ELMo+Attn",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "76.4/76.1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "64.8",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "79.8",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "90.4",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "36.0",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "73.3",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "84.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "56.8",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "71.0",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "OpenAI GPT",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "82.1/81.4",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "70.3",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "87.4",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "91.3",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "45.4",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "80.0",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "82.3",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "56.0",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "75.1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "BERTBASE",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "84.6/83.4",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "71.2",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "90.5",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "93.5",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "52.1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "85.8",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "88.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "66.4",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "79.6",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "BERTLARGE",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "86.7/85.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "72.1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "92.7",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "94.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "60.5",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "86.5",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "89.3",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "70.1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "82.1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ]
+      ],
+      "csv_matches_auto_with_formula_escape": true,
+      "html_origin_grid_matches_auto": true,
+      "paths": {
+        "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/d9315e24-04ec-4b37-bd37-e1d77ec6a6ab/png-300.png",
+        "csv": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/d9315e24-04ec-4b37-bd37-e1d77ec6a6ab/csv.csv",
+        "html": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/d9315e24-04ec-4b37-bd37-e1d77ec6a6ab/html.html",
+        "segment_1": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/d9315e24-04ec-4b37-bd37-e1d77ec6a6ab/segment_1.png",
+        "thumbnail": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/d9315e24-04ec-4b37-bd37-e1d77ec6a6ab/thumbnail.png"
+      },
+      "auto_json": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/d9315e24-04ec-4b37-bd37-e1d77ec6a6ab/resource-auto.json"
+    },
+    {
+      "paper": "bert-naacl2019",
+      "number": "2",
+      "resource_id": "e62ebb9f-187f-438f-848a-93ae65739599",
+      "rows": [
+        [
+          "System",
+          "Dev",
+          "",
+          "Test",
+          ""
+        ],
+        [
+          "",
+          "EM",
+          "F1",
+          "EM",
+          "F1"
+        ],
+        [
+          "Top Leaderboard Systems (Dec 10th, 2018)",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Human",
+          "-",
+          "-",
+          "82.3",
+          "91.2"
+        ],
+        [
+          "#1 Ensemble - nlnet",
+          "-",
+          "-",
+          "86.0",
+          "91.7"
+        ],
+        [
+          "#2 Ensemble - QANet",
+          "-",
+          "-",
+          "84.5",
+          "90.5"
+        ],
+        [
+          "Published",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "BiDAF+ELMo (Single)",
+          "-",
+          "85.6",
+          "-",
+          "85.8"
+        ],
+        [
+          "R.M. Reader (Ensemble)",
+          "81.2",
+          "87.9",
+          "82.3",
+          "88.5"
+        ],
+        [
+          "Ours",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "BERTBASE (Single)",
+          "80.8",
+          "88.5",
+          "-",
+          "-"
+        ],
+        [
+          "BERTLARGE (Single)",
+          "84.1",
+          "90.9",
+          "-",
+          "-"
+        ],
+        [
+          "BERTLARGE (Ensemble)",
+          "85.8",
+          "91.8",
+          "-",
+          "-"
+        ],
+        [
+          "BERTLARGE (Sgl.+TriviaQA)",
+          "84.2",
+          "91.1",
+          "85.1",
+          "91.8"
+        ],
+        [
+          "BERTLARGE (Ens.+TriviaQA)",
+          "86.2",
+          "92.2",
+          "87.4",
+          "93.2"
+        ]
+      ],
+      "csv_rows": [
+        [
+          "System",
+          "Dev",
+          "",
+          "Test",
+          ""
+        ],
+        [
+          "",
+          "EM",
+          "F1",
+          "EM",
+          "F1"
+        ],
+        [
+          "Top Leaderboard Systems (Dec 10th, 2018)",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Human",
+          "'-",
+          "'-",
+          "82.3",
+          "91.2"
+        ],
+        [
+          "#1 Ensemble - nlnet",
+          "'-",
+          "'-",
+          "86.0",
+          "91.7"
+        ],
+        [
+          "#2 Ensemble - QANet",
+          "'-",
+          "'-",
+          "84.5",
+          "90.5"
+        ],
+        [
+          "Published",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "BiDAF+ELMo (Single)",
+          "'-",
+          "85.6",
+          "'-",
+          "85.8"
+        ],
+        [
+          "R.M. Reader (Ensemble)",
+          "81.2",
+          "87.9",
+          "82.3",
+          "88.5"
+        ],
+        [
+          "Ours",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "BERTBASE (Single)",
+          "80.8",
+          "88.5",
+          "'-",
+          "'-"
+        ],
+        [
+          "BERTLARGE (Single)",
+          "84.1",
+          "90.9",
+          "'-",
+          "'-"
+        ],
+        [
+          "BERTLARGE (Ensemble)",
+          "85.8",
+          "91.8",
+          "'-",
+          "'-"
+        ],
+        [
+          "BERTLARGE (Sgl.+TriviaQA)",
+          "84.2",
+          "91.1",
+          "85.1",
+          "91.8"
+        ],
+        [
+          "BERTLARGE (Ens.+TriviaQA)",
+          "86.2",
+          "92.2",
+          "87.4",
+          "93.2"
+        ]
+      ],
+      "html_rows": [
+        [
+          "System",
+          "Dev",
+          "",
+          "Test",
+          ""
+        ],
+        [
+          "",
+          "EM",
+          "F1",
+          "EM",
+          "F1"
+        ],
+        [
+          "Top Leaderboard Systems (Dec 10th, 2018)",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Human",
+          "-",
+          "-",
+          "82.3",
+          "91.2"
+        ],
+        [
+          "#1 Ensemble - nlnet",
+          "-",
+          "-",
+          "86.0",
+          "91.7"
+        ],
+        [
+          "#2 Ensemble - QANet",
+          "-",
+          "-",
+          "84.5",
+          "90.5"
+        ],
+        [
+          "Published",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "BiDAF+ELMo (Single)",
+          "-",
+          "85.6",
+          "-",
+          "85.8"
+        ],
+        [
+          "R.M. Reader (Ensemble)",
+          "81.2",
+          "87.9",
+          "82.3",
+          "88.5"
+        ],
+        [
+          "Ours",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "BERTBASE (Single)",
+          "80.8",
+          "88.5",
+          "-",
+          "-"
+        ],
+        [
+          "BERTLARGE (Single)",
+          "84.1",
+          "90.9",
+          "-",
+          "-"
+        ],
+        [
+          "BERTLARGE (Ensemble)",
+          "85.8",
+          "91.8",
+          "-",
+          "-"
+        ],
+        [
+          "BERTLARGE (Sgl.+TriviaQA)",
+          "84.2",
+          "91.1",
+          "85.1",
+          "91.8"
+        ],
+        [
+          "BERTLARGE (Ens.+TriviaQA)",
+          "86.2",
+          "92.2",
+          "87.4",
+          "93.2"
+        ]
+      ],
+      "html_cells": [
+        [
+          {
+            "text": "System",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "Dev",
+            "row_span": 1,
+            "col_span": 2,
+            "header": true
+          },
+          {
+            "text": "Test",
+            "row_span": 1,
+            "col_span": 2,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "EM",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "F1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "EM",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "F1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "Top Leaderboard Systems (Dec 10th, 2018)",
+            "row_span": 1,
+            "col_span": 5,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "Human",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "82.3",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "91.2",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "#1 Ensemble - nlnet",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "86.0",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "91.7",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "#2 Ensemble - QANet",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "84.5",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "90.5",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Published",
+            "row_span": 1,
+            "col_span": 5,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "BiDAF+ELMo (Single)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "85.6",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "85.8",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "R.M. Reader (Ensemble)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "81.2",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "87.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "82.3",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "88.5",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Ours",
+            "row_span": 1,
+            "col_span": 5,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "BERTBASE (Single)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "80.8",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "88.5",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "BERTLARGE (Single)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "84.1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "90.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "BERTLARGE (Ensemble)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "85.8",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "91.8",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "BERTLARGE (Sgl.+TriviaQA)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "84.2",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "91.1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "85.1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "91.8",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "BERTLARGE (Ens.+TriviaQA)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "86.2",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "92.2",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "87.4",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "93.2",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ]
+      ],
+      "csv_matches_auto_with_formula_escape": true,
+      "html_origin_grid_matches_auto": true,
+      "paths": {
+        "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/e62ebb9f-187f-438f-848a-93ae65739599/png-300.png",
+        "csv": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/e62ebb9f-187f-438f-848a-93ae65739599/csv.csv",
+        "html": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/e62ebb9f-187f-438f-848a-93ae65739599/html.html",
+        "segment_1": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/e62ebb9f-187f-438f-848a-93ae65739599/segment_1.png",
+        "thumbnail": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/e62ebb9f-187f-438f-848a-93ae65739599/thumbnail.png"
+      },
+      "auto_json": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/e62ebb9f-187f-438f-848a-93ae65739599/resource-auto.json"
+    },
+    {
+      "paper": "bert-naacl2019",
+      "number": "3",
+      "resource_id": "0827bc21-f7db-40de-b199-b83aa8e70082",
+      "rows": [
+        [
+          "System",
+          "",
+          "Dev",
+          "",
+          "Test",
+          ""
+        ],
+        [
+          "",
+          "",
+          "EM",
+          "F1",
+          "EM",
+          "F1"
+        ],
+        [
+          "Top Leaderboard",
+          "Systems",
+          "(Dec",
+          "10th,",
+          "2018)",
+          ""
+        ],
+        [
+          "Human",
+          "",
+          "86.3",
+          "89.0",
+          "86.9",
+          "89.5"
+        ],
+        [
+          "#1",
+          "Single - MIR-MRC (F-Net)",
+          "-",
+          "-",
+          "74.8",
+          "78.0"
+        ],
+        [
+          "#2 Single -",
+          "nlnet",
+          "-",
+          "-",
+          "74.2",
+          "77.1"
+        ],
+        [
+          "Published",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "unet (Ensemble)",
+          "",
+          "-",
+          "-",
+          "71.4",
+          "74.9"
+        ],
+        [
+          "SLQA+",
+          "(Single)",
+          "-",
+          "",
+          "71.4",
+          "74.4"
+        ],
+        [
+          "BERTLARGE (Single)",
+          "Ours",
+          "78.7",
+          "81.9",
+          "80.0",
+          "83.1"
+        ]
+      ],
+      "csv_rows": [
+        [
+          "System",
+          "",
+          "Dev",
+          "",
+          "Test",
+          ""
+        ],
+        [
+          "",
+          "",
+          "EM",
+          "F1",
+          "EM",
+          "F1"
+        ],
+        [
+          "Top Leaderboard",
+          "Systems",
+          "(Dec",
+          "10th,",
+          "2018)",
+          ""
+        ],
+        [
+          "Human",
+          "",
+          "86.3",
+          "89.0",
+          "86.9",
+          "89.5"
+        ],
+        [
+          "#1",
+          "Single - MIR-MRC (F-Net)",
+          "'-",
+          "'-",
+          "74.8",
+          "78.0"
+        ],
+        [
+          "#2 Single -",
+          "nlnet",
+          "'-",
+          "'-",
+          "74.2",
+          "77.1"
+        ],
+        [
+          "Published",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "unet (Ensemble)",
+          "",
+          "'-",
+          "'-",
+          "71.4",
+          "74.9"
+        ],
+        [
+          "SLQA+",
+          "(Single)",
+          "'-",
+          "",
+          "71.4",
+          "74.4"
+        ],
+        [
+          "BERTLARGE (Single)",
+          "Ours",
+          "78.7",
+          "81.9",
+          "80.0",
+          "83.1"
+        ]
+      ],
+      "html_rows": [
+        [
+          "System",
+          "",
+          "Dev",
+          "",
+          "Test",
+          ""
+        ],
+        [
+          "",
+          "",
+          "EM",
+          "F1",
+          "EM",
+          "F1"
+        ],
+        [
+          "Top Leaderboard",
+          "Systems",
+          "(Dec",
+          "10th,",
+          "2018)",
+          ""
+        ],
+        [
+          "Human",
+          "",
+          "86.3",
+          "89.0",
+          "86.9",
+          "89.5"
+        ],
+        [
+          "#1",
+          "Single - MIR-MRC (F-Net)",
+          "-",
+          "-",
+          "74.8",
+          "78.0"
+        ],
+        [
+          "#2 Single -",
+          "nlnet",
+          "-",
+          "-",
+          "74.2",
+          "77.1"
+        ],
+        [
+          "Published",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "unet (Ensemble)",
+          "",
+          "-",
+          "-",
+          "71.4",
+          "74.9"
+        ],
+        [
+          "SLQA+",
+          "(Single)",
+          "-",
+          "",
+          "71.4",
+          "74.4"
+        ],
+        [
+          "BERTLARGE (Single)",
+          "Ours",
+          "78.7",
+          "81.9",
+          "80.0",
+          "83.1"
+        ]
+      ],
+      "html_cells": [
+        [
+          {
+            "text": "System",
+            "row_span": 1,
+            "col_span": 2,
+            "header": true
+          },
+          {
+            "text": "Dev",
+            "row_span": 1,
+            "col_span": 2,
+            "header": true
+          },
+          {
+            "text": "Test",
+            "row_span": 1,
+            "col_span": 2,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "EM",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "F1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "EM",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "F1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "Top Leaderboard",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "Systems",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "(Dec",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "10th,",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "2018)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Human",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "86.3",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "89.0",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "86.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "89.5",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "#1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "Single - MIR-MRC (F-Net)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "74.8",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "78.0",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "#2 Single -",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "nlnet",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "74.2",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "77.1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Published",
+            "row_span": 1,
+            "col_span": 6,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "unet (Ensemble)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "71.4",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "74.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "SLQA+",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "(Single)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "71.4",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "74.4",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "BERTLARGE (Single)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "Ours",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "78.7",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "81.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "80.0",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "83.1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ]
+      ],
+      "csv_matches_auto_with_formula_escape": true,
+      "html_origin_grid_matches_auto": true,
+      "paths": {
+        "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/0827bc21-f7db-40de-b199-b83aa8e70082/png-300.png",
+        "csv": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/0827bc21-f7db-40de-b199-b83aa8e70082/csv.csv",
+        "html": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/0827bc21-f7db-40de-b199-b83aa8e70082/html.html",
+        "segment_1": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/0827bc21-f7db-40de-b199-b83aa8e70082/segment_1.png",
+        "thumbnail": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/0827bc21-f7db-40de-b199-b83aa8e70082/thumbnail.png"
+      },
+      "auto_json": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/0827bc21-f7db-40de-b199-b83aa8e70082/resource-auto.json"
+    },
+    {
+      "paper": "bert-naacl2019",
+      "number": "4",
+      "resource_id": "707cd263-b284-4443-baae-323c8f5aaa8c",
+      "rows": [
+        [
+          "System",
+          "Dev",
+          "Test"
+        ],
+        [
+          "ESIM+GloVe",
+          "51.9",
+          "52.7"
+        ],
+        [
+          "ESIM+ELMo",
+          "59.1",
+          "59.2"
+        ],
+        [
+          "OpenAI GPT",
+          "-",
+          "78.0"
+        ],
+        [
+          "BERTBASE",
+          "81.6",
+          "-"
+        ],
+        [
+          "BERTLARGE",
+          "86.6",
+          "86.3"
+        ],
+        [
+          "Human (expert)†",
+          "-",
+          "85.0"
+        ],
+        [
+          "Human (5 annotations)†",
+          "-",
+          "88.0"
+        ]
+      ],
+      "csv_rows": [
+        [
+          "System",
+          "Dev",
+          "Test"
+        ],
+        [
+          "ESIM+GloVe",
+          "51.9",
+          "52.7"
+        ],
+        [
+          "ESIM+ELMo",
+          "59.1",
+          "59.2"
+        ],
+        [
+          "OpenAI GPT",
+          "'-",
+          "78.0"
+        ],
+        [
+          "BERTBASE",
+          "81.6",
+          "'-"
+        ],
+        [
+          "BERTLARGE",
+          "86.6",
+          "86.3"
+        ],
+        [
+          "Human (expert)†",
+          "'-",
+          "85.0"
+        ],
+        [
+          "Human (5 annotations)†",
+          "'-",
+          "88.0"
+        ]
+      ],
+      "html_rows": [
+        [
+          "System",
+          "Dev",
+          "Test"
+        ],
+        [
+          "ESIM+GloVe",
+          "51.9",
+          "52.7"
+        ],
+        [
+          "ESIM+ELMo",
+          "59.1",
+          "59.2"
+        ],
+        [
+          "OpenAI GPT",
+          "-",
+          "78.0"
+        ],
+        [
+          "BERTBASE",
+          "81.6",
+          "-"
+        ],
+        [
+          "BERTLARGE",
+          "86.6",
+          "86.3"
+        ],
+        [
+          "Human (expert)†",
+          "-",
+          "85.0"
+        ],
+        [
+          "Human (5 annotations)†",
+          "-",
+          "88.0"
+        ]
+      ],
+      "html_cells": [
+        [
+          {
+            "text": "System",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "Dev",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "Test",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "ESIM+GloVe",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "51.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "52.7",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "ESIM+ELMo",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "59.1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "59.2",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "OpenAI GPT",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "78.0",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "BERTBASE",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "81.6",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "BERTLARGE",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "86.6",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "86.3",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Human (expert)†",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "85.0",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Human (5 annotations)†",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "88.0",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ]
+      ],
+      "csv_matches_auto_with_formula_escape": true,
+      "html_origin_grid_matches_auto": true,
+      "paths": {
+        "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/707cd263-b284-4443-baae-323c8f5aaa8c/png-300.png",
+        "csv": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/707cd263-b284-4443-baae-323c8f5aaa8c/csv.csv",
+        "html": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/707cd263-b284-4443-baae-323c8f5aaa8c/html.html",
+        "segment_1": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/707cd263-b284-4443-baae-323c8f5aaa8c/segment_1.png",
+        "thumbnail": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/707cd263-b284-4443-baae-323c8f5aaa8c/thumbnail.png"
+      },
+      "auto_json": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/707cd263-b284-4443-baae-323c8f5aaa8c/resource-auto.json"
+    },
+    {
+      "paper": "bert-naacl2019",
+      "number": "5",
+      "resource_id": "8485b98d-8f4d-4571-bfb6-8a47adbcd7da",
+      "rows": [
+        [
+          "",
+          "Dev Set",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Tasks",
+          "MNLI-m (Acc)",
+          "QNLI (Acc)",
+          "MRPC (Acc)",
+          "SST-2 (Acc)",
+          "SQuAD (F1)"
+        ],
+        [
+          "BERTBASE",
+          "84.4",
+          "88.4",
+          "86.7",
+          "92.7",
+          "88.5"
+        ],
+        [
+          "No NSP",
+          "83.9",
+          "84.9",
+          "86.5",
+          "92.6",
+          "87.9"
+        ],
+        [
+          "LTR&No NSP",
+          "82.1",
+          "84.3",
+          "77.5",
+          "92.1",
+          "77.8"
+        ],
+        [
+          "+ BiLSTM",
+          "82.1",
+          "84.1",
+          "75.7",
+          "91.6",
+          "84.9"
+        ]
+      ],
+      "csv_rows": [
+        [
+          "",
+          "Dev Set",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Tasks",
+          "MNLI-m (Acc)",
+          "QNLI (Acc)",
+          "MRPC (Acc)",
+          "SST-2 (Acc)",
+          "SQuAD (F1)"
+        ],
+        [
+          "BERTBASE",
+          "84.4",
+          "88.4",
+          "86.7",
+          "92.7",
+          "88.5"
+        ],
+        [
+          "No NSP",
+          "83.9",
+          "84.9",
+          "86.5",
+          "92.6",
+          "87.9"
+        ],
+        [
+          "LTR&No NSP",
+          "82.1",
+          "84.3",
+          "77.5",
+          "92.1",
+          "77.8"
+        ],
+        [
+          "'+ BiLSTM",
+          "82.1",
+          "84.1",
+          "75.7",
+          "91.6",
+          "84.9"
+        ]
+      ],
+      "html_rows": [
+        [
+          "",
+          "Dev Set",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Tasks",
+          "MNLI-m (Acc)",
+          "QNLI (Acc)",
+          "MRPC (Acc)",
+          "SST-2 (Acc)",
+          "SQuAD (F1)"
+        ],
+        [
+          "BERTBASE",
+          "84.4",
+          "88.4",
+          "86.7",
+          "92.7",
+          "88.5"
+        ],
+        [
+          "No NSP",
+          "83.9",
+          "84.9",
+          "86.5",
+          "92.6",
+          "87.9"
+        ],
+        [
+          "LTR&No NSP",
+          "82.1",
+          "84.3",
+          "77.5",
+          "92.1",
+          "77.8"
+        ],
+        [
+          "+ BiLSTM",
+          "82.1",
+          "84.1",
+          "75.7",
+          "91.6",
+          "84.9"
+        ]
+      ],
+      "html_cells": [
+        [
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "Dev Set",
+            "row_span": 1,
+            "col_span": 5,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "Tasks",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "MNLI-m (Acc)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "QNLI (Acc)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "MRPC (Acc)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "SST-2 (Acc)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "SQuAD (F1)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "BERTBASE",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "84.4",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "88.4",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "86.7",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "92.7",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "88.5",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "No NSP",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "83.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "84.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "86.5",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "92.6",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "87.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "LTR&No NSP",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "82.1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "84.3",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "77.5",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "92.1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "77.8",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "+ BiLSTM",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "82.1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "84.1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "75.7",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "91.6",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "84.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ]
+      ],
+      "csv_matches_auto_with_formula_escape": true,
+      "html_origin_grid_matches_auto": true,
+      "paths": {
+        "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/8485b98d-8f4d-4571-bfb6-8a47adbcd7da/png-300.png",
+        "csv": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/8485b98d-8f4d-4571-bfb6-8a47adbcd7da/csv.csv",
+        "html": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/8485b98d-8f4d-4571-bfb6-8a47adbcd7da/html.html",
+        "segment_1": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/8485b98d-8f4d-4571-bfb6-8a47adbcd7da/segment_1.png",
+        "thumbnail": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/8485b98d-8f4d-4571-bfb6-8a47adbcd7da/thumbnail.png"
+      },
+      "auto_json": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/8485b98d-8f4d-4571-bfb6-8a47adbcd7da/resource-auto.json"
+    },
+    {
+      "paper": "bert-naacl2019",
+      "number": "6",
+      "resource_id": "7790157d-da5c-48c4-9574-c77e9e8090f7",
+      "rows": [
+        [
+          "Hyperparams",
+          "",
+          "",
+          "Dev Set Accuracy",
+          "",
+          "",
+          ""
+        ],
+        [
+          "#L",
+          "#H",
+          "#A",
+          "LM (ppl)",
+          "MNLI-m",
+          "MRPC",
+          "SST-2"
+        ],
+        [
+          "3",
+          "768",
+          "12",
+          "5.84",
+          "77.9",
+          "79.8",
+          "88.4"
+        ],
+        [
+          "6",
+          "768",
+          "3",
+          "5.24",
+          "80.6",
+          "82.2",
+          "90.7"
+        ],
+        [
+          "6",
+          "768",
+          "12",
+          "4.68",
+          "81.9",
+          "84.8",
+          "91.3"
+        ],
+        [
+          "12",
+          "768",
+          "12",
+          "3.99",
+          "84.4",
+          "86.7",
+          "92.9"
+        ],
+        [
+          "12",
+          "1024",
+          "16",
+          "3.54",
+          "85.7",
+          "86.9",
+          "93.3"
+        ],
+        [
+          "24",
+          "1024",
+          "16",
+          "3.23",
+          "86.6",
+          "87.8",
+          "93.7"
+        ]
+      ],
+      "csv_rows": [
+        [
+          "Hyperparams",
+          "",
+          "",
+          "Dev Set Accuracy",
+          "",
+          "",
+          ""
+        ],
+        [
+          "#L",
+          "#H",
+          "#A",
+          "LM (ppl)",
+          "MNLI-m",
+          "MRPC",
+          "SST-2"
+        ],
+        [
+          "3",
+          "768",
+          "12",
+          "5.84",
+          "77.9",
+          "79.8",
+          "88.4"
+        ],
+        [
+          "6",
+          "768",
+          "3",
+          "5.24",
+          "80.6",
+          "82.2",
+          "90.7"
+        ],
+        [
+          "6",
+          "768",
+          "12",
+          "4.68",
+          "81.9",
+          "84.8",
+          "91.3"
+        ],
+        [
+          "12",
+          "768",
+          "12",
+          "3.99",
+          "84.4",
+          "86.7",
+          "92.9"
+        ],
+        [
+          "12",
+          "1024",
+          "16",
+          "3.54",
+          "85.7",
+          "86.9",
+          "93.3"
+        ],
+        [
+          "24",
+          "1024",
+          "16",
+          "3.23",
+          "86.6",
+          "87.8",
+          "93.7"
+        ]
+      ],
+      "html_rows": [
+        [
+          "Hyperparams",
+          "",
+          "",
+          "Dev Set Accuracy",
+          "",
+          "",
+          ""
+        ],
+        [
+          "#L",
+          "#H",
+          "#A",
+          "LM (ppl)",
+          "MNLI-m",
+          "MRPC",
+          "SST-2"
+        ],
+        [
+          "3",
+          "768",
+          "12",
+          "5.84",
+          "77.9",
+          "79.8",
+          "88.4"
+        ],
+        [
+          "6",
+          "768",
+          "3",
+          "5.24",
+          "80.6",
+          "82.2",
+          "90.7"
+        ],
+        [
+          "6",
+          "768",
+          "12",
+          "4.68",
+          "81.9",
+          "84.8",
+          "91.3"
+        ],
+        [
+          "12",
+          "768",
+          "12",
+          "3.99",
+          "84.4",
+          "86.7",
+          "92.9"
+        ],
+        [
+          "12",
+          "1024",
+          "16",
+          "3.54",
+          "85.7",
+          "86.9",
+          "93.3"
+        ],
+        [
+          "24",
+          "1024",
+          "16",
+          "3.23",
+          "86.6",
+          "87.8",
+          "93.7"
+        ]
+      ],
+      "html_cells": [
+        [
+          {
+            "text": "Hyperparams",
+            "row_span": 1,
+            "col_span": 3,
+            "header": true
+          },
+          {
+            "text": "Dev Set Accuracy",
+            "row_span": 1,
+            "col_span": 4,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "#L",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "#H",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "#A",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "LM (ppl)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "MNLI-m",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "MRPC",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "SST-2",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "3",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "768",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "12",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "5.84",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "77.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "79.8",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "88.4",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "768",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "3",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "5.24",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "80.6",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "82.2",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "90.7",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "6",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "768",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "12",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "4.68",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "81.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "84.8",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "91.3",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "768",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "12",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "3.99",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "84.4",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "86.7",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "92.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "12",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "1024",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "16",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "3.54",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "85.7",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "86.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "93.3",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "24",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "1024",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "16",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "3.23",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "86.6",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "87.8",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "93.7",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ]
+      ],
+      "csv_matches_auto_with_formula_escape": true,
+      "html_origin_grid_matches_auto": true,
+      "paths": {
+        "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/7790157d-da5c-48c4-9574-c77e9e8090f7/png-300.png",
+        "csv": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/7790157d-da5c-48c4-9574-c77e9e8090f7/csv.csv",
+        "html": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/7790157d-da5c-48c4-9574-c77e9e8090f7/html.html",
+        "segment_1": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/7790157d-da5c-48c4-9574-c77e9e8090f7/segment_1.png",
+        "thumbnail": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/7790157d-da5c-48c4-9574-c77e9e8090f7/thumbnail.png"
+      },
+      "auto_json": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/7790157d-da5c-48c4-9574-c77e9e8090f7/resource-auto.json"
+    },
+    {
+      "paper": "bert-naacl2019",
+      "number": "7",
+      "resource_id": "943818c9-8a32-4641-a535-df544724d352",
+      "rows": [
+        [
+          "System",
+          "Dev F1",
+          "Test F1"
+        ],
+        [
+          "ELMo (Peters et al., 2018a)",
+          "95.7",
+          "92.2"
+        ],
+        [
+          "CVT (Clark et al., 2018)",
+          "-",
+          "92.6"
+        ],
+        [
+          "CSE (Akbik et al., 2018)",
+          "-",
+          "93.1"
+        ],
+        [
+          "Fine-tuning approach",
+          "",
+          ""
+        ],
+        [
+          "BERTLARGE",
+          "96.6",
+          "92.8"
+        ],
+        [
+          "BERTBASE",
+          "96.4",
+          "92.4"
+        ],
+        [
+          "Feature-based approach (BERTBASE)",
+          "",
+          ""
+        ],
+        [
+          "Embeddings",
+          "91.0",
+          "-"
+        ],
+        [
+          "Second-to-Last Hidden",
+          "95.6",
+          "-"
+        ],
+        [
+          "Last Hidden",
+          "94.9",
+          "-"
+        ],
+        [
+          "Weighted Sum Last Four Hidden",
+          "95.9",
+          "-"
+        ],
+        [
+          "Concat Last Four Hidden",
+          "96.1",
+          "-"
+        ],
+        [
+          "Weighted Sum All 12 Layers",
+          "95.5",
+          "-"
+        ]
+      ],
+      "csv_rows": [
+        [
+          "System",
+          "Dev F1",
+          "Test F1"
+        ],
+        [
+          "ELMo (Peters et al., 2018a)",
+          "95.7",
+          "92.2"
+        ],
+        [
+          "CVT (Clark et al., 2018)",
+          "'-",
+          "92.6"
+        ],
+        [
+          "CSE (Akbik et al., 2018)",
+          "'-",
+          "93.1"
+        ],
+        [
+          "Fine-tuning approach",
+          "",
+          ""
+        ],
+        [
+          "BERTLARGE",
+          "96.6",
+          "92.8"
+        ],
+        [
+          "BERTBASE",
+          "96.4",
+          "92.4"
+        ],
+        [
+          "Feature-based approach (BERTBASE)",
+          "",
+          ""
+        ],
+        [
+          "Embeddings",
+          "91.0",
+          "'-"
+        ],
+        [
+          "Second-to-Last Hidden",
+          "95.6",
+          "'-"
+        ],
+        [
+          "Last Hidden",
+          "94.9",
+          "'-"
+        ],
+        [
+          "Weighted Sum Last Four Hidden",
+          "95.9",
+          "'-"
+        ],
+        [
+          "Concat Last Four Hidden",
+          "96.1",
+          "'-"
+        ],
+        [
+          "Weighted Sum All 12 Layers",
+          "95.5",
+          "'-"
+        ]
+      ],
+      "html_rows": [
+        [
+          "System",
+          "Dev F1",
+          "Test F1"
+        ],
+        [
+          "ELMo (Peters et al., 2018a)",
+          "95.7",
+          "92.2"
+        ],
+        [
+          "CVT (Clark et al., 2018)",
+          "-",
+          "92.6"
+        ],
+        [
+          "CSE (Akbik et al., 2018)",
+          "-",
+          "93.1"
+        ],
+        [
+          "Fine-tuning approach",
+          "",
+          ""
+        ],
+        [
+          "BERTLARGE",
+          "96.6",
+          "92.8"
+        ],
+        [
+          "BERTBASE",
+          "96.4",
+          "92.4"
+        ],
+        [
+          "Feature-based approach (BERTBASE)",
+          "",
+          ""
+        ],
+        [
+          "Embeddings",
+          "91.0",
+          "-"
+        ],
+        [
+          "Second-to-Last Hidden",
+          "95.6",
+          "-"
+        ],
+        [
+          "Last Hidden",
+          "94.9",
+          "-"
+        ],
+        [
+          "Weighted Sum Last Four Hidden",
+          "95.9",
+          "-"
+        ],
+        [
+          "Concat Last Four Hidden",
+          "96.1",
+          "-"
+        ],
+        [
+          "Weighted Sum All 12 Layers",
+          "95.5",
+          "-"
+        ]
+      ],
+      "html_cells": [
+        [
+          {
+            "text": "System",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "Dev F1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "Test F1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "ELMo (Peters et al., 2018a)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "95.7",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "92.2",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "CVT (Clark et al., 2018)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "92.6",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "CSE (Akbik et al., 2018)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "93.1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Fine-tuning approach",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "BERTLARGE",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "96.6",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "92.8",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "BERTBASE",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "96.4",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "92.4",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Feature-based approach (BERTBASE)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Embeddings",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "91.0",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Second-to-Last Hidden",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "95.6",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Last Hidden",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "94.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Weighted Sum Last Four Hidden",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "95.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Concat Last Four Hidden",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "96.1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Weighted Sum All 12 Layers",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "95.5",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ]
+      ],
+      "csv_matches_auto_with_formula_escape": true,
+      "html_origin_grid_matches_auto": true,
+      "paths": {
+        "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/943818c9-8a32-4641-a535-df544724d352/png-300.png",
+        "csv": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/943818c9-8a32-4641-a535-df544724d352/csv.csv",
+        "html": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/943818c9-8a32-4641-a535-df544724d352/html.html",
+        "segment_1": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/943818c9-8a32-4641-a535-df544724d352/segment_1.png",
+        "thumbnail": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/943818c9-8a32-4641-a535-df544724d352/thumbnail.png"
+      },
+      "auto_json": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/943818c9-8a32-4641-a535-df544724d352/resource-auto.json"
+    },
+    {
+      "paper": "bert-naacl2019",
+      "number": "8",
+      "resource_id": "ec81ef77-580e-4fec-b149-1f4650243196",
+      "rows": [
+        [
+          "Masking Rates",
+          "",
+          "",
+          "Dev Set Results",
+          "",
+          ""
+        ],
+        [
+          "MASK",
+          "SAME",
+          "RND",
+          "MNLI",
+          "NER",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "Fine-tune",
+          "Fine-tune",
+          "Feature-based"
+        ],
+        [
+          "80%",
+          "10%",
+          "10%",
+          "84.2",
+          "95.4",
+          "94.9"
+        ],
+        [
+          "100%",
+          "0%",
+          "0%",
+          "84.3",
+          "94.9",
+          "94.0"
+        ],
+        [
+          "80%",
+          "0%",
+          "20%",
+          "84.1",
+          "95.2",
+          "94.6"
+        ],
+        [
+          "80%",
+          "20%",
+          "0%",
+          "84.4",
+          "95.2",
+          "94.7"
+        ],
+        [
+          "0%",
+          "20%",
+          "80%",
+          "83.7",
+          "94.8",
+          "94.6"
+        ],
+        [
+          "0%",
+          "0%",
+          "100%",
+          "83.6",
+          "94.9",
+          "94.6"
+        ]
+      ],
+      "csv_rows": [
+        [
+          "Masking Rates",
+          "",
+          "",
+          "Dev Set Results",
+          "",
+          ""
+        ],
+        [
+          "MASK",
+          "SAME",
+          "RND",
+          "MNLI",
+          "NER",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "Fine-tune",
+          "Fine-tune",
+          "Feature-based"
+        ],
+        [
+          "80%",
+          "10%",
+          "10%",
+          "84.2",
+          "95.4",
+          "94.9"
+        ],
+        [
+          "100%",
+          "0%",
+          "0%",
+          "84.3",
+          "94.9",
+          "94.0"
+        ],
+        [
+          "80%",
+          "0%",
+          "20%",
+          "84.1",
+          "95.2",
+          "94.6"
+        ],
+        [
+          "80%",
+          "20%",
+          "0%",
+          "84.4",
+          "95.2",
+          "94.7"
+        ],
+        [
+          "0%",
+          "20%",
+          "80%",
+          "83.7",
+          "94.8",
+          "94.6"
+        ],
+        [
+          "0%",
+          "0%",
+          "100%",
+          "83.6",
+          "94.9",
+          "94.6"
+        ]
+      ],
+      "html_rows": [
+        [
+          "Masking Rates",
+          "",
+          "",
+          "Dev Set Results",
+          "",
+          ""
+        ],
+        [
+          "MASK",
+          "SAME",
+          "RND",
+          "MNLI",
+          "NER",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "Fine-tune",
+          "Fine-tune",
+          "Feature-based"
+        ],
+        [
+          "80%",
+          "10%",
+          "10%",
+          "84.2",
+          "95.4",
+          "94.9"
+        ],
+        [
+          "100%",
+          "0%",
+          "0%",
+          "84.3",
+          "94.9",
+          "94.0"
+        ],
+        [
+          "80%",
+          "0%",
+          "20%",
+          "84.1",
+          "95.2",
+          "94.6"
+        ],
+        [
+          "80%",
+          "20%",
+          "0%",
+          "84.4",
+          "95.2",
+          "94.7"
+        ],
+        [
+          "0%",
+          "20%",
+          "80%",
+          "83.7",
+          "94.8",
+          "94.6"
+        ],
+        [
+          "0%",
+          "0%",
+          "100%",
+          "83.6",
+          "94.9",
+          "94.6"
+        ]
+      ],
+      "html_cells": [
+        [
+          {
+            "text": "Masking Rates",
+            "row_span": 1,
+            "col_span": 3,
+            "header": true
+          },
+          {
+            "text": "Dev Set Results",
+            "row_span": 1,
+            "col_span": 3,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "MASK",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "SAME",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "RND",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "MNLI",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "NER",
+            "row_span": 1,
+            "col_span": 2,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "Fine-tune",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "Fine-tune",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "Feature-based",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "80%",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "10%",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "10%",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "84.2",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "95.4",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "94.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "100%",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "0%",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "0%",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "84.3",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "94.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "94.0",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "80%",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "0%",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "20%",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "84.1",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "95.2",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "94.6",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "80%",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "20%",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "0%",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "84.4",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "95.2",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "94.7",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "0%",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "20%",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "80%",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "83.7",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "94.8",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "94.6",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "0%",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "0%",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "100%",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "83.6",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "94.9",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "94.6",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ]
+      ],
+      "csv_matches_auto_with_formula_escape": true,
+      "html_origin_grid_matches_auto": true,
+      "paths": {
+        "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/ec81ef77-580e-4fec-b149-1f4650243196/png-300.png",
+        "csv": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/ec81ef77-580e-4fec-b149-1f4650243196/csv.csv",
+        "html": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/ec81ef77-580e-4fec-b149-1f4650243196/html.html",
+        "segment_1": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/ec81ef77-580e-4fec-b149-1f4650243196/segment_1.png",
+        "thumbnail": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/ec81ef77-580e-4fec-b149-1f4650243196/thumbnail.png"
+      },
+      "auto_json": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/resources/ec81ef77-580e-4fec-b149-1f4650243196/resource-auto.json"
+    },
+    {
+      "paper": "sentence-bert-emnlp2019",
+      "number": "1",
+      "resource_id": "d1f17300-ee9e-479a-9fe6-f450b363767d",
+      "rows": [
+        [
+          "Model",
+          "STS12",
+          "STS13",
+          "STS14",
+          "STS15",
+          "STS16",
+          "STSb",
+          "SICK-R",
+          "Avg."
+        ],
+        [
+          "Avg. GloVe embeddings",
+          "55.14",
+          "70.66",
+          "59.73",
+          "68.25",
+          "63.66",
+          "58.02",
+          "53.76",
+          "61.32"
+        ],
+        [
+          "Avg. BERT embeddings",
+          "38.78",
+          "57.98",
+          "57.98",
+          "63.15",
+          "61.06",
+          "46.35",
+          "58.40",
+          "54.81"
+        ],
+        [
+          "BERT CLS-vector",
+          "20.16",
+          "30.01",
+          "20.09",
+          "36.88",
+          "38.08",
+          "16.50",
+          "42.63",
+          "29.19"
+        ],
+        [
+          "InferSent - Glove",
+          "52.86",
+          "66.75",
+          "62.15",
+          "72.77",
+          "66.87",
+          "68.03",
+          "65.65",
+          "65.01"
+        ],
+        [
+          "Universal Sentence Encoder",
+          "64.49",
+          "67.80",
+          "64.61",
+          "76.83",
+          "73.18",
+          "74.92",
+          "76.69",
+          "71.22"
+        ],
+        [
+          "SBERT-NLI-base",
+          "70.97",
+          "76.53",
+          "73.19",
+          "79.09",
+          "74.30",
+          "77.03",
+          "72.91",
+          "74.89"
+        ],
+        [
+          "SBERT-NLI-large",
+          "72.27",
+          "78.46",
+          "74.90",
+          "80.99",
+          "76.25",
+          "79.23",
+          "73.75",
+          "76.55"
+        ],
+        [
+          "SRoBERTa-NLI-base",
+          "71.54",
+          "72.49",
+          "70.80",
+          "78.74",
+          "73.69",
+          "77.77",
+          "74.46",
+          "74.21"
+        ],
+        [
+          "SRoBERTa-NLI-large",
+          "74.53",
+          "77.00",
+          "73.18",
+          "81.85",
+          "76.82",
+          "79.10",
+          "74.29",
+          "76.68"
+        ]
+      ],
+      "csv_rows": [
+        [
+          "Model",
+          "STS12",
+          "STS13",
+          "STS14",
+          "STS15",
+          "STS16",
+          "STSb",
+          "SICK-R",
+          "Avg."
+        ],
+        [
+          "Avg. GloVe embeddings",
+          "55.14",
+          "70.66",
+          "59.73",
+          "68.25",
+          "63.66",
+          "58.02",
+          "53.76",
+          "61.32"
+        ],
+        [
+          "Avg. BERT embeddings",
+          "38.78",
+          "57.98",
+          "57.98",
+          "63.15",
+          "61.06",
+          "46.35",
+          "58.40",
+          "54.81"
+        ],
+        [
+          "BERT CLS-vector",
+          "20.16",
+          "30.01",
+          "20.09",
+          "36.88",
+          "38.08",
+          "16.50",
+          "42.63",
+          "29.19"
+        ],
+        [
+          "InferSent - Glove",
+          "52.86",
+          "66.75",
+          "62.15",
+          "72.77",
+          "66.87",
+          "68.03",
+          "65.65",
+          "65.01"
+        ],
+        [
+          "Universal Sentence Encoder",
+          "64.49",
+          "67.80",
+          "64.61",
+          "76.83",
+          "73.18",
+          "74.92",
+          "76.69",
+          "71.22"
+        ],
+        [
+          "SBERT-NLI-base",
+          "70.97",
+          "76.53",
+          "73.19",
+          "79.09",
+          "74.30",
+          "77.03",
+          "72.91",
+          "74.89"
+        ],
+        [
+          "SBERT-NLI-large",
+          "72.27",
+          "78.46",
+          "74.90",
+          "80.99",
+          "76.25",
+          "79.23",
+          "73.75",
+          "76.55"
+        ],
+        [
+          "SRoBERTa-NLI-base",
+          "71.54",
+          "72.49",
+          "70.80",
+          "78.74",
+          "73.69",
+          "77.77",
+          "74.46",
+          "74.21"
+        ],
+        [
+          "SRoBERTa-NLI-large",
+          "74.53",
+          "77.00",
+          "73.18",
+          "81.85",
+          "76.82",
+          "79.10",
+          "74.29",
+          "76.68"
+        ]
+      ],
+      "html_rows": [
+        [
+          "Model",
+          "STS12",
+          "STS13",
+          "STS14",
+          "STS15",
+          "STS16",
+          "STSb",
+          "SICK-R",
+          "Avg."
+        ],
+        [
+          "Avg. GloVe embeddings",
+          "55.14",
+          "70.66",
+          "59.73",
+          "68.25",
+          "63.66",
+          "58.02",
+          "53.76",
+          "61.32"
+        ],
+        [
+          "Avg. BERT embeddings",
+          "38.78",
+          "57.98",
+          "57.98",
+          "63.15",
+          "61.06",
+          "46.35",
+          "58.40",
+          "54.81"
+        ],
+        [
+          "BERT CLS-vector",
+          "20.16",
+          "30.01",
+          "20.09",
+          "36.88",
+          "38.08",
+          "16.50",
+          "42.63",
+          "29.19"
+        ],
+        [
+          "InferSent - Glove",
+          "52.86",
+          "66.75",
+          "62.15",
+          "72.77",
+          "66.87",
+          "68.03",
+          "65.65",
+          "65.01"
+        ],
+        [
+          "Universal Sentence Encoder",
+          "64.49",
+          "67.80",
+          "64.61",
+          "76.83",
+          "73.18",
+          "74.92",
+          "76.69",
+          "71.22"
+        ],
+        [
+          "SBERT-NLI-base",
+          "70.97",
+          "76.53",
+          "73.19",
+          "79.09",
+          "74.30",
+          "77.03",
+          "72.91",
+          "74.89"
+        ],
+        [
+          "SBERT-NLI-large",
+          "72.27",
+          "78.46",
+          "74.90",
+          "80.99",
+          "76.25",
+          "79.23",
+          "73.75",
+          "76.55"
+        ],
+        [
+          "SRoBERTa-NLI-base",
+          "71.54",
+          "72.49",
+          "70.80",
+          "78.74",
+          "73.69",
+          "77.77",
+          "74.46",
+          "74.21"
+        ],
+        [
+          "SRoBERTa-NLI-large",
+          "74.53",
+          "77.00",
+          "73.18",
+          "81.85",
+          "76.82",
+          "79.10",
+          "74.29",
+          "76.68"
+        ]
+      ],
+      "html_cells": [
+        [
+          {
+            "text": "Model",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "STS12",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "STS13",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "STS14",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "STS15",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "STS16",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "STSb",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "SICK-R",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "Avg.",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "Avg. GloVe embeddings",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "55.14",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "70.66",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "59.73",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "68.25",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "63.66",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "58.02",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "53.76",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "61.32",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Avg. BERT embeddings",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "38.78",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "57.98",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "57.98",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "63.15",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "61.06",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "46.35",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "58.40",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "54.81",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "BERT CLS-vector",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "20.16",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "30.01",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "20.09",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "36.88",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "38.08",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "16.50",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "42.63",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "29.19",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "InferSent - Glove",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "52.86",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "66.75",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "62.15",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "72.77",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "66.87",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "68.03",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "65.65",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "65.01",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Universal Sentence Encoder",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "64.49",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "67.80",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "64.61",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "76.83",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "73.18",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "74.92",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "76.69",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "71.22",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "SBERT-NLI-base",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "70.97",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "76.53",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "73.19",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "79.09",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "74.30",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "77.03",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "72.91",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "74.89",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "SBERT-NLI-large",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "72.27",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "78.46",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "74.90",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "80.99",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "76.25",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "79.23",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "73.75",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "76.55",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "SRoBERTa-NLI-base",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "71.54",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "72.49",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "70.80",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "78.74",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "73.69",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "77.77",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "74.46",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "74.21",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "SRoBERTa-NLI-large",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "74.53",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "77.00",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "73.18",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "81.85",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "76.82",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "79.10",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "74.29",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "76.68",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ]
+      ],
+      "csv_matches_auto_with_formula_escape": true,
+      "html_origin_grid_matches_auto": true,
+      "paths": {
+        "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/d1f17300-ee9e-479a-9fe6-f450b363767d/png-300.png",
+        "csv": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/d1f17300-ee9e-479a-9fe6-f450b363767d/csv.csv",
+        "html": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/d1f17300-ee9e-479a-9fe6-f450b363767d/html.html",
+        "segment_1": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/d1f17300-ee9e-479a-9fe6-f450b363767d/segment_1.png",
+        "thumbnail": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/d1f17300-ee9e-479a-9fe6-f450b363767d/thumbnail.png"
+      },
+      "auto_json": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/d1f17300-ee9e-479a-9fe6-f450b363767d/resource-auto.json"
+    },
+    {
+      "paper": "sentence-bert-emnlp2019",
+      "number": "2",
+      "resource_id": "3802417f-3787-44dc-ae60-03113584b21d",
+      "rows": [
+        [
+          "Model",
+          "Spearman"
+        ],
+        [
+          "Not trained for STS",
+          ""
+        ],
+        [
+          "Avg. GloVe embeddings Avg. BERT embeddings InferSent - GloVe Universal Sentence Encoder SBERT-NLI-base SBERT-NLI-large Trained on STS benchmark",
+          "58.02 46.35 68.03 74.92 77.03 79.23 dataset"
+        ],
+        [
+          "Trained on NLI data + STS benchmark data",
+          ""
+        ],
+        [
+          "BERT-NLI-STSb-base SBERT-NLI-STSb-base SRoBERTa-NLI-STSb-base",
+          "88.33 ± 0.19 85.35 ± 0.17 84.79 ± 0.38"
+        ],
+        [
+          "BERT-STSb-base SBERT-STSb-base SRoBERTa-STSb-base BERT-STSb-large SBERT-STSb-large SRoBERTa-STSb-large BERT-NLI-STSb-large",
+          "84.30 ± 0.76 84.67 ± 0.19 84.92 ± 0.34 85.64 ± 0.81 84.45 ± 0.43 85.02 ± 0.76"
+        ],
+        [
+          "SBERT-NLI-STSb-large SRoBERTa-NLI-STSb-large",
+          "88.77 ± 0.46 86.10 ± 0.13 86.15 ± 0.35"
+        ]
+      ],
+      "csv_rows": [
+        [
+          "Model",
+          "Spearman"
+        ],
+        [
+          "Not trained for STS",
+          ""
+        ],
+        [
+          "Avg. GloVe embeddings Avg. BERT embeddings InferSent - GloVe Universal Sentence Encoder SBERT-NLI-base SBERT-NLI-large Trained on STS benchmark",
+          "58.02 46.35 68.03 74.92 77.03 79.23 dataset"
+        ],
+        [
+          "Trained on NLI data + STS benchmark data",
+          ""
+        ],
+        [
+          "BERT-NLI-STSb-base SBERT-NLI-STSb-base SRoBERTa-NLI-STSb-base",
+          "88.33 ± 0.19 85.35 ± 0.17 84.79 ± 0.38"
+        ],
+        [
+          "BERT-STSb-base SBERT-STSb-base SRoBERTa-STSb-base BERT-STSb-large SBERT-STSb-large SRoBERTa-STSb-large BERT-NLI-STSb-large",
+          "84.30 ± 0.76 84.67 ± 0.19 84.92 ± 0.34 85.64 ± 0.81 84.45 ± 0.43 85.02 ± 0.76"
+        ],
+        [
+          "SBERT-NLI-STSb-large SRoBERTa-NLI-STSb-large",
+          "88.77 ± 0.46 86.10 ± 0.13 86.15 ± 0.35"
+        ]
+      ],
+      "html_rows": [
+        [
+          "Model",
+          "Spearman"
+        ],
+        [
+          "Not trained for STS",
+          ""
+        ],
+        [
+          "Avg. GloVe embeddings Avg. BERT embeddings InferSent - GloVe Universal Sentence Encoder SBERT-NLI-base SBERT-NLI-large Trained on STS benchmark",
+          "58.02 46.35 68.03 74.92 77.03 79.23 dataset"
+        ],
+        [
+          "Trained on NLI data + STS benchmark data",
+          ""
+        ],
+        [
+          "BERT-NLI-STSb-base SBERT-NLI-STSb-base SRoBERTa-NLI-STSb-base",
+          "88.33 ± 0.19 85.35 ± 0.17 84.79 ± 0.38"
+        ],
+        [
+          "BERT-STSb-base SBERT-STSb-base SRoBERTa-STSb-base BERT-STSb-large SBERT-STSb-large SRoBERTa-STSb-large BERT-NLI-STSb-large",
+          "84.30 ± 0.76 84.67 ± 0.19 84.92 ± 0.34 85.64 ± 0.81 84.45 ± 0.43 85.02 ± 0.76"
+        ],
+        [
+          "SBERT-NLI-STSb-large SRoBERTa-NLI-STSb-large",
+          "88.77 ± 0.46 86.10 ± 0.13 86.15 ± 0.35"
+        ]
+      ],
+      "html_cells": [
+        [
+          {
+            "text": "Model",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "Spearman",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "Not trained for STS",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Avg. GloVe embeddings Avg. BERT embeddings InferSent - GloVe Universal Sentence Encoder SBERT-NLI-base SBERT-NLI-large Trained on STS benchmark",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "58.02 46.35 68.03 74.92 77.03 79.23 dataset",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Trained on NLI data + STS benchmark data",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "BERT-NLI-STSb-base SBERT-NLI-STSb-base SRoBERTa-NLI-STSb-base",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "88.33 ± 0.19 85.35 ± 0.17 84.79 ± 0.38",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "BERT-STSb-base SBERT-STSb-base SRoBERTa-STSb-base BERT-STSb-large SBERT-STSb-large SRoBERTa-STSb-large BERT-NLI-STSb-large",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "84.30 ± 0.76 84.67 ± 0.19 84.92 ± 0.34 85.64 ± 0.81 84.45 ± 0.43 85.02 ± 0.76",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "SBERT-NLI-STSb-large SRoBERTa-NLI-STSb-large",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "88.77 ± 0.46 86.10 ± 0.13 86.15 ± 0.35",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ]
+      ],
+      "csv_matches_auto_with_formula_escape": true,
+      "html_origin_grid_matches_auto": true,
+      "paths": {
+        "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/3802417f-3787-44dc-ae60-03113584b21d/png-300.png",
+        "csv": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/3802417f-3787-44dc-ae60-03113584b21d/csv.csv",
+        "html": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/3802417f-3787-44dc-ae60-03113584b21d/html.html",
+        "segment_1": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/3802417f-3787-44dc-ae60-03113584b21d/segment_1.png",
+        "thumbnail": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/3802417f-3787-44dc-ae60-03113584b21d/thumbnail.png"
+      },
+      "auto_json": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/3802417f-3787-44dc-ae60-03113584b21d/resource-auto.json"
+    },
+    {
+      "paper": "sentence-bert-emnlp2019",
+      "number": "3",
+      "resource_id": "40cd0e50-feef-4ea8-ae79-f459cf917196",
+      "rows": [
+        [
+          "Model",
+          "r",
+          "ρ"
+        ],
+        [
+          "Unsupervised methods",
+          "",
+          ""
+        ],
+        [
+          "tf-idf",
+          "46.77",
+          "42.95"
+        ],
+        [
+          "Avg. GloVe embeddings",
+          "32.40",
+          "34.00"
+        ],
+        [
+          "InferSent - GloVe",
+          "27.08",
+          "26.63"
+        ],
+        [
+          "10-fold Cross-Validation",
+          "",
+          ""
+        ],
+        [
+          "SVR (Misra et al., 2016)",
+          "63.33",
+          "-"
+        ],
+        [
+          "BERT-AFS-base",
+          "77.20",
+          "74.84"
+        ],
+        [
+          "SBERT-AFS-base",
+          "76.57",
+          "74.13"
+        ],
+        [
+          "BERT-AFS-large",
+          "78.68",
+          "76.38"
+        ],
+        [
+          "SBERT-AFS-large",
+          "77.85",
+          "75.93"
+        ],
+        [
+          "Cross-Topic Evaluation",
+          "",
+          ""
+        ],
+        [
+          "BERT-AFS-base",
+          "58.49",
+          "57.23"
+        ],
+        [
+          "SBERT-AFS-base",
+          "52.34",
+          "50.65"
+        ],
+        [
+          "BERT-AFS-large",
+          "62.02",
+          "60.34"
+        ],
+        [
+          "SBERT-AFS-large",
+          "53.82",
+          "53.10"
+        ]
+      ],
+      "csv_rows": [
+        [
+          "Model",
+          "r",
+          "ρ"
+        ],
+        [
+          "Unsupervised methods",
+          "",
+          ""
+        ],
+        [
+          "tf-idf",
+          "46.77",
+          "42.95"
+        ],
+        [
+          "Avg. GloVe embeddings",
+          "32.40",
+          "34.00"
+        ],
+        [
+          "InferSent - GloVe",
+          "27.08",
+          "26.63"
+        ],
+        [
+          "10-fold Cross-Validation",
+          "",
+          ""
+        ],
+        [
+          "SVR (Misra et al., 2016)",
+          "63.33",
+          "'-"
+        ],
+        [
+          "BERT-AFS-base",
+          "77.20",
+          "74.84"
+        ],
+        [
+          "SBERT-AFS-base",
+          "76.57",
+          "74.13"
+        ],
+        [
+          "BERT-AFS-large",
+          "78.68",
+          "76.38"
+        ],
+        [
+          "SBERT-AFS-large",
+          "77.85",
+          "75.93"
+        ],
+        [
+          "Cross-Topic Evaluation",
+          "",
+          ""
+        ],
+        [
+          "BERT-AFS-base",
+          "58.49",
+          "57.23"
+        ],
+        [
+          "SBERT-AFS-base",
+          "52.34",
+          "50.65"
+        ],
+        [
+          "BERT-AFS-large",
+          "62.02",
+          "60.34"
+        ],
+        [
+          "SBERT-AFS-large",
+          "53.82",
+          "53.10"
+        ]
+      ],
+      "html_rows": [
+        [
+          "Model",
+          "r",
+          "ρ"
+        ],
+        [
+          "Unsupervised methods",
+          "",
+          ""
+        ],
+        [
+          "tf-idf",
+          "46.77",
+          "42.95"
+        ],
+        [
+          "Avg. GloVe embeddings",
+          "32.40",
+          "34.00"
+        ],
+        [
+          "InferSent - GloVe",
+          "27.08",
+          "26.63"
+        ],
+        [
+          "10-fold Cross-Validation",
+          "",
+          ""
+        ],
+        [
+          "SVR (Misra et al., 2016)",
+          "63.33",
+          "-"
+        ],
+        [
+          "BERT-AFS-base",
+          "77.20",
+          "74.84"
+        ],
+        [
+          "SBERT-AFS-base",
+          "76.57",
+          "74.13"
+        ],
+        [
+          "BERT-AFS-large",
+          "78.68",
+          "76.38"
+        ],
+        [
+          "SBERT-AFS-large",
+          "77.85",
+          "75.93"
+        ],
+        [
+          "Cross-Topic Evaluation",
+          "",
+          ""
+        ],
+        [
+          "BERT-AFS-base",
+          "58.49",
+          "57.23"
+        ],
+        [
+          "SBERT-AFS-base",
+          "52.34",
+          "50.65"
+        ],
+        [
+          "BERT-AFS-large",
+          "62.02",
+          "60.34"
+        ],
+        [
+          "SBERT-AFS-large",
+          "53.82",
+          "53.10"
+        ]
+      ],
+      "html_cells": [
+        [
+          {
+            "text": "Model",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "r",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "ρ",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "Unsupervised methods",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "tf-idf",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "46.77",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "42.95",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Avg. GloVe embeddings",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "32.40",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "34.00",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "InferSent - GloVe",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "27.08",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "26.63",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "10-fold Cross-Validation",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "SVR (Misra et al., 2016)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "63.33",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "BERT-AFS-base",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "77.20",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "74.84",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "SBERT-AFS-base",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "76.57",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "74.13",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "BERT-AFS-large",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "78.68",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "76.38",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "SBERT-AFS-large",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "77.85",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "75.93",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Cross-Topic Evaluation",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "BERT-AFS-base",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "58.49",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "57.23",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "SBERT-AFS-base",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "52.34",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "50.65",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "BERT-AFS-large",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "62.02",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "60.34",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "SBERT-AFS-large",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "53.82",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "53.10",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ]
+      ],
+      "csv_matches_auto_with_formula_escape": true,
+      "html_origin_grid_matches_auto": true,
+      "paths": {
+        "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/40cd0e50-feef-4ea8-ae79-f459cf917196/png-300.png",
+        "csv": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/40cd0e50-feef-4ea8-ae79-f459cf917196/csv.csv",
+        "html": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/40cd0e50-feef-4ea8-ae79-f459cf917196/html.html",
+        "segment_1": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/40cd0e50-feef-4ea8-ae79-f459cf917196/segment_1.png",
+        "thumbnail": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/40cd0e50-feef-4ea8-ae79-f459cf917196/thumbnail.png"
+      },
+      "auto_json": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/40cd0e50-feef-4ea8-ae79-f459cf917196/resource-auto.json"
+    },
+    {
+      "paper": "sentence-bert-emnlp2019",
+      "number": "4",
+      "resource_id": "2cd155e7-10ec-45fa-9413-3d92a200321e",
+      "rows": [
+        [
+          "Model",
+          "Accuracy"
+        ],
+        [
+          "mean-vectors",
+          "0.65"
+        ],
+        [
+          "skip-thoughts-CS",
+          "0.62"
+        ],
+        [
+          "Dor et al.",
+          "0.74"
+        ],
+        [
+          "SBERT-WikiSec-base",
+          "0.8042"
+        ],
+        [
+          "SBERT-WikiSec-large",
+          "0.8078"
+        ],
+        [
+          "SRoBERTa-WikiSec-base",
+          "0.7945"
+        ],
+        [
+          "SRoBERTa-WikiSec-large",
+          "0.7973"
+        ]
+      ],
+      "csv_rows": [
+        [
+          "Model",
+          "Accuracy"
+        ],
+        [
+          "mean-vectors",
+          "0.65"
+        ],
+        [
+          "skip-thoughts-CS",
+          "0.62"
+        ],
+        [
+          "Dor et al.",
+          "0.74"
+        ],
+        [
+          "SBERT-WikiSec-base",
+          "0.8042"
+        ],
+        [
+          "SBERT-WikiSec-large",
+          "0.8078"
+        ],
+        [
+          "SRoBERTa-WikiSec-base",
+          "0.7945"
+        ],
+        [
+          "SRoBERTa-WikiSec-large",
+          "0.7973"
+        ]
+      ],
+      "html_rows": [
+        [
+          "Model",
+          "Accuracy"
+        ],
+        [
+          "mean-vectors",
+          "0.65"
+        ],
+        [
+          "skip-thoughts-CS",
+          "0.62"
+        ],
+        [
+          "Dor et al.",
+          "0.74"
+        ],
+        [
+          "SBERT-WikiSec-base",
+          "0.8042"
+        ],
+        [
+          "SBERT-WikiSec-large",
+          "0.8078"
+        ],
+        [
+          "SRoBERTa-WikiSec-base",
+          "0.7945"
+        ],
+        [
+          "SRoBERTa-WikiSec-large",
+          "0.7973"
+        ]
+      ],
+      "html_cells": [
+        [
+          {
+            "text": "Model",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "Accuracy",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "mean-vectors",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "0.65",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "skip-thoughts-CS",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "0.62",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Dor et al.",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "0.74",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "SBERT-WikiSec-base",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "0.8042",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "SBERT-WikiSec-large",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "0.8078",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "SRoBERTa-WikiSec-base",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "0.7945",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "SRoBERTa-WikiSec-large",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "0.7973",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ]
+      ],
+      "csv_matches_auto_with_formula_escape": true,
+      "html_origin_grid_matches_auto": true,
+      "paths": {
+        "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/2cd155e7-10ec-45fa-9413-3d92a200321e/png-300.png",
+        "csv": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/2cd155e7-10ec-45fa-9413-3d92a200321e/csv.csv",
+        "html": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/2cd155e7-10ec-45fa-9413-3d92a200321e/html.html",
+        "segment_1": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/2cd155e7-10ec-45fa-9413-3d92a200321e/segment_1.png",
+        "thumbnail": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/2cd155e7-10ec-45fa-9413-3d92a200321e/thumbnail.png"
+      },
+      "auto_json": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/2cd155e7-10ec-45fa-9413-3d92a200321e/resource-auto.json"
+    },
+    {
+      "paper": "sentence-bert-emnlp2019",
+      "number": "5",
+      "resource_id": "e49a6774-8a00-4f65-8cb1-cb9ed7b7347f",
+      "rows": [
+        [
+          "Model",
+          "MR",
+          "CR",
+          "SUBJ",
+          "MPQA",
+          "SST",
+          "TREC",
+          "MRPC",
+          "Avg."
+        ],
+        [
+          "Avg. GloVe embeddings",
+          "77.25",
+          "78.30",
+          "91.17",
+          "87.85",
+          "80.18",
+          "83.0",
+          "72.87",
+          "81.52"
+        ],
+        [
+          "Avg. fast-text embeddings",
+          "77.96",
+          "79.23",
+          "91.68",
+          "87.81",
+          "82.15",
+          "83.6",
+          "74.49",
+          "82.42"
+        ],
+        [
+          "Avg. BERT embeddings",
+          "78.66",
+          "86.25",
+          "94.37",
+          "88.66",
+          "84.40",
+          "92.8",
+          "69.45",
+          "84.94"
+        ],
+        [
+          "BERT CLS-vector",
+          "78.68",
+          "84.85",
+          "94.21",
+          "88.23",
+          "84.13",
+          "91.4",
+          "71.13",
+          "84.66"
+        ],
+        [
+          "InferSent - GloVe",
+          "81.57",
+          "86.54",
+          "92.50",
+          "90.38",
+          "84.18",
+          "88.2",
+          "75.77",
+          "85.59"
+        ],
+        [
+          "Universal Sentence Encoder",
+          "80.09",
+          "85.19",
+          "93.98",
+          "86.70",
+          "86.38",
+          "93.2",
+          "70.14",
+          "85.10"
+        ],
+        [
+          "SBERT-NLI-base",
+          "83.64",
+          "89.43",
+          "94.39",
+          "89.86",
+          "88.96",
+          "89.6",
+          "76.00",
+          "87.41"
+        ],
+        [
+          "SBERT-NLI-large",
+          "84.88",
+          "90.07",
+          "94.52",
+          "90.33",
+          "90.66",
+          "87.4",
+          "75.94",
+          "87.69"
+        ]
+      ],
+      "csv_rows": [
+        [
+          "Model",
+          "MR",
+          "CR",
+          "SUBJ",
+          "MPQA",
+          "SST",
+          "TREC",
+          "MRPC",
+          "Avg."
+        ],
+        [
+          "Avg. GloVe embeddings",
+          "77.25",
+          "78.30",
+          "91.17",
+          "87.85",
+          "80.18",
+          "83.0",
+          "72.87",
+          "81.52"
+        ],
+        [
+          "Avg. fast-text embeddings",
+          "77.96",
+          "79.23",
+          "91.68",
+          "87.81",
+          "82.15",
+          "83.6",
+          "74.49",
+          "82.42"
+        ],
+        [
+          "Avg. BERT embeddings",
+          "78.66",
+          "86.25",
+          "94.37",
+          "88.66",
+          "84.40",
+          "92.8",
+          "69.45",
+          "84.94"
+        ],
+        [
+          "BERT CLS-vector",
+          "78.68",
+          "84.85",
+          "94.21",
+          "88.23",
+          "84.13",
+          "91.4",
+          "71.13",
+          "84.66"
+        ],
+        [
+          "InferSent - GloVe",
+          "81.57",
+          "86.54",
+          "92.50",
+          "90.38",
+          "84.18",
+          "88.2",
+          "75.77",
+          "85.59"
+        ],
+        [
+          "Universal Sentence Encoder",
+          "80.09",
+          "85.19",
+          "93.98",
+          "86.70",
+          "86.38",
+          "93.2",
+          "70.14",
+          "85.10"
+        ],
+        [
+          "SBERT-NLI-base",
+          "83.64",
+          "89.43",
+          "94.39",
+          "89.86",
+          "88.96",
+          "89.6",
+          "76.00",
+          "87.41"
+        ],
+        [
+          "SBERT-NLI-large",
+          "84.88",
+          "90.07",
+          "94.52",
+          "90.33",
+          "90.66",
+          "87.4",
+          "75.94",
+          "87.69"
+        ]
+      ],
+      "html_rows": [
+        [
+          "Model",
+          "MR",
+          "CR",
+          "SUBJ",
+          "MPQA",
+          "SST",
+          "TREC",
+          "MRPC",
+          "Avg."
+        ],
+        [
+          "Avg. GloVe embeddings",
+          "77.25",
+          "78.30",
+          "91.17",
+          "87.85",
+          "80.18",
+          "83.0",
+          "72.87",
+          "81.52"
+        ],
+        [
+          "Avg. fast-text embeddings",
+          "77.96",
+          "79.23",
+          "91.68",
+          "87.81",
+          "82.15",
+          "83.6",
+          "74.49",
+          "82.42"
+        ],
+        [
+          "Avg. BERT embeddings",
+          "78.66",
+          "86.25",
+          "94.37",
+          "88.66",
+          "84.40",
+          "92.8",
+          "69.45",
+          "84.94"
+        ],
+        [
+          "BERT CLS-vector",
+          "78.68",
+          "84.85",
+          "94.21",
+          "88.23",
+          "84.13",
+          "91.4",
+          "71.13",
+          "84.66"
+        ],
+        [
+          "InferSent - GloVe",
+          "81.57",
+          "86.54",
+          "92.50",
+          "90.38",
+          "84.18",
+          "88.2",
+          "75.77",
+          "85.59"
+        ],
+        [
+          "Universal Sentence Encoder",
+          "80.09",
+          "85.19",
+          "93.98",
+          "86.70",
+          "86.38",
+          "93.2",
+          "70.14",
+          "85.10"
+        ],
+        [
+          "SBERT-NLI-base",
+          "83.64",
+          "89.43",
+          "94.39",
+          "89.86",
+          "88.96",
+          "89.6",
+          "76.00",
+          "87.41"
+        ],
+        [
+          "SBERT-NLI-large",
+          "84.88",
+          "90.07",
+          "94.52",
+          "90.33",
+          "90.66",
+          "87.4",
+          "75.94",
+          "87.69"
+        ]
+      ],
+      "html_cells": [
+        [
+          {
+            "text": "Model",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "MR",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "CR",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "SUBJ",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "MPQA",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "SST",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "TREC",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "MRPC",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "Avg.",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "Avg. GloVe embeddings",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "77.25",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "78.30",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "91.17",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "87.85",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "80.18",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "83.0",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "72.87",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "81.52",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Avg. fast-text embeddings",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "77.96",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "79.23",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "91.68",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "87.81",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "82.15",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "83.6",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "74.49",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "82.42",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Avg. BERT embeddings",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "78.66",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "86.25",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "94.37",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "88.66",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "84.40",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "92.8",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "69.45",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "84.94",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "BERT CLS-vector",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "78.68",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "84.85",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "94.21",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "88.23",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "84.13",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "91.4",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "71.13",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "84.66",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "InferSent - GloVe",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "81.57",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "86.54",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "92.50",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "90.38",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "84.18",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "88.2",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "75.77",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "85.59",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Universal Sentence Encoder",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "80.09",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "85.19",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "93.98",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "86.70",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "86.38",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "93.2",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "70.14",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "85.10",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "SBERT-NLI-base",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "83.64",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "89.43",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "94.39",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "89.86",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "88.96",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "89.6",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "76.00",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "87.41",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "SBERT-NLI-large",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "84.88",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "90.07",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "94.52",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "90.33",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "90.66",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "87.4",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "75.94",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "87.69",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ]
+      ],
+      "csv_matches_auto_with_formula_escape": true,
+      "html_origin_grid_matches_auto": true,
+      "paths": {
+        "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/e49a6774-8a00-4f65-8cb1-cb9ed7b7347f/png-300.png",
+        "csv": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/e49a6774-8a00-4f65-8cb1-cb9ed7b7347f/csv.csv",
+        "html": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/e49a6774-8a00-4f65-8cb1-cb9ed7b7347f/html.html",
+        "segment_1": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/e49a6774-8a00-4f65-8cb1-cb9ed7b7347f/segment_1.png",
+        "thumbnail": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/e49a6774-8a00-4f65-8cb1-cb9ed7b7347f/thumbnail.png"
+      },
+      "auto_json": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/e49a6774-8a00-4f65-8cb1-cb9ed7b7347f/resource-auto.json"
+    },
+    {
+      "paper": "sentence-bert-emnlp2019",
+      "number": "6",
+      "resource_id": "88534715-4ac9-410d-9f6f-401c1f044e3e",
+      "rows": [
+        [
+          "",
+          "NLI",
+          "STSb"
+        ],
+        [
+          "Pooling Strategy",
+          "",
+          ""
+        ],
+        [
+          "MEAN",
+          "80.78",
+          "87.44"
+        ],
+        [
+          "MAX",
+          "79.07",
+          "69.92"
+        ],
+        [
+          "CLS",
+          "79.80",
+          "86.62"
+        ],
+        [
+          "Concatenation",
+          "",
+          ""
+        ],
+        [
+          "(u, v)",
+          "66.04",
+          "-"
+        ],
+        [
+          "(|u - v|)",
+          "69.78",
+          "-"
+        ],
+        [
+          "(u ∗ v)",
+          "70.54",
+          "-"
+        ],
+        [
+          "(|u - v|, u ∗ v)",
+          "78.37",
+          "-"
+        ],
+        [
+          "(u, v, u ∗ v)",
+          "77.44",
+          "-"
+        ],
+        [
+          "(u, v, |u - v|)",
+          "80.78",
+          "-"
+        ],
+        [
+          "(u, v, |u- v|, u ∗ v)",
+          "80.44",
+          "-"
+        ]
+      ],
+      "csv_rows": [
+        [
+          "",
+          "NLI",
+          "STSb"
+        ],
+        [
+          "Pooling Strategy",
+          "",
+          ""
+        ],
+        [
+          "MEAN",
+          "80.78",
+          "87.44"
+        ],
+        [
+          "MAX",
+          "79.07",
+          "69.92"
+        ],
+        [
+          "CLS",
+          "79.80",
+          "86.62"
+        ],
+        [
+          "Concatenation",
+          "",
+          ""
+        ],
+        [
+          "(u, v)",
+          "66.04",
+          "'-"
+        ],
+        [
+          "(|u - v|)",
+          "69.78",
+          "'-"
+        ],
+        [
+          "(u ∗ v)",
+          "70.54",
+          "'-"
+        ],
+        [
+          "(|u - v|, u ∗ v)",
+          "78.37",
+          "'-"
+        ],
+        [
+          "(u, v, u ∗ v)",
+          "77.44",
+          "'-"
+        ],
+        [
+          "(u, v, |u - v|)",
+          "80.78",
+          "'-"
+        ],
+        [
+          "(u, v, |u- v|, u ∗ v)",
+          "80.44",
+          "'-"
+        ]
+      ],
+      "html_rows": [
+        [
+          "",
+          "NLI",
+          "STSb"
+        ],
+        [
+          "Pooling Strategy",
+          "",
+          ""
+        ],
+        [
+          "MEAN",
+          "80.78",
+          "87.44"
+        ],
+        [
+          "MAX",
+          "79.07",
+          "69.92"
+        ],
+        [
+          "CLS",
+          "79.80",
+          "86.62"
+        ],
+        [
+          "Concatenation",
+          "",
+          ""
+        ],
+        [
+          "(u, v)",
+          "66.04",
+          "-"
+        ],
+        [
+          "(|u - v|)",
+          "69.78",
+          "-"
+        ],
+        [
+          "(u ∗ v)",
+          "70.54",
+          "-"
+        ],
+        [
+          "(|u - v|, u ∗ v)",
+          "78.37",
+          "-"
+        ],
+        [
+          "(u, v, u ∗ v)",
+          "77.44",
+          "-"
+        ],
+        [
+          "(u, v, |u - v|)",
+          "80.78",
+          "-"
+        ],
+        [
+          "(u, v, |u- v|, u ∗ v)",
+          "80.44",
+          "-"
+        ]
+      ],
+      "html_cells": [
+        [
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "NLI",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "STSb",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "Pooling Strategy",
+            "row_span": 1,
+            "col_span": 3,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "MEAN",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "80.78",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "87.44",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "MAX",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "79.07",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "69.92",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "CLS",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "79.80",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "86.62",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Concatenation",
+            "row_span": 1,
+            "col_span": 3,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "(u, v)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "66.04",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "(|u - v|)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "69.78",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "(u ∗ v)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "70.54",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "(|u - v|, u ∗ v)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "78.37",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "(u, v, u ∗ v)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "77.44",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "(u, v, |u - v|)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "80.78",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "(u, v, |u- v|, u ∗ v)",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "80.44",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ]
+      ],
+      "csv_matches_auto_with_formula_escape": true,
+      "html_origin_grid_matches_auto": true,
+      "paths": {
+        "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/88534715-4ac9-410d-9f6f-401c1f044e3e/png-300.png",
+        "csv": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/88534715-4ac9-410d-9f6f-401c1f044e3e/csv.csv",
+        "html": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/88534715-4ac9-410d-9f6f-401c1f044e3e/html.html",
+        "segment_1": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/88534715-4ac9-410d-9f6f-401c1f044e3e/segment_1.png",
+        "thumbnail": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/88534715-4ac9-410d-9f6f-401c1f044e3e/thumbnail.png"
+      },
+      "auto_json": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/88534715-4ac9-410d-9f6f-401c1f044e3e/resource-auto.json"
+    },
+    {
+      "paper": "sentence-bert-emnlp2019",
+      "number": "7",
+      "resource_id": "a81ea983-6007-4b18-ae49-f319da0a4e54",
+      "rows": [
+        [
+          "Model",
+          "CPU",
+          "GPU"
+        ],
+        [
+          "Avg. GloVe embeddings",
+          "6469",
+          "-"
+        ],
+        [
+          "InferSent",
+          "137",
+          "1876"
+        ],
+        [
+          "Universal Sentence Encoder",
+          "67",
+          "1318"
+        ],
+        [
+          "SBERT-base",
+          "44",
+          "1378"
+        ],
+        [
+          "SBERT-base - smart batching",
+          "83",
+          "2042"
+        ]
+      ],
+      "csv_rows": [
+        [
+          "Model",
+          "CPU",
+          "GPU"
+        ],
+        [
+          "Avg. GloVe embeddings",
+          "6469",
+          "'-"
+        ],
+        [
+          "InferSent",
+          "137",
+          "1876"
+        ],
+        [
+          "Universal Sentence Encoder",
+          "67",
+          "1318"
+        ],
+        [
+          "SBERT-base",
+          "44",
+          "1378"
+        ],
+        [
+          "SBERT-base - smart batching",
+          "83",
+          "2042"
+        ]
+      ],
+      "html_rows": [
+        [
+          "Model",
+          "CPU",
+          "GPU"
+        ],
+        [
+          "Avg. GloVe embeddings",
+          "6469",
+          "-"
+        ],
+        [
+          "InferSent",
+          "137",
+          "1876"
+        ],
+        [
+          "Universal Sentence Encoder",
+          "67",
+          "1318"
+        ],
+        [
+          "SBERT-base",
+          "44",
+          "1378"
+        ],
+        [
+          "SBERT-base - smart batching",
+          "83",
+          "2042"
+        ]
+      ],
+      "html_cells": [
+        [
+          {
+            "text": "Model",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "CPU",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "GPU",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "Avg. GloVe embeddings",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "6469",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "-",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "InferSent",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "137",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "1876",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "Universal Sentence Encoder",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "67",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "1318",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "SBERT-base",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "44",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "1378",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "SBERT-base - smart batching",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "83",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "2042",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ]
+      ],
+      "csv_matches_auto_with_formula_escape": true,
+      "html_origin_grid_matches_auto": true,
+      "paths": {
+        "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/a81ea983-6007-4b18-ae49-f319da0a4e54/png-300.png",
+        "csv": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/a81ea983-6007-4b18-ae49-f319da0a4e54/csv.csv",
+        "html": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/a81ea983-6007-4b18-ae49-f319da0a4e54/html.html",
+        "segment_1": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/a81ea983-6007-4b18-ae49-f319da0a4e54/segment_1.png",
+        "thumbnail": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/a81ea983-6007-4b18-ae49-f319da0a4e54/thumbnail.png"
+      },
+      "auto_json": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/resources/a81ea983-6007-4b18-ae49-f319da0a4e54/resource-auto.json"
+    },
+    {
+      "paper": "river-jmlr2021",
+      "number": "1",
+      "resource_id": "841b1cdf-e2e1-41d8-b6d7-cc06d6d44ec1",
+      "rows": [
+        [
+          "model",
+          "scikit-learn",
+          "Creme",
+          "scikit-multiflow",
+          "River"
+        ],
+        [
+          "GNB",
+          "73.22",
+          "72.87",
+          "73.30",
+          "72.87"
+        ],
+        [
+          "LR",
+          "68.01",
+          "67.97",
+          "NA",
+          "67.97"
+        ],
+        [
+          "HT",
+          "NA",
+          "74.48",
+          "75.82",
+          "75.55"
+        ]
+      ],
+      "csv_rows": [
+        [
+          "model",
+          "scikit-learn",
+          "Creme",
+          "scikit-multiflow",
+          "River"
+        ],
+        [
+          "GNB",
+          "73.22",
+          "72.87",
+          "73.30",
+          "72.87"
+        ],
+        [
+          "LR",
+          "68.01",
+          "67.97",
+          "NA",
+          "67.97"
+        ],
+        [
+          "HT",
+          "NA",
+          "74.48",
+          "75.82",
+          "75.55"
+        ]
+      ],
+      "html_rows": [
+        [
+          "model",
+          "scikit-learn",
+          "Creme",
+          "scikit-multiflow",
+          "River"
+        ],
+        [
+          "GNB",
+          "73.22",
+          "72.87",
+          "73.30",
+          "72.87"
+        ],
+        [
+          "LR",
+          "68.01",
+          "67.97",
+          "NA",
+          "67.97"
+        ],
+        [
+          "HT",
+          "NA",
+          "74.48",
+          "75.82",
+          "75.55"
+        ]
+      ],
+      "html_cells": [
+        [
+          {
+            "text": "model",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "scikit-learn",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "Creme",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "scikit-multiflow",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "River",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "GNB",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "73.22",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "72.87",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "73.30",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "72.87",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "LR",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "68.01",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "67.97",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "NA",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "67.97",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "HT",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "NA",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "74.48",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "75.82",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "75.55",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ]
+      ],
+      "csv_matches_auto_with_formula_escape": true,
+      "html_origin_grid_matches_auto": true,
+      "paths": {
+        "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/004-river-jmlr2021/resources/841b1cdf-e2e1-41d8-b6d7-cc06d6d44ec1/png-300.png",
+        "csv": "artifacts/real-corpus/runs/20261009T115143Z-32839973/004-river-jmlr2021/resources/841b1cdf-e2e1-41d8-b6d7-cc06d6d44ec1/csv.csv",
+        "html": "artifacts/real-corpus/runs/20261009T115143Z-32839973/004-river-jmlr2021/resources/841b1cdf-e2e1-41d8-b6d7-cc06d6d44ec1/html.html",
+        "segment_1": "artifacts/real-corpus/runs/20261009T115143Z-32839973/004-river-jmlr2021/resources/841b1cdf-e2e1-41d8-b6d7-cc06d6d44ec1/segment_1.png",
+        "thumbnail": "artifacts/real-corpus/runs/20261009T115143Z-32839973/004-river-jmlr2021/resources/841b1cdf-e2e1-41d8-b6d7-cc06d6d44ec1/thumbnail.png"
+      },
+      "auto_json": "artifacts/real-corpus/runs/20261009T115143Z-32839973/004-river-jmlr2021/resources/841b1cdf-e2e1-41d8-b6d7-cc06d6d44ec1/resource-auto.json"
+    },
+    {
+      "paper": "river-jmlr2021",
+      "number": "2",
+      "resource_id": "d5123576-e145-499d-b13b-e9e2b89acd16",
+      "rows": [
+        [
+          "",
+          "scikit-learn",
+          "",
+          "Creme",
+          "",
+          "scikit-multiflow",
+          "",
+          "River",
+          ""
+        ],
+        [
+          "model",
+          "learn",
+          "predict",
+          "learn",
+          "predict",
+          "learn",
+          "predict",
+          "learn",
+          "predict"
+        ],
+        [
+          "GNB",
+          "10.94±0.26",
+          "5.43±0.10",
+          "0.32±0.01",
+          "3.22±0.09",
+          "1.39±0.02",
+          "2.91±0.03",
+          "0.32±0.01",
+          "3.27±0.13"
+        ],
+        [
+          "LR",
+          "8.72±0.14",
+          "3.15±0.06",
+          "2.03±0.04",
+          "0.42±0.01",
+          "NA",
+          "NA",
+          "0.95±0.06",
+          "0.18±0.01"
+        ],
+        [
+          "HT",
+          "NA",
+          "NA",
+          "2.66±0.06",
+          "0.48±0.02",
+          "2.95±0.06",
+          "2.21±0.03",
+          "0.99±0.04",
+          "0.65±0.03"
+        ]
+      ],
+      "csv_rows": [
+        [
+          "",
+          "scikit-learn",
+          "",
+          "Creme",
+          "",
+          "scikit-multiflow",
+          "",
+          "River",
+          ""
+        ],
+        [
+          "model",
+          "learn",
+          "predict",
+          "learn",
+          "predict",
+          "learn",
+          "predict",
+          "learn",
+          "predict"
+        ],
+        [
+          "GNB",
+          "10.94±0.26",
+          "5.43±0.10",
+          "0.32±0.01",
+          "3.22±0.09",
+          "1.39±0.02",
+          "2.91±0.03",
+          "0.32±0.01",
+          "3.27±0.13"
+        ],
+        [
+          "LR",
+          "8.72±0.14",
+          "3.15±0.06",
+          "2.03±0.04",
+          "0.42±0.01",
+          "NA",
+          "NA",
+          "0.95±0.06",
+          "0.18±0.01"
+        ],
+        [
+          "HT",
+          "NA",
+          "NA",
+          "2.66±0.06",
+          "0.48±0.02",
+          "2.95±0.06",
+          "2.21±0.03",
+          "0.99±0.04",
+          "0.65±0.03"
+        ]
+      ],
+      "html_rows": [
+        [
+          "",
+          "scikit-learn",
+          "",
+          "Creme",
+          "",
+          "scikit-multiflow",
+          "",
+          "River",
+          ""
+        ],
+        [
+          "model",
+          "learn",
+          "predict",
+          "learn",
+          "predict",
+          "learn",
+          "predict",
+          "learn",
+          "predict"
+        ],
+        [
+          "GNB",
+          "10.94±0.26",
+          "5.43±0.10",
+          "0.32±0.01",
+          "3.22±0.09",
+          "1.39±0.02",
+          "2.91±0.03",
+          "0.32±0.01",
+          "3.27±0.13"
+        ],
+        [
+          "LR",
+          "8.72±0.14",
+          "3.15±0.06",
+          "2.03±0.04",
+          "0.42±0.01",
+          "NA",
+          "NA",
+          "0.95±0.06",
+          "0.18±0.01"
+        ],
+        [
+          "HT",
+          "NA",
+          "NA",
+          "2.66±0.06",
+          "0.48±0.02",
+          "2.95±0.06",
+          "2.21±0.03",
+          "0.99±0.04",
+          "0.65±0.03"
+        ]
+      ],
+      "html_cells": [
+        [
+          {
+            "text": "",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "scikit-learn",
+            "row_span": 1,
+            "col_span": 2,
+            "header": true
+          },
+          {
+            "text": "Creme",
+            "row_span": 1,
+            "col_span": 2,
+            "header": true
+          },
+          {
+            "text": "scikit-multiflow",
+            "row_span": 1,
+            "col_span": 2,
+            "header": true
+          },
+          {
+            "text": "River",
+            "row_span": 1,
+            "col_span": 2,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "model",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "learn",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "predict",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "learn",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "predict",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "learn",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "predict",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "learn",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          },
+          {
+            "text": "predict",
+            "row_span": 1,
+            "col_span": 1,
+            "header": true
+          }
+        ],
+        [
+          {
+            "text": "GNB",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "10.94±0.26",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "5.43±0.10",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "0.32±0.01",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "3.22±0.09",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "1.39±0.02",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "2.91±0.03",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "0.32±0.01",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "3.27±0.13",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "LR",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "8.72±0.14",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "3.15±0.06",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "2.03±0.04",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "0.42±0.01",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "NA",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "NA",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "0.95±0.06",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "0.18±0.01",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ],
+        [
+          {
+            "text": "HT",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "NA",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "NA",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "2.66±0.06",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "0.48±0.02",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "2.95±0.06",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "2.21±0.03",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "0.99±0.04",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          },
+          {
+            "text": "0.65±0.03",
+            "row_span": 1,
+            "col_span": 1,
+            "header": false
+          }
+        ]
+      ],
+      "csv_matches_auto_with_formula_escape": true,
+      "html_origin_grid_matches_auto": true,
+      "paths": {
+        "png": "artifacts/real-corpus/runs/20261009T115143Z-32839973/004-river-jmlr2021/resources/d5123576-e145-499d-b13b-e9e2b89acd16/png-300.png",
+        "csv": "artifacts/real-corpus/runs/20261009T115143Z-32839973/004-river-jmlr2021/resources/d5123576-e145-499d-b13b-e9e2b89acd16/csv.csv",
+        "html": "artifacts/real-corpus/runs/20261009T115143Z-32839973/004-river-jmlr2021/resources/d5123576-e145-499d-b13b-e9e2b89acd16/html.html",
+        "segment_1": "artifacts/real-corpus/runs/20261009T115143Z-32839973/004-river-jmlr2021/resources/d5123576-e145-499d-b13b-e9e2b89acd16/segment_1.png",
+        "thumbnail": "artifacts/real-corpus/runs/20261009T115143Z-32839973/004-river-jmlr2021/resources/d5123576-e145-499d-b13b-e9e2b89acd16/thumbnail.png"
+      },
+      "auto_json": "artifacts/real-corpus/runs/20261009T115143Z-32839973/004-river-jmlr2021/resources/d5123576-e145-499d-b13b-e9e2b89acd16/resource-auto.json"
+    }
+  ]
+}

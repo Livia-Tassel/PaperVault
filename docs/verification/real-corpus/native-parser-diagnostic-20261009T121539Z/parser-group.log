@@ -1,0 +1,39 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.8, pytest-9.1.1, pluggy-1.6.0 -- D:\project\PaperVault\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\project\PaperVault
+configfile: pyproject.toml
+plugins: anyio-4.15.1, cov-7.1.0
+collecting ... collected 5 items
+
+tests/parser/test_real_parser.py::test_real_cpu_figures_tables_and_source_locations[academic.pdf] Loading weights:   0%|          | 0/770 [00:00<?, ?it/s]Loading weights:  14%|█▍        | 107/770 [00:00<00:00, 997.12it/s]Loading weights: 100%|██████████| 770/770 [00:00<00:00, 3837.39it/s]
+PASSED
+tests/parser/test_real_parser.py::test_real_cpu_figures_tables_and_source_locations[two-column.pdf] Loading weights:   0%|          | 0/770 [00:00<?, ?it/s]Loading weights:  26%|██▌       | 197/770 [00:00<00:00, 1913.13it/s]Loading weights: 100%|██████████| 770/770 [00:00<00:00, 3856.85it/s]
+PASSED
+tests/parser/test_real_parser.py::test_real_embedded_image_and_merged_table_headers Loading weights:   0%|          | 0/770 [00:00<?, ?it/s]Loading weights:  15%|█▍        | 112/770 [00:00<00:00, 1065.33it/s]Loading weights:  85%|████████▍ | 652/770 [00:00<00:00, 3476.41it/s]Loading weights: 100%|██████████| 770/770 [00:00<00:00, 3604.21it/s]
+PASSED
+tests/parser/test_real_parser.py::test_real_scanned_page_reports_no_ocr_without_fabricating_text Loading weights:   0%|          | 0/770 [00:00<?, ?it/s]Loading weights:   9%|▊         | 67/770 [00:00<00:01, 650.73it/s]Loading weights:  44%|████▎     | 335/770 [00:00<00:00, 1813.60it/s]Loading weights: 100%|██████████| 770/770 [00:00<00:00, 3465.53it/s]
+PASSED
+tests/parser/test_real_parser.py::test_real_figure_preserves_original_jpeg_bytes_when_match_is_unique Loading weights:   0%|          | 0/770 [00:00<?, ?it/s]Loading weights:  14%|█▍        | 110/770 [00:00<00:00, 1061.69it/s]Loading weights:  39%|███▉      | 300/770 [00:00<00:00, 1535.71it/s]Loading weights: 100%|██████████| 770/770 [00:00<00:00, 3253.24it/s]
+PASSED
+
+============================== warnings summary ===============================
+tests/parser/test_real_parser.py::test_real_cpu_figures_tables_and_source_locations[academic.pdf]
+tests/parser/test_real_parser.py::test_real_cpu_figures_tables_and_source_locations[two-column.pdf]
+tests/parser/test_real_parser.py::test_real_embedded_image_and_merged_table_headers
+tests/parser/test_real_parser.py::test_real_scanned_page_reports_no_ocr_without_fabricating_text
+tests/parser/test_real_parser.py::test_real_figure_preserves_original_jpeg_bytes_when_match_is_unique
+  D:\project\PaperVault\.venv\Lib\site-packages\pydantic\main.py:587: DeprecationWarning: `force_full_page_ocr` is deprecated; set `mode=OcrMode.FULL_PAGE` instead.
+    return self.__pydantic_serializer__.to_json(
+
+tests/parser/test_real_parser.py::test_real_cpu_figures_tables_and_source_locations[academic.pdf]
+tests/parser/test_real_parser.py::test_real_cpu_figures_tables_and_source_locations[two-column.pdf]
+tests/parser/test_real_parser.py::test_real_embedded_image_and_merged_table_headers
+tests/parser/test_real_parser.py::test_real_scanned_page_reports_no_ocr_without_fabricating_text
+tests/parser/test_real_parser.py::test_real_figure_preserves_original_jpeg_bytes_when_match_is_unique
+  D:\project\PaperVault\.venv\Lib\site-packages\docling\pipeline\standard_pdf_pipeline.py:606: DeprecationWarning: This field is deprecated. Use `generate_page_images=True` and call `TableItem.get_image()` to extract table images from page images.
+    or self.pipeline_options.generate_table_images
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: D:\project\PaperVault\artifacts\real-corpus\native-parser-diagnostic-20261009T121539Z\parser-group.xml -
+======================= 5 passed, 10 warnings in 26.68s =======================

@@ -1,0 +1,32 @@
+{
+  "command": "D:\\project\\PaperVault\\.venv\\Scripts\\python.exe -X faulthandler -m pytest tests/parser/test_real_parser.py -v -s --basetemp=.test-data/native-parser-diagnostic-20261009T121539Z --junitxml=D:\\project\\PaperVault\\artifacts\\real-corpus\\native-parser-diagnostic-20261009T121539Z\\parser-group.xml --tb=short",
+  "argv": [
+    "D:\\project\\PaperVault\\.venv\\Scripts\\python.exe",
+    "-X",
+    "faulthandler",
+    "-m",
+    "pytest",
+    "tests/parser/test_real_parser.py",
+    "-v",
+    "-s",
+    "--basetemp=.test-data/native-parser-diagnostic-20261009T121539Z",
+    "--junitxml=D:\\project\\PaperVault\\artifacts\\real-corpus\\native-parser-diagnostic-20261009T121539Z\\parser-group.xml",
+    "--tb=short"
+  ],
+  "started_at_utc": "2026-10-09T12:15:39.902001+00:00",
+  "finished_at_utc": "2026-10-09T12:16:08.989645+00:00",
+  "seconds": 29.084,
+  "exit_code": 0,
+  "permissions": "require_escalated",
+  "cwd": "D:\\project\\PaperVault",
+  "environment": {
+    "PAPERVAULT_TEST_MODELS": "D:\\project\\PaperVault\\.cache\\models",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "PYTHONUTF8": "1",
+    "PYTHONFAULTHANDLER": "1"
+  },
+  "raw_log": "D:\\project\\PaperVault\\artifacts\\real-corpus\\native-parser-diagnostic-20261009T121539Z\\parser-group.log",
+  "junit": "D:\\project\\PaperVault\\artifacts\\real-corpus\\native-parser-diagnostic-20261009T121539Z\\parser-group.xml",
+  "capture_method": "Child stdout and stderr redirected directly to the same binary file; no filtering or rewritten diagnostics."
+}

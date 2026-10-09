@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "scope": "Manual extraction-quality review of the immutable installed 0.2.0 baseline, distinct from file/API workflow checks.",
+  "papers": [
+    {
+      "id": "docling-v5",
+      "expected_counts": {
+        "figure": 4,
+        "table": 1
+      },
+      "observed_counts": {
+        "figure": 5,
+        "table": 3,
+        "resources": 8
+      },
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "resource_ids": [
+            "a06a2644-deab-4a8e-aa2a-8b9156b32b6b"
+          ],
+          "correct_type": true,
+          "correct_number": true,
+          "caption_association": true,
+          "crop_complete": true,
+          "issues": [],
+          "visual_check": "Original full source page and each 300 DPI PNG opened side-by-side; full composite figure panels retained where detected."
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            4
+          ],
+          "resource_ids": [
+            "53fdd6c9-e799-460d-bef0-78c199c5e8cb"
+          ],
+          "correct_type": true,
+          "correct_number": true,
+          "caption_association": true,
+          "crop_complete": true,
+          "issues": [
+            "Four physical data rows collapsed into two model rows: paired values remain concatenated, e.g. 177 s 167 s. CPU label (16 cores) leaks into the next CPU row. Header colspans remain, but data row separation is incorrect."
+          ],
+          "visual_check": "Original full source page and each 300 DPI PNG opened side-by-side; full composite figure panels retained where detected."
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            6
+          ],
+          "resource_ids": [
+            "ba2e841a-fdaf-43b5-9a7c-1226b2aa7de4"
+          ],
+          "correct_type": true,
+          "correct_number": false,
+          "caption_association": false,
+          "crop_complete": true,
+          "issues": [
+            "Whole figure region is detected but its printed top-level caption is not associated; number is empty."
+          ],
+          "visual_check": "Original full source page and each 300 DPI PNG opened side-by-side; full composite figure panels retained where detected."
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            7
+          ],
+          "resource_ids": [
+            "91734687-c71c-4c6a-8c44-0d6bfb138c96",
+            "9e64c97c-1c41-4913-8636-44db4228a984",
+            "1c075a1f-cab5-4ce8-a6e4-22c28283b8aa"
+          ],
+          "correct_type": false,
+          "correct_number": false,
+          "caption_association": false,
+          "crop_complete": false,
+          "issues": [
+            "No single resource covers the whole printed Figure 3. The model emits two nested table crops and a nested Figure 5 crop from the embedded paper screenshot. One small table wrongly receives the outer Figure 3 caption.",
+            "One wrongly classified nested table has zero structured rows: CSV is empty and HTML contains an empty table. HTTP/format checks passed, but this is not a usable table extraction."
+          ],
+          "classification": "missing_whole_figure_with_nested_fragments"
+        },
+        {
+          "kind": "figure",
+          "number": "4",
+          "page_indices": [
+            8
+          ],
+          "resource_ids": [
+            "00febad2-a750-4b1f-9c51-515639578950"
+          ],
+          "correct_type": true,
+          "correct_number": false,
+          "caption_association": false,
+          "crop_complete": true,
+          "issues": [
+            "Whole figure region is detected but its printed top-level caption is not associated; number is empty."
+          ],
+          "visual_check": "Original full source page and each 300 DPI PNG opened side-by-side; full composite figure panels retained where detected."
+        }
+      ],
+      "extra_resources": [
+        {
+          "resource_id": "01d84862-64d0-4a10-adec-63529cd73d10",
+          "classification": "auxiliary_logo",
+          "reason": "Unnumbered Docling cover mascot; not an additional research Figure.",
+          "page_index": 0
+        },
+        {
+          "resource_id": "91734687-c71c-4c6a-8c44-0d6bfb138c96",
+          "classification": "nested_fragment",
+          "reason": "Embedded DocLayNet screenshot content is part of outer Figure 3; not a top-level table/figure of this paper.",
+          "page_index": 7
+        },
+        {
+          "resource_id": "9e64c97c-1c41-4913-8636-44db4228a984",
+          "classification": "nested_fragment",
+          "reason": "Embedded DocLayNet screenshot content is part of outer Figure 3; not a top-level table/figure of this paper.",
+          "page_index": 7
+        },
+        {
+          "resource_id": "1c075a1f-cab5-4ce8-a6e4-22c28283b8aa",
+          "classification": "nested_fragment",
+          "reason": "Embedded DocLayNet screenshot content is part of outer Figure 3; not a top-level table/figure of this paper.",
+          "page_index": 7
+        }
+      ],
+      "sample_cells": [
+        {
+          "object_kind": "table",
+          "object_number": "1",
+          "row_label": "Apple M3 Max (16 cores), 4 threads",
+          "column_label": "native backend / TTS",
+          "expected": "177 s",
+          "resource_id": "53fdd6c9-e799-460d-bef0-78c199c5e8cb",
+          "row": 2,
+          "col": 2,
+          "actual": "177 s 167 s",
+          "status": "mismatch",
+          "reason": "Expected one measurement at a specific CPU/thread row, but extracted cell merges both thread configurations. Presence of the expected number as a substring is not counted as a correct cell."
+        },
+        {
+          "object_kind": "table",
+          "object_number": "1",
+          "row_label": "Apple M3 Max (16 cores), 4 threads",
+          "column_label": "native backend / Pages/s",
+          "expected": "1.27",
+          "resource_id": "53fdd6c9-e799-460d-bef0-78c199c5e8cb",
+          "row": 2,
+          "col": 3,
+          "actual": "1.27 1.34",
+          "status": "mismatch",
+          "reason": "Expected one measurement at a specific CPU/thread row, but extracted cell merges both thread configurations. Presence of the expected number as a substring is not counted as a correct cell."
+        },
+        {
+          "object_kind": "table",
+          "object_number": "1",
+          "row_label": "Apple M3 Max (16 cores), 4 threads",
+          "column_label": "pypdfium backend / TTS",
+          "expected": "103 s",
+          "resource_id": "53fdd6c9-e799-460d-bef0-78c199c5e8cb",
+          "row": 2,
+          "col": 5,
+          "actual": "103 s 92 s",
+          "status": "mismatch",
+          "reason": "Expected one measurement at a specific CPU/thread row, but extracted cell merges both thread configurations. Presence of the expected number as a substring is not counted as a correct cell."
+        },
+        {
+          "object_kind": "table",
+          "object_number": "1",
+          "row_label": "Apple M3 Max (16 cores), 4 threads",
+          "column_label": "pypdfium backend / Pages/s",
+          "expected": "2.18",
+          "resource_id": "53fdd6c9-e799-460d-bef0-78c199c5e8cb",
+          "row": 2,
+          "col": 6,
+          "actual": "2.18 2.45",
+          "status": "mismatch",
+          "reason": "Expected one measurement at a specific CPU/thread row, but extracted cell merges both thread configurations. Presence of the expected number as a substring is not counted as a correct cell."
+        },
+        {
+          "object_kind": "table",
+          "object_number": "1",
+          "row_label": "Apple M3 Max (16 cores), 16 threads",
+          "column_label": "native backend / TTS",
+          "expected": "167 s",
+          "resource_id": "53fdd6c9-e799-460d-bef0-78c199c5e8cb",
+          "row": 2,
+          "col": 2,
+          "actual": "177 s 167 s",
+          "status": "mismatch",
+          "reason": "Expected one measurement at a specific CPU/thread row, but extracted cell merges both thread configurations. Presence of the expected number as a substring is not counted as a correct cell."
+        },
+        {
+          "object_kind": "table",
+          "object_number": "1",
+          "row_label": "Apple M3 Max (16 cores), 16 threads",
+          "column_label": "pypdfium backend / Pages/s",
+          "expected": "2.45",
+          "resource_id": "53fdd6c9-e799-460d-bef0-78c199c5e8cb",
+          "row": 2,
+          "col": 6,
+          "actual": "2.18 2.45",
+          "status": "mismatch",
+          "reason": "Expected one measurement at a specific CPU/thread row, but extracted cell merges both thread configurations. Presence of the expected number as a substring is not counted as a correct cell."
+        },
+        {
+          "object_kind": "table",
+          "object_number": "1",
+          "row_label": "Intel(R) Xeon E5-2690 (16 cores), 4 threads",
+          "column_label": "native backend / TTS",
+          "expected": "375 s",
+          "resource_id": "53fdd6c9-e799-460d-bef0-78c199c5e8cb",
+          "row": 3,
+          "col": 2,
+          "actual": "375 s 244 s",
+          "status": "mismatch",
+          "reason": "Expected one measurement at a specific CPU/thread row, but extracted cell merges both thread configurations. Presence of the expected number as a substring is not counted as a correct cell."
+        },
+        {
+          "object_kind": "table",
+          "object_number": "1",
+          "row_label": "Intel(R) Xeon E5-2690 (16 cores), 4 threads",
+          "column_label": "pypdfium backend / TTS",
+          "expected": "239 s",
+          "resource_id": "53fdd6c9-e799-460d-bef0-78c199c5e8cb",
+          "row": 3,
+          "col": 5,
+          "actual": "239 s 143 s",
+          "status": "mismatch",
+          "reason": "Expected one measurement at a specific CPU/thread row, but extracted cell merges both thread configurations. Presence of the expected number as a substring is not counted as a correct cell."
+        },
+        {
+          "object_kind": "table",
+          "object_number": "1",
+          "row_label": "Intel(R) Xeon E5-2690 (16 cores), 16 threads",
+          "column_label": "native backend / Pages/s",
+          "expected": "0.92",
+          "resource_id": "53fdd6c9-e799-460d-bef0-78c199c5e8cb",
+          "row": 3,
+          "col": 3,
+          "actual": "0.60 0.92",
+          "status": "mismatch",
+          "reason": "Expected one measurement at a specific CPU/thread row, but extracted cell merges both thread configurations. Presence of the expected number as a substring is not counted as a correct cell."
+        },
+        {
+          "object_kind": "table",
+          "object_number": "1",
+          "row_label": "Intel(R) Xeon E5-2690 (16 cores), 16 threads",
+          "column_label": "pypdfium backend / Pages/s",
+          "expected": "1.57",
+          "resource_id": "53fdd6c9-e799-460d-bef0-78c199c5e8cb",
+          "row": 3,
+          "col": 6,
+          "actual": "0.94 1.57",
+          "status": "mismatch",
+          "reason": "Expected one measurement at a specific CPU/thread row, but extracted cell merges both thread configurations. Presence of the expected number as a substring is not counted as a correct cell."
+        }
+      ],
+      "notes": [
+        "3/4 complete figure bodies; only Figure 1 has its proper caption. The fourth figure is fragmented into nested objects.",
+        "Table 1 PNG is readable but machine-readable rows do not preserve four distinct CPU/thread configurations.",
+        "This adversarial report embeds another paper in Figures 2-4, so it should not be used alone to estimate general document extraction quality.",
+        "control-table-export-check.json verifies all three serialized model grids, including one empty falsely detected table. Decodable export does not mean useful or faithful content."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "collection": "real-corpus-ml",
+  "verified_at": "2026-10-09T11:50:44.798245+00:00",
+  "verification": "Official publisher landing pages and publisher copyright policy or explicit license statement in PDF; immutable downloaded bytes identified by SHA-256. PDFs stay in ignored .test-data and are not committed.",
+  "papers": [
+    {
+      "id": "bert-naacl2019",
+      "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "source_url": "https://aclanthology.org/N19-1423/",
+      "pdf_url": "https://aclanthology.org/N19-1423.pdf",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+      "version": "Published NAACL-HLT 2019 proceedings version, anthology N19-1423, June 2019; full publisher PDF including appendices",
+      "doi": "10.18653/v1/N19-1423",
+      "publication_pages": "4171-4186",
+      "authors": [
+        "Jacob Devlin",
+        "Ming-Wei Chang",
+        "Kenton Lee",
+        "Kristina Toutanova"
+      ],
+      "layout_notes": "Two-column conference paper with full-width architecture diagrams, single-column numeric tables and full-width tables; appendices included.",
+      "local_path": ".test-data/external/real-corpus/bert-naacl2019.pdf",
+      "sha256": "987545ffb087f1ece898142c403a516baeabeb70ce19089397fac6f7db12c3d4",
+      "pages": 16,
+      "bytes": 786279
+    },
+    {
+      "id": "sentence-bert-emnlp2019",
+      "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+      "source_url": "https://aclanthology.org/D19-1410/",
+      "pdf_url": "https://aclanthology.org/D19-1410.pdf",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+      "version": "Published EMNLP-IJCNLP 2019 proceedings version, anthology D19-1410, November 2019; entire 11-page publisher PDF. No appendix appears in this version.",
+      "doi": "10.18653/v1/D19-1410",
+      "publication_pages": "3982-3992",
+      "authors": [
+        "Nils Reimers",
+        "Iryna Gurevych"
+      ],
+      "layout_notes": "Two-column conference paper with two independently numbered architecture figures side by side, wide benchmark tables, smaller single-column tables and three pages of references.",
+      "local_path": ".test-data/external/real-corpus/sentence-bert-emnlp2019.pdf",
+      "sha256": "e2703128039850ba7e098bfc6c7d9f3f3e75e6318815c5dd90af71085b1d384e",
+      "pages": 11,
+      "bytes": 570263
+    },
+    {
+      "id": "river-jmlr2021",
+      "title": "River: machine learning for streaming data in Python",
+      "source_url": "https://jmlr.org/papers/v22/20-1380.html",
+      "pdf_url": "https://jmlr.org/papers/volume22/20-1380/20-1380.pdf",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_evidence_url": "https://jmlr.org/papers/volume22/20-1380/20-1380.pdf#page=1",
+      "version": "Published JMLR 22(110), 2021, pp.1-8; PDF first page states submitted 12/20, revised 4/21, published 4/21 and explicit CC-BY 4.0",
+      "publication_pages": "1-8",
+      "authors": [
+        "Jacob Montiel",
+        "Max Halford",
+        "Saulo Martiello Mastelini",
+        "Geoffrey Bolmier",
+        "Raphael Sourty",
+        "Robin Vaysse",
+        "Adil Zouitine",
+        "Heitor Murilo Gomes",
+        "Jesse Read",
+        "Talel Abdessalem",
+        "Albert Bifet"
+      ],
+      "layout_notes": "Single-column journal article, two numeric benchmarking tables on one page (one with grouped learn/predict headers), and two unnumbered code examples. Full 8-page publisher PDF, including four reference pages; no appendix or numbered Figure is present.",
+      "local_path": ".test-data/external/real-corpus/river-jmlr2021.pdf",
+      "sha256": "65f1e31d8363b0aa24be4750ee22fd52da9f1f92768f9f18add1a24d45d76857",
+      "pages": 8,
+      "bytes": 255720
+    }
+  ]
+}

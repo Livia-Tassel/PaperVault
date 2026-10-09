@@ -1,0 +1,351 @@
+{
+  "reviewed_at_utc": "2026-10-09T12:22:07.712534+00:00",
+  "classification": "native_access_violation_diagnostic_recurred_root_cause_unresolved",
+  "summary": "The full 120-test source pytest run emitted two Windows access-violation diagnostic messages and still completed with all assertions passing and root-observed exit 0. One instrumented five-case real-parser rerun passed without another message. Seven installed-backend workers published validated outputs and their retained logs contain no such message; raw worker exit codes and equivalent faulthandler instrumentation were not recorded. These successes do not resolve or prove the diagnostic harmless.",
+  "full_source_suite": {
+    "log": {
+      "path": "artifacts/real-corpus/backend-v021.log",
+      "bytes": 2379,
+      "sha256": "998295ebe1f399ee8f3c1b4f682143379715d652222377dbc4d8bbcb95fc46e1"
+    },
+    "junit": {
+      "path": "artifacts/real-corpus/backend-v021.xml",
+      "bytes": 14952,
+      "sha256": "2063c64f243dc2affc55a65856d5f6ef8430e968a044d4ebb80427f2e570947a"
+    },
+    "results": {
+      "tests": 120,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 69.862,
+      "timestamp": "2026-10-09T20:10:03.194565+08:00",
+      "real_parser_testcases": [
+        {
+          "name": "test_real_cpu_figures_tables_and_source_locations[academic.pdf]",
+          "seconds": 19.972
+        },
+        {
+          "name": "test_real_cpu_figures_tables_and_source_locations[two-column.pdf]",
+          "seconds": 4.317
+        },
+        {
+          "name": "test_real_embedded_image_and_merged_table_headers",
+          "seconds": 3.34
+        },
+        {
+          "name": "test_real_scanned_page_reports_no_ocr_without_fabricating_text",
+          "seconds": 29.444
+        },
+        {
+          "name": "test_real_figure_preserves_original_jpeg_bytes_when_match_is_unique",
+          "seconds": 2.801
+        }
+      ]
+    },
+    "process_exit_code": 0,
+    "process_exit_code_evidence": "Root observed the original exec completion with exit 0; the source log/JUnit do not themselves encode a process exit code.",
+    "exact_command_evidence": "The retained source log lacks exact argv; this review does not invent it.",
+    "diagnostic_message_count": 2,
+    "raw_diagnostic_prefix": "Windows fatal exception: access violation\n\nThread 0x00001aac (most recent call first):\n  File \"D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\docling_parse\\pdf_parser.py\"Windows fatal exception: access violation\n\n",
+    "observed_python_frame": "D:\\project\\PaperVault\\.venv\\Lib\\site-packages\\docling_parse\\pdf_parser.py",
+    "observed_thread_id": "0x00001aac",
+    "missing_attribution": [
+      "Specific pytest case",
+      "Python function and source line",
+      "Process ID in the diagnostic",
+      "Native faulting DLL and instruction/address",
+      "Complete C stack"
+    ],
+    "layer": "Source Python/pytest captured stream, with a Python frame in docling_parse. test_real_parser.py invokes parse_pdf directly in the test process. The fragment cannot identify the exact test or native routine.",
+    "ordering_limit": "It appears first in the saved log, but buffered/captured progress prevents reliable attribution by line order.",
+    "message_count_is_not_fault_count": "Two printed headers do not independently prove two distinct root-cause events."
+  },
+  "targeted_reproduction": {
+    "attempts": 1,
+    "scope": "Only five existing real CPU Docling cases in tests/parser/test_real_parser.py; no full-suite repetition.",
+    "execution": {
+      "command": "D:\\project\\PaperVault\\.venv\\Scripts\\python.exe -X faulthandler -m pytest tests/parser/test_real_parser.py -v -s --basetemp=.test-data/native-parser-diagnostic-20261009T121539Z --junitxml=D:\\project\\PaperVault\\artifacts\\real-corpus\\native-parser-diagnostic-20261009T121539Z\\parser-group.xml --tb=short",
+      "argv": [
+        "D:\\project\\PaperVault\\.venv\\Scripts\\python.exe",
+        "-X",
+        "faulthandler",
+        "-m",
+        "pytest",
+        "tests/parser/test_real_parser.py",
+        "-v",
+        "-s",
+        "--basetemp=.test-data/native-parser-diagnostic-20261009T121539Z",
+        "--junitxml=D:\\project\\PaperVault\\artifacts\\real-corpus\\native-parser-diagnostic-20261009T121539Z\\parser-group.xml",
+        "--tb=short"
+      ],
+      "started_at_utc": "2026-10-09T12:15:39.902001+00:00",
+      "finished_at_utc": "2026-10-09T12:16:08.989645+00:00",
+      "seconds": 29.084,
+      "exit_code": 0,
+      "permissions": "require_escalated",
+      "cwd": "D:\\project\\PaperVault",
+      "environment": {
+        "PAPERVAULT_TEST_MODELS": "D:\\project\\PaperVault\\.cache\\models",
+        "HF_HUB_OFFLINE": "1",
+        "TRANSFORMERS_OFFLINE": "1",
+        "PYTHONUTF8": "1",
+        "PYTHONFAULTHANDLER": "1"
+      },
+      "raw_log": "D:\\project\\PaperVault\\artifacts\\real-corpus\\native-parser-diagnostic-20261009T121539Z\\parser-group.log",
+      "junit": "D:\\project\\PaperVault\\artifacts\\real-corpus\\native-parser-diagnostic-20261009T121539Z\\parser-group.xml",
+      "capture_method": "Child stdout and stderr redirected directly to the same binary file; no filtering or rewritten diagnostics."
+    },
+    "results": {
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 26.678,
+      "timestamp": "2026-10-09T20:15:41.018574+08:00",
+      "real_parser_testcases": [
+        {
+          "name": "test_real_cpu_figures_tables_and_source_locations[academic.pdf]",
+          "seconds": 13.26
+        },
+        {
+          "name": "test_real_cpu_figures_tables_and_source_locations[two-column.pdf]",
+          "seconds": 4.692
+        },
+        {
+          "name": "test_real_embedded_image_and_merged_table_headers",
+          "seconds": 3.695
+        },
+        {
+          "name": "test_real_scanned_page_reports_no_ocr_without_fabricating_text",
+          "seconds": 2.66
+        },
+        {
+          "name": "test_real_figure_preserves_original_jpeg_bytes_when_match_is_unique",
+          "seconds": 2.326
+        }
+      ]
+    },
+    "log": {
+      "path": "artifacts/real-corpus/native-parser-diagnostic-20261009T121539Z/parser-group.log",
+      "bytes": 4071,
+      "sha256": "f940e0ce46d8f98f4118187eb467c419b89d0403490cb0458dc13bbde9f687a0"
+    },
+    "junit": {
+      "path": "artifacts/real-corpus/native-parser-diagnostic-20261009T121539Z/parser-group.xml",
+      "bytes": 924,
+      "sha256": "eb321ddeb32e85e32846c21f2a399e62a0ca689961a29f7c9f6ad2affe3386df"
+    },
+    "access_violation_messages": 0,
+    "fatal_messages": 0,
+    "outcome": "5 passed, zero failures/errors/skips, exit 0. No new diagnostic and therefore no additional complete stack.",
+    "faulthandler_explicitly_enabled": true
+  },
+  "installed_baseline": {
+    "report": "artifacts/real-corpus/installed-backend-report.json",
+    "run_id": "20261009T115143Z-32839973",
+    "backend": "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault-backend.exe",
+    "backend_sha256": "40f03cbfe81ad7ab701680627cf9e777dc5903f7d0c377537985babbf0ac8b8a",
+    "health": {
+      "status": "ok",
+      "version": "0.2.0",
+      "protocol": 1
+    },
+    "papers": 7,
+    "completed_jobs": 7,
+    "resource_exports_validated": 54,
+    "backend_main_process_shutdown": {
+      "returncode": 0,
+      "forced_termination": false,
+      "backend_port_closed": true
+    },
+    "workers": [
+      {
+        "id": "docling-v5",
+        "paper_id": "d0f3e9e4-092b-4ce0-8159-60405215df68",
+        "job_id": "222dd3ef-c8b8-463c-9c86-f5cf8d2e9523",
+        "job_status": "completed",
+        "job_error": null,
+        "pipeline_checks_passed": true,
+        "pipeline_errors": [],
+        "resources": 8,
+        "resource_validation_errors": [],
+        "source_pdf_hash_unchanged": true,
+        "log": {
+          "path": "artifacts/real-corpus/runs/20261009T115143Z-32839973/001-docling-report-v5/worker.log",
+          "bytes": 2438,
+          "sha256": "379833a254404941b7992eb9111b4f3bc687db0968cbc00a5155a47b1cfa1ee1"
+        },
+        "access_violation_messages": 0,
+        "fatal_messages": 0,
+        "python_tracebacks": 0,
+        "worker_returncode": null,
+        "worker_returncode_evidence": "Not retained; completed publication does not establish a per-worker OS exit code."
+      },
+      {
+        "id": "bert-naacl2019",
+        "paper_id": "55969dd8-f0f8-43d4-9dc2-57c17e18a749",
+        "job_id": "a715f146-f735-463b-be7d-c7da4d5ad9d8",
+        "job_status": "completed",
+        "job_error": null,
+        "pipeline_checks_passed": true,
+        "pipeline_errors": [],
+        "resources": 13,
+        "resource_validation_errors": [],
+        "source_pdf_hash_unchanged": true,
+        "log": {
+          "path": "artifacts/real-corpus/runs/20261009T115143Z-32839973/002-bert-naacl2019/worker.log",
+          "bytes": 2436,
+          "sha256": "7adc695f231f2569e27b29bfebbad4ad068764472092abc0444eb3ac903bb86c"
+        },
+        "access_violation_messages": 0,
+        "fatal_messages": 0,
+        "python_tracebacks": 0,
+        "worker_returncode": null,
+        "worker_returncode_evidence": "Not retained; completed publication does not establish a per-worker OS exit code."
+      },
+      {
+        "id": "sentence-bert-emnlp2019",
+        "paper_id": "85856637-ec6e-4a59-bff7-de0f0c40504e",
+        "job_id": "cc6aef6a-e707-46e1-8f54-573681186583",
+        "job_status": "completed",
+        "job_error": null,
+        "pipeline_checks_passed": true,
+        "pipeline_errors": [],
+        "resources": 9,
+        "resource_validation_errors": [],
+        "source_pdf_hash_unchanged": true,
+        "log": {
+          "path": "artifacts/real-corpus/runs/20261009T115143Z-32839973/003-sentence-bert-emnlp2019/worker.log",
+          "bytes": 2436,
+          "sha256": "8262085782ec75f8c62872c7438e68add889eccc071c17c80ed180b8b332f58f"
+        },
+        "access_violation_messages": 0,
+        "fatal_messages": 0,
+        "python_tracebacks": 0,
+        "worker_returncode": null,
+        "worker_returncode_evidence": "Not retained; completed publication does not establish a per-worker OS exit code."
+      },
+      {
+        "id": "river-jmlr2021",
+        "paper_id": "0abc717f-0399-4ed8-b154-011bda2703b2",
+        "job_id": "92cfdfaa-c195-41ed-a07b-bad0ec0552d0",
+        "job_status": "completed",
+        "job_error": null,
+        "pipeline_checks_passed": true,
+        "pipeline_errors": [],
+        "resources": 2,
+        "resource_validation_errors": [],
+        "source_pdf_hash_unchanged": true,
+        "log": {
+          "path": "artifacts/real-corpus/runs/20261009T115143Z-32839973/004-river-jmlr2021/worker.log",
+          "bytes": 2440,
+          "sha256": "bb887d3fad4ba5c1752bcd2d05385e812f18489020a2ee94cedf1f2d5d8736a8"
+        },
+        "access_violation_messages": 0,
+        "fatal_messages": 0,
+        "python_tracebacks": 0,
+        "worker_returncode": null,
+        "worker_returncode_evidence": "Not retained; completed publication does not establish a per-worker OS exit code."
+      },
+      {
+        "id": "science-halogen-microscopy",
+        "paper_id": "5065937a-3d79-4e8c-ae33-01f07568e6f5",
+        "job_id": "922827b7-fd4d-40ce-ae92-186edbeef711",
+        "job_status": "completed",
+        "job_error": null,
+        "pipeline_checks_passed": true,
+        "pipeline_errors": [],
+        "resources": 16,
+        "resource_validation_errors": [],
+        "source_pdf_hash_unchanged": true,
+        "log": {
+          "path": "artifacts/real-corpus/runs/20261009T115143Z-32839973/005-science-halogen-microscopy/worker.log",
+          "bytes": 2432,
+          "sha256": "7ab5e895714bf3c9ac1048f01f9b29a4299829c9510eaba95925cb3b94c61583"
+        },
+        "access_violation_messages": 0,
+        "fatal_messages": 0,
+        "python_tracebacks": 0,
+        "worker_returncode": null,
+        "worker_returncode_evidence": "Not retained; completed publication does not establish a per-worker OS exit code."
+      },
+      {
+        "id": "science-prisma2020",
+        "paper_id": "edd8b94c-b3f0-4bb3-bbb6-3c26e7327398",
+        "job_id": "11b8e232-5c0d-4fe5-8ad0-d948c6bcd911",
+        "job_status": "completed",
+        "job_error": null,
+        "pipeline_checks_passed": true,
+        "pipeline_errors": [],
+        "resources": 6,
+        "resource_validation_errors": [],
+        "source_pdf_hash_unchanged": true,
+        "log": {
+          "path": "artifacts/real-corpus/runs/20261009T115143Z-32839973/006-science-prisma2020/worker.log",
+          "bytes": 2434,
+          "sha256": "47364e8eb7a499e78fa0d4f2455c339e9eb03d6279f0d0c159a0800a8c5ce445"
+        },
+        "access_violation_messages": 0,
+        "fatal_messages": 0,
+        "python_tracebacks": 0,
+        "worker_returncode": null,
+        "worker_returncode_evidence": "Not retained; completed publication does not establish a per-worker OS exit code."
+      },
+      {
+        "id": "science-porespy",
+        "paper_id": "1ff11a2f-8ccd-4ef3-9237-16bb7c57c133",
+        "job_id": "9725f93b-fd5e-4d1d-b595-a7fd7ab3b173",
+        "job_status": "completed",
+        "job_error": null,
+        "pipeline_checks_passed": true,
+        "pipeline_errors": [],
+        "resources": 0,
+        "resource_validation_errors": [],
+        "source_pdf_hash_unchanged": true,
+        "log": {
+          "path": "artifacts/real-corpus/runs/20261009T115143Z-32839973/007-science-porespy/worker.log",
+          "bytes": 2437,
+          "sha256": "8816fd4ab458d3a2b3fde767c390a87e05fd0c2a480ad44683768f626eb4a4e2"
+        },
+        "access_violation_messages": 0,
+        "fatal_messages": 0,
+        "python_tracebacks": 0,
+        "worker_returncode": null,
+        "worker_returncode_evidence": "Not retained; completed publication does not establish a per-worker OS exit code."
+      }
+    ],
+    "instrumentation_limit": "The installed-corpus harness and worker entry do not explicitly enable or record faulthandler. The pytest plugin and targeted rerun do enable it. No messages in frozen logs does not establish identical instrumentation or zero native-event rate.",
+    "per_worker_exit_limit": "jobs.py waits after a result event then publishes result.json, without checking or retaining process.returncode in that branch. No nonzero worker exit was observed, but the retained evidence cannot certify each worker exited zero. No production code changed in this review.",
+    "data_scope": "No task or export-integrity failure attributable to this diagnostic was observed. Independent caption/continuation/source-text-layer quality errors remain separate; validated files and passing assertions are not universal correctness or memory-safety proof."
+  },
+  "comparison_with_history": {
+    "report": "artifacts/native-exception-investigation.json",
+    "relationship": "Same printed diagnostic class as the historical observation, now seen again. Same root cause is not established.",
+    "required_wording": "Recurred in the 120-test combined source run; not observed in one subsequent explicitly instrumented five-case parser rerun.",
+    "superseded_claim": "Any claim that this diagnostic has never reappeared is now stale; historical logs and this recurrence must both be retained."
+  },
+  "environment": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.12.8",
+    "packages": {
+      "docling-slim": "2.135.0",
+      "docling-parse": "7.22.2",
+      "torch": "2.7.1+cpu",
+      "pypdfium2": "5.14.0",
+      "pytest": "9.1.1"
+    }
+  },
+  "actions_not_taken": [
+    "Did not disable faulthandler or filter raw native output.",
+    "Did not attribute the event to harmless CPU probing or a specific DLL.",
+    "Did not install debuggers, change dependencies/product code or repeat all 120 tests."
+  ],
+  "remaining_unknowns": [
+    "Faulting instruction/module and native call stack.",
+    "Whether the printed headers identify independent faults.",
+    "Dependence on combined suite order, thread/lifecycle behavior or an input.",
+    "Whether it appears in frozen workers under explicitly identical instrumentation."
+  ],
+  "disposition": "Retain as an unresolved recurring native reliability diagnostic. The clean focused rerun and successful product pipeline are separate observations, not a cause resolution."
+}

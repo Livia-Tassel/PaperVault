@@ -99,14 +99,30 @@ window.__TAURI_INTERNALS__.invoke('backend_connection').then(value=>done({ok:tru
         return self.request('POST', self.prefix + '/element', {'using': 'xpath', 'value': xpath})[self.element_key]
 
     def click(self, xpath):
-        self.request('POST', self.prefix + f'/element/{self.element(xpath)}/click', {})
+        for attempt in range(3):
+            try:
+                self.request('POST', self.prefix + f'/element/{self.element(xpath)}/click', {})
+                return
+            except RuntimeError as error:
+                # React may replace a polled view between findElement and click.
+                # Retry only WebDriver's pre-action stale-element failure.
+                if '"error":"stale element reference"' not in str(error) or attempt == 2:
+                    raise
+                time.sleep(.1)
 
     def fill(self, xpath, value):
-        node = self.element(xpath)
-        self.request('POST', self.prefix + f'/element/{node}/click', {})
-        # Real editing keys notify React's controlled input tracker; WebDriver
-        # clear() can reset only the DOM value before React restores its draft.
-        self.request('POST', self.prefix + f'/element/{node}/value', {'text': '\ue009a\ue000\ue003' + value})
+        for attempt in range(3):
+            try:
+                node = self.element(xpath)
+                self.request('POST', self.prefix + f'/element/{node}/click', {})
+                # Real editing keys notify React's controlled input tracker;
+                # replace the full field so a retry cannot append stale text.
+                self.request('POST', self.prefix + f'/element/{node}/value', {'text': '\ue009a\ue000\ue003' + value})
+                return
+            except RuntimeError as error:
+                if '"error":"stale element reference"' not in str(error) or attempt == 2:
+                    raise
+                time.sleep(.1)
 
     def screenshot(self, name):
         data = self.request('GET', self.prefix + '/screenshot')

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "papers": [
+    {
+      "id": "docling-v5",
+      "title": "Docling Technical Report",
+      "authors": [
+        "Christoph Auer",
+        "Maksym Lysak",
+        "Ahmed Nassar",
+        "Michele Dolfi",
+        "et al."
+      ],
+      "source_url": "https://arxiv.org/abs/2408.09869v5",
+      "pdf_url": "https://arxiv.org/pdf/2408.09869v5",
+      "version": "arXiv v5, 2024-12-09",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_evidence": "The arXiv v5 page links its view-license to CC BY 4.0; confirmed again 2026-10-09.",
+      "local_path": ".test-data/external/docling-report-v5.pdf",
+      "sha256": "82dd470712ce8389f19f20eb9330475e2166a281f8c7990a9f1d0763d73b4d22",
+      "pages": 9,
+      "layout_notes": "Single-column report; vector process diagram; merged-header table; appendix figures contain screenshots of another paper and nested table/figure captions."
+    }
+  ]
+}

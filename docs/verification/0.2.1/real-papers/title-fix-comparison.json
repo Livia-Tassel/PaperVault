@@ -1,0 +1,118 @@
+{
+  "passed": true,
+  "old_backend_sha256": "40f03cbfe81ad7ab701680627cf9e777dc5903f7d0c377537985babbf0ac8b8a",
+  "new_backend_sha256": "567bc425d9df91f4813dfacdf64a8a8e5548381becc5950627830862439dd43a",
+  "scope": "Two fresh real-model parses in rebuilt 0.2.1 frozen executable vs immutable 0.2.0 installed baseline. Generated UUID/parent-title/path/time fields excluded. All scientific resource locations exact, all 29 PNG300 SHA256 and caption/table/warning values exact. One auxiliary footer-logo bbox differs by 0.000007621 PDF point without pixel change; it is recorded rather than called bit-identical.",
+  "papers": [
+    {
+      "source_id": "bert-naacl2019",
+      "resources_compared": 13,
+      "old_title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "new_title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "title_correct": true,
+      "caption_table_warnings_and_png300_identical": true,
+      "all_scientific_locations_identical": true,
+      "auxiliary_geometry_variations": []
+    },
+    {
+      "source_id": "science-halogen-microscopy",
+      "resources_compared": 16,
+      "old_title": "pone.0031638 1..8",
+      "new_title": "Fluorescence Cell Imaging and Manipulation Using Conventional Halogen Lamp Microscopy",
+      "title_correct": true,
+      "caption_table_warnings_and_png300_identical": true,
+      "all_scientific_locations_identical": true,
+      "auxiliary_geometry_variations": [
+        {
+          "old_resource_id": "ff6fd2e5-fdea-4d78-a0bd-3b3a73b4cdcc",
+          "classification": "auxiliary_logo",
+          "max_bbox_delta_pdf_points": 7.620471002667273e-06,
+          "old_locations": [
+            {
+              "page_index": 4,
+              "crop_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 612.28302,
+              "height": 790.866028,
+              "bbox": [
+                57.43038422821443,
+                23.89951589644113,
+                75.45804103253114,
+                42.547479994824585
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 5,
+                "bbox": {
+                  "l": 57.43038422821443,
+                  "t": 42.547479994824585,
+                  "r": 75.45804103253114,
+                  "b": 23.89951589644113,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ],
+          "new_locations": [
+            {
+              "page_index": 4,
+              "crop_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "media_box": [
+                0.0,
+                0.0,
+                612.28302,
+                790.866028
+              ],
+              "rotation": 0,
+              "user_unit": 1.0,
+              "width": 612.28302,
+              "height": 790.866028,
+              "bbox": [
+                57.430376607743426,
+                23.89951589644113,
+                75.45804103253114,
+                42.547479994824585
+              ],
+              "coordinate_space": "pdf_user_space",
+              "docling_provenance": {
+                "page_no": 5,
+                "bbox": {
+                  "l": 57.430376607743426,
+                  "t": 42.547479994824585,
+                  "r": 75.45804103253114,
+                  "b": 23.89951589644113,
+                  "coord_origin": "BOTTOMLEFT"
+                },
+                "charspan": [
+                  0,
+                  0
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

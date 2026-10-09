@@ -1,0 +1,403 @@
+{
+  "passed": true,
+  "app": "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault.exe",
+  "backend_sha256": "40f03cbfe81ad7ab701680627cf9e777dc5903f7d0c377537985babbf0ac8b8a",
+  "corpus_report": "D:\\project\\PaperVault\\artifacts\\real-corpus\\installed-backend-report.json",
+  "corpus_report_sha256": "e51cc5a79f9ce1a5d51911ca0e0d6aa7130abfb6d1a8da805f73134334d5ddf1",
+  "fixture": "D:\\project\\PaperVault\\.test-data\\real-corpus-native\\native-3dcjbsje",
+  "library": "D:\\project\\PaperVault\\.test-data\\real-corpus-native\\native-3dcjbsje\\real-paper-ui-copy",
+  "papers": [
+    {
+      "paper_id": "55969dd8-f0f8-43d4-9dc2-57c17e18a749",
+      "source": {
+        "id": "bert-naacl2019",
+        "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+        "source_url": "https://aclanthology.org/N19-1423/",
+        "pdf_url": "https://aclanthology.org/N19-1423.pdf",
+        "license": "CC-BY-4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+        "version": "Published NAACL-HLT 2019 proceedings version, anthology N19-1423, June 2019; full publisher PDF including appendices",
+        "doi": "10.18653/v1/N19-1423",
+        "publication_pages": "4171-4186",
+        "authors": [
+          "Jacob Devlin",
+          "Ming-Wei Chang",
+          "Kenton Lee",
+          "Kristina Toutanova"
+        ],
+        "layout_notes": "Two-column conference paper with full-width architecture diagrams, single-column numeric tables and full-width tables; appendices included.",
+        "local_path": "D:\\project\\PaperVault\\.test-data\\external\\real-corpus\\bert-naacl2019.pdf",
+        "sha256": "987545ffb087f1ece898142c403a516baeabeb70ce19089397fac6f7db12c3d4",
+        "pages": 16,
+        "bytes": 786279,
+        "manifest": "D:\\project\\PaperVault\\tests\\corpus\\sources-ml.json",
+        "manifest_sha256": "c4f24fdb4fb40c463e8c977012562bf176226f7feb0c29c70174011fcd1d95ed"
+      },
+      "checks": [
+        "real_pdf_hash_matches_source_and_native_pdfjs_canvas_rendered",
+        "native_note_bookmark_and_reading_position_persisted_in_copy"
+      ],
+      "resources": [
+        {
+          "kind": "figure",
+          "count": 5,
+          "resource_id": "75874fdc-af0f-463d-8ecf-3388749f12ee",
+          "selection_mode": "captioned",
+          "selected_auto_index": 0,
+          "caption": "Figure 1: Overall pre-training and fine-tuning procedures for BERT. Apart from output layers, the same architectures are used in both pre-training and fine-tuning. The same pre-trained model parameters are used to initialize models for different down-stream tasks. During fine-tuning, all parameters are fine-tuned. [CLS] is a special symbol added in front of every input example, and [SEP] is a special separator token (e.g. separating questions/answers).",
+          "source_location": {
+            "page_index": 2,
+            "crop_box": [
+              0.0,
+              0.0,
+              595.276,
+              841.89
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              595.276,
+              841.89
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 595.276,
+            "height": 841.89,
+            "bbox": [
+              74.73012444720172,
+              600.5474794723982,
+              522.816642801784,
+              779.6156812184893
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 3,
+              "bbox": {
+                "l": 74.73012444720172,
+                "t": 779.6156812184893,
+                "r": 522.816642801784,
+                "b": 600.5474794723982,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                0
+              ]
+            }
+          },
+          "native_detail_and_location": true
+        },
+        {
+          "kind": "table",
+          "count": 8,
+          "resource_id": "d9315e24-04ec-4b37-bd37-e1d77ec6a6ab",
+          "selection_mode": "captioned",
+          "selected_auto_index": 0,
+          "caption": "Table 1: GLUE Test results, scored by the evaluation server (https://gluebenchmark.com/leaderboard). The number below each task denotes the number of training examples. The \"Average\" column is slightly different than the official GLUE score, since we exclude the problematic WNLI set. 8 BERT and OpenAI GPT are singlemodel, single task. F1 scores are reported for QQP and MRPC, Spearman correlations are reported for STS-B, and accuracy scores are reported for the other tasks. We exclude entries that use BERT as one of their components.",
+          "source_location": {
+            "page_index": 5,
+            "crop_box": [
+              0.0,
+              0.0,
+              595.276,
+              841.89
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              595.276,
+              841.89
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 595.276,
+            "height": 841.89,
+            "bbox": [
+              71.24918965118204,
+              688.6507751656937,
+              526.0970768264668,
+              779.451075650394
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 6,
+              "bbox": {
+                "l": 71.24918965118204,
+                "t": 779.451075650394,
+                "r": 526.0970768264668,
+                "b": 688.6507751656937,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                0
+              ]
+            }
+          },
+          "native_detail_and_location": true
+        }
+      ],
+      "pdf_find": {
+        "query": "Proceedings",
+        "status": "1 / 15"
+      },
+      "reading_state": {
+        "paper_id": "55969dd8-f0f8-43d4-9dc2-57c17e18a749",
+        "version": 5,
+        "page_index": 1,
+        "anchor": [
+          0.0,
+          841.60875
+        ],
+        "scale": 1.0,
+        "rotation": 0,
+        "fit_mode": "custom",
+        "status": "reading",
+        "last_opened": "2026-10-09T12:08:20.946515+00:00",
+        "updated_at": "2026-10-09T12:08:24.109039+00:00"
+      },
+      "annotations": [
+        {
+          "title": "Real corpus native review 1: bert-naacl2019.pdf",
+          "quote": "",
+          "body": "Source inspected through the installed reader: https://aclanthology.org/N19-1423/",
+          "color": "amber",
+          "tags": [],
+          "locations": [],
+          "id": "45d53b94-d05f-4757-954e-b0ec67457e71",
+          "paper_id": "55969dd8-f0f8-43d4-9dc2-57c17e18a749",
+          "paper_title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+          "kind": "note",
+          "version": 1,
+          "deleted": false,
+          "created_at": "2026-10-09T12:08:24.648511+00:00",
+          "updated_at": "2026-10-09T12:08:24.648511+00:00",
+          "paper_filename": "bert-naacl2019.pdf",
+          "pdf_sha256": "987545ffb087f1ece898142c403a516baeabeb70ce19089397fac6f7db12c3d4"
+        },
+        {
+          "title": "第 2 页",
+          "quote": "",
+          "body": "",
+          "color": "amber",
+          "tags": [],
+          "locations": [
+            {
+              "page_index": 1,
+              "bbox": null
+            }
+          ],
+          "id": "16dd8b4d-3ae9-45f4-b27c-ed6ad06cf72c",
+          "paper_id": "55969dd8-f0f8-43d4-9dc2-57c17e18a749",
+          "paper_title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+          "kind": "bookmark",
+          "version": 1,
+          "deleted": false,
+          "created_at": "2026-10-09T12:08:23.977232+00:00",
+          "updated_at": "2026-10-09T12:08:23.977232+00:00",
+          "paper_filename": "bert-naacl2019.pdf",
+          "pdf_sha256": "987545ffb087f1ece898142c403a516baeabeb70ce19089397fac6f7db12c3d4"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "paper_id": "5065937a-3d79-4e8c-ae33-01f07568e6f5",
+      "source": {
+        "id": "science-halogen-microscopy",
+        "title": "Fluorescence Cell Imaging and Manipulation Using Conventional Halogen Lamp Microscopy",
+        "doi": "10.1371/journal.pone.0031638",
+        "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0031638",
+        "pdf_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0031638&type=printable",
+        "license": "CC BY (article explicitly states Creative Commons Attribution; version not specified in its 2012 article text)",
+        "license_url": "https://journals.plos.org/plosone/s/licenses-and-copyright",
+        "layout_notes": "Biological fluorescence microscopy; 2012 journal PDF expected two-column body and multi-panel microscopy photographs.",
+        "local_path": "D:\\project\\PaperVault\\.test-data\\external\\real-corpus\\science-halogen-microscopy.pdf",
+        "sha256": "b5a43de706b5f097346bd1a59e6c21eb71a918ee66594a5e54cd1fcd1732a202",
+        "pages": 8,
+        "downloaded_at_utc": "2026-10-09T11:46:14Z",
+        "final_download_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0031638&type=printable",
+        "bytes": 2831253,
+        "license_evidence_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0031638",
+        "manifest": "D:\\project\\PaperVault\\tests\\corpus\\sources-science.json",
+        "manifest_sha256": "833b75a936517c1f5eb7db2a922afd2ed9cf6dcbe3385b28fc38e6c13a4f09b4"
+      },
+      "checks": [
+        "real_pdf_hash_matches_source_and_native_pdfjs_canvas_rendered",
+        "native_note_bookmark_and_reading_position_persisted_in_copy"
+      ],
+      "resources": [
+        {
+          "kind": "figure",
+          "count": 14,
+          "resource_id": "021f0985-3648-4b3a-aa4b-dfded93fcd67",
+          "selection_mode": "captioned",
+          "selected_auto_index": 3,
+          "caption": "Figure 1. Observation of fluorescent dyes using a halogen lamp. Fixed mouse blastocysts were treated with anti-Cdx2- and anti-Oct3/4antibodies and stained with Alexa Fluor 488 (green) and 548 (red), respectively, then observed using a mercury vapor lamp (A-C) or an inverted microscope with a halogen lamp (D-F). Although the images produced by halogen light illumination were slightly weaker than images produced with the mercury vapor lamp, they could substitute for those seen using a traditional fluorescence microscope. Similar specimens were observed using an upright microscope with halogen lamp (G-L). These images were taken using an LCPlanF1 objective lens (620; bar = 100 mm). (J) Bright field illumination. (K, L) A different focal plane of the same embryo shown in (I). (J) Inner cell mass (ICM) cells appear as Oct3/4-positive cells. (K, L) Merged images. (J-L) Observed using an LCPlanF1 objective lens (640; bar =50 mm). doi:10.1371/journal.pone.0031638.g001",
+          "source_location": {
+            "page_index": 1,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.28302,
+              790.866028
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.28302,
+              790.866028
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.28302,
+            "height": 790.866028,
+            "bbox": [
+              58.71783232215669,
+              407.6201279805547,
+              377.92168311272627,
+              729.1378486816934
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 2,
+              "bbox": {
+                "l": 58.717832322156696,
+                "t": 729.1378486816934,
+                "r": 377.92168311272627,
+                "b": 407.6201279805547,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                0
+              ]
+            }
+          },
+          "native_detail_and_location": true
+        },
+        {
+          "kind": "table",
+          "count": 2,
+          "resource_id": "92a6c3a8-6ad1-49e8-8f58-99e725e5ab99",
+          "selection_mode": "captioned",
+          "selected_auto_index": 0,
+          "caption": "Table 1. Toxicity of Hoechst and mercury lamp for mouse embryo development.",
+          "source_location": {
+            "page_index": 3,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.28302,
+              790.866028
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.28302,
+              790.866028
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.28302,
+            "height": 790.866028,
+            "bbox": [
+              61.375483014889916,
+              507.62256631877267,
+              554.8745979692139,
+              703.5365527364178
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 4,
+              "bbox": {
+                "l": 61.375483014889916,
+                "t": 703.5365527364178,
+                "r": 554.8745979692139,
+                "b": 507.62256631877267,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                0
+              ]
+            }
+          },
+          "native_detail_and_location": true
+        }
+      ],
+      "pdf_find": {
+        "query": "Fluorescence",
+        "status": "1 / 40"
+      },
+      "reading_state": {
+        "paper_id": "5065937a-3d79-4e8c-ae33-01f07568e6f5",
+        "version": 4,
+        "page_index": 1,
+        "anchor": [
+          0.0,
+          790.866028
+        ],
+        "scale": 1.0,
+        "rotation": 0,
+        "fit_mode": "custom",
+        "status": "reading",
+        "last_opened": "2026-10-09T12:08:30.672120+00:00",
+        "updated_at": "2026-10-09T12:08:33.603372+00:00"
+      },
+      "annotations": [
+        {
+          "title": "Real corpus native review 2: science-halogen-microscopy.pdf",
+          "quote": "",
+          "body": "Source inspected through the installed reader: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0031638",
+          "color": "amber",
+          "tags": [],
+          "locations": [],
+          "id": "634aecff-e878-4a58-abe3-aba6b1412255",
+          "paper_id": "5065937a-3d79-4e8c-ae33-01f07568e6f5",
+          "paper_title": "pone.0031638 1..8",
+          "kind": "note",
+          "version": 1,
+          "deleted": false,
+          "created_at": "2026-10-09T12:08:34.115236+00:00",
+          "updated_at": "2026-10-09T12:08:34.115236+00:00",
+          "paper_filename": "science-halogen-microscopy.pdf",
+          "pdf_sha256": "b5a43de706b5f097346bd1a59e6c21eb71a918ee66594a5e54cd1fcd1732a202"
+        },
+        {
+          "title": "第 2 页",
+          "quote": "",
+          "body": "",
+          "color": "amber",
+          "tags": [],
+          "locations": [
+            {
+              "page_index": 1,
+              "bbox": null
+            }
+          ],
+          "id": "3d21456a-a32d-439e-95ac-4d6d73a6e26e",
+          "paper_id": "5065937a-3d79-4e8c-ae33-01f07568e6f5",
+          "paper_title": "pone.0031638 1..8",
+          "kind": "bookmark",
+          "version": 1,
+          "deleted": false,
+          "created_at": "2026-10-09T12:08:33.506668+00:00",
+          "updated_at": "2026-10-09T12:08:33.506668+00:00",
+          "paper_filename": "science-halogen-microscopy.pdf",
+          "pdf_sha256": "b5a43de706b5f097346bd1a59e6c21eb71a918ee66594a5e54cd1fcd1732a202"
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "phases": [
+    "installed_backend_restored_separate_copy_without_manual_baseline_edits",
+    "native_restart_retains_real_paper_notes_bookmarks_reading_and_closes_sidecar"
+  ],
+  "desktop_version": "0.2.0",
+  "document_scripts": [
+    "http://tauri.localhost/assets/index-Bi9K65xx.js"
+  ]
+}

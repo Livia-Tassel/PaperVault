@@ -1,0 +1,110 @@
+{
+  "scope": "Immutable 0.2.0 installed real-paper baseline and human reviews, plus separately named 0.2.1 fix/release evidence. Not a general accuracy claim.",
+  "copies": [
+    {
+      "source": "artifacts/real-corpus/installed-backend-report.json",
+      "snapshot": "docs/verification/real-corpus/installed-backend-report.json",
+      "sha256": "e51cc5a79f9ce1a5d51911ca0e0d6aa7130abfb6d1a8da805f73134334d5ddf1"
+    },
+    {
+      "source": "artifacts/real-corpus/quality-control.json",
+      "snapshot": "docs/verification/real-corpus/quality-control.json",
+      "sha256": "8d4817a0c7fb74f00d0a61ddc37af3e6ac183d108413096439d72fdab319eb05"
+    },
+    {
+      "source": "artifacts/real-corpus/quality-ml.json",
+      "snapshot": "docs/verification/real-corpus/quality-ml.json",
+      "sha256": "759c21715daaf6e4f8083209a1b5df8e71a22b8b14de2d1ff4a39b27b1009e1a"
+    },
+    {
+      "source": "artifacts/real-corpus/quality-science.json",
+      "snapshot": "docs/verification/real-corpus/quality-science.json",
+      "sha256": "8a9bb39bcb824bb97bb5eb636873f55986b111336754db621fb4e9efe72eb20e"
+    },
+    {
+      "source": "artifacts/real-corpus/quality-summary.json",
+      "snapshot": "docs/verification/real-corpus/quality-summary.json",
+      "sha256": "947e031b908fcbcc71f1cee5f790619f408166ba390bf243f71bee573e84c416"
+    },
+    {
+      "source": "artifacts/real-corpus/source-text-layer-diagnosis.json",
+      "snapshot": "docs/verification/real-corpus/source-text-layer-diagnosis.json",
+      "sha256": "d422bb0100e665930cfd256607c3ca1d0b4b3c5e66ab20a6263392595b0b7b01"
+    },
+    {
+      "source": "artifacts/real-corpus/control-table-export-check.json",
+      "snapshot": "docs/verification/real-corpus/control-table-export-check.json",
+      "sha256": "f6757a8a6af72b9d9ae5026ed1d41706f04cbaccb45b81ec5f070bbe62601cf0"
+    },
+    {
+      "source": "artifacts/real-corpus/title-metadata-replay.json",
+      "snapshot": "docs/verification/real-corpus/title-metadata-replay.json",
+      "sha256": "f1c89f57660749ca41262264643f1a2aac1aad76b3d2525de37b0e4f7f4e5414"
+    },
+    {
+      "source": "artifacts/real-corpus/copy-comparison-diagnosis.json",
+      "snapshot": "docs/verification/real-corpus/copy-comparison-diagnosis.json",
+      "sha256": "7a59a1b32ff1490853e03652092e80a8eb69bbca125b3f8b79cf34ef97ee4314"
+    },
+    {
+      "source": "artifacts/real-corpus/native-diagnostic-review.json",
+      "snapshot": "docs/verification/real-corpus/native-diagnostic-review.json",
+      "sha256": "1e7daa6411256ee9e80a4a85d2672211a69348be7849c88d5d718842e5462194"
+    },
+    {
+      "source": "artifacts/real-corpus/backend-v021.xml",
+      "snapshot": "docs/verification/real-corpus/backend-v021.xml",
+      "sha256": "2063c64f243dc2affc55a65856d5f6ef8430e968a044d4ebb80427f2e570947a"
+    },
+    {
+      "source": "artifacts/real-corpus/backend-v021.log",
+      "snapshot": "docs/verification/real-corpus/backend-v021.log",
+      "sha256": "998295ebe1f399ee8f3c1b4f682143379715d652222377dbc4d8bbcb95fc46e1"
+    },
+    {
+      "source": "artifacts/real-corpus/review-html-check.json",
+      "snapshot": "docs/verification/real-corpus/review-html-check.json",
+      "sha256": "b445c55db526c94ed2397ef531923e2d5436de524e024c05c3a710644ee53258"
+    },
+    {
+      "source": "artifacts/real-corpus/native/report.json",
+      "snapshot": "docs/verification/real-corpus/native/report.json",
+      "sha256": "00c9bcf7304f594cce709c440fc52a04e477bcb9f0dc99ee75d56ae6761e7a00"
+    },
+    {
+      "source": "artifacts/real-corpus/ml-quality-review/export-audit.json",
+      "snapshot": "docs/verification/real-corpus/ml-quality-review/export-audit.json",
+      "sha256": "c20fd29113d0d475d7e8f38c77dde792fb8e1a94240ba32631e1318326676b83"
+    },
+    {
+      "source": "artifacts/real-corpus/native-parser-diagnostic-20261009T121539Z/execution.json",
+      "snapshot": "docs/verification/real-corpus/native-parser-diagnostic-20261009T121539Z/execution.json",
+      "sha256": "1e25964c8a160d157a7222574e7c1f3096bfe73b057aa92d06609d699e6dbd1a"
+    },
+    {
+      "source": "artifacts/real-corpus/native-parser-diagnostic-20261009T121539Z/parser-group.log",
+      "snapshot": "docs/verification/real-corpus/native-parser-diagnostic-20261009T121539Z/parser-group.log",
+      "sha256": "f940e0ce46d8f98f4118187eb467c419b89d0403490cb0458dc13bbde9f687a0"
+    },
+    {
+      "source": "artifacts/real-corpus/native-parser-diagnostic-20261009T121539Z/parser-group.xml",
+      "snapshot": "docs/verification/real-corpus/native-parser-diagnostic-20261009T121539Z/parser-group.xml",
+      "sha256": "eb321ddeb32e85e32846c21f2a399e62a0ca689961a29f7c9f6ad2affe3386df"
+    },
+    {
+      "source": "artifacts/real-corpus-v021/frozen-backend-report.json",
+      "snapshot": "docs/verification/0.2.1/real-papers/frozen-backend-report.json",
+      "sha256": "81e08f7607657e29427a118c283daa28e3314218eac2606e31e420ffd5f3b85e"
+    },
+    {
+      "source": "artifacts/real-corpus-v021/title-fix-comparison.json",
+      "snapshot": "docs/verification/0.2.1/real-papers/title-fix-comparison.json",
+      "sha256": "39bfb8f6ea4f6aca7e23bc3936dc2dfde639af028a46a06d413ed21ae907b391"
+    },
+    {
+      "source": "artifacts/real-corpus-v021/installed-native/report.json",
+      "snapshot": "docs/verification/0.2.1/real-papers/installed-native/report.json",
+      "sha256": "5e7be5a37ef239bdb762abe4fc9517ee10442a19a8efb73056e4f66087f590ce"
+    }
+  ]
+}

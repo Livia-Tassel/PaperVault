@@ -4,11 +4,13 @@
 
 ## 当前交付状态
 
-PaperVault 0.2.0 增加阅读工作台：多论文标签页、阅读位置恢复、页内查找、书签、高亮和可定位笔记。全库笔记支持搜索、筛选、删除恢复及 Markdown/JSON 导出。界面使用紧凑的中性灰工作区，支持收起侧栏、可调信息栏与亮暗主题。
+PaperVault 0.2.1 包含阅读工作台：多论文标签页、阅读位置恢复、页内查找、书签、高亮和可定位笔记。全库笔记支持搜索、筛选、删除恢复及 Markdown/JSON 导出。界面使用紧凑的中性灰工作区，支持收起侧栏、可调信息栏与亮暗主题。
 
-本机产物：[Windows安装包](apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis/PaperVault_0.2.0_x64-setup.exe)。已在本机实际安装并通过真实PDF、阅读笔记与旧库迁移验收（511.54 MiB）；结果与哈希以 [测试报告](TEST_REPORT.md) 和 [交付清单](docs/verification/0.2.0/release-manifest.json) 为准。首次使用可在设置中导入本项目已有的 `.cache/models` 模型目录，或选择下载模型。开发工具只供构建使用，安装版内置Python后端。
+本机产物：[Windows安装包](apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis/PaperVault_0.2.1_x64-setup.exe)。已在本机实际安装并通过真实PDF、阅读笔记与旧库迁移验收（511.54 MiB）；结果与哈希以 [测试报告](TEST_REPORT.md) 和 [交付清单](docs/verification/0.2.1/release-manifest.json) 为准。首次使用可在设置中导入本项目已有的 `.cache/models` 模型目录，或选择下载模型。开发工具只供构建使用，安装版内置Python后端。
 
-安装器未签名；干净Windows VM尚未验证。复杂PDF识别限制及一次未复现的原生诊断均如实记录在 [TEST_REPORT.md](TEST_REPORT.md)，开发记录见 [PROGRESS.md](PROGRESS.md)。
+补充实测7篇真实论文、71页，并修复出版PDF内部文件名被误用为标题的问题。实际发现的表格行列、单位字形、跨页表及图注限制见[真实论文测试报告](docs/REAL_PAPER_TESTS.md)；流程通过不表示每个单元格都准确。
+
+安装器未签名；干净Windows VM尚未验证。复杂PDF识别限制及再次出现且根因未定位的原生诊断均如实记录在 [TEST_REPORT.md](TEST_REPORT.md)，开发记录见 [PROGRESS.md](PROGRESS.md)。
 
 ## 开发运行（Windows）
 

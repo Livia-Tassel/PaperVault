@@ -13,12 +13,14 @@ ROOT = Path(__file__).resolve().parent.parent
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--prior-uninstall-version', help='Version of an existing uninstall-retention report; never implies a rerun for this release')
-    parser.add_argument('--reading-report', type=Path, default=ROOT / 'artifacts/installed-reading/report.json')
+    parser.add_argument('--evidence-root', type=Path, default=ROOT / 'artifacts')
+    parser.add_argument('--reading-report', type=Path)
     parser.add_argument('--source-commit', default='HEAD', help='Production source revision; later evidence-only commits do not change the binary')
     args = parser.parse_args()
+    evidence_root = args.evidence_root.resolve()
     version = json.loads((ROOT / 'apps/desktop/package.json').read_text(encoding='utf-8'))['version']
-    layout = json.loads((ROOT / "artifacts/install-layout.json").read_text(encoding="utf-8-sig"))
-    native = json.loads((ROOT / 'artifacts/installed-desktop/report.json').read_text(encoding='utf-8'))
+    layout = json.loads((evidence_root / 'install-layout.json').read_text(encoding="utf-8-sig"))
+    native = json.loads((evidence_root / 'installed-desktop/report.json').read_text(encoding='utf-8'))
     assert layout['version'] == version and native['checks']['appVersion'] == version
     assert native['passed'] and native['parsed']['pdf_region_highlight']
     resources = json.loads((ROOT / 'apps/desktop/src-tauri/tauri.bundle.conf.json').read_text(encoding='utf-8'))['bundle']['resources']
@@ -31,7 +33,7 @@ def main():
     reading = None
     frontend_entry = None
     if tuple(map(int, version.split('.')[:2])) >= (0, 2):
-        reading = json.loads(args.reading_report.read_text(encoding='utf-8'))
+        reading = json.loads((args.reading_report or evidence_root / 'installed-reading/report.json').read_text(encoding='utf-8'))
         assert reading['passed'] and reading['desktop_version'] == version
         assert Path(reading['app']).resolve() == Path(native['app']).resolve()
         entry = re.search(r'<script[^>]+src="([^"]+)"', (ROOT / 'apps/desktop/dist/index.html').read_text(encoding='utf-8'))
@@ -74,9 +76,9 @@ def main():
                          "same_id_restored_library_isolation": bool(reading),
                          "clean_windows_vm": False, "hosted_ci_executed": False},
         "prior_version_uninstall_retention": prior_retention,
-        "known_diagnostics": "See TEST_REPORT.md and native-exception-investigation.json; one historical native diagnostic was not reproduced.",
+        "known_diagnostics": "See TEST_REPORT.md and docs/KNOWN_ISSUES.md for observed native diagnostics and the precise validation scope.",
     }
-    (ROOT / "artifacts/release-manifest.json").write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
+    (evidence_root / 'release-manifest.json').write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
     installer.with_suffix(".exe.sha256").write_text(f"{digest}  {installer.name}\n", encoding="utf-8")
     print(f"Verified installer: {installer.name}, {installer.stat().st_size} bytes, SHA256 {digest}")
 

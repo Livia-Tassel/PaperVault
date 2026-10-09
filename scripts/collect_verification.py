@@ -1,4 +1,5 @@
 """Archive release evidence without overwriting prior versions' verification."""
+import argparse
 import json
 import shutil
 from pathlib import Path
@@ -21,16 +22,26 @@ REPORTS = (
 
 
 def main():
-    version = json.loads((ROOT / "apps/desktop/package.json").read_text(encoding="utf-8"))["version"]
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--release", help="Release to archive; defaults to current package version")
+    parser.add_argument("--evidence-root", type=Path, help="Directory holding that exact release's installed reports")
+    args = parser.parse_args()
+    version = args.release or json.loads((ROOT / "apps/desktop/package.json").read_text(encoding="utf-8"))["version"]
+    evidence = args.evidence_root or ROOT / "artifacts" / ("" if version == "0.2.0" else "v" + version.replace(".", ""))
+    manifest = json.loads((evidence / "release-manifest.json").read_text(encoding="utf-8"))
+    if manifest["version"] != version:
+        raise SystemExit("Evidence belongs to a different release; refuse to relabel old results")
+    reports = REPORTS if version == "0.2.0" else (
+        "release-manifest.json", "install-layout.json", "installed-desktop/report.json", "installed-reading/report.json")
     destination = ROOT / "docs/verification" / version
-    missing = [relative for relative in REPORTS if not (ROOT / "artifacts" / relative).is_file()]
+    missing = [relative for relative in reports if not (evidence / relative).is_file()]
     if missing:
         raise SystemExit("Missing release evidence: " + ", ".join(missing))
-    for relative in REPORTS:
+    for relative in reports:
         target = destination / relative
         target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(ROOT / "artifacts" / relative, target)
-    print(f"Preserved {len(REPORTS)} verification reports for {version}")
+        shutil.copyfile(evidence / relative, target)
+    print(f"Preserved {len(reports)} verification reports for {version}")
 
 
 if __name__ == "__main__":

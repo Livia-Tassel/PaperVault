@@ -14,3 +14,5 @@ docs/third-party-licenses/** binary
 docs/third-party-sources/** binary
 # Verification JSON retains exact bytes used by the recorded SHA-256 bindings.
 docs/verification/0.2.0/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+docs/verification/0.2.1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+docs/verification/real-corpus/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

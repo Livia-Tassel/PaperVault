@@ -1,0 +1,474 @@
+{
+  "schema": "papervault-independent-corpus-ground-truth-v1",
+  "annotated_at_utc": "2026-10-09T11:53:28.612404+00:00",
+  "method": "Human visual inventory of every original PDF page rendered by Poppler, corroborated against raw source-PDF text and official publisher article pages. No application parser output or detected-resource list was read for this ground truth. Panel groupings and multi-page continuations are counted as one printed logical object.",
+  "page_index_convention": "Zero-based PDF physical page index, not citation/reference number.",
+  "papers": [
+    {
+      "id": "science-halogen-microscopy",
+      "pages": 8,
+      "scope": "Complete 8-page main article, including supporting-information descriptions on pages 7-8. Separate supporting files are excluded because their visual objects are not embedded in this PDF.",
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            1
+          ],
+          "caption_reference": "Figure 1. Observation of fluorescent dyes using a halogen lamp.",
+          "caption_reference_scope": "Printed label plus caption heading/first sentence; the longer legend body remains visible in the source-page image.",
+          "visual_notes": "One whole figure, 12 panels A-L. Fluorescent/brightfield embryo micrographs; do not count panel thumbnails separately.",
+          "uncertain": false,
+          "bbox_pdf": [
+            59,
+            409,
+            378,
+            730
+          ],
+          "bbox_precision": "Approximate independent visual bounding box, rounded to PDF points; includes whole figure/table body and panel labels, excludes external caption and footnotes; approximately 2 PDF-point tolerance."
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Figure 2. The newly designed filter adapter and its applications.",
+          "caption_reference_scope": "Printed label plus caption heading/first sentence; the longer legend body remains visible in the source-page image.",
+          "visual_notes": "One whole figure, 8 panels A-H. Instrument photographs above, embryo/cell microscopy below; arrows and panel labels belong to figure.",
+          "uncertain": false,
+          "bbox_pdf": [
+            59,
+            328,
+            378,
+            730
+          ],
+          "bbox_precision": "Approximate independent visual bounding box, rounded to PDF points; includes whole figure/table body and panel labels, excludes external caption and footnotes; approximately 2 PDF-point tolerance."
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            4
+          ],
+          "caption_reference": "Figure 3. Staining of MII spindle using phycoerythrin and observation.",
+          "caption_reference_scope": "Printed label plus caption heading/first sentence; the longer legend body remains visible in the source-page image.",
+          "visual_notes": "One whole figure, 15 panels A-O. Microscopy, enlarged inset and a line plot are parts of this one numbered figure.",
+          "uncertain": false,
+          "bbox_pdf": [
+            59,
+            430,
+            381,
+            730
+          ],
+          "bbox_precision": "Approximate independent visual bounding box, rounded to PDF points; includes whole figure/table body and panel labels, excludes external caption and footnotes; approximately 2 PDF-point tolerance."
+        },
+        {
+          "kind": "figure",
+          "number": "4",
+          "page_indices": [
+            5
+          ],
+          "caption_reference": "Figure 4. Enucleation of MII chromosomes from oocytes with fluorescence observation using halogen lamp.",
+          "caption_reference_scope": "Printed label plus caption heading/first sentence; the longer legend body remains visible in the source-page image.",
+          "visual_notes": "One whole figure, 8 panels A-H. Includes both microscopy and a real mouse photograph. Table 2 is a separate object below the body prose.",
+          "uncertain": false,
+          "bbox_pdf": [
+            59,
+            458,
+            381,
+            730
+          ],
+          "bbox_precision": "Approximate independent visual bounding box, rounded to PDF points; includes whole figure/table body and panel labels, excludes external caption and footnotes; approximately 2 PDF-point tolerance."
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            3
+          ],
+          "caption_reference": "Table 1. Toxicity of Hoechst and mercury lamp for mouse embryo development.",
+          "caption_reference_scope": "Printed label plus caption heading/first sentence; the longer legend body remains visible in the source-page image.",
+          "visual_notes": "8 leaf columns, with In vitro development at 96 h spanning the last three. Twelve data rows in Partheno./ICSI/Clone blocks. Blank grouping cells are not missing data.",
+          "uncertain": false,
+          "bbox_pdf": [
+            64,
+            509,
+            554,
+            702
+          ],
+          "bbox_precision": "Approximate independent visual bounding box, rounded to PDF points; includes whole figure/table body and panel labels, excludes external caption and footnotes; approximately 2 PDF-point tolerance."
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_indices": [
+            5
+          ],
+          "caption_reference": "Table 2. Production of cloned mice using phycoerythrin and antibody injected oocyte.",
+          "caption_reference_scope": "Printed label plus caption heading/first sentence; the longer legend body remains visible in the source-page image.",
+          "visual_notes": "9 columns, 4 concentration rows plus Total. Percentages are printed in parentheses within offspring cells. Caption above and DOI below are outside table data.",
+          "uncertain": false,
+          "bbox_pdf": [
+            64,
+            72,
+            554,
+            171
+          ],
+          "bbox_precision": "Approximate independent visual bounding box, rounded to PDF points; includes whole figure/table body and panel labels, excludes external caption and footnotes; approximately 2 PDF-point tolerance.",
+          "sample_cells": [
+            {
+              "data_row_index": 0,
+              "column_index": 1,
+              "row_label": "0",
+              "column_label": "No. used oocyte",
+              "expected_text": "197"
+            },
+            {
+              "data_row_index": 0,
+              "column_index": 8,
+              "row_label": "0",
+              "column_label": "No. offspring (% against pronuclear egg)",
+              "expected_text": "13 (7.6)"
+            },
+            {
+              "data_row_index": 1,
+              "column_index": 2,
+              "row_label": "75",
+              "column_label": "No. survived after antibody injection",
+              "expected_text": "141"
+            },
+            {
+              "data_row_index": 1,
+              "column_index": 8,
+              "row_label": "75",
+              "column_label": "No. offspring (% against pronuclear egg)",
+              "expected_text": "8 (7.0)"
+            },
+            {
+              "data_row_index": 2,
+              "column_index": 1,
+              "row_label": "150",
+              "column_label": "No. used oocyte",
+              "expected_text": "182"
+            },
+            {
+              "data_row_index": 2,
+              "column_index": 7,
+              "row_label": "150",
+              "column_label": "No. embryo developed to 2-cell",
+              "expected_text": "127"
+            },
+            {
+              "data_row_index": 3,
+              "column_index": 6,
+              "row_label": "300",
+              "column_label": "No. pronuclear formation",
+              "expected_text": "115"
+            },
+            {
+              "data_row_index": 3,
+              "column_index": 8,
+              "row_label": "300",
+              "column_label": "No. offspring (% against pronuclear egg)",
+              "expected_text": "7 (6.0)"
+            },
+            {
+              "data_row_index": 4,
+              "column_index": 1,
+              "row_label": "Total",
+              "column_label": "No. used oocyte",
+              "expected_text": "690"
+            },
+            {
+              "data_row_index": 4,
+              "column_index": 8,
+              "row_label": "Total",
+              "column_label": "No. offspring (% against pronuclear egg)",
+              "expected_text": "35 (6.4)"
+            }
+          ],
+          "sample_cell_indexing": "Zero-based logical data row (header excluded), zero-based left-to-right column; five data rows include Total. Compare whitespace-normalized cell text."
+        }
+      ],
+      "expected_counts": {
+        "figures": 4,
+        "tables": 2,
+        "table_page_segments": 2
+      },
+      "excluded_material": [
+        {
+          "page_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "description": "Journal header/footer logos and recurring page furniture."
+        },
+        {
+          "page_indices": [
+            6,
+            7
+          ],
+          "description": "Figure S1-S3, Table S1-S2 and Video S1-S2 are textual descriptions/links only; no supplementary image/table body is present."
+        }
+      ],
+      "render_directory": "artifacts/real-corpus/source-pages/science-halogen-microscopy",
+      "render_dpi": 110,
+      "visually_reviewed_page_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "uncertain_objects": []
+    },
+    {
+      "id": "science-prisma2020",
+      "pages": 15,
+      "scope": "Complete 15-page main guideline. Include actual numbered Figure 1 and Tables 1-2; count Table 1 page continuation once. Separate supporting PDFs excluded.",
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            9
+          ],
+          "caption_reference": "Fig 1. PRISMA 2020 flow diagram template for systematic reviews.",
+          "caption_reference_scope": "Printed label plus caption heading/first sentence; the longer legend body remains visible in the source-page image.",
+          "visual_notes": "One entire vector-style flowchart including three top headings, purple/gray boxes, connectors and internal footnote. Empty n= placeholders are intended, not missing extraction data.",
+          "uncertain": false,
+          "bbox_pdf": [
+            43,
+            385,
+            576,
+            714
+          ],
+          "bbox_precision": "Approximate independent visual bounding box, rounded to PDF points; includes whole figure/table body and panel labels, excludes external caption and footnotes; approximately 2 PDF-point tolerance."
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            6,
+            7
+          ],
+          "caption_reference": "Table 1. PRISMA 2020 item checklist.",
+          "caption_reference_scope": "Printed label plus caption heading/first sentence; the longer legend body remains visible in the source-page image.",
+          "visual_notes": "One numbered table spanning two PDF pages. Page 8 says Table 1. (Continued); repeated header is not a second logical table. Four columns; Location where item is reported is intentionally blank. Bold section separator rows and merged topic cells carry hierarchy.",
+          "uncertain": false,
+          "segments": [
+            {
+              "page_index": 6,
+              "bbox_pdf": [
+                36,
+                90,
+                576,
+                704
+              ]
+            },
+            {
+              "page_index": 7,
+              "bbox_pdf": [
+                36,
+                342,
+                576,
+                702
+              ]
+            }
+          ],
+          "bbox_precision": "Manually bounded table body per page, approximately 2 PDF-point tolerance. Captions, continuation marker and DOI excluded.",
+          "sample_cells": [
+            {
+              "page_index": 6,
+              "row_label": "Title / item 1",
+              "column_index": 2,
+              "column_label": "Checklist item",
+              "expected_text": "Identify the report as a systematic review."
+            },
+            {
+              "page_index": 6,
+              "row_label": "Objectives / item 4",
+              "column_index": 1,
+              "column_label": "Item #",
+              "expected_text": "4"
+            },
+            {
+              "page_index": 6,
+              "row_label": "Data items / item 10a",
+              "column_index": 1,
+              "column_label": "Item #",
+              "expected_text": "10a"
+            },
+            {
+              "page_index": 6,
+              "row_label": "Synthesis methods / item 13f",
+              "column_index": 2,
+              "column_label": "Checklist item",
+              "expected_text": "Describe any sensitivity analyses conducted to assess robustness of the synthesised results."
+            },
+            {
+              "page_index": 6,
+              "row_label": "Study characteristics / item 17",
+              "column_index": 2,
+              "column_label": "Checklist item",
+              "expected_text": "Cite each included study and present its characteristics."
+            },
+            {
+              "page_index": 7,
+              "row_label": "Risk of bias in studies / item 18",
+              "column_index": 2,
+              "column_label": "Checklist item",
+              "expected_text": "Present assessments of risk of bias for each included study."
+            },
+            {
+              "page_index": 7,
+              "row_label": "Results of syntheses / item 20d",
+              "column_index": 2,
+              "column_label": "Checklist item",
+              "expected_text": "Present results of all sensitivity analyses conducted to assess the robustness of the synthesised results."
+            },
+            {
+              "page_index": 7,
+              "row_label": "Registration and protocol / item 24b",
+              "column_index": 2,
+              "column_label": "Checklist item",
+              "expected_text": "Indicate where the review protocol can be accessed, or state that a protocol was not prepared."
+            },
+            {
+              "page_index": 7,
+              "row_label": "Competing interests / item 26",
+              "column_index": 2,
+              "column_label": "Checklist item",
+              "expected_text": "Declare any competing interests of review authors."
+            },
+            {
+              "page_index": 7,
+              "row_label": "Competing interests / item 26",
+              "column_index": 3,
+              "column_label": "Location where item is reported",
+              "expected_text": ""
+            }
+          ],
+          "sample_cell_indexing": "Zero-based left-to-right column across 4 columns. Row identified by printed topic and item number, because multi-row section headers/merged topic cells make a flat extracted row index ambiguous. Compare whitespace-normalized text; the final blank is intentional."
+        },
+        {
+          "kind": "table",
+          "number": "2",
+          "page_indices": [
+            8
+          ],
+          "caption_reference": "Table 2. PRISMA 2020 for Abstracts checklist.",
+          "caption_reference_scope": "Printed label plus caption heading/first sentence; the longer legend body remains visible in the source-page image.",
+          "visual_notes": "One 3-column, 12-item checklist with bold section separator rows. Caption has a footnote marker; the prose footnote below is not an additional table.",
+          "uncertain": false,
+          "bbox_pdf": [
+            200,
+            398,
+            576,
+            704
+          ],
+          "bbox_precision": "Approximate independent visual bounding box, rounded to PDF points; includes whole figure/table body and panel labels, excludes external caption and footnotes; approximately 2 PDF-point tolerance."
+        }
+      ],
+      "expected_counts": {
+        "figures": 1,
+        "tables": 2,
+        "table_page_segments": 3
+      },
+      "excluded_material": [
+        {
+          "page_indices": [
+            0
+          ],
+          "description": "CrossMark icon, open-access icon and journal branding are not research figures."
+        },
+        {
+          "page_indices": [
+            1,
+            2
+          ],
+          "description": "Summary points are prose callout boxes, not a data table."
+        },
+        {
+          "page_indices": [
+            3
+          ],
+          "description": "Box 1. Glossary of terms is structured prose, not a Figure or Table."
+        },
+        {
+          "page_indices": [
+            5
+          ],
+          "description": "Box 2. Noteworthy changes to the PRISMA 2009 statement is a bullet list, not a Figure or Table."
+        },
+        {
+          "page_indices": [
+            10
+          ],
+          "description": "S1 PRISMA 2020 checklist and S2 expanded checklist are links/descriptions, not embedded additional tables."
+        }
+      ],
+      "render_directory": "artifacts/real-corpus/source-pages/science-prisma2020",
+      "render_dpi": 100,
+      "visually_reviewed_page_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "uncertain_objects": []
+    },
+    {
+      "id": "science-porespy",
+      "pages": 4,
+      "scope": "Complete 4-page JOSS paper and references. Research Figure/Table count is genuinely zero; repeated journal logos are expressly excluded.",
+      "objects": [],
+      "expected_counts": {
+        "figures": 0,
+        "tables": 0,
+        "table_page_segments": 0
+      },
+      "excluded_material": [
+        {
+          "page_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "description": "Repeated large JOSS logo is page branding, not a numbered or scientific figure; the text includes no figure/table body or caption."
+        }
+      ],
+      "render_directory": "artifacts/real-corpus/source-pages/science-porespy",
+      "render_dpi": 110,
+      "visually_reviewed_page_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "uncertain_objects": []
+    }
+  ]
+}

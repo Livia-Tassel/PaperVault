@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "app": "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault.exe",
+  "fixture": "D:\\project\\PaperVault\\.test-data\\packaging\\PaperVault desktop test v_7zrdsp",
+  "checks": {
+    "appVersion": "0.2.1",
+    "baseUrl": "http://127.0.0.1:4625/api/v1",
+    "health": {
+      "protocol": 1,
+      "status": "ok",
+      "version": "0.2.1"
+    },
+    "healthStatus": 200,
+    "native": true,
+    "unauthorizedStatus": 401
+  },
+  "navigation": [
+    "图片库",
+    "表格库",
+    "解析任务",
+    "设置",
+    "论文库"
+  ],
+  "parsed": {
+    "paper_id": "57f5ac50-b6e9-40d1-a231-5185f6f35f91",
+    "status": "completed",
+    "figure_count": 1,
+    "table_count": 1,
+    "pristine_metadata_refreshed": true,
+    "unsaved_notes_preserved": true,
+    "unsaved_navigation_guard": true,
+    "pdf_region_highlight": true,
+    "outline_and_references_edit": true
+  },
+  "captured_pages": [
+    "pdf-reader-dark-pristine",
+    "pdf-reader",
+    "library",
+    "figures",
+    "tables",
+    "tasks",
+    "settings"
+  ],
+  "shutdown": {
+    "owned_app_pid": 13380,
+    "application_exited": true,
+    "backend_port_closed": true
+  },
+  "scope": "Actual Tauri WebView2, packaged sidecar startup, IPC, CSP/CORS authenticated API, access denial, rendered UI. Installer cleanliness and full parsing quality require separate checks."
+}

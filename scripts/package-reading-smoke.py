@@ -62,7 +62,7 @@ def main():
         if args.expect_frontend:
             assert args.expect_frontend in [Path(urlsplit(src).path).name for src in scripts], scripts
             report['frontend_bundle'] = args.expect_frontend
-        assert client.api('/health')['version'] == '0.2.0'
+        assert client.api('/health')['version'] == (args.expect_version or version)
         paper_id = legacy['paper_id']
         paper = client.api(f'/papers/{paper_id}')
         assert paper['notes'] == 'Legacy personal note must survive' and paper['tags'] == ['legacy-retained']

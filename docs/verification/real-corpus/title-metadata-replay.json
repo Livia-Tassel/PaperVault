@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "scope": "Replay only the metadata adapter using frozen-run immutable actual Docling blocks and original PDF metadata; not a fresh model parse. A fresh frozen regression is also required.",
+  "cases": [
+    {
+      "source_id": "docling-v5",
+      "changes": {},
+      "passed": true
+    },
+    {
+      "source_id": "bert-naacl2019",
+      "changes": {},
+      "passed": true
+    },
+    {
+      "source_id": "sentence-bert-emnlp2019",
+      "changes": {},
+      "passed": true
+    },
+    {
+      "source_id": "river-jmlr2021",
+      "changes": {},
+      "passed": true
+    },
+    {
+      "source_id": "science-halogen-microscopy",
+      "changes": {
+        "title": {
+          "before": "pone.0031638 1..8",
+          "after": "Fluorescence Cell Imaging and Manipulation Using Conventional Halogen Lamp Microscopy"
+        },
+        "title_source": {
+          "before": "pdf_metadata",
+          "after": "layout_heading"
+        }
+      },
+      "passed": true
+    },
+    {
+      "source_id": "science-prisma2020",
+      "changes": {},
+      "passed": true
+    },
+    {
+      "source_id": "science-porespy",
+      "changes": {},
+      "passed": true
+    }
+  ],
+  "negative_regression_before_fix": {
+    "failed": 2,
+    "passed": 2,
+    "tests": "tests/parser/test_title_fallback.py"
+  },
+  "targeted_regression_after_fix": {
+    "passed": 6,
+    "failed": 0
+  },
+  "expected_changed_papers": [
+    "science-halogen-microscopy"
+  ]
+}

@@ -1,0 +1,3818 @@
+{
+  "editable-copy": {
+    "get": {
+      "id": "d0f3e9e4-092b-4ce0-8159-60405215df68",
+      "filename": "docling-report-v5.pdf",
+      "title": "Docling Technical Report",
+      "authors": [],
+      "status": "completed",
+      "figure_count": 5,
+      "table_count": 3,
+      "reading_status": "unread",
+      "last_opened": null,
+      "annotation_count": 0,
+      "abstract": "This technical report introduces Docling, an easy to use, self-contained, MITlicensed open-source package for PDF document conversion. It is powered by state-of-the-art specialized AI models for layout analysis (DocLayNet) and table structure recognition (TableFormer), and runs efficiently on commodity hardware in a small resource budget. The code interface allows for easy extensibility and addition of new features and models.",
+      "year": null,
+      "venue": "",
+      "doi": "",
+      "arxiv_id": "",
+      "keywords": [],
+      "tags": [
+        "corpus-copy-validation"
+      ],
+      "folders": [],
+      "favorite": false,
+      "notes": "Real corpus isolated edit f3affa2c49b44d52bccd69d2322f527c",
+      "sections": [
+        {
+          "title": "Docling Technical Report",
+          "level": 1,
+          "location": {
+            "page_index": 0,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              212.59,
+              551.1629813999999,
+              399.4115208,
+              566.639626
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 1,
+              "bbox": {
+                "l": 212.59,
+                "t": 566.639626,
+                "r": 399.4115208,
+                "b": 551.1629813999999,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                24
+              ]
+            }
+          }
+        },
+        {
+          "title": "Version 1.0",
+          "level": 1,
+          "location": {
+            "page_index": 0,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              283.31,
+              503.42577439292035,
+              328.6896429999999,
+              511.9776526
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 1,
+              "bbox": {
+                "l": 283.31,
+                "t": 511.9776526,
+                "r": 328.6896429999999,
+                "b": 503.42577439292035,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                11
+              ]
+            }
+          }
+        },
+        {
+          "title": "Abstract",
+          "level": 1,
+          "location": {
+            "page_index": 0,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              283.758,
+              382.41136320000004,
+              328.24329919999997,
+              393.159088
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 1,
+              "bbox": {
+                "l": 283.758,
+                "t": 393.159088,
+                "r": 328.24329919999997,
+                "b": 382.41136320000004,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                8
+              ]
+            }
+          }
+        },
+        {
+          "title": "1 Introduction",
+          "level": 1,
+          "location": {
+            "page_index": 0,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              107.99999999999996,
+              257.0543632000001,
+              190.8136704,
+              267.802088
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 1,
+              "bbox": {
+                "l": 107.99999999999994,
+                "t": 267.802088,
+                "r": 190.8136704,
+                "b": 257.0543632000001,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                14
+              ]
+            }
+          }
+        },
+        {
+          "title": "2 Getting Started",
+          "level": 1,
+          "location": {
+            "page_index": 1,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              561.7423631999999,
+              205.29141760000007,
+              572.4900879999999
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 2,
+              "bbox": {
+                "l": 108.0,
+                "t": 572.4900879999999,
+                "r": 205.29141760000007,
+                "b": 561.7423631999999,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                17
+              ]
+            }
+          }
+        },
+        {
+          "title": "3 Processing pipeline",
+          "level": 1,
+          "location": {
+            "page_index": 1,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              286.85036319999995,
+              223.69047040000004,
+              297.5980879999999
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 2,
+              "bbox": {
+                "l": 108.0,
+                "t": 297.5980879999999,
+                "r": 223.69047040000004,
+                "b": 286.85036319999995,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                21
+              ]
+            }
+          }
+        },
+        {
+          "title": "3.1 PDF backends",
+          "level": 1,
+          "location": {
+            "page_index": 1,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              152.47781659999998,
+              192.03453100000004,
+              161.43419399999993
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 2,
+              "bbox": {
+                "l": 108.0,
+                "t": 161.43419399999993,
+                "r": 192.03453100000004,
+                "b": 152.47781659999998,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                16
+              ]
+            }
+          }
+        },
+        {
+          "title": "3.2 AI models",
+          "level": 1,
+          "location": {
+            "page_index": 2,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.00000000000003,
+              417.4698166000001,
+              173.86274860000006,
+              426.4261940000001
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 3,
+              "bbox": {
+                "l": 108.00000000000003,
+                "t": 426.4261940000001,
+                "r": 173.86274860000006,
+                "b": 417.4698166000001,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                13
+              ]
+            }
+          }
+        },
+        {
+          "title": "Layout Analysis Model",
+          "level": 1,
+          "location": {
+            "page_index": 2,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              304.7618166000001,
+              206.28104900000005,
+              313.71819400000004
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 3,
+              "bbox": {
+                "l": 108.0,
+                "t": 313.7181940000001,
+                "r": 206.28104900000005,
+                "b": 304.7618166000001,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                21
+              ]
+            }
+          }
+        },
+        {
+          "title": "Table Structure Recognition",
+          "level": 1,
+          "location": {
+            "page_index": 2,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              166.10181660000012,
+              228.1091056000001,
+              175.05819400000019
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 3,
+              "bbox": {
+                "l": 108.0,
+                "t": 175.05819400000019,
+                "r": 228.10910560000008,
+                "b": 166.10181660000012,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                27
+              ]
+            }
+          }
+        },
+        {
+          "title": "OCR",
+          "level": 1,
+          "location": {
+            "page_index": 3,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              641.6778166000001,
+              130.1368972,
+              650.6341940000001
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 4,
+              "bbox": {
+                "l": 108.0,
+                "t": 650.6341940000001,
+                "r": 130.1368972,
+                "b": 641.6778166000001,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                3
+              ]
+            }
+          }
+        },
+        {
+          "title": "3.3 Assembly",
+          "level": 1,
+          "location": {
+            "page_index": 3,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.00000000000004,
+              517.2188166000002,
+              171.3720986000001,
+              526.1751940000001
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 4,
+              "bbox": {
+                "l": 108.00000000000006,
+                "t": 526.1751940000001,
+                "r": 171.3720986000001,
+                "b": 517.2188166000002,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                12
+              ]
+            }
+          }
+        },
+        {
+          "title": "3.4 Extensibility",
+          "level": 1,
+          "location": {
+            "page_index": 3,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.00000000000004,
+              407.80281660000014,
+              184.1142640000001,
+              416.75919400000015
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 4,
+              "bbox": {
+                "l": 108.00000000000006,
+                "t": 416.75919400000015,
+                "r": 184.1142640000001,
+                "b": 407.80281660000014,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                17
+              ]
+            }
+          }
+        },
+        {
+          "title": "4 Performance",
+          "level": 1,
+          "location": {
+            "page_index": 3,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              107.99999999999996,
+              234.01036320000026,
+              191.78204160000004,
+              244.75808800000027
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 4,
+              "bbox": {
+                "l": 107.99999999999994,
+                "t": 244.75808800000027,
+                "r": 191.78204160000004,
+                "b": 234.01036320000026,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                13
+              ]
+            }
+          }
+        },
+        {
+          "title": "5 Applications",
+          "level": 1,
+          "location": {
+            "page_index": 4,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.00000000000003,
+              517.8803632,
+              190.072448,
+              528.628088
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 5,
+              "bbox": {
+                "l": 108.00000000000001,
+                "t": 528.628088,
+                "r": 190.072448,
+                "b": 517.8803632,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                14
+              ]
+            }
+          }
+        },
+        {
+          "title": "6 Future work and contributions",
+          "level": 1,
+          "location": {
+            "page_index": 4,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.00000000000004,
+              336.0403632000001,
+              283.77730560000015,
+              346.7880880000001
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 5,
+              "bbox": {
+                "l": 108.00000000000006,
+                "t": 346.7880880000001,
+                "r": 283.77730560000015,
+                "b": 336.0403632000001,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                31
+              ]
+            }
+          }
+        },
+        {
+          "title": "References",
+          "level": 1,
+          "location": {
+            "page_index": 4,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0000000000001,
+              170.54036320000023,
+              163.54385920000016,
+              181.28808800000024
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 5,
+              "bbox": {
+                "l": 108.00000000000009,
+                "t": 181.28808800000024,
+                "r": 163.54385920000016,
+                "b": 170.54036320000023,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                10
+              ]
+            }
+          }
+        },
+        {
+          "title": "Appendix",
+          "level": 1,
+          "location": {
+            "page_index": 6,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              707.5383632,
+              157.53039360000002,
+              718.2860880000001
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 7,
+              "bbox": {
+                "l": 108.0,
+                "t": 718.2860880000001,
+                "r": 157.53039360000002,
+                "b": 707.5383632,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                8
+              ]
+            }
+          }
+        },
+        {
+          "title": "5 EXPERIMENTS",
+          "level": 1,
+          "location": {
+            "page_index": 7,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              122.99872750652477,
+              331.8357032354715,
+              163.04465184815228,
+              338.09346179002006
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 8,
+              "bbox": {
+                "l": 122.99872750652476,
+                "t": 338.0934617900201,
+                "r": 163.04465184815228,
+                "b": 331.83570323547144,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                13
+              ]
+            }
+          }
+        },
+        {
+          "title": "Baselines for Object Detection",
+          "level": 1,
+          "location": {
+            "page_index": 7,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              235.91056828312725,
+              370.86459271267637,
+              299.55598297093286,
+              377.12235126722504
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 8,
+              "bbox": {
+                "l": 235.91056828312725,
+                "t": 377.12235126722504,
+                "r": 299.55598297093286,
+                "b": 370.86459271267637,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                30
+              ]
+            }
+          }
+        }
+      ],
+      "references": [
+        "J. AI. Easyocr: Ready-to-use ocr with 80+ supported languages. https://github.com/ JaidedAI/EasyOCR, 2024. Version: 1.7.0.",
+        "J. Ansel, E. Yang, H. He, N. Gimelshein, A. Jain, M. Voznesensky, B. Bao, P. Bell, D. Berard, E. Burovski, G. Chauhan, A. Chourdia, W. Constable, A. Desmaison, Z. DeVito, E. Ellison, W. Feng, J. Gong, M. Gschwind, B. Hirsh, S. Huang, K. Kalambarkar, L. Kirsch, M. Lazos, M. Lezcano, Y. Liang, J. Liang, Y. Lu, C. Luk, B. Maher, Y. Pan, C. Puhrsch, M. Reso, M. Saroufim, M. Y. Siraichi, H. Suk, M. Suo, P. Tillet, E. Wang, X. Wang, W. Wen, S. Zhang, X. Zhao, K. Zhou, R. Zou, A. Mathews, G. Chanan, P. Wu, and S. Chintala. Pytorch 2: Faster",
+        "machine learning through dynamic python bytecode transformation and graph compilation. In Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2 (ASPLOS '24). ACM, 4 2024. doi: 10.1145/3620665.3640366. URL https://pytorch.org/assets/pytorch2-2.pdf.",
+        "C. Auer, M. Dolfi, A. Carvalho, C. B. Ramis, and P. W. Staar. Delivering document conversion as a cloud service with high throughput and responsiveness. In 2022 IEEE 15th International Conference on Cloud Computing (CLOUD), pages 363-373. IEEE, 2022.",
+        "J. Berkenbilt. Qpdf: A content-preserving pdf document transformer, 2024. URL https: //github.com/qpdf/qpdf.",
+        "O. R. developers. Onnx runtime. https://onnxruntime.ai/, 2024. Version: 1.18.1.",
+        "IBM. Data Prep Kit: a community project to democratize and accelerate unstructured data preparation for LLM app developers, 2024. URL https://github.com/IBM/ data-prep-kit.",
+        "A. S. Inc. PyMuPDF, 2024. URL https://github.com/pymupdf/PyMuPDF.",
+        "J. Liu. LlamaIndex, 11 2022. URL https://github.com/jerryjliu/llama_index.",
+        "M. Lysak, A. Nassar, N. Livathinos, C. Auer, and P. Staar. Optimized Table Tokenization for Table Structure Recognition. In Document Analysis and Recognition - ICDAR 2023: 17th International Conference, San Jos´e, CA, USA, August 21-26, 2023, Proceedings, Part II, pages 37-50, Berlin, Heidelberg, Aug. 2023. Springer-Verlag. ISBN 978-3-031-41678-1. doi: 10. 1007/978-3-031-41679-8 3. URL https://doi.org/10.1007/978-3-031-41679-8_3.",
+        "L. Mishra, S. Dhibi, Y. Kim, C. Berrospi Ramis, S. Gupta, M. Dolfi, and P. Staar. Statements: Universal information extraction from tables with large language models for ESG KPIs. In D. Stammbach, J. Ni, T. Schimanski, K. Dutia, A. Singh, J. Bingler, C. Christiaen, N. Kushwaha, V. Muccione, S. A. Vaghefi, and M. Leippold, editors, Proceedings of the 1st Workshop on Natural Language Processing Meets Climate Change (ClimateNLP 2024), pages 193-214, Bangkok, Thailand, Aug. 2024. Association for Computational Linguistics. URL https://aclanthology.org/2024.climatenlp-1.15.",
+        "L. Morin, V. Weber, G. I. Meijer, F. Yu, and P. W. J. Staar. Patcid: an open-access dataset of chemical structures in patent documents. Nature Communications, 15(1):6532, August 2024. ISSN 2041-1723. doi: 10.1038/s41467-024-50779-y. URL https://doi.org/10.1038/ s41467-024-50779-y.",
+        "A. Nassar, N. Livathinos, M. Lysak, and P. Staar. Tableformer: Table structure understanding with transformers. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 4614-4623, 2022.",
+        "B. Pfitzmann, C. Auer, M. Dolfi, A. S. Nassar, and P. Staar. Doclaynet: a large humanannotated dataset for document-layout segmentation. pages 3743-3751, 2022.",
+        "pypdf Maintainers. pypdf: A Pure-Python PDF Library, 2024. URL https://github.com/ py-pdf/pypdf.",
+        "P. Team. PyPDFium2: Python bindings for PDFium, 2024. URL https://github.com/ pypdfium2-team/pypdfium2.",
+        "Y. Zhao, W. Lv, S. Xu, J. Wei, G. Wang, Q. Dang, Y. Liu, and J. Chen. Detrs beat yolos on real-time object detection, 2023."
+      ],
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text.",
+        "Title inferred from the prominent heading before the abstract; please review metadata."
+      ],
+      "title_source": "layout_heading",
+      "pages_count": 9,
+      "engine": {
+        "name": "docling",
+        "version": "2.135.0",
+        "device": "cpu",
+        "ocr": false,
+        "elapsed_seconds": 21.563,
+        "model_manifest_sha256": "bd391d3f352a83665faeb58e2852d465a8eda9ac949fed9017b4022f93a6c2ad",
+        "coordinate_space": "pdf_user_space"
+      },
+      "sha256": "82dd470712ce8389f19f20eb9330475e2166a281f8c7990a9f1d0763d73b4d22",
+      "created_at": "2026-10-09T11:51:45.536054+00:00",
+      "active_revision": "ccfb74bf-3cae-495a-a3c4-dbed233a4466",
+      "edited_fields": [
+        "tags",
+        "notes"
+      ],
+      "similar_papers": []
+    },
+    "metadata_snapshot": {
+      "title": "Docling Technical Report",
+      "authors": [],
+      "abstract": "This technical report introduces Docling, an easy to use, self-contained, MITlicensed open-source package for PDF document conversion. It is powered by state-of-the-art specialized AI models for layout analysis (DocLayNet) and table structure recognition (TableFormer), and runs efficiently on commodity hardware in a small resource budget. The code interface allows for easy extensibility and addition of new features and models.",
+      "year": null,
+      "venue": "",
+      "doi": "",
+      "arxiv_id": "",
+      "keywords": [],
+      "tags": [
+        "corpus-copy-validation"
+      ],
+      "folders": [],
+      "favorite": false,
+      "notes": "Real corpus isolated edit f3affa2c49b44d52bccd69d2322f527c",
+      "sections": [
+        {
+          "title": "Docling Technical Report",
+          "level": 1,
+          "location": {
+            "page_index": 0,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              212.59,
+              551.1629813999999,
+              399.4115208,
+              566.639626
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 1,
+              "bbox": {
+                "l": 212.59,
+                "t": 566.639626,
+                "r": 399.4115208,
+                "b": 551.1629813999999,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                24
+              ]
+            }
+          }
+        },
+        {
+          "title": "Version 1.0",
+          "level": 1,
+          "location": {
+            "page_index": 0,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              283.31,
+              503.42577439292035,
+              328.6896429999999,
+              511.9776526
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 1,
+              "bbox": {
+                "l": 283.31,
+                "t": 511.9776526,
+                "r": 328.6896429999999,
+                "b": 503.42577439292035,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                11
+              ]
+            }
+          }
+        },
+        {
+          "title": "Abstract",
+          "level": 1,
+          "location": {
+            "page_index": 0,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              283.758,
+              382.41136320000004,
+              328.24329919999997,
+              393.159088
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 1,
+              "bbox": {
+                "l": 283.758,
+                "t": 393.159088,
+                "r": 328.24329919999997,
+                "b": 382.41136320000004,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                8
+              ]
+            }
+          }
+        },
+        {
+          "title": "1 Introduction",
+          "level": 1,
+          "location": {
+            "page_index": 0,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              107.99999999999996,
+              257.0543632000001,
+              190.8136704,
+              267.802088
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 1,
+              "bbox": {
+                "l": 107.99999999999994,
+                "t": 267.802088,
+                "r": 190.8136704,
+                "b": 257.0543632000001,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                14
+              ]
+            }
+          }
+        },
+        {
+          "title": "2 Getting Started",
+          "level": 1,
+          "location": {
+            "page_index": 1,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              561.7423631999999,
+              205.29141760000007,
+              572.4900879999999
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 2,
+              "bbox": {
+                "l": 108.0,
+                "t": 572.4900879999999,
+                "r": 205.29141760000007,
+                "b": 561.7423631999999,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                17
+              ]
+            }
+          }
+        },
+        {
+          "title": "3 Processing pipeline",
+          "level": 1,
+          "location": {
+            "page_index": 1,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              286.85036319999995,
+              223.69047040000004,
+              297.5980879999999
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 2,
+              "bbox": {
+                "l": 108.0,
+                "t": 297.5980879999999,
+                "r": 223.69047040000004,
+                "b": 286.85036319999995,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                21
+              ]
+            }
+          }
+        },
+        {
+          "title": "3.1 PDF backends",
+          "level": 1,
+          "location": {
+            "page_index": 1,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              152.47781659999998,
+              192.03453100000004,
+              161.43419399999993
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 2,
+              "bbox": {
+                "l": 108.0,
+                "t": 161.43419399999993,
+                "r": 192.03453100000004,
+                "b": 152.47781659999998,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                16
+              ]
+            }
+          }
+        },
+        {
+          "title": "3.2 AI models",
+          "level": 1,
+          "location": {
+            "page_index": 2,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.00000000000003,
+              417.4698166000001,
+              173.86274860000006,
+              426.4261940000001
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 3,
+              "bbox": {
+                "l": 108.00000000000003,
+                "t": 426.4261940000001,
+                "r": 173.86274860000006,
+                "b": 417.4698166000001,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                13
+              ]
+            }
+          }
+        },
+        {
+          "title": "Layout Analysis Model",
+          "level": 1,
+          "location": {
+            "page_index": 2,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              304.7618166000001,
+              206.28104900000005,
+              313.71819400000004
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 3,
+              "bbox": {
+                "l": 108.0,
+                "t": 313.7181940000001,
+                "r": 206.28104900000005,
+                "b": 304.7618166000001,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                21
+              ]
+            }
+          }
+        },
+        {
+          "title": "Table Structure Recognition",
+          "level": 1,
+          "location": {
+            "page_index": 2,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              166.10181660000012,
+              228.1091056000001,
+              175.05819400000019
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 3,
+              "bbox": {
+                "l": 108.0,
+                "t": 175.05819400000019,
+                "r": 228.10910560000008,
+                "b": 166.10181660000012,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                27
+              ]
+            }
+          }
+        },
+        {
+          "title": "OCR",
+          "level": 1,
+          "location": {
+            "page_index": 3,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              641.6778166000001,
+              130.1368972,
+              650.6341940000001
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 4,
+              "bbox": {
+                "l": 108.0,
+                "t": 650.6341940000001,
+                "r": 130.1368972,
+                "b": 641.6778166000001,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                3
+              ]
+            }
+          }
+        },
+        {
+          "title": "3.3 Assembly",
+          "level": 1,
+          "location": {
+            "page_index": 3,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.00000000000004,
+              517.2188166000002,
+              171.3720986000001,
+              526.1751940000001
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 4,
+              "bbox": {
+                "l": 108.00000000000006,
+                "t": 526.1751940000001,
+                "r": 171.3720986000001,
+                "b": 517.2188166000002,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                12
+              ]
+            }
+          }
+        },
+        {
+          "title": "3.4 Extensibility",
+          "level": 1,
+          "location": {
+            "page_index": 3,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.00000000000004,
+              407.80281660000014,
+              184.1142640000001,
+              416.75919400000015
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 4,
+              "bbox": {
+                "l": 108.00000000000006,
+                "t": 416.75919400000015,
+                "r": 184.1142640000001,
+                "b": 407.80281660000014,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                17
+              ]
+            }
+          }
+        },
+        {
+          "title": "4 Performance",
+          "level": 1,
+          "location": {
+            "page_index": 3,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              107.99999999999996,
+              234.01036320000026,
+              191.78204160000004,
+              244.75808800000027
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 4,
+              "bbox": {
+                "l": 107.99999999999994,
+                "t": 244.75808800000027,
+                "r": 191.78204160000004,
+                "b": 234.01036320000026,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                13
+              ]
+            }
+          }
+        },
+        {
+          "title": "5 Applications",
+          "level": 1,
+          "location": {
+            "page_index": 4,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.00000000000003,
+              517.8803632,
+              190.072448,
+              528.628088
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 5,
+              "bbox": {
+                "l": 108.00000000000001,
+                "t": 528.628088,
+                "r": 190.072448,
+                "b": 517.8803632,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                14
+              ]
+            }
+          }
+        },
+        {
+          "title": "6 Future work and contributions",
+          "level": 1,
+          "location": {
+            "page_index": 4,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.00000000000004,
+              336.0403632000001,
+              283.77730560000015,
+              346.7880880000001
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 5,
+              "bbox": {
+                "l": 108.00000000000006,
+                "t": 346.7880880000001,
+                "r": 283.77730560000015,
+                "b": 336.0403632000001,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                31
+              ]
+            }
+          }
+        },
+        {
+          "title": "References",
+          "level": 1,
+          "location": {
+            "page_index": 4,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0000000000001,
+              170.54036320000023,
+              163.54385920000016,
+              181.28808800000024
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 5,
+              "bbox": {
+                "l": 108.00000000000009,
+                "t": 181.28808800000024,
+                "r": 163.54385920000016,
+                "b": 170.54036320000023,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                10
+              ]
+            }
+          }
+        },
+        {
+          "title": "Appendix",
+          "level": 1,
+          "location": {
+            "page_index": 6,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              707.5383632,
+              157.53039360000002,
+              718.2860880000001
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 7,
+              "bbox": {
+                "l": 108.0,
+                "t": 718.2860880000001,
+                "r": 157.53039360000002,
+                "b": 707.5383632,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                8
+              ]
+            }
+          }
+        },
+        {
+          "title": "5 EXPERIMENTS",
+          "level": 1,
+          "location": {
+            "page_index": 7,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              122.99872750652477,
+              331.8357032354715,
+              163.04465184815228,
+              338.09346179002006
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 8,
+              "bbox": {
+                "l": 122.99872750652476,
+                "t": 338.0934617900201,
+                "r": 163.04465184815228,
+                "b": 331.83570323547144,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                13
+              ]
+            }
+          }
+        },
+        {
+          "title": "Baselines for Object Detection",
+          "level": 1,
+          "location": {
+            "page_index": 7,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              235.91056828312725,
+              370.86459271267637,
+              299.55598297093286,
+              377.12235126722504
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 8,
+              "bbox": {
+                "l": 235.91056828312725,
+                "t": 377.12235126722504,
+                "r": 299.55598297093286,
+                "b": 370.86459271267637,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                30
+              ]
+            }
+          }
+        }
+      ],
+      "references": [
+        "J. AI. Easyocr: Ready-to-use ocr with 80+ supported languages. https://github.com/ JaidedAI/EasyOCR, 2024. Version: 1.7.0.",
+        "J. Ansel, E. Yang, H. He, N. Gimelshein, A. Jain, M. Voznesensky, B. Bao, P. Bell, D. Berard, E. Burovski, G. Chauhan, A. Chourdia, W. Constable, A. Desmaison, Z. DeVito, E. Ellison, W. Feng, J. Gong, M. Gschwind, B. Hirsh, S. Huang, K. Kalambarkar, L. Kirsch, M. Lazos, M. Lezcano, Y. Liang, J. Liang, Y. Lu, C. Luk, B. Maher, Y. Pan, C. Puhrsch, M. Reso, M. Saroufim, M. Y. Siraichi, H. Suk, M. Suo, P. Tillet, E. Wang, X. Wang, W. Wen, S. Zhang, X. Zhao, K. Zhou, R. Zou, A. Mathews, G. Chanan, P. Wu, and S. Chintala. Pytorch 2: Faster",
+        "machine learning through dynamic python bytecode transformation and graph compilation. In Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2 (ASPLOS '24). ACM, 4 2024. doi: 10.1145/3620665.3640366. URL https://pytorch.org/assets/pytorch2-2.pdf.",
+        "C. Auer, M. Dolfi, A. Carvalho, C. B. Ramis, and P. W. Staar. Delivering document conversion as a cloud service with high throughput and responsiveness. In 2022 IEEE 15th International Conference on Cloud Computing (CLOUD), pages 363-373. IEEE, 2022.",
+        "J. Berkenbilt. Qpdf: A content-preserving pdf document transformer, 2024. URL https: //github.com/qpdf/qpdf.",
+        "O. R. developers. Onnx runtime. https://onnxruntime.ai/, 2024. Version: 1.18.1.",
+        "IBM. Data Prep Kit: a community project to democratize and accelerate unstructured data preparation for LLM app developers, 2024. URL https://github.com/IBM/ data-prep-kit.",
+        "A. S. Inc. PyMuPDF, 2024. URL https://github.com/pymupdf/PyMuPDF.",
+        "J. Liu. LlamaIndex, 11 2022. URL https://github.com/jerryjliu/llama_index.",
+        "M. Lysak, A. Nassar, N. Livathinos, C. Auer, and P. Staar. Optimized Table Tokenization for Table Structure Recognition. In Document Analysis and Recognition - ICDAR 2023: 17th International Conference, San Jos´e, CA, USA, August 21-26, 2023, Proceedings, Part II, pages 37-50, Berlin, Heidelberg, Aug. 2023. Springer-Verlag. ISBN 978-3-031-41678-1. doi: 10. 1007/978-3-031-41679-8 3. URL https://doi.org/10.1007/978-3-031-41679-8_3.",
+        "L. Mishra, S. Dhibi, Y. Kim, C. Berrospi Ramis, S. Gupta, M. Dolfi, and P. Staar. Statements: Universal information extraction from tables with large language models for ESG KPIs. In D. Stammbach, J. Ni, T. Schimanski, K. Dutia, A. Singh, J. Bingler, C. Christiaen, N. Kushwaha, V. Muccione, S. A. Vaghefi, and M. Leippold, editors, Proceedings of the 1st Workshop on Natural Language Processing Meets Climate Change (ClimateNLP 2024), pages 193-214, Bangkok, Thailand, Aug. 2024. Association for Computational Linguistics. URL https://aclanthology.org/2024.climatenlp-1.15.",
+        "L. Morin, V. Weber, G. I. Meijer, F. Yu, and P. W. J. Staar. Patcid: an open-access dataset of chemical structures in patent documents. Nature Communications, 15(1):6532, August 2024. ISSN 2041-1723. doi: 10.1038/s41467-024-50779-y. URL https://doi.org/10.1038/ s41467-024-50779-y.",
+        "A. Nassar, N. Livathinos, M. Lysak, and P. Staar. Tableformer: Table structure understanding with transformers. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 4614-4623, 2022.",
+        "B. Pfitzmann, C. Auer, M. Dolfi, A. S. Nassar, and P. Staar. Doclaynet: a large humanannotated dataset for document-layout segmentation. pages 3743-3751, 2022.",
+        "pypdf Maintainers. pypdf: A Pure-Python PDF Library, 2024. URL https://github.com/ py-pdf/pypdf.",
+        "P. Team. PyPDFium2: Python bindings for PDFium, 2024. URL https://github.com/ pypdfium2-team/pypdfium2.",
+        "Y. Zhao, W. Lv, S. Xu, J. Wei, G. Wang, Q. Dang, Y. Liu, and J. Chen. Detrs beat yolos on real-time object detection, 2023."
+      ],
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text.",
+        "Title inferred from the prominent heading before the abstract; please review metadata."
+      ],
+      "title_source": "layout_heading",
+      "pages_count": 9,
+      "engine": {
+        "name": "docling",
+        "version": "2.135.0",
+        "device": "cpu",
+        "ocr": false,
+        "elapsed_seconds": 21.563,
+        "model_manifest_sha256": "bd391d3f352a83665faeb58e2852d465a8eda9ac949fed9017b4022f93a6c2ad",
+        "coordinate_space": "pdf_user_space"
+      },
+      "id": "d0f3e9e4-092b-4ce0-8159-60405215df68",
+      "sha256": "82dd470712ce8389f19f20eb9330475e2166a281f8c7990a9f1d0763d73b4d22",
+      "filename": "docling-report-v5.pdf",
+      "status": "completed",
+      "created_at": "2026-10-09T11:51:45.536054+00:00",
+      "active_revision": "ccfb74bf-3cae-495a-a3c4-dbed233a4466",
+      "figure_count": 5,
+      "table_count": 3,
+      "edited_fields": [
+        "tags",
+        "notes"
+      ],
+      "reading_status": "unread",
+      "last_opened": null,
+      "annotation_count": 0
+    },
+    "field_differences": {
+      "similar_papers": {
+        "get": [],
+        "metadata_snapshot": null,
+        "get_has_key": true,
+        "metadata_has_key": false
+      }
+    }
+  },
+  "edited-restored": {
+    "get": {
+      "id": "d0f3e9e4-092b-4ce0-8159-60405215df68",
+      "filename": "docling-report-v5.pdf",
+      "title": "Docling Technical Report",
+      "authors": [],
+      "status": "completed",
+      "figure_count": 5,
+      "table_count": 3,
+      "reading_status": "unread",
+      "last_opened": null,
+      "annotation_count": 0,
+      "abstract": "This technical report introduces Docling, an easy to use, self-contained, MITlicensed open-source package for PDF document conversion. It is powered by state-of-the-art specialized AI models for layout analysis (DocLayNet) and table structure recognition (TableFormer), and runs efficiently on commodity hardware in a small resource budget. The code interface allows for easy extensibility and addition of new features and models.",
+      "year": null,
+      "venue": "",
+      "doi": "",
+      "arxiv_id": "",
+      "keywords": [],
+      "tags": [
+        "corpus-copy-validation"
+      ],
+      "folders": [],
+      "favorite": false,
+      "notes": "Real corpus isolated edit f3affa2c49b44d52bccd69d2322f527c",
+      "sections": [
+        {
+          "title": "Docling Technical Report",
+          "level": 1,
+          "location": {
+            "page_index": 0,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              212.59,
+              551.1629813999999,
+              399.4115208,
+              566.639626
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 1,
+              "bbox": {
+                "l": 212.59,
+                "t": 566.639626,
+                "r": 399.4115208,
+                "b": 551.1629813999999,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                24
+              ]
+            }
+          }
+        },
+        {
+          "title": "Version 1.0",
+          "level": 1,
+          "location": {
+            "page_index": 0,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              283.31,
+              503.42577439292035,
+              328.6896429999999,
+              511.9776526
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 1,
+              "bbox": {
+                "l": 283.31,
+                "t": 511.9776526,
+                "r": 328.6896429999999,
+                "b": 503.42577439292035,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                11
+              ]
+            }
+          }
+        },
+        {
+          "title": "Abstract",
+          "level": 1,
+          "location": {
+            "page_index": 0,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              283.758,
+              382.41136320000004,
+              328.24329919999997,
+              393.159088
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 1,
+              "bbox": {
+                "l": 283.758,
+                "t": 393.159088,
+                "r": 328.24329919999997,
+                "b": 382.41136320000004,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                8
+              ]
+            }
+          }
+        },
+        {
+          "title": "1 Introduction",
+          "level": 1,
+          "location": {
+            "page_index": 0,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              107.99999999999996,
+              257.0543632000001,
+              190.8136704,
+              267.802088
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 1,
+              "bbox": {
+                "l": 107.99999999999994,
+                "t": 267.802088,
+                "r": 190.8136704,
+                "b": 257.0543632000001,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                14
+              ]
+            }
+          }
+        },
+        {
+          "title": "2 Getting Started",
+          "level": 1,
+          "location": {
+            "page_index": 1,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              561.7423631999999,
+              205.29141760000007,
+              572.4900879999999
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 2,
+              "bbox": {
+                "l": 108.0,
+                "t": 572.4900879999999,
+                "r": 205.29141760000007,
+                "b": 561.7423631999999,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                17
+              ]
+            }
+          }
+        },
+        {
+          "title": "3 Processing pipeline",
+          "level": 1,
+          "location": {
+            "page_index": 1,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              286.85036319999995,
+              223.69047040000004,
+              297.5980879999999
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 2,
+              "bbox": {
+                "l": 108.0,
+                "t": 297.5980879999999,
+                "r": 223.69047040000004,
+                "b": 286.85036319999995,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                21
+              ]
+            }
+          }
+        },
+        {
+          "title": "3.1 PDF backends",
+          "level": 1,
+          "location": {
+            "page_index": 1,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              152.47781659999998,
+              192.03453100000004,
+              161.43419399999993
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 2,
+              "bbox": {
+                "l": 108.0,
+                "t": 161.43419399999993,
+                "r": 192.03453100000004,
+                "b": 152.47781659999998,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                16
+              ]
+            }
+          }
+        },
+        {
+          "title": "3.2 AI models",
+          "level": 1,
+          "location": {
+            "page_index": 2,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.00000000000003,
+              417.4698166000001,
+              173.86274860000006,
+              426.4261940000001
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 3,
+              "bbox": {
+                "l": 108.00000000000003,
+                "t": 426.4261940000001,
+                "r": 173.86274860000006,
+                "b": 417.4698166000001,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                13
+              ]
+            }
+          }
+        },
+        {
+          "title": "Layout Analysis Model",
+          "level": 1,
+          "location": {
+            "page_index": 2,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              304.7618166000001,
+              206.28104900000005,
+              313.71819400000004
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 3,
+              "bbox": {
+                "l": 108.0,
+                "t": 313.7181940000001,
+                "r": 206.28104900000005,
+                "b": 304.7618166000001,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                21
+              ]
+            }
+          }
+        },
+        {
+          "title": "Table Structure Recognition",
+          "level": 1,
+          "location": {
+            "page_index": 2,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              166.10181660000012,
+              228.1091056000001,
+              175.05819400000019
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 3,
+              "bbox": {
+                "l": 108.0,
+                "t": 175.05819400000019,
+                "r": 228.10910560000008,
+                "b": 166.10181660000012,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                27
+              ]
+            }
+          }
+        },
+        {
+          "title": "OCR",
+          "level": 1,
+          "location": {
+            "page_index": 3,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              641.6778166000001,
+              130.1368972,
+              650.6341940000001
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 4,
+              "bbox": {
+                "l": 108.0,
+                "t": 650.6341940000001,
+                "r": 130.1368972,
+                "b": 641.6778166000001,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                3
+              ]
+            }
+          }
+        },
+        {
+          "title": "3.3 Assembly",
+          "level": 1,
+          "location": {
+            "page_index": 3,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.00000000000004,
+              517.2188166000002,
+              171.3720986000001,
+              526.1751940000001
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 4,
+              "bbox": {
+                "l": 108.00000000000006,
+                "t": 526.1751940000001,
+                "r": 171.3720986000001,
+                "b": 517.2188166000002,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                12
+              ]
+            }
+          }
+        },
+        {
+          "title": "3.4 Extensibility",
+          "level": 1,
+          "location": {
+            "page_index": 3,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.00000000000004,
+              407.80281660000014,
+              184.1142640000001,
+              416.75919400000015
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 4,
+              "bbox": {
+                "l": 108.00000000000006,
+                "t": 416.75919400000015,
+                "r": 184.1142640000001,
+                "b": 407.80281660000014,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                17
+              ]
+            }
+          }
+        },
+        {
+          "title": "4 Performance",
+          "level": 1,
+          "location": {
+            "page_index": 3,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              107.99999999999996,
+              234.01036320000026,
+              191.78204160000004,
+              244.75808800000027
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 4,
+              "bbox": {
+                "l": 107.99999999999994,
+                "t": 244.75808800000027,
+                "r": 191.78204160000004,
+                "b": 234.01036320000026,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                13
+              ]
+            }
+          }
+        },
+        {
+          "title": "5 Applications",
+          "level": 1,
+          "location": {
+            "page_index": 4,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.00000000000003,
+              517.8803632,
+              190.072448,
+              528.628088
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 5,
+              "bbox": {
+                "l": 108.00000000000001,
+                "t": 528.628088,
+                "r": 190.072448,
+                "b": 517.8803632,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                14
+              ]
+            }
+          }
+        },
+        {
+          "title": "6 Future work and contributions",
+          "level": 1,
+          "location": {
+            "page_index": 4,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.00000000000004,
+              336.0403632000001,
+              283.77730560000015,
+              346.7880880000001
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 5,
+              "bbox": {
+                "l": 108.00000000000006,
+                "t": 346.7880880000001,
+                "r": 283.77730560000015,
+                "b": 336.0403632000001,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                31
+              ]
+            }
+          }
+        },
+        {
+          "title": "References",
+          "level": 1,
+          "location": {
+            "page_index": 4,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0000000000001,
+              170.54036320000023,
+              163.54385920000016,
+              181.28808800000024
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 5,
+              "bbox": {
+                "l": 108.00000000000009,
+                "t": 181.28808800000024,
+                "r": 163.54385920000016,
+                "b": 170.54036320000023,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                10
+              ]
+            }
+          }
+        },
+        {
+          "title": "Appendix",
+          "level": 1,
+          "location": {
+            "page_index": 6,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              707.5383632,
+              157.53039360000002,
+              718.2860880000001
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 7,
+              "bbox": {
+                "l": 108.0,
+                "t": 718.2860880000001,
+                "r": 157.53039360000002,
+                "b": 707.5383632,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                8
+              ]
+            }
+          }
+        },
+        {
+          "title": "5 EXPERIMENTS",
+          "level": 1,
+          "location": {
+            "page_index": 7,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              122.99872750652477,
+              331.8357032354715,
+              163.04465184815228,
+              338.09346179002006
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 8,
+              "bbox": {
+                "l": 122.99872750652476,
+                "t": 338.0934617900201,
+                "r": 163.04465184815228,
+                "b": 331.83570323547144,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                13
+              ]
+            }
+          }
+        },
+        {
+          "title": "Baselines for Object Detection",
+          "level": 1,
+          "location": {
+            "page_index": 7,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              235.91056828312725,
+              370.86459271267637,
+              299.55598297093286,
+              377.12235126722504
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 8,
+              "bbox": {
+                "l": 235.91056828312725,
+                "t": 377.12235126722504,
+                "r": 299.55598297093286,
+                "b": 370.86459271267637,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                30
+              ]
+            }
+          }
+        }
+      ],
+      "references": [
+        "J. AI. Easyocr: Ready-to-use ocr with 80+ supported languages. https://github.com/ JaidedAI/EasyOCR, 2024. Version: 1.7.0.",
+        "J. Ansel, E. Yang, H. He, N. Gimelshein, A. Jain, M. Voznesensky, B. Bao, P. Bell, D. Berard, E. Burovski, G. Chauhan, A. Chourdia, W. Constable, A. Desmaison, Z. DeVito, E. Ellison, W. Feng, J. Gong, M. Gschwind, B. Hirsh, S. Huang, K. Kalambarkar, L. Kirsch, M. Lazos, M. Lezcano, Y. Liang, J. Liang, Y. Lu, C. Luk, B. Maher, Y. Pan, C. Puhrsch, M. Reso, M. Saroufim, M. Y. Siraichi, H. Suk, M. Suo, P. Tillet, E. Wang, X. Wang, W. Wen, S. Zhang, X. Zhao, K. Zhou, R. Zou, A. Mathews, G. Chanan, P. Wu, and S. Chintala. Pytorch 2: Faster",
+        "machine learning through dynamic python bytecode transformation and graph compilation. In Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2 (ASPLOS '24). ACM, 4 2024. doi: 10.1145/3620665.3640366. URL https://pytorch.org/assets/pytorch2-2.pdf.",
+        "C. Auer, M. Dolfi, A. Carvalho, C. B. Ramis, and P. W. Staar. Delivering document conversion as a cloud service with high throughput and responsiveness. In 2022 IEEE 15th International Conference on Cloud Computing (CLOUD), pages 363-373. IEEE, 2022.",
+        "J. Berkenbilt. Qpdf: A content-preserving pdf document transformer, 2024. URL https: //github.com/qpdf/qpdf.",
+        "O. R. developers. Onnx runtime. https://onnxruntime.ai/, 2024. Version: 1.18.1.",
+        "IBM. Data Prep Kit: a community project to democratize and accelerate unstructured data preparation for LLM app developers, 2024. URL https://github.com/IBM/ data-prep-kit.",
+        "A. S. Inc. PyMuPDF, 2024. URL https://github.com/pymupdf/PyMuPDF.",
+        "J. Liu. LlamaIndex, 11 2022. URL https://github.com/jerryjliu/llama_index.",
+        "M. Lysak, A. Nassar, N. Livathinos, C. Auer, and P. Staar. Optimized Table Tokenization for Table Structure Recognition. In Document Analysis and Recognition - ICDAR 2023: 17th International Conference, San Jos´e, CA, USA, August 21-26, 2023, Proceedings, Part II, pages 37-50, Berlin, Heidelberg, Aug. 2023. Springer-Verlag. ISBN 978-3-031-41678-1. doi: 10. 1007/978-3-031-41679-8 3. URL https://doi.org/10.1007/978-3-031-41679-8_3.",
+        "L. Mishra, S. Dhibi, Y. Kim, C. Berrospi Ramis, S. Gupta, M. Dolfi, and P. Staar. Statements: Universal information extraction from tables with large language models for ESG KPIs. In D. Stammbach, J. Ni, T. Schimanski, K. Dutia, A. Singh, J. Bingler, C. Christiaen, N. Kushwaha, V. Muccione, S. A. Vaghefi, and M. Leippold, editors, Proceedings of the 1st Workshop on Natural Language Processing Meets Climate Change (ClimateNLP 2024), pages 193-214, Bangkok, Thailand, Aug. 2024. Association for Computational Linguistics. URL https://aclanthology.org/2024.climatenlp-1.15.",
+        "L. Morin, V. Weber, G. I. Meijer, F. Yu, and P. W. J. Staar. Patcid: an open-access dataset of chemical structures in patent documents. Nature Communications, 15(1):6532, August 2024. ISSN 2041-1723. doi: 10.1038/s41467-024-50779-y. URL https://doi.org/10.1038/ s41467-024-50779-y.",
+        "A. Nassar, N. Livathinos, M. Lysak, and P. Staar. Tableformer: Table structure understanding with transformers. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 4614-4623, 2022.",
+        "B. Pfitzmann, C. Auer, M. Dolfi, A. S. Nassar, and P. Staar. Doclaynet: a large humanannotated dataset for document-layout segmentation. pages 3743-3751, 2022.",
+        "pypdf Maintainers. pypdf: A Pure-Python PDF Library, 2024. URL https://github.com/ py-pdf/pypdf.",
+        "P. Team. PyPDFium2: Python bindings for PDFium, 2024. URL https://github.com/ pypdfium2-team/pypdfium2.",
+        "Y. Zhao, W. Lv, S. Xu, J. Wei, G. Wang, Q. Dang, Y. Liu, and J. Chen. Detrs beat yolos on real-time object detection, 2023."
+      ],
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text.",
+        "Title inferred from the prominent heading before the abstract; please review metadata."
+      ],
+      "title_source": "layout_heading",
+      "pages_count": 9,
+      "engine": {
+        "name": "docling",
+        "version": "2.135.0",
+        "device": "cpu",
+        "ocr": false,
+        "elapsed_seconds": 21.563,
+        "model_manifest_sha256": "bd391d3f352a83665faeb58e2852d465a8eda9ac949fed9017b4022f93a6c2ad",
+        "coordinate_space": "pdf_user_space"
+      },
+      "sha256": "82dd470712ce8389f19f20eb9330475e2166a281f8c7990a9f1d0763d73b4d22",
+      "created_at": "2026-10-09T11:51:45.536054+00:00",
+      "active_revision": "ccfb74bf-3cae-495a-a3c4-dbed233a4466",
+      "edited_fields": [
+        "tags",
+        "notes"
+      ],
+      "similar_papers": []
+    },
+    "metadata_snapshot": {
+      "title": "Docling Technical Report",
+      "authors": [],
+      "abstract": "This technical report introduces Docling, an easy to use, self-contained, MITlicensed open-source package for PDF document conversion. It is powered by state-of-the-art specialized AI models for layout analysis (DocLayNet) and table structure recognition (TableFormer), and runs efficiently on commodity hardware in a small resource budget. The code interface allows for easy extensibility and addition of new features and models.",
+      "year": null,
+      "venue": "",
+      "doi": "",
+      "arxiv_id": "",
+      "keywords": [],
+      "tags": [
+        "corpus-copy-validation"
+      ],
+      "folders": [],
+      "favorite": false,
+      "notes": "Real corpus isolated edit f3affa2c49b44d52bccd69d2322f527c",
+      "sections": [
+        {
+          "title": "Docling Technical Report",
+          "level": 1,
+          "location": {
+            "page_index": 0,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              212.59,
+              551.1629813999999,
+              399.4115208,
+              566.639626
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 1,
+              "bbox": {
+                "l": 212.59,
+                "t": 566.639626,
+                "r": 399.4115208,
+                "b": 551.1629813999999,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                24
+              ]
+            }
+          }
+        },
+        {
+          "title": "Version 1.0",
+          "level": 1,
+          "location": {
+            "page_index": 0,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              283.31,
+              503.42577439292035,
+              328.6896429999999,
+              511.9776526
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 1,
+              "bbox": {
+                "l": 283.31,
+                "t": 511.9776526,
+                "r": 328.6896429999999,
+                "b": 503.42577439292035,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                11
+              ]
+            }
+          }
+        },
+        {
+          "title": "Abstract",
+          "level": 1,
+          "location": {
+            "page_index": 0,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              283.758,
+              382.41136320000004,
+              328.24329919999997,
+              393.159088
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 1,
+              "bbox": {
+                "l": 283.758,
+                "t": 393.159088,
+                "r": 328.24329919999997,
+                "b": 382.41136320000004,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                8
+              ]
+            }
+          }
+        },
+        {
+          "title": "1 Introduction",
+          "level": 1,
+          "location": {
+            "page_index": 0,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              107.99999999999996,
+              257.0543632000001,
+              190.8136704,
+              267.802088
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 1,
+              "bbox": {
+                "l": 107.99999999999994,
+                "t": 267.802088,
+                "r": 190.8136704,
+                "b": 257.0543632000001,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                14
+              ]
+            }
+          }
+        },
+        {
+          "title": "2 Getting Started",
+          "level": 1,
+          "location": {
+            "page_index": 1,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              561.7423631999999,
+              205.29141760000007,
+              572.4900879999999
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 2,
+              "bbox": {
+                "l": 108.0,
+                "t": 572.4900879999999,
+                "r": 205.29141760000007,
+                "b": 561.7423631999999,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                17
+              ]
+            }
+          }
+        },
+        {
+          "title": "3 Processing pipeline",
+          "level": 1,
+          "location": {
+            "page_index": 1,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              286.85036319999995,
+              223.69047040000004,
+              297.5980879999999
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 2,
+              "bbox": {
+                "l": 108.0,
+                "t": 297.5980879999999,
+                "r": 223.69047040000004,
+                "b": 286.85036319999995,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                21
+              ]
+            }
+          }
+        },
+        {
+          "title": "3.1 PDF backends",
+          "level": 1,
+          "location": {
+            "page_index": 1,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              152.47781659999998,
+              192.03453100000004,
+              161.43419399999993
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 2,
+              "bbox": {
+                "l": 108.0,
+                "t": 161.43419399999993,
+                "r": 192.03453100000004,
+                "b": 152.47781659999998,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                16
+              ]
+            }
+          }
+        },
+        {
+          "title": "3.2 AI models",
+          "level": 1,
+          "location": {
+            "page_index": 2,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.00000000000003,
+              417.4698166000001,
+              173.86274860000006,
+              426.4261940000001
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 3,
+              "bbox": {
+                "l": 108.00000000000003,
+                "t": 426.4261940000001,
+                "r": 173.86274860000006,
+                "b": 417.4698166000001,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                13
+              ]
+            }
+          }
+        },
+        {
+          "title": "Layout Analysis Model",
+          "level": 1,
+          "location": {
+            "page_index": 2,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              304.7618166000001,
+              206.28104900000005,
+              313.71819400000004
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 3,
+              "bbox": {
+                "l": 108.0,
+                "t": 313.7181940000001,
+                "r": 206.28104900000005,
+                "b": 304.7618166000001,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                21
+              ]
+            }
+          }
+        },
+        {
+          "title": "Table Structure Recognition",
+          "level": 1,
+          "location": {
+            "page_index": 2,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              166.10181660000012,
+              228.1091056000001,
+              175.05819400000019
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 3,
+              "bbox": {
+                "l": 108.0,
+                "t": 175.05819400000019,
+                "r": 228.10910560000008,
+                "b": 166.10181660000012,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                27
+              ]
+            }
+          }
+        },
+        {
+          "title": "OCR",
+          "level": 1,
+          "location": {
+            "page_index": 3,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              641.6778166000001,
+              130.1368972,
+              650.6341940000001
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 4,
+              "bbox": {
+                "l": 108.0,
+                "t": 650.6341940000001,
+                "r": 130.1368972,
+                "b": 641.6778166000001,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                3
+              ]
+            }
+          }
+        },
+        {
+          "title": "3.3 Assembly",
+          "level": 1,
+          "location": {
+            "page_index": 3,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.00000000000004,
+              517.2188166000002,
+              171.3720986000001,
+              526.1751940000001
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 4,
+              "bbox": {
+                "l": 108.00000000000006,
+                "t": 526.1751940000001,
+                "r": 171.3720986000001,
+                "b": 517.2188166000002,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                12
+              ]
+            }
+          }
+        },
+        {
+          "title": "3.4 Extensibility",
+          "level": 1,
+          "location": {
+            "page_index": 3,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.00000000000004,
+              407.80281660000014,
+              184.1142640000001,
+              416.75919400000015
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 4,
+              "bbox": {
+                "l": 108.00000000000006,
+                "t": 416.75919400000015,
+                "r": 184.1142640000001,
+                "b": 407.80281660000014,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                17
+              ]
+            }
+          }
+        },
+        {
+          "title": "4 Performance",
+          "level": 1,
+          "location": {
+            "page_index": 3,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              107.99999999999996,
+              234.01036320000026,
+              191.78204160000004,
+              244.75808800000027
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 4,
+              "bbox": {
+                "l": 107.99999999999994,
+                "t": 244.75808800000027,
+                "r": 191.78204160000004,
+                "b": 234.01036320000026,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                13
+              ]
+            }
+          }
+        },
+        {
+          "title": "5 Applications",
+          "level": 1,
+          "location": {
+            "page_index": 4,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.00000000000003,
+              517.8803632,
+              190.072448,
+              528.628088
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 5,
+              "bbox": {
+                "l": 108.00000000000001,
+                "t": 528.628088,
+                "r": 190.072448,
+                "b": 517.8803632,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                14
+              ]
+            }
+          }
+        },
+        {
+          "title": "6 Future work and contributions",
+          "level": 1,
+          "location": {
+            "page_index": 4,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.00000000000004,
+              336.0403632000001,
+              283.77730560000015,
+              346.7880880000001
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 5,
+              "bbox": {
+                "l": 108.00000000000006,
+                "t": 346.7880880000001,
+                "r": 283.77730560000015,
+                "b": 336.0403632000001,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                31
+              ]
+            }
+          }
+        },
+        {
+          "title": "References",
+          "level": 1,
+          "location": {
+            "page_index": 4,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0000000000001,
+              170.54036320000023,
+              163.54385920000016,
+              181.28808800000024
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 5,
+              "bbox": {
+                "l": 108.00000000000009,
+                "t": 181.28808800000024,
+                "r": 163.54385920000016,
+                "b": 170.54036320000023,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                10
+              ]
+            }
+          }
+        },
+        {
+          "title": "Appendix",
+          "level": 1,
+          "location": {
+            "page_index": 6,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              108.0,
+              707.5383632,
+              157.53039360000002,
+              718.2860880000001
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 7,
+              "bbox": {
+                "l": 108.0,
+                "t": 718.2860880000001,
+                "r": 157.53039360000002,
+                "b": 707.5383632,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                8
+              ]
+            }
+          }
+        },
+        {
+          "title": "5 EXPERIMENTS",
+          "level": 1,
+          "location": {
+            "page_index": 7,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              122.99872750652477,
+              331.8357032354715,
+              163.04465184815228,
+              338.09346179002006
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 8,
+              "bbox": {
+                "l": 122.99872750652476,
+                "t": 338.0934617900201,
+                "r": 163.04465184815228,
+                "b": 331.83570323547144,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                13
+              ]
+            }
+          }
+        },
+        {
+          "title": "Baselines for Object Detection",
+          "level": 1,
+          "location": {
+            "page_index": 7,
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "user_unit": 1.0,
+            "width": 612.0,
+            "height": 792.0,
+            "bbox": [
+              235.91056828312725,
+              370.86459271267637,
+              299.55598297093286,
+              377.12235126722504
+            ],
+            "coordinate_space": "pdf_user_space",
+            "docling_provenance": {
+              "page_no": 8,
+              "bbox": {
+                "l": 235.91056828312725,
+                "t": 377.12235126722504,
+                "r": 299.55598297093286,
+                "b": 370.86459271267637,
+                "coord_origin": "BOTTOMLEFT"
+              },
+              "charspan": [
+                0,
+                30
+              ]
+            }
+          }
+        }
+      ],
+      "references": [
+        "J. AI. Easyocr: Ready-to-use ocr with 80+ supported languages. https://github.com/ JaidedAI/EasyOCR, 2024. Version: 1.7.0.",
+        "J. Ansel, E. Yang, H. He, N. Gimelshein, A. Jain, M. Voznesensky, B. Bao, P. Bell, D. Berard, E. Burovski, G. Chauhan, A. Chourdia, W. Constable, A. Desmaison, Z. DeVito, E. Ellison, W. Feng, J. Gong, M. Gschwind, B. Hirsh, S. Huang, K. Kalambarkar, L. Kirsch, M. Lazos, M. Lezcano, Y. Liang, J. Liang, Y. Lu, C. Luk, B. Maher, Y. Pan, C. Puhrsch, M. Reso, M. Saroufim, M. Y. Siraichi, H. Suk, M. Suo, P. Tillet, E. Wang, X. Wang, W. Wen, S. Zhang, X. Zhao, K. Zhou, R. Zou, A. Mathews, G. Chanan, P. Wu, and S. Chintala. Pytorch 2: Faster",
+        "machine learning through dynamic python bytecode transformation and graph compilation. In Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2 (ASPLOS '24). ACM, 4 2024. doi: 10.1145/3620665.3640366. URL https://pytorch.org/assets/pytorch2-2.pdf.",
+        "C. Auer, M. Dolfi, A. Carvalho, C. B. Ramis, and P. W. Staar. Delivering document conversion as a cloud service with high throughput and responsiveness. In 2022 IEEE 15th International Conference on Cloud Computing (CLOUD), pages 363-373. IEEE, 2022.",
+        "J. Berkenbilt. Qpdf: A content-preserving pdf document transformer, 2024. URL https: //github.com/qpdf/qpdf.",
+        "O. R. developers. Onnx runtime. https://onnxruntime.ai/, 2024. Version: 1.18.1.",
+        "IBM. Data Prep Kit: a community project to democratize and accelerate unstructured data preparation for LLM app developers, 2024. URL https://github.com/IBM/ data-prep-kit.",
+        "A. S. Inc. PyMuPDF, 2024. URL https://github.com/pymupdf/PyMuPDF.",
+        "J. Liu. LlamaIndex, 11 2022. URL https://github.com/jerryjliu/llama_index.",
+        "M. Lysak, A. Nassar, N. Livathinos, C. Auer, and P. Staar. Optimized Table Tokenization for Table Structure Recognition. In Document Analysis and Recognition - ICDAR 2023: 17th International Conference, San Jos´e, CA, USA, August 21-26, 2023, Proceedings, Part II, pages 37-50, Berlin, Heidelberg, Aug. 2023. Springer-Verlag. ISBN 978-3-031-41678-1. doi: 10. 1007/978-3-031-41679-8 3. URL https://doi.org/10.1007/978-3-031-41679-8_3.",
+        "L. Mishra, S. Dhibi, Y. Kim, C. Berrospi Ramis, S. Gupta, M. Dolfi, and P. Staar. Statements: Universal information extraction from tables with large language models for ESG KPIs. In D. Stammbach, J. Ni, T. Schimanski, K. Dutia, A. Singh, J. Bingler, C. Christiaen, N. Kushwaha, V. Muccione, S. A. Vaghefi, and M. Leippold, editors, Proceedings of the 1st Workshop on Natural Language Processing Meets Climate Change (ClimateNLP 2024), pages 193-214, Bangkok, Thailand, Aug. 2024. Association for Computational Linguistics. URL https://aclanthology.org/2024.climatenlp-1.15.",
+        "L. Morin, V. Weber, G. I. Meijer, F. Yu, and P. W. J. Staar. Patcid: an open-access dataset of chemical structures in patent documents. Nature Communications, 15(1):6532, August 2024. ISSN 2041-1723. doi: 10.1038/s41467-024-50779-y. URL https://doi.org/10.1038/ s41467-024-50779-y.",
+        "A. Nassar, N. Livathinos, M. Lysak, and P. Staar. Tableformer: Table structure understanding with transformers. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 4614-4623, 2022.",
+        "B. Pfitzmann, C. Auer, M. Dolfi, A. S. Nassar, and P. Staar. Doclaynet: a large humanannotated dataset for document-layout segmentation. pages 3743-3751, 2022.",
+        "pypdf Maintainers. pypdf: A Pure-Python PDF Library, 2024. URL https://github.com/ py-pdf/pypdf.",
+        "P. Team. PyPDFium2: Python bindings for PDFium, 2024. URL https://github.com/ pypdfium2-team/pypdfium2.",
+        "Y. Zhao, W. Lv, S. Xu, J. Wei, G. Wang, Q. Dang, Y. Liu, and J. Chen. Detrs beat yolos on real-time object detection, 2023."
+      ],
+      "warnings": [
+        "OCR is disabled; scanned pages may have incomplete or missing text.",
+        "Title inferred from the prominent heading before the abstract; please review metadata."
+      ],
+      "title_source": "layout_heading",
+      "pages_count": 9,
+      "engine": {
+        "name": "docling",
+        "version": "2.135.0",
+        "device": "cpu",
+        "ocr": false,
+        "elapsed_seconds": 21.563,
+        "model_manifest_sha256": "bd391d3f352a83665faeb58e2852d465a8eda9ac949fed9017b4022f93a6c2ad",
+        "coordinate_space": "pdf_user_space"
+      },
+      "id": "d0f3e9e4-092b-4ce0-8159-60405215df68",
+      "sha256": "82dd470712ce8389f19f20eb9330475e2166a281f8c7990a9f1d0763d73b4d22",
+      "filename": "docling-report-v5.pdf",
+      "status": "completed",
+      "created_at": "2026-10-09T11:51:45.536054+00:00",
+      "active_revision": "ccfb74bf-3cae-495a-a3c4-dbed233a4466",
+      "figure_count": 5,
+      "table_count": 3,
+      "edited_fields": [
+        "tags",
+        "notes"
+      ],
+      "reading_status": "unread",
+      "last_opened": null,
+      "annotation_count": 0
+    },
+    "field_differences": {
+      "similar_papers": {
+        "get": [],
+        "metadata_snapshot": null,
+        "get_has_key": true,
+        "metadata_has_key": false
+      }
+    }
+  },
+  "both_restored_gets_equal": true,
+  "shutdown": {
+    "returncode": 0,
+    "forced_termination": false,
+    "backend_port_closed": true
+  }
+}

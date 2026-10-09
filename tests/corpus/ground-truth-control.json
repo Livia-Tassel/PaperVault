@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "papers": [
+    {
+      "id": "docling-v5",
+      "pages": 9,
+      "scope": "All 9 pages including appendix; numbered top-level objects. Nested captions/tables inside Figures 2-4 are not additional paper-level objects.",
+      "annotation_method": "Read all nine original source page renders and independently inspected every top-level caption before the new installed-backend run. No parser output used as ground truth.",
+      "objects": [
+        {
+          "kind": "figure",
+          "number": "1",
+          "page_indices": [
+            2
+          ],
+          "caption_reference": "Sketch of Docling’s default processing pipeline.",
+          "source_page_png": "artifacts/real-corpus/source-pages/docling-v5/page-3.png",
+          "source_pixel_bbox": [
+            143,
+            95,
+            661,
+            282
+          ],
+          "render_dpi": 95,
+          "bbox_pdf": [
+            108.379,
+            578.274,
+            500.968,
+            720.0
+          ],
+          "bbox_note": "Manually bounded full visual object, excluding its caption, from independent 95-DPI Poppler page render; approximate for crop completeness, not precision geometry calibration."
+        },
+        {
+          "kind": "table",
+          "number": "1",
+          "page_indices": [
+            4
+          ],
+          "caption_reference": "Runtime characteristics of Docling with the standard model pipeline and settings, on our test dataset of 225 pages, on two different systems.",
+          "source_page_png": "artifacts/real-corpus/source-pages/docling-v5/page-5.png",
+          "source_pixel_bbox": [
+            174,
+            205,
+            632,
+            328
+          ],
+          "render_dpi": 95,
+          "bbox_pdf": [
+            131.874,
+            543.411,
+            478.989,
+            636.632
+          ],
+          "bbox_note": "Manually bounded full visual object, excluding its caption, from independent 95-DPI Poppler page render; approximate for crop completeness, not precision geometry calibration."
+        },
+        {
+          "kind": "figure",
+          "number": "2",
+          "page_indices": [
+            6
+          ],
+          "caption_reference": "Title page of the DocLayNet paper (arxiv.org/pdf/2206.01062) - left PDF, right rendered Markdown.",
+          "source_page_png": "artifacts/real-corpus/source-pages/docling-v5/page-7.png",
+          "source_pixel_bbox": [
+            155,
+            159,
+            662,
+            484
+          ],
+          "render_dpi": 95,
+          "bbox_pdf": [
+            117.474,
+            425.179,
+            501.726,
+            671.495
+          ],
+          "bbox_note": "Manually bounded full visual object, excluding its caption, from independent 95-DPI Poppler page render; approximate for crop completeness, not precision geometry calibration."
+        },
+        {
+          "kind": "figure",
+          "number": "3",
+          "page_indices": [
+            7
+          ],
+          "caption_reference": "Page 6 of the DocLayNet paper.",
+          "source_page_png": "artifacts/real-corpus/source-pages/docling-v5/page-8.png",
+          "source_pixel_bbox": [
+            152,
+            293,
+            688,
+            681
+          ],
+          "render_dpi": 95,
+          "bbox_pdf": [
+            115.2,
+            275.874,
+            521.432,
+            569.937
+          ],
+          "bbox_note": "Manually bounded full visual object, excluding its caption, from independent 95-DPI Poppler page render; approximate for crop completeness, not precision geometry calibration."
+        },
+        {
+          "kind": "figure",
+          "number": "4",
+          "page_indices": [
+            8
+          ],
+          "caption_reference": "Table 1 from the DocLayNet paper in the original PDF (A), as rendered Markdown (B) and in JSON representation (C).",
+          "source_page_png": "artifacts/real-corpus/source-pages/docling-v5/page-9.png",
+          "source_pixel_bbox": [
+            143,
+            286,
+            721,
+            641
+          ],
+          "render_dpi": 95,
+          "bbox_pdf": [
+            108.379,
+            306.189,
+            546.442,
+            575.242
+          ],
+          "bbox_note": "Manually bounded full visual object, excluding its caption, from independent 95-DPI Poppler page render; approximate for crop completeness, not precision geometry calibration."
+        }
+      ],
+      "excluded_auxiliary": [
+        {
+          "page_index": 0,
+          "description": "Unnumbered Docling logo; a detected picture here is auxiliary artwork, not an extra numbered paper figure."
+        }
+      ],
+      "sample_cells": [
+        {
+          "object_kind": "table",
+          "object_number": "1",
+          "row_label": "Apple M3 Max (16 cores), 4 threads",
+          "column_label": "native backend / TTS",
+          "expected": "177 s"
+        },
+        {
+          "object_kind": "table",
+          "object_number": "1",
+          "row_label": "Apple M3 Max (16 cores), 4 threads",
+          "column_label": "native backend / Pages/s",
+          "expected": "1.27"
+        },
+        {
+          "object_kind": "table",
+          "object_number": "1",
+          "row_label": "Apple M3 Max (16 cores), 4 threads",
+          "column_label": "pypdfium backend / TTS",
+          "expected": "103 s"
+        },
+        {
+          "object_kind": "table",
+          "object_number": "1",
+          "row_label": "Apple M3 Max (16 cores), 4 threads",
+          "column_label": "pypdfium backend / Pages/s",
+          "expected": "2.18"
+        },
+        {
+          "object_kind": "table",
+          "object_number": "1",
+          "row_label": "Apple M3 Max (16 cores), 16 threads",
+          "column_label": "native backend / TTS",
+          "expected": "167 s"
+        },
+        {
+          "object_kind": "table",
+          "object_number": "1",
+          "row_label": "Apple M3 Max (16 cores), 16 threads",
+          "column_label": "pypdfium backend / Pages/s",
+          "expected": "2.45"
+        },
+        {
+          "object_kind": "table",
+          "object_number": "1",
+          "row_label": "Intel(R) Xeon E5-2690 (16 cores), 4 threads",
+          "column_label": "native backend / TTS",
+          "expected": "375 s"
+        },
+        {
+          "object_kind": "table",
+          "object_number": "1",
+          "row_label": "Intel(R) Xeon E5-2690 (16 cores), 4 threads",
+          "column_label": "pypdfium backend / TTS",
+          "expected": "239 s"
+        },
+        {
+          "object_kind": "table",
+          "object_number": "1",
+          "row_label": "Intel(R) Xeon E5-2690 (16 cores), 16 threads",
+          "column_label": "native backend / Pages/s",
+          "expected": "0.92"
+        },
+        {
+          "object_kind": "table",
+          "object_number": "1",
+          "row_label": "Intel(R) Xeon E5-2690 (16 cores), 16 threads",
+          "column_label": "pypdfium backend / Pages/s",
+          "expected": "1.57"
+        }
+      ],
+      "notes": [
+        "Poppler printed missing Symbol/ArialUnicode font-substitution warnings while rendering appendix screenshots; visual object boundaries remain visible.",
+        "pypdf warned missing fontTools for a subset of embedded screenshot fonts; rendered pages, not extracted text counts, determined the top-level labels."
+      ]
+    }
+  ]
+}

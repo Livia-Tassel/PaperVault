@@ -1,0 +1,39 @@
+{
+  "source": ".test-data\\external\\real-corpus\\science-halogen-microscopy.pdf",
+  "source_sha256": "b5a43de706b5f097346bd1a59e6c21eb71a918ee66594a5e54cd1fcd1732a202",
+  "method": "Read original PDF directly with pypdfium2.PdfDocument/page.get_textpage().get_text_range(), without Docling, API, CSV or manual edits. Compare with independent visual source-page renders.",
+  "evidence": [
+    {
+      "page_index": 1,
+      "pdfium_text_lines": [
+        "using an upright microscope with halogen lamp (G–L). These images were taken using an LCPlanF1 objective lens (620; bar = 100 mm). (J) Bright field"
+      ]
+    },
+    {
+      "page_index": 3,
+      "pdfium_text_lines": [
+        "Partheno. 22 119 87 5 (5.7) 18 (20.7) 64 (73.6)"
+      ]
+    },
+    {
+      "page_index": 4,
+      "pdfium_text_lines": [
+        "conjugate were microinjected into oocytes (H–K). The staining intensity was proportional to the concentration of conjugate used and 75 mg/mL of"
+      ]
+    },
+    {
+      "page_index": 5,
+      "pdfium_text_lines": [
+        "(mg/ml)"
+      ]
+    }
+  ],
+  "visual_reference": {
+    "page2_figure1": "Multiplication sign x and micrometre symbol are printed in the visual legend; selectable text yields 620 and mm.",
+    "page4_table1": "Printed negative test conditions use minus signs; extractable text represents them as 2.",
+    "page5_figure3": "Printed microgram unit is extracted as mg/mL.",
+    "page6_table2": "Printed microgram unit is extracted as mg/ml."
+  },
+  "conclusion": "The source extractable text already disagrees with visible glyphs. Merely switching from Docling text backend to PDFium would not recover these symbols. Correcting every mg to micrograms would fabricate data. Current no-OCR pipeline requires visual verification/manual correction for this source.",
+  "product_changed": false
+}

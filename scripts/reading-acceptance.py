@@ -16,6 +16,7 @@ import platform
 import subprocess
 import sys
 import time
+import tomllib
 from urllib.parse import quote
 from uuid import uuid4
 
@@ -127,6 +128,8 @@ def export_notes(backend, directory, label, library_id, paper_id, annotations):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--backend", type=Path, required=True)
+    parser.add_argument("--expect-version", default=tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))["project"]["version"],
+                        help="Expected frozen application version; defaults to the repository project version")
     parser.add_argument("--models", type=Path, default=ROOT / ".cache/models")
     parser.add_argument("--pdf", type=Path, default=ROOT / "tests/fixtures/academic.pdf")
     parser.add_argument("--timeout", type=int, default=600)
@@ -155,7 +158,7 @@ def main():
     try:
         with Backend(directory, args.models, args.backend) as backend:
             report["health"] = backend.call("GET", "/health").json()
-            assert report["health"]["version"] == "0.2.0", "Expected the newly frozen reading release"
+            assert report["health"]["version"] == args.expect_version, "Frozen reading release version differs from expectation"
             assert backend.call("GET", "/models").json()["ready"]
             report["backend_port"] = backend.client.base_url.port
             assert report["backend_port"] != 8765, "Must not use the shared development service"

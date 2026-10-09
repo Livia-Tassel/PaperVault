@@ -1,8 +1,10 @@
 [CmdletBinding()]
-param([Parameter(Mandatory=$true)][string]$Installer, [switch]$SkipParse, [switch]$CaptureUi, [string]$LegacyFixture)
+param([Parameter(Mandatory=$true)][string]$Installer, [switch]$SkipParse, [switch]$CaptureUi, [string]$LegacyFixture, [string]$OutputRoot = 'artifacts')
 $ErrorActionPreference = 'Stop'
 $ProjectRoot = Split-Path -Parent $PSScriptRoot
 Set-Location -LiteralPath $ProjectRoot
+$EvidenceRoot = [IO.Path]::GetFullPath((Join-Path $ProjectRoot $OutputRoot))
+New-Item -ItemType Directory -Path $EvidenceRoot -Force | Out-Null
 $InstallRoot = [IO.Path]::GetFullPath((Join-Path $ProjectRoot '.test-data\installed\PaperVault'))
 $TestRoot = [IO.Path]::GetFullPath((Join-Path $ProjectRoot '.test-data')) + [IO.Path]::DirectorySeparatorChar
 if (-not $InstallRoot.StartsWith($TestRoot, [StringComparison]::OrdinalIgnoreCase)) { throw 'Installation target must stay inside the project test directory.' }
@@ -53,7 +55,7 @@ foreach ($Resource in $BundleResources.PSObject.Properties) {
 }
 $Python = Join-Path $ProjectRoot '.venv\Scripts\python.exe'
 & (Join-Path $PSScriptRoot 'bootstrap-webdriver.ps1')
-$SmokeArguments = @('scripts\package-desktop-smoke.py', '--app', $Application, '--driver', '.tools\edgedriver\msedgedriver.exe', '--output', 'artifacts\installed-desktop')
+$SmokeArguments = @('scripts\package-desktop-smoke.py', '--app', $Application, '--driver', '.tools\edgedriver\msedgedriver.exe', '--output', (Join-Path $EvidenceRoot 'installed-desktop'))
 $DesktopVersion = (Get-Content -LiteralPath (Join-Path $ProjectRoot 'apps\desktop\src-tauri\tauri.conf.json') -Raw | ConvertFrom-Json).version
 $SmokeArguments += @('--expect-version', $DesktopVersion)
 if ($CaptureUi) { $SmokeArguments += '--capture-ui' }
@@ -65,7 +67,7 @@ if ($LegacyFixture) {
     $Entry = [regex]::Match($Html, '<script[^>]+src="([^"]+)"')
     if (-not $Entry.Success) { throw 'Cannot determine the built frontend entry.' }
     $FrontendEntry = [IO.Path]::GetFileName($Entry.Groups[1].Value)
-    & $Python scripts\package-reading-smoke.py --app $Application --prepared-fixture $LegacyFixture --expect-version $DesktopVersion --expect-frontend $FrontendEntry --output artifacts\installed-reading
+    & $Python scripts\package-reading-smoke.py --app $Application --prepared-fixture $LegacyFixture --expect-version $DesktopVersion --expect-frontend $FrontendEntry --output (Join-Path $EvidenceRoot 'installed-reading')
     if ($LASTEXITCODE -ne 0) { throw 'The installed reading/notes/migration smoke test failed.' }
 }
 $InstallProof = [ordered]@{
@@ -80,5 +82,5 @@ $InstallProof = [ordered]@{
     bundled_documents_verified = $DocumentProof
     verified_at = [DateTime]::UtcNow.ToString('o')
 }
-$InstallProof | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath (Join-Path $ProjectRoot 'artifacts\install-layout.json') -Encoding utf8
+$InstallProof | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath (Join-Path $EvidenceRoot 'install-layout.json') -Encoding utf8
 Write-Output "Installed and verified PaperVault at $InstallRoot. This host has development tools; this is not a clean-VM test."
