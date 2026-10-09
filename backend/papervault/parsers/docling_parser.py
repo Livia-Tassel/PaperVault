@@ -29,8 +29,15 @@ def _label(item) -> str:
 def _metadata(doc, pdf_info, blocks: list[dict], source: Path) -> dict:
     title = next((b["text"] for b in blocks if b["label"] == "title" and b["text"]), "")
     pdf_meta = pdf_info["metadata"]
-    title_source = "docling_title" if title else "pdf_metadata" if pdf_meta["title"] else "unknown"
-    title = title or pdf_meta["title"] or None
+    pdf_title = pdf_meta["title"]
+    # Some publisher PDFs store an export identifier and page range here, e.g.
+    # "pone.0031638 1..8". It is not a paper title and must not suppress the
+    # independently located heading before the abstract. Keep the test narrow:
+    # descriptive titles containing numbers/ranges are still valid metadata.
+    if re.fullmatch(r"[^\s]+\.[^\s]+\s+\d+\s*\.\.\s*\d+", pdf_title.strip()):
+        pdf_title = ""
+    title_source = "docling_title" if title else "pdf_metadata" if pdf_title else "unknown"
+    title = title or pdf_title or None
     if not title:
         first_page_headings = [b for b in blocks if b["label"] == "section_header" and b["location"]
                                and b["location"]["page_index"] == 0 and b["location"].get("bbox")
