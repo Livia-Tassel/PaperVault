@@ -87,5 +87,10 @@
     "historical_native_diagnostic_not_declared_resolved": true,
     "synthetic_benchmark_is_not_parser_accuracy": true
   },
-  "publication": "Local source and installer only; no remote push or public release performed. Final documentation/evidence commit follows these verified binary artifacts."
+  "publication": {
+    "scope": "local-only; no remote push or public publication",
+    "archival_commit": "40f5dab2bea8c173e57a40a526a33d4ada5f9c76",
+    "archival_commit_verified": true,
+    "product_source_commit": "131c0a0ae69fc27a930bfb8f82b05ffd1b255941"
+  }
 }

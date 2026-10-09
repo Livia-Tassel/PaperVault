@@ -4,7 +4,7 @@
   "requirements": "docs/UPGRADE_0_2.md#完成门槛",
   "source_head": "131c0a0ae69fc27a930bfb8f82b05ffd1b255941",
   "source_worktree_dirty": true,
-  "overall_status": "pending",
+  "overall_status": "proven",
   "method": "Independent read-only production/harness review plus direct reads of final installed reports. This final pass recomputed the installer/application/backend hashes, 11 installed-document hashes, all 846 license-file and 7 source-archive hashes, and the optimized dist hash; it did not rerun product tests or mutate the installed app.",
   "status_definitions": {
     "proven": "Implementation and relevant observed behavior support the capability, within the explicitly named execution layer and environment.",
@@ -316,7 +316,7 @@
     {
       "id": 8,
       "name": "交付",
-      "status": "pending",
+      "status": "proven",
       "capabilities": [
         {
           "name": "Full backend regression and frozen worker flow",
@@ -340,9 +340,8 @@
         },
         {
           "name": "Final report/progress/upgrade synchronization, evidence archival and source commit",
-          "status": "pending",
-          "evidence": "Production source is committed at 131c0a0ae69fc27a930bfb8f82b05ffd1b255941, including the performance change and installed reading API guide. Root is currently updating final release summaries and archiving evidence; working-tree changes are documentation/verification harness/CI, not production frontend/backend.",
-          "next": "Root verifies and commits final documentation, archived reports, harness/CI and this audit, then records its actual closing commit. This audit does not pre-claim that future commit."
+          "status": "proven",
+          "evidence": "Root verified final documentation, evidence, harness/CI and fixture in archival commit 40f5dab2bea8c173e57a40a526a33d4ada5f9c76. Product and bundled documentation were already committed at 131c0a0."
         }
       ],
       "evidence": [
@@ -361,8 +360,7 @@
         "artifacts/goal-checkpoint-v02.json"
       ],
       "qualification": "No clean Windows VM, no separately changed host system DPI, and no executed hosted CI is claimed. Unsigned installer and the historical unlocated native diagnostic remain documented.",
-      "product_acceptance_status": "proven",
-      "pending_scope": "publication/archive commit only"
+      "product_acceptance_status": "proven"
     },
     {
       "id": 9,
@@ -381,9 +379,7 @@
     }
   ],
   "current_contradicted_capabilities": [],
-  "pending_release_actions": [
-    "Root completes and verifies the final documentation/evidence/harness archival commit. All product acceptance gates, including the final installer and native Save cancellation, are proven within the documented host boundaries."
-  ],
+  "pending_release_actions": [],
   "retained_boundaries": [
     "The generated fixture PDF/component browser tests are distinguished from real API workflows and installed app workflows.",
     "The 1000-annotation and gallery loads contain synthetic metadata and do not prove parsing accuracy.",
@@ -395,12 +391,14 @@
   "technical_acceptance_status": "proven",
   "previous_audit": "docs/verification/upgrade-v02-audit-draft.json",
   "publication": {
-    "status": "pending",
+    "status": "proven",
     "owner": "root",
     "production_source_commit": "131c0a0ae69fc27a930bfb8f82b05ffd1b255941",
     "production_source_committed": true,
-    "remaining": "Archive the final reports and this audit, synchronize the final release summaries, commit evidence/harness/documentation, then verify the closing commit and worktree. Those actions were in progress and are not claimed complete by this timestamp.",
-    "completion_rule": "Root may close the publication gate after verifying its actual final archival commit. No additional product repair or repeated regression was identified by this audit."
+    "archival_commit": "40f5dab2bea8c173e57a40a526a33d4ada5f9c76",
+    "archival_commit_verified": true,
+    "closed_at_utc": "2026-10-09T11:36:45.116755+00:00",
+    "closure": "Root verified the actual commit contains final release summaries, verification harness, CI, migration fixture and archived reports. This final audit closure is a documentation-only follow-up commit."
   },
   "final_report_bindings": {
     "artifacts/release-manifest.json": "c43119c2f3648537cd9d20806d28e1fa5d3ee9a9b2d121af73e57d4dc5b27cec",

@@ -12,3 +12,5 @@
 # Preserve upstream bytes, including CRLF, for the recorded source checksums.
 docs/third-party-licenses/** binary
 docs/third-party-sources/** binary
+# Verification JSON retains exact bytes used by the recorded SHA-256 bindings.
+docs/verification/0.2.0/** -text
