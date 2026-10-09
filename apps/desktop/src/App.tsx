@@ -65,7 +65,7 @@ function AppContent() {
   const returnToWorkspace = useCallback(() => { void goTo(workspace.collection); }, [goTo, workspace.collection]);
   const history = useCallback((delta: -1 | 1) => { if (workspace.historyIndex + delta < 0 || workspace.historyIndex + delta >= workspace.history.length) return; void attempt(() => { clearTransient(); dispatch({ type: 'history', delta }); }); }, [attempt, clearTransient, dispatch, workspace.historyIndex, workspace.history.length]);
   const closeTab = useCallback((id: string) => { const close = () => { if (paperId === id) clearTransient(); dispatch({ type: 'close', id }); }; if (paperId === id) void attempt(close); else close(); }, [attempt, clearTransient, dispatch, paperId]);
-  const setLocation = (next: Location) => { if (paperId) dispatch({ type: 'navigate', route: { kind: 'paper', paperId, location: next } }); };
+  const setLocation = (next: Location) => { if (paperId) dispatch({ type: 'navigate', route: { kind: 'paper', paperId, location: { ...next } } }); };
   const onTitleChange = useCallback((id: string, title: string) => dispatch({ type: 'title', id, title }), [dispatch]);
   const onLocateAnnotation = (annotation: Annotation) => { void goTo({ kind: 'paper', paperId: annotation.paper_id, location: annotation.locations[0] || null, annotationId: annotation.id }, annotation.paper_title); };
   const reportImport = (result: ImportResult) => { changed(); setShowImport(false); setImportReport(result); if (!result.errors?.length) notify(`已导入 ${result.items?.length || 0} 篇论文${result.duplicates?.length ? `，跳过 ${result.duplicates.length} 个重复文件` : ''}`); };
