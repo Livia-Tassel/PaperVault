@@ -1,0 +1,23 @@
+{
+  "version": "0.1.0",
+  "verified_at_utc": "2026-10-09T07:11:33.655458+00:00",
+  "source_commit": "caa5794c92418c14365f8fefc87193602559e68f",
+  "installer": {
+    "path": "apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis/PaperVault_0.1.0_x64-setup.exe",
+    "bytes": 536330353,
+    "sha256": "b2466d9f245f4de016ee3fc578fb736f107be7b53808053fe30382573626c6f3",
+    "signed": false
+  },
+  "application_sha256": "A4CA1EC9ABA4F4D061D7875AA2F222456BEBC068387499F1A37FD2924D61F776",
+  "backend_sha256": "CA77E6E5B1E67ABD93AF67E8EA11A106CE2A6B9054B0A8CD5AAF2E01D6A322F3",
+  "license_files_verified": 846,
+  "source_archives_verified": 7,
+  "verification": {
+    "real_pdf_workflow": true,
+    "installed_tauri": true,
+    "uninstall_retention": true,
+    "clean_windows_vm": false,
+    "hosted_ci_executed": false
+  },
+  "known_diagnostics": "See TEST_REPORT.md and native-exception-investigation.json; one historical native diagnostic was not reproduced."
+}
