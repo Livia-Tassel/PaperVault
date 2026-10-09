@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowLeft, Download, FileText, Plus, RefreshCw, Save, Star, Trash2 } from 'lucide-react';
 import { exportAssets, updatePaper, post } from './api';
-import { changedFields } from './edits';
+import { changedFields, mergeUntouchedFields } from './edits';
 import { useData } from './hooks';
 import { PdfViewer } from './PdfViewer';
 import { AssetImage, Empty, ErrorMessage, Field, Pager, Spinner, Status, Warnings, filename, splitTags } from './ui';
@@ -17,13 +17,24 @@ export function PaperDetail({ id, revision, location, cropMode, onCropMode, onCr
   useEffect(() => { setResourceOffset(0); setTab('info'); }, [id]);
   return <div className="paper-workspace"><header className="detail-topbar"><button className="icon-button" onClick={onBack} aria-label="返回论文库"><ArrowLeft size={19} /></button><div><span className="eyebrow">论文工作区</span><h2>{paper?.title || paper?.filename || '正在打开论文…'}</h2></div><span className="toolbar-spacer" />{paper && <><Status value={paper.status} /><button className={`icon-button ${paper.favorite ? 'favorited' : ''}`} aria-label="切换收藏" onClick={() => void run(() => updatePaper(id, { favorite: !paper.favorite })).then(ok => { if (ok) onChanged(); })}><Star size={18} fill={paper.favorite ? 'currentColor' : 'none'} /></button><button className="button secondary small" onClick={() => void run(() => exportAssets({ paper_ids: [id], resource_ids: [], format: 'zip', dpi: 300 }, `${filename(paper.title || paper.filename, 'paper')}.zip`), '论文资源已导出')}><Download size={15} />导出</button></>}</header>
     <ErrorMessage message={error} /><div className="detail-split"><PdfViewer paperId={id} location={location} cropMode={cropMode} onCropMode={onCropMode} onCrop={onCrop} /><aside className="paper-side"><div className="detail-tabs">{[['info', '论文信息'], ['figures', `图片 ${paper?.figure_count || 0}`], ['tables', `表格 ${paper?.table_count || 0}`], ['outline', '目录']].map(([key, label]) => <button key={key} className={tab === key ? 'active' : ''} onClick={() => { setTab(key); setResourceOffset(0); }}>{label}</button>)}</div><div className="paper-side-content">
-      {!paper && !error && <Spinner />}{paper && <>{tab === 'info' && <PaperInfo key={`${id}-${revision}`} paper={paper} onRelated={onRelated} run={run} onChanged={onChanged} />}{(tab === 'figures' || tab === 'tables') && <div className="detail-resources"><ErrorMessage message={resourceError} />{resourceLoading && <Spinner />}<div className="muted">共 {resources?.total ?? 0} 项资源，每页 24 项</div>{resources?.items.filter(r => r.kind === (tab === 'figures' ? 'figure' : 'table')).map(r => <button className="detail-resource" key={r.id} onClick={() => onResource(r.id)}><div className="detail-resource-thumb"><AssetImage id={r.id} thumbnail revision={revision} alt={r.name} /></div><strong>{r.name || r.number || (r.kind === 'figure' ? 'Figure' : 'Table')}</strong><p>{r.caption || '未识别到 Caption'}</p><span className="muted">{r.locations?.[0] ? `第 ${r.locations[0].page_index + 1} 页` : '位置未知'}</span></button>)}{!resourceLoading && !resourceError && !resources?.items.some(r => r.kind === (tab === 'figures' ? 'figure' : 'table')) && <Empty title="尚无资源">解析完成后显示提取结果，也可在 PDF 上手工框选图片。</Empty>}<Pager total={resources?.total || 0} offset={resourceOffset} limit={24} onChange={setResourceOffset} /></div>}{tab === 'outline' && <OutlinePanel key={`${id}-${revision}`} paper={paper} onLocation={onLocation} run={run} onChanged={onChanged} />}</>}
+      {!paper && !error && <Spinner />}{paper && <>{tab === 'info' && <PaperInfo key={id} paper={paper} onRelated={onRelated} run={run} onChanged={onChanged} />}{(tab === 'figures' || tab === 'tables') && <div className="detail-resources"><ErrorMessage message={resourceError} />{resourceLoading && <Spinner />}<div className="muted">共 {resources?.total ?? 0} 项资源，每页 24 项</div>{resources?.items.filter(r => r.kind === (tab === 'figures' ? 'figure' : 'table')).map(r => <button className="detail-resource" key={r.id} onClick={() => onResource(r.id)}><div className="detail-resource-thumb"><AssetImage id={r.id} thumbnail revision={revision} alt={r.name} /></div><strong>{r.name || r.number || (r.kind === 'figure' ? 'Figure' : 'Table')}</strong><p>{r.caption || '未识别到 Caption'}</p><span className="muted">{r.locations?.[0] ? `第 ${r.locations[0].page_index + 1} 页` : '位置未知'}</span></button>)}{!resourceLoading && !resourceError && !resources?.items.some(r => r.kind === (tab === 'figures' ? 'figure' : 'table')) && <Empty title="尚无资源">解析完成后显示提取结果，也可在 PDF 上手工框选图片。</Empty>}<Pager total={resources?.total || 0} offset={resourceOffset} limit={24} onChange={setResourceOffset} /></div>}{tab === 'outline' && <OutlinePanel key={`${id}-${revision}`} paper={paper} onLocation={onLocation} run={run} onChanged={onChanged} />}</>}
     </div></aside></div>
   </div>;
 }
+function paperDraft(p: Paper) {
+  return { title: p.title || '', authors: (p.authors || []).join(', '), abstract: p.abstract || '', year: p.year?.toString() || '', venue: p.venue || '', doi: p.doi || '', arxiv_id: p.arxiv_id || '', keywords: (p.keywords || []).join(', '), tags: (p.tags || []).join(', '), notes: p.notes || '', folders: p.folders || [] };
+}
 function PaperInfo({ paper: p, onRelated, run, onChanged }: { paper: Paper; onRelated: (id: string) => void; run: Run; onChanged: () => void }) {
-  const [draft, setDraft] = useState({ title: p.title || '', authors: (p.authors || []).join(', '), abstract: p.abstract || '', year: p.year?.toString() || '', venue: p.venue || '', doi: p.doi || '', arxiv_id: p.arxiv_id || '', keywords: (p.keywords || []).join(', '), tags: (p.tags || []).join(', '), notes: p.notes || '', folders: p.folders || [] });
+  const [draft, setDraft] = useState(() => paperDraft(p));
   const original = useRef(draft);
+  useEffect(() => {
+    const incoming = paperDraft(p);
+    const baseline = original.current;
+    // Capture the old baseline outside the updater: React StrictMode may invoke
+    // an updater twice, so it must not mutate the baseline itself.
+    setDraft(current => mergeUntouchedFields(baseline, current, incoming));
+    original.current = incoming;
+  }, [p]);
   const [saving, setSaving] = useState(false);
   const { data: folders } = useData<Paged<Folder>>('/folders');
   const set = (key: string, value: string) => setDraft(d => ({ ...d, [key]: value }));
