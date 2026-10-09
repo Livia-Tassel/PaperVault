@@ -39,7 +39,7 @@ Rust/MSVC/SDK已安装；Tauri release及冻结后台已实际运行。Docling�
 最终结果：70项后端测试（含5项真实离线Docling）通过；16项前端单元通过；实际浏览器与安装后Tauri流程均通过，包括解析时未编辑字段刷新/未保存备注保护。846个许可证文件、7个MPL源码归档在安装目录逐个SHA验证。卸载及重装后的原件、托管PDF、metadata、DB哈希与SQLite完整性保持。
 
 ## 交付与后续
-- 安装包：apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis/PaperVault_0.1.0_x64-setup.exe。
+- 安装包：apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis/PaperVault_0.1.1_x64-setup.exe。
 - 已安装可执行：.test-data/installed/PaperVault/papervault.exe；测试开发服务1420/8765/8766均已关闭。
 - 离线模型：.cache/models；原始验收证据artifacts，最终快照docs/verification。
 - 尚未验证：无开发工具的干净Windows VM、实际调整Windows系统DPI、托管Windows CI执行。CI配置已提供，未上传仓库或假称CI运行成功。
@@ -58,3 +58,5 @@ Rust/MSVC/SDK已安装；Tauri release及冻结后台已实际运行。Docling�
 16项前端单元测试通过；26个真实数据界面截图覆盖浅色/深色、1440×1000及1280×800、论文库/图库/阅读器/搜索/任务/设置与侧栏刷新持久化。主内容无横向溢出，0个JavaScript错误、失败请求和损坏图片。
 
 本次7条端到端业务回归最终全部通过：首轮6过，1条因备份字段选择器随文案变化而失败；仅修正并复跑该失败项后通过。覆盖真实导入/裁剪/图表编辑/搜索/备份恢复、目录与参考文献、元数据草稿刷新、大图库分页及DPR2坐标。完整经过保存在docs/verification/ui-redesign-regression.json。
+
+0.1.1安装包已实际升级安装并通过原生窗口验收：原生版本号0.1.1、内置后端、真实CPU解析1个Figure/1个Table、PDF定位高亮、元数据刷新/草稿保留、目录参考编辑回读。846个许可文件、7个源码归档哈希一致。536,327,787字节，SHA-256 `E2C608C6341E0F3A92DB6494EFDAE3E86F0529D01F2D8B9F53283F18C0A38AC0`。本次未重复0.1.0已执行的卸载保留实验；manifest明确引用先前版本证据。1420/8765/8766测试服务均已关闭。

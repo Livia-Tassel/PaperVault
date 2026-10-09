@@ -1,23 +1,30 @@
 {
-  "version": "0.1.0",
-  "verified_at_utc": "2026-10-09T07:11:33.655458+00:00",
-  "source_commit": "caa5794c92418c14365f8fefc87193602559e68f",
+  "version": "0.1.1",
+  "verified_at_utc": "2026-10-09T07:50:03.574596+00:00",
+  "source_commit": "52aced1958a9e1ed9b73f7690df79f6f76f4092d",
+  "source_worktree_dirty": true,
   "installer": {
-    "path": "apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis/PaperVault_0.1.0_x64-setup.exe",
-    "bytes": 536330353,
-    "sha256": "b2466d9f245f4de016ee3fc578fb736f107be7b53808053fe30382573626c6f3",
+    "path": "apps/desktop/src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis/PaperVault_0.1.1_x64-setup.exe",
+    "bytes": 536327787,
+    "sha256": "e2c608c6341e0f3a92db6494efdae3e86f0529d01f2d8b9f53283f18c0a38ac0",
     "signed": false
   },
-  "application_sha256": "A4CA1EC9ABA4F4D061D7875AA2F222456BEBC068387499F1A37FD2924D61F776",
+  "application_sha256": "73455D26F46278D2A35F23BA32E8682467A4AE974478A5B65C043D8FAA761078",
   "backend_sha256": "CA77E6E5B1E67ABD93AF67E8EA11A106CE2A6B9054B0A8CD5AAF2E01D6A322F3",
   "license_files_verified": 846,
   "source_archives_verified": 7,
   "verification": {
     "real_pdf_workflow": true,
     "installed_tauri": true,
-    "uninstall_retention": true,
+    "uninstall_retention": false,
     "clean_windows_vm": false,
     "hosted_ci_executed": false
+  },
+  "prior_version_uninstall_retention": {
+    "version": "0.1.0",
+    "passed": true,
+    "evidence": "docs/verification/uninstall-retention.json",
+    "evidence_sha256": "0caefdac14c6c19d30892910cc785a418a8cdf1b6fef9e14eac5563eb8972509"
   },
   "known_diagnostics": "See TEST_REPORT.md and native-exception-investigation.json; one historical native diagnostic was not reproduced."
 }

@@ -2,6 +2,7 @@
   "passed": true,
   "app": "D:\\project\\PaperVault\\.test-data\\installed\\PaperVault\\papervault.exe",
   "checks": {
+    "appVersion": "0.1.1",
     "health": {
       "protocol": 1,
       "status": "ok",
@@ -19,7 +20,7 @@
     "论文库"
   ],
   "parsed": {
-    "paper_id": "a5c28d12-88f2-468f-b14b-7deeed638874",
+    "paper_id": "9232a146-22d7-4df6-9095-cfbfee4e45e1",
     "status": "completed",
     "figure_count": 1,
     "table_count": 1,
@@ -28,5 +29,14 @@
     "pdf_region_highlight": true,
     "outline_and_references_edit": true
   },
+  "captured_pages": [
+    "pdf-reader-dark-pristine",
+    "pdf-reader",
+    "library",
+    "figures",
+    "tables",
+    "tasks",
+    "settings"
+  ],
   "scope": "Actual Tauri WebView2, packaged sidecar startup, IPC, CSP/CORS authenticated API, access denial, rendered UI. Installer cleanliness and full parsing quality require separate checks."
 }

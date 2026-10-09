@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([Parameter(Mandatory=$true)][string]$Installer, [switch]$SkipParse)
+param([Parameter(Mandatory=$true)][string]$Installer, [switch]$SkipParse, [switch]$CaptureUi)
 $ErrorActionPreference = 'Stop'
 $ProjectRoot = Split-Path -Parent $PSScriptRoot
 Set-Location -LiteralPath $ProjectRoot
@@ -44,10 +44,14 @@ foreach ($License in (Get-ChildItem -LiteralPath $LicenseRoot -Recurse -File)) {
 $Python = Join-Path $ProjectRoot '.venv\Scripts\python.exe'
 & (Join-Path $PSScriptRoot 'bootstrap-webdriver.ps1')
 $SmokeArguments = @('scripts\package-desktop-smoke.py', '--app', $Application, '--driver', '.tools\edgedriver\msedgedriver.exe', '--output', 'artifacts\installed-desktop')
+$DesktopVersion = (Get-Content -LiteralPath (Join-Path $ProjectRoot 'apps\desktop\src-tauri\tauri.conf.json') -Raw | ConvertFrom-Json).version
+$SmokeArguments += @('--expect-version', $DesktopVersion)
+if ($CaptureUi) { $SmokeArguments += '--capture-ui' }
 if (-not $SkipParse) { $SmokeArguments += @('--models', '.cache\models', '--pdf', 'tests\fixtures\academic.pdf', '--expect-figures', '1', '--expect-tables', '1') }
 & $Python @SmokeArguments
 if ($LASTEXITCODE -ne 0) { throw 'The installed desktop smoke test failed.' }
 $InstallProof = [ordered]@{
+    version = $DesktopVersion
     install_root = $InstallRoot
     application_sha256 = (Get-FileHash -LiteralPath $Application -Algorithm SHA256).Hash
     backend_sha256 = (Get-FileHash -LiteralPath (Join-Path $InstallRoot 'papervault-backend.exe') -Algorithm SHA256).Hash

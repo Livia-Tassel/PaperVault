@@ -27,6 +27,8 @@ def main() -> None:
     parser.add_argument('--models', type=Path, help='Offline model directory for the optional real parse check')
     parser.add_argument('--expect-figures', type=int)
     parser.add_argument('--expect-tables', type=int)
+    parser.add_argument('--expect-version', help='Expected native desktop version; backend protocol version is independent')
+    parser.add_argument('--capture-ui', action='store_true', help='Save populated workbench, gallery, task and settings screenshots')
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
     (args.output / 'report.json').write_text(json.dumps({'passed': False, 'status': 'running', 'app': str(args.app.resolve())}), encoding='utf-8')
@@ -55,6 +57,7 @@ def main() -> None:
         driver = subprocess.Popen([str(args.driver.resolve()), f'--port={port}', '--host=127.0.0.1'], env=environment,
                                   stdout=log, stderr=log, creationflags=subprocess.CREATE_NO_WINDOW)
         session = None
+        captured_pages: list[str] = []
 
         def request(method: str, path: str, data: dict | None = None) -> dict:
             payload = json.dumps(data).encode() if data is not None else None
@@ -67,6 +70,17 @@ def main() -> None:
             if isinstance(result.get('value'), dict) and result['value'].get('error'):
                 raise RuntimeError(result['value'])
             return result
+
+        def capture(name: str) -> None:
+            for _ in range(60):
+                settled = request('POST', f'/session/{session}/execute/sync', {'script': "return !document.querySelector('.loading, .toast') && [...document.images].filter(i=>{const r=i.getBoundingClientRect();return r.width>0&&r.height>0&&r.bottom>0&&r.top<innerHeight}).every(i=>i.complete&&i.naturalWidth>0)", 'args': []})['value']
+                if settled:
+                    break
+                time.sleep(0.2)
+            assert settled, f'View did not finish rendering for screenshot: {name}'
+            screenshot = request('GET', f'/session/{session}/screenshot')['value']
+            (args.output / f'{name}.png').write_bytes(base64.b64decode(screenshot))
+            captured_pages.append(name)
 
         try:
             for attempt in range(100):
@@ -90,13 +104,15 @@ const done = arguments[arguments.length - 1];
   const response = await fetch(connection.baseUrl + '/health', {headers: {Authorization: 'Bearer ' + connection.token}});
   const health = await response.json();
   const denied = await fetch(connection.baseUrl + '/papers');
-  return {native: Boolean(window.__TAURI_INTERNALS__), healthStatus: response.status,
+  return {native: Boolean(window.__TAURI_INTERNALS__), appVersion: await window.__TAURI_INTERNALS__.invoke('plugin:app|version'), healthStatus: response.status,
           unauthorizedStatus: denied.status, health};
 })().then(result => done({ok:true, result}), error => done({ok:false, error:String(error)}));
 ''', 'args': []})['value']
             assert checks.get('ok'), checks
             assert checks['result']['native'] and checks['result']['healthStatus'] == 200, checks
             assert checks['result']['unauthorizedStatus'] in (401, 403), checks
+            if args.expect_version:
+                assert checks['result']['appVersion'] == args.expect_version, checks
             for _ in range(50):
                 body = request('POST', prefix + '/execute/sync', {'script': 'return document.body.innerText', 'args': []})['value']
                 if 'PaperVault' in body:
@@ -115,6 +131,10 @@ const done = arguments[arguments.length - 1];
                     time.sleep(0.1)
                 assert label in heading, (label, heading)
                 navigation.append(label)
+                if args.capture_ui and label == '设置':
+                    element = request('POST', prefix + '/element', {'using': 'xpath', 'value': "//button[normalize-space()='深色']"})['value'][element_key]
+                    request('POST', prefix + f'/element/{element}/click', {})
+                    assert request('POST', prefix + '/execute/sync', {'script': "return document.documentElement.dataset.theme", 'args': []})['value'] == 'dark'
             parsed = None
             if args.pdf:
                 element = request('POST', prefix + '/element', {'using': 'css selector', 'value': 'input[type=file]'})['value'][element_key]
@@ -163,6 +183,12 @@ return await r.json();})().then(done,e=>done({error:String(e)}));
                     assert parsed['figure_count'] == args.expect_figures, parsed
                 if args.expect_tables is not None:
                     assert parsed['table_count'] == args.expect_tables, parsed
+                for _ in range(70):
+                    counts = request('POST', prefix + '/execute/sync', {'script': "return ['图片库','表格库'].map(label=>{const b=[...document.querySelectorAll('aside button')].find(e=>e.querySelector('span')?.textContent===label);return Number(b?.querySelector('small')?.textContent||0)});", 'args': []})['value']
+                    if counts == [parsed.get('figure_count', 0), parsed.get('table_count', 0)]:
+                        break
+                    time.sleep(0.2)
+                assert counts == [parsed.get('figure_count', 0), parsed.get('table_count', 0)], ('Sidebar counts did not refresh', counts, parsed)
                 if parsed.get('figure_count', 0):
                     element = request('POST', prefix + '/element', {'using': 'xpath', 'value': "//aside//button[.//span[normalize-space()='图片库']]"})['value'][element_key]
                     request('POST', prefix + f'/element/{element}/click', {})
@@ -177,6 +203,10 @@ return await r.json();})().then(done,e=>done({error:String(e)}));
                         time.sleep(0.2)
                     assert located, 'Figure did not render and highlight in the original PDF'
                     parsed['pdf_region_highlight'] = True
+                    if args.capture_ui:
+                        # Capture actual imported content before the edit-persistence test.
+                        # Theme is selected through Settings, without changing DOM styling.
+                        capture('pdf-reader-dark-pristine')
                     element = request('POST', prefix + '/element', {'using': 'xpath', 'value': "//button[normalize-space()='目录']"})['value'][element_key]
                     request('POST', prefix + f'/element/{element}/click', {})
                     element = request('POST', prefix + '/element', {'using': 'xpath', 'value': "//button[normalize-space()='编辑目录与参考文献']"})['value'][element_key]
@@ -202,17 +232,17 @@ return await r.json();})().then(done,e=>done({error:String(e)}));
                     request('POST', prefix + f'/element/{element}/click', {})
                     element = request('POST', prefix + '/element', {'using': 'xpath', 'value': "//button[normalize-space()='论文信息']"})['value'][element_key]
                     request('POST', prefix + f'/element/{element}/click', {})
-                for _ in range(70):
-                    counts = request('POST', prefix + '/execute/sync', {'script': "return ['图片库','表格库'].map(label=>{const b=[...document.querySelectorAll('aside button')].find(e=>e.querySelector('span')?.textContent===label);return Number(b?.querySelector('small')?.textContent||0)});", 'args': []})['value']
-                    if counts == [parsed.get('figure_count', 0), parsed.get('table_count', 0)]:
-                        break
-                    time.sleep(0.2)
-                assert counts == [parsed.get('figure_count', 0), parsed.get('table_count', 0)], ('Sidebar counts did not refresh', counts, parsed)
             body = request('POST', prefix + '/execute/sync', {'script': 'return document.body.innerText', 'args': []})['value']
             screenshot = request('GET', prefix + '/screenshot')['value']
             (args.output / 'desktop.png').write_bytes(base64.b64decode(screenshot))
             (args.output / 'visible-text.txt').write_text(body, encoding='utf-8')
-            report = {'passed': True, 'app': str(args.app.resolve()), 'checks': checks['result'], 'navigation': navigation, 'parsed': parsed,
+            if args.capture_ui:
+                capture('pdf-reader' if args.pdf else 'library-empty')
+                for label, name in (('论文库', 'library'), ('图片库', 'figures'), ('表格库', 'tables'), ('解析任务', 'tasks'), ('设置', 'settings')):
+                    element = request('POST', prefix + '/element', {'using': 'xpath', 'value': f"//aside//button[.//span[normalize-space()='{label}']]"})['value'][element_key]
+                    request('POST', prefix + f'/element/{element}/click', {})
+                    capture(name)
+            report = {'passed': True, 'app': str(args.app.resolve()), 'checks': checks['result'], 'navigation': navigation, 'parsed': parsed, 'captured_pages': captured_pages,
                       'scope': 'Actual Tauri WebView2, packaged sidecar startup, IPC, CSP/CORS authenticated API, access denial, rendered UI. Installer cleanliness and full parsing quality require separate checks.'}
             (args.output / 'report.json').write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding='utf-8')
             print('PASS: actual Tauri desktop, native IPC, authenticated API, denied anonymous access, screenshot')

@@ -61,7 +61,7 @@ FastAPI跨线程关闭FileLock导致重启无法重新打开库：锁改为threa
 ## 已知限制
 Starlette TestClient的httpx迁移提示和Docling内部弃用warning不影响本轮结果。干净Windows VM尚未验证；本机源码、冻结后台、原生窗口和安装包各自记录，不能互相代替。
 
-## 最终Windows交付
+## 0.1.0 Windows交付
 安装包 `PaperVault_0.1.0_x64-setup.exe`：536,330,353字节（511.48MiB），SHA-256 `B2466D9F245F4DE016EE3FC578FB736F107BE7B53808053FE30382573626C6F3`。
 
 最终安装后的真实Tauri程序自动启动包内后台，验证未认证访问401、中文目录、各主导航、真实CPU解析1Figure/1Table、PDF.js高亮、章节/参考编辑，以及解析完成后自动字段刷新与未保存备注保护。846个许可证文件和7个源代码归档逐个安装哈希通过。实际执行卸载及重装，独立库的原PDF、托管PDF、metadata.json、数据库SHA保持，SQLite完整性通过。程序现重新安装于项目测试目录，可双击运行。
@@ -78,3 +78,7 @@ Starlette TestClient的httpx迁移提示和Docling内部弃用warning不影响�
 `scripts/ui-review.mjs`对已有真实测试PDF及其持久化资源执行只读浏览，生成26张截图（`artifacts/ui-review`）：覆盖浅/深色、1440×1000和1280×800、论文列表、PDF/目录、图片/表格库、表格详情、搜索结果、任务、设置，以及侧栏折叠后刷新。严格断言折叠宽度56px并验证展开/主题持久化。截图已目视检查；0个JS错误、请求失败、坏图或主内容横向溢出。图库中的几何标注和人工裁剪均是测试数据，不冒充真实论文集合。证据快照：`docs/verification/ui-review-review.json`。
 
 本次7条Playwright业务用例最终全部通过（首轮6 passed、1 failed；备份textbox精确名称因同Field按钮文案而不匹配，调整为名称前缀后仅重跑该条，1 passed）。测试未mock API，覆盖真实导入、裁剪定位、PNG/CSV/HTML导出、表格人工修改、标签收藏夹、备份恢复、目录编辑、元数据刷新和DPR2几何。跨200项资源分页专项使用明确合成测试库，不计为真实论文解析准确性验收。命令、每次结果和环境见docs/verification/ui-redesign-regression.json。
+
+0.1.1 Windows安装包536,327,787字节（511.48MiB），SHA-256 `E2C608C6341E0F3A92DB6494EFDAE3E86F0529D01F2D8B9F53283F18C0A38AC0`。复用已验证且源码无变化的冻结Python后端，重建Tauri 0.1.1并重新嵌入前端。项目测试目录内实际升级安装后，通过真实WebView2验证原生版本号0.1.1、内置后端鉴权、CPU解析1Figure/1Table、PDF区域高亮、解析后字段刷新/未保存备注保护、目录和参考文献修改持久化。846个许可文件与7个源码归档在安装目录逐个SHA校验通过；实际截图见`artifacts/installed-desktop`。
+
+本次安装测试在同一台含开发工具的Windows主机执行，未宣称干净VM或托管CI通过。安装器未签名。0.1.0的卸载/重装保留证据继续保留，本次0.1.1未重复执行；release-manifest通过独立字段标识先前版本证据，避免混同本次测试范围。
