@@ -1,0 +1,458 @@
+{
+  "passed": true,
+  "created_at_utc": "2026-10-10T03:18:42.303578+00:00",
+  "timeline": "D:\\project\\PaperVault\\artifacts\\demo-v2\\capture-20261010T031337Z\\timeline.json",
+  "timeline_sha256": "f8c73eaaff91e54c80846b74e27426d55e7f8e9af2ac9085053ab437fc705f39",
+  "raw_video": "D:\\project\\PaperVault\\artifacts\\demo-v2\\capture-20261010T031337Z\\capture.mp4",
+  "raw_sha256": "aadb3fe112d0a1d84136a41fdb49c77146cbe17f54240429fd097997b86ebdb9",
+  "source": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "frames": 3701,
+    "duration": 123.36666666666666,
+    "codec_tag": "h264"
+  },
+  "output_directory": "D:\\project\\PaperVault\\artifacts\\demo-v2\\main",
+  "validation": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "frames": 2316,
+    "duration": 77.2,
+    "codec_tag": "h264",
+    "full_decode_passed": true,
+    "audio_tracks": 0,
+    "fast_start": true,
+    "sha256": "610509453bdca0119a1cdd1e044380ee25edb2ca6023e5abf6dc2d5a538bc4b3"
+  },
+  "clips": [
+    {
+      "start": 0.0,
+      "end": 11.893,
+      "frames": 357,
+      "output_start": 0.0,
+      "output_end": 11.9
+    },
+    {
+      "start": 58.049,
+      "end": 123.362,
+      "frames": 1959,
+      "output_start": 11.9,
+      "output_end": 77.2
+    }
+  ],
+  "mapped_cues": [
+    {
+      "start": 0.002,
+      "end": 3.002,
+      "text": "先把一篇新论文导入 PaperVault",
+      "source_cue": 0,
+      "source_clip": 0,
+      "position": "bottom"
+    },
+    {
+      "start": 3.002,
+      "end": 6.002,
+      "text": "选择本机 PDF，加入现有论文库",
+      "source_cue": 1,
+      "source_clip": 0,
+      "position": "bottom"
+    },
+    {
+      "start": 6.893,
+      "end": 11.893,
+      "text": "在本机解析正文、图片和表格",
+      "source_cue": 2,
+      "source_clip": 0,
+      "position": "bottom"
+    },
+    {
+      "start": 11.916000000000004,
+      "end": 14.916000000000004,
+      "text": "解析完成，图表已入库；等待过程已剪辑",
+      "source_cue": 3,
+      "source_clip": 1,
+      "position": "bottom"
+    },
+    {
+      "start": 15.728000000000002,
+      "end": 19.728000000000016,
+      "text": "新论文和已有文献，共用同一个索引",
+      "source_cue": 4,
+      "source_clip": 1,
+      "position": "bottom"
+    },
+    {
+      "start": 19.728,
+      "end": 22.728,
+      "text": "现在，试着找回一张只记得关键词的图表",
+      "source_cue": 5,
+      "source_clip": 1,
+      "position": "bottom"
+    },
+    {
+      "start": 23.150000000000013,
+      "end": 28.150000000000013,
+      "text": "只记得 GLUE？在全库表格里直接搜索",
+      "source_cue": 6,
+      "source_clip": 1,
+      "position": "bottom"
+    },
+    {
+      "start": 28.150000000000013,
+      "end": 32.15000000000001,
+      "text": "不同论文里的相关表格，一次找齐",
+      "source_cue": 7,
+      "source_clip": 1,
+      "position": "bottom"
+    },
+    {
+      "start": 32.15000000000001,
+      "end": 36.15000000000001,
+      "text": "打开表格，核对内容和来源论文",
+      "source_cue": 8,
+      "source_clip": 1,
+      "position": "bottom"
+    },
+    {
+      "start": 36.166000000000004,
+      "end": 41.166000000000004,
+      "text": "一键回到原文，确认表头、数值和上下文",
+      "source_cue": 9,
+      "source_clip": 1,
+      "position": "bottom"
+    },
+    {
+      "start": 41.713,
+      "end": 46.713,
+      "text": "找图片也一样：输入关键词 BERT",
+      "source_cue": 10,
+      "source_clip": 1,
+      "position": "bottom"
+    },
+    {
+      "start": 46.713,
+      "end": 50.713,
+      "text": "跨论文浏览图片，每张图都保留出处",
+      "source_cue": 11,
+      "source_clip": 1,
+      "position": "bottom"
+    },
+    {
+      "start": 50.713,
+      "end": 54.713,
+      "text": "打开需要的图，不必再凭记忆翻文件",
+      "source_cue": 12,
+      "source_clip": 1,
+      "position": "bottom"
+    },
+    {
+      "start": 54.728,
+      "end": 58.728,
+      "text": "复制图片，就能粘贴进组会 PPT 或文稿",
+      "source_cue": 13,
+      "source_clip": 1,
+      "position": "top"
+    },
+    {
+      "start": 58.728,
+      "end": 63.728,
+      "text": "需要确认细节？直接定位原始页面",
+      "source_cue": 14,
+      "source_clip": 1,
+      "position": "bottom"
+    },
+    {
+      "start": 64.18100000000001,
+      "end": 69.18100000000001,
+      "text": "论文、图表和正文，也能在这里统一检索",
+      "source_cue": 15,
+      "source_clip": 1,
+      "position": "bottom"
+    },
+    {
+      "start": 69.197,
+      "end": 73.197,
+      "text": "记住线索就够了，把找图表的时间省下来",
+      "source_cue": 16,
+      "source_clip": 1,
+      "position": "bottom"
+    },
+    {
+      "start": 73.197,
+      "end": 77.197,
+      "text": "演示使用 9 篇公开论文\n作者、原始来源与开放许可见随附说明",
+      "source_cue": 17,
+      "source_clip": 1,
+      "position": "bottom"
+    }
+  ],
+  "caption_panel": {
+    "x": 600,
+    "y": 926,
+    "width": 720,
+    "height": 112,
+    "bottom_margin": 42,
+    "corner_radius": 18,
+    "black_tint_opacity": 0.44,
+    "blur_radius": 12,
+    "blur_passes": 2,
+    "font": "Microsoft YaHei",
+    "font_size": 36,
+    "maximum_lines": 2,
+    "positions": {
+      "bottom": 926,
+      "top": 42
+    }
+  },
+  "samples": [
+    {
+      "frame": 0,
+      "seconds": 0.0,
+      "source_seconds": 0.0,
+      "caption": null,
+      "caption_position": null,
+      "decoded": true,
+      "outside_panel_mean_abs_error": 0.078,
+      "panel_padding_mean_rgb": [
+        32.825,
+        34.825,
+        34.825
+      ],
+      "panel_padding_laplacian_variance": 407.606,
+      "source_padding_laplacian_variance": 386.986
+    },
+    {
+      "frame": 135,
+      "seconds": 4.5,
+      "source_seconds": 4.5,
+      "caption": "选择本机 PDF，加入现有论文库",
+      "caption_position": "bottom",
+      "decoded": true,
+      "outside_panel_mean_abs_error": 0.135,
+      "panel_padding_mean_rgb": [
+        8.902,
+        10.902,
+        10.902
+      ],
+      "panel_padding_laplacian_variance": 0.413,
+      "source_padding_laplacian_variance": 141.697
+    },
+    {
+      "frame": 282,
+      "seconds": 9.4,
+      "source_seconds": 9.4,
+      "caption": "在本机解析正文、图片和表格",
+      "caption_position": "bottom",
+      "decoded": true,
+      "outside_panel_mean_abs_error": 0.029,
+      "panel_padding_mean_rgb": [
+        16.645,
+        18.645,
+        18.645
+      ],
+      "panel_padding_laplacian_variance": 1.405,
+      "source_padding_laplacian_variance": 0.0
+    },
+    {
+      "frame": 532,
+      "seconds": 17.733333333333334,
+      "source_seconds": 63.882333,
+      "caption": "新论文和已有文献，共用同一个索引",
+      "caption_position": "bottom",
+      "decoded": true,
+      "outside_panel_mean_abs_error": 0.101,
+      "panel_padding_mean_rgb": [
+        122.183,
+        124.183,
+        124.183
+      ],
+      "panel_padding_laplacian_variance": 1.896,
+      "source_padding_laplacian_variance": 37080.498
+    },
+    {
+      "frame": 770,
+      "seconds": 25.666666666666668,
+      "source_seconds": 71.815667,
+      "caption": "只记得 GLUE？在全库表格里直接搜索",
+      "caption_position": "bottom",
+      "decoded": true,
+      "outside_panel_mean_abs_error": 0.084,
+      "panel_padding_mean_rgb": [
+        14.0,
+        16.0,
+        16.0
+      ],
+      "panel_padding_laplacian_variance": 0.0,
+      "source_padding_laplacian_variance": 0.0
+    },
+    {
+      "frame": 1025,
+      "seconds": 34.166666666666664,
+      "source_seconds": 80.315667,
+      "caption": "打开表格，核对内容和来源论文",
+      "caption_position": "bottom",
+      "decoded": true,
+      "outside_panel_mean_abs_error": 0.252,
+      "panel_padding_mean_rgb": [
+        20.515,
+        22.332,
+        22.13
+      ],
+      "panel_padding_laplacian_variance": 1.185,
+      "source_padding_laplacian_variance": 2141.14
+    },
+    {
+      "frame": 1160,
+      "seconds": 38.666666666666664,
+      "source_seconds": 84.815667,
+      "caption": "一键回到原文，确认表头、数值和上下文",
+      "caption_position": "bottom",
+      "decoded": true,
+      "outside_panel_mean_abs_error": 0.183,
+      "panel_padding_mean_rgb": [
+        122.164,
+        124.164,
+        124.164
+      ],
+      "panel_padding_laplacian_variance": 2.317,
+      "source_padding_laplacian_variance": 18533.767
+    },
+    {
+      "frame": 1461,
+      "seconds": 48.7,
+      "source_seconds": 94.849,
+      "caption": "跨论文浏览图片，每张图都保留出处",
+      "caption_position": "bottom",
+      "decoded": true,
+      "outside_panel_mean_abs_error": 0.048,
+      "panel_padding_mean_rgb": [
+        112.977,
+        114.122,
+        113.549
+      ],
+      "panel_padding_laplacian_variance": 2.027,
+      "source_padding_laplacian_variance": 5809.934
+    },
+    {
+      "frame": 1702,
+      "seconds": 56.733333333333334,
+      "source_seconds": 102.882333,
+      "caption": "复制图片，就能粘贴进组会 PPT 或文稿",
+      "caption_position": "top",
+      "decoded": true,
+      "outside_panel_mean_abs_error": 0.086,
+      "panel_padding_mean_rgb": [
+        6.994,
+        8.96,
+        8.951
+      ],
+      "panel_padding_laplacian_variance": 0.246,
+      "source_padding_laplacian_variance": 4.605
+    },
+    {
+      "frame": 2000,
+      "seconds": 66.66666666666667,
+      "source_seconds": 112.815667,
+      "caption": "论文、图表和正文，也能在这里统一检索",
+      "caption_position": "bottom",
+      "decoded": true,
+      "outside_panel_mean_abs_error": 0.042,
+      "panel_padding_mean_rgb": [
+        27.293,
+        28.966,
+        27.828
+      ],
+      "panel_padding_laplacian_variance": 2.793,
+      "source_padding_laplacian_variance": 7364.048
+    },
+    {
+      "frame": 2136,
+      "seconds": 71.2,
+      "source_seconds": 117.349,
+      "caption": "记住线索就够了，把找图表的时间省下来",
+      "caption_position": "bottom",
+      "decoded": true,
+      "outside_panel_mean_abs_error": 0.037,
+      "panel_padding_mean_rgb": [
+        27.293,
+        28.966,
+        27.828
+      ],
+      "panel_padding_laplacian_variance": 2.793,
+      "source_padding_laplacian_variance": 7364.048
+    },
+    {
+      "frame": 2315,
+      "seconds": 77.16666666666667,
+      "source_seconds": 123.315667,
+      "caption": "演示使用 9 篇公开论文\n作者、原始来源与开放许可见随附说明",
+      "caption_position": "bottom",
+      "decoded": true,
+      "outside_panel_mean_abs_error": 0.034,
+      "panel_padding_mean_rgb": [
+        27.293,
+        28.966,
+        27.828
+      ],
+      "panel_padding_laplacian_variance": 2.793,
+      "source_padding_laplacian_variance": 7364.048
+    }
+  ],
+  "ffmpeg": "D:\\project\\PaperVault\\.tools\\video-python\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+  "ffmpeg_sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+  "framing": {
+    "application_bounds": [
+      0,
+      0,
+      1920,
+      1080
+    ],
+    "letterboxing": false,
+    "scaling": false,
+    "caption_backdrop": "The current source frame is cropped, genuinely box-blurred, dark-tinted at 44%, and composited through an antialiased rounded mask only during cues."
+  },
+  "artifacts": {
+    "PaperVault-demo-zh.mp4": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-v2\\main\\PaperVault-demo-zh.mp4",
+      "bytes": 2994108,
+      "sha256": "610509453bdca0119a1cdd1e044380ee25edb2ca6023e5abf6dc2d5a538bc4b3"
+    },
+    "PaperVault-demo-zh.srt": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-v2\\main\\PaperVault-demo-zh.srt",
+      "bytes": 1503,
+      "sha256": "085efed2866c649c410018e5612c584e129047897954a464b3da1b2fa96aae35"
+    },
+    "PaperVault-demo-zh.ass": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-v2\\main\\PaperVault-demo-zh.ass",
+      "bytes": 2683,
+      "sha256": "0426afbbba978daf229082d981b262f08a5b1cc06e7f72e944dec78d63fd3206"
+    },
+    "poster.jpg": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-v2\\main\\poster.jpg",
+      "bytes": 210152,
+      "sha256": "d5c92a4cebc32114555c1432308220d37d89735680741baa0d4c59788833e288"
+    },
+    "contact-sheet.jpg": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-v2\\main\\contact-sheet.jpg",
+      "bytes": 672614,
+      "sha256": "3243ea6d90cf834221fed99d1f405f9cf31696a8c27e986069440c3956a70e00"
+    },
+    "caption-mask.png": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-v2\\main\\caption-mask.png",
+      "bytes": 842,
+      "sha256": "8340cb89958474c09ed7b49508264744145002457a9a7164d6329bd5955a91e0"
+    },
+    "render.log": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-v2\\main\\render.log",
+      "bytes": 9735,
+      "sha256": "45b244855241a5f2684765308c0ca31af1d036a9657530713a8343a41d689698"
+    },
+    "decode.log": {
+      "path": "D:\\project\\PaperVault\\artifacts\\demo-v2\\main\\decode.log",
+      "bytes": 1683,
+      "sha256": "a80c9a81f37cb80be3e6640766ec450a8084ba8d9d59b1b90833f35e6443839b"
+    }
+  }
+}

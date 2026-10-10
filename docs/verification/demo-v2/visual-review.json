@@ -1,0 +1,151 @@
+{
+  "passed": true,
+  "reviewed_at_utc": "2026-10-10T03:24:22.573487+00:00",
+  "video_sha256": "f752c615799d22314ccb7c14bccecdab94d251e102665518a5bb276640e6425d",
+  "duration_seconds": 93.2,
+  "video_bytes": 3091268,
+  "manual_visual_checks": [
+    "Viewed the revised question, answer and two-line forgotten-paper-title scenario.",
+    "Actual UI occupies all 1920x1080 pixels; no added subtitle strip.",
+    "Caption panel is local, rounded and dynamically blurred; full-resolution GLUE and copy frames checked.",
+    "Visible real import/task/finish and explicitly disclosed parsing wait cut.",
+    "BART and BERT GLUE tables both visible before opening original; different paper provenance preserved.",
+    "Actual BERT Figure 1 copied successfully; caption moved to top and copy controls remained visible."
+  ],
+  "new_source": {
+    "id": "docling-v5",
+    "title": "Docling Technical Report",
+    "authors": [
+      "Christoph Auer",
+      "Maksym Lysak",
+      "Ahmed Nassar",
+      "Michele Dolfi",
+      "et al."
+    ],
+    "source_url": "https://arxiv.org/abs/2408.09869v5",
+    "pdf_url": "https://arxiv.org/pdf/2408.09869v5",
+    "version": "arXiv v5, 2024-12-09",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence": "The arXiv v5 page links its view-license to CC BY 4.0; confirmed again 2026-10-09.",
+    "local_path": ".test-data/external/docling-report-v5.pdf",
+    "sha256": "82dd470712ce8389f19f20eb9330475e2166a281f8c7990a9f1d0763d73b4d22",
+    "pages": 9,
+    "layout_notes": "Single-column report; vector process diagram; merged-header table; appendix figures contain screenshots of another paper and nested table/figure captions."
+  },
+  "new_parse_seconds": 52.047,
+  "removed_wait_seconds": 46.156,
+  "first_table_search_seconds": 39.14300000000001,
+  "library_counts": {
+    "id": "66d2b3bb-31c2-4af1-a5b4-49b4e63c47ad",
+    "path": "D:\\project\\PaperVault\\.test-data\\demo-v2\\20261010T031337Z\\PaperVault 演示库",
+    "paper_count": 9,
+    "figure_count": 31,
+    "table_count": 79
+  },
+  "new_pdf_hash_preserved": true,
+  "search_sources": {
+    "table": {
+      "id": "4d399f30-cbd3-4020-b7b6-55fe08854298",
+      "paper_id": "40115632-1f36-49a3-bebd-1bff1b97b908",
+      "paper_title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension",
+      "locations": [
+        {
+          "page_index": 5,
+          "crop_box": [
+            0.0,
+            0.0,
+            595.276,
+            841.89
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            595.276,
+            841.89
+          ],
+          "rotation": 0,
+          "user_unit": 1.0,
+          "width": 595.276,
+          "height": 841.89,
+          "bbox": [
+            121.31640856216738,
+            684.0154250025805,
+            476.05780853988335,
+            779.7787496644244
+          ],
+          "coordinate_space": "pdf_user_space",
+          "docling_provenance": {
+            "page_no": 6,
+            "bbox": {
+              "l": 121.31640856216737,
+              "t": 779.7787496644244,
+              "r": 476.05780853988335,
+              "b": 684.0154250025805,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    "figure": {
+      "id": "262bc53d-1a24-4bb8-8bef-1b388057345e",
+      "paper_id": "5c67f043-1352-4624-b502-8dbf8f6ee648",
+      "paper_title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "locations": [
+        {
+          "page_index": 2,
+          "crop_box": [
+            0.0,
+            0.0,
+            595.276,
+            841.89
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            595.276,
+            841.89
+          ],
+          "rotation": 0,
+          "user_unit": 1.0,
+          "width": 595.276,
+          "height": 841.89,
+          "bbox": [
+            74.73012444720172,
+            600.5474794723982,
+            522.816642801784,
+            779.6156812184893
+          ],
+          "coordinate_space": "pdf_user_space",
+          "docling_provenance": {
+            "page_no": 3,
+            "bbox": {
+              "l": 74.73012444720172,
+              "t": 779.6156812184893,
+              "r": 522.816642801784,
+              "b": 600.5474794723982,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "clipboard_copy_verified": true,
+  "raw_capture_sha256": "aadb3fe112d0a1d84136a41fdb49c77146cbe17f54240429fd097997b86ebdb9",
+  "timeline_sha256": "f8c73eaaff91e54c80846b74e27426d55e7f8e9af2ac9085053ab437fc705f39",
+  "sources_sha256": "a8255d304aa1f148e6f99dd10f5e6d88b4d641daf3887f015f8d5565a409286f",
+  "limitations": [
+    "This is genuine keyword retrieval and automatic extraction, not a universal accuracy claim.",
+    "Rendering test color bars were used only for independent blur verification, never in the deliverable."
+  ]
+}

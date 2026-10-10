@@ -1,5 +1,26 @@
 # 带中文字幕的操作演示
 
+## 当前修订版：从导入到找回图表
+
+[播放修订版](../artifacts/demo-v2/final/PaperVault-demo-v2-zh.mp4) · [SRT字幕](../artifacts/demo-v2/final/PaperVault-demo-v2-zh.srt) · [素材署名](../artifacts/demo-v2/final/SOURCES.md)
+
+长 **1分33.2秒**，真1920×1080应用画面、30fps、H.264，无音轨。主片不缩放、不补边，取消旧版120px字幕栏；中文字幕放在画面内，底图取当前帧的局部画面进行真实模糊，再加半透明暗色与圆角。复制图片的字幕移到顶部，避开实际操作按钮。片头继续使用黑底居中逐字动画。
+
+本次开场改为：
+
+> 读过的论文，可以成为你的知识库吗？
+> 当然可以！
+> 组会汇报、写论文，想用读过的图表，却忘了论文名？
+> PaperVault，帮你把它找回来。
+
+16秒片头后立即导入新的 *Docling Technical Report v5*，展示实际本地解析任务与完成状态。使用上一轮8篇演示库的独立备份副本，新增这篇9页PDF后共有9篇108页、31个图片和79个表格资源；原8篇库及用户论文库没有被本轮修改。本次实际导入至任务界面完成约52秒，46.156秒等待被剪去并明确标注。
+
+约第39秒进入核心用法：只凭GLUE关键词找回BART与BERT中的表格，打开结果并定位原文；随后用BERT找图片，实际复制BERT Figure 1并显示剪贴板成功通知，再回原文核对。全库文字检索放在后段，列表/标签整理从本片移除。检索是关键词检索，不声称语义问答；新论文图表识别的既有质量限制仍保留。
+
+完整解码、字幕时间与画面尺寸检查通过，人工核对了新片头、真实任务、跨论文表格结果、复制成功及字幕位置。MP4为3,091,268字节，SHA-256 `f752c615799d22314ccb7c14bccecdab94d251e102665518a5bb276640e6425d`。
+
+复现工具为 `scripts/record_demo_v2.py`、`scripts/render_demo_v2.py --timeline <录制时间轴>` 与 `scripts/add_demo_intro_v2.py --demo <主片MP4> --subtitles <主片SRT> --output-directory <新目录>`。录制和渲染均使用新目录，旧版保留。原始实录与完整证据位于 `artifacts/demo-v2/`，紧凑验证记录在 `docs/verification/demo-v2/`。
+
 ## 多论文库与联合搜索版
 
 [播放新版视频](../artifacts/demo-library/final/PaperVault-library-demo-zh.mp4) · [SRT字幕](../artifacts/demo-library/final/PaperVault-library-demo-zh.srt) · [素材署名](../artifacts/demo-library/final/SOURCES.md)

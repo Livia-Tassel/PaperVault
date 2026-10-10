@@ -78,7 +78,7 @@ class OwnedWindow:
         self.user.SendMessageTimeoutW(hwnd, 0x000D, len(buf), ctypes.cast(buf, ctypes.c_void_p).value, 2, 1000, ctypes.byref(result))
         return buf.value
 
-    def prepare(self):
+    def prepare(self, width=1920, height=960):
         self.user.ShowWindow(self.hwnd, 9)
         self.user.SetForegroundWindow(self.hwnd)
         # Request an exact client region, excluding title bar and other apps.
@@ -86,9 +86,9 @@ class OwnedWindow:
             client, outer = wintypes.RECT(), wintypes.RECT()
             self.user.GetClientRect(self.hwnd, ctypes.byref(client))
             self.user.GetWindowRect(self.hwnd, ctypes.byref(outer))
-            width = 1920 + (outer.right - outer.left) - client.right
-            height = 960 + (outer.bottom - outer.top) - client.bottom
-            assert self.user.SetWindowPos(self.hwnd, 0, 40, 40, width, height, 0x0040)
+            outer_width = width + (outer.right - outer.left) - client.right
+            outer_height = height + (outer.bottom - outer.top) - client.bottom
+            assert self.user.SetWindowPos(self.hwnd, 0, 40, 40, outer_width, outer_height, 0x0040)
             time.sleep(.3)
         assert self.user.SetWindowTextW(self.hwnd, self.recording_title)
         return self.client.execute('return {width:innerWidth,height:innerHeight,dpr:devicePixelRatio}')

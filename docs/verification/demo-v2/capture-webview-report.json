@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "started_at_utc": "2026-10-10T03:13:58.744Z",
+  "finished_at_utc": "2026-10-10T03:16:24.179Z",
+  "end_reason": "q",
+  "recording_method": "WebView2 Page.startScreencast compositor frames",
+  "target_url": "http://tauri.localhost/",
+  "epoch_ms": 1791602038859,
+  "stop_epoch_ms": 1791602162228,
+  "duration": 123.369,
+  "encoded_duration": 123.36666666666666,
+  "fps": 30,
+  "frames": 433,
+  "encoded_frames": 3701,
+  "unique_hashes": 316,
+  "source_dimensions": {
+    "height": 1080,
+    "width": 1920
+  },
+  "output_dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "full_decode_passed": true,
+  "color_conversion": "JPEG full-range BT.601 to limited-range BT.709; actual sample conversion and matching H.264 metadata",
+  "raw_video": "D:\\project\\PaperVault\\artifacts\\demo-v2\\capture-20261010T031337Z\\capture.mp4",
+  "raw_video_bytes": 3403536,
+  "timing": "Frame reception wall-clock time, with the final frame held until q; static frames are repeated, not time-compressed.",
+  "limitations": [
+    "Only the actual WebView content is captured; native Save dialogs, window borders, and the system pointer are outside this recording."
+  ]
+}

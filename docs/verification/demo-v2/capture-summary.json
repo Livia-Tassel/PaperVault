@@ -1,0 +1,421 @@
+{
+  "passed": true,
+  "title": "PaperVault：找回读过的论文图表",
+  "fixture": "D:\\project\\PaperVault\\.test-data\\demo-v2\\20261010T031337Z",
+  "library": "D:\\project\\PaperVault\\.test-data\\demo-v2\\20261010T031337Z\\PaperVault 演示库",
+  "preparation": "D:\\project\\PaperVault\\artifacts\\demo-library\\preparation.json",
+  "preparation_sha256": "431bc0b24f3a84c7420ba9aa90e656aa2f9b5beb6646bda703b46f47a053ef88",
+  "new_source": {
+    "id": "docling-v5",
+    "title": "Docling Technical Report",
+    "authors": [
+      "Christoph Auer",
+      "Maksym Lysak",
+      "Ahmed Nassar",
+      "Michele Dolfi",
+      "et al."
+    ],
+    "source_url": "https://arxiv.org/abs/2408.09869v5",
+    "pdf_url": "https://arxiv.org/pdf/2408.09869v5",
+    "version": "arXiv v5, 2024-12-09",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence": "The arXiv v5 page links its view-license to CC BY 4.0; confirmed again 2026-10-09.",
+    "local_path": ".test-data/external/docling-report-v5.pdf",
+    "sha256": "82dd470712ce8389f19f20eb9330475e2166a281f8c7990a9f1d0763d73b4d22",
+    "pages": 9,
+    "layout_notes": "Single-column report; vector process diagram; merged-header table; appendix figures contain screenshots of another paper and nested table/figure captions."
+  },
+  "backend_sha256": "b5e1ece230ab2ec1183057ab1f0050e6899947632897724febb117eeaa51755f",
+  "raw_video": "D:\\project\\PaperVault\\artifacts\\demo-v2\\capture-20261010T031337Z\\capture.mp4",
+  "desktop_version": "0.2.2",
+  "viewport": {
+    "dpr": 1.5,
+    "height": 720,
+    "width": 1280
+  },
+  "parse_progress": [
+    {
+      "raw_time": 11.893,
+      "status": "running",
+      "phase": "正在读取 PDF",
+      "pages_done": null,
+      "pages_total": null,
+      "resources_count": 0
+    },
+    {
+      "raw_time": 31.799,
+      "status": "running",
+      "phase": "正在执行 CPU 版面识别与表格解析",
+      "pages_done": null,
+      "pages_total": 9,
+      "resources_count": 0
+    },
+    {
+      "raw_time": 54.674,
+      "status": "running",
+      "phase": "正在导出图表",
+      "pages_done": null,
+      "pages_total": 9,
+      "resources_count": 0
+    },
+    {
+      "raw_time": 55.096,
+      "status": "running",
+      "phase": "正在导出图表",
+      "pages_done": null,
+      "pages_total": 9,
+      "resources_count": 5
+    },
+    {
+      "raw_time": 55.518,
+      "status": "running",
+      "phase": "正在保存解析结果",
+      "pages_done": null,
+      "pages_total": 9,
+      "resources_count": 8
+    },
+    {
+      "raw_time": 55.924,
+      "status": "running",
+      "phase": "解析完成",
+      "pages_done": 9,
+      "pages_total": 9,
+      "resources_count": 8
+    },
+    {
+      "raw_time": 56.752,
+      "status": "completed",
+      "phase": "解析完成",
+      "pages_done": 9,
+      "pages_total": 9,
+      "resources_count": 8
+    }
+  ],
+  "new_parse_seconds": 52.047,
+  "library_counts": {
+    "id": "66d2b3bb-31c2-4af1-a5b4-49b4e63c47ad",
+    "path": "D:\\project\\PaperVault\\.test-data\\demo-v2\\20261010T031337Z\\PaperVault 演示库",
+    "paper_count": 9,
+    "figure_count": 31,
+    "table_count": 79
+  },
+  "copy_image_success": true,
+  "events": [
+    {
+      "text": "先把一篇新论文导入 PaperVault",
+      "start": 0.002,
+      "end": 3.002
+    },
+    {
+      "text": "选择本机 PDF，加入现有论文库",
+      "start": 3.002,
+      "end": 6.002
+    },
+    {
+      "text": "在本机解析正文、图片和表格",
+      "start": 6.893,
+      "end": 11.893
+    },
+    {
+      "text": "解析完成，图表已入库；等待过程已剪辑",
+      "start": 58.065,
+      "end": 61.065
+    },
+    {
+      "text": "新论文和已有文献，共用同一个索引",
+      "start": 61.877,
+      "end": 65.87700000000001
+    },
+    {
+      "text": "现在，试着找回一张只记得关键词的图表",
+      "start": 65.877,
+      "end": 68.877
+    },
+    {
+      "text": "只记得 GLUE？在全库表格里直接搜索",
+      "start": 69.299,
+      "end": 74.299
+    },
+    {
+      "text": "不同论文里的相关表格，一次找齐",
+      "start": 74.299,
+      "end": 78.299
+    },
+    {
+      "text": "打开表格，核对内容和来源论文",
+      "start": 78.299,
+      "end": 82.299
+    },
+    {
+      "text": "一键回到原文，确认表头、数值和上下文",
+      "start": 82.315,
+      "end": 87.315
+    },
+    {
+      "text": "找图片也一样：输入关键词 BERT",
+      "start": 87.862,
+      "end": 92.862
+    },
+    {
+      "text": "跨论文浏览图片，每张图都保留出处",
+      "start": 92.862,
+      "end": 96.862
+    },
+    {
+      "text": "打开需要的图，不必再凭记忆翻文件",
+      "start": 96.862,
+      "end": 100.862
+    },
+    {
+      "text": "复制图片，就能粘贴进组会 PPT 或文稿",
+      "start": 100.877,
+      "end": 104.877
+    },
+    {
+      "text": "需要确认细节？直接定位原始页面",
+      "start": 104.877,
+      "end": 109.877
+    },
+    {
+      "text": "论文、图表和正文，也能在这里统一检索",
+      "start": 110.33,
+      "end": 115.33
+    },
+    {
+      "text": "记住线索就够了，把找图表的时间省下来",
+      "start": 115.346,
+      "end": 119.346
+    },
+    {
+      "text": "演示使用 9 篇公开论文\n作者、原始来源与开放许可见随附说明",
+      "start": 119.346,
+      "end": 123.346
+    }
+  ],
+  "cuts": [
+    {
+      "start": 11.893,
+      "end": 58.049,
+      "reason": "Actual parser wait removed, explicitly disclosed in subtitle"
+    }
+  ],
+  "cues": [
+    {
+      "text": "先把一篇新论文导入 PaperVault",
+      "start": 0.002,
+      "end": 3.002,
+      "position": "bottom"
+    },
+    {
+      "text": "选择本机 PDF，加入现有论文库",
+      "start": 3.002,
+      "end": 6.002,
+      "position": "bottom"
+    },
+    {
+      "text": "在本机解析正文、图片和表格",
+      "start": 6.893,
+      "end": 11.893,
+      "position": "bottom"
+    },
+    {
+      "text": "解析完成，图表已入库；等待过程已剪辑",
+      "start": 58.065,
+      "end": 61.065,
+      "position": "bottom"
+    },
+    {
+      "text": "新论文和已有文献，共用同一个索引",
+      "start": 61.877,
+      "end": 65.87700000000001,
+      "position": "bottom"
+    },
+    {
+      "text": "现在，试着找回一张只记得关键词的图表",
+      "start": 65.877,
+      "end": 68.877,
+      "position": "bottom"
+    },
+    {
+      "text": "只记得 GLUE？在全库表格里直接搜索",
+      "start": 69.299,
+      "end": 74.299,
+      "position": "bottom"
+    },
+    {
+      "text": "不同论文里的相关表格，一次找齐",
+      "start": 74.299,
+      "end": 78.299,
+      "position": "bottom"
+    },
+    {
+      "text": "打开表格，核对内容和来源论文",
+      "start": 78.299,
+      "end": 82.299,
+      "position": "bottom"
+    },
+    {
+      "text": "一键回到原文，确认表头、数值和上下文",
+      "start": 82.315,
+      "end": 87.315,
+      "position": "bottom"
+    },
+    {
+      "text": "找图片也一样：输入关键词 BERT",
+      "start": 87.862,
+      "end": 92.862,
+      "position": "bottom"
+    },
+    {
+      "text": "跨论文浏览图片，每张图都保留出处",
+      "start": 92.862,
+      "end": 96.862,
+      "position": "bottom"
+    },
+    {
+      "text": "打开需要的图，不必再凭记忆翻文件",
+      "start": 96.862,
+      "end": 100.862,
+      "position": "bottom"
+    },
+    {
+      "text": "复制图片，就能粘贴进组会 PPT 或文稿",
+      "start": 100.877,
+      "end": 104.877,
+      "position": "top"
+    },
+    {
+      "text": "需要确认细节？直接定位原始页面",
+      "start": 104.877,
+      "end": 109.877,
+      "position": "bottom"
+    },
+    {
+      "text": "论文、图表和正文，也能在这里统一检索",
+      "start": 110.33,
+      "end": 115.33,
+      "position": "bottom"
+    },
+    {
+      "text": "记住线索就够了，把找图表的时间省下来",
+      "start": 115.346,
+      "end": 119.346,
+      "position": "bottom"
+    },
+    {
+      "text": "演示使用 9 篇公开论文\n作者、原始来源与开放许可见随附说明",
+      "start": 119.346,
+      "end": 123.346,
+      "position": "bottom"
+    }
+  ],
+  "clips": [
+    {
+      "start": 0,
+      "end": 11.893
+    },
+    {
+      "start": 58.049,
+      "end": 123.362
+    }
+  ],
+  "raw_duration_seconds": 123.362,
+  "complete_timeline_sha256": "f8c73eaaff91e54c80846b74e27426d55e7f8e9af2ac9085053ab437fc705f39",
+  "selected_resources": {
+    "table": {
+      "id": "4d399f30-cbd3-4020-b7b6-55fe08854298",
+      "paper_id": "40115632-1f36-49a3-bebd-1bff1b97b908",
+      "paper_title": "BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension",
+      "locations": [
+        {
+          "page_index": 5,
+          "crop_box": [
+            0.0,
+            0.0,
+            595.276,
+            841.89
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            595.276,
+            841.89
+          ],
+          "rotation": 0,
+          "user_unit": 1.0,
+          "width": 595.276,
+          "height": 841.89,
+          "bbox": [
+            121.31640856216738,
+            684.0154250025805,
+            476.05780853988335,
+            779.7787496644244
+          ],
+          "coordinate_space": "pdf_user_space",
+          "docling_provenance": {
+            "page_no": 6,
+            "bbox": {
+              "l": 121.31640856216737,
+              "t": 779.7787496644244,
+              "r": 476.05780853988335,
+              "b": 684.0154250025805,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    "figure": {
+      "id": "262bc53d-1a24-4bb8-8bef-1b388057345e",
+      "paper_id": "5c67f043-1352-4624-b502-8dbf8f6ee648",
+      "paper_title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "locations": [
+        {
+          "page_index": 2,
+          "crop_box": [
+            0.0,
+            0.0,
+            595.276,
+            841.89
+          ],
+          "media_box": [
+            0.0,
+            0.0,
+            595.276,
+            841.89
+          ],
+          "rotation": 0,
+          "user_unit": 1.0,
+          "width": 595.276,
+          "height": 841.89,
+          "bbox": [
+            74.73012444720172,
+            600.5474794723982,
+            522.816642801784,
+            779.6156812184893
+          ],
+          "coordinate_space": "pdf_user_space",
+          "docling_provenance": {
+            "page_no": 3,
+            "bbox": {
+              "l": 74.73012444720172,
+              "t": 779.6156812184893,
+              "r": 522.816642801784,
+              "b": 600.5474794723982,
+              "coord_origin": "BOTTOMLEFT"
+            },
+            "charspan": [
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

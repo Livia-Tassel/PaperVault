@@ -8,12 +8,14 @@ import path from 'node:path';
 const argv = process.argv.slice(2);
 const options = {};
 for (let index = 0; index < argv.length; index += 2) {
-  if (!['--debugger-address', '--output-dir', '--ffmpeg'].includes(argv[index]) || !argv[index + 1]) {
-    throw new Error('Usage: node capture_webview.mjs --debugger-address localhost:PORT --output-dir ABS --ffmpeg ABS');
+  if (!['--debugger-address', '--output-dir', '--ffmpeg', '--height'].includes(argv[index]) || !argv[index + 1]) {
+    throw new Error('Usage: node capture_webview.mjs --debugger-address localhost:PORT --output-dir ABS --ffmpeg ABS [--height 960|1080]');
   }
   options[argv[index].slice(2)] = argv[index + 1];
 }
-if (Object.keys(options).length !== 3) throw new Error('All three command-line arguments are required');
+if (!['debugger-address', 'output-dir', 'ffmpeg'].every(key => options[key])) throw new Error('All three required command-line arguments are required');
+const height = Number(options.height || 960);
+if (![960, 1080].includes(height)) throw new Error('Height must be 960 or 1080');
 if (!/^(?:localhost|127\.0\.0\.1):\d+$/.test(options['debugger-address'])) {
   throw new Error('The debugger address must be a loopback localhost:PORT address');
 }
@@ -203,7 +205,7 @@ async function main() {
   process.on('SIGINT', () => requestStop('SIGINT'));
   process.on('SIGTERM', () => requestStop('SIGTERM'));
   await send('Page.enable');
-  await send('Page.startScreencast', { format: 'jpeg', quality: 95, maxWidth: 1920, maxHeight: 960, everyNthFrame: 1 });
+  await send('Page.startScreencast', { format: 'jpeg', quality: 95, maxWidth: 1920, maxHeight: height, everyNthFrame: 1 });
   const readyTimeout = setTimeout(() => fail(new Error('No screencast frame arrived within 20 seconds')), 20000);
   await ready.finally(() => clearTimeout(readyTimeout));
   await stopped;
@@ -233,13 +235,13 @@ async function main() {
   // as metadata: merely requesting yuv420p leaves the JPEG full-range flag and
   // can produce an MP4 that decodes as yuvj420p with incorrect video levels.
   const encodeArgs = ['-hide_banner', '-nostdin', '-n', '-safe', '0', '-f', 'concat', '-i', 'capture.ffconcat',
-    '-vf', 'scale=1920:960:force_original_aspect_ratio=decrease:force_divisible_by=2:in_range=pc:out_range=tv:in_color_matrix=bt601:out_color_matrix=bt709,format=yuv420p,pad=1920:960:(ow-iw)/2:(oh-ih)/2:color=black,setsar=1,fps=30',
+    '-vf', `scale=1920:${height}:force_original_aspect_ratio=decrease:force_divisible_by=2:in_range=pc:out_range=tv:in_color_matrix=bt601:out_color_matrix=bt709,format=yuv420p,pad=1920:${height}:(ow-iw)/2:(oh-ih)/2:color=black,setsar=1,fps=30`,
     '-t', duration.toFixed(6), '-an', '-c:v', 'libx264', '-preset', 'fast', '-crf', '18', '-threads', '4',
     '-pix_fmt', 'yuv420p', '-color_range', 'tv', '-colorspace', 'bt709', '-color_primaries', 'bt709', '-color_trc', 'bt709',
     '-fps_mode', 'cfr', '-movflags', '+faststart', 'capture.partial.mp4'];
   await runFfmpeg(encodeArgs, 'capture-encode.log');
   const decoded = await runFfmpeg(['-hide_banner', '-nostdin', '-i', 'capture.partial.mp4', '-map', '0:v:0', '-an', '-f', 'null', '-'], 'capture-decode.log');
-  if (!/Video: h264.*yuv420p\(tv, bt709.*1920x960/.test(decoded) || /Stream #\d+:\d+.*Audio:/.test(decoded)) {
+  if (!new RegExp(`Video: h264.*yuv420p\\(tv, bt709.*1920x${height}`).test(decoded) || /Stream #\d+:\d+.*Audio:/.test(decoded)) {
     throw new Error('Encoded recording has unexpected dimensions, codec, pixel format, or audio');
   }
   if (/error while|invalid data|corrupt decoded|decoding error/i.test(decoded)) throw new Error('Encoded recording did not decode cleanly');
@@ -252,7 +254,7 @@ async function main() {
     recording_method: 'WebView2 Page.startScreencast compositor frames', target_url: target.url,
     epoch_ms: epoch, stop_epoch_ms: stoppedAt, duration, encoded_duration: encodedFrames / 30,
     fps: 30, frames: frames.length, encoded_frames: encodedFrames, unique_hashes: new Set(frames.map(frame => frame.sha256)).size,
-    source_dimensions: firstImage, output_dimensions: { width: 1920, height: 960 }, full_decode_passed: true,
+    source_dimensions: firstImage, output_dimensions: { width: 1920, height }, full_decode_passed: true,
     color_conversion: 'JPEG full-range BT.601 to limited-range BT.709; actual sample conversion and matching H.264 metadata',
     raw_video: path.join(output, 'capture.mp4'), raw_video_bytes: (await stat(path.join(output, 'capture.mp4'))).size,
     timing: 'Frame reception wall-clock time, with the final frame held until q; static frames are repeated, not time-compressed.',
