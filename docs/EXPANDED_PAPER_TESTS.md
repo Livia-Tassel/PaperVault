@@ -4,7 +4,7 @@
 
 20篇均通过导入、真实CPU解析、持久化和导出流程，但内容识别仍有明确缺陷。6篇深入核对、14篇图表清单核对；不能用流程通过率代替提取准确率。本轮原始质量基线来自**已安装0.2.1**，后续0.2.2仅修复附录图表编号，另行验证，不覆盖旧输出。
 
-本地可直接打开 [原文与实际导出目录](../artifacts/real-corpus-expanded/review.html)。每个资源附原页、300DPI PNG、CSV/HTML；原文图表清单包含未提取的对象。原始PDF位于 `.test-data/external/expanded-corpus/`。来源、许可证、下载地址及SHA-256在 [来源清单](../tests/corpus/expanded/) 中，论文和渲染图不提交Git。
+Windows 开发机保留的原文与实际导出目录为 `artifacts/real-corpus-expanded/review.html`，该页面不在 Git 仓库中。每个资源附原页、300DPI PNG、CSV/HTML；原文图表清单包含未提取的对象。原始PDF位于 `.test-data/external/expanded-corpus/`。来源、许可证、下载地址及SHA-256在 [来源清单](../tests/corpus/expanded/) 中，论文和渲染图不提交Git。
 
 ## 样本与实际输出
 
@@ -83,7 +83,7 @@ SimCSE的8张附录表和Figure G.1都有正确Caption，却因应用编号规�
 
 生产源码冻结于`44c568eccca416c9a4103a07a1fae3d315b53b9d`，最终冻结后台SHA-256为`b5e1ece230ab2ec1183057ab1f0050e6899947632897724febb117eeaa51755f`。这个新后台已重新执行SimCSE的真实模型解析：17页、21资源全部流程检查通过，9个附录编号逐一正确；原来缺Caption的Figure F.1仍保持未知编号。证据来自新解析，单独保留，不把源码字符串重放当作模型复测。
 
-最终安装器与实际桌面验收结果见 [0.2.2交付清单](verification/0.2.2/release-manifest.json) 和 [总测试报告](../TEST_REPORT.md)。本轮没有改变模型、表格识别、裁剪算法或前端业务代码；上述识别/标题缺陷仍存在。
+最终安装器与实际桌面验收结果见 [0.2.2交付清单](verification/0.2.2/release-manifest.json) 和 [总测试报告](verification/TEST_REPORT.md)。本轮没有改变模型、表格识别、裁剪算法或前端业务代码；上述识别/标题缺陷仍存在。
 
 ## 可复现记录
 

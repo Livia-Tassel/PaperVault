@@ -1,8 +1,10 @@
 # 带中文字幕的操作演示
 
+演示 MP4 与完整录制素材保存在原 Windows 开发机的 `artifacts/`，该目录被 Git 忽略，当前没有公开视频下载。下方链接指向已归档的字幕、署名和验证记录；复现命令需要本机准备应用、模型与公开论文。
+
 ## 当前修订版：从导入到找回图表
 
-[播放修订版](../artifacts/demo-v2/final/PaperVault-demo-v2-zh.mp4) · [SRT字幕](../artifacts/demo-v2/final/PaperVault-demo-v2-zh.srt) · [素材署名](../artifacts/demo-v2/final/SOURCES.md)
+本机成片：`artifacts/demo-v2/final/PaperVault-demo-v2-zh.mp4`。归档：[SRT字幕](verification/demo-v2/PaperVault-demo-v2-zh.srt) · [素材署名](verification/demo-v2/SOURCES.md) · [视觉核对](verification/demo-v2/visual-review.json)。
 
 长 **1分33.2秒**，真1920×1080应用画面、30fps、H.264，无音轨。主片不缩放、不补边，取消旧版120px字幕栏；中文字幕放在画面内，底图取当前帧的局部画面进行真实模糊，再加半透明暗色与圆角。复制图片的字幕移到顶部，避开实际操作按钮。片头继续使用黑底居中逐字动画。
 
@@ -23,7 +25,7 @@
 
 ## 多论文库与联合搜索版
 
-[播放新版视频](../artifacts/demo-library/final/PaperVault-library-demo-zh.mp4) · [SRT字幕](../artifacts/demo-library/final/PaperVault-library-demo-zh.srt) · [素材署名](../artifacts/demo-library/final/SOURCES.md)
+本机成片：`artifacts/demo-library/final/PaperVault-library-demo-zh.mp4`。归档：[SRT字幕](verification/demo-library/PaperVault-library-demo-zh.srt) · [素材署名](verification/demo-library/SOURCES.md) · [视觉核对](verification/demo-library/visual-review.json)。
 
 新版长 **2分17.43秒**，1920×1080、30fps、H.264，无音轨。前13.2秒是黑底居中打字机文字，逐个字符出现；第一句1.8秒打完、停留至3.6秒，最后保留0.3秒纯黑后进入实机画面。字幕已经烧录，单独SRT用于编辑，不需重复加载。
 
@@ -52,10 +54,9 @@
 
 成片为 MP4，1920 × 1080、30 fps、H.264，无配音。中文字幕直接烧录在画面底部的独立区域，同时提供可编辑的 SRT 字幕。
 
-- [演示视频](../artifacts/demo/final/PaperVault-demo-zh.mp4)
-- [中文字幕](../artifacts/demo/final/PaperVault-demo-zh.srt)
-- [预览图](../artifacts/demo/final/poster.jpg) · [抽帧总览](../artifacts/demo/final/contact-sheet.jpg)
-- [编码与验证报告](../artifacts/demo/final/render-report.json)
+- 本机演示视频：`artifacts/demo/final/PaperVault-demo-zh.mp4`。
+- [已归档中文字幕](verification/demo/PaperVault-demo-zh.srt)与[编码验证报告](verification/demo/render-report.json)。
+- 本机预览图和抽帧总览：`artifacts/demo/final/poster.jpg`、`artifacts/demo/final/contact-sheet.jpg`。
 
 最终时长 **1分53.23秒**，文件大小 **3,641,470字节（约3.47 MiB）**。全片解码、30 fps、1080p、字幕区域和快速播放布局检查通过；另逐段查看抽帧，确认实际页面变化、图表原文、导出成功通知和中文笔记搜索均与字幕相符。
 

@@ -76,7 +76,7 @@ def main():
                          "same_id_restored_library_isolation": bool(reading),
                          "clean_windows_vm": False, "hosted_ci_executed": False},
         "prior_version_uninstall_retention": prior_retention,
-        "known_diagnostics": "See TEST_REPORT.md and docs/KNOWN_ISSUES.md for observed native diagnostics and the precise validation scope.",
+        "known_diagnostics": "See docs/verification/TEST_REPORT.md and docs/KNOWN_ISSUES.md for observed native diagnostics and the precise validation scope.",
     }
     (evidence_root / 'release-manifest.json').write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
     installer.with_suffix(".exe.sha256").write_text(f"{digest}  {installer.name}\n", encoding="utf-8")

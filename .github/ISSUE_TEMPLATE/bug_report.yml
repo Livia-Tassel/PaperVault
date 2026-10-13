@@ -1,0 +1,32 @@
+name: 问题反馈
+description: 报告可以复现的运行、阅读、解析或构建问题。
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: 请先查看 docs/KNOWN_ISSUES.md。日志和截图提交前移除访问令牌、私人论文内容与目录信息。
+  - type: input
+    id: environment
+    attributes:
+      label: 版本与环境
+      description: PaperVault 版本、Windows 版本，以及安装版或源码运行。
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 复现步骤
+      description: 写出从启动到出现问题的最短步骤。
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: 预期与实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 日志、截图或样本
+      description: 涉及解析时，可附可公开分享的 PDF 及来源；请勿上传私人论文或访问令牌。

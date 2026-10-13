@@ -1,7 +1,7 @@
 # PaperVault 架构
 
 ## 状态
-当前开发版本为 0.2.0，新增阅读工作台与可追溯笔记；实际安装交付状态以 PROGRESS.md、TEST_REPORT.md 为准。
+当前开发版本为 0.2.2，包含阅读工作台与可追溯笔记；实际安装验收以[总测试报告](../verification/TEST_REPORT.md)为准，公开下载状态见[发布说明](../RELEASES.md)。开发经过保留在[历史进度](../archive/PROGRESS.md)。
 
 ## 边界
 React/TypeScript 提供中文桌面界面；Tauri 2 管理原生交互与 Python Sidecar；FastAPI 只监听回环地址，按每次启动的令牌鉴权。后台解析在独立进程中执行，SQLite 是元数据与索引的唯一事实来源。
